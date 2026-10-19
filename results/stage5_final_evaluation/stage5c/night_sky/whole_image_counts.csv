@@ -1,0 +1,2 @@
+num_images,all_pixels,all_accepted_pixels,all_rejected_pixels,valid_pixels,ignored_pixels,TP,FP,FN,TN
+1,2073600,1516981,556619,1985696,87904,272724,238491,677458,797023

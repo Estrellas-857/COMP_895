@@ -1,0 +1,43 @@
+STAGE 3A RAIN - RAW CALIBRATION RESULTS
+condition: rain
+num_images: 100
+num_valid_pixels: 196479419
+num_correct_pixels: 176616477
+num_incorrect_pixels: 19862942
+pixel_accuracy: 0.8989057372976047
+error_rate: 0.10109426270239531
+ece: 0.041613391938982475
+nll: 0.3869981182852665
+num_bins: 15
+high_conf_threshold: 0.9
+num_high_conf_pixels: 163204663
+high_conf_coverage: 0.8306450814576156
+num_high_conf_incorrect: 5855155
+high_conf_error_rate: 0.03587615018083154
+fraction_incorrect_that_are_high_conf: 0.2947778330118469
+stage1_pixel_accuracy: 0.8989057372976047
+pixel_accuracy_difference: 0.0
+pixel_accuracy_tolerance: 1e-05
+baseline_accuracy_check: PASS
+stage1_valid_pixel_count_matches: True
+stage1_confusion_matrix_exact_match: True
+Pixel accuracy: 89.890574%
+Bin count sum: 196479419 (PASS)
+ECE range / high-confidence count consistency: PASS
+Bins: [lower, upper); final bin includes 1.0. Indices are zero-based.
+Empty-bin means, accuracies, error rates and gaps are NaN; ECE contribution is zero.
+high_conf_error_rate = P(incorrect | confidence >= 0.90).
+fraction_incorrect_that_are_high_conf = P(confidence >= 0.90 | incorrect).
+All fractions use valid pixels (trainIds 0-18); trainId 255 is ignored.
+ECE is pixel-weighted over the whole subset, not averaged across images.
+NLL = mean(-log p(GT)), using stable log_softmax of full-resolution logits; units: nats.
+Diagram: unconnected points for non-empty bins, read from confidence_bins.csv.
+Model: nvidia/segformer-b0-finetuned-cityscapes-512-1024
+Model revision: 7a91500a7086b805eeb868719ea5542a3e0bdeb3
+Processor class: SegformerImageProcessor
+torch=2.11.0+cu128; transformers=5.17.0; numpy=2.5.2
+Protocol: 512x1024 preprocessing; float32 model.eval()/torch.inference_mode();
+bilinear logits -> 1080x1920, align_corners=False; logits argmax; then softmax confidence.
+Stage 1 reference: results/rain_val/confusion_matrix.npy; absolute accuracy tolerance=1e-05.
+Raw evaluation only: no parameters fitted, no threshold selected, no model modification.
+Peak allocated GPU memory: 0.405 GiB

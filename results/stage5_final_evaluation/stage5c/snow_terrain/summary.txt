@@ -1,0 +1,21 @@
+Stage 5C — snow_terrain
+RGB: /home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/snow/val/GOPR0122/GOPR0122_frame_000364_rgb_anon.png
+GT (opened after inference outputs frozen): /home/george/Desktop/COMP_895/project/data/ACDC/gt_trainval/gt/snow/val/GOPR0122/GOPR0122_frame_000364_gt_labelTrainIds.png
+calibrated_msp; T=2.124186626456894; tau=0.386413580715649; accept U <= tau.
+Target pixels=102,716; correct=0; missed=102,716; recall=0.000000%.
+Target errors rejected=35,272 (34.339343%); still accepted=67,444 (65.660657%).
+Target coverage=65.660657%; accepted target risk=100.000000%.
+Correct-target rejection rate=N/A (zero denominator).
+Missed uncertainty mean=0.3393875362; median=0.3274318202; population std=0.1220529448.
+Missed calibrated confidence mean=0.6606124638; median=0.6725681798.
+Historical RAW confidence >=0.90 missed fraction=50.302777%.
+Current CALIBRATED confidence >=0.90 missed fraction=0.281358%.
+Whole-image all-pixel coverage=86.989873%; valid coverage=87.401444%.
+Whole-image baseline risk=15.641764%; accepted risk=10.584271%; reduction=5.057493 percentage points.
+Whole-image error recall=40.858295%; rejection precision=50.727704%.
+Target minus whole-image error recall=-6.518951 percentage points.
+Historical target count differences: total=0, correct=0, missed=0.
+Destination count changes from Stage 2E: 0.
+Stage 5A per-image counts and context metrics match exactly; temperature prediction changes=0 (all image pixels).
+Quantiles use NumPy linear interpolation; standard deviation uses ddof=0. Empty CSV field means undefined.
+Rejection mitigates by abstaining; it does not correct semantic predictions. No fitting, selection, or benchmarking.

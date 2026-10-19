@@ -1,0 +1,14 @@
+{
+  "temperature_artifact": "results/stage3_calibration/stage3b/fitted_temperature.json",
+  "temperature_sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "processor_class": "SegformerImageProcessor",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.17.0",
+  "numpy": "2.5.2",
+  "precision": "float32 model/interpolation/raw branch; float64 temperature division, calibrated softmax and log-softmax (same as Stage 3B)",
+  "validation_parameters_fitted": false,
+  "raw_summary_sha256": "7264075b2042361cc2daf42e3d9196ef6666b5a28d5edf2dbe64ece3fb46e0a6",
+  "raw_bins_sha256": "c142a71088665376b2f12fd3f3abbce379a7aacdb50b57e083f27430c15f4ff6"
+}

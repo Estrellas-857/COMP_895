@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "config_hash": "b1ada13a96df8e725b412c38ed3b266cb064aff75c6c802b601bc008c54a7b7a",
+  "temperature_artifact_hash": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "threshold_artifact_hash": "8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e",
+  "rgb_then_gt_events": [
+    {
+      "rgb_path": "data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0356/GOPR0356_frame_000363_rgb_anon.png",
+      "gt_path": "data/ACDC/gt_trainval/gt/night/val/GOPR0356/GOPR0356_frame_000363_gt_labelTrainIds.png",
+      "gt_opened_only_after_inference": true
+    },
+    {
+      "rgb_path": "data/ACDC/rgb_anon_trainvaltest/rgb_anon/snow/val/GOPR0122/GOPR0122_frame_000364_rgb_anon.png",
+      "gt_path": "data/ACDC/gt_trainval/gt/snow/val/GOPR0122/GOPR0122_frame_000364_gt_labelTrainIds.png",
+      "gt_opened_only_after_inference": true
+    }
+  ],
+  "blocked_dataset_opens": [],
+  "prediction_changes_all_pixels": 0,
+  "frozen_output_hashes_rechecked_after_gt": true,
+  "stage5a_per_image_counts_match": true,
+  "no_fitting": true,
+  "no_threshold_selection": true,
+  "no_reserved_train_data": true,
+  "no_benchmarking": true,
+  "path_resolution": "Stage 2E CASES and saved summary identify cases/classes; exact RGB/GT paths resolved from frozen Stage 5A per-image records and cross-checked against original Stage 2E mapping.",
+  "prediction_observation": "Read-only observer checks argmax(z) vs argmax(float64(z)/T) during final wrapper inference; returns the original logits unchanged."
+}

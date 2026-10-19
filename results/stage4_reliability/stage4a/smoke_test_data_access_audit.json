@@ -1,0 +1,10 @@
+{
+  "allowed_dataset_rgb": "/home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png",
+  "opened_dataset_files": [
+    "/home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png"
+  ],
+  "blocked_dataset_open_attempts": [],
+  "ground_truth_opened": false,
+  "training_images_opened": false,
+  "scope": "Python file-open audit during smoke inference; preservation hashing is separate"
+}

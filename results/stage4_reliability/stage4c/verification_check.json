@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "protected_files": 2705,
+  "configuration_hash_unchanged": true,
+  "temperature_artifact_hash_verified": true,
+  "threshold_artifact_hash_verified": true,
+  "frozen_tau_actually_used": true,
+  "output_shapes_match_input": true,
+  "masks_boolean_and_complementary": true,
+  "acceptance_is_uncertainty_le_frozen_threshold": true,
+  "count_conservation": true,
+  "numerical_uncertainty_finite_and_in_range": true,
+  "canonical_prediction_changes": 0,
+  "canonical_segmentation_matches_stage4a_same_rgb": true,
+  "uncertainty_matches_stage4a_same_rgb": true,
+  "no_gt_opened": true,
+  "no_reliability_selection_images_or_gt_opened": true,
+  "no_fitting_or_threshold_selection": true,
+  "no_final_performance_metrics": true,
+  "integrity_unit_tests_passed": 3,
+  "no_stage5": true
+}

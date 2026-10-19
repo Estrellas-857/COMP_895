@@ -1,0 +1,21 @@
+{
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "processor_class": "SegformerImageProcessor",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.17.0",
+  "numpy": "2.5.2",
+  "num_images": 802,
+  "num_valid_pixels": 1529411129,
+  "cache_dtype": "float32",
+  "cache_shape": [
+    1,
+    19,
+    128,
+    256
+  ],
+  "cache_bytes": 1997377792,
+  "cache_index_sha256": "76d5bcc649099efc314d4f33d1b615e1550f9df40c63159b9049e4c74d043231",
+  "projected_cache_bytes": 1997377792,
+  "free_bytes_before_cache": 1326114439168
+}

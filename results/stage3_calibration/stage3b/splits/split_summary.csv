@@ -1,0 +1,5 @@
+condition,num_sequences,num_images,calibration_fit_sequences,calibration_fit_images,reliability_selection_sequences,reliability_selection_images
+fog,11,400,4,200,7,200
+rain,8,400,5,199,3,201
+snow,10,400,4,200,6,200
+night,5,400,2,203,3,197

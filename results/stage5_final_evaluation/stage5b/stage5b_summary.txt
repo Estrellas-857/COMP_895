@@ -1,0 +1,152 @@
+DESCRIPTIVE FINDINGS AND HISTOGRAM LIMITATIONS
+
+Risk generally decreases as coverage is reduced across the requested 100% to 50% checkpoints.
+It is not guaranteed to decrease monotonically at every histogram step; Snow has a non-monotonic low-coverage region.
+Primary calibrated-MSP pooled results: target / actual coverage / risk / absolute reduction from baseline (percentage points).
+100% / 100.000000% / 17.805416% / 0.000000 pp
+90% / 90.015304% / 13.122382% / 4.683035 pp
+80% / 79.975820% / 9.342636% / 8.462780 pp
+70% / 70.027395% / 6.475331% / 11.330086 pp
+60% / 60.064556% / 4.547058% / 13.258359 pp
+50% / 50.113221% / 3.282565% / 14.522852 pp
+
+For primary calibrated MSP, the largest target-versus-observed coverage discrepancy is 0.185304 percentage points.
+Night remains much harder: primary risk around 50% coverage is 18.940293%, versus 0.786734% Fog, 0.589819% Rain and 2.979947% Snow.
+Pooled calibrated MSP has slightly lower approximate risks than raw MSP at the 90/80/70/60/50% checkpoints.
+Condition comparisons are mixed: Night calibrated MSP is slightly lower; Snow is slightly higher; Fog/Rain vary by coverage.
+These small differences are descriptive, not statistically significant claims, and actual histogram coverages can differ.
+Pooled calibrated entropy has higher risk than raw entropy around 70/80/90% coverage, but slightly lower risk around 50/60%.
+At condition-specific 50–90% checkpoints, calibrated entropy risks exceed the corresponding raw entropy risks; pooled ordering can differ.
+Entropy and MSP curves are often close; neither method is declared universally superior and the primary method is unchanged.
+
+Exact pooled frozen Stage 5A point: 81.43315849867221% coverage, 9.838704340500287% risk.
+Its containing calibrated-MSP bin spans coverage 81.40514564485963–81.47290634557858%,
+with adjacent cumulative risks 9.82896889032321–9.852576524648779%; the exact point agrees.
+All condition-specific frozen points also satisfy exact within-bin count bounds.
+
+Resolution limitations (not hidden or repaired by changing bins):
+fog raw_msp: first observable coverage 52.295166%; requested 50% maps to this nearest point.
+rain raw_msp: first observable coverage 52.628225%; requested 50% maps to this nearest point.
+Thus the nominal raw-MSP 50% points for Fog/Rain do not represent exactly 50% coverage.
+Pooled first observed coverage: raw MSP 45.6234%, calibrated MSP 2.9678%, raw entropy 35.7963%, calibrated entropy 1.0203%.
+AURC is omitted because these method-dependent missing low-coverage domains prevent a straightforward like-for-like area comparison.
+No risk at zero coverage or within the first bin is fabricated. All actual coverages and bin indices are saved.
+The required 1000-bin approach is retained. No finer-bin rerun, threshold revision, or deployment-method replacement is performed.
+
+Execution issue: the first GPU approval review timed out without starting the command; the permitted retry succeeded.
+No unresolved computational discrepancy. The historical raw-label inconsistency was resolved by the clean canonical pass.
+Rejected pixels remain abstentions; no claim of corrected semantic predictions or real-world safety. STOP before Stage 5C/5D.
+
+Stage 5B — descriptive risk–coverage analysis
+
+Stage 5B: descriptive risk–coverage evaluation only.
+Clean 406-image pass; canonical full-resolution logit argmax shared by all four methods.
+790,712,012 valid pixels; zero prediction changes from positive temperature scaling.
+Exact Stage 1/3C/5A confusion matrices; calibrated histograms exactly reproduce Stage 3D.
+Raw Stage 2 correctness labels were not reused because of its two historical softmax ties.
+1000 equal-width bins [0,1]; int64 correct/incorrect counts; pooled=sum(condition histograms).
+Accept bins LOW-to-HIGH uncertainty. Skip zero-accepted points; retain duplicate coverages from empty bins.
+Bin convention [lower,upper), last includes 1. Cumulative upper-bound thresholds are exclusive except final=1.
+100%-coverage risk equals exact frozen baseline for every condition/method.
+Checkpoint selection minimizes absolute coverage difference; ties use first ascending bin. No interpolation/subsampling.
+Exact deployed operating points loaded from Stage 5A separately; compatible with containing-bin count bounds.
+Random-rejection line is expected risk under correctness-independent rejection, not a confidence interval.
+AURC omitted: the first observed nonzero coverage depends on method and condition; integrating unequal domains
+would confound ordering comparisons, and risk at coverage=0 is not fabricated. Fixed-coverage risks are primary.
+The fixed 1000-bin approximation can coarsen coverage especially where low-uncertainty mass is concentrated.
+No deployment threshold selected/revised. No targeted failure audit or runtime/memory benchmark.
+
+Frozen deployed method=calibrated_msp; T=2.124186626456894; tau=0.386413580715649.
+Validation was previously analyzed in Stages 1–3; not a completely untouched test set.
+
+Primary calibrated-MSP risk checkpoints: requested / actual coverage / risk (percent)
+fog
+  100% / 100.000000% / 8.061623%
+  90% / 90.000189% / 4.221345%
+  80% / 80.000984% / 2.383143%
+  70% / 69.959367% / 1.585097%
+  60% / 59.875634% / 1.094813%
+  50% / 50.001474% / 0.786734%
+rain
+  100% / 100.000000% / 10.109426%
+  90% / 90.027069% / 5.731529%
+  80% / 80.002770% / 2.986524%
+  70% / 70.040254% / 1.612712%
+  60% / 60.062021% / 0.936950%
+  50% / 50.185304% / 0.589819%
+snow
+  100% / 100.000000% / 12.609977%
+  90% / 89.976997% / 8.272488%
+  80% / 79.980178% / 5.592175%
+  70% / 69.998699% / 4.106438%
+  60% / 60.056984% / 3.363971%
+  50% / 49.991163% / 2.979947%
+night
+  100% / 100.000000% / 39.737573%
+  90% / 90.020426% / 36.203893%
+  80% / 79.976916% / 32.600340%
+  70% / 69.990344% / 28.683626%
+  60% / 59.997984% / 24.081455%
+  50% / 50.047261% / 18.940293%
+pooled
+  100% / 100.000000% / 17.805416%
+  90% / 90.015304% / 13.122382%
+  80% / 79.975820% / 9.342636%
+  70% / 70.027395% / 6.475331%
+  60% / 60.064556% / 4.547058%
+  50% / 50.113221% / 3.282565%
+
+Exact frozen Stage 5A operating points:
+[
+  {
+    "condition": "fog",
+    "threshold": 0.386413580715649,
+    "valid_coverage": 0.889542921484722,
+    "accepted_risk": 0.03950611816082724,
+    "baseline_risk": 0.08061622928294881,
+    "source": "frozen Stage 5A combined CSV; exact, not histogram-derived"
+  },
+  {
+    "condition": "rain",
+    "threshold": 0.386413580715649,
+    "valid_coverage": 0.8434228879717931,
+    "accepted_risk": 0.03982932432665411,
+    "baseline_risk": 0.10109426270239531,
+    "source": "frozen Stage 5A combined CSV; exact, not histogram-derived"
+  },
+  {
+    "condition": "snow",
+    "threshold": 0.386413580715649,
+    "valid_coverage": 0.8417555381957369,
+    "accepted_risk": 0.06538659161832021,
+    "baseline_risk": 0.1260997734321325,
+    "source": "frozen Stage 5A combined CSV; exact, not histogram-derived"
+  },
+  {
+    "condition": "night",
+    "threshold": 0.386413580715649,
+    "valid_coverage": 0.6867146580506694,
+    "accepted_risk": 0.2811909531902607,
+    "baseline_risk": 0.3973757264953482,
+    "source": "frozen Stage 5A combined CSV; exact, not histogram-derived"
+  },
+  {
+    "condition": "pooled",
+    "threshold": 0.386413580715649,
+    "valid_coverage": 0.8143315849867221,
+    "accepted_risk": 0.09838704340500287,
+    "baseline_risk": 0.1780541649340721,
+    "source": "frozen Stage 5A combined CSV; exact, not histogram-derived"
+  }
+]
+
+All-method risk comparisons and actual coverage values: stage5b_combined_summary.csv and risk_at_target_coverages.csv.
+The primary method and operating threshold remain frozen regardless of comparison-curve results.
+Lower risk at reduced coverage describes a retained subset with fewer errors. Rejected classes are not corrected.
+No statistical significance or real-world safety claims are made.
+
+PASS: all 2749 pre-existing protected files retain SHA-256 hashes.
+Stages 1–5A, temperature, threshold, final configuration, model-inference sources and splits unchanged.
+Prior caches hashed as opaque bytes only; no train images/GT or train diagnostics were used.
+
+STOP: Stage 5C and Stage 5D not begun.

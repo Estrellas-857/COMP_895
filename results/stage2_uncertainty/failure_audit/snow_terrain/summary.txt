@@ -1,0 +1,47 @@
+STAGE 2E — snow_terrain
+======================================================================
+
+Condition: snow
+Target class: terrain (id=9)
+
+Target-class performance
+------------------------
+GT target pixels: 102716
+Correct target pixels: 0
+Missed target pixels: 102716
+False-positive target pixels: 0
+Target recall: 0.000000
+
+MSP uncertainty
+---------------
+Correct target mean: nan
+Correct target median: nan
+Correct target p90: nan
+Missed target mean: 0.150218
+Missed target median: 0.099169
+Missed target p90: 0.375502
+
+Predictive entropy
+------------------
+Correct target mean: nan
+Correct target median: nan
+Correct target p90: nan
+Missed target mean: 0.137346
+Missed target median: 0.120921
+Missed target p90: 0.248454
+
+High-confidence missed target
+-----------------------------
+Threshold: 0.90
+High-confidence missed pixels: 51669
+All missed target pixels: 102716
+Fraction: 0.503028
+
+Top misclassification destinations
+----------------------------------
+sidewalk              58234   56.69%
+road                  44316   43.14%
+car                      83    0.08%
+vegetation               74    0.07%
+pole                      6    0.01%
+fence                     3    0.00%

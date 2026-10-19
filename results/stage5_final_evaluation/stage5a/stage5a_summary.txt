@@ -1,0 +1,75 @@
+Stage 5A — evaluation of the frozen operating point on ACDC validation
+
+Stage 5A: evaluation of the frozen operating point on ACDC validation.
+Image counts: {'fog': 100, 'rain': 100, 'snow': 100, 'night': 106}; total 406.
+T=2.124186626456894; tau=0.386413580715649; method=calibrated_msp.
+Final configuration SHA-256: b1ada13a96df8e725b412c38ed3b266cb064aff75c6c802b601bc008c54a7b7a.
+FinalReliabilityPipeline.predict called once per image, without GT; only after it returns may current GT be opened.
+Training-image/GT and out-of-order GT access blocked by dataset file-open guard.
+Canonical prediction changes = 0 across all image pixels, including rejected and ignored pixels.
+Exact 19x19 confusion agreement with frozen Stage 1 AND Stage 3C for each condition.
+Counts conserved for all/valid pixels; TP+FP+FN+TN=valid N. All denominators guarded against zero.
+Pooled statistics are ratios of pooled pixel counts, not image/condition averages.
+Threshold, temperature, model, method and preprocessing unchanged. No tuning or override.
+No threshold sweeps, risk-coverage curves, AURC, targeted failure audits, or latency measurements.
+Validation was previously analyzed in Stages 1–3; it is not a completely untouched test set.
+
+Valid-pixel risk: rejected predictions are abstentions and never counted as corrected.
+All-pixel coverage uses every input pixel; valid coverage excludes GT trainId=255.
+Classes 0..18; GT labelTrainIds; all 406 frozen validation images included.
+
+Condition | All coverage | Valid coverage | Baseline risk | Accepted risk | Reduction (pp) | Relative reduction | Error recall | Rejection precision | Incorrect accepted fraction | Correct rejection rate
+fog | 86.615351 | 88.954292 | 8.061623 | 3.950612 | 4.111011 | 50.994833 | 56.407800 | 41.168789 | 43.592200 | 7.068130
+rain | 82.097893 | 84.342289 | 10.109426 | 3.982932 | 6.126494 | 60.601796 | 66.770653 | 43.110579 | 33.229347 | 9.909361
+snow | 82.634590 | 84.175554 | 12.609977 | 6.538659 | 6.071318 | 48.146940 | 56.352399 | 44.905362 | 43.647601 | 9.976449
+night | 67.165276 | 68.671466 | 39.737573 | 28.119095 | 11.618477 | 29.238015 | 51.406707 | 65.205022 | 48.593293 | 18.088811
+pooled | 79.444095 | 81.433158 | 17.805416 | 9.838704 | 7.966712 | 44.743195 | 55.002638 | 52.746983 | 44.997362 | 10.673930
+
+All table values above are percentages, except absolute risk reduction in percentage points.
+Saved CSV proportions are fractions, not percentages. coverage=valid_coverage and risk=accepted_risk aliases.
+TP=incorrect rejected; FP=correct rejected; FN=incorrect accepted; TN=correct accepted.
+Baseline risk=(TP+FN)/N; accepted risk=FN/(TN+FN); valid coverage=(TN+FN)/N.
+Absolute reduction=baseline-risk; relative reduction=(baseline-risk)/baseline.
+Error recall=TP/(TP+FN); rejection precision=TP/(TP+FP); incorrect accepted fraction=FN/(TP+FN).
+Correct rejection rate=FP/(FP+TN); rejection rate=(TP+FP)/N.
+Undefined ratios are empty in CSV and listed in zero_denominators.
+
+Pooled reserved-train versus validation comparison (loaded Stage 4B reference; no retuning):
+{
+  "condition": "pooled",
+  "threshold": 0.386413580715649,
+  "comparison": "reserved train reliability_selection vs ACDC validation; no retuning",
+  "selection_all_pixel_coverage": 0.8,
+  "validation_all_pixel_coverage": 0.7944409498912911,
+  "validation_minus_selection_all_pixel_coverage": -0.0055590501087089406,
+  "selection_valid_coverage": 0.8189634302465455,
+  "validation_valid_coverage": 0.8143315849867221,
+  "validation_minus_selection_valid_coverage": -0.004631845259823408,
+  "selection_baseline_risk": 0.17075131240144606,
+  "validation_baseline_risk": 0.1780541649340721,
+  "validation_minus_selection_baseline_risk": 0.007302852532626053,
+  "selection_accepted_risk": 0.09498215420011488,
+  "validation_accepted_risk": 0.09838704340500287,
+  "validation_minus_selection_accepted_risk": 0.0034048892048879897,
+  "selection_risk_reduction_absolute": 0.07576915820133118,
+  "validation_risk_reduction_absolute": 0.07966712152906924,
+  "validation_minus_selection_risk_reduction_absolute": 0.003897963327738063,
+  "selection_risk_reduction_relative": 0.44373982920373445,
+  "validation_risk_reduction_relative": 0.44743194610790193,
+  "validation_minus_selection_risk_reduction_relative": 0.003692116904167486,
+  "selection_error_recall": 0.5444432624151611,
+  "validation_error_recall": 0.5500263808610193,
+  "validation_minus_selection_error_recall": 0.005583118445858237,
+  "selection_rejection_precision": 0.5135117270069667,
+  "validation_rejection_precision": 0.5274698334065866,
+  "validation_minus_selection_rejection_precision": 0.013958106399619918
+}
+
+PASS: all 2730 pre-existing protected files retain SHA-256 hashes.
+Stages 1–4, source scripts, temperature, operating threshold, final config/wrapper and split artifacts unchanged.
+Prior caches were hashed as opaque bytes only; no reserved train data were reevaluated.
+
+The ACDC validation sets were previously used for diagnostic analyses. No Stage 5A result revises the frozen system.
+Single-point results describe the coverage/risk tradeoff here; they do not establish corrected predictions or real-world safety.
+No methodological discrepancy encountered if all baseline/audit checks above pass.
+STOP: Stage 5B, Stage 5C, and Stage 5D were not begun.

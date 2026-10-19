@@ -1,0 +1,227 @@
+COMPLETION RESULTS — RESERVED TRAIN SELECTION DATA ONLY
+Shared calibrated-MSP tau = 0.386413580715649; frozen T = 2.124186626456894.
+Exact nearest-rank empirical quantile; no discretization or subsampling.
+Selection: 798 RGB images, 1,654,732,800 ALL pixels; exactly 80% accepted; no GT used.
+
+Condition | Valid-pixel coverage | Baseline risk | Accepted-pixel risk
+fog | 85.553150% | 10.581614% | 5.014473%
+rain | 84.412041% | 10.533313% | 4.364041%
+snow | 85.060091% | 12.511521% | 6.988826%
+night | 72.045997% | 35.586898% | 24.517127%
+pooled | 81.896343% | 17.075131% | 9.498215%
+
+Pooled absolute risk reduction: 7.576916 percentage points.
+Pooled relative risk reduction: 44.373983%.
+error_recall: 54.444326%
+rejection_precision: 51.351173%
+incorrect_accepted_fraction: 45.555674%
+correct_rejection_rate: 10.620718%
+rejection_rate: 18.103657%
+
+Valid-pixel coverage differs from 80% because ignore=255 pixels are excluded only in Phase B.
+All sanity/preservation checks passed. Tau unchanged after GT diagnostics. No validation evaluation.
+Raw-MSP comparison omitted. Stage 4C/5 not begun.
+
+========================================================================
+Stage 4B — frozen 80% coverage operating threshold
+
+Method: calibrated_msp; frozen shared T=2.124186626456894
+Frozen shared tau=0.386413580715649
+Selection: Exact inverse empirical CDF (nearest rank ceil(4*N/5), equivalent to NumPy quantile method=inverted_cdf); float64 external-memory radix narrowing then exact order-statistic partition; no rounding or subsampling
+All-pixel selection coverage=0.800000000000 over 1,654,732,800 pixels / 798 RGBs.
+GT was not used to choose the threshold or which pixels entered its distribution.
+Only after freezing was labelTrainIds GT used for diagnostics (classes 0..18; ignore 255).
+
+Valid-pixel diagnostics (fractions unless otherwise noted):
+{
+  "condition": "pooled",
+  "threshold": 0.386413580715649,
+  "uncertainty_method": "calibrated_msp",
+  "num_images": 798,
+  "all_pixels": 1654732800,
+  "all_accepted_pixels": 1323786240,
+  "all_rejected_pixels": 330946560,
+  "valid_pixels": 1530252619,
+  "ignored_pixels": 124480181,
+  "TP": 142259019,
+  "FP": 134772666,
+  "FN": 119033624,
+  "TN": 1134187310,
+  "accepted_valid_pixels": 1253220934,
+  "rejected_valid_pixels": 277031685,
+  "incorrect_valid_pixels": 261292643,
+  "all_pixel_coverage": 0.8,
+  "coverage": 0.8189634302465455,
+  "risk": 0.09498215420011488,
+  "baseline_risk": 0.17075131240144606,
+  "risk_reduction_absolute": 0.07576915820133118,
+  "risk_reduction_relative": 0.44373982920373445,
+  "error_recall": 0.5444432624151611,
+  "rejection_precision": 0.5135117270069667,
+  "incorrect_accepted_fraction": 0.45555673758483894,
+  "correct_rejection_rate": 0.10620718426819792,
+  "rejection_rate": 0.18103656975345456,
+  "zero_denominators": ""
+}
+
+Per-condition diagnostics, same global tau:
+[
+  {
+    "condition": "fog",
+    "threshold": 0.386413580715649,
+    "uncertainty_method": "calibrated_msp",
+    "num_images": 200,
+    "all_pixels": 414720000,
+    "all_accepted_pixels": 346531799,
+    "all_rejected_pixels": 68188201,
+    "valid_pixels": 387555231,
+    "ignored_pixels": 27164769,
+    "TP": 24383326,
+    "FP": 31606197,
+    "FN": 16626273,
+    "TN": 314939435,
+    "accepted_valid_pixels": 331565708,
+    "rejected_valid_pixels": 55989523,
+    "incorrect_valid_pixels": 41009599,
+    "all_pixel_coverage": 0.8355801480516976,
+    "coverage": 0.8555314997154561,
+    "risk": 0.05014473028676415,
+    "baseline_risk": 0.10581614108054704,
+    "risk_reduction_absolute": 0.05567141079378289,
+    "risk_reduction_relative": 0.5261145438237624,
+    "error_recall": 0.5945760649842005,
+    "rejection_precision": 0.4354980127264167,
+    "incorrect_accepted_fraction": 0.4054239350157996,
+    "correct_rejection_rate": 0.09120356478768141,
+    "rejection_rate": 0.14446850028454397,
+    "zero_denominators": ""
+  },
+  {
+    "condition": "rain",
+    "threshold": 0.386413580715649,
+    "uncertainty_method": "calibrated_msp",
+    "num_images": 201,
+    "all_pixels": 416793600,
+    "all_accepted_pixels": 341895564,
+    "all_rejected_pixels": 74898036,
+    "valid_pixels": 381034377,
+    "ignored_pixels": 35759223,
+    "TP": 26099091,
+    "FP": 33296392,
+    "FN": 14036452,
+    "TN": 307602442,
+    "accepted_valid_pixels": 321638894,
+    "rejected_valid_pixels": 59395483,
+    "incorrect_valid_pixels": 40135543,
+    "all_pixel_coverage": 0.8202994575732449,
+    "coverage": 0.8441204085898003,
+    "risk": 0.04364040625012223,
+    "baseline_risk": 0.10533312851191902,
+    "risk_reduction_absolute": 0.06169272226179679,
+    "risk_reduction_relative": 0.5856915401009467,
+    "error_recall": 0.6502737735478002,
+    "rejection_precision": 0.4394120509130299,
+    "incorrect_accepted_fraction": 0.34972622645219975,
+    "correct_rejection_rate": 0.0976723551949726,
+    "rejection_rate": 0.15587959141019972,
+    "zero_denominators": ""
+  },
+  {
+    "condition": "snow",
+    "threshold": 0.386413580715649,
+    "uncertainty_method": "calibrated_msp",
+    "num_images": 200,
+    "all_pixels": 414720000,
+    "all_accepted_pixels": 345025111,
+    "all_rejected_pixels": 69694889,
+    "valid_pixels": 393946922,
+    "ignored_pixels": 20773078,
+    "TP": 25869782,
+    "FP": 32985531,
+    "FN": 23418969,
+    "TN": 311672640,
+    "accepted_valid_pixels": 335091609,
+    "rejected_valid_pixels": 58855313,
+    "incorrect_valid_pixels": 49288751,
+    "all_pixel_coverage": 0.8319471233603395,
+    "coverage": 0.8506009065860908,
+    "risk": 0.06988825852693913,
+    "baseline_risk": 0.12511520777918403,
+    "risk_reduction_absolute": 0.0552269492522449,
+    "risk_reduction_relative": 0.4414087642304444,
+    "error_recall": 0.5248617884433712,
+    "rejection_precision": 0.43954879655469675,
+    "incorrect_accepted_fraction": 0.47513821155662883,
+    "correct_rejection_rate": 0.09570506018846134,
+    "rejection_rate": 0.1493990934139092,
+    "zero_denominators": ""
+  },
+  {
+    "condition": "night",
+    "threshold": 0.386413580715649,
+    "uncertainty_method": "calibrated_msp",
+    "num_images": 197,
+    "all_pixels": 408499200,
+    "all_accepted_pixels": 290333766,
+    "all_rejected_pixels": 118165434,
+    "valid_pixels": 367716089,
+    "ignored_pixels": 40783111,
+    "TP": 65906820,
+    "FP": 36884546,
+    "FN": 64951930,
+    "TN": 199972793,
+    "accepted_valid_pixels": 264924723,
+    "rejected_valid_pixels": 102791366,
+    "incorrect_valid_pixels": 130858750,
+    "all_pixel_coverage": 0.7107327652049258,
+    "coverage": 0.720459971497195,
+    "risk": 0.24517126700930816,
+    "baseline_risk": 0.35586898129986366,
+    "risk_reduction_absolute": 0.1106977142905555,
+    "risk_reduction_relative": 0.31106311622388627,
+    "error_recall": 0.5036485523512948,
+    "rejection_precision": 0.6411707769308174,
+    "incorrect_accepted_fraction": 0.4963514476487052,
+    "correct_rejection_rate": 0.15572473352831173,
+    "rejection_rate": 0.27954002850280507,
+    "zero_denominators": ""
+  }
+]
+
+Definitions: coverage=(TN+FN)/N; risk=FN/(TN+FN); baseline_risk=(TP+FN)/N.
+Risk reduction absolute=baseline-risk; relative=(baseline-risk)/baseline.
+TP=incorrect rejected; FP=correct rejected; FN=incorrect accepted; TN=correct accepted.
+Error recall=TP/(TP+FN); rejection precision=TP/(TP+FP); incorrect accepted fraction=FN/(TP+FN).
+Correct rejection rate=FP/(FP+TN); rejection rate=(TP+FP)/N.
+At 100% coverage risk equals the baseline pixel error rate by definition.
+Undefined ratios would be empty in CSV; zero_denominators lists affected denominators.
+
+The 80% target applies to ALL image pixels. Diagnostic coverage excludes ignore=255, so may differ.
+Ties at the exact order statistic are all accepted (<=), potentially giving slightly over 80%.
+Radix histograms are lossless order-statistic search indexes; the threshold is an original float64 value.
+Stage 4A inference/precision reused unchanged. Constructor threshold=1.0 was unused during selection;
+only infer_logits/compute_uncertainty ran before tau was selected. No placeholder mask was analyzed.
+Uncertainty and canonical prediction caches avoid repeating model inference in Phase B.
+Optional raw-MSP comparison was not performed; the primary experiment remains focused.
+
+Stage 4B selection audit: PASS
+Frozen reliability_selection split: 798 RGBs; {'fog': 200, 'rain': 201, 'snow': 200, 'night': 197}.
+No overlap with calibration_fit image paths, GT paths, or sequence IDs. No validation paths used.
+Phase A allowlist permits only the 798 reserved RGBs; zero GT opens; all pixels included.
+Exact external-memory float64 order statistic, no rounding/subsampling or histogram approximation.
+Rank: 1323786240; total image pixels: 1654732800.
+Threshold artifact frozen at 2026-09-28T15:34:08.236505+00:00; first GT open at 2026-09-28T15:34:30.251369+00:00.
+Threshold SHA-256 before and after diagnostics: 8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e.
+Prediction changes: 0 across 1654732800 image pixels; cache retained unchanged.
+Phase B opens only reserved GTs, using Phase A uncertainty/prediction caches.
+Accepted + rejected = all pixels. TP+FP+FN+TN = valid pixels. All metric denominators checked.
+One global threshold; no condition-specific thresholds, risk sweep, model fitting, or temperature fitting.
+No validation evaluation; Stage 4C/5 not begun.
+
+PASS: all 1088 pre-existing protected files retain SHA-256 hashes.
+Stages 1, 2, 3A–3D, and 4A, temperature, train split manifests, and prior sources unchanged.
+Protected files were read as opaque bytes for hashing, not used as validation metrics or fitting data.
+
+These are descriptive results on RESERVED TRAIN SELECTION DATA only. Rejected predictions are abstained, not corrected.
+No final validation performance, generalization, or real-world safety claim is established.
+STOP: no Stage 4C or Stage 5.

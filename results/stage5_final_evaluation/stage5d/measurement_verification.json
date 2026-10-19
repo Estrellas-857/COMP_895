@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "observations": 120,
+  "images": 20,
+  "statistics_recomputed_from_saved_samples": true,
+  "run_order_balanced": true,
+  "resident_allocated_memory_constant": true,
+  "no_dataset_reads": true,
+  "no_inference_rerun": true
+}

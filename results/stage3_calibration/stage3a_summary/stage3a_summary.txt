@@ -1,0 +1,31 @@
+STAGE 3A: RAW CONFIDENCE CALIBRATION ON ACDC VALIDATION
+
+All four conditions passed the saved-output sanity checks.
+All four runs report exact full confusion-matrix agreement with frozen Stage 1.
+Night is read from its existing validated outputs; no Night inference was run.
+
+condition | accuracy (%) | error (%) | ECE | NLL (nats) | high-confidence coverage (%) | P(incorrect | high confidence) (%) | P(high confidence | incorrect) (%)
+fog | 91.938377 | 8.061623 | 0.0349117490 | 0.3206295059 | 86.640828 | 3.400827 | 36.549765
+rain | 89.890574 | 10.109426 | 0.0416133919 | 0.3869981183 | 83.064508 | 3.587615 | 29.477783
+snow | 87.390023 | 12.609977 | 0.0628335972 | 0.5787706740 | 81.762838 | 5.912513 | 38.336616
+night | 60.262427 | 39.737573 | 0.2835366715 | 2.2430883254 | 67.542457 | 27.747298 | 47.162434
+
+High confidence means confidence >= 0.90 (prespecified, not selected).
+high_conf_error_rate = P(incorrect | confidence >= 0.90).
+fraction_incorrect_that_are_high_conf = P(confidence >= 0.90 | incorrect).
+CSV accuracy, error, coverage and conditional probabilities are fractions, not percentages.
+ECE uses 15 [lower, upper) bins, with 1.0 included in the final bin.
+NLL uses the unchanged stable log-softmax implementation and natural logarithms.
+All statistics are over valid pixels; trainId 255 is ignored.
+Individual reliability diagrams read the exact saved confidence_bins.csv files.
+
+Descriptive bin-level confidence minus accuracy:
+fog: confidence exceeds accuracy in 14/14 non-empty bins; pixel-weighted signed gap = +0.034912.
+rain: confidence exceeds accuracy in 13/14 non-empty bins; pixel-weighted signed gap = +0.041613.
+snow: confidence exceeds accuracy in 13/14 non-empty bins; pixel-weighted signed gap = +0.062834.
+night: confidence exceeds accuracy in 13/14 non-empty bins; pixel-weighted signed gap = +0.283537.
+
+These results describe these ACDC validation subsets only.
+Calibration and segmentation accuracy are different properties; ECE does not establish accuracy ranking.
+No strong conclusions are drawn from small between-condition differences.
+No fitting, model changes, threshold selection or Stage 3B work was performed.

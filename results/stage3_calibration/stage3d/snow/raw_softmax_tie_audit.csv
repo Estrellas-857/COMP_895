@@ -1,0 +1,2 @@
+condition,rgb_path,row,column,gt,logit_prediction,raw_softmax_prediction,logit_at_logit_prediction,logit_at_softmax_prediction,probability_at_logit_prediction,probability_at_softmax_prediction,probability_tie
+snow,data/ACDC/rgb_anon_trainvaltest/rgb_anon/snow/val/GOPR0122/GOPR0122_frame_000099_rgb_anon.png,335,1784,8,8,2,0.13958853483200073,0.13958850502967834,0.49994808435440063,0.49994808435440063,True

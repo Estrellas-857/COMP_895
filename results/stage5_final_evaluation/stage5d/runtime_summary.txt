@@ -1,0 +1,20 @@
+Stage 5D runtime measurement
+baseline: mean=36.618750 ms; median=37.337860 ms; std=2.996688 ms; min=31.027398 ms; max=45.586958 ms; FPS=27.308414.
+final_reliability: mean=86.747105 ms; median=85.936818 ms; std=5.357585 ms; min=76.773167 ms; max=98.737665 ms; FPS=11.527762.
+Mean latency overhead=50.128354 ms (136.892586%).
+20 RGBs: lexicographically first 5 filenames per Fog/Rain/Snow/Night validation subset (ties by path); exact manifest in test_subset.csv.
+Five warm-up runs PER pipeline; three timed repeats per image; 60 observations per pipeline, paired alternating AB/BA order.
+perf_counter wall-clock timing with CUDA synchronization immediately before/after each measured region; batch=1, original 1920x1080.
+Statistics pool all 60 observations equally; population standard deviation (ddof=0). FPS=1000/mean_ms, sequential batch-one approximation.
+Both: predecoded PIL RGB -> frozen processor 512x1024 -> input GPU transfer -> model -> float32 bilinear logits to original size -> raw-logit argmax -> CPU uint8 map.
+Final adds frozen float64 temperature scaling/softmax, MSP/confidence CPU transfers, CPU <=tau comparison and accepted/rejected masks.
+Frozen primitive validation checks included; no reduced-precision substitution or inference optimization.
+Excluded: RGB file decoding, model loading/downloads, wrapper artifact hashing, metadata summaries, GT, evaluation metrics, plotting and serialization.
+These are the requested computational pipeline regions, not complete wrapper-call/file-I/O latency. Outputs match the unchanged final wrapper exactly.
+Stage 1 reported approximately 20–21 ms under its earlier inference timing definition; Stage 5D uses the explicitly defined end-to-end regions above.
+
+GPU memory is peak PyTorch allocated memory (includes resident model), not reserved allocator memory or total GPU/system usage.
+baseline: 325.093262 MiB (340884992 bytes), maximum over the 60 measured runs.
+final_reliability: 806.808105 MiB (845999616 bytes), maximum over the 60 measured runs.
+Increase=481.714844 MiB (148.177431%).
+Peak counters reset before every run outside timing; previous GPU outputs released; CPU outputs retained only until pair parity check.

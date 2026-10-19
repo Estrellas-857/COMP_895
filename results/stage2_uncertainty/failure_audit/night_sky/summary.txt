@@ -1,0 +1,44 @@
+STAGE 2E — night_sky
+======================================================================
+
+Condition: night
+Target class: sky (id=10)
+
+Target-class performance
+------------------------
+GT target pixels: 722027
+Correct target pixels: 0
+Missed target pixels: 722027
+False-positive target pixels: 8
+Target recall: 0.000000
+
+MSP uncertainty
+---------------
+Correct target mean: nan
+Correct target median: nan
+Correct target p90: nan
+Missed target mean: 0.048629
+Missed target median: 0.003129
+Missed target p90: 0.168834
+
+Predictive entropy
+------------------
+Correct target mean: nan
+Correct target median: nan
+Correct target p90: nan
+Missed target mean: 0.046983
+Missed target median: 0.007732
+Missed target p90: 0.172235
+
+High-confidence missed target
+-----------------------------
+Threshold: 0.90
+High-confidence missed pixels: 613924
+All missed target pixels: 722027
+Fraction: 0.850278
+
+Top misclassification destinations
+----------------------------------
+building             640534   88.71%
+vegetation            80827   11.19%
+pole                    666    0.09%

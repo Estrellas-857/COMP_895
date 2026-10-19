@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "path": "results/baseline_analysis/condition_summary.csv",
+    "sha256": "17e2ea6b6674b88d9d974691a02122e34877bec06a7c553422c9fc586fe1ff2c"
+  },
+  "paired": {
+    "path": "results/paired_normal_vs_adverse/paired_condition_summary.csv",
+    "sha256": "ac6c7413b822936103dbe1f550557a15eca9c2448d259f1a6eb67e7c668ec84a"
+  },
+  "failure_characterization": {
+    "path": "results/stage2_uncertainty/stage2b_analysis/stage2b_summary.csv",
+    "sha256": "f24e896e0667b75f1cc6e414680a0a386d412831105585eda99164b1fdff6c5e"
+  },
+  "raw_discrimination": {
+    "path": "results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv",
+    "sha256": "875625c07872ac5c28f6ef92639fa7fbf0d768d91369af30e772659e8a4068be"
+  },
+  "calibration": {
+    "path": "results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv",
+    "sha256": "b1b86ffdb5d12f7860bd32942eb713958b574cfe64bae3e17ec46a6d5778453f"
+  },
+  "calibrated_discrimination": {
+    "path": "results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv",
+    "sha256": "390a85c8c75ede1530b92acdab6d4ebacc4fa0bbba6590ad9c497e1f5369f607"
+  },
+  "selective_prediction": {
+    "path": "results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv",
+    "sha256": "1a133b238d548a450c0f36daba529e3fa58aabbf7729ca0ff75c3f5ef84d0cec"
+  },
+  "risk_coverage": {
+    "path": "results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv",
+    "sha256": "d503ef395a5de8ce7df7f55f6dd4de78856dcedf24b37597f77740e1c1c9a8d1"
+  },
+  "target_audit": {
+    "path": "results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv",
+    "sha256": "6c3de5458017f2e52a34e020e3416891d923e408a8dbedcc25f27d9d6813cb75"
+  }
+}

@@ -1,0 +1,3 @@
+PASS: all 1023 pre-existing protected script/result files retain their SHA-256 hashes.
+Stages 1, 2, 3A, 3B and 3C unchanged, including frozen temperature and split artifacts.
+Training artifacts were accessed only as opaque bytes for preservation hashing; reserved train images/GT were not loaded.

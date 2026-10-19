@@ -1,0 +1,21 @@
+STAGE 3D FOG - CALIBRATED FAILURE DISCRIMINATION
+
+{'condition': 'fog', 'method': 'msp', 'metric_method': '1000-bin histogram approximation', 'temperature': 2.124186626456894, 'histogram_bins': 1000, 'num_images': 100, 'num_valid_pixels': 196154002, 'num_correct_pixels': 180340806, 'num_incorrect_pixels': 15813196, 'pixel_accuracy': 0.9193837707170512, 'prediction_changes': 0, 'prediction_pixels_checked': 196154002, 'error_prevalence': 0.08061622928294881, 'raw_error_prevalence': 0.08061622928294881, 'raw_num_incorrect_pixels': 15813196, 'incorrect_count_change_vs_stage2d': 0, 'raw_auroc': 0.8757985187186864, 'calibrated_auroc': 0.8844475470764116, 'auroc_change': 0.008649028357725186, 'raw_auprc': 0.42307185033313055, 'calibrated_auprc': 0.4227307293448883, 'auprc_change': -0.00034112098824223835, 'pr_random_baseline': 0.08061622928294881, 'raw_pr_random_baseline': 0.08061622928294881, 'raw_auprc_gain': 0.34245562105018174, 'calibrated_auprc_gain': 0.3421145000619395, 'raw_histogram_exact_reproduction': True, 'stage1_3c_confusion_exact_match': True, 'historical_softmax_argmax_differences': 0}
+{'condition': 'fog', 'method': 'entropy', 'metric_method': '1000-bin histogram approximation', 'temperature': 2.124186626456894, 'histogram_bins': 1000, 'num_images': 100, 'num_valid_pixels': 196154002, 'num_correct_pixels': 180340806, 'num_incorrect_pixels': 15813196, 'pixel_accuracy': 0.9193837707170512, 'prediction_changes': 0, 'prediction_pixels_checked': 196154002, 'error_prevalence': 0.08061622928294881, 'raw_error_prevalence': 0.08061622928294881, 'raw_num_incorrect_pixels': 15813196, 'incorrect_count_change_vs_stage2d': 0, 'raw_auroc': 0.8816888708389765, 'calibrated_auroc': 0.8711497029174768, 'auroc_change': -0.01053916792149967, 'raw_auprc': 0.4240664487659158, 'calibrated_auprc': 0.3617837433856436, 'auprc_change': -0.062282705380272196, 'pr_random_baseline': 0.08061622928294881, 'raw_pr_random_baseline': 0.08061622928294881, 'raw_auprc_gain': 0.343450219482967, 'calibrated_auprc_gain': 0.2811675141026948, 'raw_histogram_exact_reproduction': True, 'stage1_3c_confusion_exact_match': True, 'historical_softmax_argmax_differences': 0}
+
+Positive class=incorrect pixel; higher MSP/entropy uncertainty indicates failure.
+1000 equal-width [0,1] bins; [lower,upper), final bin includes 1.0; int64 counts.
+AUROC: reverse-bin accumulation from (0,0), trapezoidal integration.
+AUPRC: sum(delta_recall * precision[1:]); precision=1 when nothing is predicted positive.
+PR baseline=incorrect-pixel prevalence; PR gain=AUPRC minus the corresponding baseline.
+Raw metrics are unchanged frozen Stage 2D CSV values. Changes=calibrated minus raw.
+Entropy uses the unchanged Stage 2 probability log clamp of 1e-12 and normalization by log(19).
+PASS: raw float32 histograms reproduced exactly from inference using Stage 2 softmax-argmax labels.
+PASS: calibrated labels use frozen full-resolution logit argmax; exact Stage 1/3C counts/confusion.
+PASS: zero temperature-induced prediction changes; complete histograms; frozen T unchanged.
+Historical softmax-vs-logit argmax differences: 0; all verified float32 probability ties.
+Incorrect-count difference vs Stage 2D: +0.
+The historical discrepancy is preserved, not corrected: raw PR baselines use Stage 2D counts, calibrated PR baselines use Stage 3C counts.
+Metrics are histogram approximations. Small changes are descriptive, not statistically tested.
+No reserved train data, parameter fitting, rejection-threshold selection, risk-coverage or Stage 4 analysis.
+Peak allocated GPU memory: 1.383 GiB

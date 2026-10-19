@@ -1,0 +1,19 @@
+Stage 5C — two preselected systematic failures
+Frozen method=calibrated_msp; T=2.124186626456894; tau=0.386413580715649; accept U <= tau.
+
+night_sky: rejected 13.276789% of target errors; 86.723211% remain accepted. Whole-image error recall 28.702291%; target difference -15.425502 percentage points.
+snow_terrain: rejected 34.339343% of target errors; 65.660657% remain accepted. Whole-image error recall 40.858295%; target difference -6.518951 percentage points.
+
+snow_terrain has the higher target-error rejection fraction at the same frozen threshold.
+Both cases retain systematic errors among accepted predictions. Rejection mitigates part of each failure without correcting the segmentation.
+night_sky: accepted target risk=100.000000%; target recall=0.000000%; correct-target rejection rate=N/A (zero denominator).
+snow_terrain: accepted target risk=100.000000%; target recall=0.000000%; correct-target rejection rate=N/A (zero denominator).
+Historical raw high-confidence statistics and present calibrated high-confidence statistics use different probabilities; they are labeled separately.
+night_sky: historical target total/correct/missed differences = 0/0/0; destination absolute count difference=0.
+snow_terrain: historical target total/correct/missed differences = 0/0/0; destination absolute count difference=0.
+Whole-image metrics use Stage 5A definitions, valid trainIds 0–18, ignore 255; exact counts match frozen per-image records.
+This is a targeted two-case audit, not a generalization or safety claim. No fitting, threshold changes or Stage 5D benchmarking occurred.
+
+PASS: all 2781 pre-existing protected files retain their SHA-256 hashes.
+Stages 1–5B results, root source scripts, frozen final wrapper, temperature, threshold, config and train splits unchanged.
+Prior caches hashed as opaque bytes only; no reserved train RGB or GT loaded.

@@ -1,0 +1,15 @@
+{
+  "radix_trace": [
+    {
+      "prefix_bits": 20,
+      "prefix": 261515,
+      "bucket_count": 1148486,
+      "smaller_value_count": 1322996877,
+      "local_rank": 789363
+    }
+  ],
+  "candidate_memory_cap_bytes": 134217728,
+  "exact_order_statistic_verified": true,
+  "selection_duration_seconds": 171.94421661808155,
+  "peak_cuda_allocated_gib": 0.7878985404968262
+}

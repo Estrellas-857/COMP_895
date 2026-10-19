@@ -1,0 +1,32 @@
+STAGE 2B — DATASET UNCERTAINTY PROFILING
+======================================================================
+
+Fog
+  Error rate: 8.06%
+  MSP mean: correct=0.0299, incorrect=0.2254, gap=0.1955
+  Entropy mean: correct=0.0296, incorrect=0.1840, gap=0.1544
+  High-confidence wrong: 36.55%
+
+Rain
+  Error rate: 10.11%
+  MSP mean: correct=0.0367, incorrect=0.2624, gap=0.2258
+  Entropy mean: correct=0.0365, incorrect=0.2230, gap=0.1865
+  High-confidence wrong: 29.48%
+
+Snow
+  Error rate: 12.61%
+  MSP mean: correct=0.0401, incorrect=0.2239, gap=0.1838
+  Entropy mean: correct=0.0397, incorrect=0.1892, gap=0.1495
+  High-confidence wrong: 38.34%
+
+Night
+  Error rate: 39.74%
+  MSP mean: correct=0.0641, incorrect=0.1893, gap=0.1252
+  Entropy mean: correct=0.0602, incorrect=0.1689, gap=0.1087
+  High-confidence wrong: 47.16%
+
+Interpretation:
+- Incorrect pixels show higher mean uncertainty than correct pixels in every evaluated condition.
+- A substantial fraction of incorrect pixels remain highly confident (softmax >= 0.90).
+- Night has the highest segmentation error rate and the highest high-confidence-error fraction.
+- Mean uncertainty gaps are descriptive only; formal failure-detection quality must be evaluated with AUROC/AUPRC in a later stage.

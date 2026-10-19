@@ -1,0 +1,11 @@
+{
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "temperature_sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "histogram_implementation": "evaluate_uncertainty.UncertaintyAccumulator (unchanged)",
+  "metric_implementation": "evaluate_failure_detection.compute_curves (unchanged)",
+  "raw_precision": "Stage 2 float32",
+  "calibrated_precision": "Stage 3B/3C float64 after float32 interpolation",
+  "reserved_reliability_selection_data_used": false,
+  "parameters_fitted": false
+}

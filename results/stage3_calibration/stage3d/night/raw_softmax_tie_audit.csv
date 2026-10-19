@@ -1,0 +1,1 @@
+condition,rgb_path,row,column,gt,logit_prediction,raw_softmax_prediction,logit_at_logit_prediction,logit_at_softmax_prediction,probability_at_logit_prediction,probability_at_softmax_prediction,probability_tie

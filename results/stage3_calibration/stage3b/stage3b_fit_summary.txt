@@ -1,0 +1,55 @@
+STAGE 3B - ONE SHARED TEMPERATURE FIT ON ACDC TRAIN
+
+temperature: 2.124186626456894
+fit_objective: pixel-weighted multiclass NLL (natural-log nats)
+fit_dataset: ACDC train/calibration_fit only, pooled fog/rain/snow/night; all valid pixels
+seed: 42
+split_method: Exhaustive whole-filename-prefix sequence subset allocation minimizing absolute distance from 50% images per condition; sorted sequence IDs, Python random.Random(42) per-condition tie-break over optimal masks.
+num_calibration_images: 802
+num_calibration_valid_pixels: 1529411129
+raw_nll: 0.8459822438580104
+calibrated_nll: 0.5943715784165712
+absolute_nll_reduction: 0.2516106654414392
+relative_nll_reduction: 0.2974183764117743
+optimizer: safeguarded Newton root solve of convex pooled NLL derivative in beta=1/T
+initial_temperature: 1.0
+converged: True
+convergence_reason: absolute beta-gradient tolerance
+gradient_tolerance: 1e-07
+beta_interval_tolerance: 1e-08
+max_iterations: 50
+optimizer_iterations: 5
+objective_evaluations: 6
+final_gradient_beta: -5.149806587444056e-08
+prediction_changes: 0
+prediction_pixels_checked: 1529411129
+validation_used: False
+precision: native cache and full-resolution bilinear interpolation float32; scalar scaling, log-softmax, moments and reductions float64
+model: nvidia/segformer-b0-finetuned-cityscapes-512-1024
+model_revision: 7a91500a7086b805eeb868719ea5542a3e0bdeb3
+split_manifest_sha256: cb92d73031d36aa6bbc673b8976094bb93576e44cd3fdcd3cef5ed6ab37b8ee6
+cache_index_sha256: 76d5bcc649099efc314d4f33d1b615e1550f9df40c63159b9049e4c74d043231
+
+Condition diagnostics (not used to select T):
+{'condition': 'fog', 'num_images': 200, 'num_valid_pixels': 385616209, 'shared_temperature': 2.124186626456894, 'raw_nll': 0.7096888164989098, 'calibrated_nll': 0.544266364211847}
+{'condition': 'rain', 'num_images': 199, 'num_valid_pixels': 378543219, 'shared_temperature': 2.124186626456894, 'raw_nll': 0.39903078381330875, 'calibrated_nll': 0.3499305851397838}
+{'condition': 'snow', 'num_images': 200, 'num_valid_pixels': 389049556, 'shared_temperature': 2.124186626456894, 'raw_nll': 0.5803297372735053, 'calibrated_nll': 0.4637880013223201}
+{'condition': 'night', 'num_images': 203, 'num_valid_pixels': 376202145, 'shared_temperature': 2.124186626456894, 'raw_nll': 1.7101436880435361, 'calibrated_nll': 1.0267357955124663}
+
+All fit pixels are included on every objective evaluation. No pixel subsampling.
+Full-resolution tensors exist for only one image at a time; native raw float32 logits are cached.
+Interpolation: bilinear, 1080x1920, align_corners=False, before scaling.
+NLL form is stable -log_softmax(z_full/T)[GT]; float64 improves scalar optimizer numerical precision.
+Prediction check compares original float32-logit argmax with scaled float64-logit argmax on ALL valid calibration-fit pixels.
+Reliability-selection data are reserved; only their inventory/path metadata are used for split integrity.
+No validation images, labels, logits or interpreted metrics were loaded for fitting or evaluation.
+No validation calibrated evaluation, threshold selection, Stage 3C/3D or Stage 4 work performed.
+Fitting-set NLL reduction is an optimization result, not evidence of validation generalization or improved segmentation.
+SciPy is not installed; the deterministic analytic-derivative safeguarded Newton solver is implemented locally.
+
+PASS: all 164 pre-existing protected script/result files have unchanged SHA-256 hashes.
+PASS: frozen split CSVs and summaries have unchanged hashes.
+Stage 1, Stage 2 and Stage 3A results were not modified.
+Existing results were accessed only as opaque bytes for preservation hashes, not interpreted for fitting.
+
+Peak allocated GPU memory: 1.972 GiB

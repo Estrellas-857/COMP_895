@@ -1,0 +1,14 @@
+[
+  {
+    "case": "night_sky",
+    "serialized_maps_verified": true,
+    "inference_hashes_unchanged": true,
+    "undefined_rate_stored_as_empty_csv": true
+  },
+  {
+    "case": "snow_terrain",
+    "serialized_maps_verified": true,
+    "inference_hashes_unchanged": true,
+    "undefined_rate_stored_as_empty_csv": true
+  }
+]

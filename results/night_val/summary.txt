@@ -1,0 +1,26 @@
+Condition: night
+Images evaluated: 106
+Pixel accuracy: 0.602624
+mIoU: 0.223781
+Average latency ms: 20.310559
+
+Per-class IoU:
+ 0 road            0.722732380834973
+ 1 sidewalk        0.30732017834241016
+ 2 building        0.4423367089682406
+ 3 wall            0.0987486361072916
+ 4 fence           0.19325842934594703
+ 5 pole            0.3892602470068624
+ 6 traffic light   0.30855369492064333
+ 7 traffic sign    0.17260692999207966
+ 8 vegetation      0.46263483461778526
+ 9 terrain         0.14273276050910358
+10 sky             0.04816518933792364
+11 person          0.2137224244497105
+12 rider           0.053187029959314513
+13 car             0.330360033003393
+14 truck           0.02026071586389748
+15 bus             0.0
+16 train           0.07284392926540531
+17 motorcycle      0.000488933409654646
+18 bicycle         0.272633589359568

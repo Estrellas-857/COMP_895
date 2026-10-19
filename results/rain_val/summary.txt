@@ -1,0 +1,26 @@
+Condition: rain
+Images evaluated: 100
+Pixel accuracy: 0.898906
+mIoU: 0.496401
+Average latency ms: 20.412551
+
+Per-class IoU:
+ 0 road            0.787479706860466
+ 1 sidewalk        0.40707487747919613
+ 2 building        0.8173003429222492
+ 3 wall            0.20143633285465087
+ 4 fence           0.2483514717690036
+ 5 pole            0.4150082321276284
+ 6 traffic light   0.5881192746936414
+ 7 traffic sign    0.5535001428278186
+ 8 vegetation      0.893128398646914
+ 9 terrain         0.4432649998738635
+10 sky             0.9736074054342854
+11 person          0.586289235776417
+12 rider           0.022183827136793156
+13 car             0.770690390675046
+14 truck           0.2996289230382188
+15 bus             0.5874853020680699
+16 train           0.3239768599785822
+17 motorcycle      0.14637271125820744
+18 bicycle         0.3667209815010064

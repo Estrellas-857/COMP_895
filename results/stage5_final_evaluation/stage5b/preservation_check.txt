@@ -1,0 +1,3 @@
+PASS: all 2749 pre-existing protected files retain SHA-256 hashes.
+Stages 1–5A, temperature, threshold, final configuration, model-inference sources and splits unchanged.
+Prior caches hashed as opaque bytes only; no train images/GT or train diagnostics were used.

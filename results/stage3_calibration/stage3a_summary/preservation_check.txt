@@ -1,0 +1,3 @@
+PASS: all 143 pre-existing protected script/result files retain their SHA-256 hashes.
+Stage 1 and Stage 2 outputs unchanged.
+All five existing Night Stage 3A files unchanged; Night inference not rerun.

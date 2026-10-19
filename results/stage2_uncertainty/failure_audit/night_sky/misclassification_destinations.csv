@@ -1,0 +1,4 @@
+predicted_class_id,predicted_class,pixels,fraction
+2,building,640534,0.8871330296512457
+8,vegetation,80827,0.11194456716992578
+5,pole,666,0.0009224031788284925

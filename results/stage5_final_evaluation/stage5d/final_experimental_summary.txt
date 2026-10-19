@@ -1,0 +1,123 @@
+COMP 895 — final measured experimental results
+
+All prior-stage results below are read from frozen artifacts; no experiment was rerun.
+
+A. Segmentation baseline (full validation; mIoU and accuracy are percentages)
+mIoU_union averages classes with nonzero prediction/GT union; mIoU_GT averages classes present in GT.
+Condition | images | mIoU_union (%) | mIoU_GT (%) | pixel accuracy (%)
+fog | 100 | 63.7933 | 63.7933 | 91.9384
+rain | 100 | 49.6401 | 49.6401 | 89.8906
+snow | 100 | 48.5679 | 48.5679 | 87.3900
+night | 106 | 22.3781 | 23.6214 | 60.2624
+
+Paired normal/adverse evaluation (separate paired subset; delta = adverse minus normal)
+Condition | pairs | normal mIoU_union (%) | adverse mIoU_union (%) | delta (percentage points)
+fog | 50 | 57.6033 | 56.7439 | -0.8594
+rain | 50 | 54.2804 | 50.7505 | -3.5298
+snow | 50 | 53.9051 | 48.2585 | -5.6467
+night | 53 | 50.3679 | 22.3716 | -27.9963
+
+B. Failure characterization
+Historical Stage 2 P(raw confidence >= 0.90 | incorrect), NOT P(incorrect | high confidence):
+fog: 36.5498%
+rain: 29.4778%
+snow: 38.3366%
+night: 47.1624%
+
+Stage 2D raw failure discrimination (1000-bin histogram approximation; incorrect = positive)
+Condition | method | AUROC | AUPRC | random PR baseline (error prevalence)
+fog | entropy | 0.881689 | 0.424066 | 0.080616
+fog | msp | 0.875799 | 0.423072 | 0.080616
+rain | entropy | 0.899126 | 0.482952 | 0.101094
+rain | msp | 0.896207 | 0.486655 | 0.101094
+snow | entropy | 0.832694 | 0.460688 | 0.126100
+snow | msp | 0.831080 | 0.456667 | 0.126100
+night | entropy | 0.780479 | 0.647589 | 0.397376
+night | msp | 0.773237 | 0.639977 | 0.397376
+
+C. Calibration
+One shared temperature T=2.124186626456894 was fitted only on train/calibration_fit.
+Condition | raw ECE | calibrated ECE | raw NLL (nats) | calibrated NLL (nats)
+fog | 0.034912 | 0.050656 | 0.320630 | 0.290366
+rain | 0.041613 | 0.054307 | 0.386998 | 0.353373
+snow | 0.062834 | 0.044195 | 0.578771 | 0.453876
+night | 0.283537 | 0.144326 | 2.243088 | 1.341115
+NLL improved for all four conditions; ECE improved for Snow/Night and increased for Fog/Rain.
+Semantic predictions did not change. Calibration and segmentation accuracy are different properties.
+
+Stage 3D changes in failure discrimination (calibrated minus frozen raw; absolute units)
+Condition | MSP AUROC delta | MSP AUPRC delta | entropy AUROC delta | entropy AUPRC delta
+fog | +0.008649 | -0.000341 | -0.010539 | -0.062283
+rain | +0.001665 | -0.008518 | -0.016825 | -0.070511
+snow | -0.002000 | +0.002871 | -0.022367 | -0.051729
+night | +0.011550 | +0.011894 | -0.001486 | -0.008963
+Calibration did not uniformly improve discrimination; calibrated entropy decreased both metrics in all four conditions.
+Historical Stage 2 used softmax argmax: one Rain and one Snow float32 tie differed from canonical logit argmax.
+Frozen historical values remain unchanged; Stages 5A/B use canonical logit-argmax correctness. Small differences are not significance claims.
+
+D. Final frozen reliability system
+calibrated_msp; T=2.124186626456894; tau=0.386413580715649; accept uncertainty <= tau.
+Threshold selected on reserved train data before validation; Stage 5 did not retune it.
+Pooled valid_coverage: 81.433158%
+Pooled baseline_risk: 17.805416%
+Pooled accepted_risk: 9.838704%
+Pooled risk_reduction_absolute: 7.966712 percentage points
+Pooled risk_reduction_relative: 44.743195%
+Pooled error_recall: 55.002638%
+Pooled rejection_precision: 52.746983%
+
+E. Pooled calibrated-MSP risk–coverage (1000-bin descriptive approximation)
+Requested coverage (%) | actual histogram coverage (%) | accepted risk (%)
+100.000000 | 100.000000 | 17.805416
+90.000000 | 90.015304 | 13.122382
+80.000000 | 79.975820 | 9.342636
+70.000000 | 70.027395 | 6.475331
+60.000000 | 60.064556 | 4.547058
+50.000000 | 50.113221 | 3.282565
+These descriptive points do not select or replace the deployed threshold.
+
+F. Representative systematic failures
+Case | target errors rejected (%) | target errors still accepted (%)
+night_sky | 13.276789 | 86.723211
+snow_terrain | 34.339343 | 65.660657
+Both target classes retain zero recall and 100% accepted target-region risk; rejected pixels were not corrected.
+
+G. Computational cost (Stage 5D, this RTX 3060 environment)
+baseline: mean=36.618750 ms; median=37.337860 ms; std=2.996688 ms; min=31.027398 ms; max=45.586958 ms; FPS=27.308414.
+final_reliability: mean=86.747105 ms; median=85.936818 ms; std=5.357585 ms; min=76.773167 ms; max=98.737665 ms; FPS=11.527762.
+Mean latency overhead=50.128354 ms (136.892586%).
+20 RGBs: lexicographically first 5 filenames per Fog/Rain/Snow/Night validation subset (ties by path); exact manifest in test_subset.csv.
+Five warm-up runs PER pipeline; three timed repeats per image; 60 observations per pipeline, paired alternating AB/BA order.
+perf_counter wall-clock timing with CUDA synchronization immediately before/after each measured region; batch=1, original 1920x1080.
+Statistics pool all 60 observations equally; population standard deviation (ddof=0). FPS=1000/mean_ms, sequential batch-one approximation.
+Both: predecoded PIL RGB -> frozen processor 512x1024 -> input GPU transfer -> model -> float32 bilinear logits to original size -> raw-logit argmax -> CPU uint8 map.
+Final adds frozen float64 temperature scaling/softmax, MSP/confidence CPU transfers, CPU <=tau comparison and accepted/rejected masks.
+Frozen primitive validation checks included; no reduced-precision substitution or inference optimization.
+Excluded: RGB file decoding, model loading/downloads, wrapper artifact hashing, metadata summaries, GT, evaluation metrics, plotting and serialization.
+These are the requested computational pipeline regions, not complete wrapper-call/file-I/O latency. Outputs match the unchanged final wrapper exactly.
+Stage 1 reported approximately 20–21 ms under its earlier inference timing definition; Stage 5D uses the explicitly defined end-to-end regions above.
+
+GPU memory is peak PyTorch allocated memory (includes resident model), not reserved allocator memory or total GPU/system usage.
+baseline: 325.093262 MiB (340884992 bytes), maximum over the 60 measured runs.
+final_reliability: 806.808105 MiB (845999616 bytes), maximum over the 60 measured runs.
+Increase=481.714844 MiB (148.177431%).
+Peak counters reset before every run outside timing; previous GPU outputs released; CPU outputs retained only until pair parity check.
+
+Final interpretation
+Adverse conditions reduce segmentation performance in the measured paired data; Night remains the hardest evaluated condition.
+Uncertainty carries failure-discrimination information, but systematic high-confidence errors remain.
+Probability calibration changes confidence agreement; it does not change semantic predictions and does not uniformly improve failure ranking.
+The fixed rejection mechanism retains a lower-error subset at the cost of coverage; rejected predictions are abstentions.
+The two representative systematic failures are only partly rejected. These results do not establish real-world autonomous-driving safety.
+No model, temperature, uncertainty definition, final method, or operating point was changed. Experimental work stops after Stage 5D.
+
+Source artifacts:
+baseline: results/baseline_analysis/condition_summary.csv
+paired: results/paired_normal_vs_adverse/paired_condition_summary.csv
+failure_characterization: results/stage2_uncertainty/stage2b_analysis/stage2b_summary.csv
+raw_discrimination: results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv
+calibration: results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+calibrated_discrimination: results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+selective_prediction: results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv
+risk_coverage: results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv
+target_audit: results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv

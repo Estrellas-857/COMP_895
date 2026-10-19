@@ -1,0 +1,5 @@
+PASS: all 1064 pre-existing protected source/result/visualization files retain their SHA-256 hashes.
+Manifest: protected_files_before.json
+Stages 1, 2, 3A, 3B, 3C, and 3D unchanged. Frozen temperature, train splits, and reliability_selection artifacts unchanged.
+Split artifacts were hashed as opaque bytes only; no reserved RGB or GT was loaded.
+Preservation hashing was separate from the smoke inference data-access audit.

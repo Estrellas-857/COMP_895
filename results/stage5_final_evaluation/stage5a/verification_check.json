@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "per_image_rows": 406,
+  "condition_counts": {
+    "fog": 100,
+    "rain": 100,
+    "snow": 100,
+    "night": 106
+  },
+  "all_saved_metric_formulas_verified": true,
+  "pooled_and_condition_counts_equal_per_image_sums": true,
+  "exact_stage1_and_stage3c_confusions": true,
+  "prediction_changes": 0,
+  "num_valid_pixels": 790712012,
+  "num_all_pixels": 841881600,
+  "gt_loaded_after_inference": true,
+  "train_data_not_reevaluated": true,
+  "zero_denominator_image_rows": 0,
+  "synthetic_ignore_label_and_zero_denominator_checks_passed": true,
+  "pooled_train_validation_deltas_verified": true,
+  "one_frozen_operating_point_only": true,
+  "no_stage5b_5c_5d": true
+}

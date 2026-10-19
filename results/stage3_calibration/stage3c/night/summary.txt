@@ -1,0 +1,52 @@
+STAGE 3C NIGHT - FROZEN TEMPERATURE VALIDATION
+
+condition: night
+num_images: 106
+num_valid_pixels: 202435226
+num_correct_pixels: 121992381
+num_incorrect_pixels: 80442845
+pixel_accuracy: 0.6026242735046518
+error_rate: 0.3973757264953482
+num_bins: 15
+high_conf_threshold: 0.9
+temperature: 2.124186626456894
+prediction_changes: 0
+prediction_pixels_checked: 202435226
+raw_ece: 0.2835366714807829
+calibrated_ece: 0.14432632381012042
+raw_nll: 2.2430883253974168
+calibrated_nll: 1.3411146875547952
+raw_high_conf_coverage: 0.675424572598842
+calibrated_high_conf_coverage: 0.38982685256566957
+raw_high_conf_error_rate: 0.27747297613980443
+calibrated_high_conf_error_rate: 0.1269359023118219
+raw_fraction_incorrect_that_are_high_conf: 0.4716243439674467
+calibrated_fraction_incorrect_that_are_high_conf: 0.12452452421343377
+raw_num_high_conf_pixels: 136729726
+calibrated_num_high_conf_pixels: 78914687
+raw_num_high_conf_incorrect: 37938804
+calibrated_num_high_conf_incorrect: 10017107
+ece_absolute_change: -0.13921034767066245
+ece_relative_change: -0.49097828137584537
+ece_improved: True
+nll_absolute_change: -0.9019736378426215
+nll_relative_change: -0.4021124035241971
+nll_improved: True
+baseline_accuracy_check: PASS
+stage1_confusion_matrix_exact_match: True
+raw_stage3a_reproduction_check: PASS
+frozen_temperature_check: PASS
+
+absolute_change = calibrated - raw; relative_change = (calibrated - raw) / raw.
+Negative changes indicate improvement for ECE/NLL; relative changes in CSV are fractions.
+HC means confidence >= 0.90; high_conf_error_rate = P(incorrect | HC).
+fraction_incorrect_that_are_high_conf = P(HC | incorrect).
+All metrics are pixel-weighted across valid trainIds 0-18; ignore trainId 255.
+15 bins: [lower, upper), with 1.0 included in the final bin; empty-bin statistics are NaN.
+NLL uses stable log-softmax, in nats. Raw comparisons use frozen Stage 3A CSV values.
+float32 model/interpolation/raw branch; float64 temperature division, calibrated softmax and log-softmax (same as Stage 3B)
+PASS: raw metrics and bins reproduced in the same inference pass; frozen artifacts not rewritten.
+PASS: zero prediction changes across all valid pixels; exact Stage 1 confusion-matrix agreement.
+Reliability panels read frozen raw and new calibrated bin CSVs; both axes span [0,1].
+No parameter fitting, threshold selection or failure-ranking analysis performed.
+Peak allocated GPU memory: 0.860 GiB

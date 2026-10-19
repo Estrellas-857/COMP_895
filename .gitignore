@@ -1,0 +1,88 @@
+# Local Python environment and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+.idea/
+.vscode/
+.DS_Store
+*.pem
+*.key
+
+# Obtain ACDC separately from its official website; do not redistribute it.
+/data/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Downloaded model weights and model caches
+.cache/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Large, reproducible intermediate arrays and inference outputs
+/results/**/logit_cache/
+/results/**/pixel_cache/
+/results/**/numerical_maps/
+/results/**/inference_outputs/
+/results/stage4_reliability/stage4a/smoke_test/
+/results/stage4_reliability/stage4c/integration_test/
+*.npy
+*.npz
+
+# Keep small aggregate arrays needed by analysis scripts.
+!/results/**/*confusion*.npy
+!/results/**/confusion_matrices/*.npy
+!/results/**/*histograms.npz
+!/results/**/condition_histograms/*.npz
+!/results/stage5_final_evaluation/stage5b/risk_coverage_curves.npz
+
+# Images are opt-in: retain these statistical plots, exclude dataset examples.
+*.png
+*.jpg
+*.jpeg
+!/results/stage1_wrapup/fig*.png
+!/results/stage2_uncertainty/stage2b_analysis/fig*.png
+!/results/stage2_uncertainty/paired_normal_vs_adverse/stage2c_analysis/fig*.png
+!/results/stage2_uncertainty/failure_detection/**/roc_curve.png
+!/results/stage2_uncertainty/failure_detection/**/precision_recall_curve.png
+!/results/stage2_uncertainty/failure_detection/stage2d_analysis/fig*.png
+!/results/stage3_calibration/*/reliability_diagram.png
+!/results/stage3_calibration/stage3a_summary/stage3a_calibration_comparison.png
+!/results/stage3_calibration/stage3c/*/raw_vs_calibrated_reliability.png
+!/results/stage3_calibration/stage3c/stage3c_summary/fig*.png
+!/results/stage3_calibration/stage3d/stage3d_summary/fig*.png
+!/results/stage5_final_evaluation/stage5a/fig*.png
+!/results/stage5_final_evaluation/stage5b/fig*.png
+!/results/stage5_final_evaluation/stage5d/fig*.png
+
+# Presentation build products and optional documents: review before publishing.
+/.chart-data-*/
+/.*slides_build/
+/output/
+/Project Proposal.docx
+*.log
+
+# Keep results CSV/TXT/JSON files, including frozen parameters and split lists.
+# Do not replace the rules above with a blanket /results/ exclusion.

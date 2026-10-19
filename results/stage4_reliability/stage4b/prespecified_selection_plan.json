@@ -1,0 +1,14 @@
+{
+  "target_coverage": 0.8,
+  "method": "calibrated_msp",
+  "quantile_method": "Exact inverse empirical CDF; rank ceil(4*N/5), all pixels; external-memory radix narrowing then exact order statistic",
+  "gt_used_for_selection": false,
+  "optional_raw_baseline": false,
+  "created_utc": "2026-09-28T15:25:49.640110+00:00",
+  "expected_images": 798,
+  "expected_pixels": 1654732800,
+  "projected_cache_bytes": 14892799488,
+  "free_disk_bytes": 1322696933376,
+  "phase_a": "Only frozen reliability_selection RGBs. Store float64 uncertainty and uint8 canonical prediction per image; no GT reads.",
+  "phase_b": "Separate invocation after frozen_operating_point.json exists; same split GT and caches only. No threshold changes."
+}

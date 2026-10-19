@@ -1,0 +1,10 @@
+{
+  "outputs_saved_before_gt_open": true,
+  "sha256": {
+    "numerical_maps/confidence.npy": "b89a51c72a5ba818365350943b928adf9f5078cb5fb2694e697a1ae033fd7b69",
+    "numerical_maps/rejected_mask.npy": "9d5c56d76791f5b73ce636a39ad5ed7a806bb934e4b9793fa280e8a560514a34",
+    "numerical_maps/reliability_mask.npy": "ad6573bf3b9f343d43fe5f1419b317b613e37af3b57ea5b5334eecac6841ab34",
+    "numerical_maps/segmentation.npy": "6fa9ad3b450b826740ab48d8df0e40bbf11b5cf5879ac0b8f155a16214df379f",
+    "numerical_maps/uncertainty.npy": "d4df2e3b912f8bc5f7a1dc0f19771ef29cbf7fe693c59a1a9b92f19dbfc32ffc"
+  }
+}

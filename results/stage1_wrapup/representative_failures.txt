@@ -1,0 +1,14 @@
+Stage 1 Representative Failure Cases
+============================================================
+
+1. Snow terrain
+   Interpretation: systematic terrain-to-sidewalk/road confusion under snow-covered ground appearance.
+   Figure: results/failure_cases/snow/terrain/rank_01_GOPR0122_frame_000364_rgb_anon.png
+
+2. Night sky
+   Interpretation: systematic nighttime sky confusion with building, vegetation, and road.
+   Figure: results/failure_cases/night/sky/rank_01_GOPR0356_frame_000363_rgb_anon.png
+
+3. Snow bus
+   Interpretation: object/sequence-dependent failure involving reflection, occlusion, distance, and vehicle-class confusion. Not treated as the primary systematic snow failure.
+   Figure: results/failure_cases/snow/bus/rank_01_GOPR0606_frame_000377_rgb_anon.png

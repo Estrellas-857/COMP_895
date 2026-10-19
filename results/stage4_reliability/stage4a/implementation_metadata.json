@@ -1,0 +1,164 @@
+{
+  "stage": "4A",
+  "scope": "Implementation and one-image engineering smoke test only",
+  "implementation_files": [
+    "reliability_pipeline.py",
+    "run_reliability_pipeline.py",
+    "test_reliability_pipeline.py"
+  ],
+  "source_sha256": {
+    "reliability_pipeline.py": "e3ab0562e824a797ccdf791e79608fbf33cf17e5858b62f13738089fd4cad0f6",
+    "run_reliability_pipeline.py": "24ad00d77dbb1cfbde8363933d52aeb5ea5990d102333e08dc3532f288e0d279",
+    "test_reliability_pipeline.py": "de51ddafc1dbb7223b7b8a5ddb03a5ca4affc2db6506130f9570a9a0ce6eec33"
+  },
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "temperature": 2.124186626456894,
+  "temperature_artifact": "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json",
+  "temperature_artifact_sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "supported_methods": [
+    "raw_msp",
+    "calibrated_msp",
+    "raw_entropy",
+    "calibrated_entropy"
+  ],
+  "default_method": "calibrated_msp",
+  "threshold_required": true,
+  "threshold_selected": false,
+  "threshold_purpose": "Engineering smoke-test threshold only; NOT a selected operating threshold",
+  "precision": "float32 inference/interpolation; raw probabilities float32; calibrated probabilities float64",
+  "device_support": [
+    "cuda",
+    "cpu"
+  ],
+  "smoke_device": "NVIDIA GeForce RTX 3060 (12 GB)",
+  "peak_cuda_allocated_gib": 1.3593554496765137,
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "5.17.0",
+  "numpy_version": "2.5.2",
+  "tests": {
+    "unit_tests_passed": 5,
+    "unit_test_descriptions": [
+      "inclusive threshold boundary and invalid values",
+      "uncertainty formulas/precision and invariant prediction",
+      "uniform distribution entropy",
+      "rejection of changed temperature artifact",
+      "public PIL/path API, RGB conversion and arbitrary spatial size (stubbed model)"
+    ],
+    "smoke_checks_passed": true,
+    "saved_array_png_roundtrip_passed": true,
+    "cross_method_checks": {
+      "raw_msp": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 0.0,
+        "uncertainty_max": 0.8476488590240479,
+        "uncertainty_mean": 0.21038912296398646
+      },
+      "calibrated_msp": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 2.813394703293781e-05,
+        "uncertainty_max": 0.876539743246746,
+        "uncertainty_mean": 0.4204109412139765
+      },
+      "raw_entropy": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 4.68606042858255e-10,
+        "uncertainty_max": 0.8023325204849243,
+        "uncertainty_mean": 0.18753554429100888
+      },
+      "calibrated_entropy": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 0.0001230254437573561,
+        "uncertainty_max": 0.9259154161865296,
+        "uncertainty_mean": 0.4446277057542194
+      }
+    }
+  },
+  "smoke_result": {
+    "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+    "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+    "temperature": 2.124186626456894,
+    "applied_temperature": 2.124186626456894,
+    "temperature_artifact": "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json",
+    "temperature_artifact_sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+    "uncertainty_method": "calibrated_msp",
+    "threshold": 0.1,
+    "threshold_source": "user supplied; no operating-point selection",
+    "original_image_size": {
+      "height": 1080,
+      "width": 1920
+    },
+    "total_pixels": 2073600,
+    "accepted_pixels": 297649,
+    "rejected_pixels": 1775951,
+    "coverage": 0.1435421489197531,
+    "uncertainty_min": 2.813394703293781e-05,
+    "uncertainty_max": 0.876539743246746,
+    "uncertainty_mean": 0.4204109412139765,
+    "device": "cuda",
+    "ground_truth_required": false,
+    "decision_rule": "accepted iff uncertainty <= threshold",
+    "segmentation_definition": "argmax of unscaled full-resolution logits",
+    "precision": "float32 inference/interpolation; raw probabilities float32; calibrated probabilities float64",
+    "input_image": "/home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png",
+    "threshold_purpose": "Engineering smoke-test threshold only; NOT a selected operating threshold",
+    "cross_method_checks": {
+      "raw_msp": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 0.0,
+        "uncertainty_max": 0.8476488590240479,
+        "uncertainty_mean": 0.21038912296398646
+      },
+      "calibrated_msp": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 2.813394703293781e-05,
+        "uncertainty_max": 0.876539743246746,
+        "uncertainty_mean": 0.4204109412139765
+      },
+      "raw_entropy": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 4.68606042858255e-10,
+        "uncertainty_max": 0.8023325204849243,
+        "uncertainty_mean": 0.18753554429100888
+      },
+      "calibrated_entropy": {
+        "passed": true,
+        "identical_segmentation": true,
+        "uncertainty_min": 0.0001230254437573561,
+        "uncertainty_max": 0.9259154161865296,
+        "uncertainty_mean": 0.4446277057542194
+      }
+    },
+    "prediction_changes": 0,
+    "ground_truth_loaded": false,
+    "peak_cuda_allocated_gib": 1.3593554496765137,
+    "output_definitions": {
+      "segmentation.npy": "Canonical uint8 trainIds, unchanged at rejected pixels",
+      "segmentation_trainIds.png": "Lossless single-channel canonical trainIds 0..18",
+      "segmentation.png": "Cityscapes color visualization of all original predictions",
+      "uncertainty.npy": "Exact numerical uncertainty values; no display normalization",
+      "uncertainty.png": "Magma visualization on fixed [0,1] scale",
+      "reliability_mask.png": "White (255) accepted; black (0) rejected",
+      "accepted_segmentation_visualization.png": "Display only; magenta flags rejected pixels"
+    }
+  },
+  "ground_truth_loaded": false,
+  "reliability_selection_data_used": false,
+  "parameter_fitting_performed": false,
+  "stage4b_started": false,
+  "preservation": {
+    "status": "PASS",
+    "num_protected_files": 1064
+  },
+  "implementation_issues": [
+    "Sandbox did not expose the GPU; the approved smoke run outside the sandbox used the RTX 3060 successfully."
+  ],
+  "interpretation": "Functioning inference mechanism only. No evidence of improved reliability or selected operating point is established."
+}

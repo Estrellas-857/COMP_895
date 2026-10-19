@@ -1,0 +1,6 @@
+rank,condition,class_name,image,sequence,gt_pixels,pred_pixels,tp,fp,fn,iou,recall,precision,top_gt_confusions
+1,snow,bus,GOPR0606_frame_000377_rgb_anon.png,GOPR0606,695517,0,0,0,695517,0.0,0.0,nan,building=40.53%; vegetation=24.34%; train=22.33%; car=7.89%; bicycle=2.06%
+2,snow,bus,GOPR0604_frame_000373_rgb_anon.png,GOPR0604,9766,0,0,0,9766,0.0,0.0,nan,vegetation=43.42%; building=32.40%; car=16.18%; train=4.39%; traffic sign=2.15%
+3,snow,bus,GOPR0122_frame_000121_rgb_anon.png,GOPR0122,1515,9559,0,9559,1515,0.0,0.0,0.0,building=60.99%; car=36.44%; vegetation=1.98%; person=0.59%
+4,snow,bus,GOPR0604_frame_000413_rgb_anon.png,GOPR0604,4431,394,8,386,4423,0.001660784720780569,0.0018054615211013315,0.02030456852791878,vegetation=40.71%; car=37.98%; building=19.27%; wall=1.47%; pole=0.38%
+5,snow,bus,GOPR0606_frame_000397_rgb_anon.png,GOPR0606,345676,15486,15290,196,330386,0.04420710551880464,0.04423217116606302,0.9873434069482113,train=81.13%; building=7.36%; bus=4.42%; vegetation=2.65%; pole=2.36%

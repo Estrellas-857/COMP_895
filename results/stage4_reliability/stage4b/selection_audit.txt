@@ -1,0 +1,13 @@
+Stage 4B selection audit: PASS
+Frozen reliability_selection split: 798 RGBs; {'fog': 200, 'rain': 201, 'snow': 200, 'night': 197}.
+No overlap with calibration_fit image paths, GT paths, or sequence IDs. No validation paths used.
+Phase A allowlist permits only the 798 reserved RGBs; zero GT opens; all pixels included.
+Exact external-memory float64 order statistic, no rounding/subsampling or histogram approximation.
+Rank: 1323786240; total image pixels: 1654732800.
+Threshold artifact frozen at 2026-09-28T15:34:08.236505+00:00; first GT open at 2026-09-28T15:34:30.251369+00:00.
+Threshold SHA-256 before and after diagnostics: 8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e.
+Prediction changes: 0 across 1654732800 image pixels; cache retained unchanged.
+Phase B opens only reserved GTs, using Phase A uncertainty/prediction caches.
+Accepted + rejected = all pixels. TP+FP+FN+TN = valid pixels. All metric denominators checked.
+One global threshold; no condition-specific thresholds, risk sweep, model fitting, or temperature fitting.
+No validation evaluation; Stage 4C/5 not begun.

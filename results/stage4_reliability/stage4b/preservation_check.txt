@@ -1,0 +1,3 @@
+PASS: all 1088 pre-existing protected files retain SHA-256 hashes.
+Stages 1, 2, 3A–3D, and 4A, temperature, train split manifests, and prior sources unchanged.
+Protected files were read as opaque bytes for hashing, not used as validation metrics or fitting data.

@@ -1,0 +1,7 @@
+{
+  "config_sha256": "b1ada13a96df8e725b412c38ed3b266cb064aff75c6c802b601bc008c54a7b7a",
+  "wrapper_sha256": "056459204f373ce0fef80589c1d4e316a288164b68b26cdf70d795f61b42e96e",
+  "frozen_utc": "2026-09-28T18:57:55.709432+00:00",
+  "temperature_artifact_sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "threshold_artifact_sha256": "8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e"
+}

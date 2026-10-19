@@ -1,0 +1,3 @@
+pipeline,peak_allocated_bytes,peak_allocated_mib,mean_run_peak_allocated_mib,min_resident_allocated_bytes,max_resident_allocated_bytes
+baseline,340884992,325.09326171875,325.09326171875,24477184,24477184
+final_reliability,845999616,806.80810546875,806.80810546875,24477184,24477184

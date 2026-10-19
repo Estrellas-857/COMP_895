@@ -1,0 +1,21 @@
+{
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "uncertainty_method": "calibrated_msp",
+  "temperature": 2.124186626456894,
+  "temperature_artifact": "results/stage3_calibration/stage3b/fitted_temperature.json",
+  "temperature_artifact_hash": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "threshold": 0.386413580715649,
+  "threshold_artifact": "results/stage4_reliability/stage4b/frozen_operating_point.json",
+  "threshold_artifact_hash": "8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e",
+  "acceptance_rule": "uncertainty <= threshold",
+  "selection_target_coverage": 0.8,
+  "selection_dataset_description": "ACDC train/reliability_selection only",
+  "gt_required_at_inference": false,
+  "implementation_dependencies": {
+    "reliability_pipeline.py": "e3ab0562e824a797ccdf791e79608fbf33cf17e5858b62f13738089fd4cad0f6",
+    "run_reliability_pipeline.py": "24ad00d77dbb1cfbde8363933d52aeb5ea5990d102333e08dc3532f288e0d279"
+  },
+  "precision": "Frozen Stage 4A: float32 inference and interpolation; float64 calibrated softmax",
+  "configuration_role": "Descriptive final frozen implementation; parameters loaded from verified Stage 3B/4B artifacts"
+}

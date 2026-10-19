@@ -1,0 +1,4 @@
+PASS: all 164 pre-existing protected script/result files have unchanged SHA-256 hashes.
+PASS: frozen split CSVs and summaries have unchanged hashes.
+Stage 1, Stage 2 and Stage 3A results were not modified.
+Existing results were accessed only as opaque bytes for preservation hashes, not interpreted for fitting.

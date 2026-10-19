@@ -1,0 +1,6 @@
+rank,condition,class_name,image,sequence,gt_pixels,pred_pixels,tp,fp,fn,iou,recall,precision,top_gt_confusions
+1,snow,terrain,GOPR0122_frame_000364_rgb_anon.png,GOPR0122,102716,0,0,0,102716,0.0,0.0,nan,sidewalk=56.69%; road=43.14%; car=0.08%; vegetation=0.07%; pole=0.01%
+2,snow,terrain,GOPR0606_frame_000238_rgb_anon.png,GOPR0606,69466,6,0,6,69466,0.0,0.0,0.0,sidewalk=97.37%; road=2.42%; pole=0.11%; vegetation=0.10%; car=0.01%
+3,snow,terrain,GOPR0606_frame_000110_rgb_anon.png,GOPR0606,57014,11009,0,11009,57014,0.0,0.0,0.0,sidewalk=98.88%; road=0.69%; pole=0.28%; vegetation=0.14%
+4,snow,terrain,GOPR0607_frame_000410_rgb_anon.png,GOPR0607,51792,635,0,635,51792,0.0,0.0,0.0,sidewalk=98.52%; road=1.48%
+5,snow,terrain,GP030176_frame_000721_rgb_anon.png,GP030176,29782,0,0,0,29782,0.0,0.0,nan,sidewalk=72.66%; road=15.55%; wall=7.71%; train=1.59%; vegetation=1.33%

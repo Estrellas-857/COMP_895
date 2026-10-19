@@ -1,0 +1,95 @@
+Stage 4C — Final frozen selective-prediction implementation
+
+Status: COMPLETE. Stopped before Stage 5.
+Method: calibrated_msp
+Model: nvidia/segformer-b0-finetuned-cityscapes-512-1024
+Revision: 7a91500a7086b805eeb868719ea5542a3e0bdeb3
+Temperature loaded from Stage 3B: 2.124186626456894
+Threshold loaded from Stage 4B: 0.386413580715649
+Accept when uncertainty <= threshold; reject otherwise.
+
+Temperature artifact: results/stage3_calibration/stage3b/fitted_temperature.json
+SHA-256: 651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c
+Threshold artifact: results/stage4_reliability/stage4b/frozen_operating_point.json
+SHA-256: 8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e
+Final config SHA-256: b1ada13a96df8e725b412c38ed3b266cb064aff75c6c802b601bc008c54a7b7a
+Wrapper SHA-256: 056459204f373ce0fef80589c1d4e316a288164b68b26cdf70d795f61b42e96e
+
+Interface
+    from run_final_reliability import FinalReliabilityPipeline
+    final_pipeline = FinalReliabilityPipeline()
+    result = final_pipeline.predict(image_path_or_PIL_image)
+
+CLI
+    .venv/bin/python run_final_reliability.py --image /path/to/image.png
+Optional: --device cuda|cpu, --local-files-only, --output-dir NEW_DIRECTORY.
+Normal inference exposes no threshold/method override. Existing output directories
+are refused. Parameter artifacts and final config are read-only during inference.
+Stage 4A inference is reused unchanged via infer_logits and predict_from_logits.
+All parameter/config/dependency hashes are checked; changed artifacts fail closed.
+
+GT-free integration test
+Selection rule: lexicographically first Night validation RGB filename.
+Image: /home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png
+Dimensions: 1920 x 1080 (width x height)
+Device: CUDA / RTX 3060
+Total image pixels: 2,073,600
+Accepted: 745,440
+Rejected: 1,328,160
+Coverage: 0.359490740740741 (35.949074%)
+Uncertainty minimum: 2.81339470329378e-05
+Uncertainty maximum: 0.876539743246746
+Uncertainty mean: 0.420410941213976
+The mask used the exact frozen Stage 4B threshold, not an engineering demo threshold.
+No ground truth was opened. No reserved train RGB or GT was opened.
+The data-access guard allowed only this one RGB file.
+
+Verification
+All required maps retain original spatial resolution; uncertainty is finite in [0,1].
+Acceptance is exactly uncertainty <= frozen tau; rejected mask is its boolean inverse.
+Accepted + rejected = total pixels; coverage equals accepted/total.
+Canonical segmentation has zero changes after rejection, including rejected pixels.
+Saved canonical segmentation and uncertainty exactly match the prior Stage 4A outputs
+for this same RGB; only the reliability threshold/mask differs.
+Lossless saved array/PNG checks passed. Three configuration integrity tests passed.
+Final config and wrapper hashes match the freeze record after integration.
+PASS: all 2705 pre-existing protected files retain their SHA-256 hashes.
+Stages 1–3, 4A and 4B, including temperature, threshold, split artifacts and caches, remain unchanged.
+Prior caches/results were hashed as opaque bytes only, not evaluated. No reliability_selection RGB or GT was loaded.
+Final config and wrapper also match their Stage 4C freeze record.
+
+Generated outputs
+final_reliability_config.json
+final_config_freeze_record.json
+stage4c_summary.txt
+preservation_check.txt
+verification_check.json
+protected_files_before.json
+integration_data_access_audit.json
+integration_terminal_output.log
+unit_test_output.log
+run_audited_integration.py
+integration_test/metadata.json
+integration_test/input_rgb.png
+integration_test/segmentation.npy
+integration_test/segmentation.png
+integration_test/segmentation_trainIds.png
+integration_test/uncertainty.npy
+integration_test/uncertainty.png
+integration_test/confidence.npy
+integration_test/reliability_mask.npy
+integration_test/reliability_mask.png
+integration_test/rejected_mask.npy
+integration_test/accepted_segmentation_visualization.png
+integration_test/overview.png
+
+Implementation: run_final_reliability.py; tests: test_final_reliability.py.
+No frozen source or result was edited. No inference implementation was duplicated.
+No methodological discrepancy encountered. Nonfatal environment messages concerned
+Matplotlib temporary-cache fallback during tests and HF authentication; all tests succeeded.
+
+Interpretation boundary
+This establishes the final frozen implementation only. Coverage is an unlabeled
+single-image output statistic. No accuracy, risk, recall, precision, AUROC, AUPRC,
+or risk-coverage results were computed. No claim of independent performance is made.
+No fitting or threshold selection occurred. Stage 5 was not begun.

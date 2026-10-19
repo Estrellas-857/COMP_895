@@ -1,0 +1,3 @@
+PASS: all 987 pre-existing protected files retain their SHA-256 hashes.
+Stage 1, Stage 2, Stage 3A and Stage 3B artifacts unchanged, including the fitted temperature, splits and cache.
+Stage 3B cache files were read only as opaque bytes for preservation hashes; no train data used in evaluation.

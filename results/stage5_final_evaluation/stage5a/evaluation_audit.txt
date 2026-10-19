@@ -1,0 +1,13 @@
+Stage 5A: evaluation of the frozen operating point on ACDC validation.
+Image counts: {'fog': 100, 'rain': 100, 'snow': 100, 'night': 106}; total 406.
+T=2.124186626456894; tau=0.386413580715649; method=calibrated_msp.
+Final configuration SHA-256: b1ada13a96df8e725b412c38ed3b266cb064aff75c6c802b601bc008c54a7b7a.
+FinalReliabilityPipeline.predict called once per image, without GT; only after it returns may current GT be opened.
+Training-image/GT and out-of-order GT access blocked by dataset file-open guard.
+Canonical prediction changes = 0 across all image pixels, including rejected and ignored pixels.
+Exact 19x19 confusion agreement with frozen Stage 1 AND Stage 3C for each condition.
+Counts conserved for all/valid pixels; TP+FP+FN+TN=valid N. All denominators guarded against zero.
+Pooled statistics are ratios of pooled pixel counts, not image/condition averages.
+Threshold, temperature, model, method and preprocessing unchanged. No tuning or override.
+No threshold sweeps, risk-coverage curves, AURC, targeted failure audits, or latency measurements.
+Validation was previously analyzed in Stages 1–3; it is not a completely untouched test set.

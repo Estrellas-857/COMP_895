@@ -1,0 +1,49 @@
+STAGE 2C — PAIRED NORMAL VS ADVERSE UNCERTAINTY
+========================================================================
+
+Fog
+  Pairs: 50
+  mIoU: 0.5760 -> 0.5674 (-0.86 pp)
+  MSP uncertainty: 0.0366 -> 0.0450 (delta +0.0084)
+  Predictive entropy: 0.0333 -> 0.0415 (delta +0.0082)
+  Accuracy decreased: 31/50
+  MSP increased: 35/50
+  Entropy increased: 37/50
+
+Rain
+  Pairs: 50
+  mIoU: 0.5428 -> 0.5075 (-3.53 pp)
+  MSP uncertainty: 0.0444 -> 0.0592 (delta +0.0148)
+  Predictive entropy: 0.0410 -> 0.0552 (delta +0.0142)
+  Accuracy decreased: 40/50
+  MSP increased: 44/50
+  Entropy increased: 45/50
+
+Snow
+  Pairs: 50
+  mIoU: 0.5391 -> 0.4826 (-5.65 pp)
+  MSP uncertainty: 0.0476 -> 0.0636 (delta +0.0160)
+  Predictive entropy: 0.0438 -> 0.0589 (delta +0.0151)
+  Accuracy decreased: 43/50
+  MSP increased: 43/50
+  Entropy increased: 43/50
+
+Night
+  Pairs: 53
+  mIoU: 0.5037 -> 0.2237 (-28.00 pp)
+  MSP uncertainty: 0.0446 -> 0.1128 (delta +0.0682)
+  Predictive entropy: 0.0411 -> 0.1029 (delta +0.0618)
+  Accuracy decreased: 53/53
+  MSP increased: 53/53
+  Entropy increased: 53/53
+
+Interpretation
+--------------
+1. All four adverse conditions showed higher aggregate MSP uncertainty and predictive entropy than their paired normal-reference subsets.
+2. Larger aggregate performance degradation was accompanied by larger uncertainty increases across the evaluated conditions.
+3. Night showed the strongest effect: all 53 pairs decreased in accuracy and increased in both uncertainty measures.
+4. The four-condition descriptive correlation between mIoU degradation and uncertainty increase was:
+   MSP:     r=0.9984
+   Entropy: r=0.9983
+   These correlations are descriptive only because there are only four condition-level observations.
+5. These aggregate results do not imply that all pixel-level failures are detected; Stage 2B showed substantial high-confidence errors.

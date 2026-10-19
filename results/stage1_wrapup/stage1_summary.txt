@@ -1,0 +1,38 @@
+STAGE 1 WRAP-UP
+========================================================================
+
+Model
+-----
+SegFormer-B0 fine-tuned on Cityscapes
+Inference input: 512 x 1024
+ACDC fine-tuning: none
+Semantic classes: 19 Cityscapes trainIds
+
+Full Adverse Validation Baseline
+---------------------------------
+Fog      images=100, mIoU=63.79%, pixel_acc=91.94%, latency=20.56 ms
+Rain     images=100, mIoU=49.64%, pixel_acc=89.89%, latency=20.41 ms
+Snow     images=100, mIoU=48.57%, pixel_acc=87.39%, latency=20.93 ms
+Night    images=106, mIoU=22.38%, pixel_acc=60.26%, latency=20.31 ms
+
+Paired Normal Reference vs Adverse
+---------------------------------
+Fog      pairs=50, normal_mIoU=57.60%, adverse_mIoU=56.74%, delta=-0.86 pp
+Rain     pairs=50, normal_mIoU=54.28%, adverse_mIoU=50.75%, delta=-3.53 pp
+Snow     pairs=50, normal_mIoU=53.91%, adverse_mIoU=48.26%, delta=-5.65 pp
+Night    pairs=53, normal_mIoU=50.37%, adverse_mIoU=22.37%, delta=-28.00 pp
+
+Key Stage 1 Observations
+------------------------
+1. Fog produced the strongest full adverse-condition baseline performance.
+2. Rain and snow produced moderate degradation.
+3. Nighttime produced the largest degradation by a wide margin.
+4. In paired evaluation, night mIoU decreased from 50.37% to 22.37%, a change of -28.00 percentage points.
+5. Snow terrain showed a systematic confusion pattern toward sidewalk and road.
+6. Night sky showed severe systematic confusion toward building and vegetation.
+7. Snow bus failure was strongly influenced by a small number of difficult large-object cases and is therefore treated as object/sequence-dependent.
+8. Model-forward latency stayed approximately constant across conditions at about 20-21 ms per image on the RTX 3060.
+
+Stage 1 Conclusion
+------------------
+The baseline confirms that adverse-condition degradation is strongly condition- and class-dependent. Nighttime produces the most severe overall domain shift, while snow creates specific semantic confusions such as terrain versus sidewalk/road. These verified failure modes provide the basis for Stage 2, which will test whether uncertainty estimation can identify unreliable predictions automatically.

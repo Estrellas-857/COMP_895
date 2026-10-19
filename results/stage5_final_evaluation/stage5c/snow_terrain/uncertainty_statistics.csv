@@ -1,0 +1,2 @@
+case,count,minimum,maximum,mean,standard_deviation,median,percentile_25,percentile_75,percentile_90,fraction_uncertainty_gt_tau,fraction_uncertainty_le_tau,mean_calibrated_confidence,median_calibrated_confidence,calibrated_high_conf_missed_fraction
+snow_terrain,102716,0.061566020187595494,0.8861410284188714,0.3393875362339233,0.1220529447585601,0.3274318201747394,0.24606344057962884,0.4272178076433428,0.5055132248235916,0.3433934343237665,0.6566065656762335,0.6606124637660767,0.6725681798252606,0.0028135830834534054

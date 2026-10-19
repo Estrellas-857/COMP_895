@@ -1,0 +1,18 @@
+FROZEN ACDC TRAIN SPLIT - STAGE 3B
+Seed: 42
+Exhaustive whole-filename-prefix sequence subset allocation minimizing absolute distance from 50% images per condition; sorted sequence IDs, Python random.Random(42) per-condition tie-break over optimal masks.
+Sequence ID = exact filename prefix before _frame_, verified against parent directory.
+This groups dataset sequence IDs, not inferred longer driving trips.
+Only train file inventory used. Labels/predictions/metrics not used for allocation.
+Paths in CSVs are relative to the project root.
+
+{'condition': 'fog', 'num_sequences': 11, 'num_images': 400, 'calibration_fit_sequences': 4, 'calibration_fit_images': 200, 'reliability_selection_sequences': 7, 'reliability_selection_images': 200}
+{'condition': 'rain', 'num_sequences': 8, 'num_images': 400, 'calibration_fit_sequences': 5, 'calibration_fit_images': 199, 'reliability_selection_sequences': 3, 'reliability_selection_images': 201}
+{'condition': 'snow', 'num_sequences': 10, 'num_images': 400, 'calibration_fit_sequences': 4, 'calibration_fit_images': 200, 'reliability_selection_sequences': 6, 'reliability_selection_images': 200}
+{'condition': 'night', 'num_sequences': 5, 'num_images': 400, 'calibration_fit_sequences': 2, 'calibration_fit_images': 203, 'reliability_selection_sequences': 3, 'reliability_selection_images': 197}
+
+PASS: all 1600 train images assigned exactly once; zero image, GT-path and sequence overlap.
+PASS: condition labels preserved; all train GT paths resolve.
+Projected float32 native-logit cache: 1,997,377,792 bytes (1.860 GiB).
+Free disk before cache: 1,326,115,037,184 bytes (1235.0 GiB).
+Split is frozen before caching or fitting. Do not revise based on fitted results.

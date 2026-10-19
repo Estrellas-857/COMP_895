@@ -1,0 +1,10 @@
+# Direct dependencies from the existing Python 3.12 environment.
+# Local experiments used torch 2.11.0+cu128 / torchvision 0.26.0+cu128.
+# Select a PyTorch build suitable for your hardware when installing.
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.17.0
+numpy==2.5.2
+pandas==3.0.5
+matplotlib==3.11.1
+Pillow==12.3.0

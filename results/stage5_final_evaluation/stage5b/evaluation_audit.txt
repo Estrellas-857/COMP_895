@@ -1,0 +1,19 @@
+Stage 5B: descriptive risk–coverage evaluation only.
+Clean 406-image pass; canonical full-resolution logit argmax shared by all four methods.
+790,712,012 valid pixels; zero prediction changes from positive temperature scaling.
+Exact Stage 1/3C/5A confusion matrices; calibrated histograms exactly reproduce Stage 3D.
+Raw Stage 2 correctness labels were not reused because of its two historical softmax ties.
+1000 equal-width bins [0,1]; int64 correct/incorrect counts; pooled=sum(condition histograms).
+Accept bins LOW-to-HIGH uncertainty. Skip zero-accepted points; retain duplicate coverages from empty bins.
+Bin convention [lower,upper), last includes 1. Cumulative upper-bound thresholds are exclusive except final=1.
+100%-coverage risk equals exact frozen baseline for every condition/method.
+Checkpoint selection minimizes absolute coverage difference; ties use first ascending bin. No interpolation/subsampling.
+Exact deployed operating points loaded from Stage 5A separately; compatible with containing-bin count bounds.
+Random-rejection line is expected risk under correctness-independent rejection, not a confidence interval.
+AURC omitted: the first observed nonzero coverage depends on method and condition; integrating unequal domains
+would confound ordering comparisons, and risk at coverage=0 is not fabricated. Fixed-coverage risks are primary.
+The fixed 1000-bin approximation can coarsen coverage especially where low-uncertainty mass is concentrated.
+No deployment threshold selected/revised. No targeted failure audit or runtime/memory benchmark.
+PASS: all 2749 pre-existing protected files retain SHA-256 hashes.
+Stages 1–5A, temperature, threshold, final configuration, model-inference sources and splits unchanged.
+Prior caches hashed as opaque bytes only; no train images/GT or train diagnostics were used.

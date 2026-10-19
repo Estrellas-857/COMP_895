@@ -1,0 +1,54 @@
+STAGE 3C - INDEPENDENT VALIDATION OF FROZEN SHARED TEMPERATURE
+
+Frozen train-fitted T = 2.124186626456894; no validation parameter fitting.
+Accuracy, error, coverage and conditional probabilities in CSVs are fractions.
+absolute_change = calibrated - raw; relative_change = (calibrated - raw)/raw.
+Negative ECE/NLL changes indicate improvement; relative changes below are percentages.
+HC = confidence >= 0.90 (prespecified). high_conf_error_rate = P(incorrect | HC).
+fraction_incorrect_that_are_high_conf = P(HC | incorrect).
+
+FOG: 100 images, 196,154,002 valid pixels; accuracy 91.938377%, prediction changes 0.
+  ECE: 0.0349117490 -> 0.0506555242; change +0.0157437753 (+45.095923%); did not improve.
+  NLL: 0.3206295059 -> 0.2903661656; change -0.0302633403 (-9.438726%); improved.
+  high_conf_coverage: 86.640828% -> 63.573852%.
+  high_conf_error_rate: 3.400827% -> 1.252719%.
+  fraction_incorrect_that_are_high_conf: 36.549765% -> 9.878926%.
+RAIN: 100 images, 196,479,419 valid pixels; accuracy 89.890574%, prediction changes 0.
+  ECE: 0.0416133919 -> 0.0543068795; change +0.0126934876 (+30.503372%); did not improve.
+  NLL: 0.3869981183 -> 0.3533729557; change -0.0336251626 (-8.688715%); improved.
+  high_conf_coverage: 83.064508% -> 60.960316%.
+  high_conf_error_rate: 3.587615% -> 0.981032%.
+  fraction_incorrect_that_are_high_conf: 29.477783% -> 5.915669%.
+SNOW: 100 images, 195,643,365 valid pixels; accuracy 87.390023%, prediction changes 0.
+  ECE: 0.0628335972 -> 0.0441952258; change -0.0186383714 (-29.663066%); improved.
+  NLL: 0.5787706740 -> 0.4538755669; change -0.1248951071 (-21.579377%); improved.
+  high_conf_coverage: 81.762838% -> 54.325202%.
+  high_conf_error_rate: 5.912513% -> 3.119993%.
+  fraction_incorrect_that_are_high_conf: 38.336616% -> 13.441283%.
+NIGHT: 106 images, 202,435,226 valid pixels; accuracy 60.262427%, prediction changes 0.
+  ECE: 0.2835366715 -> 0.1443263238; change -0.1392103477 (-49.097828%); improved.
+  NLL: 2.2430883254 -> 1.3411146876; change -0.9019736378 (-40.211240%); improved.
+  high_conf_coverage: 67.542457% -> 38.982685%.
+  high_conf_error_rate: 27.747298% -> 12.693590%.
+  fraction_incorrect_that_are_high_conf: 47.162434% -> 12.452452%.
+
+Protocol and checks:
+15 equal-width confidence bins, [lower,upper), final bin includes 1.0; all valid pixels included exactly once.
+Model and preprocessing frozen; float32 bilinear full-resolution interpolation before temperature scaling.
+Raw Stage 3A values retained from disk and independently reproduced during inference.
+Scaled branch uses float64 temperature division, softmax and stable log-softmax as in Stage 3B.
+All 406 validation images evaluated; zero changed predictions across all valid pixels.
+Accuracy and full confusion matrices match frozen Stage 1 exactly.
+All bounds, bin coverage, conditional-probability denominators and frozen-temperature checks passed.
+Reliability figures read the saved raw/calibrated bins and use identical [0,1] axes.
+
+Interpretation:
+ECE and NLL measure different aspects of probability calibration and may move in different directions.
+Changed high-confidence coverage reflects changed probabilities, not corrected semantic predictions.
+Results describe these validation subsets; no claim about accuracy, mIoU or failure-detection performance.
+No temperature refitting, threshold selection, Stage 3D or Stage 4 work performed.
+
+PASS: all 987 pre-existing protected files retain their SHA-256 hashes.
+Stage 1, Stage 2, Stage 3A and Stage 3B artifacts unchanged, including the fitted temperature, splits and cache.
+Stage 3B cache files were read only as opaque bytes for preservation hashes; no train data used in evaluation.
+

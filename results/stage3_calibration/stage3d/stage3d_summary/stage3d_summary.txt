@@ -1,0 +1,59 @@
+STAGE 3D - FAILURE DISCRIMINATION AFTER FROZEN TEMPERATURE SCALING
+
+T=2.124186626456894; metric_method=1000-bin histogram approximation
+Positive class=incorrect pixel. Higher uncertainty predicts failure.
+Unchanged functions: evaluate_uncertainty.UncertaintyAccumulator and evaluate_failure_detection.compute_curves.
+AUROC uses trapezoidal integration; AUPRC uses sum(delta_recall*precision[1:]).
+Empty initial prediction has precision=1. Histogram bins are accumulated from high to low uncertainty.
+PR baseline=error prevalence. AUPRC gain=AUPRC minus the corresponding raw/calibrated prevalence.
+All changes below are absolute calibrated-minus-raw differences, not relative percentages.
+
+FOG: prevalence=0.0806162293; historical raw prevalence=0.0806162293.
+  msp AUROC: 0.8757985187 -> 0.8844475471; delta=+0.0086490284 (increased).
+  msp AUPRC: 0.4230718503 -> 0.4227307293; delta=-0.0003411210 (decreased).
+  msp AUPRC gain above prevalence: 0.3424556211 -> 0.3421145001.
+  entropy AUROC: 0.8816888708 -> 0.8711497029; delta=-0.0105391679 (decreased).
+  entropy AUPRC: 0.4240664488 -> 0.3617837434; delta=-0.0622827054 (decreased).
+  entropy AUPRC gain above prevalence: 0.3434502195 -> 0.2811675141.
+RAIN: prevalence=0.1010942627; historical raw prevalence=0.1010942576.
+  msp AUROC: 0.8962071803 -> 0.8978724502; delta=+0.0016652699 (increased).
+  msp AUPRC: 0.4866552035 -> 0.4781369735; delta=-0.0085182299 (decreased).
+  msp AUPRC gain above prevalence: 0.3855609458 -> 0.3770427108.
+  entropy AUROC: 0.8991264747 -> 0.8823017795; delta=-0.0168246952 (decreased).
+  entropy AUPRC: 0.4829516511 -> 0.4124410585; delta=-0.0705105926 (decreased).
+  entropy AUPRC gain above prevalence: 0.3818573935 -> 0.3113467958.
+SNOW: prevalence=0.1260997734; historical raw prevalence=0.1260997785.
+  msp AUROC: 0.8310796500 -> 0.8290796628; delta=-0.0019999872 (decreased).
+  msp AUPRC: 0.4566671019 -> 0.4595377794; delta=+0.0028706776 (increased).
+  msp AUPRC gain above prevalence: 0.3305673233 -> 0.3334380060.
+  entropy AUROC: 0.8326944054 -> 0.8103269877; delta=-0.0223674177 (decreased).
+  entropy AUPRC: 0.4606882893 -> 0.4089595529; delta=-0.0517287364 (decreased).
+  entropy AUPRC gain above prevalence: 0.3345885107 -> 0.2828597795.
+NIGHT: prevalence=0.3973757265; historical raw prevalence=0.3973757265.
+  msp AUROC: 0.7732374568 -> 0.7847869908; delta=+0.0115495340 (increased).
+  msp AUPRC: 0.6399772298 -> 0.6518715341; delta=+0.0118943043 (increased).
+  msp AUPRC gain above prevalence: 0.2426015034 -> 0.2544958076.
+  entropy AUROC: 0.7804787461 -> 0.7789925303; delta=-0.0014862158 (decreased).
+  entropy AUPRC: 0.6475891472 -> 0.6386260294; delta=-0.0089631177 (decreased).
+  entropy AUPRC gain above prevalence: 0.2502134207 -> 0.2412503029.
+
+Sanity checks and methodological qualification:
+All 406 validation images included; zero temperature-induced prediction changes over all valid pixels.
+Stage 1/3C counts and confusion matrices match exactly; all 1000-bin int64 histograms are complete.
+Raw Stage 2D metrics and raw Stage 2B histograms were reproduced exactly without altering their artifacts.
+Pre-existing Rain/Snow count discrepancy: Stage 2 uses float32 softmax argmax; Stage 1/3C/3D use logit argmax.
+One float32 probability tie changes correctness in each: calibrated-vs-historical incorrect-count difference is +1 for Rain, -1 for Snow.
+The inference audit identifies each differing pixel and verifies the tied probabilities; both frozen definitions are retained.
+Raw PR baselines/gains use the original Stage 2D prevalence; calibrated PR baselines/gains use the exact Stage 3C prevalence.
+This tiny label discrepancy qualifies strict before/after comparability; it is not caused by temperature scaling.
+Raw calculations retain float32; calibrated probabilities retain Stage 3B/3C float64 scaling after float32 interpolation.
+Both branches use the same entropy formula, log-probability clamp (1e-12), histogram edges and integration definitions.
+Histogram quantization can affect measured differences; these are descriptive approximations, not statistical significance results.
+Calibration and failure discrimination are distinct; no improvement is assumed from ECE/NLL changes.
+No segmentation, rejection-performance or reliability-mask claims are made.
+No parameter fitting, threshold selection, reserved reliability-selection data use, risk-coverage or Stage 4 work.
+
+PASS: all 1023 pre-existing protected script/result files retain their SHA-256 hashes.
+Stages 1, 2, 3A, 3B and 3C unchanged, including frozen temperature and split artifacts.
+Training artifacts were accessed only as opaque bytes for preservation hashing; reserved train images/GT were not loaded.
+

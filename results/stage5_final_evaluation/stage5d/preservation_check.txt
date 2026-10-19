@@ -1,0 +1,3 @@
+PASS: all 2825 pre-existing protected files retain SHA-256 hashes.
+Stages 1–5C results, frozen implementation/config, temperature, threshold and train-split artifacts unchanged.
+Existing cached arrays hashed as opaque bytes only; no train RGB/GT loaded.

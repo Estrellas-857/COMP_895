@@ -1,0 +1,30 @@
+STAGE 2D — PIXEL-LEVEL FAILURE DETECTION
+========================================================================
+
+Fog
+  Error prevalence: 0.0806
+  MSP: AUROC=0.8758, AUPRC=0.4231, PR gain=0.3425
+  Predictive Entropy: AUROC=0.8817, AUPRC=0.4241, PR gain=0.3435
+
+Rain
+  Error prevalence: 0.1011
+  MSP: AUROC=0.8962, AUPRC=0.4867, PR gain=0.3856
+  Predictive Entropy: AUROC=0.8991, AUPRC=0.4830, PR gain=0.3819
+
+Snow
+  Error prevalence: 0.1261
+  MSP: AUROC=0.8311, AUPRC=0.4567, PR gain=0.3306
+  Predictive Entropy: AUROC=0.8327, AUPRC=0.4607, PR gain=0.3346
+
+Night
+  Error prevalence: 0.3974
+  MSP: AUROC=0.7732, AUPRC=0.6400, PR gain=0.2426
+  Predictive Entropy: AUROC=0.7805, AUPRC=0.6476, PR gain=0.2502
+
+Interpretation
+--------------
+1. Both MSP uncertainty and predictive entropy detected incorrect pixels better than random ranking in all four adverse conditions.
+2. Failure-detection AUROC was strongest for rain and fog and weaker for snow and night.
+3. Night had the lowest AUROC despite showing the largest aggregate uncertainty increase in Stage 2C. This indicates that higher global uncertainty does not necessarily imply better pixel-level failure discrimination.
+4. Predictive entropy had a small numerical AUROC advantage over MSP in all conditions, but the differences were small.
+5. AUPRC must be interpreted relative to the condition-specific error prevalence because the positive-class rate differs substantially across conditions.

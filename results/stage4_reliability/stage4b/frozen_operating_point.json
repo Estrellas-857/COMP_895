@@ -1,0 +1,71 @@
+{
+  "uncertainty_method": "calibrated_msp",
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "temperature": 2.124186626456894,
+  "temperature_artifact_sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+  "target_coverage": 0.8,
+  "threshold": 0.386413580715649,
+  "acceptance_rule": "uncertainty <= threshold",
+  "selection_dataset": "ACDC train/reliability_selection only",
+  "split_manifest": "results/stage3_calibration/stage3b/splits/reliability_selection.csv",
+  "split_sha256": "15e7d5dedfab98e4a805b1954728f3ff830c6ad7c241034ed816ee00e7b6d4e2",
+  "num_images": 798,
+  "num_pixels": 1654732800,
+  "images_by_condition": {
+    "fog": 200,
+    "rain": 201,
+    "snow": 200,
+    "night": 197
+  },
+  "quantile_method": "Exact inverse empirical CDF (nearest rank ceil(4*N/5), equivalent to NumPy quantile method=inverted_cdf); float64 external-memory radix narrowing then exact order-statistic partition; no rounding or subsampling",
+  "quantile_rank_one_based": 1323786240,
+  "quantile_discretization_error": 0.0,
+  "random_pixel_subsampling": false,
+  "all_image_pixels_used": true,
+  "gt_used_for_selection": false,
+  "selection_all_pixel_coverage": 0.8,
+  "all_pixel_selection_counts": {
+    "num_pixels": 1654732800,
+    "less_than_threshold": 1323786239,
+    "equal_to_threshold": 1,
+    "accepted_pixels": 1323786240,
+    "rejected_pixels": 330946560
+  },
+  "condition_all_pixel_counts": {
+    "fog": {
+      "num_pixels": 414720000,
+      "less_than_threshold": 346531799,
+      "equal_to_threshold": 0,
+      "accepted_pixels": 346531799,
+      "rejected_pixels": 68188201
+    },
+    "rain": {
+      "num_pixels": 416793600,
+      "less_than_threshold": 341895563,
+      "equal_to_threshold": 1,
+      "accepted_pixels": 341895564,
+      "rejected_pixels": 74898036
+    },
+    "snow": {
+      "num_pixels": 414720000,
+      "less_than_threshold": 345025111,
+      "equal_to_threshold": 0,
+      "accepted_pixels": 345025111,
+      "rejected_pixels": 69694889
+    },
+    "night": {
+      "num_pixels": 408499200,
+      "less_than_threshold": 290333766,
+      "equal_to_threshold": 0,
+      "accepted_pixels": 290333766,
+      "rejected_pixels": 118165434
+    }
+  },
+  "prediction_changes": 0,
+  "prediction_pixels_checked": 1654732800,
+  "created_utc": "2026-09-28T15:34:08.223547+00:00",
+  "stage4a_pipeline_sha256": "e3ab0562e824a797ccdf791e79608fbf33cf17e5858b62f13738089fd4cad0f6",
+  "selection_code_sha256": "ddc75b450616ea314dab8ce3dc0ee436b9235c60f6d1fd85b4b418e86ab0f285",
+  "cache_index_sha256": "9eaada8e85b20bcf1e570e52a9ae30d7a540b393fc28e4d6be0ccdf1707826c4"
+}

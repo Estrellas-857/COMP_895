@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "histogram_curves_recomputed_and_verified": true,
+  "all_120_nearest_checkpoints_verified": true,
+  "pooled_histograms_equal_condition_sums": true,
+  "counts_int64": true,
+  "nonzero_coverage_only": true,
+  "endpoint_equals_exact_baseline": true,
+  "exact_frozen_stage5a_points_preserved": true,
+  "frozen_points_compatible_with_histogram_bins": true,
+  "canonical_baselines_exact": true,
+  "num_images": 406,
+  "valid_pixels": 790712012,
+  "prediction_changes": 0,
+  "maximum_primary_checkpoint_coverage_error": 0.001853041411935319,
+  "nominal_50_percent_raw_msp_unreachable_in_fog_and_rain": true,
+  "aurc_computed": false,
+  "algorithm_tests_passed": 4,
+  "no_stage5c_or_5d": true
+}

@@ -1,0 +1,11 @@
+{
+  "deterministic_selection_rule": "Lexicographically first *_rgb_anon.png under night/val",
+  "selected_rgb": "/home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png",
+  "opened_dataset_files": [
+    "/home/george/Desktop/COMP_895/project/data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png"
+  ],
+  "blocked_open_attempts": [],
+  "gt_opened": false,
+  "reliability_selection_data_opened": false,
+  "scope": "Python file-open audit during integration; opaque preservation hashing is separate"
+}

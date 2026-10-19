@@ -1,0 +1,3 @@
+case,condition,target_class,target_id,target_pixels,correct_target_pixels,missed_target_pixels,target_recall,false_positive_target_pixels,msp_correct_target_mean,msp_missed_target_mean,entropy_correct_target_mean,entropy_missed_target_mean,high_conf_missed_fraction
+night_sky,night,sky,10,722027,0,722027,0.0,8,nan,0.048629485070705414,nan,0.046983424574136734,0.8502784521908461
+snow_terrain,snow,terrain,9,102716,0,102716,0.0,0,nan,0.15021760761737823,nan,0.1373455673456192,0.5030277658787335

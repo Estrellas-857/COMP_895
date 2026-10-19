@@ -1,0 +1,3 @@
+PASS: all 2781 pre-existing protected files retain their SHA-256 hashes.
+Stages 1–5B results, root source scripts, frozen final wrapper, temperature, threshold, config and train splits unchanged.
+Prior caches hashed as opaque bytes only; no reserved train RGB or GT loaded.

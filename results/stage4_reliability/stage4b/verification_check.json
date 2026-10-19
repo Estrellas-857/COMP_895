@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-09-28T15:36:04.877720+00:00",
+  "exact_80_percent_all_pixel_coverage": true,
+  "pooled_equals_sum_of_conditions": true,
+  "all_saved_metric_formulas_verified": true,
+  "all_metric_denominators_nonzero": true,
+  "phase_a_gt_access_blocked": true,
+  "phase_a_rgb_count": 798,
+  "phase_b_gt_count": 798,
+  "threshold_frozen_before_first_gt_open": true,
+  "threshold_hash_unchanged": true,
+  "semantic_prediction_changes": 0,
+  "protected_file_count": 1088,
+  "cache_bytes": 14892799488,
+  "cache_gib": 13.87000036239624,
+  "algorithm_tests_passed": 4,
+  "optional_raw_baseline_performed": false,
+  "no_validation_images_or_labels_used": true,
+  "no_stage4c_or_stage5": true
+}
