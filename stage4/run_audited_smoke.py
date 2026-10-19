@@ -10,7 +10,7 @@ from pathlib import Path
 import runpy
 import sys
 
-root = Path(__file__).resolve().parents[3]
+root = Path(__file__).resolve().parents[1]
 os.chdir(root)
 sys.path.insert(0, str(root))
 output = root / "results/stage4_reliability/stage4a"
@@ -38,7 +38,7 @@ sys.argv = ["run_reliability_pipeline.py", "--image", str(rgb),
             "--threshold-purpose", "Engineering smoke-test threshold only; NOT a selected operating threshold",
             "--output-dir", str(output / "smoke_test")]
 try:
-    runpy.run_path(str(root / "run_reliability_pipeline.py"), run_name="__main__")
+    runpy.run_module("stage4.run_reliability_pipeline", run_name="__main__")
 finally:
     audit = dict(allowed_dataset_rgb=str(rgb), opened_dataset_files=sorted(opened),
                  blocked_dataset_open_attempts=blocked,

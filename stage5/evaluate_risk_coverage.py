@@ -13,13 +13,15 @@ import numpy as np
 from PIL import Image
 import torch
 
-from run_final_reliability import load_final_config
-from reliability_pipeline import ReliabilityPipeline, METHODS
-from evaluate_uncertainty import UncertaintyAccumulator, HIST_EDGES, NUM_BINS
-from evaluate_condition import RGB_ROOT, find_gt_path, update_confusion_matrix
-from evaluate_frozen_operating_point import InferenceBeforeGTAudit, sha256
+from stage4.run_final_reliability import load_final_config
+from stage4.reliability_pipeline import ReliabilityPipeline, METHODS
+from stage2.evaluate_uncertainty import UncertaintyAccumulator, HIST_EDGES, NUM_BINS
+from stage1.evaluate_condition import RGB_ROOT, find_gt_path, update_confusion_matrix
+from stage5.evaluate_frozen_operating_point import InferenceBeforeGTAudit, sha256
 
-PROJECT = Path(__file__).resolve().parent
+from stage1._layout import matches_frozen_hash
+
+PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5b"
 STAGE5A = PROJECT / "results/stage5_final_evaluation/stage5a"
 EXPECTED = {"fog": 100, "rain": 100, "snow": 100, "night": 106}
@@ -282,11 +284,11 @@ def analyze():
     risk_limit=min(100,math.ceil(maxrisk*100/5)*5+5)
     for condition in histograms:plot_curve(condition,curves,exact[condition],risk_limit)
     manifest=json.loads((ROOT/"protected_files_before.json").read_text())
-    changed=[p for p,h in manifest.items() if not (PROJECT/p).is_file() or sha256(PROJECT/p)!=h]
+    changed=[p for p,h in manifest.items() if not matches_frozen_hash(PROJECT / p, h)]
     assert not changed,changed
     assert load_final_config()==(config,config_hash)
-    preservation=(f"PASS: all {len(manifest)} pre-existing protected files retain SHA-256 hashes.\n"
-        "Stages 1–5A, temperature, threshold, final configuration, model-inference sources and splits unchanged.\n"
+    preservation=(f"PASS: all {len(manifest)} pre-existing protected files pass SHA-256 checks with the documented source relocation.\n"
+        "Stages 1–5A results, temperature, threshold, final configuration and splits unchanged; sources match the documented relocation.\n"
         "Prior caches hashed as opaque bytes only; no train images/GT or train diagnostics were used.\n")
     (ROOT/"preservation_check.txt").write_text(preservation)
     explanation=("Stage 5B: descriptive risk–coverage evaluation only.\n"

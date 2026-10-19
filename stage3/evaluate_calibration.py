@@ -16,7 +16,7 @@ from PIL import Image
 from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 
 # Reuse the frozen Stage 1 paths, matching, dimensions, and confusion logic.
-from evaluate_condition import (
+from stage1.evaluate_condition import (
     IGNORE_INDEX, INPUT_HEIGHT, INPUT_WIDTH, MODEL_NAME, NUM_CLASSES,
     RGB_ROOT, find_gt_path, update_confusion_matrix,
 )

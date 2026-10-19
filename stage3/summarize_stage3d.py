@@ -8,10 +8,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from evaluate_calibrated_failure_detection import (
+from stage3.evaluate_calibrated_failure_detection import (
     ROOT, METHOD, EXPECTED_IMAGES, load_temperature, load_baselines, rows_from,
     HIST_EDGES, compute_curves, sha256, write_csv,
 )
+
+from stage1._layout import matches_frozen_hash
 
 
 def close(a, b):
@@ -162,9 +164,9 @@ def main():
               "No segmentation, rejection-performance or reliability-mask claims are made.",
               "No parameter fitting, threshold selection, reserved reliability-selection data use, risk-coverage or Stage 4 work."]
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    changed = [p for p, digest in manifest.items() if sha256(p) != digest]
+    changed = [p for p, digest in manifest.items() if not matches_frozen_hash(p, digest)]
     assert not changed, changed
-    preservation = (f"PASS: all {len(manifest)} pre-existing protected script/result files retain their SHA-256 hashes.\n"
+    preservation = (f"PASS: all {len(manifest)} pre-existing protected script/result files pass SHA-256 checks with the documented source relocation.\n"
                     "Stages 1, 2, 3A, 3B and 3C unchanged, including frozen temperature and split artifacts.\n"
                     "Training artifacts were accessed only as opaque bytes for preservation hashing; reserved train images/GT were not loaded.\n")
     (ROOT / "preservation_check.txt").write_text(preservation)

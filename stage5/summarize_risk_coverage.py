@@ -5,7 +5,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT=Path(__file__).resolve().parent/'results/stage5_final_evaluation/stage5b'
+ROOT=Path(__file__).resolve().parents[1]/'results/stage5_final_evaluation/stage5b'
 METHODS=('raw_msp','calibrated_msp','raw_entropy','calibrated_entropy')
 CONDITIONS=('fog','rain','snow','night','pooled')
 

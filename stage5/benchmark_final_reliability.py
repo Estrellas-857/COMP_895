@@ -15,11 +15,13 @@ import numpy as np
 from PIL import Image
 import torch
 
-from run_final_reliability import FinalReliabilityPipeline, load_final_config
-from reliability_pipeline import apply_reliability_threshold
-from evaluate_condition import RGB_ROOT
+from stage4.run_final_reliability import FinalReliabilityPipeline, load_final_config
+from stage4.reliability_pipeline import apply_reliability_threshold
+from stage1.evaluate_condition import RGB_ROOT
 
-PROJECT = Path(__file__).resolve().parent
+from stage1._layout import matches_frozen_hash
+
+PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5d"
 CONDITIONS = ("fog", "rain", "snow", "night")
 REPEATS = 3
@@ -269,7 +271,7 @@ def main():
     (ROOT/'runtime_summary.txt').write_text(runtime_text+"\n"+memory_text)
     wrap_up(runtime_text,memory_text,config)
     manifest=json.loads((ROOT/'protected_files_before.json').read_text())
-    changed=[p for p,h in manifest.items() if not (PROJECT/p).is_file() or sha256(PROJECT/p)!=h]
+    changed=[p for p,h in manifest.items() if not matches_frozen_hash(PROJECT / p, h)]
     assert not changed, changed
     assert load_final_config()==(config,config_hash)
     assert len(audit.opened)==20 and not audit.blocked and len(records)==120
@@ -286,7 +288,7 @@ def main():
         no_fitting=True,no_parameter_changes=True,
         limitations="Single machine/session, serial batch-one throughput estimate; wall-clock includes CPU preprocessing and output transfers. No statistical significance or real-time safety claim.")
     (ROOT/'evaluation_audit.txt').write_text(json.dumps(report,indent=2)+'\n')
-    preservation=f"PASS: all {len(manifest)} pre-existing protected files retain SHA-256 hashes.\nStages 1–5C results, frozen implementation/config, temperature, threshold and train-split artifacts unchanged.\nExisting cached arrays hashed as opaque bytes only; no train RGB/GT loaded.\n"
+    preservation=f"PASS: all {len(manifest)} pre-existing protected files pass SHA-256 checks with the documented source relocation.\nStages 1–5C results, configuration, temperature, threshold and train-split artifacts unchanged; sources match the documented relocation.\nExisting cached arrays hashed as opaque bytes only; no train RGB/GT loaded.\n"
     (ROOT/'preservation_check.txt').write_text(preservation)
     (ROOT/'stage5d_summary.txt').write_text(runtime_text+"\n"+memory_text+"\n"+preservation+"\nGT-free timing checks PASS. Prior results summarized in final_experimental_summary.txt. No fitting/tuning/new experimental method; project experimental pipeline complete.\n")
     print(runtime_text+"\n"+memory_text+"\n"+preservation,flush=True)

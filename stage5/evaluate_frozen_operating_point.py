@@ -19,11 +19,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-from run_final_reliability import FinalReliabilityPipeline, load_final_config
-from evaluate_condition import RGB_ROOT, find_gt_path, update_confusion_matrix
-from select_operating_threshold import metrics_from_counts, safe_ratio
+from stage4.run_final_reliability import FinalReliabilityPipeline, load_final_config
+from stage1.evaluate_condition import RGB_ROOT, find_gt_path, update_confusion_matrix
+from stage4.select_operating_threshold import metrics_from_counts, safe_ratio
 
-PROJECT = Path(__file__).resolve().parent
+from stage1._layout import matches_frozen_hash
+
+PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5a"
 EXPECTED = {"fog": 100, "rain": 100, "snow": 100, "night": 106}
 COUNT_KEYS = ("num_images", "all_pixels", "all_accepted_pixels", "all_rejected_pixels",
@@ -198,12 +200,12 @@ def figures():
 
 def final_reports(rows, comparisons, audit, config, config_hash):
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    changed = [p for p, h in manifest.items() if not (PROJECT / p).is_file() or sha256(PROJECT / p) != h]
+    changed = [p for p, h in manifest.items() if not matches_frozen_hash(PROJECT / p, h)]
     assert not changed, f"Protected files changed: {changed}"
     after_config, after_hash = load_final_config()
     assert after_config == config and after_hash == config_hash
-    preservation = (f"PASS: all {len(manifest)} pre-existing protected files retain SHA-256 hashes.\n"
-        "Stages 1–4, source scripts, temperature, operating threshold, final config/wrapper and split artifacts unchanged.\n"
+    preservation = (f"PASS: all {len(manifest)} pre-existing protected files pass SHA-256 checks with the documented source relocation.\n"
+        "Stages 1–4 results, temperature, operating threshold, final config and split artifacts unchanged; sources match the documented relocation.\n"
         "Prior caches were hashed as opaque bytes only; no reserved train data were reevaluated.\n")
     (ROOT / "preservation_check.txt").write_text(preservation)
     assert len(audit.events) == 406 and not audit.blocked

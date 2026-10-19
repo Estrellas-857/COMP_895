@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-import run_final_reliability as final
+import stage4.run_final_reliability as final
 
 
 class FinalConfigurationTests(unittest.TestCase):

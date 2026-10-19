@@ -6,8 +6,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from benchmark_final_reliability import ROOT, read_csv, statistics, wrap_up
-from run_final_reliability import load_final_config
+from stage5.benchmark_final_reliability import ROOT, read_csv, statistics, wrap_up
+from stage4.run_final_reliability import load_final_config
 
 
 def main():

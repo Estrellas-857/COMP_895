@@ -21,12 +21,14 @@ import numpy as np
 from PIL import Image
 import torch
 
-from reliability_pipeline import (
+from stage4.reliability_pipeline import (
     ReliabilityPipeline, apply_reliability_threshold, load_frozen_temperature,
     TEMPERATURE_PATH, MODEL_NAME, MODEL_REVISION,
 )
 
-PROJECT = Path(__file__).resolve().parent
+from stage1._layout import manifest_key, matches_frozen_hash
+
+PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage4_reliability/stage4b"
 SPLITS = PROJECT / "results/stage3_calibration/stage3b/splits"
 EXPECTED = {"fog": 200, "rain": 201, "snow": 200, "night": 197}
@@ -70,15 +72,15 @@ def write_json(path, value):
 
 def protected(path):
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    relative = str(Path(path).resolve().relative_to(PROJECT))
-    if sha256(path) != manifest[relative]:
+    relative = manifest_key(path, manifest)
+    if not matches_frozen_hash(path, manifest[relative]):
         raise RuntimeError(f"Protected artifact changed: {path}")
 
 
 def load_selection():
     """Read frozen split paths only. No image/GT content is opened here."""
     for path in (TEMPERATURE_PATH, SPLITS / "reliability_selection.csv", SPLITS / "calibration_fit.csv",
-                 PROJECT / "reliability_pipeline.py"):
+                 PROJECT / "stage4/reliability_pipeline.py"):
         protected(path)
     original_manifest = json.loads((SPLITS.parent / "split_manifest.json").read_text())
     for path in (SPLITS / "reliability_selection.csv", SPLITS / "calibration_fit.csv"):
@@ -287,7 +289,7 @@ def phase_select():
         selection_all_pixel_coverage=pooled["accepted_pixels"] / total,
         all_pixel_selection_counts=pooled, condition_all_pixel_counts=counts,
         prediction_changes=changed, prediction_pixels_checked=total,
-        created_utc=now(), stage4a_pipeline_sha256=sha256(PROJECT / "reliability_pipeline.py"),
+        created_utc=now(), stage4a_pipeline_sha256=sha256(PROJECT / "stage4/reliability_pipeline.py"),
         selection_code_sha256=sha256(Path(__file__)), cache_index_sha256=sha256(ROOT / "cache_index.csv"))
     artifact_path = ROOT / "frozen_operating_point.json"
     write_json(artifact_path, artifact)
@@ -337,11 +339,11 @@ def metrics_from_counts(condition, c, threshold):
 
 def preservation_check():
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    failures = [p for p, value in manifest.items() if not (PROJECT / p).is_file() or sha256(PROJECT / p) != value]
+    failures = [p for p, value in manifest.items() if not matches_frozen_hash(PROJECT / p, value)]
     if failures:
         raise RuntimeError(f"Preservation failed: {failures}")
-    report = (f"PASS: all {len(manifest)} pre-existing protected files retain SHA-256 hashes.\n"
-              "Stages 1, 2, 3A–3D, and 4A, temperature, train split manifests, and prior sources unchanged.\n"
+    report = (f"PASS: all {len(manifest)} pre-existing protected files pass SHA-256 checks with the documented source relocation.\n"
+              "Stages 1, 2, 3A–3D, and 4A, temperature, train split manifests, and prior sources match the documented relocation.\n"
               "Protected files were read as opaque bytes for hashing, not used as validation metrics or fitting data.\n")
     (ROOT / "preservation_check.txt").write_text(report)
     return report
@@ -359,7 +361,7 @@ def phase_evaluate():
     assert artifact["temperature"] == temperature and artifact["temperature_artifact_sha256"] == temp_sha
     assert artifact["gt_used_for_selection"] is False and artifact["target_coverage"] == TARGET_COVERAGE
     assert artifact["uncertainty_method"] == "calibrated_msp" and artifact["num_images"] == len(rows)
-    assert sha256(Path(__file__)) == artifact["selection_code_sha256"]
+    assert matches_frozen_hash(Path(__file__), artifact["selection_code_sha256"])
     assert sha256(ROOT / "cache_index.csv") == freeze["cache_index_sha256"] == artifact["cache_index_sha256"]
     index = read_csv(ROOT / "cache_index.csv")
     assert len(index) == len(rows)

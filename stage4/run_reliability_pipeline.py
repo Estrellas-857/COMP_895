@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from PIL import Image
 
-from reliability_pipeline import ReliabilityPipeline, METHODS, load_rgb
+from stage4.reliability_pipeline import ReliabilityPipeline, METHODS, load_rgb
 
 # Same Cityscapes trainId palette as the frozen project visualizations.
 PALETTE = np.array([

@@ -18,13 +18,15 @@ import transformers
 from PIL import Image
 from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 
-from evaluate_condition import (
+from stage1.evaluate_condition import (
     MODEL_NAME, RGB_ROOT, INPUT_HEIGHT, INPUT_WIDTH, NUM_CLASSES, IGNORE_INDEX,
     find_gt_path, update_confusion_matrix,
 )
-from evaluate_calibration import (
+from stage3.evaluate_calibration import (
     CalibrationAccumulator, valid_pixel_nll_sum, EXPECTED_IMAGES, write_csv,
 )
+
+from stage1._layout import manifest_key, matches_frozen_hash
 
 ROOT = Path("results/stage3_calibration/stage3c")
 RAW_ROOT = Path("results/stage3_calibration")
@@ -48,7 +50,7 @@ def rows_from(path):
 
 def protected_file_check(path):
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    assert sha256(path) == manifest[str(path)], f"Protected file changed: {path}"
+    assert matches_frozen_hash(path, manifest[manifest_key(path, manifest)]), f"Protected file changed: {path}"
 
 
 def load_temperature():

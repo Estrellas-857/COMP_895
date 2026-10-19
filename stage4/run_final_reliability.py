@@ -21,12 +21,14 @@ import numpy as np
 from PIL import Image
 import torch
 
-from reliability_pipeline import (
+from stage4.reliability_pipeline import (
     ReliabilityPipeline, load_rgb, load_frozen_temperature, MODEL_NAME, MODEL_REVISION,
 )
-from run_reliability_pipeline import PALETTE, check_result
+from stage4.run_reliability_pipeline import PALETTE, check_result
 
-PROJECT = Path(__file__).resolve().parent
+from stage1._layout import LAYOUT_PATH, matches_frozen_hash
+
+PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage4_reliability/stage4c"
 CONFIG_PATH = ROOT / "final_reliability_config.json"
 
@@ -70,9 +72,9 @@ def load_final_config():
             or operating_point["gt_used_for_selection"] is not False):
         raise ValueError("Operating-point provenance mismatch")
     for filename, expected_hash in config["implementation_dependencies"].items():
-        if sha256(PROJECT / filename) != expected_hash:
+        if not matches_frozen_hash(PROJECT / filename, expected_hash):
             raise ValueError(f"Frozen implementation dependency changed: {filename}")
-    if sha256(Path(__file__)) != record["wrapper_sha256"]:
+    if not matches_frozen_hash(Path(__file__), record["wrapper_sha256"]):
         raise ValueError("Final wrapper differs from the frozen implementation")
     return config, record["config_sha256"]
 
@@ -109,6 +111,8 @@ class FinalReliabilityPipeline:
         np.testing.assert_array_equal(result["segmentation"], canonical)
         result["metadata"].update(
             T=config["temperature"], tau=config["threshold"],
+            source_layout=str(LAYOUT_PATH.relative_to(PROJECT)),
+            source_layout_sha256=sha256(LAYOUT_PATH),
             threshold_source="Frozen Stage 4B operating-point artifact",
             temperature_artifact_hash=config["temperature_artifact_hash"],
             threshold_artifact=str(PROJECT / config["threshold_artifact"]),

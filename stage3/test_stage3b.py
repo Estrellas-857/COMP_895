@@ -6,7 +6,7 @@ import unittest
 import torch
 import torch.nn.functional as F
 
-from fit_temperature import pixel_terms, solve_temperature
+from stage3.fit_temperature import pixel_terms, solve_temperature
 
 
 class TemperatureTests(unittest.TestCase):

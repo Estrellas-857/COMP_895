@@ -6,7 +6,7 @@ import unittest
 
 import numpy as np
 
-from select_operating_threshold import (
+from stage4.select_operating_threshold import (
     exact_external_quantile, float_prefix_hist, metrics_from_counts, safe_ratio,
 )
 

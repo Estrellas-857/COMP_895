@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from PIL import Image
 
-from reliability_pipeline import (
+from stage4.reliability_pipeline import (
     ReliabilityPipeline, METHODS, TEMPERATURE_PATH, EXPECTED_TEMPERATURE,
     apply_reliability_threshold, load_frozen_temperature,
 )

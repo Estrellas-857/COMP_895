@@ -23,8 +23,10 @@ import transformers
 from PIL import Image
 from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 
-from evaluate_condition import MODEL_NAME, INPUT_HEIGHT, INPUT_WIDTH, NUM_CLASSES, IGNORE_INDEX
-from prepare_stage3b_split import ROOT, CONDITIONS, SEED, SPLIT_METHOD, sha256, write_csv, inventory, check_split
+from stage1.evaluate_condition import MODEL_NAME, INPUT_HEIGHT, INPUT_WIDTH, NUM_CLASSES, IGNORE_INDEX
+from stage3.prepare_stage3b_split import ROOT, CONDITIONS, SEED, SPLIT_METHOD, sha256, write_csv, inventory, check_split
+
+from stage1._layout import matches_frozen_hash
 
 GRADIENT_TOLERANCE = 1e-7
 BETA_INTERVAL_TOLERANCE = 1e-8
@@ -55,11 +57,11 @@ def verify_splits():
 
 def preservation_check():
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    changed = [path for path, digest in manifest.items() if sha256(path) != digest]
+    changed = [path for path, digest in manifest.items() if not matches_frozen_hash(path, digest)]
     if changed:
         raise RuntimeError(f"Protected files changed: {changed}")
     verify_splits()
-    return (f"PASS: all {len(manifest)} pre-existing protected script/result files have unchanged SHA-256 hashes.\n"
+    return (f"PASS: all {len(manifest)} pre-existing protected script/result files pass SHA-256 checks with the documented source relocation.\n"
             "PASS: frozen split CSVs and summaries have unchanged hashes.\n"
             "Stage 1, Stage 2 and Stage 3A results were not modified.\n"
             "Existing results were accessed only as opaque bytes for preservation hashes, not interpreted for fitting.\n")

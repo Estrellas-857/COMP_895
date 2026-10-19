@@ -15,15 +15,17 @@ import numpy as np
 from PIL import Image
 import torch
 
-from run_final_reliability import FinalReliabilityPipeline, load_final_config
-from run_reliability_pipeline import PALETTE
-from inspect_uncertainty_failures import CASES, CLASS_NAMES
-from evaluate_condition import find_gt_path
-from evaluate_frozen_operating_point import (
+from stage4.run_final_reliability import FinalReliabilityPipeline, load_final_config
+from stage4.run_reliability_pipeline import PALETTE
+from stage2.inspect_uncertainty_failures import CASES, CLASS_NAMES
+from stage1.evaluate_condition import find_gt_path
+from stage5.evaluate_frozen_operating_point import (
     InferenceBeforeGTAudit, image_counts, metric_row, read_csv, write_csv, sha256,
 )
 
-PROJECT = Path(__file__).resolve().parent
+from stage1._layout import matches_frozen_hash
+
+PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5c"
 HISTORICAL = PROJECT / "results/stage2_uncertainty/failure_audit"
 MAP_KEYS = ("segmentation", "uncertainty", "confidence", "reliability_mask", "rejected_mask")
@@ -255,10 +257,10 @@ def main():
     assert len(rows) == len(audit.events) == 2 and not audit.blocked
     write_csv(ROOT / "stage5c_combined_summary.csv", rows)
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    changed = [p for p, h in manifest.items() if not (PROJECT / p).is_file() or sha256(PROJECT / p) != h]
+    changed = [p for p, h in manifest.items() if not matches_frozen_hash(PROJECT / p, h)]
     assert not changed, f"Protected files changed: {changed}"
     assert load_final_config() == (config, config_hash)
-    preservation = f"PASS: all {len(manifest)} pre-existing protected files retain their SHA-256 hashes.\nStages 1–5B results, root source scripts, frozen final wrapper, temperature, threshold, config and train splits unchanged.\nPrior caches hashed as opaque bytes only; no reserved train RGB or GT loaded.\n"
+    preservation = f"PASS: all {len(manifest)} pre-existing protected files pass SHA-256 checks with the documented source relocation.\nStages 1–5B results, temperature, threshold, config and train splits unchanged; sources match the documented relocation.\nPrior caches hashed as opaque bytes only; no reserved train RGB or GT loaded.\n"
     write_text(ROOT / "preservation_check.txt", preservation)
     audit_record = dict(status="PASS", config_hash=config_hash,
         temperature_artifact_hash=config["temperature_artifact_hash"], threshold_artifact_hash=config["threshold_artifact_hash"],

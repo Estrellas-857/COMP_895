@@ -10,7 +10,7 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
-from evaluate_condition import GT_ROOT, RGB_ROOT
+from stage1.evaluate_condition import GT_ROOT, RGB_ROOT
 
 ROOT = Path("results/stage3_calibration/stage3b")
 CONDITIONS = ("fog", "rain", "snow", "night")
@@ -110,7 +110,7 @@ def main():
     check_split(rows, source)
     protected = sorted(p for p in Path("results").rglob("*")
                        if p.is_file() and ROOT not in p.parents)
-    protected += sorted(p for p in Path(".").glob("*.py")
+    protected += sorted(p for p in Path(".").glob("stage[1-5]/*.py")
                         if p.name not in ("prepare_stage3b_split.py", "fit_temperature.py"))
     ROOT.mkdir(parents=True, exist_ok=True)
     with (ROOT / "protected_files_before.json").open("x") as handle:

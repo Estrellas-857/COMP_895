@@ -5,7 +5,7 @@ from pathlib import Path
 import runpy
 import sys
 
-project = Path(__file__).resolve().parents[3]
+project = Path(__file__).resolve().parents[1]
 os.chdir(project)
 sys.path.insert(0, str(project))
 root = project / "results/stage4_reliability/stage4c"
@@ -30,7 +30,7 @@ sys.addaudithook(guard)
 sys.argv = ["run_final_reliability.py", "--image", str(rgb), "--device", "cuda",
             "--local-files-only", "--output-dir", str(root / "integration_test")]
 try:
-    runpy.run_path(str(project / "run_final_reliability.py"), run_name="__main__")
+    runpy.run_module("stage4.run_final_reliability", run_name="__main__")
 finally:
     (root / "integration_data_access_audit.json").write_text(json.dumps(dict(
         deterministic_selection_rule="Lexicographically first *_rgb_anon.png under night/val",

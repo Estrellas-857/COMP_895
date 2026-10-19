@@ -19,7 +19,7 @@ from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 MODEL_NAME = "nvidia/segformer-b0-finetuned-cityscapes-512-1024"
 MODEL_REVISION = "7a91500a7086b805eeb868719ea5542a3e0bdeb3"
 EXPECTED_TEMPERATURE = 2.124186626456894  # Integrity check only; JSON supplies T.
-TEMPERATURE_PATH = (Path(__file__).resolve().parent /
+TEMPERATURE_PATH = (Path(__file__).resolve().parents[1] /
                     "results/stage3_calibration/stage3b/fitted_temperature.json")
 METHODS = ("raw_msp", "calibrated_msp", "raw_entropy", "calibrated_entropy")
 NUM_CLASSES = 19

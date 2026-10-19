@@ -1,7 +1,7 @@
 """Synthetic Stage 5B curve/endpoint checks; no dataset access."""
 import unittest
 import numpy as np
-from evaluate_risk_coverage import risk_coverage, checkpoint
+from stage5.evaluate_risk_coverage import risk_coverage, checkpoint
 
 
 class RiskCoverageTests(unittest.TestCase):

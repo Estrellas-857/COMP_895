@@ -10,6 +10,28 @@ The final pipeline uses
 uncertainty, and accepted/rejected pixel masks. An accepted pixel is not a
 guarantee of correctness.
 
+## Project structure
+
+Python scripts are organized into five stage packages. Tests and small run
+drivers live alongside the stage they exercise.
+
+```text
+COMP_895/
+├── stage1/              # Baseline segmentation and paired comparisons
+├── stage2/              # Uncertainty and failure detection
+├── stage3/              # Temperature calibration
+├── stage4/              # Reliability pipeline and frozen operating point
+├── stage5/              # Final evaluation, risk/coverage, failures, and runtime
+├── results/             # Small results and frozen experiment artifacts
+├── README.md
+└── requirements.txt
+```
+
+Run scripts as modules from the project root, for example
+`python -m stage1.evaluate_condition --condition fog`. This makes imports
+between stages work without setting `PYTHONPATH`. Data and results keep their
+existing paths under the project root.
+
 ## Setup
 
 The existing experiment environment uses Python 3.12.3. Direct dependency
@@ -33,7 +55,7 @@ image. The first inference run downloads the pretrained model from Hugging
 Face; model weights are not stored in this repository.
 
 ```bash
-python run_final_reliability.py \
+python -m stage4.run_final_reliability \
   --image /path/to/your/image.png \
   --device cpu
 ```
@@ -53,8 +75,14 @@ Five committed artifacts are required by the frozen final interface:
 - `results/stage4_reliability/stage4c/final_reliability_config.json`
 - `results/stage4_reliability/stage4c/final_config_freeze_record.json`
 
-Source and artifact hashes are checked during loading. Preserve the original
-bytes of frozen files; `.gitattributes` disables automatic newline conversion.
+Source and artifact hashes are checked during loading. Historical experiment
+records retain their original bytes, including references to the former flat
+source layout. [The relocation record](stage1/source_layout.json) records the
+original commit, old paths/hashes, and reviewed new paths/hashes. Source checks
+accept only that explicit migration; data and configuration still require
+exact hash matches. Inference metadata records the relocation manifest's hash.
+When changing a relocated implementation again, review and update its recorded
+hash intentionally. `.gitattributes` disables automatic newline conversion.
 
 ## Dataset and evaluation
 
@@ -74,18 +102,18 @@ The reference labels are used for paired normal/adverse comparisons. For
 example, baseline evaluation for fog is:
 
 ```bash
-python evaluate_condition.py --condition fog
+python -m stage1.evaluate_condition --condition fog
 ```
 
 Project stages are represented by the following scripts and saved results:
 
 | Stage | Main scripts | Results |
 | --- | --- | --- |
-| Baseline and paired evaluation | `evaluate_condition.py`, `evaluate_paired_reference.py` | `results/*_val/`, `results/stage1_wrapup/` |
-| Uncertainty and failure detection | `evaluate_uncertainty.py`, `evaluate_failure_detection.py` | `results/stage2_uncertainty/` |
-| Calibration | `prepare_stage3b_split.py`, `fit_temperature.py`, `evaluate_calibrated.py` | `results/stage3_calibration/` |
-| Reliability pipeline | `reliability_pipeline.py`, `select_operating_threshold.py`, `run_final_reliability.py` | `results/stage4_reliability/` |
-| Final evaluation | `evaluate_frozen_operating_point.py`, `evaluate_risk_coverage.py`, `audit_systematic_failures.py`, `benchmark_final_reliability.py` | `results/stage5_final_evaluation/` |
+| [Stage 1: baseline and paired evaluation](stage1/) | `evaluate_condition.py`, `evaluate_paired_reference.py`, `analyze_baseline.py`, `finalize_stage1.py` | `results/*_val/`, `results/stage1_wrapup/` |
+| [Stage 2: uncertainty and failure detection](stage2/) | `evaluate_uncertainty.py`, `evaluate_paired_uncertainty.py`, `evaluate_failure_detection.py`, `analyze_stage2*.py` | `results/stage2_uncertainty/` |
+| [Stage 3: calibration](stage3/) | `prepare_stage3b_split.py`, `fit_temperature.py`, `evaluate_calibrated.py`, `summarize_stage3*.py` | `results/stage3_calibration/` |
+| [Stage 4: reliability pipeline](stage4/) | `reliability_pipeline.py`, `select_operating_threshold.py`, `run_final_reliability.py` | `results/stage4_reliability/` |
+| [Stage 5: final evaluation](stage5/) | `evaluate_frozen_operating_point.py`, `evaluate_risk_coverage.py`, `audit_systematic_failures.py`, `benchmark_final_reliability.py` | `results/stage5_final_evaluation/` |
 
 Small numerical summaries, aggregate arrays, statistical plots, and frozen
 configuration files are retained. Raw data, model weights, large intermediate
@@ -99,11 +127,16 @@ reproducing fitting or threshold selection.
 
 ```bash
 python -m unittest \
-  test_stage3b test_reliability_pipeline test_stage4b \
-  test_final_reliability test_risk_coverage
+  stage1.test_layout stage3.test_stage3b \
+  stage4.test_reliability_pipeline stage4.test_stage4b \
+  stage4.test_final_reliability stage5.test_risk_coverage
 ```
 
-`test_segformer.py` is a separate model smoke test that loads pretrained weights.
+`python -m stage1.test_segformer` is a separate model smoke test that loads
+pretrained weights. The two dataset access audit drivers are now
+`python -m stage4.run_audited_smoke` and
+`python -m stage4.run_audited_integration`; they require the local dataset,
+cached model weights, and CUDA.
 
 ## Data and model attribution
 

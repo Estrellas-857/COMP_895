@@ -15,12 +15,14 @@ import torch.nn.functional as F
 from PIL import Image
 from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 
-from evaluate_condition import (MODEL_NAME, RGB_ROOT, INPUT_HEIGHT, INPUT_WIDTH,
+from stage1.evaluate_condition import (MODEL_NAME, RGB_ROOT, INPUT_HEIGHT, INPUT_WIDTH,
                                 NUM_CLASSES, IGNORE_INDEX, find_gt_path, update_confusion_matrix)
-from evaluate_uncertainty import UncertaintyAccumulator, HIST_EDGES, NUM_BINS
-from evaluate_failure_detection import compute_curves
-from evaluate_calibration import EXPECTED_IMAGES, write_csv
-from evaluate_calibrated import sha256, rows_from, FROZEN_TEMPERATURE, FROZEN_REVISION
+from stage2.evaluate_uncertainty import UncertaintyAccumulator, HIST_EDGES, NUM_BINS
+from stage2.evaluate_failure_detection import compute_curves
+from stage3.evaluate_calibration import EXPECTED_IMAGES, write_csv
+from stage3.evaluate_calibrated import sha256, rows_from, FROZEN_TEMPERATURE, FROZEN_REVISION
+
+from stage1._layout import manifest_key, matches_frozen_hash
 
 ROOT = Path("results/stage3_calibration/stage3d")
 STAGE2_ROOT = Path("results/stage2_uncertainty")
@@ -34,7 +36,7 @@ AUDIT_FIELDS = ["condition", "rgb_path", "row", "column", "gt", "logit_predictio
 
 def protected(path):
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    assert sha256(path) == manifest[str(path)], f"Protected file changed: {path}"
+    assert matches_frozen_hash(path, manifest[manifest_key(path, manifest)]), f"Protected file changed: {path}"
 
 
 def load_temperature():

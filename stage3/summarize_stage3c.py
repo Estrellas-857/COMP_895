@@ -6,9 +6,11 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-from evaluate_calibrated import (
+from stage3.evaluate_calibrated import (
     ROOT, RAW_ROOT, EXPECTED_IMAGES, load_temperature, load_raw, rows_from, sha256, write_csv,
 )
+
+from stage1._layout import matches_frozen_hash
 
 
 def close(a, b):
@@ -144,9 +146,9 @@ def main():
               "Results describe these validation subsets; no claim about accuracy, mIoU or failure-detection performance.",
               "No temperature refitting, threshold selection, Stage 3D or Stage 4 work performed."]
     manifest = json.loads((ROOT / "protected_files_before.json").read_text())
-    changed = [path for path, digest in manifest.items() if sha256(path) != digest]
+    changed = [path for path, digest in manifest.items() if not matches_frozen_hash(path, digest)]
     assert not changed, changed
-    preservation = (f"PASS: all {len(manifest)} pre-existing protected files retain their SHA-256 hashes.\n"
+    preservation = (f"PASS: all {len(manifest)} pre-existing protected files pass SHA-256 checks with the documented source relocation.\n"
                     "Stage 1, Stage 2, Stage 3A and Stage 3B artifacts unchanged, including the fitted temperature, splits and cache.\n"
                     "Stage 3B cache files were read only as opaque bytes for preservation hashes; no train data used in evaluation.\n")
     (ROOT / "preservation_check.txt").write_text(preservation)
