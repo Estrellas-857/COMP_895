@@ -105,7 +105,7 @@ def infer():
         n = errors = condition_changes = 0
         for path in paths:
             gt_path = find_gt_path(path, condition)
-            guard.begin(PROJECT/path, PROJECT/gt_path)
+            guard.begin(path, gt_path)
             with torch.inference_mode():
                 logits = pipeline.infer_logits(path)
                 pred = logits.argmax(dim=1)[0].cpu().numpy().astype(np.uint8)

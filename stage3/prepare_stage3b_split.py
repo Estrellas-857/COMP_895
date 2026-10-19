@@ -12,6 +12,8 @@ from pathlib import Path
 
 from stage1.evaluate_condition import GT_ROOT, RGB_ROOT
 
+from stage1.dataset import dataset_reference
+
 ROOT = Path("results/stage3_calibration/stage3b")
 CONDITIONS = ("fog", "rain", "snow", "night")
 SEED = 42
@@ -51,7 +53,7 @@ def inventory():
             if not gt.is_file():
                 raise FileNotFoundError(gt)
             rows.append(dict(condition=condition, sequence_id=match[1],
-                             rgb_path=str(path), gt_path=str(gt)))
+                             rgb_path=dataset_reference(path), gt_path=dataset_reference(gt)))
     return rows
 
 
@@ -129,7 +131,7 @@ def main():
              "Sequence ID = exact filename prefix before _frame_, verified against parent directory.",
              "This groups dataset sequence IDs, not inferred longer driving trips.",
              "Only train file inventory used. Labels/predictions/metrics not used for allocation.",
-             "Paths in CSVs are relative to the project root.", ""]
+             "CSV data/ACDC/ prefixes are portable dataset identifiers resolved through ACDC_ROOT.", ""]
     lines += [str(row) for row in summaries]
     lines += ["", "PASS: all 1600 train images assigned exactly once; zero image, GT-path and sequence overlap.",
               "PASS: condition labels preserved; all train GT paths resolve.",

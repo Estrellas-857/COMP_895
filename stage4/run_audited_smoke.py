@@ -1,7 +1,7 @@
 """Reproducible Stage 4A smoke run with a dataset file-access guard.
 
 Run from the project root with .venv/bin/python. Refuses existing demo outputs.
-Only the single declared validation RGB may be opened under data/ACDC.
+Only the single declared validation RGB may be opened under the configured ACDC_ROOT.
 The guard prevents GT and all training-image access during this run.
 """
 import json
@@ -10,12 +10,14 @@ from pathlib import Path
 import runpy
 import sys
 
+from stage1.dataset import ACDC_ROOT, RGB_ROOT
+
 root = Path(__file__).resolve().parents[1]
 os.chdir(root)
 sys.path.insert(0, str(root))
 output = root / "results/stage4_reliability/stage4a"
-rgb = root / "data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png"
-dataset = root / "data/ACDC"
+rgb = RGB_ROOT / "night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png"
+dataset = ACDC_ROOT
 opened = set()
 blocked = []
 

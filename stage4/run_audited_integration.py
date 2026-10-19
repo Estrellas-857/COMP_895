@@ -5,13 +5,15 @@ from pathlib import Path
 import runpy
 import sys
 
+from stage1.dataset import ACDC_ROOT, RGB_ROOT
+
 project = Path(__file__).resolve().parents[1]
 os.chdir(project)
 sys.path.insert(0, str(project))
 root = project / "results/stage4_reliability/stage4c"
 # Filename-only choice: lexicographically first Night validation RGB.
-rgb = sorted((project / "data/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val").rglob("*_rgb_anon.png"))[0]
-dataset = (project / "data").resolve()
+rgb = sorted((RGB_ROOT / "night/val").rglob("*_rgb_anon.png"))[0]
+dataset = ACDC_ROOT
 opened, blocked = set(), []
 
 

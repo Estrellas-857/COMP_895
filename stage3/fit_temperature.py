@@ -28,6 +28,8 @@ from stage3.prepare_stage3b_split import ROOT, CONDITIONS, SEED, SPLIT_METHOD, s
 
 from stage1._layout import matches_frozen_hash
 
+from stage1.dataset import acdc_path
+
 GRADIENT_TOLERANCE = 1e-7
 BETA_INTERVAL_TOLERANCE = 1e-8
 MAX_ITERATIONS = 50
@@ -69,7 +71,7 @@ def preservation_check():
 
 def load_gt(path, expected_hash=None):
     import hashlib
-    data = Path(path).read_bytes()
+    data = acdc_path(path).read_bytes()
     digest = hashlib.sha256(data).hexdigest()
     if expected_hash and expected_hash != digest:
         raise RuntimeError(f"Calibration-fit GT changed: {path}")
@@ -102,7 +104,7 @@ def cache_phase(device):
     index = []
     started = time.perf_counter()
     for i, row in enumerate(rows, 1):
-        with Image.open(row["rgb_path"]) as source:
+        with Image.open(acdc_path(row["rgb_path"])) as source:
             image = source.convert("RGB")
         if image.size != (1920, 1080):
             raise ValueError(f"Unexpected image size: {row['rgb_path']}")
@@ -124,7 +126,7 @@ def cache_phase(device):
         if i == 1:
             np.testing.assert_array_equal(np.load(path, allow_pickle=False), native)
         index.append({**row, "cache_path": str(path), "cache_sha256": sha256(path),
-                      "rgb_sha256": sha256(row["rgb_path"]), "gt_sha256": gt_hash,
+                      "rgb_sha256": sha256(acdc_path(row["rgb_path"])), "gt_sha256": gt_hash,
                       "num_valid_pixels": count})
         del inputs, logits, native, image
         if i == 1 or i % 50 == 0 or i == len(rows):

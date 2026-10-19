@@ -29,8 +29,8 @@ COMP_895/
 
 Run scripts as modules from the project root, for example
 `python -m stage1.evaluate_condition --condition fog`. This makes imports
-between stages work without setting `PYTHONPATH`. Data and results keep their
-existing paths under the project root.
+between stages work without setting `PYTHONPATH`. Results stay in the project;
+the ACDC dataset lives separately under `~/Documents/ACDC` by default.
 
 ## Setup
 
@@ -78,8 +78,9 @@ Five committed artifacts are required by the frozen final interface:
 Source and artifact hashes are checked during loading. Historical experiment
 records retain their original bytes, including references to the former flat
 source layout. [The relocation record](stage1/source_layout.json) records the
-original commit, old paths/hashes, and reviewed new paths/hashes. Source checks
-accept only that explicit migration; data and configuration still require
+original commit, old paths/hashes, reviewed new paths/hashes, and subsequent
+dataset-location changes. Source checks accept only those recorded changes;
+data and configuration still require
 exact hash matches. Inference metadata records the relocation manifest's hash.
 When changing a relocated implementation again, review and update its recorded
 hash intentionally. `.gitattributes` disables automatic newline conversion.
@@ -88,15 +89,44 @@ hash intentionally. `.gitattributes` disables automatic newline conversion.
 
 Obtain ACDC separately from the [official download page](https://acdc.vision.ee.ethz.ch/download)
 and follow the [dataset license](https://acdc.vision.ee.ethz.ch/license).
-The dataset is not included. Extract the downloads into the layout expected by
-the evaluation scripts:
+The dataset is not included. Dataset paths are configured once in
+[`stage1/dataset.py`](stage1/dataset.py). The default location is independent
+of the project checkout:
 
 ```text
-data/ACDC/
+~/Documents/
+├── nuScenes/                       # Independent dataset, if installed
+└── ACDC/
+    ├── rgb_anon_trainvaltest/rgb_anon/
+    ├── gt_trainval/gt/
+    ├── gt_trainval_ref/gt/
+    └── archives/                   # Optional original download ZIP files
+```
+
+To use a different dataset location, set an absolute path before running any
+stage (no source edits are needed):
+
+```bash
+export ACDC_ROOT="/path/to/ACDC"
+python -m stage1.evaluate_condition --condition fog
+```
+
+`ACDC_ROOT` must point to the directory containing these three extracted
+subdirectories:
+
+```text
+ACDC/
 ├── rgb_anon_trainvaltest/rgb_anon/
 ├── gt_trainval/gt/
 └── gt_trainval_ref/gt/
 ```
+
+Frozen split/cache CSVs and historical audit records retain `data/ACDC/...`
+identifiers so their hashes and selected images stay unchanged. When a script
+opens an image or label from one of those records, the shared path resolver
+maps the identifier to the configured external ACDC directory. No dataset copy
+or symlink is required inside the project. New split/audit identifiers use the
+same portable format. Dataset access guards monitor the external directory.
 
 The reference labels are used for paired normal/adverse comparisons. For
 example, baseline evaluation for fog is:
@@ -127,9 +157,10 @@ reproducing fitting or threshold selection.
 
 ```bash
 python -m unittest \
-  stage1.test_layout stage3.test_stage3b \
+  stage1.test_layout stage1.test_dataset stage3.test_stage3b \
   stage4.test_reliability_pipeline stage4.test_stage4b \
-  stage4.test_final_reliability stage5.test_risk_coverage
+  stage4.test_final_reliability stage5.test_risk_coverage \
+  stage5.test_dataset_access
 ```
 
 `python -m stage1.test_segformer` is a separate model smoke test that loads

@@ -25,6 +25,8 @@ from stage5.evaluate_frozen_operating_point import (
 
 from stage1._layout import matches_frozen_hash
 
+from stage1.dataset import acdc_path, dataset_reference
+
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5c"
 HISTORICAL = PROJECT / "results/stage2_uncertainty/failure_audit"
@@ -103,10 +105,10 @@ def figure(out, rgb, gt, result, target, correct, missed, row):
 
 def process(case, historical, reference, pipeline, config, audit):
     name, target_id = case["name"], case["target_id"]
-    rgb_path, gt_path = PROJECT / reference["rgb_path"], PROJECT / reference["gt_path"]
+    rgb_path, gt_path = acdc_path(reference["rgb_path"]), acdc_path(reference["gt_path"])
     assert rgb_path.name == case["frame"] + "_rgb_anon.png"
     assert rgb_path.parent.name == case["sequence"]
-    assert gt_path.resolve() == (PROJECT / find_gt_path(rgb_path, case["condition"])).resolve()
+    assert gt_path.resolve() == find_gt_path(rgb_path, case["condition"]).resolve()
     assert gt_path.name == case["frame"] + "_gt_labelTrainIds.png"
     assert int(historical["target_id"]) == target_id
     out = ROOT / name
@@ -179,7 +181,7 @@ def process(case, historical, reference, pipeline, config, audit):
         calibrated_high_conf_missed_fraction=float(np.mean(conf >= .90)))
     row = dict(case=name, condition=case["condition"], target_class=case["target_name"], target_trainId=target_id,
         temperature=config["temperature"], threshold=config["threshold"], uncertainty_method=config["uncertainty_method"],
-        rgb_path=str(rgb_path.relative_to(PROJECT)), gt_path=str(gt_path.relative_to(PROJECT)),
+        rgb_path=dataset_reference(rgb_path), gt_path=dataset_reference(gt_path),
         target_pixels=n, target_correct=nc, target_missed=nm, target_recall=ratio(nc, n),
         target_accepted_pixels=na, target_rejected_pixels=nr, target_coverage=ratio(na, n),
         target_rejection_fraction=ratio(nr, n), missed_target_rejected=mr, missed_target_accepted=ma,

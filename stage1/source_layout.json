@@ -1,7 +1,7 @@
 {
   "version": 1,
   "original_commit": "314a16b10e4d552ccb3b97a99faf352b056c8964",
-  "purpose": "Explicit source relocation only; historical experiment artifacts keep their original bytes and hashes.",
+  "purpose": "Explicit source-layout and dataset-location migrations; historical experiment artifacts keep their original bytes and hashes.",
   "files": {
     "analyze_baseline.py": {
       "path": "stage1/analyze_baseline.py",
@@ -11,12 +11,12 @@
     "evaluate_condition.py": {
       "path": "stage1/evaluate_condition.py",
       "original_sha256": "3b3e2b573ebd11bffd3040221560e9a2885d4c848110090f0a40bb59c452cf8d",
-      "sha256": "3b3e2b573ebd11bffd3040221560e9a2885d4c848110090f0a40bb59c452cf8d"
+      "sha256": "b12d44a3e534c7fbd9903adf8ad963d433257b901c421e865e1a28a4d060b104"
     },
     "evaluate_paired_reference.py": {
       "path": "stage1/evaluate_paired_reference.py",
       "original_sha256": "47973f5a9303963c433e6bafbf979a3983262d18efeee4e944704c464a71e1ae",
-      "sha256": "47973f5a9303963c433e6bafbf979a3983262d18efeee4e944704c464a71e1ae"
+      "sha256": "a64572b0a18d50eadb64c26c05c7d936ed81ac98da5bd1b232969db2c1731b6f"
     },
     "finalize_stage1.py": {
       "path": "stage1/finalize_stage1.py",
@@ -26,12 +26,12 @@
     "inspect_failure_cases.py": {
       "path": "stage1/inspect_failure_cases.py",
       "original_sha256": "3dc1b2ce2360c6f1388c9a70e077d3888a80527eb8bd1beb13b6d261be87eb48",
-      "sha256": "3dc1b2ce2360c6f1388c9a70e077d3888a80527eb8bd1beb13b6d261be87eb48"
+      "sha256": "9bda4401c383ea066d0e5d9dab89eeb123638f346f795db94a6ad592e6ae7ccc"
     },
     "run_one_aced.py": {
       "path": "stage1/run_one_aced.py",
       "original_sha256": "647cd8c6d15b6e99bb0cce1b9017618ae20aeffbe5f9368ed5411a350157dfe2",
-      "sha256": "647cd8c6d15b6e99bb0cce1b9017618ae20aeffbe5f9368ed5411a350157dfe2"
+      "sha256": "6c508af00f2559c5b3ab407c11c11dc19058fa647ca34fa0d77daacee596b2c5"
     },
     "test_segformer.py": {
       "path": "stage1/test_segformer.py",
@@ -61,22 +61,22 @@
     "evaluate_paired_uncertainty.py": {
       "path": "stage2/evaluate_paired_uncertainty.py",
       "original_sha256": "be7a99d6b408b997afdac4b67db88f6216697471bb2d8a6de5b0686960136ed3",
-      "sha256": "be7a99d6b408b997afdac4b67db88f6216697471bb2d8a6de5b0686960136ed3"
+      "sha256": "ee3fab0051bcbfe7af5a4f0a09c477b940023cbaba7eacaefaee6e280d9ae1b2"
     },
     "evaluate_uncertainty.py": {
       "path": "stage2/evaluate_uncertainty.py",
       "original_sha256": "bca9eef665a8624b6369d1458aa2338f25d2affc2d4c0aa39219ed1162f5d873",
-      "sha256": "bca9eef665a8624b6369d1458aa2338f25d2affc2d4c0aa39219ed1162f5d873"
+      "sha256": "3ce0e094d4752c1c14ba134d118dbdc8f14465ed368b7b91e23a2865b64db42e"
     },
     "inspect_uncertainty_failures.py": {
       "path": "stage2/inspect_uncertainty_failures.py",
       "original_sha256": "dd07b977e1846865d86c9c47784f953980e244e3f0869c5f0e3c5ea509872614",
-      "sha256": "dd07b977e1846865d86c9c47784f953980e244e3f0869c5f0e3c5ea509872614"
+      "sha256": "76cbc879ff23ff880149c8b00a39fe14d22859d420142955a427400ce9abdc68"
     },
     "run_one_uncertainty.py": {
       "path": "stage2/run_one_uncertainty.py",
       "original_sha256": "a0e26363ca62b95eb0c93a9aa3636cad0c2ffd27e1e65240bdbf4f2328763aa8",
-      "sha256": "a0e26363ca62b95eb0c93a9aa3636cad0c2ffd27e1e65240bdbf4f2328763aa8"
+      "sha256": "ed80af4f66c37b5bd7295d4906ea7adda5a08a8107c548c2676fb55e3b2730b0"
     },
     "evaluate_calibration.py": {
       "path": "stage3/evaluate_calibration.py",
@@ -96,12 +96,12 @@
     "fit_temperature.py": {
       "path": "stage3/fit_temperature.py",
       "original_sha256": "2c899769187b020b6ab938f8fb7b0e6e38cb3d3ae02b4cb9b2dc1951415025ce",
-      "sha256": "40a5724d96116ddd25e923a9558f4ec8acf3792e5f8364777464a4589f815f86"
+      "sha256": "2576afcfd663ea85860300106fe63fc33b5d289c8927dd2877d67a38451a2c43"
     },
     "prepare_stage3b_split.py": {
       "path": "stage3/prepare_stage3b_split.py",
       "original_sha256": "2ba470b5b343dcc046d5ef5f18675f23a1137500e440742a7302aa4054186be8",
-      "sha256": "4d5c14a307598f0d2585caf43181a5744c2b57354b617033b8ba253e09203d59"
+      "sha256": "16dabbdeb6a471d5d2bdd457edbfa0432fe112c7ea1b1f4de7f89b009e5cdd6d"
     },
     "summarize_stage3a.py": {
       "path": "stage3/summarize_stage3a.py",
@@ -136,7 +136,7 @@
     "select_operating_threshold.py": {
       "path": "stage4/select_operating_threshold.py",
       "original_sha256": "ddc75b450616ea314dab8ce3dc0ee436b9235c60f6d1fd85b4b418e86ab0f285",
-      "sha256": "7044cd242eaafa4e6c5d790c8c3f5e2c918964bc358087d7e90fab254647389b"
+      "sha256": "7254d189f51131a5ad61e5e3c4216b2d5a27ad604a11a8ee3a66e9eb4f8e6f38"
     },
     "run_final_reliability.py": {
       "path": "stage4/run_final_reliability.py",
@@ -161,22 +161,22 @@
     "evaluate_frozen_operating_point.py": {
       "path": "stage5/evaluate_frozen_operating_point.py",
       "original_sha256": "5c05298590a272a47db080217b8754bbcd9970d2cd4025ba2bdd2aa301d89067",
-      "sha256": "2d8bbb90f95805e9a2cbd3d72e57f9f9e48ce4cc738bed1fe917f351a3b531c2"
+      "sha256": "6f911bdac29e504ebfa5c71acf9615265ad5a2a1d8039e66578dcc41fb32ba75"
     },
     "evaluate_risk_coverage.py": {
       "path": "stage5/evaluate_risk_coverage.py",
       "original_sha256": "7a1dc702825f282c3d06ab6a6fb97dfaeb9bd2eb52f1aec7de68016f7006e1c4",
-      "sha256": "fbf8a8fa239dacee28429746ce516b57ec8eca726590255dd072d21fd2759c66"
+      "sha256": "e3160be2722b9bdfb954ea8c934baacc0676ee02e4eb06334771a8585a2558ba"
     },
     "audit_systematic_failures.py": {
       "path": "stage5/audit_systematic_failures.py",
       "original_sha256": "b75abd89f0411766fcc4d0edd3c40a5149364b1b317c394a795b4058ccf242c6",
-      "sha256": "4130a620de81ebd34a366f44c89dcd2d67024aff3384889669964e4f8df11b24"
+      "sha256": "e2f42c754c3b05a1e3eaa9db5636342aa646494c4d911c3a873d3427828db89d"
     },
     "benchmark_final_reliability.py": {
       "path": "stage5/benchmark_final_reliability.py",
       "original_sha256": "00fef633b912c09c56e4502f2f1f3309389e704340b33fb23f6eb2f2225e1e30",
-      "sha256": "df85fd931a17944c91fa2769a48e28cf0823602540c52f76c82c2fbe276bb01f"
+      "sha256": "a21ee97d99b0a8109b964be92fc698550c45386d52112fdad0dcb916f45167f9"
     },
     "summarize_risk_coverage.py": {
       "path": "stage5/summarize_risk_coverage.py",
@@ -196,12 +196,105 @@
     "results/stage4_reliability/stage4a/run_audited_smoke.py": {
       "path": "stage4/run_audited_smoke.py",
       "original_sha256": "4a7fd922a315f166e75f76c081d2e98b03dafa0ddbd59d4f9aa746738d7d7bfc",
-      "sha256": "b050c050fe687a117643f513e1f3b03e98ea7ebeb12078d25487fc9172776109"
+      "sha256": "56bd359b164a2cd65e7d8783c6af20d8f95c512b6d802a93203202836dfc98e8"
     },
     "results/stage4_reliability/stage4c/run_audited_integration.py": {
       "path": "stage4/run_audited_integration.py",
       "original_sha256": "9cb95a4864f5d6fdddab8f1f28f0a784ac46f34f2ed232e61ed2d75794362821",
-      "sha256": "962e614c32f0212dbff13ceb82759a075e9c55dfe7477db00f46a5f12e3f96c5"
+      "sha256": "fa47bb4d8ab0843cb07b49318f1ce6d789c32e6cf0ad122b15d83880077e3f48"
     }
-  }
+  },
+  "migrations": [
+    {
+      "from_commit": "da8a57466feef65c0c7dece15718e4aec6ca3220",
+      "description": "Use external ~/Documents/ACDC (overridable with ACDC_ROOT); resolve frozen dataset identifiers at I/O boundaries and guard the external dataset.",
+      "files": [
+        {
+          "path": "stage1/evaluate_condition.py",
+          "before_sha256": "3b3e2b573ebd11bffd3040221560e9a2885d4c848110090f0a40bb59c452cf8d",
+          "after_sha256": "b12d44a3e534c7fbd9903adf8ad963d433257b901c421e865e1a28a4d060b104"
+        },
+        {
+          "path": "stage1/evaluate_paired_reference.py",
+          "before_sha256": "47973f5a9303963c433e6bafbf979a3983262d18efeee4e944704c464a71e1ae",
+          "after_sha256": "a64572b0a18d50eadb64c26c05c7d936ed81ac98da5bd1b232969db2c1731b6f"
+        },
+        {
+          "path": "stage1/inspect_failure_cases.py",
+          "before_sha256": "3dc1b2ce2360c6f1388c9a70e077d3888a80527eb8bd1beb13b6d261be87eb48",
+          "after_sha256": "9bda4401c383ea066d0e5d9dab89eeb123638f346f795db94a6ad592e6ae7ccc"
+        },
+        {
+          "path": "stage1/run_one_aced.py",
+          "before_sha256": "647cd8c6d15b6e99bb0cce1b9017618ae20aeffbe5f9368ed5411a350157dfe2",
+          "after_sha256": "6c508af00f2559c5b3ab407c11c11dc19058fa647ca34fa0d77daacee596b2c5"
+        },
+        {
+          "path": "stage2/evaluate_paired_uncertainty.py",
+          "before_sha256": "be7a99d6b408b997afdac4b67db88f6216697471bb2d8a6de5b0686960136ed3",
+          "after_sha256": "ee3fab0051bcbfe7af5a4f0a09c477b940023cbaba7eacaefaee6e280d9ae1b2"
+        },
+        {
+          "path": "stage2/evaluate_uncertainty.py",
+          "before_sha256": "bca9eef665a8624b6369d1458aa2338f25d2affc2d4c0aa39219ed1162f5d873",
+          "after_sha256": "3ce0e094d4752c1c14ba134d118dbdc8f14465ed368b7b91e23a2865b64db42e"
+        },
+        {
+          "path": "stage2/inspect_uncertainty_failures.py",
+          "before_sha256": "dd07b977e1846865d86c9c47784f953980e244e3f0869c5f0e3c5ea509872614",
+          "after_sha256": "76cbc879ff23ff880149c8b00a39fe14d22859d420142955a427400ce9abdc68"
+        },
+        {
+          "path": "stage2/run_one_uncertainty.py",
+          "before_sha256": "a0e26363ca62b95eb0c93a9aa3636cad0c2ffd27e1e65240bdbf4f2328763aa8",
+          "after_sha256": "ed80af4f66c37b5bd7295d4906ea7adda5a08a8107c548c2676fb55e3b2730b0"
+        },
+        {
+          "path": "stage3/fit_temperature.py",
+          "before_sha256": "40a5724d96116ddd25e923a9558f4ec8acf3792e5f8364777464a4589f815f86",
+          "after_sha256": "2576afcfd663ea85860300106fe63fc33b5d289c8927dd2877d67a38451a2c43"
+        },
+        {
+          "path": "stage3/prepare_stage3b_split.py",
+          "before_sha256": "4d5c14a307598f0d2585caf43181a5744c2b57354b617033b8ba253e09203d59",
+          "after_sha256": "16dabbdeb6a471d5d2bdd457edbfa0432fe112c7ea1b1f4de7f89b009e5cdd6d"
+        },
+        {
+          "path": "stage4/select_operating_threshold.py",
+          "before_sha256": "7044cd242eaafa4e6c5d790c8c3f5e2c918964bc358087d7e90fab254647389b",
+          "after_sha256": "7254d189f51131a5ad61e5e3c4216b2d5a27ad604a11a8ee3a66e9eb4f8e6f38"
+        },
+        {
+          "path": "stage5/evaluate_frozen_operating_point.py",
+          "before_sha256": "2d8bbb90f95805e9a2cbd3d72e57f9f9e48ce4cc738bed1fe917f351a3b531c2",
+          "after_sha256": "6f911bdac29e504ebfa5c71acf9615265ad5a2a1d8039e66578dcc41fb32ba75"
+        },
+        {
+          "path": "stage5/evaluate_risk_coverage.py",
+          "before_sha256": "fbf8a8fa239dacee28429746ce516b57ec8eca726590255dd072d21fd2759c66",
+          "after_sha256": "e3160be2722b9bdfb954ea8c934baacc0676ee02e4eb06334771a8585a2558ba"
+        },
+        {
+          "path": "stage5/audit_systematic_failures.py",
+          "before_sha256": "4130a620de81ebd34a366f44c89dcd2d67024aff3384889669964e4f8df11b24",
+          "after_sha256": "e2f42c754c3b05a1e3eaa9db5636342aa646494c4d911c3a873d3427828db89d"
+        },
+        {
+          "path": "stage5/benchmark_final_reliability.py",
+          "before_sha256": "df85fd931a17944c91fa2769a48e28cf0823602540c52f76c82c2fbe276bb01f",
+          "after_sha256": "a21ee97d99b0a8109b964be92fc698550c45386d52112fdad0dcb916f45167f9"
+        },
+        {
+          "path": "stage4/run_audited_smoke.py",
+          "before_sha256": "b050c050fe687a117643f513e1f3b03e98ea7ebeb12078d25487fc9172776109",
+          "after_sha256": "56bd359b164a2cd65e7d8783c6af20d8f95c512b6d802a93203202836dfc98e8"
+        },
+        {
+          "path": "stage4/run_audited_integration.py",
+          "before_sha256": "962e614c32f0212dbff13ceb82759a075e9c55dfe7477db00f46a5f12e3f96c5",
+          "after_sha256": "fa47bb4d8ab0843cb07b49318f1ce6d789c32e6cf0ad122b15d83880077e3f48"
+        }
+      ]
+    }
+  ]
 }

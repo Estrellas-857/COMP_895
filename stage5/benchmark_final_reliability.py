@@ -21,6 +21,8 @@ from stage1.evaluate_condition import RGB_ROOT
 
 from stage1._layout import matches_frozen_hash
 
+from stage1.dataset import ACDC_ROOT, dataset_reference
+
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5d"
 CONDITIONS = ("fog", "rain", "snow", "night")
@@ -51,7 +53,7 @@ def write_csv(path, rows):
 class RGBOnlyAudit:
     def __init__(self, paths):
         self.allowed = {p.resolve() for p in paths}
-        self.dataset = (PROJECT / "data").resolve()
+        self.dataset = ACDC_ROOT
         self.opened, self.blocked = set(), []
         sys.addaudithook(self.hook)
 
@@ -63,7 +65,7 @@ class RGBOnlyAudit:
             if path not in self.allowed:
                 self.blocked.append(str(path))
                 raise RuntimeError(f"Stage 5D permits only selected validation RGB reads: {path}")
-            self.opened.add(str(path.relative_to(PROJECT)))
+            self.opened.add(dataset_reference(path))
 
 
 @torch.inference_mode()
@@ -175,7 +177,7 @@ def main():
     config, config_hash = load_final_config()
     selected = []
     for condition in CONDITIONS:
-        paths = sorted((PROJECT / RGB_ROOT / condition / "val").rglob("*_rgb_anon.png"), key=lambda p:(p.name,str(p)))[:5]
+        paths = sorted((RGB_ROOT / condition / "val").rglob("*_rgb_anon.png"), key=lambda p:(p.name,str(p)))[:5]
         assert len(paths) == 5
         selected.extend((condition,p) for p in paths)
     audit = RGBOnlyAudit([p for _,p in selected])
@@ -185,7 +187,7 @@ def main():
             rgb = source.convert("RGB")
         assert rgb.size == (1920,1080)
         images.append((condition,path,rgb))
-        subset.append(dict(condition=condition,rgb_path=str(path.relative_to(PROJECT)),width=rgb.width,height=rgb.height,rgb_sha256=sha256(path)))
+        subset.append(dict(condition=condition,rgb_path=dataset_reference(path),width=rgb.width,height=rgb.height,rgb_sha256=sha256(path)))
     write_csv(ROOT / "test_subset.csv", subset)
     assert torch.cuda.is_available()
     gpu = torch.cuda.get_device_name(0)

@@ -10,26 +10,21 @@ from transformers import (
     SegformerForSemanticSegmentation,
 )
 
+from stage1.dataset import RGB_ROOT, GT_ROOT
+
 
 # ============================================================
 # Configuration
 # ============================================================
 
+
 MODEL_NAME = (
     "nvidia/segformer-b0-finetuned-cityscapes-512-1024"
 )
 
-IMAGE_PATH = (
-    "data/ACDC/rgb_anon_trainvaltest/rgb_anon/"
-    "night/val/GOPR0356/"
-    "GOPR0356_frame_000363_rgb_anon.png"
-)
+IMAGE_PATH = RGB_ROOT / "night/val/GOPR0356/GOPR0356_frame_000363_rgb_anon.png"
 
-GT_PATH = (
-    "data/ACDC/gt_trainval/gt/"
-    "night/val/GOPR0356/"
-    "GOPR0356_frame_000363_gt_labelTrainIds.png"
-)
+GT_PATH = GT_ROOT / "night/val/GOPR0356/GOPR0356_frame_000363_gt_labelTrainIds.png"
 
 OUTPUT_PATH = (
     "results/stage2_uncertainty/"

@@ -6,22 +6,19 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 
+from stage1.dataset import RGB_ROOT, GT_ROOT
+
 
 # ============================================================
 # Configuration
 # ============================================================
 
+
 MODEL_NAME = "nvidia/segformer-b0-finetuned-cityscapes-512-1024"
 
-IMAGE_PATH = (
-    "data/ACDC/rgb_anon_trainvaltest/rgb_anon/fog/val/"
-    "GOPR0476/GOPR0476_frame_001019_rgb_anon.png"
-)
+IMAGE_PATH = RGB_ROOT / "fog/val/GOPR0476/GOPR0476_frame_001019_rgb_anon.png"
 
-GT_PATH = (
-    "data/ACDC/gt_trainval/gt/fog/val/"
-    "GOPR0476/GOPR0476_frame_001019_gt_labelTrainIds.png"
-)
+GT_PATH = GT_ROOT / "fog/val/GOPR0476/GOPR0476_frame_001019_gt_labelTrainIds.png"
 
 OUTPUT_PATH = "first_acdc_result.png"
 

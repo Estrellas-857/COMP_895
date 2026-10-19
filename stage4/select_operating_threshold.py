@@ -28,6 +28,8 @@ from stage4.reliability_pipeline import (
 
 from stage1._layout import manifest_key, matches_frozen_hash
 
+from stage1.dataset import ACDC_ROOT, acdc_path
+
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage4_reliability/stage4b"
 SPLITS = PROJECT / "results/stage3_calibration/stage3b/splits"
@@ -94,14 +96,14 @@ def load_selection():
     assert not {r["sequence_id"] for r in selected} & {r["sequence_id"] for r in fit}
     for row in selected:
         condition, seq = row["condition"], row["sequence_id"]
-        rgb, gt = Path(row["rgb_path"]), Path(row["gt_path"])
+        rgb, gt = acdc_path(row["rgb_path"]), acdc_path(row["gt_path"])
         assert row["subset"] == "reliability_selection"
         assert rgb.parts[-4:-1] == (condition, "train", seq)
         assert gt.parts[-4:-1] == (condition, "train", seq)
         assert rgb.parent.name == rgb.name.split("_frame_")[0] == seq
         assert gt.name == rgb.name.replace("_rgb_anon.png", "_gt_labelTrainIds.png")
         assert "val" not in rgb.parts and "val" not in gt.parts
-        assert (PROJECT / rgb).is_file() and (PROJECT / gt).is_file()
+        assert rgb.is_file() and gt.is_file()
     return selected
 
 
@@ -114,9 +116,9 @@ class DatasetAccessGuard:
 
     def __init__(self, rows, phase):
         self.phase = phase
-        self.dataset = (PROJECT / "data").resolve()
+        self.dataset = ACDC_ROOT
         key = "rgb_path" if phase == "select" else "gt_path"
-        self.allowed = {(PROJECT / row[key]).resolve() for row in rows}
+        self.allowed = {acdc_path(row[key]) for row in rows}
         self.opened = set()
         self.blocked = []
         self.first_open_utc = None
@@ -231,7 +233,7 @@ def phase_select():
     print(f"Projected cache: {estimated_bytes / 1024**3:.3f} GiB; free={free_bytes / 1024**3:.1f} GiB", flush=True)
     with torch.inference_mode():
         for number, row in enumerate(rows, 1):
-            logits = pipeline.infer_logits(PROJECT / row["rgb_path"])
+            logits = pipeline.infer_logits(acdc_path(row["rgb_path"]))
             uncertainty, confidence = pipeline.compute_uncertainty(logits, "calibrated_msp")
             prediction = logits.argmax(dim=1)[0].cpu().numpy().astype(np.uint8)
             scaled_prediction = (logits.to(torch.float64) / temperature).argmax(dim=1)[0].cpu().numpy()
@@ -383,7 +385,7 @@ def phase_evaluate():
         prediction = np.load(p_path, allow_pickle=False)
         before = hashlib.sha256(prediction.tobytes()).hexdigest()
         accepted = apply_reliability_threshold(uncertainty, threshold)
-        with Image.open(PROJECT / row["gt_path"]) as source:
+        with Image.open(acdc_path(row["gt_path"])) as source:
             gt = np.array(source)
         assert gt.shape == prediction.shape == uncertainty.shape == (int(row["height"]), int(row["width"]))
         valid = (gt >= 0) & (gt < 19)

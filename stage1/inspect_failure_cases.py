@@ -13,22 +13,18 @@ from transformers import (
     SegformerForSemanticSegmentation,
 )
 
+from stage1.dataset import RGB_ROOT, GT_ROOT
+
 
 # ============================================================
 # Configuration
 # ============================================================
 
+
 MODEL_NAME = (
     "nvidia/segformer-b0-finetuned-cityscapes-512-1024"
 )
 
-RGB_ROOT = Path(
-    "data/ACDC/rgb_anon_trainvaltest/rgb_anon"
-)
-
-GT_ROOT = Path(
-    "data/ACDC/gt_trainval/gt"
-)
 
 RESULT_ROOT = Path("results")
 

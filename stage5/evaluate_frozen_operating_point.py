@@ -25,6 +25,8 @@ from stage4.select_operating_threshold import metrics_from_counts, safe_ratio
 
 from stage1._layout import matches_frozen_hash
 
+from stage1.dataset import ACDC_ROOT, dataset_reference
+
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "results/stage5_final_evaluation/stage5a"
 EXPECTED = {"fog": 100, "rain": 100, "snow": 100, "night": 106}
@@ -56,7 +58,7 @@ class InferenceBeforeGTAudit:
     """Restrict dataset reads to current RGB, then its GT after predict returns."""
 
     def __init__(self):
-        self.dataset = (PROJECT / "data").resolve()
+        self.dataset = ACDC_ROOT
         self.allowed = None
         self.phase = None
         self.events = []
@@ -93,8 +95,8 @@ class InferenceBeforeGTAudit:
 
     def finish(self):
         assert self.rgb_opened and self.gt_opened
-        self.events.append(dict(rgb_path=str(self.rgb.relative_to(PROJECT)),
-                                gt_path=str(self.gt.relative_to(PROJECT)),
+        self.events.append(dict(rgb_path=dataset_reference(self.rgb),
+                                gt_path=dataset_reference(self.gt),
                                 gt_opened_only_after_inference=True))
         self.allowed, self.phase = None, None
 
@@ -295,7 +297,7 @@ def main():
         changes = 0
         for path in paths:
             gt_path = find_gt_path(path, condition)
-            audit.begin(PROJECT / path, PROJECT / gt_path)
+            audit.begin(path, gt_path)
             result = pipeline.predict(path)
             meta = result["metadata"]
             assert meta["gt_used"] is False and meta["ground_truth_loaded"] is False
@@ -316,7 +318,7 @@ def main():
                 counts[key] += count[key]
             changes += meta["canonical_prediction_changes"]
             row = metric_row(condition, count, config, meta["canonical_prediction_changes"])
-            row.update(image=path.name, rgb_path=str(path), gt_path=str(gt_path))
+            row.update(image=path.name, rgb_path=dataset_reference(path), gt_path=dataset_reference(gt_path))
             # Condition-level baseline check is performed before any metrics CSV is saved.
             row["baseline_counts_check"] = "PASS (condition aggregate)"
             per_image.append(row)

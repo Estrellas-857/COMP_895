@@ -8,24 +8,16 @@ import torch.nn.functional as F
 from PIL import Image
 from transformers import AutoImageProcessor, SegformerForSemanticSegmentation
 
+from stage1.dataset import RGB_ROOT, GT_ROOT as ADVERSE_GT_ROOT, REF_GT_ROOT
+
 
 # ============================================================
 # Configuration
 # ============================================================
 
+
 MODEL_NAME = "nvidia/segformer-b0-finetuned-cityscapes-512-1024"
 
-RGB_ROOT = Path(
-    "data/ACDC/rgb_anon_trainvaltest/rgb_anon"
-)
-
-ADVERSE_GT_ROOT = Path(
-    "data/ACDC/gt_trainval/gt"
-)
-
-REF_GT_ROOT = Path(
-    "data/ACDC/gt_trainval_ref/gt"
-)
 
 RESULT_ROOT = Path(
     "results/paired_normal_vs_adverse"
