@@ -10,6 +10,7 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+node_modules/
 
 # Local settings and credentials
 .env
@@ -47,7 +48,12 @@ checkpoints/
 /results/**/numerical_maps/
 /results/**/inference_outputs/
 /results/stage4_reliability/stage4a/smoke_test/
-/results/stage4_reliability/stage4c/integration_test/
+/results/stage4_reliability/stage4c/integration_test/*
+# Small evidence record cited by the scientific consolidation.
+!/results/stage4_reliability/stage4c/integration_test/metadata.json
+/results/research_extension/**/logits/
+/results/research_extension/**/curves/
+/results/research_extension/**/samples/
 *.npy
 *.npz
 
@@ -76,13 +82,18 @@ checkpoints/
 !/results/stage5_final_evaluation/stage5a/fig*.png
 !/results/stage5_final_evaluation/stage5b/fig*.png
 !/results/stage5_final_evaluation/stage5d/fig*.png
+!/results/research_extension/paired_calibration_v1/calibration_comparison.png
+!/results/research_extension/paired_calibration_v1/risk_coverage.png
 
 # Presentation build products and optional documents: review before publishing.
 /.chart-data-*/
-/.*slides_build/
+/.*_build/
 /output/
 /Project Proposal.docx
 *.log
+# These reviewed logs document the frozen experiment's parity correction.
+!/results/research_extension/paired_calibration_v1/execution.log
+!/results/research_extension/paired_calibration_v1/corrected_execution.log
 
 # Keep results CSV/TXT/JSON files, including frozen parameters and split lists.
 # Do not replace the rules above with a blanket /results/ exclusion.

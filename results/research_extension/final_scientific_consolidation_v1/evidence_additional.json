@@ -1,0 +1,3154 @@
+[
+  {
+    "id": "ADD0001",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "measured_phase_seconds",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 552.5351083299975,
+    "unit": "seconds",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "measured_phase_seconds",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0002",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "new_native_cache_bytes",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 779525248,
+    "unit": "bytes",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "new_native_cache_bytes",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0003",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "new_native_cache_files",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 313,
+    "unit": "files/images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "new_native_cache_files",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0004",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "peak_cuda_allocated_bytes",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 2152126464,
+    "unit": "bytes",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "peak_cuda_allocated_bytes",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0005",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "peak_cuda_reserved_bytes",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 3630170112,
+    "unit": "bytes",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "peak_cuda_reserved_bytes",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0006",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "peak_process_rss_bytes",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 1797750784,
+    "unit": "bytes",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "peak_process_rss_bytes",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0007",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "retained_aborted_native_cache_bytes",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 263992576,
+    "unit": "bytes",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "retained_aborted_native_cache_bytes",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0008",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "retained_aborted_native_cache_files",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 106,
+    "unit": "files/images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "retained_aborted_native_cache_files",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0009",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "reused_adverse_fitting_logits",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 101,
+    "unit": "files/images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "reused_adverse_fitting_logits",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0010",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "useful_new_native_cache_files",
+    "population": "Completed paired extension execution, including aborted and corrected cache phases",
+    "configuration": "Historical shared-GPU execution; no current execution",
+    "value": 207,
+    "unit": "files/images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "source_field": "useful_new_native_cache_files",
+    "row_selector": {},
+    "interpretation": "Execution resource bookkeeping, not uncontended inference latency; read exact exclusions in source."
+  },
+  {
+    "id": "ADD0011",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "balanced_validation_nll",
+    "population": "53 annotated Normal–Night validation pairs; equal weight per domain",
+    "configuration": "raw",
+    "value": 1.349942961622797,
+    "unit": "nats per valid pixel, averaged across domains",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json",
+    "source_field": "balanced_validation_nll.raw",
+    "row_selector": {},
+    "interpretation": "0.5 * pooled Normal NLL + 0.5 * pooled Night NLL; not a pooled-pixel or per-pair average. Recomputed from calibration_comparison.csv."
+  },
+  {
+    "id": "ADD0012",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "balanced_validation_nll",
+    "population": "53 annotated Normal–Night validation pairs; equal weight per domain",
+    "configuration": "global",
+    "value": 0.8406155942385966,
+    "unit": "nats per valid pixel, averaged across domains",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json",
+    "source_field": "balanced_validation_nll.global",
+    "row_selector": {},
+    "interpretation": "0.5 * pooled Normal NLL + 0.5 * pooled Night NLL; not a pooled-pixel or per-pair average. Recomputed from calibration_comparison.csv."
+  },
+  {
+    "id": "ADD0013",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "balanced_validation_nll",
+    "population": "53 annotated Normal–Night validation pairs; equal weight per domain",
+    "configuration": "NightPair",
+    "value": 0.8190580605351552,
+    "unit": "nats per valid pixel, averaged across domains",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json",
+    "source_field": "balanced_validation_nll.NightPair",
+    "row_selector": {},
+    "interpretation": "0.5 * pooled Normal NLL + 0.5 * pooled Night NLL; not a pooled-pixel or per-pair average. Recomputed from calibration_comparison.csv."
+  },
+  {
+    "id": "ADD0014",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "balanced_validation_nll",
+    "population": "53 annotated Normal–Night validation pairs; equal weight per domain",
+    "configuration": "NormalPair",
+    "value": 0.8566280651242221,
+    "unit": "nats per valid pixel, averaged across domains",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json",
+    "source_field": "balanced_validation_nll.NormalPair",
+    "row_selector": {},
+    "interpretation": "0.5 * pooled Normal NLL + 0.5 * pooled Night NLL; not a pooled-pixel or per-pair average. Recomputed from calibration_comparison.csv."
+  },
+  {
+    "id": "ADD0015",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "balanced_validation_nll",
+    "population": "53 annotated Normal–Night validation pairs; equal weight per domain",
+    "configuration": "Mix",
+    "value": 0.8164963273864917,
+    "unit": "nats per valid pixel, averaged across domains",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json",
+    "source_field": "balanced_validation_nll.Mix",
+    "row_selector": {},
+    "interpretation": "0.5 * pooled Normal NLL + 0.5 * pooled Night NLL; not a pooled-pixel or per-pair average. Recomputed from calibration_comparison.csv."
+  },
+  {
+    "id": "ADD0016",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "raw; Night minus Normal nll",
+    "value": 1.797213259611599,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "raw",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0017",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "raw; Night minus Normal nll",
+    "value": 1.7115634900335268,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "raw",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0018",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "raw; Night minus Normal ece",
+    "value": 0.23484928936466345,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "raw",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0019",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "raw; Night minus Normal ece",
+    "value": 0.21868325246397335,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "raw",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0020",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "raw; Night minus Normal signed_gap",
+    "value": 0.23496345773217475,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "raw",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0021",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "raw; Night minus Normal signed_gap",
+    "value": 0.21868325246397324,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "raw",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0022",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "global; Night minus Normal nll",
+    "value": 1.0065255624770315,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "global",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0023",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "global; Night minus Normal nll",
+    "value": 0.9617577440073344,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "global",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0024",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "global; Night minus Normal ece",
+    "value": 0.10372055807104986,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "global",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0025",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "global; Night minus Normal ece",
+    "value": 0.07738150186120174,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "global",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0026",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "global; Night minus Normal signed_gap",
+    "value": 0.16555437364940456,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "global",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0027",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "global; Night minus Normal signed_gap",
+    "value": 0.1591998923732909,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "global",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0028",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NightPair; Night minus Normal nll",
+    "value": 0.8751496256191744,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "NightPair",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0029",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NightPair; Night minus Normal nll",
+    "value": 0.8370570954813623,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "NightPair",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0030",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NightPair; Night minus Normal ece",
+    "value": 0.012864270443018768,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "NightPair",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0031",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NightPair; Night minus Normal ece",
+    "value": 0.0037133187664610823,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "NightPair",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0032",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NightPair; Night minus Normal signed_gap",
+    "value": 0.13860023607113595,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "NightPair",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0033",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NightPair; Night minus Normal signed_gap",
+    "value": 0.13198730066131137,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "NightPair",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0034",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NormalPair; Night minus Normal nll",
+    "value": 1.0420591297681705,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "NormalPair",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0035",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NormalPair; Night minus Normal nll",
+    "value": 1.0088677157785617,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "NormalPair",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0036",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NormalPair; Night minus Normal ece",
+    "value": 0.12095931068820226,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "NormalPair",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0037",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NormalPair; Night minus Normal ece",
+    "value": 0.09963356550093821,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "NormalPair",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0038",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NormalPair; Night minus Normal signed_gap",
+    "value": 0.17187684912701004,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "NormalPair",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0039",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "NormalPair; Night minus Normal signed_gap",
+    "value": 0.1699219819062865,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "NormalPair",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0040",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "Mix; Night minus Normal nll",
+    "value": 0.9232911687257711,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "Mix",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0041",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "nll_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "Mix; Night minus Normal nll",
+    "value": 0.8684114805340357,
+    "unit": "nats per pixel",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "Mix",
+      "sequence_id": "pooled",
+      "metric": "nll"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0042",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "Mix; Night minus Normal ece",
+    "value": 0.05071707359250987,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "Mix",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0043",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "ece_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "Mix; Night minus Normal ece",
+    "value": 0.024098415274607814,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "Mix",
+      "sequence_id": "pooled",
+      "metric": "ece"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0044",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_mean_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "Mix; Night minus Normal signed_gap",
+    "value": 0.14872174420671036,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "mean_delta",
+    "row_selector": {
+      "temperature_name": "Mix",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0045",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "signed_gap_median_delta",
+    "population": "53 annotated Normal–Night validation pairs; equal image-pair weights",
+    "configuration": "Mix; Night minus Normal signed_gap",
+    "value": 0.1400617392395156,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "source_field": "median_delta",
+    "row_selector": {
+      "temperature_name": "Mix",
+      "sequence_id": "pooled",
+      "metric": "signed_gap"
+    },
+    "interpretation": "Mean or median of per-image metric differences; differs from pooled-pixel differences. ECE is nonlinear."
+  },
+  {
+    "id": "ADD0046",
+    "stage": "Research extension",
+    "category": "exploratory analysis",
+    "metric": "true_sky_confusion_count",
+    "population": "53 paired Night validation images; GT Sky pixels",
+    "configuration": "Fixed canonical predictions; class IDs 0 Road, 2 Building, 8 Vegetation, 10 Sky",
+    "value": 2210750,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv",
+    "source_field": "count",
+    "row_selector": {
+      "domain": "night",
+      "sequence_id": "pooled",
+      "gt_class": "10",
+      "predicted_class": "0"
+    },
+    "interpretation": "Whole semantic-valid true-Sky confusion counts, not restricted to high-confidence pixels."
+  },
+  {
+    "id": "ADD0047",
+    "stage": "Research extension",
+    "category": "exploratory analysis",
+    "metric": "true_sky_confusion_count",
+    "population": "53 paired Night validation images; GT Sky pixels",
+    "configuration": "Fixed canonical predictions; class IDs 0 Road, 2 Building, 8 Vegetation, 10 Sky",
+    "value": 6911301,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv",
+    "source_field": "count",
+    "row_selector": {
+      "domain": "night",
+      "sequence_id": "pooled",
+      "gt_class": "10",
+      "predicted_class": "2"
+    },
+    "interpretation": "Whole semantic-valid true-Sky confusion counts, not restricted to high-confidence pixels."
+  },
+  {
+    "id": "ADD0048",
+    "stage": "Research extension",
+    "category": "exploratory analysis",
+    "metric": "true_sky_confusion_count",
+    "population": "53 paired Night validation images; GT Sky pixels",
+    "configuration": "Fixed canonical predictions; class IDs 0 Road, 2 Building, 8 Vegetation, 10 Sky",
+    "value": 8730102,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv",
+    "source_field": "count",
+    "row_selector": {
+      "domain": "night",
+      "sequence_id": "pooled",
+      "gt_class": "10",
+      "predicted_class": "8"
+    },
+    "interpretation": "Whole semantic-valid true-Sky confusion counts, not restricted to high-confidence pixels."
+  },
+  {
+    "id": "ADD0049",
+    "stage": "Research extension",
+    "category": "exploratory analysis",
+    "metric": "true_sky_confusion_count",
+    "population": "53 paired Night validation images; GT Sky pixels",
+    "configuration": "Fixed canonical predictions; class IDs 0 Road, 2 Building, 8 Vegetation, 10 Sky",
+    "value": 778660,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv",
+    "source_field": "count",
+    "row_selector": {
+      "domain": "night",
+      "sequence_id": "pooled",
+      "gt_class": "10",
+      "predicted_class": "10"
+    },
+    "interpretation": "Whole semantic-valid true-Sky confusion counts, not restricted to high-confidence pixels."
+  },
+  {
+    "id": "ADD0050",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "night_images_exactly_matching_stage5a",
+    "population": "Completed paired extension evaluation",
+    "configuration": "Five temperatures; shared samples; original parity gates",
+    "value": 53,
+    "unit": "images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json",
+    "source_field": "night_images_exactly_matching_stage5a",
+    "row_selector": {},
+    "interpretation": "Historical verified result, checked against saved metrics; not a significance test."
+  },
+  {
+    "id": "ADD0051",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "temperature_prediction_changes",
+    "population": "Completed paired extension evaluation",
+    "configuration": "Five temperatures; shared samples; original parity gates",
+    "value": 0,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json",
+    "source_field": "temperature_prediction_changes",
+    "row_selector": {},
+    "interpretation": "Historical verified result, checked against saved metrics; not a significance test."
+  },
+  {
+    "id": "ADD0052",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "both_domain_confusions_exactly_matching_stage1",
+    "population": "Completed paired extension evaluation",
+    "configuration": "Five temperatures; shared samples; original parity gates",
+    "value": true,
+    "unit": "boolean",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json",
+    "source_field": "both_domain_confusions_exactly_matching_stage1",
+    "row_selector": {},
+    "interpretation": "Historical verified result, checked against saved metrics; not a significance test."
+  },
+  {
+    "id": "ADD0053",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "maximum_absolute_risk_change_vs_raw_or_global_pp",
+    "population": "Completed paired extension evaluation",
+    "configuration": "Five temperatures; shared samples; original parity gates",
+    "value": 0.3446935680068042,
+    "unit": "percentage points",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/assessment_verification.json",
+    "source_field": "maximum_absolute_risk_change_vs_raw_or_global_pp",
+    "row_selector": {},
+    "interpretation": "Historical verified result, checked against saved metrics; not a significance test."
+  },
+  {
+    "id": "ADD0054",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "maximum_absolute_coverage_mismatch_pp",
+    "population": "Completed paired extension evaluation",
+    "configuration": "Five temperatures; shared samples; original parity gates",
+    "value": 0.00023887402966771276,
+    "unit": "percentage points",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/assessment_verification.json",
+    "source_field": "maximum_absolute_coverage_mismatch_pp",
+    "row_selector": {},
+    "interpretation": "Historical verified result, checked against saved metrics; not a significance test."
+  },
+  {
+    "id": "ADD0055",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "one_pp_practical_criterion_met",
+    "population": "Completed paired extension evaluation",
+    "configuration": "Five temperatures; shared samples; original parity gates",
+    "value": false,
+    "unit": "boolean",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/assessment_verification.json",
+    "source_field": "one_pp_practical_criterion_met",
+    "row_selector": {},
+    "interpretation": "Historical verified result, checked against saved metrics; not a significance test."
+  },
+  {
+    "id": "ADD0056",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.7847005043591377,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0057",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.40707487747919613,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0058",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.41770555644270724,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0059",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.30732017834241016,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0060",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.7619593953305115,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0061",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.8173003429222492,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0062",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.7642000912030492,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0063",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.4423367089682406,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0064",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.4875861834731515,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0065",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.20143633285465087,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0066",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.3995715948827372,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0067",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.0987486361072916,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0068",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.3122928470691027,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0069",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.2483514717690036,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0070",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.24782848152921905,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0071",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.19325842934594703,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0072",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.4462268757120382,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0073",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.4150082321276284,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0074",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.4235884639076284,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0075",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.3892602470068624,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0076",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.6528812503776137,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0077",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.5881192746936414,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0078",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.6490557807971538,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0079",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.30855369492064333,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0080",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.5420426074507114,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0081",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.5535001428278186,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0082",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.5177609318110018,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0083",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.17260692999207966,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0084",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.8525094842168885,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0085",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.893128398646914,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0086",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.8115392769815246,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0087",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.46263483461778526,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0088",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.5036267747223855,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0089",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.586289235776417,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0090",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.44480197256896287,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0091",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.2137224244497105,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0092",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.4863029893599054,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0093",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.022183827136793156,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0094",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.007910349373764008,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0095",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.053187029959314513,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0096",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.8324482136827311,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0097",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.770690390675046,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0098",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.7243686349684597,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0099",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.330360033003393,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0100",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.6384690451688352,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0101",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.2996289230382188,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0102",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.6729662150907271,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0103",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.02026071586389748,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0104",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.8350173509396548,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0105",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.3239768599785822,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0106",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.6058958244088898,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0107",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.07284392926540531,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0108",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.15324793278964596,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0109",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.14637271125820744,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0110",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.42461800133838945,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0111",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.000488933409654646,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0112",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full fog adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.5089945834815957,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0113",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full rain adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.3667209815010064,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0114",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full snow adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.25865751552087485,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0115",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_IoU",
+    "population": "Full night adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 0.272633589359568,
+    "unit": "fraction",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0116",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 9186728,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0117",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 9947977,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0118",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 10513543,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0119",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class sidewalk",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 17431927,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "1",
+      "class_name": "sidewalk"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0120",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 28850861,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0121",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 26733813,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0122",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 31229712,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0123",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class building",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 38090122,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "2",
+      "class_name": "building"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0124",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2616259,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0125",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1296822,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0126",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 3083885,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0127",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class wall",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 4022306,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "3",
+      "class_name": "wall"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0128",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2311797,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0129",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2852865,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0130",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2712681,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0131",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class fence",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 5122854,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "4",
+      "class_name": "fence"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0132",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2175076,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0133",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2103667,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0134",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1816825,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0135",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class pole",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1600887,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "5",
+      "class_name": "pole"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0136",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 378656,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0137",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 518197,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0138",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 343387,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0139",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class traffic light",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 172791,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "6",
+      "class_name": "traffic light"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0140",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 393776,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0141",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 513899,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0142",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 582757,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0143",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class traffic sign",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 774115,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "7",
+      "class_name": "traffic sign"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0144",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 45908515,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0145",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 46868824,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0146",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 47303307,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0147",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class vegetation",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 38089324,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "8",
+      "class_name": "vegetation"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0148",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 108986,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0149",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 372839,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0150",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 425445,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0151",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class person",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 350880,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "11",
+      "class_name": "person"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0152",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 20814,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0153",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 23556,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0154",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1867,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0155",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class rider",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 21587,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "12",
+      "class_name": "rider"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0156",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 3924090,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0157",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 4646740,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0158",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 4192632,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0159",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class car",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1141109,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "13",
+      "class_name": "car"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0160",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1458157,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0161",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 271393,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0162",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1067860,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0163",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class truck",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 31471,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "14",
+      "class_name": "truck"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0164",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 388178,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0165",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 402154,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0166",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 1831738,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0167",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class train",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 2457411,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "16",
+      "class_name": "train"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0168",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 45881,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0169",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 35386,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0170",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 93634,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0171",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class motorcycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 82299,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "17",
+      "class_name": "motorcycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0172",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full fog adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 33036,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "fog",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0173",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full rain adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 54158,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "rain",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0174",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full snow adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 77059,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "snow",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0175",
+    "stage": "Stage 1",
+    "category": "exploratory analysis",
+    "metric": "class_GT_support",
+    "population": "Full night adverse validation; GT class bicycle",
+    "configuration": "Raw SegFormer-B0; classwise pooled confusion matrix",
+    "value": 459474,
+    "unit": "pixels",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "source_field": "night",
+    "row_selector": {
+      "class_id": "18",
+      "class_name": "bicycle"
+    },
+    "interpretation": "Class IoU uses TP/(GT+prediction-TP); support is GT pixel count. Undefined IoU remains missing."
+  },
+  {
+    "id": "ADD0176",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "num_images",
+    "population": "101 matched Normal–Night training pairs",
+    "configuration": "NightPair",
+    "value": 101,
+    "unit": "images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fitted_temperatures.csv",
+    "source_field": "num_images",
+    "row_selector": {
+      "name": "NightPair"
+    },
+    "interpretation": "Single-domain fit uses one side; Mix uses both sides of the same paired population."
+  },
+  {
+    "id": "ADD0177",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "num_images",
+    "population": "101 matched Normal–Night training pairs",
+    "configuration": "NormalPair",
+    "value": 101,
+    "unit": "images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fitted_temperatures.csv",
+    "source_field": "num_images",
+    "row_selector": {
+      "name": "NormalPair"
+    },
+    "interpretation": "Single-domain fit uses one side; Mix uses both sides of the same paired population."
+  },
+  {
+    "id": "ADD0178",
+    "stage": "Research extension",
+    "category": "calibration comparison",
+    "metric": "num_images",
+    "population": "101 matched Normal–Night training pairs",
+    "configuration": "Mix",
+    "value": 202,
+    "unit": "images",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fitted_temperatures.csv",
+    "source_field": "num_images",
+    "row_selector": {
+      "name": "Mix"
+    },
+    "interpretation": "Single-domain fit uses one side; Mix uses both sides of the same paired population."
+  },
+  {
+    "id": "ADD0179",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "populations.val.sequences.GOPR0351",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": 28,
+    "unit": "pairs",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "populations.val.sequences.GOPR0351",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0180",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "populations.val.sequences.GOPR0356",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": 25,
+    "unit": "pairs",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "populations.val.sequences.GOPR0356",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0181",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "populations.fit.sequences.GOPR0376",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": 73,
+    "unit": "pairs",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "populations.fit.sequences.GOPR0376",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0182",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "populations.fit.sequences.GP010376",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": 28,
+    "unit": "pairs",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "populations.fit.sequences.GP010376",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0183",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "risk_coverage.samples_per_image",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": 8192,
+    "unit": "sampled valid pixels per image",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "risk_coverage.samples_per_image",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0184",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "risk_coverage.seed",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": 42,
+    "unit": "seed",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "risk_coverage.seed",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0185",
+    "stage": "Research extension",
+    "category": "implementation verification",
+    "metric": "criteria.selective",
+    "population": "Paired extension fitting/evaluation as specified by source field",
+    "configuration": "Frozen protocol; no new sampling or parameter selection",
+    "value": "report matched-coverage deltas; 1 percentage point at 80% is a prespecified practical-interest threshold, not significance",
+    "unit": "prespecified rule",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "source_field": "criteria.selective",
+    "row_selector": {},
+    "interpretation": "Protocol convention; counts and practical criterion are not new outcome estimates."
+  },
+  {
+    "id": "ADD0186",
+    "stage": "Stage 5D",
+    "category": "implementation verification",
+    "metric": "gpu",
+    "population": "Historical Stage 5D benchmark: 20 RGB images",
+    "configuration": "Baseline and final reliability pathways",
+    "value": "NVIDIA GeForce RTX 3060",
+    "unit": "device name",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/evaluation_audit.txt",
+    "source_field": "gpu",
+    "row_selector": {},
+    "interpretation": "Recorded benchmark configuration. Peak allocated memory includes resident model and is maximum over measured runs; not total device memory."
+  },
+  {
+    "id": "ADD0187",
+    "stage": "Stage 5D",
+    "category": "implementation verification",
+    "metric": "batch_size",
+    "population": "Historical Stage 5D benchmark: 20 RGB images",
+    "configuration": "Baseline and final reliability pathways",
+    "value": 1,
+    "unit": "images per batch",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/evaluation_audit.txt",
+    "source_field": "batch_size",
+    "row_selector": {},
+    "interpretation": "Recorded benchmark configuration. Peak allocated memory includes resident model and is maximum over measured runs; not total device memory."
+  },
+  {
+    "id": "ADD0188",
+    "stage": "Stage 5D",
+    "category": "implementation verification",
+    "metric": "warmups_per_pipeline",
+    "population": "Historical Stage 5D benchmark: 20 RGB images",
+    "configuration": "Baseline and final reliability pathways",
+    "value": 5,
+    "unit": "warmup runs",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/evaluation_audit.txt",
+    "source_field": "warmups_per_pipeline",
+    "row_selector": {},
+    "interpretation": "Recorded benchmark configuration. Peak allocated memory includes resident model and is maximum over measured runs; not total device memory."
+  },
+  {
+    "id": "ADD0189",
+    "stage": "Stage 5D",
+    "category": "implementation verification",
+    "metric": "observations_per_pipeline",
+    "population": "Historical Stage 5D benchmark: 20 RGB images",
+    "configuration": "Baseline and final reliability pathways",
+    "value": 60,
+    "unit": "measurements",
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/evaluation_audit.txt",
+    "source_field": "observations_per_pipeline",
+    "row_selector": {},
+    "interpretation": "Recorded benchmark configuration. Peak allocated memory includes resident model and is maximum over measured runs; not total device memory."
+  }
+]

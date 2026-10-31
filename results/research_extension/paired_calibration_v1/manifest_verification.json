@@ -1,0 +1,10 @@
+{
+  "all_required_files_present": true,
+  "fit_pairs": 101,
+  "fit_val_exact_rgb_duplicate_overlap": 0,
+  "fit_val_pair_overlap": 0,
+  "selection_pairs_excluded": 99,
+  "source_sequence_independence_claimed": false,
+  "status": "PASS",
+  "validation_pairs": 53
+}

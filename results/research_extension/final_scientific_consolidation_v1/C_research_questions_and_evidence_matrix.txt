@@ -1,0 +1,51 @@
+RESEARCH QUESTIONS AND EVIDENCE MATRIX
+
+RQ1. How does the fixed Cityscapes-trained model perform across adverse conditions and corresponding Normal scenes?
+Priority: supporting foundation, with a concise main-report section.
+Experiments: Stage 1 full-condition baseline evaluation and paired Normal–Adverse comparison. Category: fixed-baseline evaluation; selected class/failure panels are exploratory or qualitative.
+Conclusion: Night is the weakest evaluated condition. Full Night mIoU is 22.378% and accuracy 60.262%. Paired Normal–Night mIoU is 50.368% versus 22.372% on 53 pairs.
+Evidence: /home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv; /home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_condition_summary.csv; Stage 1 class IoU and confusion artifacts catalogued in stage12_inventory.txt.
+Unresolved: single backbone, unequal class composition and annotation masks, correlated recording frames, scene correspondence without pixel alignment. These results do not identify an independent causal effect of weather or lighting.
+Writing choice: say "performance differs across evaluated conditions" and "paired Night performance is lower". Avoid claiming all possible adverse conditions or compound Night+Rain/Snow have been tested.
+
+RQ2. How well do MSP and entropy rank semantic errors, and which errors remain highly confident?
+Priority: essential motivation and diagnostic support.
+Experiments: Stage 2 histogram-based AUROC/AP, full-population confidence statistics, paired uncertainty summaries, and selected class-failure audits; Stage 5C fixed-policy follow-up cases. Keep global statistics separate from selected cases.
+Conclusion: both scores carry error information, but many confident semantic errors escape. Night MSP AUROC/AP=0.77324/0.63998; entropy=0.78048/0.64759. In full Night, 47.162% of raw errors are high-confidence, while the within-high-confidence error rate is 27.747%.
+Evidence: /home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv; /home/george/Desktop/COMP_895/project/results/stage2_uncertainty/night/summary.csv; /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv.
+Unresolved: score-bin approximation, AP prevalence dependence, observed class biases and selected-case representativeness. Neither score is a verified probability that a pixel is wrong.
+Writing choice: report AP with its random baseline/error prevalence and name the high-confidence denominator.
+
+RQ3. Does one globally fitted temperature improve probability quality and calibration across conditions?
+Priority: central.
+Experiments: Stage 3A/C raw-versus-global calibration on identical full validation populations; Stage 3D ranking comparison. Calibration fitting itself is training optimization, not a generalization result.
+Conclusion: global T lowers NLL in all four conditions, while ECE improves only Snow/Night. Entropy AUROC/AP decrease in all four; MSP results vary. Thus NLL, ECE and ranking cannot substitute for each other.
+Evidence: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv; /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv; /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json.
+Unresolved: one scalar and backbone, limited distribution diversity, 15-bin top-label ECE, historical one-pixel Rain/Snow raw-label tie differences. The saved historical raw ranking baseline was audited, not replaced.
+Writing choice: "improves probability quality measured by NLL" is more precise than "universally calibrates all conditions".
+
+RQ4. What risk–coverage trade-off does a frozen RGB-only rejection policy produce?
+Priority: central engineering-to-evidence bridge.
+Experiments: Stage 4 training-only all-pixel quantile selection and implementation checks; Stage 5A exact validation operating counts; Stage 5B full-population score-histogram curves. Categories remain distinct.
+Conclusion: pooled validation accepted risk is 9.839% at 81.433% valid coverage, versus 17.805% unrejected error. Night retains 68.671% valid coverage at 28.119% risk. The mechanism supports abstention, not correction or an accuracy guarantee.
+Evidence: /home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json; /home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/final_reliability_config.json; /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv; /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv.
+Unresolved: no risk guarantee, no per-condition coverage guarantee, no downstream control-system evaluation. Stage 5B requested coverage can differ materially from actual bin-edge coverage and has no saved AURC.
+Writing choice: keep exact frozen-policy and approximate curve tables separate; describe the all-pixel training target explicitly.
+
+RQ5. How do matched Normal/Night calibration objectives transfer, and do their benefits extend to selective ranking?
+Priority: central empirical extension and culminating result.
+Experiments: 101-pair training fits for NormalPair/NightPair, predefined equal-domain Mix, and five-temperature evaluation of 53 own-GT validation pairs. Controlled calibration comparison plus selective-prediction evaluation; region/class analyses are supplemental exploratory diagnostics.
+Conclusion: NightPair improves Night NLL/ECE on both sequences and worsens Normal calibration. At 80% coverage, Night risk is raw 32.711%, global 32.740%, NightPair 32.893%, NormalPair 32.728%, Mix 32.822%. No practically useful ranking gain meets the preregistered one-point criterion. Mix gives a modest balanced-NLL compromise.
+Evidence: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/sequence_metrics.csv; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/aurc.csv.
+Unresolved: only two validation sequence IDs, possibly one fitting recording family, previous validation use, sample uncertainty and numerical precision/ties. Global's 802 adverse fitting images differ from the controlled 101-pair fits.
+Writing choice: report both sequence directions and all requested checkpoints; no significance claim, no new calibration algorithm claim.
+
+Unified argument
+Baseline failures motivate error scores. Incomplete confidence motivates calibration. Probability improvements motivate a separate test of ordering and rejection. A frozen policy quantifies the cost of abstention. Matched transfer then reveals where calibration generalizes and where better probability metrics leave selective ranking unchanged or slightly worse. Remaining semantic errors delimit the claim.
+
+Four outcomes to keep distinct
+- Probability quality: multiclass NLL on all valid pixels.
+- Top-label calibration: 15-bin ECE and signed confidence-minus-accuracy gap.
+- Error ordering: AUROC/AP or approximate risk at comparable actual coverage.
+- Selective performance: risk within accepted valid pixels, reported together with coverage.
+Underlying semantic segmentation remains fixed throughout scalar calibration and rejection.

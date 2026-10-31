@@ -1,0 +1,126 @@
+{
+  "caveats": [
+    "GPU shared with existing workloads; no uncontended latency claim",
+    "includes the aborted and corrected validation cache-generation phases",
+    "excludes source inspection, unit tests, initial failed partial evaluation, two diagnostic forward passes, protocol/preservation hashing and reporting",
+    "RSS is lifetime process high-water mark; GPU reserved differs from allocated"
+  ],
+  "measured_phase_seconds": 552.5351083299975,
+  "new_native_cache_bytes": 779525248,
+  "new_native_cache_files": 313,
+  "peak_cuda_allocated_bytes": 2152126464,
+  "peak_cuda_reserved_bytes": 3630170112,
+  "peak_process_rss_bytes": 1797750784,
+  "phases": [
+    {
+      "device": "cuda",
+      "elapsed_seconds": 14.562805696001305,
+      "generated_images": 101,
+      "num_images": 202,
+      "peak_cuda_allocated_bytes": 400793600,
+      "peak_cuda_reserved_bytes": 614465536,
+      "peak_process_rss_bytes": 1350549504,
+      "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+      "reused_images": 101,
+      "source": "resources/cache_1793214929386478207.json"
+    },
+    {
+      "device": "cuda",
+      "elapsed_seconds": 14.964312522999535,
+      "generated_images": 106,
+      "num_images": 106,
+      "peak_cuda_allocated_bytes": 401416192,
+      "peak_cuda_reserved_bytes": 3630170112,
+      "peak_process_rss_bytes": 1681276928,
+      "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+      "reused_images": 0,
+      "source": "resources/cache_1793215330270433410.json"
+    },
+    {
+      "elapsed_seconds": 129.90082634400096,
+      "num_images": 106,
+      "num_temperature_image_evaluations": 530,
+      "peak_cuda_allocated_bytes": 908155904,
+      "peak_cuda_reserved_bytes": 1398800384,
+      "peak_process_rss_bytes": 1797750784,
+      "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+      "source": "resources/evaluation.json",
+      "timing_boundary": "cached-logit loading, own GT, all five scores/metrics, sample curves and table serialization; no network forward",
+      "timing_caveat": "single session with other GPU workloads; not an uncontended inference benchmark"
+    },
+    {
+      "checked_utc": "2026-10-28T19:15:12.015328+00:00",
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "free_cuda_bytes": 7709261824,
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "numpy_version": "2.5.2",
+      "nvidia_smi": "NVIDIA GeForce RTX 3060, 595.99.02, 12288 MiB, 7462 MiB, 67 %",
+      "nvidia_smi_returncode": 0,
+      "nvidia_smi_stderr": "",
+      "other_gpu_workloads_observed": true,
+      "requested_device": "cuda",
+      "source": "resources/preflight_1793214912188289862.json",
+      "timing_limitation": "GPU shared with existing workloads; do not infer uncontended latency",
+      "torch_version": "2.11.0+cu128",
+      "total_cuda_bytes": 12488343552
+    },
+    {
+      "checked_utc": "2026-10-28T19:27:47.293189+00:00",
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "free_cuda_bytes": 7358971904,
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "numpy_version": "2.5.2",
+      "nvidia_smi": "NVIDIA GeForce RTX 3060, 595.99.02, 12288 MiB, 7128 MiB, 72 %",
+      "nvidia_smi_returncode": 0,
+      "nvidia_smi_stderr": "",
+      "other_gpu_workloads_observed": true,
+      "requested_device": "cuda",
+      "source": "resources/preflight_1793215667457463617.json",
+      "timing_limitation": "GPU shared with existing workloads; do not infer uncontended latency",
+      "torch_version": "2.11.0+cu128",
+      "total_cuda_bytes": 12488343552
+    },
+    {
+      "device": "cuda",
+      "elapsed_seconds": 9.737475754001935,
+      "generated_images": 106,
+      "num_images": 106,
+      "peak_cuda_allocated_bytes": 366706176,
+      "peak_cuda_reserved_bytes": 446693376,
+      "peak_process_rss_bytes": 1315078144,
+      "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+      "reused_images": 0,
+      "source": "corrected_validation/resources/cache_1793215677223135570.json"
+    },
+    {
+      "device": "cuda",
+      "elapsed_seconds": 108.78520305299753,
+      "peak_cuda_allocated_bytes": 2152126464,
+      "peak_cuda_reserved_bytes": 3630170112,
+      "peak_process_rss_bytes": 1657708544,
+      "phase": "NightPair"
+    },
+    {
+      "device": "cuda",
+      "elapsed_seconds": 67.34203552499821,
+      "peak_cuda_allocated_bytes": 2152126464,
+      "peak_cuda_reserved_bytes": 3630170112,
+      "peak_process_rss_bytes": 1657708544,
+      "phase": "NormalPair"
+    },
+    {
+      "device": "cuda",
+      "elapsed_seconds": 207.24244943499798,
+      "peak_cuda_allocated_bytes": 2152126464,
+      "peak_cuda_reserved_bytes": 3630170112,
+      "peak_process_rss_bytes": 1657839616,
+      "phase": "Mix"
+    }
+  ],
+  "retained_aborted_native_cache_bytes": 263992576,
+  "retained_aborted_native_cache_files": 106,
+  "reused_adverse_fitting_logits": 101,
+  "useful_new_native_cache_files": 207
+}

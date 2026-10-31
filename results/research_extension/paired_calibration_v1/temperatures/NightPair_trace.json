@@ -1,0 +1,356 @@
+{
+  "evaluations": [
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 1.0,
+        "phase": "raw_reference",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/f4760fdaaaf5965984163c9f696f7c34d8495674db1bce59c24612553f389fe4.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 12.014796991999901,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 1.0,
+        "by_domain": {
+          "night": {
+            "nll": 1.7090439265867206,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": 1.4753962425667735,
+        "gradient0": -12.801952297493703,
+        "hessian": 0.27737470420284593,
+        "nll": 1.7090439265867206,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "452689d039533c6c5b282f5224e4d6b16acbbb2fd8f65463b32a1dc002f28d69"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.5,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/a09e16775ad7d5b6fe71ccee4c57295b8144cc990d88b5a14c4c157cff66358c.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 12.68087537700194,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.5,
+        "by_domain": {
+          "night": {
+            "nll": 1.0528893438610964,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": 0.9337640817416875,
+        "gradient0": -12.801952297493703,
+        "hessian": 3.449018753146528,
+        "nll": 1.0528893438610964,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "4f17da22c40a5f25115fbac8bd9547871eb692abccef1bf5a40b5a1635d67181"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.22926674263808577,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/0e9bc87f7c0a41112720705da7cea25e307d7b87e9e8d978f7793241ad9220d5.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 12.331767745999969,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.22926674263808577,
+        "by_domain": {
+          "night": {
+            "nll": 1.1119108347919617,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -2.695347503097747,
+        "gradient0": -12.801952297493703,
+        "hessian": 34.9858038249999,
+        "nll": 1.1119108347919617,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "6925644e756b0ad782bba2c6f39d415b0dbb76f6a01b9977555bd4862b1f9655"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.306307919584597,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/fda8debd65d7a1c5a6a40ff5ee35cca67be49b94ba7d0161be1a40dd790f3fb5.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 12.457512616001623,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.306307919584597,
+        "by_domain": {
+          "night": {
+            "nll": 0.9890624920717215,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -0.7144315825978832,
+        "gradient0": -12.801952297493703,
+        "hessian": 17.86872619049703,
+        "nll": 0.9890624920717215,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "a2440b921dc4336208c8c8016a18a736c19e5da75687bc2a7edf962bc9793e17"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.34629015306791233,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/6bd44a408098cdc83ffa5ea89013c375cf49dc93e67e8f2bdb0364418001154d.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 12.260743414997705,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.34629015306791233,
+        "by_domain": {
+          "night": {
+            "nll": 0.9731777704550597,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -0.11669078788089018,
+        "gradient0": -12.801952297493703,
+        "hessian": 12.376359807618178,
+        "nll": 0.9731777704550597,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "264acba1963cb5550d47f8a5cdbc728b6b00354e7662bc728cf410da8dd4db33"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.3557186756460182,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/b8b2bebe8de399eb1fe7648fa432469aef8a5a82405854daec878f8e41669568.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 12.132090850998793,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.3557186756460182,
+        "by_domain": {
+          "night": {
+            "nll": 0.9726122650710641,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -0.004860990192623397,
+        "gradient0": -12.801952297493703,
+        "hessian": 11.360924392495015,
+        "nll": 0.9726122650710641,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "2a25ebdee606f4556d60c9f7d0405d80096f47ca699be5f6cd54e2a8669b87c2"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.35614654489544606,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/be144600095210698be159cce70cf0ae892fa357d6365b73a10740560346adef.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 11.06540351700096,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.35614654489544606,
+        "by_domain": {
+          "night": {
+            "nll": 0.9726112237966135,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -9.394459070147885e-06,
+        "gradient0": -12.801952297493703,
+        "hessian": 11.317042538891384,
+        "nll": 0.9726112237966135,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "ea17013166eb4bc5e462144eda7a539741b4ce7dc396fe23324268a8b85e6926"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.3561473750115332,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/90856688b955c12f8a82ddfe90d0bdcbbe225d696d479ff23ab04bd02179fbec.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 10.72206714999993,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1624039424
+      },
+      "result": {
+        "beta": 0.3561473750115332,
+        "by_domain": {
+          "night": {
+            "nll": 0.9726112237927138,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -3.526128517832169e-11,
+        "gradient0": -12.801952297493703,
+        "hessian": 11.316957583090277,
+        "nll": 0.9726112237927138,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "f0514593e60c996e7ce8818da87f9e1a3057f8548ad11f06296f50d7064572be"
+    },
+    {
+      "identity": {
+        "check_predictions": true,
+        "domain_weights": {
+          "night": 1.0
+        },
+        "inverse_temperature": 0.3561473750115332,
+        "phase": "final_verification",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair_evaluations/234a11022cdc21697177876f90c642fafe2c6fbdf5fe2086cb7d97e0ea7735f4.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 13.025840377002169,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1657708544
+      },
+      "result": {
+        "beta": 0.3561473750115332,
+        "by_domain": {
+          "night": {
+            "nll": 0.9726112237927138,
+            "num_images": 101,
+            "num_valid_pixels": 185422815
+          }
+        },
+        "gradient": -3.526128517832169e-11,
+        "gradient0": -12.801952297493703,
+        "hessian": 11.316957583090277,
+        "nll": 0.9726112237927138,
+        "num_valid_pixels": 185422815,
+        "prediction_changes": 0
+      },
+      "sha256": "f0c7ea580983f43569e5ef13fecb83e9f08f20dadd7962fd6c6e23a6b3eff43d"
+    }
+  ],
+  "identity": {
+    "domain_weights": {
+      "night": 1.0
+    },
+    "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+    "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+    "name": "NightPair",
+    "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+    "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78"
+  }
+}

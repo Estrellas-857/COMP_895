@@ -1,0 +1,11 @@
+{
+  "device": "cuda",
+  "elapsed_seconds": 9.737475754001935,
+  "generated_images": 106,
+  "num_images": 106,
+  "peak_cuda_allocated_bytes": 366706176,
+  "peak_cuda_reserved_bytes": 446693376,
+  "peak_process_rss_bytes": 1315078144,
+  "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+  "reused_images": 0
+}

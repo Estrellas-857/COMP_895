@@ -1,0 +1,9 @@
+{
+  "added_protected_files": [],
+  "changed_files": [],
+  "elapsed_seconds": 16.855488717999833,
+  "protected_bytes": 17115990025,
+  "protected_files": 2857,
+  "scope": "all pre-existing Stage1\u20135 source/support files excluding Python bytecode, all old results including caches, README/requirements/git configuration",
+  "status": "PASS"
+}

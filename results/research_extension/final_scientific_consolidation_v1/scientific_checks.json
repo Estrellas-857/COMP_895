@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "CPU arithmetic from saved numerical tables only; no inference, fitting, threshold selection or new samples",
+  "global_nll_improves_full_conditions": [
+    "fog",
+    "rain",
+    "snow",
+    "night"
+  ],
+  "global_ece_improves_full_conditions": [
+    "snow",
+    "night"
+  ],
+  "calibrated_entropy_both_auroc_ap_worse": [
+    "fog",
+    "rain",
+    "snow",
+    "night"
+  ],
+  "paired_NightPair_minus_global_nll_nats": -0.08800888108820715,
+  "paired_NightPair_minus_global_ece_pp": -8.236675500680025,
+  "NightPair_minus_global_risk80_pp": {
+    "pooled": 0.15287544888962779,
+    "GOPR0351": 0.16943787842002012,
+    "GOPR0356": 0.1302584592582423
+  },
+  "NightPair_pooled_risk_worse_than_global_all_five_checkpoints": true,
+  "NightPair_Night_probability_metrics_improve_both_sequences": true,
+  "Mix_has_lowest_balanced_nll_both_sequences": true,
+  "maximum_absolute_risk_change_vs_raw_or_global_pp": 0.3446935680068042,
+  "maximum_absolute_coverage_mismatch_pp": 0.00023887402966771276,
+  "one_pp_practical_criterion_met": false
+}

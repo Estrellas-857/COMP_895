@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "record_count": 2694,
+  "source_file_count": 63,
+  "unique_ids": true,
+  "all_records_match_source_fields": true,
+  "null_values_preserved": 2,
+  "numerical_tolerance": "1e-14 relative or absolute",
+  "issues": []
+}

@@ -1,0 +1,194 @@
+CONSISTENCY AND CLAIM AUDIT
+
+This audit preserves 28 claims and the five evidence classifications. The classifications describe the current record. "Requires genuinely new experimentation" identifies claims that must be excluded or narrowed; it does not recommend or authorize new work. "Requires only recomputation from existing saved results" distinguishes a documentation or verification task from a new experiment; completed checks are identified explicitly. Source paths are absolute.
+
+G01 — Supported with qualification
+A: Night has the weakest baseline segmentation performance
+Evidence: Full Night validation (106 images) has union-defined mIoU of 22.3781% and pixel accuracy of 60.2624%. On the 53 matched pairs, Night mIoU is 22.3716%, compared with 50.3679% for Normal. The full and paired Night results use different populations.
+Disposition: Use the full-condition result to compare baseline performance across conditions and the paired result to compare corresponding scenes. Do not describe the small difference between 22.3781% and 22.3716% as a regression.
+Source: /home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv
+
+G02 — Supported with qualification
+B: MSP and entropy detect some errors but miss confident failures
+Evidence: Stage 2 Night MSP has AUROC 0.77324 and AP-style AUPRC 0.63998, against error prevalence 0.39738. In full Night validation, 47.1624% of raw prediction errors have confidence at least 0.90; the error rate among high-confidence predictions is 27.7473%. These percentages have different denominators.
+Disposition: Name each denominator and report AP alongside error prevalence. Higher AP on Night does not mean errors are easier to detect there.
+Source: /home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv
+
+G03 — Supported by existing evidence
+C: Global NLL improves across all four original conditions, while ECE and ranking vary
+Evidence: Global temperature scaling lowers NLL in Fog, Rain, Snow, and Night, but raises ECE in Fog and Rain. Calibrated entropy lowers AUROC and AP in all four conditions; MSP changes are mixed.
+Disposition: Retain both improvements and degradations. Avoid claiming that calibration improves every uncertainty metric.
+Source: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+
+G04 — Supported with qualification
+D: NightPair improves probability quality on the Night subset from 53 pairs
+Evidence: On the same 53 Night images, global NLL and ECE are 1.346524 nats and 14.5885%, while NightPair gives 1.258515 nats and 6.3518%. Both metrics improve on each of the two validation sequences. On Normal, NightPair worsens NLL and ECE relative to global calibration.
+Disposition: Use the same Night population for the comparison and keep the Normal trade-off visible. Specify NLL and ECE rather than saying that all aspects of performance improve.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+
+G05 — Supported with qualification
+E: Better calibration does not guarantee better selective ranking
+Evidence: At approximately 80% valid-pixel coverage on the paired Night population, estimated risks are 32.7114% for raw, 32.7398% for global, 32.8926% for NightPair, 32.7275% for NormalPair, and 32.8218% for Mix. The prespecified one-percentage-point practical improvement is not achieved. NightPair risk is also higher than global risk on both validation sequences.
+Disposition: Describe these as estimates from a shared pixel sample, report actual coverage, and review all checkpoints. Do not claim statistical significance or a universal theorem that calibration cannot improve ranking.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+
+G06 — Supported with qualification
+F: True-Sky errors can escape a threshold applied to predicted Sky
+Evidence: Under global calibration, the paired Night population contains 2,252,930 high-confidence pixels whose ground-truth class is Sky; all are incorrect. Ground-truth Sky and predicted Sky are different groups. In the separate Stage 5C example, all 722,027 true Sky pixels are missed, with 640,534 predicted as Building, 80,827 as Vegetation, and 666 as Pole.
+Disposition: Keep ground-truth-class failures distinct from predicted-class policy groups. Changing only the predicted-Sky threshold would not affect those missed Sky pixels in the selected case. No class-specific policy was tested, so do not claim that one is effective.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_metrics.csv
+Additional source: /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/night_sky/misclassification_destinations.csv
+
+G07 — Supported with qualification
+G: Ambiguous regions are particularly difficult
+Evidence: On the paired Night population under global calibration, ambiguous versus clear regions have NLL of 2.250645 versus 0.849158 nats and accepted risk of 62.2212% versus 14.1469%. Their valid-pixel coverages are 56.5843% and 75.4784%, respectively.
+Disposition: State that tau is fixed and actual coverages differ. Both strata intersect the semantic-valid ground-truth mask. These are observational region comparisons, not causal effects or matched-coverage comparisons.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/ambiguity_metrics.csv
+
+G08 — Supported with qualification
+H: Mix improves a balanced probability objective
+Evidence: Balanced validation NLL is 0.816496 nats for Mix, compared with 0.840616 for global and 0.819058 for NightPair. This ordering holds on both sequences. Mix worsens Normal NLL relative to global and does not meet the practical ranking-improvement criterion.
+Disposition: Present Mix as a modest compromise under a predefined objective. Equal domain weights were fixed before validation outcomes; the mixture is not a new calibration algorithm.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json
+
+G09 — Should be removed or weakened
+Calibration improves underlying segmentation accuracy
+Evidence: A positive scalar temperature preserves the canonical argmax. All extension calibration configurations have zero prediction changes. Rejection preserves the predicted labels and adds an acceptance mask.
+Disposition: Describe changes in probability quality or error within the accepted set. Do not say that calibration or rejection corrects semantic predictions.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/prediction_invariance.csv
+
+G10 — Should be removed or weakened
+All evaluation is sequence-independent and untouched
+Evidence: The original calibration-fitting and threshold-selection subsets are disjoint by image and exact sequence prefix. However, 15 sequence prefixes appear in both original training and validation data; GOPR0351 occurs in Night threshold selection and validation. Validation data were also used in earlier exploratory analyses.
+Disposition: State exactly which split separation holds. Separation between fitting and threshold selection does not establish separation from validation, and different prefixes do not establish independent drives.
+Source: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/split_manifest.json
+Split evidence: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/calibration_fit.csv; /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/reliability_selection.csv; /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/per_image_metrics.csv
+
+G11 — Should be removed or weakened
+The threshold guarantees 80% valid-pixel coverage or safety
+Evidence: The exact 80% selection target is pooled all-image-pixel coverage over 798 training images. Full validation all-pixel coverage is 79.4441%, while valid-pixel coverage is 81.4332%; individual conditions differ.
+Disposition: Report both coverage denominators. Remove claims that the threshold guarantees validation or deployment coverage, accepted risk, or safety.
+Source: /home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json
+
+G12 — Should be removed or weakened
+Stage 5B uses sampled pixels or reports AURC
+Evidence: All valid pixels contribute to 1,000 equal-width uncertainty bins. The curves approximate score ordering through histograms rather than sampling pixels. The saved aurc_computed flag is false.
+Disposition: Label Stage 5B as a histogram approximation and state that AURC was not computed. Do not fill in missing AURC or conflate this estimator with the extension sample.
+Source: /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/stage5b_combined_summary.csv
+
+G13 — Supported with qualification
+Stage 5B risk at a requested coverage is a matched-coverage comparison
+Evidence: Actual coverage at the selected bin boundary can differ from the request and between methods. At requested 50% coverage, raw MSP uses 52.2952% for Fog and 52.6282% for Rain.
+Disposition: Treat these as comparisons near a requested coverage, with explicit qualifications rather than exact matches. Always show actual coverage and avoid fine ranking claims when coverages differ. The extension checkpoints are much closer to their requested values but still report the mismatch.
+Source: /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv
+
+G14 — Should be removed or weakened
+AUPRC means trapezoidal precision–recall area
+Evidence: The sources compute AP-style AUPRC as the sum of recall increments multiplied by precision at descending histogram-bin thresholds. AUROC, by contrast, uses trapezoidal ROC integration.
+Disposition: Use the term AP-style AUPRC consistently in captions and metric definitions, and distinguish it from trapezoidal precision–recall area.
+Source: /home/george/Desktop/COMP_895/project/stage2/evaluate_failure_detection.py
+
+G15 — Should be removed or weakened
+ECE is the signed confidence-minus-accuracy gap
+Evidence: ECE uses weighted absolute confidence–accuracy gaps within 15 bins. The signed gap is overall mean confidence minus accuracy; positive and negative discrepancies can cancel.
+Disposition: Report them as separate metrics. Numerical equality in some rows does not make the definitions equivalent.
+Source: /home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/metrics.py
+
+G16 — Should be removed or weakened
+Mean paired-image differences equal pooled metric differences
+Evidence: Mean paired differences weight image pairs equally. Pooled NLL weights valid pixels, while pooled ECE combines confidence-bin statistics before taking absolute gaps. Each image uses its own ground-truth mask, and the Normal and Night masks differ.
+Disposition: Name the quantity being averaged and keep paired_summary results separate from pooled comparison tables.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv
+
+G17 — Supported with qualification
+Full Night global ECE differs from extension global ECE
+Evidence: Global ECE is 14.4326% on all 106 Night images and 14.5885% on the 53 Night images in the paired extension. Both use the same global temperature on different image populations.
+Disposition: Explain this as a population difference, not a change in calibration parameters or evidence of improvement or regression.
+Source: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+
+G18 — Supported with qualification
+Frozen Night risk differs between Stage 5A and the extension
+Evidence: For all 106 Night images, valid coverage is 68.6715% and accepted risk is 28.1191%. For the 53 paired Night images, the corresponding values are 68.7731% and 28.1840%. Exact per-image parity passes for the extension subset.
+Disposition: Compare like populations. Neither set of values replaces the other, and their difference is not an experimental gain or loss.
+Source: /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/per_image_metrics.csv
+
+G19 — Supported with qualification
+The runtime overhead measures the implemented reliability pipeline
+Evidence: Stage 5D reports 36.619 ms for the baseline and 86.747 ms for the final pipeline, with peak allocated GPU memory of 325.093 and 806.808 MiB. Timing runs from preprocessing an already decoded RGB image through CPU-resident outputs. The final branch adds float64 scaling and softmax, MSP/confidence transfers, threshold comparison, masks, and their validation checks. Coverage and metadata summaries, RGB disk reading/decoding, model loading, hashing, evaluation, and serialization are excluded.
+Disposition: Report overhead within the measured pipeline region, not the isolated cost of temperature scaling or thresholding, complete application latency, or deployable throughput. Stage 1 timings of approximately 20–21 ms use different boundaries.
+Source: /home/george/Desktop/COMP_895/project/stage5/benchmark_final_reliability.py
+Measurement boundaries: /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.txt; /home/george/Desktop/COMP_895/project/stage5/benchmark_final_reliability.py:71–84 and :254–272.
+
+G20 — Supported by existing evidence
+The extension correction preserved fitted temperatures and historical parameters
+Evidence: The amendment binds the original protocol hash, diagnostic, failed-attempt artifacts and cache index, all three fitted temperatures, and the correction source. It changes only the deterministic CUDA setting for validation inference. Historical parameters, fits, model revision, and selection criteria remain unchanged, and exact parity passes.
+Disposition: Disclose the correction and retained aborted caches in the reproducibility appendix. The recorded chronology and hashes support a numerical parity repair rather than outcome-based parameter tuning.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol_amendment_001.json
+
+G21 — Supported with qualification
+Historical raw and canonical prediction counts agree up to documented ties
+Evidence: Full Rain and Snow each have a one-pixel discrepancy between softmax argmax and raw-logit argmax. Selected paired comparisons also contain documented one-pixel differences. Stage 3D preserves the historical raw values.
+Disposition: Keep the original metrics and disclose their prediction conventions. Do not claim that all historical results are bitwise identical.
+Source: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+
+G22 — Should be removed or weakened
+A selected failure example estimates dataset prevalence
+Evidence: Stage 1 and Stage 2 examples follow selection rules involving low IoU and substantial ground-truth class support. Stage 5C revisits two previously selected cases.
+Disposition: Label these as targeted or qualitative demonstrations. Use full-population statistics for statements about prevalence.
+Source: /home/george/Desktop/COMP_895/project/stage5/audit_systematic_failures.py
+
+G23 — Requires genuinely new experimentation
+Class-aware rejection or a weather detector improves performance
+Evidence: No such policy or detector was trained, selected, or evaluated. Descriptive errors grouped by ground-truth class do not validate a policy that must act without ground truth.
+Disposition: Remove this from completed contributions. Retain it only as a conditional future research question; do not initiate experiments.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+
+G24 — Requires genuinely new experimentation
+The approach generalizes to other backbones, independent drives, or combined Night and Rain/Snow conditions
+Evidence: The evaluation uses one backbone and the named single-condition benchmark populations. It includes neither a validated compound-condition benchmark nor independent deployment testing.
+Disposition: Limit the central claim to this model and these dataset populations. Do not expand the current experimental scope.
+Source: /home/george/Desktop/COMP_895/project/README.md
+
+G25 — Requires only recomputation from existing saved results
+A compact transfer matrix and consistent percentage formatting are needed for drafting
+Evidence: The required values already exist in calibration_comparison.csv, sequence_metrics.csv, and the consolidated evidence ledger.
+Disposition: Formatting or plotting these saved values after review is sufficient. No new inference or fitting is needed. No new plot is generated during this consolidation.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+
+G26 — Requires only recomputation from existing saved results
+Numeric summaries should be checked before writing
+Evidence: This consolidation reconstructs saved counts, confidence bins, uncertainty histograms, and pooled extension curves from the saved pixel samples.
+Disposition: The read-only CPU verification is complete. This classification identifies recomputation as sufficient; it does not mean the verification remains outstanding. No additional central numerical work is required.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/extension_verification.json
+
+G27 — Should be removed or weakened
+The project establishes novel temperature scaling or a new balanced calibration algorithm
+Evidence: Scalar temperature calibration, MSP, and selective prediction are established methods. Mix changes the scalar calibration objective using predefined domain weights.
+Disposition: Claim empirical design, evidence, and observations. Do not claim a new calibration algorithm, priority in the literature, or state-of-the-art performance.
+Source: /home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/protocol.py
+
+G28 — Supported with qualification
+Frozen parameters mean the overall study is confirmatory
+Evidence: Parameters were fixed before the final evaluation, but earlier validation exploration and selected failure cases influenced the motivation for the protocol and narrative.
+Disposition: Describe frozen-parameter evaluation on previously explored validation data. Freezing strengthens experimental control but does not make the entire study confirmatory or turn validation into an untouched test set.
+Source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+
+METRIC AND POPULATION DICTIONARY
+
+Populations. Full adverse validation contains 406 images, including 106 Night images. Annotated paired validation contains 203 pairs across the four conditions, including 53 Normal–Night pairs. Original temperature fitting uses 802 adverse training images; threshold selection uses 798 different training images. Controlled calibration transfer uses 101 matched Normal–Night training pairs. These populations and counts are not interchangeable.
+
+mIoU. The union-defined mIoU averages class IoUs where the class union is nonzero. Ground-truth-supported mIoU averages classes with positive ground-truth support. Full Night has 22.3781% under the union definition and 23.6214% under the ground-truth-supported definition. These are different definitions, not inconsistent calculations. The main report should use and label the historical union definition.
+
+Semantic validity and ambiguity. Valid semantic labels are train IDs 0–18; 255 is ignored. ACDC invIds 0/1 provide additional clear/ambiguous annotations and do not replace semantic validity. All-image-pixel coverage includes ignored semantic pixels; valid-pixel coverage excludes them. Region-specific semantic metrics intersect the relevant region with the valid-label mask.
+
+Accepted risk and high confidence. Accepted risk is incorrect accepted valid pixels divided by all accepted valid pixels. High confidence means maximum class probability at least 0.90. The error rate among high-confidence predictions divides incorrect high-confidence pixels by all high-confidence valid pixels. The fraction of errors that are high confidence divides the same numerator by all incorrect valid pixels. Dividing by all valid pixels defines a third quantity. Captions must identify the denominator.
+
+Exact counts and approximate ranking. Stage 5A and extension fixed-threshold statistics use exact counts over full-resolution output pixels. Stages 2 and 3D approximate AUROC and AP using 1,000 uncertainty bins. Stage 5B forms risk–coverage curves from 1,000-bin histograms of all valid pixels and does not report AURC. The extension uses a shared sample of up to 8,192 valid pixels per image, weights N_valid / n_sample, and estimates AURC by summing coverage increments multiplied by cumulative risk. No exact full-resolution AURC is claimed.
+
+Temperature and ranking. A positive scalar temperature preserves the mathematical class argmax. Across different pixels, however, the ordering of multiclass maximum probabilities can change because all competing logits affect softmax. Observed ranking differences also reflect numerical precision, binning, and ties. Do not claim that scalar temperature universally preserves error ranking.
+
+Units and aggregation. Multiply fractions by 100 to obtain percentages; differences between percentages are percentage points. NLL uses natural logarithms and is reported in nats. Pooled pixel metrics and equally weighted image means answer different questions. GPU allocated memory differs from reserved or total GPU memory; MiB and GiB use binary units. Forward-only timing, timing with CPU transfers, and complete application latency use different boundaries.
+
+UNRESOLVED BOUNDARIES
+
+Filenames alone cannot establish independent recordings, drives, or geographic scenes. Treating pixels as independent observations does not justify confidence intervals or significance claims. Exact population ranking cannot be recovered from binned or sampled curves. These limits constrain generalization and fine comparisons while leaving the scoped descriptive conclusions intact.

@@ -1,0 +1,66 @@
+FINAL SCIENTIFIC CONSOLIDATION — REVIEW INDEX
+COMP 895 | 28 October 2026
+
+Review decision
+The completed work supports a coherent graduate empirical study. The central conclusion is supported with qualification: substantial probability-calibration improvements do not consistently yield practically meaningful improvement in selective ranking in the evaluated setting. Global calibration does improve some original ranking metrics, so the report must avoid claiming that calibration never helps error detection. No essential new experiment is needed for the narrowed claims.
+
+Three findings to emphasize
+1. NLL, ECE, error ranking and accepted risk are different outcomes. On the same 53 Night validation images, global-to-NightPair ECE decreases from 14.5885% to 6.3518%, while estimated accepted risk near 80% coverage rises from 32.7398% to 32.8926%.
+2. Calibration transfer is domain-dependent. NightPair improves Night probability metrics while worsening Normal; the predefined equal-domain Mix provides a modest balanced-NLL compromise without meeting the practical ranking-gain criterion.
+3. Rejection lowers accepted error by giving up coverage and leaves confident semantic errors. Across full 406-image adverse validation, accepted risk is 9.8387% at 81.4332% valid coverage, versus 17.8054% unrejected error.
+
+Recommended reading order
+Start with A and H for the decision, then G for the qualifications. Use B to inspect the numerical evidence. Review C, F, D and E to agree on the research framing and writing plans. Detailed inventories and machine-readable records support review without turning the final report into an experiment log.
+
+Eight requested deliverables
+Executive scientific summary — A concise review of the problem, methods, findings, contribution and limits.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/A_executive_scientific_summary.txt
+
+Verified master results — 27 population-specific subtables with units, configurations, exact sources and interpretation.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/B_verified_master_results.txt
+
+Research questions and evidence matrix — Five research questions mapped to evidence, conclusions and unresolved limits.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/C_research_questions_and_evidence_matrix.txt
+
+Final presentation outline — 16 main slides plus 8 optional appendix slides; each has message, content, numbers, assets and notes.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/D_final_presentation_outline.txt
+
+Final report outline — Academic writing plan suitable for later Overleaf drafting, with section purpose, evidence, figures and caveats.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/E_final_report_outline.txt
+
+Contribution and novelty assessment — Separates established methods, engineering, empirical findings and unimplemented future directions.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/F_contribution_and_novelty_assessment.txt
+
+Consistency and claim audit — 28 claims classified using all five requested evidence categories, plus metric/population definitions.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/G_consistency_and_claim_audit.txt
+
+Final recommendation — Answers the seven requested decision questions and recommends closing the experimental scope.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/H_final_recommendation.txt
+
+Machine-readable master results
+The ledger contains 2,694 numeric, configuration and verification records linked to 63 exact saved source files. Two undefined ratios remain null/empty. Values were compared with source fields at 1e-14 relative or absolute tolerance; integer counts and strings are preserved. The readable table set rounds values for display.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/B_master_results.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/B_master_results.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/source_catalog.json
+
+Verified inventories
+These record objectives, populations, methods, parameters, metrics, results, observations, limitations, categories and exact supporting artifacts.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/stage12_inventory.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/stage34_inventory.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/stage5_inventory.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/extension_inventory.txt
+
+Critical interpretation corrections
+Keep full Night 106 separate from paired Night 53; distinguish the extension total of 106 images from the full Night subset. The 80% threshold target is training all-image-pixel coverage, not validation valid coverage or a risk guarantee. Stages 2/3 and Stage 5B use all valid pixels in histograms; the extension uses weighted pixel samples for ranking/AURC. Stage 5B has no AURC. Retain AP-style AUPRC, high-confidence denominators, per-image versus pooled aggregation, GT versus predicted-class distinctions, and exact versus approximate evaluation. Document sequence-prefix overlap, prior validation exploration, precision/tie effects and the validation-only CUDA parity correction. Runtime excludes decoding, model loading, summaries and serialization and does not isolate calibration cost.
+
+Verification and preservation
+The consolidation uses source inspection, hashes and lightweight CPU reconstruction from saved counts, confidence bins, uncertainty histograms and existing pixel samples. No new inference, fitting, threshold selection, dataset sampling, GPU execution, dependency installation, system changes, plots, slides or full paper were performed. Final preservation checks cover the 3,606 pre-existing files in the protected Stage 1–5/extension source and result scope. Consult the final status records below.
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/master_verification.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/scientific_checks.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/extension_verification.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/document_path_verification.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/preservation_after.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/consolidation_verification.json
+
+Next step
+Review this consolidation before drafting the complete report or presentation. The presentation plan identifies existing assets and later formatting work explicitly. Future methodological ideas remain unimplemented and are not proposed as additional work for this submission.

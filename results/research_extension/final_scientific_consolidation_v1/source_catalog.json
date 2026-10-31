@@ -1,0 +1,380 @@
+[
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv",
+    "sha256": "3f30bc38af39356e8131a879a2070f7590766d0f272ded62d3cda63b193f1782",
+    "bytes": 1700,
+    "ledger_records": 76
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv",
+    "sha256": "ee156e09af14955fc112bc6f69c5ad91e33e73add18d6b21728441471893f032",
+    "bytes": 826,
+    "ledger_records": 76
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv",
+    "sha256": "17e2ea6b6674b88d9d974691a02122e34877bec06a7c553422c9fc586fe1ff2c",
+    "bytes": 373,
+    "ledger_records": 20
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/baseline_analysis/selected_confusions.csv",
+    "sha256": "f863248848c7cb0e32abbbeb93d64fd49438c8324d7d507ea470a983097f495c",
+    "bytes": 968,
+    "ledger_records": 36
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/failure_cases/night/sky/ranked_failures.csv",
+    "sha256": "ff1662a671a0a8fd975fd28800e87084d76c5349c2e0cacca874630e66ccdf7a",
+    "bytes": 894,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/failure_cases/snow/bus/ranked_failures.csv",
+    "sha256": "885c2e058540121783ac96c0bfbf9ef1723367640aa7105758fa7aa35e863518",
+    "bytes": 1014,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/failure_cases/snow/terrain/ranked_failures.csv",
+    "sha256": "3494c22a1b9b478b8f560ae725f4aa1af90b79400f66e2be730a006eb3f61b07",
+    "bytes": 873,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_condition_summary.csv",
+    "sha256": "ac6c7413b822936103dbe1f550557a15eca9c2448d259f1a6eb67e7c668ec84a",
+    "bytes": 1112,
+    "ledger_records": 32
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/ambiguity_metrics.csv",
+    "sha256": "7240b0c7c80989673ea5f2c51869ac7b51abf57314ed42a76a48bbea331a2755",
+    "bytes": 15014,
+    "ledger_records": 40
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/assessment_verification.json",
+    "sha256": "7f1e5b443f6ce0a476370d1d4aa11ee818451d479750a9afbfcb96176fb19e29",
+    "bytes": 1857,
+    "ledger_records": 3
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/aurc.csv",
+    "sha256": "9dc5fee7a71211890e3c2f9b235742493c44a780c8c41cb2631968050e5d5c38",
+    "bytes": 4850,
+    "ledger_records": 30
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv",
+    "sha256": "7ff55a2bc6884cc36f3506ec04026f4d88d43cf3e93d3ce01778a3a2df108524",
+    "bytes": 5363,
+    "ledger_records": 130
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv",
+    "sha256": "ceab265b434c6e1a36fa15de0f74fe9693eeb11b8b2362b3f2180ac5e3538f70",
+    "bytes": 53809,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_metrics.csv",
+    "sha256": "a21f9b6c000555f0c3682dc49b8abe82a5627527be7ddd5fb8e9398a5e11c687",
+    "bytes": 164935,
+    "ledger_records": 58
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fitted_temperatures.csv",
+    "sha256": "8291795a120d32422da683a667b0350e4e56306da254d47bae801d302e72aa6c",
+    "bytes": 419,
+    "ledger_records": 3
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv",
+    "sha256": "f70031cbb607b857bed0b92259893af0a183983373df68cccadf3412781be5aa",
+    "bytes": 23110,
+    "ledger_records": 450
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv",
+    "sha256": "3cb74613056fabb55cf0f8c141a315a654d20b016a5d1e46bd87ab7f1b7332e8",
+    "bytes": 18703,
+    "ledger_records": 30
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json",
+    "sha256": "8211d6ca72ba403a485936cfac6f6931f59ce56e319b4c13b18bd4c7b46bd848",
+    "bytes": 256,
+    "ledger_records": 3
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json",
+    "sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+    "bytes": 19395,
+    "ledger_records": 7
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json",
+    "sha256": "4b8e9ce2d00d20131c2a7b745f499c5f1b0a94c15024ecc784e542564ca1a3e2",
+    "bytes": 5025,
+    "ledger_records": 10
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/sequence_metrics.csv",
+    "sha256": "a4818a389253e67250018a883ede76d0de76da3446b1adfc36faf47cac1ca383",
+    "bytes": 10146,
+    "ledger_records": 60
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json",
+    "sha256": "7c11cc9977b744dec59dd27f1aac965571cde316eaf28aafa51706d98b755f93",
+    "bytes": 13343,
+    "ledger_records": 5
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/Mix.json",
+    "sha256": "f49c1426708d25ca331159cf559475f028371a5c556ba13e65ee176b0f8a612f",
+    "bytes": 1983,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NightPair.json",
+    "sha256": "f8604192a492fa7a66af5300c62d07613ff6d0cd90b0b040aeb3d0b4cd95e0d6",
+    "bytes": 1743,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair.json",
+    "sha256": "50bceaecf806fac7f4cdd4c03018c96f48173b8a1c16086f9dc06647c3b9f8bb",
+    "bytes": 1750,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/night_sky/misclassification_destinations.csv",
+    "sha256": "0b058164cf6c8b8ccd4aa764bc8378e8a72686b4fb63b8bffa5f60d5378eca6e",
+    "bytes": 164,
+    "ledger_records": 6
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/snow_terrain/misclassification_destinations.csv",
+    "sha256": "cc30c2bd3203388501364640b0ca881e15525b2c5513f661072c59309b110781",
+    "bytes": 260,
+    "ledger_records": 12
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/stage2e_summary.csv",
+    "sha256": "25d64457073c29596c08d5315a50143bdb091825cbcf71260e89ba8520cd2ee5",
+    "bytes": 499,
+    "ledger_records": 14
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/fog/summary.csv",
+    "sha256": "a3191ac4577d15016a65d037e0b109b0fb95428d52252827f4fffae903f8c2ab",
+    "bytes": 284,
+    "ledger_records": 8
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/night/summary.csv",
+    "sha256": "365ba9a07f24c5357d9a1232496c1a268fa45e5095217f7bd5ac73aa11f43998",
+    "bytes": 284,
+    "ledger_records": 8
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/rain/summary.csv",
+    "sha256": "8ecbbcc67f7ab491d436b0c07037417f19e27a0a29bfd05e6133e36bfd774b15",
+    "bytes": 285,
+    "ledger_records": 8
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/snow/summary.csv",
+    "sha256": "7abc6c0b5f700b2c066d1a2255ef647c81a3925010536853a26716d69d9aabcd",
+    "bytes": 287,
+    "ledger_records": 8
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/fog/summary.csv",
+    "sha256": "49bd9fcebe32cf007fd085fd0df4835064534157931728ca8f00bd1e2d6dcacd",
+    "bytes": 746,
+    "ledger_records": 9
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/night/summary.csv",
+    "sha256": "dbbfd6749ad782c9972501aff227ed01982b944ecc3c29874476e99979506e2d",
+    "bytes": 772,
+    "ledger_records": 9
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/fog/summary.csv",
+    "sha256": "046c0b23e7260668b9de08f5a94328f667ecc91ac0298a07b7633062c3fba8f5",
+    "bytes": 716,
+    "ledger_records": 12
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/night/summary.csv",
+    "sha256": "aaf2325b32ab91c7241d822e15933b7ed8b9a1968ba995374f4098498e49a734",
+    "bytes": 708,
+    "ledger_records": 12
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/rain/summary.csv",
+    "sha256": "2e8a8f1a4c1a27e1991bbaf1f1ed258fc28d103eba1d81b34b7f55a7843fc73f",
+    "bytes": 717,
+    "ledger_records": 12
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/snow/summary.csv",
+    "sha256": "9394b69e9d44214ad7f5cc80352e5221daaaaa8388489d62de7815ff82cc2f8e",
+    "bytes": 717,
+    "ledger_records": 12
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/rain/summary.csv",
+    "sha256": "4b75473b59227ef9499f7bd7fedb21ac302b0ebc34e2d8a8605772fb16146ff2",
+    "bytes": 756,
+    "ledger_records": 9
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/snow/summary.csv",
+    "sha256": "8b729ce47bf61d63fdf1314e246753eecac2fc0dd3cdca833b6ad0debda4e748",
+    "bytes": 747,
+    "ledger_records": 9
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json",
+    "sha256": "651bf173af0347fa43842700f71e673a79ea0b3eb49226dd2f6a352c16c7ba7c",
+    "bytes": 1659,
+    "ledger_records": 16
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/split_summary.csv",
+    "sha256": "b216c4fb5ceff57f221f518cb4f07dce6dd7e3b3a4f5e0e2366588a9c4c2a60c",
+    "bytes": 244,
+    "ledger_records": 24
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv",
+    "sha256": "b1b86ffdb5d12f7860bd32942eb713958b574cfe64bae3e17ec46a6d5778453f",
+    "bytes": 2621,
+    "ledger_records": 76
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv",
+    "sha256": "390a85c8c75ede1530b92acdab6d4ebacc4fa0bbba6590ad9c497e1f5369f607",
+    "bytes": 2607,
+    "ledger_records": 48
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4a/implementation_metadata.json",
+    "sha256": "0043d36750dd154b33c61eda69290378972e6004605faea90cb4f516861f62cc",
+    "bytes": 6803,
+    "ledger_records": 7
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/condition_metrics.csv",
+    "sha256": "d0d1bef24460ac82dff3c98fc89fd9fb0686001db317724b8690086165313c82",
+    "bytes": 1907,
+    "ledger_records": 52
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json",
+    "sha256": "8746f4b41058181c67fc931e9dd4212b3d8bb5947c3c56abad9bf5a27e8b3b0e",
+    "bytes": 2690,
+    "ledger_records": 20
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/stage4b_summary.csv",
+    "sha256": "6e0ff3724fccd0fa9879ce1e23c394cd5d93a6e24b5157c02ebb24bee81adc13",
+    "bytes": 793,
+    "ledger_records": 13
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/verification_check.json",
+    "sha256": "4f3cef541ff2b8ffc4595318ee926bef06be55ccf8e66d39363a37e3d8e84c62",
+    "bytes": 719,
+    "ledger_records": 15
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/integration_test/metadata.json",
+    "sha256": "ce36cc92614abc42bd27679ffd61be6793776c5487e96a9c7005f5bba5666ea1",
+    "bytes": 2554,
+    "ledger_records": 6
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/verification_check.json",
+    "sha256": "3bffff2eccec1bc97ece604d68c7aacba4d36f9faeb68978934176b03cc0f000",
+    "bytes": 802,
+    "ledger_records": 19
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv",
+    "sha256": "1a133b238d548a450c0f36daba529e3fa58aabbf7729ca0ff75c3f5ef84d0cec",
+    "bytes": 2850,
+    "ledger_records": 140
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv",
+    "sha256": "d503ef395a5de8ce7df7f55f6dd4de78856dcedf24b37597f77740e1c1c9a8d1",
+    "bytes": 15245,
+    "ledger_records": 840
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/stage5b_combined_summary.csv",
+    "sha256": "3696868e0fbe346ef855bcbd15d0ab6cc8967dc8ce2b528082a309adad63cb77",
+    "bytes": 8179,
+    "ledger_records": 60
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/verification_check.json",
+    "sha256": "e62816013891f2cbc59daddce6d8909a23c5e51a153f47f655dbe2083aaa34bb",
+    "bytes": 711,
+    "ledger_records": 1
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/night_sky/misclassification_destinations.csv",
+    "sha256": "f497b975bfc07433296e8ea9e1c512903e63c6918dc512247c9c7faffffbfbcc",
+    "bytes": 697,
+    "ledger_records": 8
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/snow_terrain/misclassification_destinations.csv",
+    "sha256": "3a6e20527d46a3cd7bfca113f5b958a13395a87ccbcbc0661da7bd0484fbe381",
+    "bytes": 803,
+    "ledger_records": 14
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv",
+    "sha256": "6c3de5458017f2e52a34e020e3416891d923e408a8dbedcc25f27d9d6813cb75",
+    "bytes": 2162,
+    "ledger_records": 52
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/evaluation_audit.txt",
+    "sha256": "1117d681e763df80b0b38b940973b1a571421311135c626341de6e400924f417",
+    "bytes": 3373,
+    "ledger_records": 4
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/measurement_verification.json",
+    "sha256": "a6dcae553e14d2991c633bc36385c85f593961d4b5a1e78bb032ec6a8aa57446",
+    "bytes": 248,
+    "ledger_records": 1
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/memory_summary.csv",
+    "sha256": "3f0695ae1bdee9249950e816728359594751523c2d6def02f77f43b9061c6b71",
+    "bytes": 285,
+    "ledger_records": 10
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/overhead_summary.json",
+    "sha256": "495eb65b6c1d82a0828ca20e0c22d54a7b1a59b6cc32f2196a50e0b3d74ed3a7",
+    "bytes": 225,
+    "ledger_records": 5
+  },
+  {
+    "source_file": "/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.csv",
+    "sha256": "3836b0401d9235e7101cf4f15ce9dee2d7e4ec3e6e9b4c029560d48d8a3ee20e",
+    "bytes": 413,
+    "ledger_records": 18
+  }
+]

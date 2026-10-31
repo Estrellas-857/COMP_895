@@ -1,0 +1,57 @@
+Preflight: CUDA=True; NVIDIA GeForce RTX 3060, 595.99.02, 12288 MiB, 7462 MiB, 67 %
+Cache 1/202: fit/night; generated=0, reused=1
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 41466.57it/s]
+Cache 25/202: fit/night; generated=12, reused=13
+Cache 50/202: fit/normal; generated=25, reused=25
+Cache 75/202: fit/night; generated=37, reused=38
+Cache 100/202: fit/normal; generated=50, reused=50
+Cache 125/202: fit/night; generated=62, reused=63
+Cache 150/202: fit/normal; generated=75, reused=75
+Cache 175/202: fit/night; generated=87, reused=88
+Cache 200/202: fit/normal; generated=100, reused=100
+Cache 202/202: fit/normal; generated=101, reused=101
+Fit NightPair_evaluations: T=1.000000000, NLL=1.709043927, gradient=+1.475e+00
+Fit NightPair_evaluations: T=2.000000000, NLL=1.052889344, gradient=+9.338e-01
+Fit NightPair_evaluations: T=4.361731617, NLL=1.111910835, gradient=-2.695e+00
+Fit NightPair_evaluations: T=3.264688688, NLL=0.989062492, gradient=-7.144e-01
+Fit NightPair_evaluations: T=2.887751763, NLL=0.973177770, gradient=-1.167e-01
+Fit NightPair_evaluations: T=2.811210286, NLL=0.972612265, gradient=-4.861e-03
+Fit NightPair_evaluations: T=2.807832939, NLL=0.972611224, gradient=-9.394e-06
+Fit NightPair_evaluations: T=2.807826395, NLL=0.972611224, gradient=-3.526e-11
+Fit NightPair_evaluations: T=2.807826395, NLL=0.972611224, gradient=-3.526e-11
+Fit NormalPair_evaluations: T=1.000000000, NLL=0.483232213, gradient=+3.629e-01
+Fit NormalPair_evaluations: T=2.000000000, NLL=0.352357277, gradient=+3.348e-03
+Fit NormalPair_evaluations: T=2.005201473, NLL=0.352355114, gradient=-1.872e-05
+Fit NormalPair_evaluations: T=2.005172635, NLL=0.352355114, gradient=-5.777e-10
+Fit NormalPair_evaluations: T=2.005172635, NLL=0.352355114, gradient=-5.777e-10
+Fit Mix_evaluations: T=1.000000000, NLL=1.096138070, gradient=+9.191e-01
+Fit Mix_evaluations: T=2.000000000, NLL=0.702623310, gradient=+4.686e-01
+Fit Mix_evaluations: T=2.901936433, NLL=0.689456326, gradient=-5.265e-01
+Fit Mix_evaluations: T=2.579119360, NLL=0.676650941, gradient=-9.727e-02
+Fit Mix_evaluations: T=2.500884487, NLL=0.676039066, gradient=-5.368e-03
+Fit Mix_evaluations: T=2.496199647, NLL=0.676037047, gradient=-1.877e-05
+Fit Mix_evaluations: T=2.496183179, NLL=0.676037047, gradient=-2.316e-10
+Fit Mix_evaluations: T=2.496183179, NLL=0.676037047, gradient=-2.316e-10
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 23320.38it/s]
+Cache 1/106: val/night; generated=1, reused=0
+Cache 25/106: val/night; generated=25, reused=0
+Cache 50/106: val/normal; generated=50, reused=0
+Cache 75/106: val/night; generated=75, reused=0
+Cache 100/106: val/normal; generated=100, reused=0
+Cache 106/106: val/normal; generated=106, reused=0
+Evaluation [1/106] complete; frozen Night parity checked; elapsed=1.6s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/run.py", line 207, in <module>
+    main()
+  File "/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/run.py", line 189, in main
+    evaluate(load_cache("val", digest), temperatures(digest), OUTPUT_ROOT, args.device, protocol, digest)
+  File "/home/george/Desktop/COMP_895/project/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/evaluation.py", line 185, in evaluate
+    _check_frozen_night(row, measured, old)
+  File "/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/evaluation.py", line 98, in _check_frozen_night
+    raise RuntimeError(f"Frozen Night parity failed for {row['pair_id']} {actual}: "
+RuntimeError: Frozen Night parity failed for GOPR0351_frame_000059 num_errors: 730440 != 730438

@@ -1,0 +1,50 @@
+{
+  "calibrated_by_domain": {
+    "normal": {
+      "nll": 0.3523551140645368,
+      "num_images": 101,
+      "num_valid_pixels": 202782680
+    }
+  },
+  "calibrated_nll": 0.3523551140645368,
+  "converged": true,
+  "convergence_reason": "absolute beta-gradient tolerance",
+  "domain_weights": {
+    "normal": 1.0
+  },
+  "final_gradient_beta": -5.776517647486017e-10,
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "name": "NormalPair",
+  "num_images": 101,
+  "num_pairs": 101,
+  "num_valid_pixels": 202782680,
+  "objective_evaluations": 5,
+  "optimizer": "Stage3B safeguarded Newton in beta=1/T",
+  "optimizer_iterations": 4,
+  "precision": "float32 native logits/interpolation; float64 NLL/derivatives/reductions",
+  "prediction_changes": 0,
+  "prediction_pixels_checked": 202782680,
+  "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+  "raw_by_domain": {
+    "normal": {
+      "nll": 0.48323221285207957,
+      "num_images": 101,
+      "num_valid_pixels": 202782680
+    }
+  },
+  "raw_nll": 0.48323221285207957,
+  "resources": {
+    "device": "cuda",
+    "elapsed_seconds": 67.34203552499821,
+    "peak_cuda_allocated_bytes": 2152126464,
+    "peak_cuda_reserved_bytes": 3630170112,
+    "peak_process_rss_bytes": 1657708544
+  },
+  "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc",
+  "schema_version": 1,
+  "temperature": 2.0051726351727726,
+  "trace_path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair_trace.json",
+  "trace_sha256": "378523a3e06ca4542e43ff28e23efe052e2f1a55fd9717dd830ed8f708d8b979",
+  "validation_used": false
+}

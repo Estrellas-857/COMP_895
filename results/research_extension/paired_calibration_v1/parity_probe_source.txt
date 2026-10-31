@@ -1,0 +1,39 @@
+import os
+os.environ['HF_HUB_OFFLINE']='1'
+os.environ['TRANSFORMERS_OFFLINE']='1'
+os.environ['CUBLAS_WORKSPACE_CONFIG']=':4096:8'
+import csv,json
+from pathlib import Path
+import numpy as np
+import torch
+import torch.nn.functional as F
+from PIL import Image
+from stage4.reliability_pipeline import ReliabilityPipeline
+from stage1.dataset import acdc_path
+from experiments.paired_calibration_v1.common import OUTPUT_ROOT,GLOBAL_TAU,GLOBAL_T
+
+torch.set_num_threads(8)
+rows=json.loads((OUTPUT_ROOT/'cache_index_val.json').read_text())['rows']
+r=next(r for r in rows if r['domain']=='night' and r['pair_id']=='GOPR0351_frame_000059')
+gt=np.asarray(Image.open(acdc_path(r['gt_path'])))
+valid=(gt<19)
+cache=np.load(r['cache_path'])
+p=ReliabilityPipeline(threshold=GLOBAL_TAU,device='cuda',local_files_only=True)
+rgb=Image.open(acdc_path(r['rgb_path'])).convert('RGB')
+x={k:v.cuda() for k,v in p.processor(images=rgb,return_tensors='pt',size={'height':512,'width':1024}).items()}
+def metrics(t):
+ pred=t.argmax(1)[0].cpu().numpy(); conf=torch.softmax(t.double()/GLOBAL_T,1).max(1).values[0].cpu().numpy(); a=1-conf<=GLOBAL_TAU
+ return dict(errors=int(((pred!=gt)&valid).sum()),accepted_all=int(a.sum()),accepted_valid=int((a&valid).sum()),accepted_errors=int((a&valid&(pred!=gt)).sum()))
+result=[]
+with torch.inference_mode():
+ for deterministic in (False,True):
+  torch.use_deterministic_algorithms(deterministic)
+  native=p.model(**x).logits
+  row=dict(deterministic=deterministic,native_stride=list(native.stride()),native_channels_last=native.is_contiguous(memory_format=torch.channels_last),max_native_difference_from_cache=float(np.max(np.abs(native.cpu().numpy()-cache))),native_different_values=int(np.count_nonzero(native.cpu().numpy()!=cache)))
+  row['direct']=metrics(F.interpolate(native,size=gt.shape,mode='bilinear',align_corners=False))
+  cached=torch.from_numpy(cache).cuda()
+  row['cache_contiguous']=metrics(F.interpolate(cached,size=gt.shape,mode='bilinear',align_corners=False))
+  row['cache_channels_last']=metrics(F.interpolate(cached.contiguous(memory_format=torch.channels_last),size=gt.shape,mode='bilinear',align_corners=False))
+  result.append(row)
+print(json.dumps(result,indent=2))
+with (OUTPUT_ROOT/'parity_probe.json').open('x') as f: json.dump(result,f,indent=2)

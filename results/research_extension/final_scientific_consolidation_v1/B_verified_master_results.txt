@@ -1,0 +1,500 @@
+VERIFIED MASTER RESULTS
+Uncertainty-Aware Semantic Segmentation under Adverse Driving Conditions
+
+Reading convention
+This readable table set selects the important results. B_master_results.csv and B_master_results.json contain the full sourced ledger, including configuration and verification fields. Every ledger row specifies metric, population, configuration, value, unit, exact source file, source field, row selector and interpretation. Numerical table cells below are rounded only for display; the source CSV/JSON fields and ledger preserve their saved precision. Percent columns multiply saved fractions by 100. A percentage-point difference is not a relative percentage change. Undefined values remain undefined.
+
+Population and metric boundaries
+Full adverse validation contains Fog 100, Rain 100, Snow 100 and Night 106 images. Paired baseline validation contains 50 pairs per non-Night condition and 53 Normal–Night pairs. Global fitting uses 802 training images; threshold selection uses 798 different training images. Controlled transfer fits use 101 matched training pairs. The paired extension evaluates 53 images per domain, not the full 106-image Night subset. Each image uses its own semantic GT; corresponding views are not pixel aligned. Exact population sources appear in the tables below.
+
+The baseline and final policy use fixed canonical predictions. Historical Stage 2 and Stage 3D raw correctness uses softmax argmax; documented one-pixel differences from raw-logit argmax are retained rather than silently replaced. Valid means semantic trainId 0–18; ignore 255 is excluded from semantic metrics. Pooled pixel metrics sum counts/statistics before division. ECE uses 15 equal-width confidence bins with absolute gaps; signed mean-confidence minus accuracy is a different measure. AUROC and AP use error-positive score histograms in Stages 2/3. AP sums precision times recall increments rather than trapezoidal PR area. Stage 5B uses every valid pixel in 1,000 score bins. Extension risk curves and right-step AURC use shared weighted samples of 8,192 valid pixels per image; neither gives exact full-resolution ranking. Fixed operating counts are exact and full resolution.
+
+B01. Full-condition segmentation baseline
+Population: Full adverse validation; image count shown per row
+Configuration: Raw fixed SegFormer-B0; pooled confusion matrices
+Recommended placement: Main report; presentation baseline slide
+Condition | Images | mIoU union (%) | mIoU GT (%) | Pixel accuracy (%)
+----------+--------+----------------+-------------+-------------------
+fog       | 100    | 63.7933        | 63.7933     | 91.9384           
+rain      | 100    | 49.6401        | 49.6401     | 89.8906           
+snow      | 100    | 48.5679        | 48.5679     | 87.3900           
+night     | 106    | 22.3781        | 23.6214     | 60.2624           
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv
+Source fields / row identification: condition selects row; images, miou_union, miou_gt, pixel_accuracy
+Interpretation / limitation: Union mIoU averages classes with nonzero GT/predicted union; GT mIoU averages classes with GT support. Use union mIoU consistently in the main narrative. Night is the weakest evaluated condition; the two mIoU definitions are not contradictory.
+
+B02. Scene-corresponding Normal–Adverse baseline
+Population: Annotated corresponding pairs; count shown per condition
+Configuration: Each view evaluated against its own GT; canonical predictions
+Recommended placement: Main report, abbreviated Night row on slides
+Condition | Pairs | Normal mIoU (%) | Adverse mIoU (%) | Normal acc. (%) | Adverse acc. (%)
+----------+-------+-----------------+------------------+-----------------+-----------------
+fog       | 50    | 57.6033         | 56.7439          | 93.4492         | 91.7501         
+rain      | 50    | 54.2804         | 50.7505          | 92.3996         | 90.2536         
+snow      | 50    | 53.9051         | 48.2585          | 91.6962         | 87.0446         
+night     | 53    | 50.3679         | 22.3716          | 90.6766         | 60.2291         
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_condition_summary.csv
+Source fields / row identification: condition; pairs, normal_miou_union, adverse_miou_union, normal_pixel_accuracy, adverse_pixel_accuracy
+Interpretation / limitation: Same scene-pair population reduces one source of mismatch, but masks and framing differ. This is not a pixel-aligned or causal illumination comparison. Do not compare paired Night 53 with full Night 106 as a method improvement.
+
+B03. Class-level IoU across conditions
+Population: Full adverse validation per condition
+Configuration: Raw canonical predictions; pooled class confusion counts
+Recommended placement: Complete table in appendix; selected Sky/Terrain evidence in main text
+Class ID | Class         | Fog IoU (%) | Rain IoU (%) | Snow IoU (%) | Night IoU (%)
+---------+---------------+-------------+--------------+--------------+--------------
+0        | road          | 94.9654     | 78.7480      | 79.8007      | 72.2732      
+1        | sidewalk      | 78.4701     | 40.7075      | 41.7706      | 30.7320      
+2        | building      | 76.1959     | 81.7300      | 76.4200      | 44.2337      
+3        | wall          | 48.7586     | 20.1436      | 39.9572      | 9.8749       
+4        | fence         | 31.2293     | 24.8351      | 24.7828      | 19.3258      
+5        | pole          | 44.6227     | 41.5008      | 42.3588      | 38.9260      
+6        | traffic light | 65.2881     | 58.8119      | 64.9056      | 30.8554      
+7        | traffic sign  | 54.2043     | 55.3500      | 51.7761      | 17.2607      
+8        | vegetation    | 85.2509     | 89.3128      | 81.1539      | 46.2635      
+9        | terrain       | 49.4324     | 44.3265      | 7.4263       | 14.2733      
+10       | sky           | 94.5376     | 97.3607      | 95.6662      | 4.8165       
+11       | person        | 50.3627     | 58.6289      | 44.4802      | 21.3722      
+12       | rider         | 48.6303     | 2.2184       | 0.7910       | 5.3187       
+13       | car           | 83.2448     | 77.0690      | 72.4369      | 33.0360      
+14       | truck         | 63.8469     | 29.9629      | 67.2966      | 2.0261       
+15       | bus           | 93.3063     | 58.7485      | 2.8494       | 0.0000       
+16       | train         | 83.5017     | 32.3977      | 60.5896      | 7.2844       
+17       | motorcycle    | 15.3248     | 14.6373      | 42.4618      | 0.0489       
+18       | bicycle       | 50.8995     | 36.6721      | 25.8658      | 27.2634      
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv
+Source fields / row identification: class_id and class_name select row; fog, rain, snow, night are saved class IoUs. Matching support table and ledger give GT pixel counts.
+Interpretation / limitation: Small or absent GT support changes interpretation. This is descriptive class analysis; it is not a fitted class-aware rejection policy.
+
+B04. Raw uncertainty error detection
+Population: Full adverse validation per condition
+Configuration: Historical Stage 2 raw baseline; 1,000-bin error-positive histograms
+Recommended placement: Main report; select one ranking figure for slides
+Condition | Error prevalence | MSP AUROC | MSP AP   | Entropy AUROC | Entropy AP
+----------+------------------+-----------+----------+---------------+-----------
+fog       | 0.080616         | 0.875799  | 0.423072 | 0.881689      | 0.424066  
+rain      | 0.101094         | 0.896207  | 0.486655 | 0.899126      | 0.482952  
+snow      | 0.126100         | 0.831080  | 0.456667 | 0.832694      | 0.460688  
+night     | 0.397376         | 0.773237  | 0.639977 | 0.780479      | 0.647589  
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv
+Source fields / row identification: condition; raw_error_prevalence, raw_msp_auroc, raw_msp_auprc, raw_entropy_auroc, raw_entropy_auprc; all unitless fractions
+Interpretation / limitation: Higher uncertainty is the error score; MSP uncertainty is 1−maximum probability and entropy is normalized by log(19). AP depends on error prevalence. Night has the highest AP but lowest AUROC.
+
+B05. Paired uncertainty shifts
+Population: 50 pairs each Fog/Rain/Snow; 53 Night pairs
+Configuration: Raw probabilities; paired equal-image summaries separated from pooled means
+Recommended placement: Appendix; use Night direction to motivate calibration
+Condition | Normal U_MSP | Adverse U_MSP | Pooled delta | Pair-mean delta | Pairs U rises | Pairs acc. falls
+----------+--------------+---------------+--------------+-----------------+---------------+-----------------
+fog       | 0.036628     | 0.045023      | 0.008395     | 0.008405        | 35            | 31              
+rain      | 0.044378     | 0.059179      | 0.014801     | 0.014655        | 44            | 40              
+snow      | 0.047617     | 0.063571      | 0.015954     | 0.015599        | 43            | 43              
+night     | 0.044568     | 0.112814      | 0.068246     | 0.068687        | 53            | 53              
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/fog/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/rain/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/snow/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/night/summary.csv
+Source fields / row identification: normal_msp_mean, adverse_msp_mean, msp_global_delta, msp_pair_mean_delta, msp_pairs_increased, accuracy_pairs_decreased
+Interpretation / limitation: Fields named msp_* here mean MSP uncertainty, not maximum confidence. Fraction-valued deltas are Adverse minus Normal. A mean paired delta is not the pooled-pixel delta. Entropy counterparts are retained in the master ledger.
+
+B06. Raw versus global probability metrics
+Population: Full adverse validation per condition
+Configuration: Raw T=1 versus frozen global T=2.124186626456894
+Recommended placement: Main report and presentation
+Condition | Raw NLL  | Global NLL | Raw ECE (%) | Global ECE (%)
+----------+----------+------------+-------------+---------------
+fog       | 0.320630 | 0.290366   | 3.4912      | 5.0656        
+rain      | 0.386998 | 0.353373   | 4.1613      | 5.4307        
+snow      | 0.578771 | 0.453876   | 6.2834      | 4.4195        
+night     | 2.243088 | 1.341115   | 28.3537     | 14.4326       
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json
+Source fields / row identification: condition; raw_nll, calibrated_nll (nats per valid pixel), raw_ece, calibrated_ece (fractions displayed as %); temperature in fitted_temperature.json
+Interpretation / limitation: NLL improves in every condition. ECE improves in Snow/Night and worsens in Fog/Rain. NLL measures multiclass probability quality; ECE measures binned top-label agreement.
+
+B07. Global calibration changes ranking inconsistently
+Population: Full adverse validation per condition
+Configuration: Raw historical probabilities versus global calibrated probabilities; identical binning protocol
+Recommended placement: Main report; full table appendix if space is tight
+Condition | Score   | Raw AUROC | Global AUROC | Raw AP   | Global AP
+----------+---------+-----------+--------------+----------+----------
+fog       | msp     | 0.875799  | 0.884448     | 0.423072 | 0.422731 
+fog       | entropy | 0.881689  | 0.871150     | 0.424066 | 0.361784 
+rain      | msp     | 0.896207  | 0.897872     | 0.486655 | 0.478137 
+rain      | entropy | 0.899126  | 0.882302     | 0.482952 | 0.412441 
+snow      | msp     | 0.831080  | 0.829080     | 0.456667 | 0.459538 
+snow      | entropy | 0.832694  | 0.810327     | 0.460688 | 0.408960 
+night     | msp     | 0.773237  | 0.784787     | 0.639977 | 0.651872 
+night     | entropy | 0.780479  | 0.778993     | 0.647589 | 0.638626 
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+Source fields / row identification: condition selects row; raw/calibrated_{msp/entropy}_{auroc/auprc}; all unitless fractions
+Interpretation / limitation: Entropy AUROC and AP worsen in all four conditions. MSP is mixed and improves both metrics in Night. Preserve the historical one-pixel Rain/Snow correctness differences documented in G; do not claim calibration never helps ranking.
+
+B08. Frozen training selections
+Population: Global fit: 802 training images; policy selection: 798 different training images
+Configuration: No validation tuning; threshold selected from all image pixels before GT access
+Recommended placement: Compact main setup table; optimizer/count details appendix
+Metric                      | Value             | Unit               | Source field                              
+----------------------------+-------------------+--------------------+-------------------------------------------
+Global T                    | 2.124186626456894 | scalar             | temperature                               
+Fit image count             | 802               | images             | num_calibration_images                    
+Fit valid pixels            | 1,529,411,129     | pixels             | num_calibration_valid_pixels              
+Fit raw NLL                 | 0.845982          | nats / valid pixel | raw_nll                                   
+Fit calibrated NLL          | 0.594372          | nats / valid pixel | calibrated_nll                            
+Threshold tau               | 0.386413580715649 | uncertainty        | threshold                                 
+Selection image count       | 798               | images             | num_images                                
+Selection all pixels        | 1,654,732,800     | pixels             | num_pixels                                
+Target all-pixel coverage   | 80.0000           | %                  | target_coverage                           
+Achieved all-pixel coverage | 80.0000           | %                  | selection_all_pixel_coverage              
+Accepted all pixels         | 1,323,786,240     | pixels             | all_pixel_selection_counts.accepted_pixels
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/split_summary.csv
+Source fields / row identification: Source field is listed in each row; first five metrics from global fit file, remaining metrics from frozen operating point. Training condition counts are in split_summary.csv.
+Interpretation / limitation: Accept if 1−max softmax(z/T) <= tau. The quantile target concerns all training image pixels; it neither fixes validation coverage nor guarantees risk. Training NLL reduction is fitting behavior, not validation performance.
+
+B09. Exact frozen-policy validation
+Population: Full 406-image adverse validation; pooled row sums counts across conditions
+Configuration: Frozen global T and tau from B08; semantic-valid GT denominator for risk
+Recommended placement: Main report and presentation
+Condition | Images | Baseline risk (%) | Valid coverage (%) | All-pixel cov. (%) | Accepted risk (%)
+----------+--------+-------------------+--------------------+--------------------+------------------
+fog       | 100    | 8.0616            | 88.9543            | 86.6154            | 3.9506           
+rain      | 100    | 10.1094           | 84.3423            | 82.0979            | 3.9829           
+snow      | 100    | 12.6100           | 84.1756            | 82.6346            | 6.5387           
+night     | 106    | 39.7376           | 68.6715            | 67.1653            | 28.1191          
+pooled    | 406    | 17.8054           | 81.4332            | 79.4441            | 9.8387           
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv
+Source fields / row identification: condition; num_images, baseline_risk, valid_coverage, all_pixel_coverage, accepted_risk
+Interpretation / limitation: These are exact full-resolution operating counts. Accepted risk is wrong accepted valid pixels / accepted valid pixels. Risk reduction is purchased by rejection, not corrected labels.
+
+B10. Full-validation risk at the bin edge nearest 80% coverage
+Population: Full adverse validation by condition and pooled
+Configuration: All valid pixels; 1,000 score bins; four scores; descriptive evaluation thresholds
+Recommended placement: Main risk–coverage figure; full checkpoint tables appendix
+Condition | Method             | Requested cov. (%) | Actual bin cov. (%) | Accepted risk (%)
+----------+--------------------+--------------------+---------------------+------------------
+fog       | raw_msp            | 80.0000            | 79.9597             | 2.3795           
+fog       | calibrated_msp     | 80.0000            | 80.0010             | 2.3831           
+fog       | raw_entropy        | 80.0000            | 80.0512             | 2.3793           
+fog       | calibrated_entropy | 80.0000            | 80.0077             | 2.7286           
+rain      | raw_msp            | 80.0000            | 80.0187             | 2.9262           
+rain      | calibrated_msp     | 80.0000            | 80.0028             | 2.9865           
+rain      | raw_entropy        | 80.0000            | 80.0010             | 2.9103           
+rain      | calibrated_entropy | 80.0000            | 79.9650             | 3.6491           
+snow      | raw_msp            | 80.0000            | 80.0047             | 5.5327           
+snow      | calibrated_msp     | 80.0000            | 79.9802             | 5.5922           
+snow      | raw_entropy        | 80.0000            | 80.0392             | 5.5240           
+snow      | calibrated_entropy | 80.0000            | 79.9798             | 6.5425           
+night     | raw_msp            | 80.0000            | 79.9942             | 32.6858          
+night     | calibrated_msp     | 80.0000            | 79.9769             | 32.6003          
+night     | raw_entropy        | 80.0000            | 79.9235             | 32.5400          
+night     | calibrated_entropy | 80.0000            | 79.9461             | 33.0355          
+pooled    | raw_msp            | 80.0000            | 79.9735             | 9.4768           
+pooled    | calibrated_msp     | 80.0000            | 79.9758             | 9.3426           
+pooled    | raw_entropy        | 80.0000            | 79.9651             | 9.4059           
+pooled    | calibrated_entropy | 80.0000            | 80.0475             | 9.8221           
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/stage5b_combined_summary.csv
+Source fields / row identification: condition, method, requested_coverage select row; actual_histogram_coverage and risk are fractions displayed as %
+Interpretation / limitation: Actual bin-edge coverage matters. At requested 50%, raw MSP reaches 52.2952% in Fog and 52.6282% in Rain, so those rows are not exactly matched coverage. All 120 checkpoints are in the ledger. Stage 5B did not compute AURC; no missing AURC is inferred here. These thresholds were not deployed.
+
+B11. Selected semantic failure cases under the frozen policy
+Population: One selected Night Sky image and one selected Snow Terrain image
+Configuration: Same global frozen policy; target GT class, not predicted class
+Recommended placement: Night example in main report/slides; Snow and full case details appendix
+Case         | GT target pixels | Correct | Accepted errors | Rejected errors | Target coverage (%) | Target risk (%)
+-------------+------------------+---------+-----------------+-----------------+---------------------+----------------
+night_sky    | 722,027          | 0       | 626,165         | 95,862          | 86.7232             | 100.0000       
+snow_terrain | 102,716          | 0       | 67,444          | 35,272          | 65.6607             | 100.0000       
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv
+Source fields / row identification: case selects row; target_pixels, target_correct, missed_target_accepted, missed_target_rejected, target_coverage, accepted_target_risk
+Interpretation / limitation: Both selected targets have zero correct pixels and accepted target risk 100%. Night case GOPR0356_frame_000363; Snow case GOPR0122_frame_000364. These illustrate failure modes; they do not estimate class prevalence across validation.
+
+B12. Controlled paired temperature fits
+Population: 101 matched training pairs; only named domain used by each single-domain fit
+Configuration: NLL fitting only; Mix fixed equal-domain objective; no validation used
+Recommended placement: Main transfer setup table
+Fit        | Temperature | Pairs | Images | Raw fit NLL | Fitted NLL
+-----------+-------------+-------+--------+-------------+-----------
+NightPair  | 2.807826395 | 101   | 101    | 1.709044    | 0.972611  
+NormalPair | 2.005172635 | 101   | 101    | 0.483232    | 0.352355  
+Mix        | 2.496183179 | 101   | 202    | 1.096138    | 0.676037  
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fitted_temperatures.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+Source fields / row identification: name; temperature, num_pairs, num_images, raw_fit_nll, fitted_nll; NLL in nats per valid pixel (domain-balanced for Mix)
+Interpretation / limitation: NightPair and NormalPair use matched scenes. Mix minimizes half the pooled Normal mean NLL plus half the pooled Night mean NLL. The original global 802-image fit is contextual, not an equal-population controlled fit. Fitting NLLs with different domain objectives are not a common validation ranking.
+
+B13. Paired-domain probability and calibration transfer
+Population: 53 annotated validation images per domain; same 53 scene pairs
+Configuration: All semantic-valid pixels; own GT; five fixed temperatures
+Recommended placement: Central main report and presentation table
+Temperature | T        | Normal NLL | Normal ECE (%) | Night NLL | Night ECE (%)
+------------+----------+------------+----------------+-----------+--------------
+raw         | 1.000000 | 0.445209   | 4.8666         | 2.254677  | 28.4895      
+global      | 2.124187 | 0.334707   | 2.4160         | 1.346524  | 14.5885      
+NormalPair  | 2.005173 | 0.332768   | 1.9065         | 1.380488  | 16.1212      
+NightPair   | 2.807826 | 0.379601   | 8.5335         | 1.258515  | 6.3518       
+Mix         | 2.496183 | 0.352671   | 5.3907         | 1.280322  | 9.8859       
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+Source fields / row identification: temperature_name, domain and sequence_id=pooled; temperature, nll (nats per valid pixel), ece (fraction shown as %)
+Interpretation / limitation: NightPair improves Night probability metrics and worsens Normal metrics versus global. NormalPair has the best Normal NLL/ECE among tested configurations. These are different populations from B06 full-condition Night.
+
+B14. Fixed numerical cutoff transferred across temperatures
+Population: 53 annotated validation images per named domain
+Configuration: Same tau=0.386413580715649 for all temperatures; diagnostic only
+Recommended placement: Appendix or compact contrast in main report
+Domain | Temperature | Valid cov. (%) | All-pixel cov. (%) | Accepted risk (%)
+-------+-------------+----------------+--------------------+------------------
+night  | raw         | 88.6353        | 88.0938            | 35.7551          
+night  | global      | 68.7731        | 67.1640            | 28.1840          
+night  | NormalPair  | 71.0664        | 69.5650            | 29.1694          
+night  | NightPair   | 55.3581        | 53.2241            | 21.8520          
+night  | Mix         | 61.4590        | 59.5495            | 24.8193          
+normal | raw         | 95.9279        | 95.5260            | 7.2894           
+normal | global      | 88.7298        | 87.7686            | 4.7672           
+normal | NormalPair  | 89.6141        | 88.7033            | 5.0128           
+normal | NightPair   | 82.8770        | 81.7035            | 3.5306           
+normal | Mix         | 85.7325        | 84.6435            | 4.0606           
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/frozen_policy_comparison.csv
+Source fields / row identification: domain and temperature_name select row; coverage_valid, coverage_all, accepted_risk; tau in each row
+Interpretation / limitation: Lower NightPair accepted risk at this cutoff comes with much lower coverage. It is not evidence of better ranking. The historical deployed policy remains global T with frozen tau.
+
+B15. Paired risk at approximately 80% valid coverage
+Population: 53 annotated validation images per domain; pooled within domain
+Configuration: Shared weighted samples, identical indices/weights/tie keys across all temperatures
+Recommended placement: Central report table and main presentation result
+Temperature | Normal actual cov. (%) | Normal risk (%) | Night actual cov. (%) | Night risk (%)
+------------+------------------------+-----------------+-----------------------+---------------
+raw         | 80.000062              | 2.942364        | 79.999995             | 32.711360     
+global      | 79.999998              | 2.949630        | 80.000054             | 32.739762     
+NormalPair  | 80.000086              | 2.936360        | 80.000032             | 32.727544     
+NightPair   | 79.999968              | 3.061456        | 80.000058             | 32.892638     
+Mix         | 79.999904              | 3.001064        | 79.999964             | 32.821786     
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+Source fields / row identification: temperature_name, domain, sequence_id=pooled, requested_coverage=0.8; actual_coverage and risk
+Criterion source: /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json; criteria.selective (one percentage point at 80%, practical interest only).
+Interpretation / limitation: Night calibration improvements coexist with negligible or unfavorable risk changes. All tested changes fail the predefined one-percentage-point practical-gain criterion; this is not a statistical significance result.
+
+B16. All paired Night pooled checkpoints
+Population: 53 paired Night validation images
+Configuration: Shared weighted samples; requested coverage checkpoints shown in headers
+Recommended placement: Main report compact table or appendix; slides emphasize 80% and full curve
+Temperature | Risk at 50% (%) | Risk at 60% (%) | Risk at 70% (%) | Risk at 80% (%) | Risk at 90% (%)
+------------+-----------------+-----------------+-----------------+-----------------+----------------
+raw         | 18.97348        | 24.22798        | 28.84747        | 32.71136        | 36.29863       
+global      | 19.05253        | 24.15631        | 28.76698        | 32.73976        | 36.34289       
+NormalPair  | 19.03899        | 24.16300        | 28.76721        | 32.72754        | 36.31501       
+NightPair   | 19.22049        | 24.20120        | 28.80944        | 32.89264        | 36.43461       
+Mix         | 19.13835        | 24.17020        | 28.76297        | 32.82179        | 36.39682       
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/assessment_verification.json
+Source fields / row identification: temperature_name, domain=night, sequence_id=pooled and requested_coverage select row; risk. Actual coverage for every row is preserved in the ledger.
+Interpretation / limitation: Across all extension domain/sequence/checkpoint rows, the largest absolute actual/requested mismatch is 0.000238874 percentage points. Maximum absolute risk change versus raw or global is 0.344694 percentage points. Neither is a confidence bound.
+
+B17. Night sequence-specific ranking checkpoints
+Population: GOPR0351: 28 paired Night images; GOPR0356: 25
+Configuration: Same saved sample design; five fixed temperatures within each sequence
+Recommended placement: Appendix; mention the 80% direction in main narrative
+Sequence | Temperature | Risk 50% (%) | Risk 60% (%) | Risk 70% (%) | Risk 80% (%) | Risk 90% (%)
+---------+-------------+--------------+--------------+--------------+--------------+-------------
+GOPR0351 | raw         | 17.80740     | 22.75539     | 27.32340     | 31.34448     | 35.09689    
+GOPR0351 | global      | 17.85700     | 22.67536     | 27.28492     | 31.27247     | 35.03783    
+GOPR0351 | NormalPair  | 17.85650     | 22.67703     | 27.27803     | 31.27477     | 35.02510    
+GOPR0351 | NightPair   | 18.03237     | 22.78749     | 27.28603     | 31.44191     | 35.05226    
+GOPR0351 | Mix         | 17.93518     | 22.73413     | 27.25838     | 31.37497     | 35.04000    
+GOPR0356 | raw         | 20.54565     | 25.96968     | 30.60194     | 34.26277     | 37.67255    
+GOPR0356 | global      | 20.65112     | 25.90668     | 30.49017     | 34.42269     | 37.84929    
+GOPR0356 | NormalPair  | 20.60889     | 25.91558     | 30.49282     | 34.40138     | 37.79222    
+GOPR0356 | NightPair   | 20.75547     | 25.89197     | 30.55244     | 34.55295     | 38.01724    
+GOPR0356 | Mix         | 20.69300     | 25.89981     | 30.48998     | 34.48131     | 37.96389    
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+Source fields / row identification: domain=night, sequence_id, temperature_name and requested_coverage select row; risk; image counts in protocol populations.val.sequences
+Interpretation / limitation: NightPair and Mix have slightly higher risk than global at 80% in both sequences. Signs at other checkpoints can vary. Two sequence IDs are descriptive support, not an independent-sample significance test. Normal sequence rows and all actual coverages remain in the ledger.
+
+B18. Sequence-specific probability/calibration consistency
+Population: Same two paired validation sequence IDs
+Configuration: Pooled valid pixels within named domain and sequence
+Recommended placement: Appendix; one sentence in main transfer discussion
+Sequence | Domain | Global NLL | NightPair NLL | Global ECE (%) | NightPair ECE (%)
+---------+--------+------------+---------------+----------------+------------------
+GOPR0351 | normal | 0.337492   | 0.388645      | 2.9299         | 9.5909           
+GOPR0351 | night  | 1.353675   | 1.260288      | 14.0133        | 5.7403           
+GOPR0356 | normal | 0.331601   | 0.369513      | 2.1274         | 7.3539           
+GOPR0356 | night  | 1.338350   | 1.256489      | 15.2475        | 7.1968           
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/sequence_metrics.csv
+Source fields / row identification: sequence_id, domain and temperature_name; nll (nats per valid pixel), ece (fraction shown as %)
+Interpretation / limitation: NightPair improves Night NLL/ECE on both sequences and worsens Normal. This supports descriptive domain dependence on the evaluated records; it does not establish broad transfer generality.
+
+B19. Estimated paired AURC
+Population: 53 annotated validation images per domain
+Configuration: Weighted discrete right-step AURC from shared sample; lower is better
+Recommended placement: Appendix with definition; optional supporting main result
+Temperature | Normal AURC | Night AURC
+------------+-------------+-----------
+raw         | 0.019549    | 0.188256  
+global      | 0.020445    | 0.189371  
+NormalPair  | 0.020304    | 0.189133  
+NightPair   | 0.021374    | 0.190978  
+Mix         | 0.020931    | 0.190208  
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/aurc.csv
+Source fields / row identification: temperature_name, domain, sequence_id=pooled; aurc (unitless fraction area)
+Interpretation / limitation: Approximate curve integral, not exact full-population ranks and not Stage 5B AURC. It reinforces the absence of a practical ranking gain in the tested configurations.
+
+B20. Full Night high-confidence error denominators
+Population: Full 106-image Night validation
+Configuration: Confidence >=0.90; raw versus global
+Recommended placement: Main motivation or appendix definitions
+Configuration | High-conf pixels | Wrong high-conf pixels | Error within HC (%) | Share of errors HC (%)
+--------------+------------------+------------------------+---------------------+-----------------------
+raw           | 136,729,726      | 37,938,804             | 27.7473             | 47.1624               
+global        | 78,914,687       | 10,017,107             | 12.6936             | 12.4525               
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+Source fields / row identification: condition=night; raw_/calibrated_ num_high_conf_pixels, num_high_conf_incorrect, high_conf_error_rate, fraction_incorrect_that_are_high_conf
+Interpretation / limitation: The two fraction columns have different denominators. They cannot be substituted for one another or for all-valid-pixel error prevalence.
+
+B21. Paired high-confidence errors after calibration
+Population: 53 annotated validation images per named domain
+Configuration: Confidence >=0.90; full semantic-valid pixel counts
+Recommended placement: Appendix or supporting failure paragraph
+Domain | Temperature | HC pixels  | Wrong HC pixels | Error within HC (%) | Share of errors HC (%)
+-------+-------------+------------+-----------------+---------------------+-----------------------
+normal | raw         | 93,986,035 | 4,045,903       | 4.3048              | 40.2732               
+normal | global      | 76,197,600 | 1,536,260       | 2.0162              | 15.2920               
+normal | NightPair   | 56,740,382 | 848,911         | 1.4961              | 8.4501                
+night  | raw         | 68,770,374 | 19,206,348      | 27.9282             | 47.7478               
+night  | global      | 39,864,131 | 5,305,186       | 13.3082             | 13.1889               
+night  | NightPair   | 25,121,457 | 1,578,922       | 6.2852              | 3.9253                
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+Source fields / row identification: domain, temperature_name and sequence_id=pooled; num_high_conf, num_high_conf_errors, high_conf_error_rate, error_high_conf_fraction
+Interpretation / limitation: A larger temperature can reduce membership in the confidence>=0.90 set while predictions remain wrong. This is not semantic correction or necessarily better ordering.
+
+B22. Paired true-Sky confusion destinations
+Population: All semantic-valid GT Sky pixels in 53 paired Night images
+Configuration: Fixed canonical predictions; these counts are not confidence-filtered
+Recommended placement: Main failure interpretation; full confusion/class statistics appendix
+Predicted class | Pixels   
+----------------+----------
+Road            | 2,210,750
+Building        | 6,911,301
+Vegetation      | 8,730,102
+Sky             | 778,660  
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_metrics.csv
+Source fields / row identification: domain=night, sequence_id=pooled, gt_class=10, predicted_class shown; count
+Interpretation / limitation: True-Sky pixels predicted as Building/Vegetation would not be targeted by a predicted-Sky-only rule. For global calibration, class_metrics.csv also records 2,252,930 high-confidence true-Sky pixels, all wrong; that is a different confidence-restricted population. No new class policy was tested.
+
+B23. Supplemental clear/ambiguous Night regions
+Population: 53 paired Night images; semantic validity intersected with invIds strata
+Configuration: Global T and frozen tau; no matched-coverage stratified evaluation
+Recommended placement: Secondary discussion; appendix full five-temperature table
+Region    | Valid pixels | NLL      | Valid coverage (%) | Accepted risk (%)
+----------+--------------+----------+--------------------+------------------
+ambiguous | 35,893,297   | 2.250645 | 56.5843            | 62.2212          
+clear     | 65,247,537   | 0.849158 | 75.4784            | 14.1469          
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/ambiguity_metrics.csv
+Source fields / row identification: domain=night, sequence_id=pooled, temperature_name=global, region; num_valid, nll, coverage_valid, accepted_risk
+Interpretation / limitation: Semantic ignore labels and ambiguity annotations are different. Region populations and actual coverage differ; the observed gap is not causal and not a comparison at equal coverage.
+
+B24. Balanced-domain validation probability objective
+Population: 53 annotated validation images per domain
+Configuration: Equal weighting of the two pooled domain mean NLLs
+Recommended placement: Secondary main paragraph; compact appendix table
+Temperature | Balanced validation NLL
+------------+------------------------
+raw         | 1.349942962            
+global      | 0.840615594            
+NormalPair  | 0.856628065            
+NightPair   | 0.819058061            
+Mix         | 0.816496327            
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+Source fields / row identification: summary.json balanced_validation_nll.<temperature>; independently checked as 0.5*(Normal nll + Night nll)
+Interpretation / limitation: Mix has the lowest balanced NLL here. Its advantage over NightPair is only 0.002562 nats; its Normal NLL is worse than global. This is a modest probability-objective compromise, not a new algorithm or demonstrated ranking gain.
+
+B25. Equal-pair Normal–Night NLL differences
+Population: 53 annotated pairs with equal weight per image pair
+Configuration: Night image NLL minus its corresponding Normal image NLL
+Recommended placement: Appendix aggregation demonstration
+Temperature | Mean pair delta | Median pair delta
+------------+-----------------+------------------
+raw         | 1.797213        | 1.711563         
+global      | 1.006526        | 0.961758         
+NormalPair  | 1.042059        | 1.008868         
+NightPair   | 0.875150        | 0.837057         
+Mix         | 0.923291        | 0.868411         
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv
+Source fields / row identification: sequence_id=pooled, metric=nll, temperature_name; mean_delta, median_delta (nats per valid pixel)
+Interpretation / limitation: The global mean paired gap is 1.006526, whereas the pooled-domain gap is about 1.011818. Different image weights explain this difference. Do not average per-image ECE to reproduce pooled ECE.
+
+B26. Measured inference/output latency and GPU allocation
+Population: 20 RGB images; three repeats and 60 measurements per pipeline
+Configuration: NVIDIA GeForce RTX 3060; batch size 1; historical synchronized benchmark; same fixed model; different returned outputs
+Recommended placement: Compact main implementation limitations table; detail appendix
+Pipeline          | Measurements | Mean latency (ms) | Median (ms) | Peak allocated (MiB)
+------------------+--------------+-------------------+-------------+---------------------
+baseline          | 60           | 36.6188           | 37.3379     | 325.0933            
+final_reliability | 60           | 86.7471           | 85.9368     | 806.8081            
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/memory_summary.csv
+/home/george/Desktop/COMP_895/project/stage5/benchmark_final_reliability.py
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/overhead_summary.json
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/evaluation_audit.txt
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.txt
+Source fields / row identification: pipeline; runtime num_measurements, mean_latency_ms, median_latency_ms; memory peak_allocated_mib. Timing boundaries in benchmark source.
+Interpretation / limitation: Measured region includes preprocessing, forward pass, full-resolution postprocessing and CPU output transfer. Disk decoding, model loading, coverage/metadata summaries, hashes, evaluation and serialization are excluded. Peak memory is PyTorch allocated memory including the resident model, maximum over the 60 measured runs per pathway; it is not reserved or total device memory. Final output computation differs in several ways; no isolated temperature/threshold attribution. Stage 1 forward-oriented timing is not comparable.
+
+B27. Paired extension execution resource accounting
+Population: Historical fitting/evaluation session including retained aborted and corrected cache phases
+Configuration: Shared GPU; phase-specific accounting, not inference latency
+Recommended placement: Reproducibility appendix only
+Metric                              | Value         | Unit        
+------------------------------------+---------------+-------------
+measured_phase_seconds              | 552.535108    | seconds     
+peak_cuda_allocated_bytes           | 2,152,126,464 | bytes       
+peak_cuda_reserved_bytes            | 3,630,170,112 | bytes       
+peak_process_rss_bytes              | 1,797,750,784 | bytes       
+reused_adverse_fitting_logits       | 101           | files/images
+new_native_cache_files              | 313           | files/images
+useful_new_native_cache_files       | 207           | files/images
+retained_aborted_native_cache_files | 106           | files/images
+new_native_cache_bytes              | 779,525,248   | bytes       
+Source file(s):
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json
+Source fields / row identification: Exact JSON keys are shown as metric names. Source caveats list included/excluded phases.
+Interpretation / limitation: Not an uncontended benchmark and not directly comparable to B26 latency. GPU reserved differs from allocated; RSS is a process high-water mark. No resource measurement was rerun during consolidation.
+
+MAIN REPORT SELECTION
+Keep a compact combination of B01/B02 (motivation), B04/B06/B07 (uncertainty and condition-dependent calibration), B08/B09 (frozen selection and exact reliability), and B12/B13/B15 (controlled transfer and central negative ranking result). Use a risk–coverage figure with B10 definitions. Discuss B22/B23 semantic/ambiguity limitations selectively. B24 Mix is secondary. Use B26 to state measured implementation costs. Move exhaustive class, sequence, checkpoint, paired-gap and resource tables to appendices.
+
+CLAIM BOUNDARY
+The strongest supported claim is that substantial NLL/ECE improvements do not consistently yield practically meaningful improvement in error ranking or risk at comparable coverage for this fixed model and these populations. Global calibration does help some original ranking metrics. No statistical significance, exact full-resolution AURC, semantic correction, untouched-validation guarantee, independent-pixel evidence, new calibration algorithm or downstream safety guarantee is established. See G_consistency_and_claim_audit.txt.

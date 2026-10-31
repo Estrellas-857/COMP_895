@@ -1,0 +1,343 @@
+FINAL PRESENTATION OUTLINE
+Uncertainty-Aware Semantic Segmentation under Adverse Driving Conditions
+
+Purpose and scope
+This is a recommendation for 16 main slides and 8 optional appendix slides. It is a complete research narrative, not a progress report. No slides, figures, model outputs, fitted parameters, or new experiments were generated for this outline. The presentation should reserve its most detailed explanation for Slides 12–14: calibration transfer, calibration versus ranking, and the semantic failures that remain.
+
+Visual status legend
+EXISTING FIGURE: the listed PNG exists and can be reused after ordinary presentation layout review.
+EXISTING SOURCE IMAGES: both listed RGB files exist; arranging them as a labeled pair is a later formatting task.
+FORMAT FROM SAVED DATA: numerical evidence exists, but the proposed compact slide table or diagram has not been created. Do not describe it as an existing figure.
+All artifact paths below were checked for physical existence. Historical manifest paths beginning data/ACDC are resolved here to the actual dataset root, /home/george/Documents/ACDC.
+
+Presentation-wide conventions
+Use percentages for ECE, accuracy, coverage and risk, and percentage points for their differences. NLL is in nats per valid pixel. Name the population in every results title, caption or footer. Pool counts and calibration-bin statistics before division; do not label these values as averages over images. Full Night validation has 106 adverse images. The extension has 53 pairs, meaning 53 Night and 53 Normal images; its total of 106 images is a different population.
+Canonical semantic predictions remain fixed. Distinguish NLL, ECE, error ordering, and accepted risk. A lower risk at a fixed uncertainty cutoff can result from lower coverage. Stage 5B curves use all valid pixels summarized in 1,000 score bins; the extension uses weighted samples and estimates AURC. Neither estimator should be described as exact unquantized full-resolution ranking. Do not imply significance or independent pixel evidence.
+
+MAIN SLIDES
+
+Slide 1 — Uncertainty-Aware Semantic Segmentation under Adverse Driving Conditions
+Main message: The central question is whether improving confidence calibration also improves the reliability of retained semantic predictions.
+Recommended content: Project title, COMP 895, presenter details, and one research question: “When probability estimates improve, do error ranking and selective prediction improve too?” Use a small corresponding Normal–Night scene pair to establish the setting. Leave the numerical answer for the results.
+Key numbers: One fixed SegFormer-B0 backbone; four adverse conditions. No headline performance statistic is necessary here.
+Suggested figure/table and status: EXISTING SOURCE IMAGES, arranged side by side with Normal and Night labels. This is an illustrative scene, not evidence of a causal lighting effect.
+Exact existing paths:
+/home/george/Documents/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val_ref/GOPR0351/GOPR0351_frame_000033_rgb_ref_anon.png
+/home/george/Documents/ACDC/rgb_anon_trainvaltest/rgb_anon/night/val/GOPR0351/GOPR0351_frame_000033_rgb_anon.png
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/val_pairs.csv
+Takeaway: The project studies the relationship between confidence and prediction reliability under adverse conditions.
+Optional speaker notes: Introduce this as an empirical study using established methods, with no claim of a new segmentation network or calibration algorithm.
+
+Slide 2 — Four reliability outcomes
+Main message: Probability quality, calibration, error ordering and selective risk answer different questions.
+Recommended content: A four-row definition table: multiclass NLL measures the assigned probability of the true class; top-label ECE compares confidence and correctness within bins; AUROC/AP and matched-coverage risk assess error ordering; accepted risk describes errors in the retained subset. Place unchanged semantic accuracy/mIoU beneath the table as the fixed prediction baseline.
+Key numbers: ECE uses 15 confidence bins. High confidence means max probability at least 0.90. Accepted risk = incorrect accepted valid pixels / accepted valid pixels; valid coverage = accepted valid pixels / all valid pixels.
+Suggested figure/table and status: FORMAT FROM SAVED DATA: concise definitions table. No decorative pipeline is necessary.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+/home/george/Desktop/COMP_895/project/stage3/evaluate_calibration.py
+/home/george/Desktop/COMP_895/project/stage2/evaluate_failure_detection.py
+/home/george/Desktop/COMP_895/project/stage5/evaluate_frozen_operating_point.py
+Takeaway: Improvement in one reliability metric does not establish improvement in the others.
+Optional speaker notes: ECE is an absolute bin-weighted gap; the signed mean confidence-minus-accuracy gap is a separate statistic. AP is an average-precision-style sum, not trapezoidal PR area.
+
+Slide 3 — Model, data and selection populations
+Main message: The study separates parameter selection from evaluation and explicitly distinguishes the full and paired populations.
+Recommended content: A compact population diagram with four boxes: original calibration fit, original threshold selection, full adverse validation, and matched transfer extension. State Cityscapes-fine-tuned SegFormer-B0, no retraining, RGB input, 19 semantic classes, and each image scored against its own valid ground truth.
+Key numbers: Original fit: 802 adverse training images. Threshold selection: 798 other training images. Full validation: 406 adverse images, with Fog/Rain/Snow 100 each and Night 106. Original paired analysis: 203 pairs, including 53 Normal–Night pairs. Extension fit: 101 matched Normal–Night training pairs. Extension evaluation: 53 pairs from GOPR0351 (28) and GOPR0356 (25). Input 512 × 1,024; logits are interpolated to each image's ground-truth resolution before evaluation.
+Suggested figure/table and status: FORMAT FROM SAVED DATA: population diagram or table. Visually separate 106 full Night images from 106 total extension images.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/split_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/split_manifest.json
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_condition_summary.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+Takeaway: Every comparison must retain its fitting population, evaluation population and denominator.
+Optional speaker notes: Fit and threshold-selection images are separate, but original train/validation sequence prefixes overlap. Corresponding Normal and Night scenes are not pixel aligned. Validation had already been explored; this is not an untouched independent benchmark.
+
+Slide 4 — Baseline segmentation across four conditions
+Main message: Night is the weakest evaluated condition, while high pixel accuracy in other conditions can conceal class-level failures.
+Recommended content: Show the full-condition baseline comparison. Include mIoU and accuracy together and name mIoU's union-supported class convention. Keep the full class heatmap for the appendix.
+Key numbers (full adverse validation; mIoU% / accuracy%): Fog 63.793 / 91.938; Rain 49.640 / 89.891; Snow 48.568 / 87.390; Night 22.378 / 60.262. Night contains 106 images; the others contain 100 each.
+Suggested figure/table and status: EXISTING FIGURE, with a small caption specifying all 406 adverse images. A simplified two-column numerical table can be formatted from the CSV later if the existing figure is too dense.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig1_full_adverse_baseline.png
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig4_class_iou_heatmap.png
+Takeaway: The fixed model has substantial condition-dependent segmentation weaknesses, especially at Night.
+Optional speaker notes: Use “performance differs across evaluated conditions,” rather than claiming a controlled causal weather effect. Do not replace union-defined Night mIoU with the higher alternative that averages only ground-truth-supported classes.
+
+Slide 5 — Corresponding Normal and Night scenes
+Main message: The paired evaluation confirms substantially lower Night performance within corresponding scene pairs.
+Recommended content: Focus the existing paired plot on the Normal–Night row or pair of bars. State that both views use their own annotations and valid masks. Briefly connect this result to the later matched calibration-transfer design.
+Key numbers: On 53 pairs, Normal mIoU is 50.368% and Night mIoU is 22.372%, a 27.996 percentage-point difference. Normal accuracy is 90.677% and Night accuracy is 60.229%. These are pooled pixel/confusion statistics, not the mean of image mIoUs.
+Suggested figure/table and status: EXISTING FIGURE; use the paired comparison and mark its Night pair count. If desired, the source images from Slide 1 can be reused as a small context inset.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig2_paired_normal_vs_adverse.png
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_condition_summary.csv
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_per_image_results.csv
+Takeaway: Scene correspondence strengthens the descriptive comparison but does not isolate illumination causally.
+Optional speaker notes: These 53 Night images are a subset of the 106 full Night images. Avoid using the small difference between their two Night mIoUs as an experimental result. Original Stage 2 paired uncertainty already showed greater uncertainty at Night; this observation is not new to the extension.
+
+Slide 6 — MSP and entropy rank errors imperfectly
+Main message: Both uncertainty scores contain error information, but their usefulness is incomplete and AP depends on error prevalence.
+Recommended content: Define MSP uncertainty as 1 − max probability and entropy as normalized predictive entropy. Show AUROC across conditions and a concise Night AP/prevalence annotation. Include one explicitly denominated high-confidence statistic to motivate calibration and failure auditing.
+Key numbers: Full Night MSP AUROC/AP = 0.77324 / 0.63998; entropy = 0.78048 / 0.64759. Night error prevalence, the random AP reference, is 0.39738. All original condition-level AUROCs exceed 0.77. In full Night, 37,938,804 of 80,442,845 wrong valid pixels have raw confidence at least 0.90: 47.162% of all errors.
+Suggested figure/table and status: EXISTING FIGURE for AUROC; FORMAT FROM SAVED DATA for the small Night AP/prevalence box. Keep the full AP-gain figure as an optional alternative or appendix asset.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/fig1_failure_detection_auroc.png
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/fig3_auprc_gain_over_baseline.png
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/night/summary.csv
+Takeaway: Useful error ranking still leaves a large population of confident mistakes.
+Optional speaker notes: Incorrect predictions are positives and larger uncertainty predicts error. Curves use 1,000 bins; AUROC uses trapezoidal ROC integration and AP uses sum of recall increments times precision. The 47.162% statistic is P(high confidence | wrong), not P(wrong | high confidence). A higher Night AP than Fog does not imply better detection across populations.
+
+Slide 7 — A selected confident semantic failure
+Main message: A coherent wrong region can remain accepted even after global calibration and rejection.
+Recommended content: Show the Stage 5C Night Sky panel with visible RGB, target region, predictions and rejection mask. Label it explicitly as one selected validation example. Use only a few numerical callouts so the image remains readable.
+Key numbers: GOPR0356_frame_000363 has 722,027 ground-truth Sky pixels, all misclassified. The frozen policy accepts 626,165 of these misses: 86.723% remain accepted, with 100% accepted target risk. Their predicted destinations are Building 640,534, Vegetation 80,827 and Pole 666; predicted Sky is zero.
+Suggested figure/table and status: EXISTING FIGURE. Use an annotated crop or rearrangement only during later slide production; do not present a new figure as already available.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/night_sky/visualization.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/night_sky/misclassification_destinations.csv
+Takeaway: Confidence rejection can miss systematic semantic confusion, and a predicted-Sky rule would miss true Sky labeled as another class.
+Optional speaker notes: This slide previews the later frozen-policy result to make the motivation concrete. The example was selected after inspecting validation failures; it demonstrates a failure mode, not its prevalence. Raw/calibrated high-confidence missed fractions are 85.028% / 50.467%, but that probability change does not correct a single target label.
+
+Slide 8 — Global calibration depends on condition and metric
+Main message: One global temperature improves NLL everywhere in the original evaluation, but ECE and error ranking do not improve uniformly.
+Recommended content: Show paired raw/global NLL and ECE panels for all four conditions. State the fit population and fixed temperature. Add a short ranking qualification; detailed AUROC/AP tables belong in the appendix.
+Key numbers: T = 2.124186626456894, fitted on 802 adverse training images. Raw → global NLL: Fog 0.32063 → 0.29037; Rain 0.38700 → 0.35337; Snow 0.57877 → 0.45388; Night 2.24309 → 1.34111. ECE%: Fog 3.491 → 5.066; Rain 4.161 → 5.431; Snow 6.283 → 4.420; Night 28.354 → 14.433. Night MSP AUROC improves 0.77324 → 0.78479; calibrated entropy AUROC and AP worsen in all four conditions.
+Suggested figure/table and status: EXISTING FIGURES for NLL and ECE, arranged as two panels. These results use the original full validation population, including all 106 Night images.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/fig1_ece_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/fig2_nll_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json
+Takeaway: Better multiclass probability quality does not imply uniformly better calibration or error ordering.
+Optional speaker notes: Positive scalar temperature scaling preserves canonical argmax predictions. Do not make the stronger and false claim that calibration never improves ranking; Night MSP does improve slightly here.
+
+Slide 9 — The frozen RGB-only rejection policy
+Main message: The implemented policy accepts or rejects predictions using fixed parameters without labels, Normal references or a condition detector at inference.
+Recommended content: FORMAT FROM SAVED DATA: RGB → SegFormer logits → canonical labels plus scaled probabilities → MSP uncertainty → accept/reject mask. Explain parameter selection beneath the diagram: global temperature from the fit subset; uncertainty threshold from the reserved selection subset. The integration-test panel is a possible illustrative inset.
+Key numbers: u = 1 − max softmax(z/T); accept when u ≤ tau. T = 2.124187; tau = 0.386413580715649. Threshold selection uses all pixels in 798 reserved training images and achieves exactly 80% all-image-pixel coverage there. It is not a valid-pixel or validation risk guarantee.
+Suggested figure/table and status: FORMAT FROM SAVED DATA for the pipeline diagram; EXISTING FIGURE for a qualitative integration example. The diagram has not been drawn yet.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/prespecified_selection_plan.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/final_reliability_config.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/integration_test/overview.png
+/home/george/Desktop/COMP_895/project/stage4/reliability_pipeline.py
+Takeaway: Rejection changes which predictions are retained, while leaving their semantic labels unchanged.
+Optional speaker notes: Labels were opened only after threshold freezing for descriptive selection-set diagnostics. No training-selected raw-MSP cutoff control exists; do not call the extension's same-numerical-cutoff raw diagnostic an equivalent selected baseline.
+
+Slide 10 — Exact frozen-policy validation results
+Main message: Rejection lowers accepted-pixel error at a substantial and condition-dependent coverage cost.
+Recommended content: Show baseline risk beside accepted risk and retain coverage as an equally prominent column or panel. Use the exact full-resolution Stage 5A counts, not sampled curve checkpoints.
+Key numbers (valid coverage% / accepted risk% / baseline risk%): Fog 88.954 / 3.951 / 8.062; Rain 84.342 / 3.983 / 10.109; Snow 84.176 / 6.539 / 12.610; Night 68.671 / 28.119 / 39.738; pooled 81.433 / 9.839 / 17.805. Pooled all-image-pixel coverage is 79.444%, a different denominator.
+Suggested figure/table and status: EXISTING FIGURES for risk and coverage. A compact five-row combined table is a later formatting alternative. Caption: “406 adverse validation images; frozen global T and tau; exact valid-pixel counts.”
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/fig1_baseline_vs_accepted_risk.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/fig2_coverage_by_condition.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv
+Takeaway: Lower accepted risk is achieved by abstaining on predictions, and Night retains substantial residual error.
+Optional speaker notes: Neither the 80% training target nor a risk bound transfers automatically to validation. These pooled numbers are count-weighted, not equal-condition averages. The Night row contains 106 images and must not be compared directly with the extension's 53-image Night row as a method change.
+
+Slide 11 — Risk across coverage levels
+Main message: Descriptive curves expose the trade-off that a single operating point cannot show, while metric and condition effects remain mixed.
+Recommended content: Show the pooled and Night Stage 5B curves for raw/calibrated MSP and entropy. Preserve the random-rejection reference and mark that the frozen operating point is a separate exact result. Explain why comparisons should retain actual coverage.
+Key numbers: Full Night near 80% coverage: raw MSP actual coverage/risk = 79.994% / 32.686%; calibrated MSP = 79.977% / 32.600%. Pooled near 80%: raw MSP 79.974% / 9.477%; calibrated MSP 79.976% / 9.343%. Small differences are descriptive. The nominal 50% raw-MSP checkpoints for Fog and Rain actually retain 52.295% and 52.628% because of score binning.
+Suggested figure/table and status: EXISTING FIGURES. Use the phrase “full-population histogram curves,” not “sampled Stage 5 curves.”
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/fig1_pooled_risk_coverage.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/fig_condition_night.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/histogram_resolution_diagnostics.csv
+Takeaway: Rejection trades coverage for risk, but calibration does not give a universal ordering advantage.
+Optional speaker notes: All 790,712,012 valid pixels enter 1,000 score bins. Within-bin ordering is unknown; some curves start above zero coverage. Stage 5B has no saved AURC and should not be assigned one. This slide motivates the controlled, shared-sample extension rather than claiming definitive small ranking gains.
+
+Slide 12 — Matched Normal–Night calibration transfer
+Main message: Matched domain-specific fits favor different domains; the predefined Mix is a modest probability-quality compromise.
+Recommended content: Introduce the 101 matched training pairs and evaluate all five temperatures on the same 53 validation pairs. Use a compact transfer matrix with Normal and Night NLL/ECE columns. State that the original global fit on 802 adverse images is a contextual reference with a different fitting population.
+Key numbers (temperature; Normal NLL/ECE%; Night NLL/ECE%):
+Raw: 1.000000; 0.44521 / 4.867; 2.25468 / 28.489.
+Global: 2.124187; 0.33471 / 2.416; 1.34652 / 14.589.
+NormalPair: 2.005173; 0.33277 / 1.907; 1.38049 / 16.121.
+NightPair: 2.807826; 0.37960 / 8.533; 1.25851 / 6.352.
+Mix: 2.496183; 0.35267 / 5.391; 1.28032 / 9.886.
+Mix uses a predefined equal-domain NLL objective. Balanced validation NLL is 0.81650 for Mix, 0.81906 for NightPair and 0.84062 for global: only 0.00256 nats better than NightPair.
+Suggested figure/table and status: FORMAT FROM SAVED DATA for the transfer matrix. EXISTING FIGURE for the same pooled calibration comparison is an alternative if clearer at presentation scale.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.png
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/sequence_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/scientific_assessment.txt
+Takeaway: Calibration transfers imperfectly between Normal and Night, and balancing the objective produces a small compromise rather than a new method.
+Optional speaker notes: NightPair versus NormalPair compares equal matched fitting populations. NightPair improves Night NLL/ECE relative to NormalPair in both validation sequences, while worsening Normal NLL/ECE. Global calibration also improves Normal NLL and ECE relative to raw on both sequences, so do not imply it fails to transfer at all. Mix improves Night and worsens Normal relative to global; do not claim a dominant configuration.
+
+Slide 13 — Better calibration without useful ranking gain
+Main message: The strongest controlled result is substantial Night calibration improvement with no practical selective-ranking improvement.
+Recommended content: Put a compact global-versus-NightPair NLL/ECE comparison beside the five-temperature Night risk table at approximately 80% valid coverage. Use the existing extension risk curves as context or a small inset. State the predefined practical threshold and sequence direction.
+Key numbers: On the same 53 Night images, global → NightPair NLL is 1.34652 → 1.25851 and ECE is 14.589% → 6.352%. Estimated accepted risk at approximately 80% coverage is raw 32.7114%, global 32.7398%, NormalPair 32.7275%, NightPair 32.8926%, Mix 32.8218%. NightPair minus global risk is +0.1694 percentage points for GOPR0351 and +0.1303 for GOPR0356. At 50/60/70/80/90% requested coverage, pooled NightPair minus global risk is +0.168 / +0.045 / +0.042 / +0.153 / +0.092 percentage points. The prespecified 1 percentage-point practical improvement at 80% is not met.
+Suggested figure/table and status: FORMAT FROM SAVED DATA for the central comparison table; EXISTING FIGURE for extension risk curves. Show approximately equal actual coverage, not a shared uncertainty threshold.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/risk_coverage.png
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/aurc.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+Takeaway: In this controlled evaluation, large calibration gains do not translate into useful improvements in selective error ranking.
+Optional speaker notes: Curves use the same 8,192 sampled valid pixels per image and label-independent tie keys across temperatures, weighted by valid-pixel count. They are estimates, not exact full-resolution ranks. The 1-point threshold is practical, not statistical significance. Mix's pooled Night changes across the five checkpoints are +0.086 / +0.014 / −0.004 / +0.082 / +0.054 points; it also gives no useful gain. Keep full Normal and sequence checkpoint tables in the appendix. At the same fixed tau, NightPair's risk reduction occurs with lower coverage and is not a contrary ranking result.
+
+Slide 14 — Difficult regions and remaining confident errors
+Main message: Aggregate probability improvements leave difficult semantic populations and confident mistakes unresolved.
+Recommended content: A two-row clear/ambiguous-region table with NLL, valid coverage and accepted risk under the global frozen cutoff, plus one high-confidence-count callout. Explain that region masks stratify semantic-valid pixels and do not redefine validity. Connect back to the selected Sky example without presenting it as representative.
+Key numbers: Paired Night, global T and frozen tau: clear NLL 0.84916, coverage 75.478%, risk 14.147%; ambiguous NLL 2.25065, coverage 56.584%, risk 62.221%. There are 65,247,537 clear and 35,893,297 ambiguous semantic-valid pixels. Even NightPair retains 1,578,922 wrong pixels among 25,121,457 pixels with confidence at least 0.90: a 6.285% high-confidence error rate. These errors are 3.925% of all Night errors, a different denominator.
+Suggested figure/table and status: FORMAT FROM SAVED DATA: two-row region table and a labeled count ratio. No region plot is claimed to exist.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/ambiguity_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+Takeaway: Better calibration leaves semantic error populations that MSP-based rejection does not reliably eliminate.
+Optional speaker notes: Regions have different actual coverages; this is an observational fixed-cutoff comparison, not matched-coverage evidence or a causal effect of ambiguity. ACDC region annotations differ from semantic ignore ID 255. All 19 classes were reported descriptively; no class-aware threshold was optimized. These observations motivate future questions but do not justify claiming a completed class-aware method.
+
+Slide 15 — Runtime and limits of generalization
+Main message: The pipeline has measurable computational cost, and the empirical conclusions have a restricted scope.
+Recommended content: Show a small runtime/memory comparison next to concise limitations: one backbone; previously explored validation; two paired Night sequence IDs; original train/validation sequence-prefix overlap; approximate rankings and numerical ties. Mention reproducibility correction briefly, with details in the appendix.
+Key numbers: RTX 3060, batch size 1, 20 RGB images and 60 observations per pathway. Baseline → final mean latency 36.619 → 86.747 ms; peak allocated GPU memory 325.093 → 806.808 MiB. The added mean latency is 50.128 ms. These differences cover the measured preprocessing-to-CPU-output region, not isolated calibration costs or end-to-end application latency.
+Suggested figure/table and status: EXISTING FIGURES for latency and memory, or FORMAT FROM SAVED DATA for a compact two-row table. Leave room for limitations rather than displaying both figures at unreadable size.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/fig1_latency_comparison.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/fig2_memory_comparison.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/memory_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol_amendment_001.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json
+Takeaway: The study establishes bounded empirical evidence and measured engineering behavior, not deployment safety or broad generalization.
+Optional speaker notes: Timing excludes disk loading/decoding, model loading, summary/metadata generation and serialization; it includes preprocessing, model execution, interpolation and CPU output transfers. Final-path overhead additionally includes probability computation, masks and checks. Stage 1 latency has different boundaries. A documented validation-only CUDA-setting correction restored historical parity; it preserved the model, fitted temperatures, original global parameters and scientific selection criteria. No combined Night+Rain/Snow benchmark or deployed condition detector was tested.
+
+Slide 16 — Contributions and conclusion
+Main message: The contribution is an auditable empirical study showing when confidence improvements do and do not translate into selective reliability.
+Recommended content: Conclude with three supported findings in connected, concise statements: global calibration is condition- and metric-dependent; matched Night calibration substantially improves NLL/ECE without useful ranking gains; rejection lowers accepted error by sacrificing coverage while semantic failures remain. State the contribution as reproducible evaluation, frozen RGB-only engineering, and a controlled matched-population calibration comparison. Mention condition-aware or confusion-aware uncertainty only as untested future directions.
+Key numbers: Use no more than two reminders: paired Night ECE 14.589% → 6.352%, with estimated 80%-coverage risk 32.740% → 32.893%; pooled full-validation accepted risk 9.839% at 81.433% valid coverage. Label the different populations next to each reminder.
+Suggested figure/table and status: FORMAT FROM SAVED DATA: a concise finding-to-evidence table, or use text alone. Do not add a new decorative summary graphic.
+Exact existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/F_contribution_and_novelty_assessment.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/H_final_recommendation.txt
+Takeaway: Improving calibrated probabilities is valuable, but reliable selective prediction requires its own evidence.
+Optional speaker notes: Do not claim a new algorithm, corrected segmentation, a universal impossibility result, statistically significant ranking differences, or a safety guarantee. The existing evidence is sufficient for the narrowed course-project claims; further experiments are not needed before writing.
+
+OPTIONAL APPENDIX PLAN
+These 8 slides are available for questions, not part of the main 16-slide count. Each should have a narrow purpose and a clearly stated denominator. Existing dense tables need presentation formatting later.
+
+Appendix A1 — Population and split audit
+Purpose: Answer questions about leakage, scene correspondence and evaluation independence.
+Content and key numbers: Full 406-image adverse validation; 203 annotated pairs across conditions; 802-image calibration fit and 798-image selection subset; matched 101-pair fit and 53-pair validation. List the two validation sequence IDs and counts 28/25. Explain exact image separation versus original train/validation sequence-prefix overlap; do not claim independent drives from filenames.
+Suggested asset/status: FORMAT FROM SAVED DATA: population table and split diagram.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/split_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/split_manifest.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fit_pairs.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/val_pairs.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/stage34_inventory.txt
+Takeaway: Separation of images and fitted parameters does not establish recording-level independence.
+
+Appendix A2 — Metric definitions and class support
+Purpose: Resolve mIoU, confidence and denominator questions.
+Content and key numbers: Union-supported mIoU; ground-truth class support; semantic ID 255; pooled versus per-image summaries; 15-bin ECE; signed gap; P(high confidence | error) versus P(error | high confidence); AP-style integration and error prevalence. Include the 19-class heatmap only if useful for the question.
+Suggested asset/status: EXISTING FIGURE for class IoU; FORMAT FROM SAVED DATA for the definition table.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig4_class_iou_heatmap.png
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/stage12_inventory.txt
+Takeaway: Numerically similar labels can conceal different populations and denominators.
+
+Appendix A3 — Original calibration and error ranking
+Purpose: Support the precise condition- and score-dependent claims from Slide 8.
+Content and key numbers: All raw/global ECE/NLL and MSP/entropy AUROC/AP rows for 406 images; Night raw/global reliability diagram; global T 2.124186626456894. Acknowledge the historical one-pixel Rain and Snow raw softmax-argmax ties separately from the extension's CUDA correction.
+Suggested asset/status: EXISTING FIGURES and FORMAT FROM SAVED DATA for a complete result table.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/night/raw_vs_calibrated_reliability.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/fig1_auroc_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/fig2_auprc_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/rain/raw_softmax_tie_audit.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/snow/raw_softmax_tie_audit.csv
+Takeaway: Calibration changes probability metrics and ranking in different, condition-dependent ways.
+
+Appendix A4 — Frozen threshold and histogram curves
+Purpose: Explain exact policy selection versus approximate descriptive ordering.
+Content and key numbers: Training all-pixel target 80%, tau 0.386413580715649, equality accepted; exact Stage 5A counts; 1,000-bin Stage 5B estimator; actual coverage alongside six requested levels 50/60/70/80/90/100%. No Stage 5B AURC. Detailed radix mechanics are speaker notes only.
+Suggested asset/status: EXISTING condition figures; FORMAT FROM SAVED DATA for selected checkpoint rows, not all 120 rows on one slide.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/fig_condition_fog.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/fig_condition_rain.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/fig_condition_snow.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/histogram_resolution_diagnostics.csv
+Takeaway: Exact operating-point counts and score-bin curve estimates answer different questions.
+
+Appendix A5 — All paired checkpoints, sequences and estimated AURC
+Purpose: Show that the central negative ranking result is not chosen from one pooled checkpoint.
+Content and key numbers: All five requested coverages, both domains, both sequences and pooled results for all five temperatures. Retain actual coverage. At 80% Night coverage, NightPair minus global is +0.1694 and +0.1303 points for the two sequences. Estimated Night AURC: raw 0.188256, global 0.189371, NormalPair 0.189133, NightPair 0.190978, Mix 0.190208. Lower is better; these are sample estimates.
+Suggested asset/status: FORMAT FROM SAVED DATA: compact difference table, with additional rows available in the linked CSV. EXISTING extension curve figure can accompany it if legible.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/aurc.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/sequence_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/risk_coverage.png
+/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/metrics.py
+Takeaway: Small descriptive changes do not meet the prespecified practical criterion, and no significance claim follows.
+
+Appendix A6 — Fixed cutoff transfer and balanced Mix objective
+Purpose: Explain why a lower fixed-cutoff risk does not contradict the matched-coverage result.
+Content and key numbers: On paired Night, global valid coverage/risk is 68.773% / 28.184%; NightPair is 55.358% / 21.852%; Mix is 61.459% / 24.819%. All use the same numeric tau, so the retained populations differ. Define balanced NLL as one half of Normal pooled NLL plus one half of Night pooled NLL. Mix's 0.00256-nat advantage over NightPair is modest; its global comparison trades improved Night for worse Normal.
+Suggested asset/status: FORMAT FROM SAVED DATA: fixed-cutoff table and balanced-NLL table.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/frozen_policy_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/scientific_assessment.txt
+Takeaway: Compare probability objectives on the same population and ranking at comparable actual coverage.
+
+Appendix A7 — Class failures and ambiguity details
+Purpose: Support the semantic limitations without treating selected examples as prevalence estimates.
+Content and key numbers: Show the selected Snow Terrain example if asked: all 102,716 target pixels missed, 67,444 accepted, 65.661% of misses remain accepted. Distinguish predicted-class groups from true-class errors. Provide all 19 descriptive class rows and clear/ambiguous region denominators as supporting files; no class threshold optimization occurred.
+Suggested asset/status: EXISTING FIGURE for Snow Terrain; FORMAT FROM SAVED DATA for selected class/region rows.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/snow_terrain/visualization.png
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5c/stage5c_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/ambiguity_metrics.csv
+Takeaway: Semantic structure explains some limitations of global confidence without validating an untested class-aware solution.
+
+Appendix A8 — Runtime boundaries and numerical reproducibility
+Purpose: Answer implementation and preservation questions without overloading the main narrative.
+Content and key numbers: Runtime sample selection, five warmups per pathway and three timed repeats per image; synchronization and included/excluded work; allocated versus reserved GPU memory. Disclose the validation-only correction after an exact two-pixel historical-count mismatch, retention of aborted caches, unchanged fitted parameters and selection criteria, and final parity checks. Keep extension phase/resource accounting separate from per-image Stage 5D latency.
+Suggested asset/status: FORMAT FROM SAVED DATA: measurement-boundary table and a short numerical-correction note. No new benchmark is proposed.
+Existing paths:
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/runtime_summary.txt
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/test_subset.csv
+/home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5d/measurement_verification.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol_amendment_001.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json
+Takeaway: Audited implementation integrity supports reproducibility but does not establish broader scientific independence or safety.
+
+ASSET READINESS AND REMAINING PRESENTATION WORK
+The verified master tables B13 (paired-domain probability and calibration transfer) and B15 (paired risk at approximately 80% valid coverage) provide ready numerical layouts for Slides 12 and 13:
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/B_verified_master_results.txt
+
+Existing reusable assets cover the scene pair, full and paired baselines, uncertainty ranking, Night and Snow qualitative failures, calibration comparisons, frozen validation risk/coverage, original and extension risk curves, and runtime/memory. The outline names each exact path rather than referring to planned images.
+Later formatting is needed for the four-outcome definition table, population diagram, RGB-only inference diagram, transfer matrix, central calibration-versus-ranking table, region table and contribution summary. These require saved-data formatting or diagram drawing only. No essential numerical evidence gap remains for the narrowed main-slide claims. Source-image manifest paths should be resolved to the existing absolute dataset paths listed on Slide 1.
+Do not add statistical-significance claims, novel-algorithm claims, causal weather effects, universal calibration benefits, exact full-resolution AURC, independent-drive claims or deployment guarantees. Those would require evidence beyond the completed record and should be removed rather than expanding the experimental scope.

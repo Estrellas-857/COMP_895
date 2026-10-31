@@ -1,0 +1,175 @@
+STAGE 1–2 VERIFIED SCIENTIFIC INVENTORY
+Scope: final scientific consolidation only. No inference, fitting, threshold selection, driver execution, or old-file changes. Numerical checks independently recomputed small saved confusion matrices and 1,000-bin uncertainty histograms. Companion evidence_stage12.json contains 280 provenance records with exact saved CSV values, populations, definitions, units, and absolute source paths.
+
+STAGE 1 — BASELINE SEGMENTATION
+
+1. Research objective
+Measure how the fixed Cityscapes-fine-tuned SegFormer-B0 performs on each adverse ACDC condition, compare corresponding Normal/adverse scenes, and describe major semantic confusions. This establishes the segmentation problem before probability calibration or rejection.
+
+2. Dataset and experimental population
+Full adverse validation has Fog 100, Rain 100, Snow 100, Night 106: 406 images. Source per_image_results.csv row counts independently total 406. Semantic-valid pixels by condition, recomputed from stored confusion matrices: 196,154,002; 196,479,419; 195,643,365; 202,435,226. TrainIds 0–18 are evaluated; 255 is ignored.
+The separate paired subset contains 50/50/50/53 annotated Normal/adverse pairs: 203 pairs, each with two separately annotated GT maps. All 203 Stage 1 pair identifiers match Stage 2 paired identifiers. Full Night 106 and paired Night 53 must never be treated as the same evaluation population. The 53 Night pairs come from GOPR0351 (28) and GOPR0356 (25).
+In the Night paired subset, valid pixels are 107,751,440 Normal versus 101,140,834 adverse. Their masks and scene contents differ. Correspondence permits image-level/scene-level comparison; no exact pixel alignment is assumed. No Normal training labels were used for these validation baselines.
+
+3. Methodology
+Frozen segmentation model; no ACDC fine-tuning. Model input 512 × 1024; native logits are bilinearly resized to each image's GT shape with align_corners=False; canonical prediction is unscaled-logit argmax. Confusion rows are GT and columns predicted. Dataset-level mIoU and accuracy are computed from pooled confusion counts, not from equal-image mean metrics. Paired images each use their own GT.
+Supporting code:
+/home/george/Desktop/COMP_895/project/stage1/evaluate_condition.py:36 (confusion), 66 (metrics), 317 (model-forward timing).
+/home/george/Desktop/COMP_895/project/stage1/evaluate_paired_reference.py:159 (own-GT inference), 248 (pair construction), 397 (separate Normal/adverse evaluation).
+/home/george/Desktop/COMP_895/project/stage1/analyze_baseline.py:65 (union and GT-supported mIoU).
+
+4. Important configuration parameters
+Model identifier nvidia/segformer-b0-finetuned-cityscapes-512-1024; 19 semantic classes; ignore 255; raw predictions; no rejection or temperature fitting. Historical Stage 1 model-loading source uses the model identifier rather than recording an explicit revision per baseline run; do not invent a historical revision. Later canonical confusion parity is independent supporting evidence of reproduced predictions.
+Failure inspection ranks lowest target-class IoU first, breaking ties by larger GT support; the source defaults to top_k=5 and min_gt_pixels=1000. Saved outputs contain five selected cases per target. The exact executed min_gt_pixels option is not recorded in the ranked CSV, so 1000 is documented as the code default, not a separately verified run argument.
+/home/george/Desktop/COMP_895/project/stage1/inspect_failure_cases.py:629,740,1001.
+
+5. Evaluation metrics
+mIoU_union averages classes with nonzero predicted/GT union. mIoU_gt separately excludes classes absent from GT. Pixel accuracy is pooled correct/valid pixels. Per-class IoU and GT support are descriptive. Per-image accuracy and latency are saved separately. The historical latency boundaries surround the synchronized model forward only; do not compare them directly to complete Stage 5 pipeline latency.
+Night's reported full mIoU_union is 22.3781%, while its alternative mIoU_gt is 23.6214%. GT bus support is zero yet predictions create a nonzero union, so that zero-IoU class contributes to mIoU_union. These are different class-denominator conventions, not an improvement.
+
+6. Main quantitative results
+Condition | full images | mIoU_union | pixel accuracy | model-forward latency
+fog   | 100 | 63.7933% | 91.9384% | 20.563894 ms
+rain  | 100 | 49.6401% | 89.8906% | 20.412551 ms
+snow  | 100 | 48.5679% | 87.3900% | 20.927589 ms
+night | 106 | 22.3781% | 60.2624% | 20.310559 ms
+
+Condition | paired population | Normal mIoU_union -> adverse mIoU_union
+fog   | 50 pairs | 57.6033% -> 56.7439% | delta -0.8594 pp
+rain  | 50 pairs | 54.2804% -> 50.7505% | delta -3.5298 pp
+snow  | 50 pairs | 53.9051% -> 48.2585% | delta -5.6467 pp
+night | 53 pairs | 50.3679% -> 22.3716% | delta -27.9963 pp
+
+Full-condition selected class IoUs: Night sky 4.8165% versus Fog 94.5376%, Rain 97.3607%, Snow 95.6662%; Snow terrain 7.4263%; Snow bus 2.8494%. Full Night sky GT support 36,795,621; full Snow terrain 2,147,831; full Snow bus 1,101,949.
+Full Night true-sky destinations: vegetation 46.1883%, building 36.4777%, road 11.5554%; sky recall 4.8410% (recall is not sky IoU). Full Snow true-terrain destinations: sidewalk 62.4729%, road 16.9249%; true-terrain recall 9.1431%. Full Snow bus often becomes train 39.5961%, building 28.6307%, vegetation 17.3758%; bus recall 2.9686%.
+The selected Night sky example GOPR0356_frame_000363 contains 722,027 sky pixels, none correctly predicted; this is one deliberately difficult frame. Selected Snow terrain GOPR0122_frame_000364 has 102,716 terrain pixels, none correct. Selected Snow bus GOPR0606_frame_000377 has 695,517 bus pixels, none correct.
+
+7. Key observations and result categories
+Fixed-baseline evaluation: full 406 adverse results and 203 paired own-GT comparisons. Fog is strongest among the four adverse subsets; Night is clearly weakest. Paired Night mIoU declines 27.9963 percentage points, supporting a strong Normal/Night association in corresponding scenes. Fog's paired decline is only 0.8594 pp; avoid claiming equally severe degradation in every condition.
+Exploratory analysis: class-support, class-IoU, confusion destinations, and ranked extreme examples. These motivate uncertainty analysis but do not identify a deployable condition/class policy.
+Qualitative demonstrations: selected failure visualizations, especially Night sky and Snow terrain. Snow bus is a secondary object/sequence-dependent example rather than proof of a universal snow failure mechanism. No ablation, calibration comparison, or selective-prediction evaluation belongs to Stage 1.
+Implementation verification: independent pooled-matrix recomputation reproduces all four full mIoU/accuracy values and all eight paired-side mIoU/accuracy values within 1e-14; all 19 × 4 class IoUs and supports agree with the saved matrices.
+
+8. Limitations and qualifications
+These are observational fixed-model results, not causal isolation of weather or proof of safety. One backbone and one dataset limit generality. Normal and adverse frames have differing geometry/content/labels. Paired Night has two source sequence IDs, not 53 independent recordings. Validation informed the exploratory class/failure choices; their examples are not an untouched test or unbiased prevalence sample. The absolute mIoU values depend on union-versus-GT-supported class conventions. Class-support CSVs count true classes on validation and cannot justify training-only predicted-class threshold selection.
+
+9. Exact supporting artifacts and useful existing figures
+Primary full values:
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/condition_summary.csv
+/home/george/Desktop/COMP_895/project/results/fog_val/confusion_matrix.npy
+/home/george/Desktop/COMP_895/project/results/rain_val/confusion_matrix.npy
+/home/george/Desktop/COMP_895/project/results/snow_val/confusion_matrix.npy
+/home/george/Desktop/COMP_895/project/results/night_val/confusion_matrix.npy
+/home/george/Desktop/COMP_895/project/results/fog_val/per_image_results.csv
+/home/george/Desktop/COMP_895/project/results/rain_val/per_image_results.csv
+/home/george/Desktop/COMP_895/project/results/snow_val/per_image_results.csv
+/home/george/Desktop/COMP_895/project/results/night_val/per_image_results.csv
+Class and paired evidence:
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_iou_by_condition.csv
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/class_support_by_condition.csv
+/home/george/Desktop/COMP_895/project/results/baseline_analysis/selected_confusions.csv
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_condition_summary.csv
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/paired_per_image_results.csv
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/night_normal_confusion.npy
+/home/george/Desktop/COMP_895/project/results/paired_normal_vs_adverse/night_adverse_confusion.npy
+/home/george/Desktop/COMP_895/project/results/failure_cases/night/sky/ranked_failures.csv
+/home/george/Desktop/COMP_895/project/results/failure_cases/snow/terrain/ranked_failures.csv
+/home/george/Desktop/COMP_895/project/results/failure_cases/snow/bus/ranked_failures.csv
+Existing main-story figures (all physically present):
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig1_full_adverse_baseline.png — full-condition baseline, main report/slides.
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig2_paired_normal_vs_adverse.png — paired comparison, explicit 203-pair population.
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig3_paired_degradation.png — alternative to paired bars; avoid redundant main-slide repetition.
+/home/george/Desktop/COMP_895/project/results/stage1_wrapup/fig4_class_iou_heatmap.png — class overview, appendix or compact report figure.
+/home/george/Desktop/COMP_895/project/results/failure_cases/night/sky/rank_01_GOPR0356_frame_000363_rgb_anon.png — selected extreme example; caption accordingly.
+/home/george/Desktop/COMP_895/project/results/failure_cases/snow/terrain/rank_01_GOPR0122_frame_000364_rgb_anon.png — secondary systematic-confusion illustration.
+/home/george/Desktop/COMP_895/project/results/failure_cases/snow/bus/rank_01_GOPR0606_frame_000377_rgb_anon.png — appendix, support/object caveat.
+
+STAGE 2 — UNCERTAINTY AND FAILURE DETECTION
+
+1. Research objective
+Determine whether raw model uncertainty tracks incorrect predictions and characterize errors that remain highly confident. This motivates calibration while establishing that uncertainty magnitude, error ranking, and confidence correctness are distinct properties.
+
+2. Dataset and experimental population
+Full adverse validation: same 406 RGBs and semantic-valid masks as Stage 1. Paired uncertainty: same 203 annotated validation pairs, including 53 Normal–Night pairs, independently verified by CSV identifiers. Targeted audit: two specific Stage 1-selected frames only (Night sky and Snow terrain). All values in the full-condition uncertainty and ROC/AP tables concern full 106 Night images, not the later paired 53 extension.
+
+3. Methodology
+Resize logits to GT resolution before raw softmax. MSP uncertainty is 1−maximum softmax probability; normalized predictive entropy is −sum(p log(max(p, 1e−12)))/log(19). Correct/incorrect masks exclude semantic ignore 255. Historical Stage 2 predicts via float32 softmax argmax, which can differ by a single tie pixel from canonical logit argmax.
+Distributions are accumulated in 1,000 equal-width bins on[0,1]. Error detection labels incorrect pixels positive and accumulates bins from high to low uncertainty. ROC area uses trapezoidal integration. AUPRC uses sum(delta recall * precision), an average-precision-style step area, not trapezoidal PR area. The calculations approximate the underlying full-resolution score ordering by histogram groups, not a random pixel sample.
+Paired analysis computes pixel-weighted global means and separately equal-image pair differences/medians; no calibrated Normal reliability was evaluated in Stage 2.
+Supporting code:
+/home/george/Desktop/COMP_895/project/stage2/evaluate_uncertainty.py:38,573,594,632,641,709,1247.
+/home/george/Desktop/COMP_895/project/stage2/evaluate_failure_detection.py:41,84,127,156.
+/home/george/Desktop/COMP_895/project/stage2/evaluate_paired_uncertainty.py:319,374,424,788,827.
+/home/george/Desktop/COMP_895/project/stage2/inspect_uncertainty_failures.py:93,516.
+
+4. Important configuration parameters
+Raw T=1; no model training or fitted uncertainty method. Confidence>=0.90 defines high confidence. There are 19 classes, ignore 255, normalized entropy, 1,000 histogram bins. Representative frames are explicitly frozen in source as Night GOPR0356_frame_000363/sky 10 and Snow GOPR0122_frame_000364/terrain 9. These are case descriptions, not an optimized detector.
+
+5. Evaluation metrics and denominators
+AUROC uses incorrect-positive/correct-negative prevalence-independent ROC coordinates. AP/AUPRC depends on condition-specific error prevalence; compare each AP with its own prevalence rather than comparing absolute AP across unequal-error conditions. Mean uncertainty gaps describe score separation but do not establish ranking or calibration.
+Full-condition high_conf_wrong_fraction = number of raw confidence>=0.90 incorrect valid pixels / all incorrect valid pixels. It is NOT error rate among high-confidence pixels, NOT percentage of all image pixels, and NOT uncertainty itself. In the targeted audit, high_conf_missed_fraction conditions further on missed GT target-class pixels. Pair CSVs preserve each image's high-confidence-wrong fraction, so averaging those does not reconstruct a pooled high-confidence conditional probability without the denominators.
+Histogram-based median/P90 quantities are approximate bin estimates. There are no ECE, NLL, calibrated-temperature comparison, accepted-risk policy, or AURC conclusions attributable to Stage 2 itself.
+
+6. Main quantitative results
+fog   | errors=8.0616% | high-confidence/all errors=36.5498% | MSP AUROC/AP=0.875799/0.423072 | entropy AUROC/AP=0.881689/0.424066
+rain  | errors=10.1094% | high-confidence/all errors=29.4778% | MSP AUROC/AP=0.896207/0.486655 | entropy AUROC/AP=0.899126/0.482952
+snow  | errors=12.6100% | high-confidence/all errors=38.3366% | MSP AUROC/AP=0.831080/0.456667 | entropy AUROC/AP=0.832694/0.460688
+night | errors=39.7376% | high-confidence/all errors=47.1624% | MSP AUROC/AP=0.773237/0.639977 | entropy AUROC/AP=0.780479/0.647589
+
+Full Night has 37,938,804 high-confidence errors among 80,442,845 incorrect valid pixels: 47.1624% of errors. Mean MSP uncertainty is 0.064101 on correct pixels versus 0.189267 on incorrect pixels; mean normalized entropy 0.060186 versus 0.168898. Thus there is useful but incomplete separation.
+Paired Night means: MSP uncertainty 0.044568 Normal → 0.112814 Night; normalized entropy 0.041107 → 0.102892. All 53 pairs show increased mean uncertainty and decreased image accuracy. The per-image mean MSP delta 0.068687 differs from pooled delta 0.068246, reflecting different estimands. These findings were already complete before the paired calibration extension.
+Selected Night-sky misses: 722,027, recall 0; 85.0278% have raw confidence>=0.90, with mean MSP uncertainty 0.048629. Their predicted destinations are building 88.7133%, vegetation 11.1945%, pole 0.0922%. Selected Snow-terrain misses: 102,716, recall 0; 50.3028% are highly confident. These percentages apply to the selected targets, not full conditions.
+
+7. Key observations and result categories
+Fixed-baseline evaluation: raw score profiles and full-condition error detection show both scores discriminate better than random (AUROC>0.5, AP above condition prevalence). Entropy has slightly higher AUROC than MSP in each condition; the differences are descriptive, with no significance claim.
+Exploratory analysis: paired means, class-target failures and high-confidence misses. Night has the lowest AUROC despite the largest segmentation deterioration and paired uncertainty increase. Night AP is numerically larger than Fog AP partly because Night has far higher positive prevalence; it does not establish better Night discrimination.
+Qualitative demonstration: raw uncertainty maps show confidently wrong semantic regions. They motivate later confidence calibration but do not imply calibration can change the wrong class labels.
+Implementation verification: independently rebuilding reverse-bin ROC and step-AP from each saved histogram reproduces all 8 method/condition AUROC/AP pairs within 1e-14. No model driver or new inference was executed. Stage 2 is not an ablation, calibration comparison, or selective-policy evaluation.
+
+8. Inconsistencies, limitations, and resolved scope boundaries
+Full Rain and Snow confusion matrices differ from Stage 1 by exactly one prediction each (matrix L1 difference 2); Fog and Night match. Explicit raw-softmax tie audits document Rain GOPR0402_frame_000384 at (856, 1347) and Snow GOPR0122_frame_000099 at (335, 1784). These are numerical argmax differences, not learned improvement. Paired Rain adverse and paired Night Normal also have matrix L1 difference 2; other paired-side matrices match. The paired Normal discrepancy is consistent with the differing argmax implementations, but its exact pixel was not audited here. Preserve original results and use later canonical comparisons where exact parity matters; do not silently rewrite old numbers.
+AUROC/AP derive from 1,000-bin histograms; small score/tie changes below bin resolution cannot be resolved. Pixels and neighboring frames are correlated. No calibration conclusion follows solely from average uncertainty or high-confidence-error count. The selected cases are post-inspection validation demonstrations. Semantic 255-ignore is separate from ACDC ambiguous-region annotations; Stage 2 does not replace the semantic mask with an ambiguity mask.
+No public Normal test labels or test result is implied. No Night+Rain/Night+Snow combined condition was evaluated. No class-aware threshold policy exists in Stage 2. Existing paired raw results should be presented once as motivation, not sold as a new extension.
+
+9. Exact supporting artifacts and useful existing figures
+Per-condition raw full summaries and histograms:
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/fog/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/fog/uncertainty_histograms.npz
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/fog/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/rain/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/rain/uncertainty_histograms.npz
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/rain/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/snow/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/snow/uncertainty_histograms.npz
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/snow/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/night/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/night/uncertainty_histograms.npz
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/night/summary.csv
+Combined evidence:
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/stage2b_analysis/stage2b_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/stage2d_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/stage2c_analysis/stage2c_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/night/paired_uncertainty.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/night/summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/stage2e_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/night_sky/misclassification_destinations.csv
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/snow_terrain/misclassification_destinations.csv
+Numerical tie evidence:
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/rain/raw_softmax_tie_audit.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/snow/raw_softmax_tie_audit.csv
+Existing figures (physically present):
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/fig1_failure_detection_auroc.png — main uncertainty performance comparison.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/fig2_failure_detection_auprc.png — pair with prevalence discussion; appendix if space constrained.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_detection/stage2d_analysis/fig3_auprc_gain_over_baseline.png — AP-prevalence contextualization.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/stage2b_analysis/fig3_high_confidence_failures.png — caption P(confidence>=0.90 | incorrect), not error among confident pixels.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/stage2b_analysis/fig1_msp_correct_vs_incorrect.png — descriptive distribution separation, not calibration plot.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/stage2c_analysis/fig2_paired_msp_uncertainty.png — optional motivation; already completed Stage2 analysis.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/paired_normal_vs_adverse/stage2c_analysis/fig3_paired_entropy.png — appendix/alternative; avoid repetition.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/night_sky/visualization.png — strong main-story selected confidently-wrong example.
+/home/george/Desktop/COMP_895/project/results/stage2_uncertainty/failure_audit/snow_terrain/visualization.png — supplementary example.
+
+SUPPORTED CLAIMS FOR THE FINAL NARRATIVE
+RQ1 central: Night is hardest for this fixed model on the full adverse validation, and corresponding annotated Normal/Night scenes show a large paired accuracy/mIoU decrease. Supported with population, sequence, and observational qualifications.
+RQ2 central: MSP and entropy detect some errors but miss many confident semantic failures; entropy's small ranking edge is descriptive. Supported by full-condition histogram AUROC/AP and explicit conditional high-confidence counts.
+The broader calibration-versus-ranking claim requires later Stage 3/5/extension evidence; Stage 1/2 alone establish the failure and imperfect-uncertainty motivation. Do not imply temperature scaling repaired segmentation.
+No essential additional inference or experiment is needed for these claims. Formatting existing figures and combining saved numerical records is sufficient. Detailed class heatmaps, all-condition PR curves, paired mean/median variants, and Snow bus examples can move to the appendix. Unsupported causal, safety, deployment-generalization, class-policy, and untouched-validation claims should be weakened or removed.

@@ -1,0 +1,62 @@
+[
+  {
+    "deterministic": false,
+    "native_stride": [
+      622592,
+      32768,
+      256,
+      1
+    ],
+    "native_channels_last": false,
+    "max_native_difference_from_cache": 0.0019578933715820312,
+    "native_different_values": 20253,
+    "direct": {
+      "errors": 730438,
+      "accepted_all": 1581237,
+      "accepted_valid": 1522364,
+      "accepted_errors": 469278
+    },
+    "cache_contiguous": {
+      "errors": 730440,
+      "accepted_all": 1581237,
+      "accepted_valid": 1522364,
+      "accepted_errors": 469278
+    },
+    "cache_channels_last": {
+      "errors": 730440,
+      "accepted_all": 1581237,
+      "accepted_valid": 1522364,
+      "accepted_errors": 469278
+    }
+  },
+  {
+    "deterministic": true,
+    "native_stride": [
+      622592,
+      32768,
+      256,
+      1
+    ],
+    "native_channels_last": false,
+    "max_native_difference_from_cache": 0.0,
+    "native_different_values": 0,
+    "direct": {
+      "errors": 730440,
+      "accepted_all": 1581237,
+      "accepted_valid": 1522364,
+      "accepted_errors": 469278
+    },
+    "cache_contiguous": {
+      "errors": 730440,
+      "accepted_all": 1581237,
+      "accepted_valid": 1522364,
+      "accepted_errors": 469278
+    },
+    "cache_channels_last": {
+      "errors": 730440,
+      "accepted_all": 1581237,
+      "accepted_valid": 1522364,
+      "accepted_errors": 469278
+    }
+  }
+]

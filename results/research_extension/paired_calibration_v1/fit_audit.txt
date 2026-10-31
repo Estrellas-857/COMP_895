@@ -1,0 +1,32 @@
+Paired calibration v1: independent fitting/protocol audit
+Status: PASS
+Audit time UTC: 2026-10-28T19:22:49.054700+00:00
+Protocol SHA256: 9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8
+Verified hashes: 64 source files; 11 frozen input artifacts; 5 manifests.
+
+Population/integrity checks:
+- Exactly 101 matched fitting pairs (202 images), 53 matched validation pairs (106 images).
+- Every fitting Night image belongs to original calibration_fit; reserved selection images excluded.
+- Zero fit/validation pair-ID, exact sequence-ID, or RGB-SHA256 overlap across all domains.
+- All 202 fitting-cache records match every nonblank frozen manifest field.
+- All result population digests, trace hashes, and per-evaluation hashes match.
+- Every objective evaluation covers the full expected semantic-valid population.
+- Mix objective equals 0.5*Normal domain mean NLL + 0.5*Night domain mean NLL at every trace step.
+- Positive finite temperatures, final |gradient_beta| <= 1e-7, nonincreasing fitting NLL.
+- Final verification checked every semantic-valid fitting pixel; zero argmax changes.
+
+Completed fits:
+NightPair: T=2.8078263948109; NLL 1.70904392658672 -> 0.972611223792714; valid pixels=185422815; evaluations=9; final gradient=-3.52612851783e-11; prediction changes=0.
+NormalPair: T=2.00517263517277; NLL 0.48323221285208 -> 0.352355114064537; valid pixels=202782680; evaluations=5; final gradient=-5.77651764749e-10; prediction changes=0.
+Mix: T=2.49618317864334; NLL 1.0961380697194 -> 0.676037046637436; valid pixels=388205495; evaluations=8; final gradient=-2.31615504553e-10; prediction changes=0.
+Mix final domain NLL: Normal=0.369623355188887; Night=0.982450738085985.
+
+Scientific limits:
+- Fitting prefixes GOPR0376/GP010376 may be chapters of one recording; validation has only GOPR0351/GOPR0356.
+- Exact sequence separation in these new paired fits does not establish geographical/drive independence.
+- The legacy global threshold-selection population includes GOPR0351; global baseline population differs from the controlled 101-pair fits.
+- Normal filenames inherit adverse pair identifiers; no pixel alignment is assumed.
+- Existing validation data were explored previously; no pixel-IID significance or two-cluster population confidence claims.
+- Training NLL improvement establishes optimization only, not validation benefit or selective-ranking improvement.
+
+Scope: read-only verification of existing frozen protocol, manifests, caches index, fit results and traces; no model inference, refitting, tuning, or source edits. Cache byte/GT contents were verified by the running engine; this independent pass did not rehash large cache arrays.

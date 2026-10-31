@@ -1,0 +1,71 @@
+SCIENTIFIC ASSESSMENT — COMPLETED PAIRED CALIBRATION V1
+
+This interpretation was written after the frozen evaluation. It does not change any fitted parameter, mixture weight, threshold, sample, class policy, metric, or success criterion.
+Read with findings.txt for full calibration, fixed-cutoff, paired-image, ambiguity, and class tables; protocol.json and protocol_amendment_001.json jointly describe execution.
+
+1. GLOBAL ADVERSE CALIBRATION TRANSFERS EFFECTIVELY TO NORMAL IN THIS SAMPLE.
+Normal NLL improves from 0.445209 to 0.334707 nats and ECE from 4.8666% to 2.4160%. Both improve on GOPR0351 and GOPR0356. The global fit is close to NormalPair (NLL 0.332768, ECE 1.9065%). This is descriptive transfer evidence; the global fit used 802 adverse images, while the controlled fits use 101 matched pairs.
+
+2. NIGHT-TRAINED CALIBRATION OUTPERFORMS NORMAL-TRAINED CALIBRATION ON NIGHT.
+NightPair versus NormalPair reduces Night NLL by 0.121973 nats and ECE by 9.769391 percentage points. NLL falls by 0.128476 on GOPR0351 and 0.114540 on GOPR0356; ECE improves on both. All three new fits used training pixels only.
+
+3. THERE IS A DOMAIN TRADE-OFF.
+Replacing NormalPair with NightPair raises Normal NLL by 0.046833 while lowering Night NLL by 0.121973. NightPair produces a Normal confidence-minus-accuracy gap of -8.5335 percentage points. Domain-specific calibration quality does not imply a better shared operating policy.
+
+4. IMPROVED CALIBRATION DOES NOT PRODUCE A PRACTICALLY USEFUL RANKING GAIN.
+Below are estimated accepted error percentages at requested valid-pixel coverage. Every temperature uses identical sampled indices, weights, correctness labels, and label-independent tie keys within a domain.
+
+NORMAL: accepted error (%)
+Temperature         50%        60%        70%        80%        90%
+raw              1.2281     1.5835     1.9881     2.9424     5.1325
+global           1.3825     1.6347     2.0102     2.9496     5.1852
+NormalPair       1.3638     1.6303     2.0029     2.9364     5.1606
+NightPair        1.4797     1.6908     2.1158     3.0615     5.3314
+Mix              1.4441     1.6639     2.0617     3.0011     5.2639
+
+NIGHT: accepted error (%)
+Temperature         50%        60%        70%        80%        90%
+raw             18.9735    24.2280    28.8475    32.7114    36.2986
+global          19.0525    24.1563    28.7670    32.7398    36.3429
+NormalPair      19.0390    24.1630    28.7672    32.7275    36.3150
+NightPair       19.2205    24.2012    28.8094    32.8926    36.4346
+Mix             19.1383    24.1702    28.7630    32.8218    36.3968
+
+NIGHT AT 80%: risk difference from global (percentage points; positive is worse)
+Temperature        Pooled     GOPR0351     GOPR0356
+raw               -0.0284      +0.0720      -0.1599
+NormalPair        -0.0122      +0.0023      -0.0213
+NightPair         +0.1529      +0.1694      +0.1303
+Mix               +0.0820      +0.1025      +0.0586
+
+No configuration reaches the preregistered 1-percentage-point practical improvement criterion at 80% coverage. Across both domains, both sequences and pooled results, all five checkpoints, and comparisons against raw/global, the largest absolute risk difference is only 0.344694 percentage points. Maximum absolute coverage mismatch is 0.000239 percentage points. These are descriptive sampled estimates, not significance tests.
+NightPair versus global worsens pooled Night risk at all five checkpoints. At 80%, the increase is 0.1694 and 0.1303 points for GOPR0351/GOPR0356. Mix also worsens risk at 80% on both sequences. Global versus raw has inconsistent directions across coverage checkpoints and sequences.
+At fixed tau, NightPair lowers Night accepted risk from 28.1840% to 21.8520%, while reducing valid coverage from 68.7731% to 55.3581%. This is stricter rejection at a different coverage, not evidence of improved ordering. Full all-pixel coverages are 67.1640% and 53.2241%, respectively.
+Pooled estimated AURC on Night: raw 0.188256, global 0.189371, NormalPair 0.189133, NightPair 0.190978, Mix 0.190208 (lower is better). Raw uses the historical float32 probability convention, while calibrated probabilities use float64; numerical saturation/ties can contribute to tiny ranking differences.
+
+5. HIGH-CONFIDENCE SEMANTIC ERRORS REMAIN.
+Global Night: 5,305,186 wrong pixels / 39,864,131 valid pixels with confidence >=0.90 = 13.3082% error within that group. These high-confidence errors are 13.1889% of all Night semantic errors. NightPair still has 1,578,922 / 25,121,457 = 6.2852%. Canonical predictions never change; temperature changes their assigned confidence.
+All 19 classes are reported in class_metrics.csv. Under global scaling, predicted road/vegetation/building account for the largest Night high-confidence error counts: 2,800,167 / 1,441,694 / 1,026,448. Among GT-sky pixels, all 2,252,930 high-confidence pixels are wrong. Overall GT-sky misclassifications predominantly become vegetation (8,730,102 pixels) or building (6,911,301). A predicted-sky threshold would not identify these errors. These descriptive classes were not selected for tuning.
+Night ambiguity annotations retain the original semantic-valid mask. At global T/tau, ambiguous-region NLL is 2.250645 versus 0.849158 in clear regions; accepted risk is 62.2212% versus 14.1469%, at different valid coverages (56.5843% versus 75.4784%). This is a stratified diagnostic, not a matched-coverage comparison.
+
+6. MIX PROVIDES A MODEST SHARED-CALIBRATION COMPROMISE.
+Predefined 50:50 domain weights produce T_Mix=2.49618317864334. Balanced validation NLL is 0.816496, compared with global 0.840616, NightPair 0.819058, and NormalPair 0.856628. Its advantage over NightPair is only 0.002562 nats. Balanced NLL improves on both sequences versus all three references. Relative to global, Mix improves Night NLL but worsens Normal NLL and ECE. It offers no practically useful rejection-ranking benefit.
+Balanced NLL by sequence:
+GOPR0351: global=0.845583, NormalPair=0.861548, NightPair=0.824466, Mix=0.821681
+GOPR0356: global=0.834976, NormalPair=0.851026, NightPair=0.813001, Mix=0.810657
+
+7. STOP BEFORE ADDING CLASS-AWARE REJECTION COMPLEXITY.
+The extension contributes mainly empirical understanding: calibration transfer is domain-dependent, and large NLL/ECE improvements can coexist with essentially unchanged selective ranking. The predefined Mix is a defensible lightweight calibration comparison with a modest average-NLL benefit. These results do not establish a new algorithm or support a more complex rejection method. No class thresholds, weather classifier, new network, or segmentation training were implemented.
+
+PAIRED AND POOLED ESTIMANDS
+For global T, the equal-image mean Night-minus-Normal NLL difference is 1.006526 nats, while the pooled pixel-weighted difference is 1.011818. Equal-image ECE differences also need not equal differences of pooled ECE because bin aggregation is nonlinear. Paired outputs use each image's own GT and do not assume pixel alignment.
+
+VALIDATION, NUMERICAL CORRECTION, AND PRESERVATION
+All 53 Night per-image frozen operating-point count checks pass exactly. Both Normal and Night aggregate confusion matrices exactly match Stage 1 for all five temperatures. All 530 image-temperature comparisons preserve canonical unscaled-logit argmax predictions. The original 20 synthetic correctness tests passed before fitting.
+The initial attempt stopped at a two-pixel mismatch before scientific tables were published. A recorded diagnostic isolated the CUDA deterministic-algorithm setting: the historical validation setting reproduces saved counts exactly. The immutable amendment freezes the correction source and unchanged fits before regenerated validation inference. Original protocol/source files, aborted caches, and logs remain intact. All five temperature comparisons use the corrected caches; no outcome-based tuning occurred.
+Full SHA-256 preservation passed for 2,857 protected historical files totaling 17,115,990,025 bytes, with no additions to protected trees. The corrected completion record binds the amendment, corrected index, evaluated outputs, and report.
+
+COMPUTATIONAL COST AND LIMITS
+101 historical Night fitting caches were reused. 207 new native caches are useful (101 Normal fitting +106 corrected validation); 106 aborted validation caches remain for provenance. Total new native cache storage is 779,525,248 bytes, including 263,992,576 bytes from the aborted attempt. Two additional single-image forward passes diagnosed the defect.
+Measured phase time is 552.535 seconds (9.209 minutes); peak GPU allocation is 2,152,126,464 bytes (2.004 GiB), reservation 3,630,170,112 bytes (3.381 GiB), and process RSS 1,797,750,784 bytes (1.674 GiB). Phase time includes both cache attempts but excludes debugging, failed partial evaluation, tests, report generation and hashing. The GPU was shared with other workloads, so this is not an uncontended latency benchmark.
+Validation was previously explored. Only GOPR0351 (28 pairs) and GOPR0356 (25 pairs) are evaluated; training prefixes GOPR0376/GP010376 may share a recording family. Pixel and adjacent-frame independence is not assumed. Exact split/hash separation does not prove geographical independence. The legacy threshold-selection population includes a validation sequence ID, so frozen global comparisons remain contextual; the new matched fits are sequence-ID-disjoint. Risk curves/AURC are shared-sample estimates. Findings do not establish causal illumination effects or performance under combined Night+Rain/Snow.

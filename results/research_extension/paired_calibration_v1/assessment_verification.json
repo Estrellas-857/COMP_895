@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Post-evaluation interpretation only; no new fitting, inference, thresholds, sampling or scientific protocol changes",
+  "maximum_absolute_risk_change_vs_raw_or_global_pp": 0.3446935680068042,
+  "maximum_absolute_coverage_mismatch_pp": 0.00023887402966771276,
+  "one_pp_practical_criterion_met": false,
+  "all_original_unit_tests_passed": 20,
+  "input_sha256": {
+    "calibration_comparison.csv": "7ff55a2bc6884cc36f3506ec04026f4d88d43cf3e93d3ce01778a3a2df108524",
+    "matched_coverage.csv": "f70031cbb607b857bed0b92259893af0a183983373df68cccadf3412781be5aa",
+    "sequence_metrics.csv": "a4818a389253e67250018a883ede76d0de76da3446b1adfc36faf47cac1ca383",
+    "aurc.csv": "9dc5fee7a71211890e3c2f9b235742493c44a780c8c41cb2631968050e5d5c38",
+    "class_metrics.csv": "a21f9b6c000555f0c3682dc49b8abe82a5627527be7ddd5fb8e9398a5e11c687",
+    "class_confusions.csv": "ceab265b434c6e1a36fa15de0f74fe9693eeb11b8b2362b3f2180ac5e3538f70",
+    "ambiguity_metrics.csv": "7240b0c7c80989673ea5f2c51869ac7b51abf57314ed42a76a48bbea331a2755",
+    "paired_summary.csv": "3cb74613056fabb55cf0f8c141a315a654d20b016a5d1e46bd87ab7f1b7332e8",
+    "resource_summary.json": "4b8e9ce2d00d20131c2a7b745f499c5f1b0a94c15024ecc784e542564ca1a3e2",
+    "preservation_after.json": "473816b3d4152d778e69cf6916cac19a28b8367ed7f206f62d51a8bd26e8768a",
+    "run_complete.json": "70c10ea20a7356774428baa3d5fc6d8b080022710f04a30f9751d7c9f485ad67",
+    "protocol.json": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+    "protocol_amendment_001.json": "26aec01f7ec36a23ae015b052bce7df962dbe79fcd802960a8595b5078c59f0b"
+  },
+  "assessment_sha256": "e559fefb62c15811352e71817dc9b1ce95b6d5bc64f81c653b1132c06422d518",
+  "visual_inspection": "Both calibration_comparison.png and risk_coverage.png reviewed; labels, legends and plots readable."
+}

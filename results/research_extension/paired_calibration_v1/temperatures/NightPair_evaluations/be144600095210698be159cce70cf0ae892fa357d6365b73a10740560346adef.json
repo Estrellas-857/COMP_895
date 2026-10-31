@@ -1,0 +1,36 @@
+{
+  "identity": {
+    "check_predictions": false,
+    "domain_weights": {
+      "night": 1.0
+    },
+    "inverse_temperature": 0.35614654489544606,
+    "phase": "optimization",
+    "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+    "rows_sha256": "9efeae81e3a9aa894a32c863a18ba8647f2e68cb7cbee915cc230cb4db3b5a78",
+    "schema_version": 1
+  },
+  "resources": {
+    "device": "cuda",
+    "elapsed_seconds": 11.06540351700096,
+    "peak_cuda_allocated_bytes": 2152126464,
+    "peak_cuda_reserved_bytes": 3630170112,
+    "peak_process_rss_bytes": 1624039424
+  },
+  "result": {
+    "beta": 0.35614654489544606,
+    "by_domain": {
+      "night": {
+        "nll": 0.9726112237966135,
+        "num_images": 101,
+        "num_valid_pixels": 185422815
+      }
+    },
+    "gradient": -9.394459070147885e-06,
+    "gradient0": -12.801952297493703,
+    "hessian": 11.317042538891384,
+    "nll": 0.9726112237966135,
+    "num_valid_pixels": 185422815,
+    "prediction_changes": 0
+  }
+}

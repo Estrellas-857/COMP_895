@@ -1,0 +1,18 @@
+{
+  "completed_utc": "2026-10-28T19:30:27.093118+00:00",
+  "corrected_validation_index_sha256": "8bea3fc7272885910ac31f7bf28b46a3428975c6d93e9716b3b8a3563fa6799f",
+  "evaluation_complete_sha256": "202fc8616cc20b3c86531325366e770447468fab565ef65e7d75f7cc6e1eb65d",
+  "existing_work_preserved": true,
+  "protocol_amendment_sha256": "26aec01f7ec36a23ae015b052bce7df962dbe79fcd802960a8595b5078c59f0b",
+  "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+  "report_hashes": {
+    "calibration_comparison.png": "c4b5104d58a570d7039b5c9e4d43d984196b1484038c73b9bdac81ac0e40c60a",
+    "corrected_evaluation_start.json": "b703ef6d88201a2b0055f60a4de856c9c2e919f4fada576af83ed8297c529a06",
+    "findings.txt": "8f56e844194af4783341f1d4dac830078070788a37be81fcbed2003c7ca38dfb",
+    "protocol_amendment_001.json": "26aec01f7ec36a23ae015b052bce7df962dbe79fcd802960a8595b5078c59f0b",
+    "resource_summary.json": "4b8e9ce2d00d20131c2a7b745f499c5f1b0a94c15024ecc784e542564ca1a3e2",
+    "risk_coverage.png": "0a88ee79c76b096f1c94ae8138684b29f544c92b0c2513e6b884d0c750b88a5c",
+    "summary.json": "7c11cc9977b744dec59dd27f1aac965571cde316eaf28aafa51706d98b755f93"
+  },
+  "status": "PASS"
+}

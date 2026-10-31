@@ -1,0 +1,134 @@
+PAIRED NORMAL–NIGHT CALIBRATION AND RELIABILITY
+
+Report status: complete. All numerical conclusions below come from the saved extension outputs.
+NLL is in nats. ECE/gap/coverage/risk tables use percentages or percentage points as labeled.
+Pooled results are valid-pixel weighted within each domain; they are not the mean paired-image difference.
+
+CALIBRATION — POOLED VALID PIXELS
+Temperature | Domain | T        | NLL      | ECE (%) | Conf.-acc. gap (pp)
+------------+--------+----------+----------+---------+--------------------
+raw         | normal | 1.000000 | 0.445209 | 4.8666  | 4.8666             
+raw         | night  | 1.000000 | 2.254677 | 28.4895 | 28.4895            
+global      | normal | 2.124187 | 0.334707 | 2.4160  | -2.1343            
+global      | night  | 2.124187 | 1.346524 | 14.5885 | 14.5474            
+NightPair   | normal | 2.807826 | 0.379601 | 8.5335  | -8.5335            
+NightPair   | night  | 2.807826 | 1.258515 | 6.3518  | 5.4497             
+NormalPair  | normal | 2.005173 | 0.332768 | 1.9065  | -1.2071            
+NormalPair  | night  | 2.005173 | 1.380488 | 16.1212 | 16.1076            
+Mix         | normal | 2.496183 | 0.352671 | 5.3907  | -5.3907            
+Mix         | night  | 2.496183 | 1.280322 | 9.8859  | 9.6057             
+
+FROZEN CUTOFF TRANSFER — COVERAGE MAY CHANGE WITH TEMPERATURE
+The original global-T/global-tau configuration is the frozen baseline. Other temperatures at the same tau, including raw T=1, are cutoff-transfer diagnostics; the raw cutoff was not selected as a separate baseline.
+Temperature | Domain | Valid coverage (%) | All coverage (%) | Accepted error (%)
+------------+--------+--------------------+------------------+-------------------
+raw         | normal | 95.9279            | 95.5260          | 7.2894            
+raw         | night  | 88.6353            | 88.0938          | 35.7551           
+global      | normal | 88.7298            | 87.7686          | 4.7672            
+global      | night  | 68.7731            | 67.1640          | 28.1840           
+NightPair   | normal | 82.8770            | 81.7035          | 3.5306            
+NightPair   | night  | 55.3581            | 53.2241          | 21.8520           
+NormalPair  | normal | 89.6141            | 88.7033          | 5.0128            
+NormalPair  | night  | 71.0664            | 69.5650          | 29.1694           
+Mix         | normal | 85.7325            | 84.6435          | 4.0606            
+Mix         | night  | 61.4590            | 59.5495          | 24.8193           
+
+SHARED-SAMPLE RISK — REQUESTED 80% COVERAGE
+All requested 50/60/70/80/90% checkpoints and actual-coverage errors are in matched_coverage.csv.
+Temperature | Domain | Actual coverage (%) | Estimated risk (%) | Estimated AURC
+------------+--------+---------------------+--------------------+---------------
+raw         | normal | 80.0001             | 2.9424             | 0.019549      
+raw         | night  | 80.0000             | 32.7114            | 0.188256      
+global      | normal | 80.0000             | 2.9496             | 0.020445      
+global      | night  | 80.0001             | 32.7398            | 0.189371      
+NightPair   | normal | 80.0000             | 3.0615             | 0.021374      
+NightPair   | night  | 80.0001             | 32.8926            | 0.190978      
+NormalPair  | normal | 80.0001             | 2.9364             | 0.020304      
+NormalPair  | night  | 80.0000             | 32.7275            | 0.189133      
+Mix         | normal | 79.9999             | 3.0011             | 0.020931      
+Mix         | night  | 80.0000             | 32.8218            | 0.190208      
+
+SEQUENCE-SPECIFIC CALIBRATION
+Sequence | Domain | Temperature | NLL      | ECE (%)
+---------+--------+-------------+----------+--------
+GOPR0351 | normal | raw         | 0.432992 | 4.5234 
+GOPR0351 | normal | global      | 0.337492 | 2.9299 
+GOPR0351 | normal | NightPair   | 0.388645 | 9.5909 
+GOPR0351 | normal | NormalPair  | 0.334333 | 2.0611 
+GOPR0351 | normal | Mix         | 0.359016 | 6.3381 
+GOPR0351 | night  | raw         | 2.279210 | 27.7328
+GOPR0351 | night  | global      | 1.353675 | 14.0133
+GOPR0351 | night  | NightPair   | 1.260288 | 5.7403 
+GOPR0351 | night  | NormalPair  | 1.388764 | 15.5413
+GOPR0351 | night  | Mix         | 1.284347 | 9.3079 
+GOPR0356 | normal | raw         | 0.458838 | 5.2495 
+GOPR0356 | normal | global      | 0.331601 | 2.1274 
+GOPR0356 | normal | NightPair   | 0.369513 | 7.3539 
+GOPR0356 | normal | NormalPair  | 0.331023 | 1.7341 
+GOPR0356 | normal | Mix         | 0.345592 | 4.3338 
+GOPR0356 | night  | raw         | 2.226637 | 29.3543
+GOPR0356 | night  | global      | 1.338350 | 15.2475
+GOPR0356 | night  | NightPair   | 1.256489 | 7.1968 
+GOPR0356 | night  | NormalPair  | 1.371029 | 16.8062
+GOPR0356 | night  | Mix         | 1.275722 | 10.5748
+
+PAIRED IMAGE DIFFERENCES
+paired_differences.csv reports matched image-level differences using each side's own GT; per_image_metrics.csv retains the underlying image-level values. These are distinct from pooled pixel-weighted results.
+Equal-image mean Night minus Normal; undefined metric pairs are excluded for that metric (defined-pair counts are recorded in summary.json).
+Temperature | Pairs | Delta NLL | Delta ECE (pp) | Delta valid coverage (pp) | Delta accepted error (pp)
+------------+-------+-----------+----------------+---------------------------+--------------------------
+raw         | 53    | 1.797213  | 23.4849        | -7.3540                   | 28.6453                  
+global      | 53    | 1.006526  | 10.3721        | -20.0767                  | 23.8398                  
+NightPair   | 53    | 0.875150  | 1.2864         | -27.6001                  | 18.7274                  
+NormalPair  | 53    | 1.042059  | 12.0959        | -18.6713                  | 24.5689                  
+Mix         | 53    | 0.923291  | 5.0717         | -24.3787                  | 21.2175                  
+
+RESEARCH QUESTIONS
+1. On Normal, global versus raw NLL decreases 0.110502 nats; ECE decreases 2.450671 percentage points. These two criteria are reported separately. GOPR0351: delta NLL=-0.095501; GOPR0356: delta NLL=-0.127237. NLL is lower on both available sequences.
+
+2. On Night, NightPair versus NormalPair NLL decreases 0.121973 nats; ECE decreases 9.769391 percentage points. GOPR0351: delta NLL=-0.128476; GOPR0356: delta NLL=-0.114540. NLL is lower on both available sequences. This is descriptive consistency, not evidence from many independent sequences.
+
+3. Changing NormalPair to NightPair gives delta NLL 0.046833 on Normal and -0.121973 on Night. The domains favor different temperatures by pooled NLL.
+
+4. At requested 80% coverage on night, global versus raw: actual coverage 80.0001% versus 80.0000%; estimated accepted risk 32.7398% versus 32.7114% (delta +0.0284 percentage points). Interpret any actual-coverage mismatch alongside this risk difference. At requested 80% coverage on night, NightPair versus NormalPair: actual coverage 80.0001% versus 80.0000%; estimated accepted risk 32.8926% versus 32.7275% (delta +0.1651 percentage points). Interpret any actual-coverage mismatch alongside this risk difference. NLL/ECE changes measure calibration; ranking must be judged from the shared-sample curves and all coverage checkpoints. Fixed-threshold risk changes alone cannot establish better rejection.
+
+5. Normal global-T: 1536260 wrong pixels among 76197600 pixels with confidence >=0.90; error rate within this group 2.0162%. 15.2920% of all errors have confidence >=0.90. Night global-T: 5305186 wrong pixels among 39864131 pixels with confidence >=0.90; error rate within this group 13.3082%. 13.1889% of all errors have confidence >=0.90.
+
+6. The predefined equal-domain Mix has validation balanced NLL=0.816496; versus raw: delta balanced NLL=-0.533447; versus global: delta balanced NLL=-0.024119; versus NightPair: delta balanced NLL=-0.002562; versus NormalPair: delta balanced NLL=-0.040132. Inspect each domain and sequence in addition to this mean. No mixture weight was selected on validation; this is established scalar temperature scaling, not a new calibration algorithm.
+
+7. This experiment does not test a learned class-specific rejection policy. Descriptive per-class errors cannot establish that extra thresholds would help. Stop at the present scalar/paired study unless a separate training-only analysis identifies stable predicted-class error differences with adequate sequence support and a predeclared evaluation. True-sky errors predicted as building or vegetation are not addressed by a predicted-sky threshold. No additional class policy is recommended solely from these previously explored validation results.
+
+FAILURE ANALYSIS AND RESOURCE RECORD
+class_metrics.csv contains all 19 predicted-class and GT-class descriptive statistics; classes were not selected for tuning.
+Largest global-T high-confidence-error counts by predicted class (descriptive reporting only):
+Domain | Predicted class | High-confidence errors | High-confidence pixels | Error within group (%)
+-------+-----------------+------------------------+------------------------+-----------------------
+normal | road            | 984447                 | 30870873               | 3.1889                
+normal | terrain         | 143121                 | 430481                 | 33.2468               
+normal | building        | 135302                 | 11665463               | 1.1599                
+night  | road            | 2800167                | 26090696               | 10.7324               
+night  | vegetation      | 1441694                | 6824633                | 21.1249               
+night  | building        | 1026448                | 6090400                | 16.8535               
+Night ambiguity strata retain the semantic-valid label mask; this does not redefine the primary benchmark.
+Region    | Temperature | Semantic-valid pixels | NLL      | Valid coverage (%) | Accepted error (%)
+----------+-------------+-----------------------+----------+--------------------+-------------------
+ambiguous | Mix         | 35893297              | 2.094739 | 45.6085            | 59.7443           
+clear     | Mix         | 65247537              | 0.832303 | 70.1785            | 12.3333           
+ambiguous | NightPair   | 35893297              | 2.020015 | 36.7104            | 57.1618           
+clear     | NightPair   | 65247537              | 0.839606 | 65.6164            | 10.9846           
+ambiguous | NormalPair  | 35893297              | 2.322310 | 60.0486            | 62.8639           
+clear     | NormalPair  | 65247537              | 0.862382 | 77.1274            | 14.7382           
+ambiguous | global      | 35893297              | 2.250645 | 56.5843            | 62.2212           
+clear     | global      | 65247537              | 0.849158 | 75.4784            | 14.1469           
+ambiguous | raw         | 35893297              | 3.964235 | 85.1578            | 65.4208           
+clear     | raw         | 65247537              | 1.314232 | 90.5483            | 20.4073           
+See ambiguity_metrics.csv for sequence-specific strata; an empty table means no stratum metrics were recorded.
+resource_summary.json records observed resource/runtime information. No historical timing is presented as a new measurement.
+
+LIMITATIONS AND CONTRIBUTION
+- Validation was previously explored.
+- Only two Night validation sequence IDs are available; pixels are not independent observations.
+- Corresponding Normal and Night images are not pixel aligned.
+- Risk-coverage/AURC are shared-sample estimates, not full-population exact ranks.
+- All 19 classes are descriptive; no class-specific policy was fitted.
+The contribution is paired empirical evidence on scalar calibration transfer and rejection behavior. It does not establish a new calibration algorithm, causal illumination effects, performance on combined Night+Rain/Snow, or statistically independent evidence from individual pixels.

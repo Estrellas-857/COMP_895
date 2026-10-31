@@ -1,0 +1,27 @@
+FINAL RECOMMENDATION
+
+1. Is the project coherent and sufficiently complete?
+Yes, as a bounded empirical research study. The stages answer a logical sequence of research decisions without establishing causal effects: measured segmentation errors motivate uncertainty scores; imperfect confidence motivates calibration; calibration requires a separate test of rejection; frozen-policy evaluation measures the coverage cost; matched calibration transfer tests domain dependence. All planned experiment types have results. No essential additional model computation is required for this narrative.
+
+2. Which three findings deserve the strongest emphasis?
+First, probability quality and error ranking are distinct: substantial Night NLL/ECE improvements coexist with negligible or unfavorable changes in matched-coverage risk. Second, calibration transfer is domain-dependent: a Night-trained temperature improves Night calibration while worsening Normal calibration, and Mix provides only a modest average-NLL compromise. Third, rejection lowers error among accepted predictions by giving up coverage, while high-confidence semantic confusions remain. Baseline degradation and uncertainty AUROC/AP establish the motivation for these findings.
+
+3. What is the most defensible contribution statement?
+A reproducible, controlled empirical investigation of condition-dependent calibration, Normal–Night calibration transfer, and the limits of confidence-based selective semantic segmentation for a fixed model on ACDC. The work contributes evidence and an auditable experimental pipeline. It does not introduce a new neural network, calibration algorithm or safety guarantee. Use the candidate academic paragraph in F_contribution_and_novelty_assessment.txt.
+
+4. What should be removed or moved to the appendix?
+Remove claims of universal ECE improvement, new-method novelty, corrected semantic predictions, exact 80% validation coverage, causal lighting effects, statistically independent pixel evidence and deployment readiness. Move radix quantile internals, full split IDs, complete class tables, every coverage checkpoint, one-pixel numerical tie audits, source hashes, individual optimizer iterations and detailed memory bookkeeping to appendices. Keep a concise population table and numerical reproducibility disclosure in the main report.
+
+5. What should the Final Presentation focus on?
+Use the 16-slide outline in D_final_presentation_outline.txt. Give the largest share of results time to the separation of calibration from ranking and to the controlled paired transfer comparison. Show one striking but explicitly selected semantic failure case. Explain the frozen policy with its coverage denominator before showing its risk reduction. Treat Mix and ambiguous-region observations as supporting evidence. Conclude with the three findings and the dataset/generalization boundaries.
+
+6. Is any essential additional computation necessary?
+No. This consolidation reconstructed existing counts, calibration bins, histograms and extension sample-based curves using saved artifacts only. It did not run inference or refit parameters. Formatting a population diagram, simplifying figures, or building a transfer table from the verified master ledger are writing-stage tasks after review. Stage 5B AURC is absent by design and need not be computed. An exact full-resolution ranking/AURC or statistical-independence claim should be weakened rather than generating new experiments to support it.
+
+7. What limitations may the instructor challenge?
+The original train/validation records share some sequence prefixes; exact image separation does not guarantee independent drives. The extension has 53 pairs and only two validation sequence IDs, with possible shared training recording ancestry and prior exploratory validation use. Normal–Night views have different valid masks and no pixel alignment. One backbone limits generality. Histogram resolution and sampling/ties limit ranking precision. Selected semantic examples cannot establish prevalence. The fixed threshold controls training all-pixel coverage, not validation risk. Runtime compares preprocessing-to-CPU-output regions, excluding disk decoding, model loading and serialization, and cannot isolate calibration cost. No condition detector, downstream planning assessment, compound-weather benchmark or safety guarantee was demonstrated.
+
+Recommended next step
+Review this consolidation and agree on the scope and wording. Only then draft the full report and comprehensive presentation. Preserve the experimental record and retain negative results. No further experiments or algorithm development are recommended for the current submission.
+
+Key evidence: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv; /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/stage5a_combined_summary.csv; /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5b/risk_at_target_coverages.csv; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv; /home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json. Definitions, numbers and provenance are consolidated in B_verified_master_results.txt, B_master_results.csv and G_consistency_and_claim_audit.txt.

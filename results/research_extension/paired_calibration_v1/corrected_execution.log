@@ -1,0 +1,21 @@
+Preflight: CUDA=True; NVIDIA GeForce RTX 3060, 595.99.02, 12288 MiB, 7128 MiB, 72 %
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 40087.09it/s]
+Cache 1/106: val/night; generated=1, reused=0
+Cache 25/106: val/night; generated=25, reused=0
+Cache 50/106: val/normal; generated=50, reused=0
+Cache 75/106: val/night; generated=75, reused=0
+Cache 100/106: val/normal; generated=100, reused=0
+Cache 106/106: val/normal; generated=106, reused=0
+Evaluation [1/106] complete; frozen Night parity checked; elapsed=1.6s
+Evaluation [10/106] complete; frozen Night parity checked; elapsed=11.4s
+Evaluation [20/106] complete; frozen Night parity checked; elapsed=22.7s
+Evaluation [30/106] complete; frozen Night parity checked; elapsed=34.0s
+Evaluation [40/106] complete; frozen Night parity checked; elapsed=45.4s
+Evaluation [50/106] complete; frozen Night parity checked; elapsed=56.7s
+Evaluation [60/106] complete; frozen Night parity checked; elapsed=67.1s
+Evaluation [70/106] complete; frozen Night parity checked; elapsed=77.9s
+Evaluation [80/106] complete; frozen Night parity checked; elapsed=88.8s
+Evaluation [90/106] complete; frozen Night parity checked; elapsed=99.9s
+Evaluation [100/106] complete; frozen Night parity checked; elapsed=111.2s
+Evaluation [106/106] complete; frozen Night parity checked; elapsed=117.4s
+Completed corrected paired calibration experiment; all exact parity and preservation gates PASS

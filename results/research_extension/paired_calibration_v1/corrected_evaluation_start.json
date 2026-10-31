@@ -1,0 +1,8 @@
+{
+  "corrected_validation_index_sha256": "8bea3fc7272885910ac31f7bf28b46a3428975c6d93e9716b3b8a3563fa6799f",
+  "cudnn_benchmark": false,
+  "protocol_amendment_sha256": "26aec01f7ec36a23ae015b052bce7df962dbe79fcd802960a8595b5078c59f0b",
+  "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+  "started_utc": "2026-10-28T19:27:57.378205+00:00",
+  "validation_deterministic_algorithms": false
+}

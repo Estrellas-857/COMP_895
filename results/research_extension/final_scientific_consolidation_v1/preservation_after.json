@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "protected_file_count": 3606,
+  "protected_bytes": 18086747343,
+  "verified_bytes": 18086747343,
+  "changed_files": [],
+  "missing_files": [],
+  "added_files_outside_consolidation_in_protected_roots": [],
+  "removed_files": [],
+  "scope": "Stage 1\u20135 source directories; paired extension source; all existing results; excludes __pycache__ and this new consolidation directory",
+  "elapsed_seconds": 18.57998723000128
+}

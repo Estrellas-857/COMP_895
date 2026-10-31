@@ -1,0 +1,204 @@
+{
+  "evaluations": [
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "normal": 1.0
+        },
+        "inverse_temperature": 1.0,
+        "phase": "raw_reference",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair_evaluations/021d55d79b468f1df620008eceff5a11caa40077786b55c184a8ed4987935165.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 13.193357463998836,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1657708544
+      },
+      "result": {
+        "beta": 1.0,
+        "by_domain": {
+          "normal": {
+            "nll": 0.48323221285207957,
+            "num_images": 101,
+            "num_valid_pixels": 202782680
+          }
+        },
+        "gradient": 0.36289952796822655,
+        "gradient0": -15.869081787866094,
+        "hessian": 0.1560973990628716,
+        "nll": 0.48323221285207957,
+        "num_valid_pixels": 202782680,
+        "prediction_changes": 0
+      },
+      "sha256": "31c0bc887eefacad518d65d0d1cdb89757ceae072c1c6de19de2ca7ca767b555"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "normal": 1.0
+        },
+        "inverse_temperature": 0.5,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair_evaluations/19f5791e853e2dc3b997f8b9854cc768dc83c1ecdaf32cd7a8ebb643c730c833.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 13.4799470020007,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1657708544
+      },
+      "result": {
+        "beta": 0.5,
+        "by_domain": {
+          "normal": {
+            "nll": 0.35235727709383546,
+            "num_images": 101,
+            "num_valid_pixels": 202782680
+          }
+        },
+        "gradient": 0.003347809767895972,
+        "gradient0": -15.869081787866094,
+        "hessian": 2.581204754212074,
+        "nll": 0.35235727709383546,
+        "num_valid_pixels": 202782680,
+        "prediction_changes": 0
+      },
+      "sha256": "1d76cae47b8bd2a2952246fb031f553416701a05561c084f4b8495562c667d4a"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "normal": 1.0
+        },
+        "inverse_temperature": 0.4987030049582727,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair_evaluations/c07a02fb86a876a13f210f17b04b07718eb52b39c3697bfe15b615ebc7270d40.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 13.37949932400079,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1657708544
+      },
+      "result": {
+        "beta": 0.4987030049582727,
+        "by_domain": {
+          "normal": {
+            "nll": 0.3523551141316703,
+            "num_images": 101,
+            "num_valid_pixels": 202782680
+          }
+        },
+        "gradient": -1.8720272861633076e-05,
+        "gradient0": -15.869081787866094,
+        "hessian": 2.610137611869682,
+        "nll": 0.3523551141316703,
+        "num_valid_pixels": 202782680,
+        "prediction_changes": 0
+      },
+      "sha256": "f067617afa38f097042ba729643de39d5c7f8cf72db7e733d873ab6ffd82b7d1"
+    },
+    {
+      "identity": {
+        "check_predictions": false,
+        "domain_weights": {
+          "normal": 1.0
+        },
+        "inverse_temperature": 0.49871017709846044,
+        "phase": "optimization",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair_evaluations/392eceee2f6ac5c10477cf0ba7204fc6e6951f6493f3e79a2b96d226f8ae74c9.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 13.075126505998924,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1657708544
+      },
+      "result": {
+        "beta": 0.49871017709846044,
+        "by_domain": {
+          "normal": {
+            "nll": 0.3523551140645368,
+            "num_images": 101,
+            "num_valid_pixels": 202782680
+          }
+        },
+        "gradient": -5.776517647486017e-10,
+        "gradient0": -15.869081787866094,
+        "hessian": 2.6099765317358297,
+        "nll": 0.3523551140645368,
+        "num_valid_pixels": 202782680,
+        "prediction_changes": 0
+      },
+      "sha256": "f3b35875c9b7dceb1441e333d6629ed76b932d1add16b6d480c90756bb09d9da"
+    },
+    {
+      "identity": {
+        "check_predictions": true,
+        "domain_weights": {
+          "normal": 1.0
+        },
+        "inverse_temperature": 0.49871017709846044,
+        "phase": "final_verification",
+        "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+        "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc",
+        "schema_version": 1
+      },
+      "path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/NormalPair_evaluations/ce3767e1d77b9d652f9d43f561e1ced23e27c3ac06fb1dd8826667b75ad0a70b.json",
+      "resources": {
+        "device": "cuda",
+        "elapsed_seconds": 14.181977667001775,
+        "peak_cuda_allocated_bytes": 2152126464,
+        "peak_cuda_reserved_bytes": 3630170112,
+        "peak_process_rss_bytes": 1657708544
+      },
+      "result": {
+        "beta": 0.49871017709846044,
+        "by_domain": {
+          "normal": {
+            "nll": 0.3523551140645368,
+            "num_images": 101,
+            "num_valid_pixels": 202782680
+          }
+        },
+        "gradient": -5.776517647486017e-10,
+        "gradient0": -15.869081787866094,
+        "hessian": 2.6099765317358297,
+        "nll": 0.3523551140645368,
+        "num_valid_pixels": 202782680,
+        "prediction_changes": 0
+      },
+      "sha256": "7908631e44a68b29f3b9d2cee0e7061c4fd7e0f9e62fa09b34f92299abe0ec1e"
+    }
+  ],
+  "identity": {
+    "domain_weights": {
+      "normal": 1.0
+    },
+    "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+    "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+    "name": "NormalPair",
+    "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+    "rows_sha256": "fc1029e72218ea4c5de62afe27f959b75e7edd8b4ae688adf4aa3027153badcc"
+  }
+}

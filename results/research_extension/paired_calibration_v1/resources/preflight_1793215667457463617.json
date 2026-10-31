@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-10-28T19:27:47.293189+00:00",
+  "cuda_available": true,
+  "cuda_device_count": 1,
+  "free_cuda_bytes": 7358971904,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "numpy_version": "2.5.2",
+  "nvidia_smi": "NVIDIA GeForce RTX 3060, 595.99.02, 12288 MiB, 7128 MiB, 72 %",
+  "nvidia_smi_returncode": 0,
+  "nvidia_smi_stderr": "",
+  "other_gpu_workloads_observed": true,
+  "requested_device": "cuda",
+  "timing_limitation": "GPU shared with existing workloads; do not infer uncontended latency",
+  "torch_version": "2.11.0+cu128",
+  "total_cuda_bytes": 12488343552
+}

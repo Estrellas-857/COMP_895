@@ -1,0 +1,117 @@
+STAGES 3–4 VERIFIED SCIENTIFIC INVENTORY
+Scope: final consolidation only; no inference, fitting, threshold selection, old driver execution, source edit, or historical-output rewrite.
+All metric values in companion evidence_stage34.json come directly from saved CSV/JSON fields. CPU checks recomputed only existing small confidence bins, histograms and count formulas.
+
+Stage 3 — Confidence calibration
+1. Objective: assess probability calibration and whether global scalar temperature scaling improves multiclass NLL, top-label ECE, and uncertainty-based failure ranking.
+2. Population: Stages 3A, 3C and 3D evaluate the full validation subsets: 100 Fog, 100 Rain, 100 Snow and 106 Night images (406 total). Stage 3B fits only 802 original training images: 200 Fog, 199 Rain, 200 Snow and 203 Night. The 798 threshold-selection images are disjoint from fitting images by RGB path, GT path and exact sequence prefix. No Normal references are used.
+3. Methodology: fit one positive global temperature on all 1,529,411,129 training pixels with valid semantic labels. Minimize pooled, pixel-weighted multiclass NLL using safeguarded Newton optimization in beta = 1/T. Interpolate native float32 logits to 1080 x 1920 using float32 bilinear interpolation, then compute scalar scaling, log-softmax and moments in float64. Validation data are used only for evaluation.
+4. Configuration: model nvidia/segformer-b0-finetuned-cityscapes-512-1024; revision 7a91500a7086b805eeb868719ea5542a3e0bdeb3; T=2.124186626456894; seed 42. The processor input is 512 x 1024; native logit shape is 1 x 19 x 128 x 256. Canonical predictions use the argmax of unscaled full-resolution logits. Valid semantic GT IDs are 0–18; ID 255 is ignored.
+5. Metrics: NLL is measured in nats per valid pixel. ECE uses 15 equal-width confidence bins and weighted absolute confidence–accuracy gaps. Confidence >= 0.90 defines high-confidence statistics, whose denominators must remain distinct. In failure ranking, incorrect predictions are positive examples and larger MSP uncertainty or normalized entropy indicates a predicted failure. Curves use a 1,000-bin approximation. AUROC uses trapezoidal ROC integration; AUPRC uses the average-precision-style sum(delta recall * precision), not trapezoidal PR integration.
+6. Main quantitative results: fit NLL 0.8459822438580104 -> 0.5943715784165712; six objective evaluations; zero temperature-induced prediction changes. Full-validation raw -> global-calibrated values:
+Condition | NLL raw -> calibrated | ECE raw -> calibrated (fractions)
+fog | 0.3206295059293309 -> 0.29036616564739903 | 0.03491174895689313 -> 0.050655524215116474
+rain | 0.3869981182852665 -> 0.353372955707366 | 0.041613391938982475 -> 0.05430687951551084
+snow | 0.5787706740155555 -> 0.45387556692907927 | 0.06283359719239892 -> 0.044195225775874196
+night | 2.2430883253974168 -> 1.3411146875547952 | 0.2835366714807829 -> 0.14432632381012042
+
+Condition | MSP AUROC raw -> calibrated | MSP AP raw -> calibrated | Entropy AUROC raw -> calibrated | Entropy AP raw -> calibrated
+fog | 0.8757985187186864 -> 0.8844475470764116 | 0.42307185033313055 -> 0.4227307293448883 | 0.8816888708389765 -> 0.8711497029174768 | 0.4240664487659158 -> 0.3617837433856436
+rain | 0.8962071802939601 -> 0.8978724501889002 | 0.48665520345451996 -> 0.478136973512624 | 0.8991264746668116 -> 0.8823017795160937 | 0.482951651122116 -> 0.41244105854815805
+snow | 0.8310796499745122 -> 0.8290796628072693 | 0.45666710186470866 -> 0.45953777942911406 | 0.8326944053897064 -> 0.8103269876748226 | 0.46068828929064537 -> 0.4089595528992804
+night | 0.7732374567840167 -> 0.7847869907886951 | 0.6399772298464413 -> 0.6518715341343133 | 0.7804787461128463 -> 0.778992530283975 | 0.647589147158978 -> 0.6386260294167088
+7. Observations: NLL improves in all four conditions. ECE worsens Fog/Rain and improves Snow/Night. MSP AUROC improves Fog/Rain/Night, worsens Snow; MSP AP worsens Fog/Rain and improves Snow/Night. Calibrated entropy AUROC and AP worsen in all four conditions. Thus probability quality, top-label calibration and error ranking are not interchangeable. No segmentation correction occurs.
+8. Limitations: ranking curves are approximated with 1,000 bins; differences are descriptive and have no significance tests. Pooled pixel metrics emphasize frequent classes, and scalar temperature scaling cannot correct semantic errors. Results from all 106 Night validation images must not be presented as a before/after comparison with the extension’s 53 Night images. Stage 3B fitting NLL improvement establishes optimization success, not generalization. In Stage 3D, historical raw labels use float32 softmax argmax, while calibrated/canonical labels use logit argmax. One Rain probability tie produces one additional canonical incorrect pixel; one Snow tie produces one fewer. Fog and Night have no such differences. Raw historical metrics and prevalences are preserved, not corrected. This issue is separate from the extension’s CUDA numerical-parity amendment.
+9. Supporting artifacts and figures:
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/fitted_temperature.json
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/optimization_trace.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/split_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/split_manifest.json
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/stage3c_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/stage3d_combined_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/fig1_ece_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/stage3c_summary/fig2_nll_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/fig1_auroc_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/stage3d_summary/fig2_auprc_before_after.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3c/night/raw_vs_calibrated_reliability.png
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/rain/raw_softmax_tie_audit.csv
+/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3d/snow/raw_softmax_tie_audit.csv
+/home/george/Desktop/COMP_895/project/stage3/evaluate_calibration.py
+/home/george/Desktop/COMP_895/project/stage3/fit_temperature.py
+/home/george/Desktop/COMP_895/project/stage3/evaluate_calibrated_failure_detection.py
+/home/george/Desktop/COMP_895/project/stage2/evaluate_failure_detection.py
+
+Stage 4 — Selective-prediction mechanism and training operating-point selection
+1. Objective: implement RGB-only calibrated-MSP rejection, select one training-only operating threshold, and freeze an integrity-checked inference wrapper. Stage 4 engineering demonstrations do not establish final validation risk.
+2. Population: Stages 4A and 4C each use one lexicographically selected Night validation RGB image for engineering verification only. Stage 4B selects its threshold using 798 reserved training images: 200 Fog, 201 Rain, 200 Snow and 197 Night. All 1,654,732,800 image pixels enter selection. GT labels are opened only after the threshold is frozen, for descriptive training diagnostics.
+3. Methodology: uncertainty = 1 - max softmax(z/T). Accept a pixel when uncertainty <= tau, including equality. Canonical segmentation retains the original class ID even at rejected pixels. Select the exact inverse-empirical-CDF order statistic at rank ceil(0.8N), using float64 radix narrowing and exact partition. There is no random subsampling or rounded histogram approximation in threshold selection.
+4. Configuration: use the same model revision and global temperature; tau = 0.386413580715649. Target all-pixel coverage is 0.80, with order-statistic rank 1,323,786,240. The final wrapper checks frozen parameter, configuration and dependency hashes. Ordinary inference exposes no threshold or method override.
+5. Metrics: inference reports coverage over all image pixels; GT-free inference cannot compute error risk. Labeled diagnostics report valid-pixel coverage = (TN + FN) / N_valid and accepted risk = FN / (TN + FN). TP means incorrect and rejected; FP means correct and rejected; FN means incorrect and accepted; TN means correct and accepted. Semantic-ignore label 255 is excluded from labeled diagnostics.
+6. Main quantitative results: selection all-pixel coverage is exactly 0.8, with 1,323,786,240 accepted pixels, 330,946,560 rejected pixels and one boundary tie. Pooled valid-pixel coverage is 0.8189634302465455; accepted risk is 0.09498215420011488; the unrejected baseline error rate is 0.17075131240144606. These are reserved training results, not Stage 5 validation results. Per-condition diagnostics:
+Condition | All-pixel coverage | Valid-pixel coverage | Accepted risk | Baseline error rate
+fog | 0.8355801480516976 | 0.8555314997154561 | 0.05014473028676415 | 0.10581614108054704
+rain | 0.8202994575732449 | 0.8441204085898003 | 0.04364040625012223 | 0.10533312851191902
+snow | 0.8319471233603395 | 0.8506009065860908 | 0.06988825852693913 | 0.12511520777918403
+night | 0.7107327652049258 | 0.720459971497195 | 0.24517126700930816 | 0.35586898129986366
+7. Observations: the global 80% target over all training image pixels does not enforce 80% coverage for each condition or the semantic-valid subset. Night training all-pixel coverage is 0.7107327652049258 under the global threshold. The Stage 4A engineering threshold of 0.10 gives 0.1435421489197531 coverage on its single RGB image; the final threshold gives 0.3594907407407407 on the same image. This demonstrates different threshold masks; it is not a comparison of reliability methods. Five Stage 4A synthetic tests, four Stage 4B algorithm tests and three Stage 4C integrity tests were recorded as passing. No GT was opened during smoke or integration inference.
+8. Limitations: Stage 4B has no control using a training-selected threshold on raw MSP. Stages 4A–4C provide no final validation metrics; those appear in Stage 5. Risk reduction through rejection trades coverage for lower accepted error; it does not imply better underlying segmentation or guaranteed correctness. A fixed threshold need not achieve its target on new images or conditions. RGB-only inference requires no GT, Normal reference or condition label, but does not establish deployment safety. Engineering tests and timings are not end-to-end evidence for autonomous-driving performance.
+9. Supporting artifacts and figures:
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/frozen_operating_point.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/prespecified_selection_plan.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/threshold_freeze_record.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/post_evaluation_threshold_check.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/condition_metrics.csv
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/stage4b_summary.csv
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/verification_check.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/phase_a_access_audit.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/phase_b_access_audit.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/final_reliability_config.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/verification_check.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4a/implementation_metadata.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4a/smoke_test_data_access_audit.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/integration_data_access_audit.json
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4a/smoke_test/smoke_test_overview.png
+/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4c/integration_test/overview.png
+/home/george/Desktop/COMP_895/project/stage4/reliability_pipeline.py
+/home/george/Desktop/COMP_895/project/stage4/select_operating_threshold.py
+/home/george/Desktop/COMP_895/project/stage4/run_final_reliability.py
+
+Classification (keep separate):
+Stage 3A: fixed-baseline raw calibration evaluation.
+Stage 3B: training calibration fit/optimization, with implementation verification.
+Stage 3C: same-population held-out calibration comparison.
+Stage 3D: same-population approximate error-ranking calibration comparison; historical two-tie label qualification.
+Stage 4A: implementation verification plus qualitative demonstration.
+Stage 4B: training-only threshold selection and post-freeze selective-prediction diagnostics.
+Stage 4C: frozen implementation verification plus qualitative demonstration.
+Neither stage introduces a new calibration or uncertainty algorithm.
+
+Current lightweight verification:
+fog: ECE recomputed from both saved bin tables; high-confidence denominator formulas verified; all four raw/calibrated MSP/entropy AUROC/AP pairs reproduced EXACTLY from saved histograms; tie audit count verified.
+rain: ECE recomputed from both saved bin tables; high-confidence denominator formulas verified; all four raw/calibrated MSP/entropy AUROC/AP pairs reproduced EXACTLY from saved histograms; tie audit count verified.
+snow: ECE recomputed from both saved bin tables; high-confidence denominator formulas verified; all four raw/calibrated MSP/entropy AUROC/AP pairs reproduced EXACTLY from saved histograms; tie audit count verified.
+night: ECE recomputed from both saved bin tables; high-confidence denominator formulas verified; all four raw/calibrated MSP/entropy AUROC/AP pairs reproduced EXACTLY from saved histograms; tie audit count verified.
+Split CSV verification: 802 fitting images and 798 selection images form 1,600 unique RGB paths. The subsets have zero intersection in RGB paths, GT paths and exact sequence IDs. All four frozen split-manifest hashes pass. Current temperature, threshold and final-configuration hashes match their recorded frozen counterparts.
+Pooled/condition Stage 4B coverage and risk formulas were recomputed from saved counts and agree exactly.
+Train/validation RGB basenames have zero overlap, but exact sequence overlap is 15: GOPR0122, GOPR0351, GOPR0400, GOPR0402, GOPR0476, GOPR0604, GOPR0606, GOPR0607, GP010400, GP010476, GP010607, GP020402, GP020475, GP030176, GP030400. This is not globally sequence-independent evaluation.
+Night exact-source prefix GOPR0351 occurs in threshold-selection training and validation; proof paths: /home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/reliability_selection.csv row 603 and /home/george/Desktop/COMP_895/project/results/stage5_final_evaluation/stage5a/per_image_metrics.csv row 302.
+Filename-family suffixes overlap across fitting and selection for Rain (0400 and 0402) and Snow (0122 and 0176). A filename alone does not prove recording or drive identity. The original split explicitly groups exact filename prefixes rather than inferred longer trips.
+
+Claims supported with qualification:
+- Global temperature scaling improves NLL in each original full validation condition; ECE and ranking responses depend on condition/method.
+- A fully functioning RGB-only frozen reliability pipeline is verified, but masks do not certify correctness.
+- Exact training image/GT/sequence separation applies between original calibration_fit and reliability_selection, not universally across official train/validation.
+
+Claims to remove or weaken:
+- Calibration improves segmentation accuracy/mIoU: unsupported; predictions unchanged.
+- ECE universally improves: contradicted by Fog/Rain.
+- Calibrated MSP and entropy always rank errors better: contradicted by the saved AUROC and AP comparisons.
+- AUPRC is trapezoidal PR area, or the ranking curves are exact full-pixel ROC curves: incorrect metric definitions.
+- Stage 3D corrected or replaced the historical Stage 2 tie baseline: incorrect; it preserved and audited that baseline.
+- An 80% target means 80% valid-pixel coverage on every image, condition or validation subset: false.
+- Stage 4 smoke or integration tests prove reduced risk or generalization: those tests contain no GT-based performance evaluation.
+- All parameter-selection subsets and validation data contain independent sequences or drives: contradicted at the sequence level and unsupported at the drive level.
+- The error rate among high-confidence predictions and the fraction of all errors that have high confidence are interchangeable: they use different denominators.
+- ECE on all 106 Night images and ECE on the extension’s 53 Night images form a direct before/after comparison: the populations differ.
+
+The existing plots listed above can illustrate calibration results and the pipeline in the main report. Detailed ranking tables, the 1,000-bin approximation, exact quantile/radix implementation, tie audit and engineering checks belong in the appendix. No additional experiment is needed to support these Stage 3–4 claims; narrower wording resolves the limitations.

@@ -1,0 +1,61 @@
+{
+  "calibrated_by_domain": {
+    "night": {
+      "nll": 0.9824507380859849,
+      "num_images": 101,
+      "num_valid_pixels": 185422815
+    },
+    "normal": {
+      "nll": 0.3696233551888865,
+      "num_images": 101,
+      "num_valid_pixels": 202782680
+    }
+  },
+  "calibrated_nll": 0.6760370466374357,
+  "converged": true,
+  "convergence_reason": "absolute beta-gradient tolerance",
+  "domain_weights": {
+    "night": 0.5,
+    "normal": 0.5
+  },
+  "final_gradient_beta": -2.316155045534174e-10,
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "name": "Mix",
+  "num_images": 202,
+  "num_pairs": 101,
+  "num_valid_pixels": 388205495,
+  "objective_evaluations": 8,
+  "optimizer": "Stage3B safeguarded Newton in beta=1/T",
+  "optimizer_iterations": 7,
+  "precision": "float32 native logits/interpolation; float64 NLL/derivatives/reductions",
+  "prediction_changes": 0,
+  "prediction_pixels_checked": 388205495,
+  "protocol_sha256": "9dfacc4e68181c0d5f5934d686bf06de18e5a532ee4dd118a8e81c42471127d8",
+  "raw_by_domain": {
+    "night": {
+      "nll": 1.7090439265867206,
+      "num_images": 101,
+      "num_valid_pixels": 185422815
+    },
+    "normal": {
+      "nll": 0.48323221285207957,
+      "num_images": 101,
+      "num_valid_pixels": 202782680
+    }
+  },
+  "raw_nll": 1.0961380697194,
+  "resources": {
+    "device": "cuda",
+    "elapsed_seconds": 207.24244943499798,
+    "peak_cuda_allocated_bytes": 2152126464,
+    "peak_cuda_reserved_bytes": 3630170112,
+    "peak_process_rss_bytes": 1657839616
+  },
+  "rows_sha256": "78d82f6d0c0c41b1b198d5ac5859d5cbb0c5595d1c7582ce738e2208d37862c0",
+  "schema_version": 1,
+  "temperature": 2.4961831786433417,
+  "trace_path": "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/temperatures/Mix_trace.json",
+  "trace_sha256": "a05c08376d18ae90c39895e0b81f31e779f3c3362444f1175181da8b440dbcab",
+  "validation_used": false
+}

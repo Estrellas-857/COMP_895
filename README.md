@@ -22,6 +22,7 @@ COMP_895/
 ├── stage3/              # Temperature calibration
 ├── stage4/              # Reliability pipeline and frozen operating point
 ├── stage5/              # Final evaluation, risk/coverage, failures, and runtime
+├── experiments/         # Paired calibration research extension and tests
 ├── results/             # Small results and frozen experiment artifacts
 ├── README.md
 └── requirements.txt
@@ -147,11 +148,60 @@ Project stages are represented by the following scripts and saved results:
 
 Small numerical summaries, aggregate arrays, statistical plots, and frozen
 configuration files are retained. Raw data, model weights, large intermediate
-arrays, logs, and dataset-image visualizations are excluded by `.gitignore`.
+arrays, routine logs, and dataset-image visualizations are excluded by `.gitignore`.
 Historical metadata may refer to excluded caches or original machine paths.
 Scripts that consume these caches require regenerating them first. Some stages
 refuse to overwrite frozen artifacts; use a separate experiment copy when
 reproducing fitting or threshold selection.
+
+## Paired calibration extension and research summary
+
+[`experiments/paired_calibration_v1/`](experiments/paired_calibration_v1/) contains
+the paired Normal/Night temperature-calibration extension. Its saved outputs
+compare raw confidence, the frozen global temperature, and three temperatures
+fitted on training pairs. Start with these saved reports:
+
+- [Experiment findings](results/research_extension/paired_calibration_v1/findings.txt)
+  and [scientific assessment](results/research_extension/paired_calibration_v1/scientific_assessment.txt).
+- [Calibration comparison](results/research_extension/paired_calibration_v1/calibration_comparison.png)
+  and [estimated risk/coverage plot](results/research_extension/paired_calibration_v1/risk_coverage.png).
+- [Overall scientific summary](results/research_extension/final_scientific_consolidation_v1/A_executive_scientific_summary.txt),
+  [verified result tables](results/research_extension/final_scientific_consolidation_v1/B_verified_master_results.txt),
+  and [claim audit](results/research_extension/final_scientific_consolidation_v1/G_consistency_and_claim_audit.txt).
+- [Complete research review index](results/research_extension/final_scientific_consolidation_v1/00_REVIEW_INDEX.txt).
+
+The repository includes the extension's source and tests, frozen protocols,
+split manifests, fitted temperatures and fitting traces, CSV/JSON metrics,
+reports, statistical plots, and two reviewed execution logs that document the
+validation parity correction. See the
+[protocol amendment](results/research_extension/paired_calibration_v1/protocol_amendment_001.json)
+for why the initial validation attempt stopped and how it was corrected.
+
+Large `logits/`, `samples/`, and `curves/` arrays remain local, including the
+aborted and corrected validation caches. Saved indices and hash records are
+retained as provenance; their presence does not mean those caches are included.
+The published plots and CSV summaries can be read without downloading them.
+
+Historical reports and manifests retain their original bytes and machine
+paths. Full experiment replay or the completed-run verification described in
+[`USAGE.txt`](experiments/paired_calibration_v1/USAGE.txt) requires the original
+environment, paths, and excluded inputs/caches. The preservation snapshot also
+binds the pre-publication `README.md` and `.gitignore`, available at commit
+`e11d7ef26ef0e7d0a499a51ce132156c3a3ebbb3`. Those files have since been updated
+for publication, so the archived whole-workspace preservation check is not a
+check of this checkout. Existing PASS records describe the original runs.
+The synthetic tests below run independently of those snapshots.
+
+## What is kept in Git
+
+| Include | Keep locally |
+| --- | --- |
+| Stage 1–5 and extension source, tests, dependency list, and README | `.venv/`, Python caches, local editor settings, and credentials |
+| Frozen parameters, split lists, audit records, compact result tables and aggregate arrays | ACDC under `~/Documents/ACDC`, downloaded weights, per-image inference caches, and large sampled arrays |
+| Selected statistical plots and research summaries | Dataset-image visualizations, `output/` presentation exports, hidden presentation build directories, and `node_modules/` |
+
+`.gitignore` implements these choices. Ignored files remain on the local
+machine; Git does not upload them.
 
 ## Checks without the dataset or model downloads
 
@@ -160,7 +210,11 @@ python -m unittest \
   stage1.test_layout stage1.test_dataset stage3.test_stage3b \
   stage4.test_reliability_pipeline stage4.test_stage4b \
   stage4.test_final_reliability stage5.test_risk_coverage \
-  stage5.test_dataset_access
+  stage5.test_dataset_access \
+  experiments.paired_calibration_v1.test_metrics \
+  experiments.paired_calibration_v1.test_engine \
+  experiments.paired_calibration_v1.test_evaluation \
+  experiments.paired_calibration_v1.test_report
 ```
 
 `python -m stage1.test_segformer` is a separate model smoke test that loads

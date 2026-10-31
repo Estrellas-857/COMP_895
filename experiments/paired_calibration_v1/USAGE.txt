@@ -1,0 +1,103 @@
+PAIRED CALIBRATION V1
+
+Run from /home/george/Desktop/COMP_895/project with the existing .venv:
+
+  PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/comp895-paired-mpl .venv/bin/python -B -m experiments.paired_calibration_v1.resume_after_parity_correction
+
+The completed-run path verifies frozen source, output hashes, and protected
+Stage 1–5 files without repeating inference or fitting. CUDA must be accessible
+to the process for a new run; do not change drivers or dependencies to address
+a sandbox visibility restriction. The model and processor use the pinned,
+locally cached revision; no model downloads or segmentation training occur.
+
+Read protocol_amendment_001.json with the original protocol. The initial run
+stopped on a two-pixel error-count discrepancy: deterministic CUDA inference
+selected a different kernel from the historical validation pipeline. A one-
+image diagnostic confirmed that disabling deterministic algorithms restores
+the historical result. The correction entry point applies that setting only
+to validation inference. Training fits and every originally frozen source
+file remain unchanged. Exact historical parity is still required.
+
+The original root cache_index_val.json and logits/val/ are the RETAINED ABORTED
+ATTEMPT. Scientific evaluation uses corrected_validation/cache_index_val.json
+and corrected_validation/logits/val/. Do not substitute the aborted caches.
+There are 207 useful new native caches and 106 retained aborted native caches;
+two additional single-image diagnostic forward passes are documented.
+
+Outputs are confined to:
+  results/research_extension/paired_calibration_v1/
+
+Protocol and execution order
+  1. Verify GPU access, freeze exact manifests, objectives, and source hashes.
+  2. Reuse 101 Night fitting caches and generate 101 Normal fitting caches.
+  3. Fit NightPair, NormalPair, and equal-domain Mix from training data only.
+  4. Generate the 106 paired validation caches once.
+  5. Evaluate five temperatures on every validation image using its own GT.
+  6. Require saved Stage 1 confusion and Stage 5 count parity before reporting.
+  7. Generate the report and verify all protected historical file hashes.
+
+The original run.py exposes freeze, cache-fit, fit, cache-val, evaluate,
+report, and preserve phases. It is retained as originally frozen; use the
+correction entry point above to resume or verify this amended run. Both refuse
+conflicting immutable outputs. Existing artifacts are not an invitation to
+tune or overwrite the registered experiment. A revised scientific protocol
+requires a new version.
+
+A completed corrected run has a verification-only restart path. Partial-run
+recovery requires review of existing start/runtime records; a conflicting
+immutable output stops execution instead of overwriting the earlier record.
+
+Read scientific_assessment.txt for the seven answers and stop decision;
+findings.txt contains the original frozen report tables. Supporting files:
+  protocol.json / protocol_freeze.json: preregistration and digest
+  fit_pairs.csv / val_pairs.csv: exact scene pairs
+  fit_images.csv / val_images.csv: image, own-GT, and input hashes
+  excluded_training_pairs.csv: 99 reliability-selection pairs excluded
+  fitted_temperatures.csv / temperatures/: fits, objectives, and traces
+  cache_index_fit.json / logits/fit/: reusable fitting native caches
+  corrected_validation/cache_index_val.json / corrected_validation/logits/:
+    reusable validation native caches used by all five configurations
+  calibration_comparison.csv: exact pooled full-valid-pixel metrics
+  frozen_policy_comparison.csv: fixed global cutoff transfer diagnostics
+  matched_coverage.csv / aurc.csv / curves/: estimated ranking comparisons
+  samples/: identical sampled pixels, weights, and tie keys across temperatures
+  per_image_metrics.csv / paired_differences.csv / paired_summary.csv:
+    image metrics and equal-pair differences, distinct from pooled statistics
+  sequence_metrics.csv: both validation sequences independently
+  class_metrics.csv / class_confusions.csv: all 19 classes, descriptive only
+  ambiguity_metrics.csv: Night ambiguity strata intersected with valid GT
+  parity_checks.json / prediction_invariance.csv: correctness checks
+  preservation_before.json / preservation_after.json: historical-file checks
+  resource_summary.json / resources/: measured runtime and memory
+  evaluation_complete.json / run_complete.json: completion and output hashes
+  protocol_amendment_001.json / parity_probe.json / parity_probe_source.txt:
+    correction evidence, unchanged fitting artifacts, and correction-source hash
+  execution.log / corrected_execution.log: failed and corrected execution logs
+  scientific_assessment.txt / assessment_verification.json: final interpretation,
+    practical-interest criterion, resource caveats and supporting input hashes
+
+Metric interpretation
+  NLL is in nats. CSV proportions are in [0,1]; findings labels percentages.
+  ECE uses 15 equal-width bins. Signed gap is confidence minus accuracy.
+  Valid coverage uses semantic GT 0–18. All-pixel coverage includes ignored GT.
+  Accepted risk is wrong accepted valid pixels / accepted valid pixels.
+  High-confidence error rate is wrong valid pixels with confidence >=0.90 /
+  all valid pixels with confidence >=0.90. error_high_conf_fraction instead
+  divides by all semantic errors. Undefined ratios are empty CSV cells/null.
+  Fixed-tau comparisons can have different coverages. Compare error ranking
+  using the shared-sample 50/60/70/80/90% checkpoints and report actual coverage.
+  Sampling is uniform within image, weighted by valid population/sample count.
+  AURC and checkpoint risks are estimates, not exact full-population ranks.
+  Raw probabilities follow the historical float32 convention; calibrated
+  probabilities use float64. Very small ranking differences may include
+  numerical confidence saturation or quantization effects.
+  Normal and Night references are scene pairs, not pixel-aligned images.
+  Validation was previously explored and has only two sequence IDs. Pixels
+  and neighboring frames do not supply independent statistical replications.
+
+Synthetic correctness tests (no dataset inference):
+  PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/comp895-paired-mpl .venv/bin/python -B -m unittest experiments.paired_calibration_v1.test_metrics experiments.paired_calibration_v1.test_engine experiments.paired_calibration_v1.test_evaluation experiments.paired_calibration_v1.test_report -v
+
+All Stage 1–5 drivers, results, manifests, parameters, and original caches
+remain outside this extension's write paths. No class thresholds, weather
+classifier, new segmentation architecture, or retraining is implemented.

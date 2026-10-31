@@ -1,0 +1,4 @@
+name,temperature,num_pairs,num_images,raw_fit_nll,fitted_nll,converged,domain_weights,validation_used
+NightPair,2.807826394810903,101,101,1.7090439265867206,0.9726112237927138,True,{'night': 1.0},False
+NormalPair,2.0051726351727726,101,101,0.48323221285207957,0.3523551140645368,True,{'normal': 1.0},False
+Mix,2.4961831786433417,101,202,1.0961380697194,0.6760370466374357,True,"{'night': 0.5, 'normal': 0.5}",False

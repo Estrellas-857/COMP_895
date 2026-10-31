@@ -1,0 +1,136 @@
+PAIRED CALIBRATION V1 — VERIFIED EXTENSION INVENTORY
+
+This inventory consolidates the completed extension from its frozen protocol, sources, saved numerical outputs, and existing verification records. It adds no experiments, parameter selection, inference, or new numerical analysis. Values below are rounded for reading; the evidence JSON files and master ledger retain the saved precision.
+
+1. RESEARCH OBJECTIVE
+
+Test how scalar confidence calibration transfers between corresponding Normal and Night scenes, and whether better probability quality yields better selective prediction. The controlled comparison fits NormalPair, NightPair, and a predefined equal-domain Mix on matched training scenes. Raw predictions and the historical global temperature provide references. This is an empirical calibration comparison, not a new calibration algorithm or segmentation model.
+
+2. DATASET AND EXPERIMENTAL POPULATIONS
+
+Fitting uses 101 matched Normal–Night training pairs: 202 images, with 73 pair IDs under GOPR0376 and 28 under GP010376. The Night images belong to the original calibration-fit subset; 99 pairs from the original threshold-selection subset are excluded. NormalPair and NightPair each fit 101 images; Mix uses both domains. All fitting uses semantic-valid pixels without pixel subsampling.
+
+Evaluation uses all 53 annotated Normal–Night validation pairs: 106 images, with 28 pairs under GOPR0351 and 25 under GOPR0356. Each view uses its own ground truth and valid mask. Scene correspondence does not imply pixel alignment. The Night side contains 101,140,834 valid pixels; the Normal side contains 107,751,440. Pooled metrics sum pixels or bin statistics within each domain; paired summaries instead average Night-minus-Normal image differences equally across pairs.
+
+These 53 Night images are a subset of the original 106-image Night validation population. Historical global T was fitted on 802 adverse training images, and tau was selected on 798 different training images. Those historical fits provide context but are not controlled comparisons with the new 101-pair fits. Exact image and sequence-ID separation in the new fits does not establish independent recordings or geography.
+
+3. METHODOLOGY AND CORRECTION CHRONOLOGY
+
+The model is fixed. Native float32 logits are cached once and reused across temperature evaluations, then interpolated to each image's full label resolution. Predictions use argmax of unscaled logits. NormalPair minimizes pooled valid-pixel Normal NLL; NightPair minimizes pooled Night NLL. Mix minimizes 0.5 times the Normal domain-mean NLL plus 0.5 times the Night domain-mean NLL. Equal domain weights are predefined, not selected from validation and not equivalent to simply pooling unequal valid-pixel counts.
+
+The protocol fixes populations, objectives, thresholds, metrics, samples, tie handling, and practical criteria before evaluation. All three fitted temperatures are completed before validation evaluation. Frozen tau comparisons examine cutoff transfer; matched-coverage diagnostics sweep scores without selecting a replacement deployment threshold. All 19 classes are reported descriptively. No class-aware policy, condition detector, segmentation retraining, or additional threshold optimization is included.
+
+The first validation attempt stopped at an exact historical-parity failure before scientific tables were published: one image had 730,440 incorrect valid pixels rather than the historical 730,438. A diagnostic isolated the deterministic CUDA algorithm setting. The original protocol and source files were preserved, along with all three fitted temperatures and traces. Amendment 001 bound the diagnostic, failed attempt, correction source, and unchanged fits before corrected validation inference began.
+
+Only validation cache generation changed to torch.use_deterministic_algorithms(False), matching the historical validation convention. Training inference and fitting retained their original setting. All five temperature comparisons use the corrected caches. The 106 aborted validation caches remain intact and are excluded from scientific evaluation; 106 corrected caches occupy a separate directory. This is a documented numerical-parity repair, not outcome-based tuning. Completion records bind the original protocol, amendment, corrected index, evaluated outputs, and reports.
+
+4. IMPORTANT CONFIGURATION
+
+Model: nvidia/segformer-b0-finetuned-cityscapes-512-1024, revision 7a91500a7086b805eeb868719ea5542a3e0bdeb3. Processor input is 512 x 1,024; native logits are 1 x 19 x 128 x 256; bilinear interpolation uses float32 with align_corners=False. Raw softmax/log-softmax use float32; calibrated division, softmax, and log-softmax use float64. Semantic IDs 0–18 are valid; 255 is ignored.
+
+Temperatures: raw 1; global 2.124186626456894; NightPair 2.807826394810903; NormalPair 2.0051726351727726; Mix 2.4961831786433417. All three new fits converged using safeguarded Newton optimization in beta = 1/T, with maximum 50 iterations, gradient tolerance 1e-7, and beta-interval tolerance 1e-8.
+
+The acceptance rule is 1 - max softmax(z/T) <= 0.386413580715649. High confidence means maximum probability >= 0.90. ECE uses 15 equal-width confidence bins. Risk–coverage uses seed 42 and up to 8,192 uniformly sampled valid pixels per image without replacement, weighted by N_valid / n_sample. Samples, weights, correctness labels, and deterministic label-independent tie keys are shared across temperatures. Coverage checkpoints are 50%, 60%, 70%, 80%, and 90%. A one-percentage-point risk improvement at 80% coverage is the predefined practical-interest threshold, not a significance test.
+
+5. METRICS AND RESULT CATEGORIES
+
+Calibration comparison: full-pixel NLL in nats, ECE, and signed mean-confidence-minus-accuracy gap, separately by domain and sequence. NLL uses log-softmax. ECE averages absolute bin gaps, whereas the signed gap permits cancellation. Balanced NLL equally weights the two domain means. Per-image paired summaries and pooled metrics remain distinct.
+
+Selective-prediction evaluation: exact frozen-threshold valid coverage, all-image-pixel coverage, and accepted risk; plus estimated risk–coverage curves and AURC. Valid coverage divides accepted valid pixels by all valid pixels; all-pixel coverage includes ignored semantic pixels. Accepted risk divides incorrect accepted valid pixels by all accepted valid pixels. Sampled curves sort ascending uncertainty and then tie key. Checkpoints take the nearest observed cumulative sample-weight coverage and report the mismatch. Estimated AURC sums each coverage increment times its cumulative risk. It is not exact full-resolution AURC. Original Stage 5B instead uses histograms of all valid pixels and reports no AURC.
+
+Exploratory analyses: all-class statistics grouped separately by predicted class and ground-truth class, plus Night clear/ambiguous strata defined by invIds 0/1 intersected with semantic validity. High-confidence error rate divides wrong high-confidence pixels by all high-confidence valid pixels; the fraction of errors that are high confidence divides the same numerator by all wrong valid pixels. Undefined ratios remain null or empty CSV cells.
+
+Implementation verification: source and artifact integrity, exact historical count parity, unchanged predictions, saved-sample metric reconstruction, and resource bookkeeping. These establish implementation consistency; they do not establish deployment safety or statistical independence.
+
+6. MAIN QUANTITATIVE RESULTS
+
+Calibration comparison — same 53 pairs, pooled within each domain:
+Temperature | Normal NLL | Normal ECE (%) | Night NLL | Night ECE (%)
+raw         | 0.445209   | 4.8666         | 2.254677  | 28.4895
+global      | 0.334707   | 2.4160         | 1.346524  | 14.5885
+NormalPair  | 0.332768   | 1.9065         | 1.380488  | 16.1212
+NightPair   | 0.379601   | 8.5335         | 1.258515  | 6.3518
+Mix         | 0.352671   | 5.3907         | 1.280322  | 9.8859
+
+NightPair improves Night NLL and ECE relative to global on both validation sequences, while worsening both metrics on Normal. NormalPair has the lowest Normal NLL and ECE among the tested configurations. Balanced validation NLL is 0.816496 for Mix, 0.840616 for global, 0.819058 for NightPair, and 0.856628 for NormalPair. Mix's advantage over NightPair is only 0.002562 nats; its balanced-NLL advantage holds on both sequences.
+
+Selective prediction — Night estimated accepted error (%) at requested valid coverage:
+Temperature | 50%     | 60%     | 70%     | 80%     | 90%
+raw         | 18.9735 | 24.2280 | 28.8475 | 32.7114 | 36.2986
+global      | 19.0525 | 24.1563 | 28.7670 | 32.7398 | 36.3429
+NormalPair  | 19.0390 | 24.1630 | 28.7672 | 32.7275 | 36.3150
+NightPair   | 19.2205 | 24.2012 | 28.8094 | 32.8926 | 36.4346
+Mix         | 19.1383 | 24.1702 | 28.7630 | 32.8218 | 36.3968
+
+NightPair worsens pooled Night risk relative to global at all five checkpoints. At approximately 80%, the increases are 0.1694 and 0.1303 percentage points on GOPR0351 and GOPR0356. No tested configuration meets the one-point practical criterion. The saved assessment reports a maximum absolute risk difference of 0.344694 points across comparisons with raw/global, both domains, pooled and sequence results, and all checkpoints; maximum coverage mismatch is 0.000239 points. These are descriptive sample estimates.
+
+Estimated pooled Night AURC is 0.188256 for raw, 0.189371 for global, 0.189133 for NormalPair, 0.190978 for NightPair, and 0.190208 for Mix; lower is better. At fixed tau, NightPair reduces Night risk from 28.1840% to 21.8520%, but also reduces valid coverage from 68.7731% to 55.3581%. Corresponding all-pixel coverages are 67.1640% and 53.2241%. This is stricter rejection at different coverage, not evidence of improved ranking.
+
+Exploratory class and ambiguity analyses: global Night has 5,305,186 wrong pixels among 39,864,131 high-confidence valid pixels, an error rate of 13.3082%; these are 13.1889% of all errors. NightPair still has 1,578,922 errors among 25,121,457 high-confidence pixels. Under global scaling, all 2,252,930 high-confidence ground-truth Sky pixels are wrong. Overall Sky misclassifications predominantly become Vegetation (8,730,102) or Building (6,911,301), so a threshold applied only to predicted Sky would not target them. Ambiguous versus clear Night regions have NLL 2.250645 versus 0.849158 and accepted risk 62.2212% versus 14.1469%, at valid coverages 56.5843% versus 75.4784%. This is an observational fixed-threshold diagnostic.
+
+Implementation verification: exact Stage 5A per-image parity passes for all 53 Night images; both domain confusion matrices match Stage 1; all 530 image-temperature comparisons preserve canonical predictions. The historical verification records report 20 synthetic tests passing and preservation of 2,857 protected files totaling 17,115,990,025 bytes. The current consolidation's saved verification records PASS for protocol-bound hashes, 30 pooled/sequence metric reconstructions, 10 pooled sample curves, 50 checkpoints, 10 AURC values, and ambiguity partitions.
+
+Resource bookkeeping: recorded measured phases total 552.5351083299975 seconds. Peak CUDA allocation is 2,152,126,464 bytes, reservation 3,630,170,112 bytes, and process RSS 1,797,750,784 bytes. There are 313 new native cache files totaling 779,525,248 bytes: 207 useful files and 106 retained aborted files (263,992,576 bytes). Another 101 historical Night fitting caches were reused.
+
+Timing boundaries differ from Stage 5D. Cache phases include RGB/GT reads and identity checks, local model loading when generation begins, preprocessing, network inference, and cache/index writes. Per-fit timing spans optimization, objective evaluations from cached logits, final verification, and trace construction; it excludes the earlier population/cache revalidation. Evaluation timing includes cached-logit loading, each image's GT, all five score/metric computations, sampled curves, and table serialization; it performs no network forward pass. The total includes both validation cache attempts but excludes source inspection, tests, failed partial evaluation, two diagnostic forwards, top-level protocol/preservation hashing, and reporting. GPU workloads were shared, and RSS is a process lifetime high-water mark. These values are execution bookkeeping, not uncontended inference latency or deployment throughput.
+
+7. KEY OBSERVATIONS AND ROLE IN THE MASTER LEDGER
+
+The central supported conclusion is a separation between probability quality and selective ranking: substantial Night NLL/ECE gains coexist with small or unfavorable risk changes near matched coverage. Transfer is domain-dependent. Mix supplies a modest balanced-NLL compromise, not a new method or a practical ranking gain. Rejection reduces accepted risk by discarding more pixels; semantic predictions and some confident failures remain unchanged.
+
+The core facts carried into master results B are the five temperatures and two-domain NLL/ECE table; fixed-tau coverage/risk; all sampled coverage checkpoints and AURC values; sequence-specific directions; high-confidence denominators and class/ambiguity diagnostics; and resource/parity evidence. evidence_extension.json contains the extension metric records, while evidence_additional.json includes supporting resource and supplementary records. Master tables must keep paired Night 53 separate from full Night 106 and exact frozen counts separate from estimated ranking metrics. For global T, the equal-image mean Night-minus-Normal NLL difference is 1.006526 nats, while the pooled difference is 1.011818 nats.
+
+8. LIMITATIONS
+
+Only one model and two Night validation sequence IDs are evaluated. Nearby frames and pixels are not independent observations. Training prefixes GOPR0376 and GP010376 may belong to a shared recording family; filename/hash separation does not prove geographic independence. The original threshold-selection population shares a sequence ID with validation, so the legacy global policy is contextual. Validation had already been explored, despite freezing this extension's parameters and criteria before its final evaluation.
+
+Corresponding views have different masks and lack pixel alignment; observations do not isolate causal lighting effects. Raw float32 versus calibrated float64 probabilities, saturation, and ties can affect small ranking differences. Sampled AURC is not exact population ranking. Class and ambiguity analyses are descriptive, with no fitted class policy and no causal region comparison. No confidence intervals based on pixel independence, compound Night+Rain/Snow claims, condition detector, or downstream safety guarantee are supported. Narrowing these claims is sufficient; no new experiment is needed for the present report.
+
+9. EXACT SUPPORTING ARTIFACT PATHS
+
+Protocol, populations, fits, and source definitions:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/protocol_amendment_001.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fit_pairs.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/val_pairs.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/excluded_training_pairs.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/fitted_temperatures.csv
+/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/engine.py
+/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/metrics.py
+/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/evaluation.py
+/home/george/Desktop/COMP_895/project/experiments/paired_calibration_v1/resume_after_parity_correction.py
+
+Calibration comparison:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/sequence_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/paired_summary.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/summary.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/calibration_comparison.png
+
+Selective-prediction evaluation:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/frozen_policy_comparison.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/matched_coverage.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/aurc.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/risk_coverage.png
+
+Exploratory class and ambiguity analyses:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_metrics.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/class_confusions.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/ambiguity_metrics.csv
+
+Implementation verification and interpretation:
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_checks.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/prediction_invariance.csv
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/parity_probe.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/corrected_validation/cache_index_val.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/resource_summary.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/preservation_after.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/run_complete.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/assessment_verification.json
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/scientific_assessment.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/findings.txt
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/extension_verification.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/evidence_extension.json
+/home/george/Desktop/COMP_895/project/results/research_extension/final_scientific_consolidation_v1/evidence_additional.json
+
+The two PNGs listed above already exist. This inventory does not create figures or slides. The original experiment sources, protocols, and outputs remain unchanged.

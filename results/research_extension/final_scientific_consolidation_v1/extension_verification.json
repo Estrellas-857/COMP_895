@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": {
+    "source_hashes": 64,
+    "artifact_hashes": 11,
+    "manifest_hashes": 5,
+    "amendment_bound_files": 9,
+    "exact_split_and_cross_domain_hash_disjointness": true,
+    "pooled_and_sequence_metrics_reconstructed_from_images_and_bins": 30,
+    "independent_saved_sample_ranking_reconstruction": "10 pooled curves,50checkpoints,10AURC values PASS",
+    "ambiguity_strata_partition_primary_counts": true
+  },
+  "scope": "Read-only source/hash checks and CPU reconstruction from saved tables/bins/samples; no dataset image access or GPU execution"
+}
