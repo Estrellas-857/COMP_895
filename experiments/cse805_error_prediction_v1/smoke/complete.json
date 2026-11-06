@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "train_image_ids": [
+    "fog/GOPR0477_frame_000007_rgb_anon",
+    "night/GOPR0376_frame_000034_rgb_anon",
+    "rain/GOPR0402_frame_000485_rgb_anon",
+    "snow/GOPR0607_frame_000038_rgb_anon"
+  ],
+  "heldout": [
+    {
+      "image_id": "fog/GOPR0475_frame_000041_rgb_anon",
+      "group": "gopro_0475",
+      "counts": [
+        [
+          2010488,
+          235393
+        ]
+      ]
+    },
+    {
+      "image_id": "night/GOPR0351_frame_000159_rgb_anon",
+      "group": "gopro_0351",
+      "counts": [
+        [
+          1625118,
+          629059
+        ]
+      ]
+    },
+    {
+      "image_id": "rain/GOPR0400_frame_000216_rgb_anon",
+      "group": "gopro_0400",
+      "counts": [
+        [
+          1980332,
+          50151
+        ]
+      ]
+    },
+    {
+      "image_id": "snow/GOPR0122_frame_000161_rgb_anon",
+      "group": "gopro_0122",
+      "counts": [
+        [
+          1887726,
+          450296
+        ]
+      ]
+    }
+  ],
+  "protocol_sha256": "86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599",
+  "source_hashes": {
+    "protocol.py": "9eabb0e76453b5c3b198b2071e595bb15b2b71298540191fef66ea9a4131d278",
+    "common.py": "c98c47571af020c75f5ed7c7b992593e1478b9987301dfc5b753f7f439bd3edc",
+    "features.py": "60ed3f8a37acbe4efbf3bce83ab4fef94525a12262e4fcb0fa1864b0d488ff43",
+    "evaluation.py": "4daa89edf7818b3e5f555259299863889a3b77860b279f4b16e029d5197808ae",
+    "run.py": "38044c64f9eed8a02832111429d13739f91d1985eec9cd3b30f18daddb14c37e",
+    "data/metric_amendment_001.json": "5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4"
+  },
+  "device": "cuda",
+  "limitations": "Smoke results only; fixed C=.1 and one image/group, not scientific model selection"
+}

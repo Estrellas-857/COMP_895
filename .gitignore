@@ -97,3 +97,19 @@ checkpoints/
 
 # Keep results CSV/TXT/JSON files, including frozen parameters and split lists.
 # Do not replace the rules above with a blanket /results/ exclusion.
+
+# CSE805: publish fitted classifiers and summaries, keep extraction caches local.
+/experiments/cse805_error_prediction_v1/data/native_logits/
+/experiments/cse805_error_prediction_v1/logs/failed_empty_chunk_attempt/
+/experiments/cse805_error_prediction_v1/data/features/*
+!/experiments/cse805_error_prediction_v1/data/features/manifest.json
+!/experiments/cse805_error_prediction_v1/data/features/complete.json
+!/experiments/cse805_error_prediction_v1/results/folds/*/histograms.npz
+!/experiments/cse805_error_prediction_v1/interpretation_v1/figures/class_reliability_shift.png
+!/experiments/cse805_error_prediction_v1/interpretation_v1/figures/night_group_risk_coverage.png
+# Small audit logs bound by the frozen completion manifests.
+!/experiments/cse805_error_prediction_v1/logs/tests_final.log
+!/experiments/cse805_error_prediction_v1/interpretation_v1/logs/figures.log
+!/experiments/cse805_error_prediction_v1/interpretation_v1/logs/pixel_diagnostics.log
+!/experiments/cse805_error_prediction_v1/interpretation_v1/logs/preservation_check.log
+!/experiments/cse805_error_prediction_v1/interpretation_v1/logs/tests.log

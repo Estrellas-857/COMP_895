@@ -1,0 +1,28 @@
+{
+  "action": "smoke",
+  "device": "cuda",
+  "source_hashes": {
+    "protocol.py": "9eabb0e76453b5c3b198b2071e595bb15b2b71298540191fef66ea9a4131d278",
+    "common.py": "c98c47571af020c75f5ed7c7b992593e1478b9987301dfc5b753f7f439bd3edc",
+    "features.py": "60ed3f8a37acbe4efbf3bce83ab4fef94525a12262e4fcb0fa1864b0d488ff43",
+    "evaluation.py": "0bde7e0b7e606e029e17c54a3d0d6692699517a1328e816c8f606f60be1a8e09",
+    "run.py": "8f8bf4ec294d21c7069db2407e4ac049299b81dbf116de7d2114d34a670669a2"
+  },
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "cloudpickle": "3.1.2",
+    "narwhals": "2.28.0"
+  },
+  "qa_seed": 806,
+  "train_seed": 805,
+  "inference_deterministic": true,
+  "cuda_available": true,
+  "torch_threads": 4,
+  "gpu": "NVIDIA GeForce RTX 3060"
+}

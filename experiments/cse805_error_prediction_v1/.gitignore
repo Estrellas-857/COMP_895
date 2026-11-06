@@ -1,0 +1,5 @@
+# Isolated installed dependencies and runtime caches are reconstructed from the log.
+/runtime/
+# Keep scientific plots; dataset example panels retain the repository's exclusion.
+!/results/report/risk_coverage_crossfitted.png
+!/results/report/paired_group_risk80_deltas.png

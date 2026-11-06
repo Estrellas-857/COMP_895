@@ -1,0 +1,627 @@
+{
+  "group": "gopro_0478",
+  "weather": "fog",
+  "num_images": 91,
+  "methods": {
+    "raw_msp": {
+      "num_pixels": 173761615,
+      "num_errors": 20462825,
+      "error_prevalence": 0.11776378229449583,
+      "auroc": 0.8477245171215153,
+      "average_precision": 0.4338597108367101,
+      "aurc": 0.03075082462012747,
+      "checkpoints": [
+        {
+          "requested_coverage": 0.5,
+          "actual_coverage": 0.4999931083743668,
+          "coverage_error": -6.891625633220766e-06,
+          "risk": 0.020543370302882346,
+          "accepted_pixels": 86879610,
+          "accepted_errors": 1784800
+        },
+        {
+          "requested_coverage": 0.6,
+          "actual_coverage": 0.5999961614076849,
+          "coverage_error": -3.838592315119627e-06,
+          "risk": 0.027132681149576933,
+          "accepted_pixels": 104256302,
+          "accepted_errors": 2828753
+        },
+        {
+          "requested_coverage": 0.7,
+          "actual_coverage": 0.6999920954924366,
+          "coverage_error": -7.904507563383234e-06,
+          "risk": 0.0360258135545966,
+          "accepted_pixels": 121631757,
+          "accepted_errors": 4381883
+        },
+        {
+          "requested_coverage": 0.8,
+          "actual_coverage": 0.8000038903874138,
+          "coverage_error": 3.890387413774121e-06,
+          "risk": 0.05018610607837849,
+          "accepted_pixels": 139009968,
+          "accepted_errors": 6976369
+        },
+        {
+          "requested_coverage": 0.9,
+          "actual_coverage": 0.900000451768361,
+          "coverage_error": 4.517683609428502e-07,
+          "risk": 0.07752865527227928,
+          "accepted_pixels": 156385532,
+          "accepted_errors": 12124360
+        }
+      ],
+      "fixed_threshold": {
+        "num_evaluated": 173761615,
+        "threshold": 0.10432034730911255,
+        "distinct_thresholds": 1,
+        "accepted_pixels": 141104007,
+        "accepted_errors": 7425203,
+        "coverage": 0.8120551077981175,
+        "risk": 0.05262219803580773,
+        "complete_population": true
+      },
+      "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC",
+      "curve_path": "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/folds/gopro_0478/raw_msp_curve.npz"
+    },
+    "raw_entropy": {
+      "num_pixels": 173761615,
+      "num_errors": 20462825,
+      "error_prevalence": 0.11776378229449583,
+      "auroc": 0.8508227880383236,
+      "average_precision": 0.4448032200081446,
+      "aurc": 0.030285673641377124,
+      "checkpoints": [
+        {
+          "requested_coverage": 0.5,
+          "actual_coverage": 0.5000125545564249,
+          "coverage_error": 1.2554556424904106e-05,
+          "risk": 0.020241200495530833,
+          "accepted_pixels": 86882989,
+          "accepted_errors": 1758616
+        },
+        {
+          "requested_coverage": 0.6,
+          "actual_coverage": 0.6000077174697069,
+          "coverage_error": 7.717469706958191e-06,
+          "risk": 0.026743738700540993,
+          "accepted_pixels": 104258310,
+          "accepted_errors": 2788257
+        },
+        {
+          "requested_coverage": 0.7,
+          "actual_coverage": 0.7000004114832842,
+          "coverage_error": 4.1148328422391245e-07,
+          "risk": 0.03546124683949371,
+          "accepted_pixels": 121633202,
+          "accepted_errors": 4313265
+        },
+        {
+          "requested_coverage": 0.8,
+          "actual_coverage": 0.8000052888550788,
+          "coverage_error": 5.288855078777743e-06,
+          "risk": 0.04921911096156814,
+          "accepted_pixels": 139010211,
+          "accepted_errors": 6841959
+        },
+        {
+          "requested_coverage": 0.9,
+          "actual_coverage": 0.8999946046772183,
+          "coverage_error": -5.395322781764911e-06,
+          "risk": 0.07585526561977529,
+          "accepted_pixels": 156384516,
+          "accepted_errors": 11862589
+        }
+      ],
+      "fixed_threshold": {
+        "num_evaluated": 173761615,
+        "threshold": 0.12889090180397034,
+        "distinct_thresholds": 1,
+        "accepted_pixels": 141510367,
+        "accepted_errors": 7367254,
+        "coverage": 0.814393714054741,
+        "risk": 0.05206158500034135,
+        "complete_population": true
+      },
+      "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC",
+      "curve_path": "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/folds/gopro_0478/raw_entropy_curve.npz"
+    },
+    "lr3": {
+      "num_pixels": 173761615,
+      "num_errors": 20462825,
+      "error_prevalence": 0.11776378229449583,
+      "auroc": 0.8483979092740956,
+      "average_precision": 0.4282755548025255,
+      "aurc": 0.03078575299651191,
+      "checkpoints": [
+        {
+          "requested_coverage": 0.5,
+          "actual_coverage": 0.500057771677594,
+          "coverage_error": 5.777167759402069e-05,
+          "risk": 0.020488924690640023,
+          "accepted_pixels": 86890846,
+          "accepted_errors": 1780300
+        },
+        {
+          "requested_coverage": 0.6,
+          "actual_coverage": 0.6000058758661975,
+          "coverage_error": 5.875866197491142e-06,
+          "risk": 0.027033678665778996,
+          "accepted_pixels": 104257990,
+          "accepted_errors": 2818477
+        },
+        {
+          "requested_coverage": 0.7,
+          "actual_coverage": 0.7000049521869373,
+          "coverage_error": 4.952186937301484e-06,
+          "risk": 0.03579986124109008,
+          "accepted_pixels": 121633991,
+          "accepted_errors": 4354480
+        },
+        {
+          "requested_coverage": 0.8,
+          "actual_coverage": 0.8000009380667876,
+          "coverage_error": 9.380667875813486e-07,
+          "risk": 0.04970192854867318,
+          "accepted_pixels": 139009455,
+          "accepted_errors": 6909038
+        },
+        {
+          "requested_coverage": 0.9,
+          "actual_coverage": 0.8999987770601695,
+          "coverage_error": -1.222939830514136e-06,
+          "risk": 0.0777694232667391,
+          "accepted_pixels": 156385241,
+          "accepted_errors": 12161990
+        }
+      ],
+      "fixed_threshold": {
+        "num_evaluated": 173761615,
+        "threshold": 0.28107374906539917,
+        "distinct_thresholds": 1,
+        "accepted_pixels": 141280992,
+        "accepted_errors": 7386540,
+        "coverage": 0.813073658414144,
+        "risk": 0.05228261704164704,
+        "complete_population": true
+      },
+      "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC",
+      "curve_path": "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/folds/gopro_0478/lr3_curve.npz"
+    },
+    "lr3_class": {
+      "num_pixels": 173761615,
+      "num_errors": 20462825,
+      "error_prevalence": 0.11776378229449583,
+      "auroc": 0.9141073812113687,
+      "average_precision": 0.608972017567252,
+      "aurc": 0.02000686695310875,
+      "checkpoints": [
+        {
+          "requested_coverage": 0.5,
+          "actual_coverage": 0.4993113697751946,
+          "coverage_error": -0.0006886302248054199,
+          "risk": 0.01278888073751904,
+          "accepted_pixels": 86761150,
+          "accepted_errors": 1109578
+        },
+        {
+          "requested_coverage": 0.6,
+          "actual_coverage": 0.5963459708866081,
+          "coverage_error": -0.0036540291133918545,
+          "risk": 0.01102000125668247,
+          "accepted_pixels": 103622039,
+          "accepted_errors": 1141915
+        },
+        {
+          "requested_coverage": 0.7,
+          "actual_coverage": 0.7000010848195674,
+          "coverage_error": 1.0848195673984762e-06,
+          "risk": 0.014864043954929816,
+          "accepted_pixels": 121633319,
+          "accepted_errors": 1807963
+        },
+        {
+          "requested_coverage": 0.8,
+          "actual_coverage": 0.8000002819955374,
+          "coverage_error": 2.819955373656313e-07,
+          "risk": 0.032935614017478146,
+          "accepted_pixels": 139009341,
+          "accepted_errors": 4578358
+        },
+        {
+          "requested_coverage": 0.9,
+          "actual_coverage": 0.8999991626459043,
+          "coverage_error": -8.373540957284931e-07,
+          "risk": 0.05976730243738753,
+          "accepted_pixels": 156385308,
+          "accepted_errors": 9346728
+        }
+      ],
+      "fixed_threshold": {
+        "num_evaluated": 173761615,
+        "threshold": 0.2641125349092077,
+        "distinct_thresholds": 1,
+        "accepted_pixels": 148514288,
+        "accepted_errors": 6432849,
+        "coverage": 0.854701356223007,
+        "risk": 0.04331468094167478,
+        "complete_population": true
+      },
+      "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC",
+      "curve_path": "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/folds/gopro_0478/lr3_class_curve.npz"
+    }
+  },
+  "qa": {
+    "raw_msp": {
+      "exact": {
+        "num_pixels": 745472,
+        "total_weight": 173761615.0,
+        "error_prevalence": 0.118740158749997,
+        "auroc": 0.8484931757161428,
+        "average_precision": 0.43699768772135456,
+        "aurc": 0.030937393562872843,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.4999998382583392,
+            "coverage_error": -1.617416607868627e-07,
+            "risk": 0.020611545349515013,
+            "accepted_weight": 86880779.39550781,
+            "error_weight": 1790747.1245117188
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6000000983901741,
+            "coverage_error": 9.839017411916728e-08,
+            "risk": 0.027156027101130527,
+            "accepted_weight": 104256986.09643555,
+            "error_weight": 2831205.539916992
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.6999997521832704,
+            "coverage_error": -2.4781672958162915e-07,
+            "risk": 0.03612317575266882,
+            "accepted_weight": 121633087.43896484,
+            "error_weight": 4393773.394897461
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8000001714244386,
+            "coverage_error": 1.7142443853312983e-07,
+            "risk": 0.05042847077186563,
+            "accepted_weight": 139009321.7869873,
+            "error_weight": 7010027.520751953
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.8999992950181817,
+            "coverage_error": -7.049818183668677e-07,
+            "risk": 0.07833896090890789,
+            "accepted_weight": 156385331.0012207,
+            "error_weight": 12251064.33203125
+          }
+        ],
+        "method": "shared sample; weighted exact AUROC/AP with score ties grouped; weighted sampled RC"
+      },
+      "quantized": {
+        "auroc": 0.8484932204214004,
+        "average_precision": 0.4369927298949806,
+        "aurc": 0.03094648376952021,
+        "error_prevalence": 0.118740158749997,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.5000210552464532,
+            "risk": 0.02061067075651917
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.5999975066316633,
+            "risk": 0.02715614440472526
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.699994048658295,
+            "risk": 0.036123470082935615
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8000001714244386,
+            "risk": 0.05042847077186563
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.8999967196971399,
+            "risk": 0.07833632359588731
+          }
+        ],
+        "method": "same weighted QA pixels; grouped arcsine-sqrt bins and whole-bin RC; exact-sample RC uses random secondary keys for true ties"
+      }
+    },
+    "raw_entropy": {
+      "exact": {
+        "num_pixels": 745472,
+        "total_weight": 173761615.0,
+        "error_prevalence": 0.118740158749997,
+        "auroc": 0.8515364570064088,
+        "average_precision": 0.4475244668023446,
+        "aurc": 0.030480225094707283,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.4999994093969171,
+            "coverage_error": -5.906030828839448e-07,
+            "risk": 0.020245121506221125,
+            "accepted_weight": 86880704.87585449,
+            "error_weight": 1758910.4267578125
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6000003113030994,
+            "coverage_error": 3.1130309940952117e-07,
+            "risk": 0.026735300069704957,
+            "accepted_weight": 104257023.0925293,
+            "error_weight": 2787342.7967529297
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.6999997208250643,
+            "coverage_error": -2.7917493561346873e-07,
+            "risk": 0.03554323270352971,
+            "accepted_weight": 121633081.9901123,
+            "error_weight": 4323232.93762207
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8000004518772509,
+            "coverage_error": 4.5187725083994934e-07,
+            "risk": 0.04949811645919013,
+            "accepted_weight": 139009370.5189209,
+            "error_weight": 6880702.010864258
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000003979970848,
+            "coverage_error": 3.9799708473342577e-07,
+            "risk": 0.07664301714648844,
+            "accepted_weight": 156385522.6566162,
+            "error_weight": 11985858.294433594
+          }
+        ],
+        "method": "shared sample; weighted exact AUROC/AP with score ties grouped; weighted sampled RC"
+      },
+      "quantized": {
+        "auroc": 0.8515364286276109,
+        "average_precision": 0.4475179039342426,
+        "aurc": 0.030482613000304574,
+        "error_prevalence": 0.118740158749997,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.5000036778404994,
+            "risk": 0.020247796467764874
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.5999928275379808,
+            "risk": 0.02673228283157448
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.7000075675478777,
+            "risk": 0.03554283428227279
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.7999950076495213,
+            "risk": 0.04949668369374138
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000003979970848,
+            "risk": 0.07664301714648844
+          }
+        ],
+        "method": "same weighted QA pixels; grouped arcsine-sqrt bins and whole-bin RC; exact-sample RC uses random secondary keys for true ties"
+      }
+    },
+    "lr3": {
+      "exact": {
+        "num_pixels": 745472,
+        "total_weight": 173761615.0,
+        "error_prevalence": 0.118740158749997,
+        "auroc": 0.8491400486175049,
+        "average_precision": 0.4303524917161494,
+        "aurc": 0.030795827504613165,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.499999578833938,
+            "coverage_error": -4.2116606202569074e-07,
+            "risk": 0.02055206605612771,
+            "accepted_weight": 86880734.31750488,
+            "error_weight": 1785578.5906982422
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6000005281838349,
+            "coverage_error": 5.281838348913936e-07,
+            "risk": 0.027051140659881515,
+            "accepted_weight": 104257060.77807617,
+            "error_weight": 2820272.4158935547
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.7000001610538976,
+            "coverage_error": 1.61053897662633e-07,
+            "risk": 0.03582944892220765,
+            "accepted_weight": 121633158.48498535,
+            "error_weight": 4358049.03918457
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.800000007624406,
+            "coverage_error": 7.62440599544334e-09,
+            "risk": 0.04994940960003402,
+            "accepted_weight": 139009293.3248291,
+            "error_weight": 6943432.130493164
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.899999766577823,
+            "coverage_error": -2.3342217703170576e-07,
+            "risk": 0.07860657334657546,
+            "accepted_weight": 156385412.94018555,
+            "error_weight": 12292921.432617188
+          }
+        ],
+        "method": "shared sample; weighted exact AUROC/AP with score ties grouped; weighted sampled RC"
+      },
+      "quantized": {
+        "auroc": 0.8490949615887596,
+        "average_precision": 0.4303212764473448,
+        "aurc": 0.03098523297280313,
+        "error_prevalence": 0.118740158749997,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.4999473028307244,
+            "risk": 0.02054894536837259
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6000158053156777,
+            "risk": 0.027050451904954233
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.6999980505532613,
+            "risk": 0.03582955694832956
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8000027386342308,
+            "risk": 0.04994923908520729
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000067656659217,
+            "risk": 0.07860905950816789
+          }
+        ],
+        "method": "same weighted QA pixels; grouped arcsine-sqrt bins and whole-bin RC; exact-sample RC uses random secondary keys for true ties"
+      }
+    },
+    "lr3_class": {
+      "exact": {
+        "num_pixels": 745472,
+        "total_weight": 173761615.0,
+        "error_prevalence": 0.118740158749997,
+        "auroc": 0.9141833061831104,
+        "average_precision": 0.610285127145842,
+        "aurc": 0.020285037361173167,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.5000000710904028,
+            "coverage_error": 7.109040278674428e-08,
+            "risk": 0.012938594177940002,
+            "accepted_weight": 86880819.8527832,
+            "error_weight": 1124115.669921875
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.5999998985833871,
+            "coverage_error": -1.0141661288542991e-07,
+            "risk": 0.011141992718615613,
+            "accepted_weight": 104256951.37768555,
+            "error_weight": 1161630.1931152344
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.7000001186718107,
+            "coverage_error": 1.1867181071156807e-07,
+            "risk": 0.015037537131251152,
+            "accepted_weight": 121633151.12060547,
+            "error_weight": 1829063.0263671875
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8000001354001213,
+            "coverage_error": 1.3540012122614797e-07,
+            "risk": 0.03319005381286304,
+            "accepted_weight": 139009315.52734375,
+            "error_weight": 4613726.662841797
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000002977656163,
+            "coverage_error": 2.977656162750364e-07,
+            "risk": 0.060376468470416646,
+            "accepted_weight": 156385505.24023438,
+            "error_weight": 9442004.526367188
+          }
+        ],
+        "method": "shared sample; weighted exact AUROC/AP with score ties grouped; weighted sampled RC"
+      },
+      "quantized": {
+        "auroc": 0.9141436318403074,
+        "average_precision": 0.6102127792803225,
+        "aurc": 0.02021306820087987,
+        "error_prevalence": 0.118740158749997,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.4990685536485463,
+            "risk": 0.012962744219175305
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.5958598062252479,
+            "risk": 0.011179303282498314
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.7000064986754233,
+            "risk": 0.015037400076036087
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.7999986974503552,
+            "risk": 0.03319011346999782
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.8999988856059147,
+            "risk": 0.06037656320521806
+          }
+        ],
+        "method": "same weighted QA pixels; grouped arcsine-sqrt bins and whole-bin RC; exact-sample RC uses random secondary keys for true ties"
+      }
+    }
+  },
+  "protocol_sha256": "86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599",
+  "metric_amendment_sha256": "5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4",
+  "image_records": "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/folds/gopro_0478/image_results.json",
+  "source_hashes": {
+    "protocol.py": "9eabb0e76453b5c3b198b2071e595bb15b2b71298540191fef66ea9a4131d278",
+    "common.py": "c98c47571af020c75f5ed7c7b992593e1478b9987301dfc5b753f7f439bd3edc",
+    "features.py": "60ed3f8a37acbe4efbf3bce83ab4fef94525a12262e4fcb0fa1864b0d488ff43",
+    "evaluation.py": "4daa89edf7818b3e5f555259299863889a3b77860b279f4b16e029d5197808ae",
+    "run.py": "38044c64f9eed8a02832111429d13739f91d1985eec9cd3b30f18daddb14c37e",
+    "data/metric_amendment_001.json": "5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4"
+  },
+  "runtime": {
+    "total_seconds": 63.29356886599999,
+    "feature_seconds": 7.217636989012135,
+    "score_seconds": {
+      "raw_msp": 2.335774733002836,
+      "raw_entropy": 2.520053536998603,
+      "lr3": 10.622607581988632,
+      "lr3_class": 23.84017289998701
+    },
+    "boundary": "cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+  }
+}

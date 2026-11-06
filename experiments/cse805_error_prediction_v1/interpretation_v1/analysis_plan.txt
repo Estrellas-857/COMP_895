@@ -1,0 +1,30 @@
+Post-hoc scientific interpretation, 2026-11-05 (America/New_York).
+
+This diagnostic pass does not fit models, tune hyperparameters, compute missing
+backbone outputs, select a new primary metric, or modify the completed experiment.
+All new files belong to interpretation_v1. Original results remain authoritative.
+
+1. Inspect all three Night groups separately. Compare existing full-population
+   group curves with pooled cross-fitted curves. Distinguish per-group ranking
+   failure from additional cross-group scale/composition effects.
+2. Use the already stored, identical, inverse-inclusion-weighted QA samples for
+   exact ranking/tie-policy sensitivity and within-predicted-class diagnostics.
+   Use the same score ordering, weighting and AURC integration rule across methods
+   within each comparison; separately vary true ties, artificial bin ties and bin
+   resolution. No diagnostic estimate replaces the frozen primary result.
+3. For Night and Fog only, regenerate features from existing native-logit caches
+   without a segmentation forward pass. At retrospective requested coverages
+   1%, 5%, 10%, 20%, 50%, 80%, use each group's already saved 100,000-bin curve to
+   choose the nearest attainable cutoff. Count predicted classes and semantic
+   confusions among accepted errors, with identical valid pixels for all methods.
+   Report actual coverage; compare regenerated counts to saved curve counts.
+4. Inspect all 34 fixed LR pipelines. Express continuous coefficients both in
+   standardized coordinates and raw feature units. Interpret class offsets only
+   as conditional log-odds contrasts, not causal importance or class error rates.
+   Compare observed training and held-out class error rates and within-class
+   ranking, especially Night and Fog. Coefficient algebra is descriptive, not a
+   newly fitted or selected method; correlated features and changed slopes limit
+   attribution of the LR3 versus LR+class difference to class offsets alone.
+5. Write an evidence-grounded interpretation report and minimal presentation plan.
+   No pixel-IID significance tests or causal/independent-session claims. Audit
+   hashes before and after this pass; record numerical and sampling limitations.

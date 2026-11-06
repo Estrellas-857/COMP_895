@@ -1,0 +1,2148 @@
+group,condition,gt_class,gt_class_name,predicted_class,predicted_class_name,error_pixels
+gopro_0351,night,0,road,1,sidewalk,238077
+gopro_0351,night,0,road,2,building,5099
+gopro_0351,night,0,road,3,wall,33703
+gopro_0351,night,0,road,4,fence,4670
+gopro_0351,night,0,road,5,pole,875
+gopro_0351,night,0,road,7,traffic sign,417
+gopro_0351,night,0,road,8,vegetation,15083
+gopro_0351,night,0,road,9,terrain,120096
+gopro_0351,night,0,road,10,sky,6
+gopro_0351,night,0,road,11,person,168
+gopro_0351,night,0,road,12,rider,65
+gopro_0351,night,0,road,13,car,115765
+gopro_0351,night,0,road,14,truck,629
+gopro_0351,night,0,road,15,bus,10395
+gopro_0351,night,0,road,16,train,256
+gopro_0351,night,0,road,18,bicycle,338
+gopro_0351,night,1,sidewalk,0,road,9372449
+gopro_0351,night,1,sidewalk,2,building,124393
+gopro_0351,night,1,sidewalk,3,wall,38048
+gopro_0351,night,1,sidewalk,4,fence,18065
+gopro_0351,night,1,sidewalk,5,pole,22228
+gopro_0351,night,1,sidewalk,6,traffic light,17
+gopro_0351,night,1,sidewalk,7,traffic sign,203
+gopro_0351,night,1,sidewalk,8,vegetation,362999
+gopro_0351,night,1,sidewalk,9,terrain,938583
+gopro_0351,night,1,sidewalk,11,person,6709
+gopro_0351,night,1,sidewalk,12,rider,29
+gopro_0351,night,1,sidewalk,13,car,50686
+gopro_0351,night,1,sidewalk,14,truck,269
+gopro_0351,night,1,sidewalk,15,bus,4738
+gopro_0351,night,1,sidewalk,16,train,542
+gopro_0351,night,1,sidewalk,17,motorcycle,930
+gopro_0351,night,1,sidewalk,18,bicycle,1585
+gopro_0351,night,2,building,0,road,776798
+gopro_0351,night,2,building,1,sidewalk,357660
+gopro_0351,night,2,building,3,wall,203944
+gopro_0351,night,2,building,4,fence,135624
+gopro_0351,night,2,building,5,pole,84701
+gopro_0351,night,2,building,6,traffic light,31253
+gopro_0351,night,2,building,7,traffic sign,55460
+gopro_0351,night,2,building,8,vegetation,6343201
+gopro_0351,night,2,building,9,terrain,49093
+gopro_0351,night,2,building,10,sky,29296
+gopro_0351,night,2,building,11,person,19305
+gopro_0351,night,2,building,12,rider,1106
+gopro_0351,night,2,building,13,car,266136
+gopro_0351,night,2,building,14,truck,42502
+gopro_0351,night,2,building,15,bus,245299
+gopro_0351,night,2,building,16,train,67083
+gopro_0351,night,2,building,17,motorcycle,775
+gopro_0351,night,2,building,18,bicycle,1272
+gopro_0351,night,3,wall,0,road,314959
+gopro_0351,night,3,wall,1,sidewalk,1340363
+gopro_0351,night,3,wall,2,building,620432
+gopro_0351,night,3,wall,4,fence,288443
+gopro_0351,night,3,wall,5,pole,26128
+gopro_0351,night,3,wall,6,traffic light,107
+gopro_0351,night,3,wall,7,traffic sign,207
+gopro_0351,night,3,wall,8,vegetation,1122256
+gopro_0351,night,3,wall,9,terrain,434517
+gopro_0351,night,3,wall,10,sky,5
+gopro_0351,night,3,wall,11,person,18224
+gopro_0351,night,3,wall,12,rider,655
+gopro_0351,night,3,wall,13,car,90546
+gopro_0351,night,3,wall,14,truck,2330
+gopro_0351,night,3,wall,15,bus,4579
+gopro_0351,night,3,wall,16,train,10
+gopro_0351,night,3,wall,17,motorcycle,511
+gopro_0351,night,3,wall,18,bicycle,3125
+gopro_0351,night,4,fence,0,road,646954
+gopro_0351,night,4,fence,1,sidewalk,199981
+gopro_0351,night,4,fence,2,building,421953
+gopro_0351,night,4,fence,3,wall,318988
+gopro_0351,night,4,fence,5,pole,13506
+gopro_0351,night,4,fence,6,traffic light,111
+gopro_0351,night,4,fence,7,traffic sign,1089
+gopro_0351,night,4,fence,8,vegetation,1013216
+gopro_0351,night,4,fence,9,terrain,79020
+gopro_0351,night,4,fence,11,person,1930
+gopro_0351,night,4,fence,13,car,25600
+gopro_0351,night,4,fence,14,truck,1927
+gopro_0351,night,4,fence,15,bus,1070
+gopro_0351,night,4,fence,16,train,14001
+gopro_0351,night,4,fence,17,motorcycle,66
+gopro_0351,night,4,fence,18,bicycle,1889
+gopro_0351,night,5,pole,0,road,99823
+gopro_0351,night,5,pole,1,sidewalk,38412
+gopro_0351,night,5,pole,2,building,257351
+gopro_0351,night,5,pole,3,wall,16878
+gopro_0351,night,5,pole,4,fence,21193
+gopro_0351,night,5,pole,6,traffic light,2170
+gopro_0351,night,5,pole,7,traffic sign,6166
+gopro_0351,night,5,pole,8,vegetation,308240
+gopro_0351,night,5,pole,9,terrain,12906
+gopro_0351,night,5,pole,10,sky,213
+gopro_0351,night,5,pole,11,person,429
+gopro_0351,night,5,pole,12,rider,1
+gopro_0351,night,5,pole,13,car,18083
+gopro_0351,night,5,pole,14,truck,2090
+gopro_0351,night,5,pole,15,bus,3147
+gopro_0351,night,5,pole,16,train,29
+gopro_0351,night,5,pole,18,bicycle,414
+gopro_0351,night,6,traffic light,2,building,27232
+gopro_0351,night,6,traffic light,5,pole,5822
+gopro_0351,night,6,traffic light,7,traffic sign,2332
+gopro_0351,night,6,traffic light,8,vegetation,21587
+gopro_0351,night,6,traffic light,10,sky,2203
+gopro_0351,night,6,traffic light,11,person,12
+gopro_0351,night,6,traffic light,13,car,860
+gopro_0351,night,6,traffic light,14,truck,71
+gopro_0351,night,6,traffic light,15,bus,210
+gopro_0351,night,7,traffic sign,0,road,60132
+gopro_0351,night,7,traffic sign,1,sidewalk,1229
+gopro_0351,night,7,traffic sign,2,building,284073
+gopro_0351,night,7,traffic sign,3,wall,7032
+gopro_0351,night,7,traffic sign,4,fence,21769
+gopro_0351,night,7,traffic sign,5,pole,27632
+gopro_0351,night,7,traffic sign,6,traffic light,1787
+gopro_0351,night,7,traffic sign,8,vegetation,103409
+gopro_0351,night,7,traffic sign,9,terrain,1901
+gopro_0351,night,7,traffic sign,10,sky,166
+gopro_0351,night,7,traffic sign,11,person,975
+gopro_0351,night,7,traffic sign,13,car,26775
+gopro_0351,night,7,traffic sign,14,truck,2034
+gopro_0351,night,7,traffic sign,15,bus,4936
+gopro_0351,night,7,traffic sign,16,train,5442
+gopro_0351,night,7,traffic sign,18,bicycle,74
+gopro_0351,night,8,vegetation,0,road,936377
+gopro_0351,night,8,vegetation,1,sidewalk,143204
+gopro_0351,night,8,vegetation,2,building,2654055
+gopro_0351,night,8,vegetation,3,wall,99851
+gopro_0351,night,8,vegetation,4,fence,44104
+gopro_0351,night,8,vegetation,5,pole,41610
+gopro_0351,night,8,vegetation,6,traffic light,5961
+gopro_0351,night,8,vegetation,7,traffic sign,8177
+gopro_0351,night,8,vegetation,9,terrain,542550
+gopro_0351,night,8,vegetation,10,sky,99521
+gopro_0351,night,8,vegetation,11,person,14502
+gopro_0351,night,8,vegetation,12,rider,1259
+gopro_0351,night,8,vegetation,13,car,101005
+gopro_0351,night,8,vegetation,14,truck,11023
+gopro_0351,night,8,vegetation,15,bus,21975
+gopro_0351,night,8,vegetation,16,train,290
+gopro_0351,night,8,vegetation,17,motorcycle,489
+gopro_0351,night,8,vegetation,18,bicycle,327
+gopro_0351,night,9,terrain,0,road,8125
+gopro_0351,night,9,terrain,1,sidewalk,68898
+gopro_0351,night,9,terrain,2,building,3500
+gopro_0351,night,9,terrain,3,wall,1573
+gopro_0351,night,9,terrain,4,fence,61
+gopro_0351,night,9,terrain,5,pole,536
+gopro_0351,night,9,terrain,8,vegetation,20896
+gopro_0351,night,9,terrain,11,person,11
+gopro_0351,night,9,terrain,13,car,9724
+gopro_0351,night,9,terrain,15,bus,84
+gopro_0351,night,10,sky,0,road,2629402
+gopro_0351,night,10,sky,1,sidewalk,10227
+gopro_0351,night,10,sky,2,building,9641249
+gopro_0351,night,10,sky,3,wall,38788
+gopro_0351,night,10,sky,4,fence,4349
+gopro_0351,night,10,sky,5,pole,19512
+gopro_0351,night,10,sky,6,traffic light,15894
+gopro_0351,night,10,sky,7,traffic sign,5495
+gopro_0351,night,10,sky,8,vegetation,9120834
+gopro_0351,night,10,sky,9,terrain,185650
+gopro_0351,night,10,sky,11,person,2
+gopro_0351,night,10,sky,12,rider,221
+gopro_0351,night,10,sky,13,car,92688
+gopro_0351,night,10,sky,14,truck,2561
+gopro_0351,night,10,sky,15,bus,15517
+gopro_0351,night,10,sky,16,train,24302
+gopro_0351,night,11,person,0,road,6452
+gopro_0351,night,11,person,1,sidewalk,18419
+gopro_0351,night,11,person,2,building,80603
+gopro_0351,night,11,person,3,wall,1358
+gopro_0351,night,11,person,4,fence,4061
+gopro_0351,night,11,person,5,pole,1834
+gopro_0351,night,11,person,6,traffic light,2546
+gopro_0351,night,11,person,7,traffic sign,161
+gopro_0351,night,11,person,8,vegetation,46650
+gopro_0351,night,11,person,9,terrain,6904
+gopro_0351,night,11,person,12,rider,1964
+gopro_0351,night,11,person,13,car,11706
+gopro_0351,night,11,person,14,truck,37
+gopro_0351,night,11,person,15,bus,1168
+gopro_0351,night,11,person,16,train,163
+gopro_0351,night,11,person,17,motorcycle,3606
+gopro_0351,night,11,person,18,bicycle,2065
+gopro_0351,night,12,rider,0,road,4725
+gopro_0351,night,12,rider,1,sidewalk,5563
+gopro_0351,night,12,rider,2,building,2250
+gopro_0351,night,12,rider,3,wall,1
+gopro_0351,night,12,rider,4,fence,65
+gopro_0351,night,12,rider,5,pole,2911
+gopro_0351,night,12,rider,6,traffic light,62
+gopro_0351,night,12,rider,7,traffic sign,291
+gopro_0351,night,12,rider,8,vegetation,25293
+gopro_0351,night,12,rider,9,terrain,687
+gopro_0351,night,12,rider,10,sky,38
+gopro_0351,night,12,rider,11,person,2915
+gopro_0351,night,12,rider,13,car,11418
+gopro_0351,night,12,rider,18,bicycle,3129
+gopro_0351,night,13,car,0,road,605574
+gopro_0351,night,13,car,1,sidewalk,69952
+gopro_0351,night,13,car,2,building,110060
+gopro_0351,night,13,car,3,wall,8600
+gopro_0351,night,13,car,4,fence,80113
+gopro_0351,night,13,car,5,pole,4893
+gopro_0351,night,13,car,6,traffic light,50
+gopro_0351,night,13,car,7,traffic sign,1786
+gopro_0351,night,13,car,8,vegetation,253489
+gopro_0351,night,13,car,9,terrain,79038
+gopro_0351,night,13,car,11,person,1071
+gopro_0351,night,13,car,12,rider,614
+gopro_0351,night,13,car,14,truck,6503
+gopro_0351,night,13,car,15,bus,17352
+gopro_0351,night,13,car,17,motorcycle,6637
+gopro_0351,night,13,car,18,bicycle,10964
+gopro_0351,night,14,truck,0,road,3952
+gopro_0351,night,14,truck,1,sidewalk,1851
+gopro_0351,night,14,truck,2,building,38398
+gopro_0351,night,14,truck,3,wall,28
+gopro_0351,night,14,truck,5,pole,127
+gopro_0351,night,14,truck,7,traffic sign,134
+gopro_0351,night,14,truck,8,vegetation,4224
+gopro_0351,night,14,truck,9,terrain,337
+gopro_0351,night,14,truck,11,person,57
+gopro_0351,night,14,truck,13,car,15056
+gopro_0351,night,15,bus,0,road,326597
+gopro_0351,night,15,bus,1,sidewalk,730
+gopro_0351,night,15,bus,2,building,8347
+gopro_0351,night,15,bus,3,wall,882
+gopro_0351,night,15,bus,8,vegetation,1707
+gopro_0351,night,15,bus,13,car,268799
+gopro_0351,night,16,train,0,road,1219606
+gopro_0351,night,16,train,1,sidewalk,53448
+gopro_0351,night,16,train,2,building,828458
+gopro_0351,night,16,train,3,wall,30670
+gopro_0351,night,16,train,4,fence,46225
+gopro_0351,night,16,train,5,pole,35
+gopro_0351,night,16,train,6,traffic light,102
+gopro_0351,night,16,train,7,traffic sign,1158
+gopro_0351,night,16,train,8,vegetation,18016
+gopro_0351,night,16,train,9,terrain,8624
+gopro_0351,night,16,train,10,sky,6988
+gopro_0351,night,16,train,13,car,319859
+gopro_0351,night,16,train,14,truck,3220
+gopro_0351,night,16,train,15,bus,167277
+gopro_0351,night,17,motorcycle,0,road,3768
+gopro_0351,night,17,motorcycle,1,sidewalk,14856
+gopro_0351,night,17,motorcycle,2,building,5202
+gopro_0351,night,17,motorcycle,3,wall,20
+gopro_0351,night,17,motorcycle,4,fence,64
+gopro_0351,night,17,motorcycle,5,pole,20
+gopro_0351,night,17,motorcycle,7,traffic sign,43
+gopro_0351,night,17,motorcycle,8,vegetation,29732
+gopro_0351,night,17,motorcycle,9,terrain,10871
+gopro_0351,night,17,motorcycle,11,person,1107
+gopro_0351,night,17,motorcycle,12,rider,73
+gopro_0351,night,17,motorcycle,13,car,16166
+gopro_0351,night,17,motorcycle,15,bus,94
+gopro_0351,night,17,motorcycle,18,bicycle,838
+gopro_0351,night,18,bicycle,0,road,17705
+gopro_0351,night,18,bicycle,1,sidewalk,27915
+gopro_0351,night,18,bicycle,2,building,1967
+gopro_0351,night,18,bicycle,4,fence,118
+gopro_0351,night,18,bicycle,5,pole,1587
+gopro_0351,night,18,bicycle,6,traffic light,58
+gopro_0351,night,18,bicycle,7,traffic sign,262
+gopro_0351,night,18,bicycle,8,vegetation,41906
+gopro_0351,night,18,bicycle,9,terrain,9470
+gopro_0351,night,18,bicycle,10,sky,46
+gopro_0351,night,18,bicycle,11,person,783
+gopro_0351,night,18,bicycle,13,car,6918
+gopro_0351,night,18,bicycle,15,bus,10
+gopro_0351,night,18,bicycle,17,motorcycle,7
+gopro_0376,night,0,road,1,sidewalk,1667309
+gopro_0376,night,0,road,2,building,43853
+gopro_0376,night,0,road,3,wall,3170
+gopro_0376,night,0,road,4,fence,9800
+gopro_0376,night,0,road,5,pole,13879
+gopro_0376,night,0,road,6,traffic light,12
+gopro_0376,night,0,road,7,traffic sign,544
+gopro_0376,night,0,road,8,vegetation,35433
+gopro_0376,night,0,road,9,terrain,1027938
+gopro_0376,night,0,road,10,sky,5131
+gopro_0376,night,0,road,11,person,13117
+gopro_0376,night,0,road,12,rider,74
+gopro_0376,night,0,road,13,car,305152
+gopro_0376,night,0,road,14,truck,44
+gopro_0376,night,0,road,15,bus,22261
+gopro_0376,night,0,road,16,train,10903
+gopro_0376,night,0,road,17,motorcycle,505
+gopro_0376,night,0,road,18,bicycle,1757
+gopro_0376,night,1,sidewalk,0,road,8280207
+gopro_0376,night,1,sidewalk,2,building,272023
+gopro_0376,night,1,sidewalk,3,wall,74123
+gopro_0376,night,1,sidewalk,4,fence,38266
+gopro_0376,night,1,sidewalk,5,pole,37241
+gopro_0376,night,1,sidewalk,7,traffic sign,241
+gopro_0376,night,1,sidewalk,8,vegetation,230478
+gopro_0376,night,1,sidewalk,9,terrain,1523671
+gopro_0376,night,1,sidewalk,11,person,25153
+gopro_0376,night,1,sidewalk,12,rider,459
+gopro_0376,night,1,sidewalk,13,car,140388
+gopro_0376,night,1,sidewalk,14,truck,395
+gopro_0376,night,1,sidewalk,15,bus,9059
+gopro_0376,night,1,sidewalk,16,train,149
+gopro_0376,night,1,sidewalk,17,motorcycle,1853
+gopro_0376,night,1,sidewalk,18,bicycle,8926
+gopro_0376,night,2,building,0,road,1791568
+gopro_0376,night,2,building,1,sidewalk,686852
+gopro_0376,night,2,building,3,wall,422057
+gopro_0376,night,2,building,4,fence,377840
+gopro_0376,night,2,building,5,pole,220239
+gopro_0376,night,2,building,6,traffic light,141376
+gopro_0376,night,2,building,7,traffic sign,242228
+gopro_0376,night,2,building,8,vegetation,9957452
+gopro_0376,night,2,building,9,terrain,189657
+gopro_0376,night,2,building,10,sky,52474
+gopro_0376,night,2,building,11,person,77400
+gopro_0376,night,2,building,12,rider,4364
+gopro_0376,night,2,building,13,car,1269124
+gopro_0376,night,2,building,14,truck,70650
+gopro_0376,night,2,building,15,bus,468263
+gopro_0376,night,2,building,16,train,57354
+gopro_0376,night,2,building,17,motorcycle,8298
+gopro_0376,night,2,building,18,bicycle,6735
+gopro_0376,night,3,wall,0,road,1721055
+gopro_0376,night,3,wall,1,sidewalk,1986723
+gopro_0376,night,3,wall,2,building,822368
+gopro_0376,night,3,wall,4,fence,289155
+gopro_0376,night,3,wall,5,pole,44754
+gopro_0376,night,3,wall,6,traffic light,44
+gopro_0376,night,3,wall,7,traffic sign,912
+gopro_0376,night,3,wall,8,vegetation,547842
+gopro_0376,night,3,wall,9,terrain,721737
+gopro_0376,night,3,wall,10,sky,61
+gopro_0376,night,3,wall,11,person,7673
+gopro_0376,night,3,wall,13,car,82782
+gopro_0376,night,3,wall,14,truck,1544
+gopro_0376,night,3,wall,15,bus,6351
+gopro_0376,night,3,wall,16,train,316
+gopro_0376,night,3,wall,17,motorcycle,385
+gopro_0376,night,3,wall,18,bicycle,283
+gopro_0376,night,4,fence,0,road,418626
+gopro_0376,night,4,fence,1,sidewalk,447589
+gopro_0376,night,4,fence,2,building,957807
+gopro_0376,night,4,fence,3,wall,377962
+gopro_0376,night,4,fence,5,pole,68197
+gopro_0376,night,4,fence,6,traffic light,474
+gopro_0376,night,4,fence,7,traffic sign,25854
+gopro_0376,night,4,fence,8,vegetation,726662
+gopro_0376,night,4,fence,9,terrain,339198
+gopro_0376,night,4,fence,10,sky,16
+gopro_0376,night,4,fence,11,person,17795
+gopro_0376,night,4,fence,12,rider,94
+gopro_0376,night,4,fence,13,car,140260
+gopro_0376,night,4,fence,14,truck,2109
+gopro_0376,night,4,fence,15,bus,11233
+gopro_0376,night,4,fence,16,train,1693
+gopro_0376,night,4,fence,18,bicycle,13350
+gopro_0376,night,5,pole,0,road,184821
+gopro_0376,night,5,pole,1,sidewalk,155483
+gopro_0376,night,5,pole,2,building,1009329
+gopro_0376,night,5,pole,3,wall,6180
+gopro_0376,night,5,pole,4,fence,23992
+gopro_0376,night,5,pole,6,traffic light,38918
+gopro_0376,night,5,pole,7,traffic sign,50523
+gopro_0376,night,5,pole,8,vegetation,753057
+gopro_0376,night,5,pole,9,terrain,105487
+gopro_0376,night,5,pole,10,sky,9708
+gopro_0376,night,5,pole,11,person,22605
+gopro_0376,night,5,pole,12,rider,1868
+gopro_0376,night,5,pole,13,car,99206
+gopro_0376,night,5,pole,14,truck,2207
+gopro_0376,night,5,pole,15,bus,30220
+gopro_0376,night,5,pole,16,train,5987
+gopro_0376,night,5,pole,17,motorcycle,43
+gopro_0376,night,5,pole,18,bicycle,2544
+gopro_0376,night,6,traffic light,0,road,5842
+gopro_0376,night,6,traffic light,1,sidewalk,5633
+gopro_0376,night,6,traffic light,2,building,282782
+gopro_0376,night,6,traffic light,4,fence,3116
+gopro_0376,night,6,traffic light,5,pole,39327
+gopro_0376,night,6,traffic light,7,traffic sign,95926
+gopro_0376,night,6,traffic light,8,vegetation,141947
+gopro_0376,night,6,traffic light,9,terrain,28
+gopro_0376,night,6,traffic light,10,sky,4303
+gopro_0376,night,6,traffic light,11,person,2872
+gopro_0376,night,6,traffic light,13,car,23421
+gopro_0376,night,6,traffic light,14,truck,142
+gopro_0376,night,6,traffic light,15,bus,21547
+gopro_0376,night,6,traffic light,16,train,402
+gopro_0376,night,6,traffic light,17,motorcycle,213
+gopro_0376,night,7,traffic sign,0,road,41471
+gopro_0376,night,7,traffic sign,1,sidewalk,6871
+gopro_0376,night,7,traffic sign,2,building,586992
+gopro_0376,night,7,traffic sign,3,wall,7016
+gopro_0376,night,7,traffic sign,4,fence,6302
+gopro_0376,night,7,traffic sign,5,pole,30621
+gopro_0376,night,7,traffic sign,6,traffic light,35134
+gopro_0376,night,7,traffic sign,8,vegetation,176570
+gopro_0376,night,7,traffic sign,9,terrain,4931
+gopro_0376,night,7,traffic sign,10,sky,8572
+gopro_0376,night,7,traffic sign,11,person,21633
+gopro_0376,night,7,traffic sign,12,rider,546
+gopro_0376,night,7,traffic sign,13,car,35253
+gopro_0376,night,7,traffic sign,14,truck,8306
+gopro_0376,night,7,traffic sign,15,bus,12392
+gopro_0376,night,7,traffic sign,16,train,404
+gopro_0376,night,7,traffic sign,17,motorcycle,25
+gopro_0376,night,8,vegetation,0,road,422459
+gopro_0376,night,8,vegetation,1,sidewalk,230571
+gopro_0376,night,8,vegetation,2,building,3183790
+gopro_0376,night,8,vegetation,3,wall,105378
+gopro_0376,night,8,vegetation,4,fence,46367
+gopro_0376,night,8,vegetation,5,pole,67631
+gopro_0376,night,8,vegetation,6,traffic light,16126
+gopro_0376,night,8,vegetation,7,traffic sign,25988
+gopro_0376,night,8,vegetation,9,terrain,2915344
+gopro_0376,night,8,vegetation,10,sky,7702
+gopro_0376,night,8,vegetation,11,person,13471
+gopro_0376,night,8,vegetation,12,rider,2759
+gopro_0376,night,8,vegetation,13,car,102831
+gopro_0376,night,8,vegetation,14,truck,13279
+gopro_0376,night,8,vegetation,15,bus,39328
+gopro_0376,night,8,vegetation,16,train,78
+gopro_0376,night,8,vegetation,17,motorcycle,350
+gopro_0376,night,8,vegetation,18,bicycle,3118
+gopro_0376,night,9,terrain,0,road,1057724
+gopro_0376,night,9,terrain,1,sidewalk,561542
+gopro_0376,night,9,terrain,2,building,25551
+gopro_0376,night,9,terrain,3,wall,152
+gopro_0376,night,9,terrain,4,fence,4822
+gopro_0376,night,9,terrain,5,pole,4273
+gopro_0376,night,9,terrain,6,traffic light,21
+gopro_0376,night,9,terrain,7,traffic sign,953
+gopro_0376,night,9,terrain,8,vegetation,402421
+gopro_0376,night,9,terrain,10,sky,3
+gopro_0376,night,9,terrain,11,person,94
+gopro_0376,night,9,terrain,12,rider,223
+gopro_0376,night,9,terrain,13,car,25830
+gopro_0376,night,9,terrain,15,bus,705
+gopro_0376,night,9,terrain,18,bicycle,740
+gopro_0376,night,10,sky,0,road,1592894
+gopro_0376,night,10,sky,1,sidewalk,3213
+gopro_0376,night,10,sky,2,building,29039610
+gopro_0376,night,10,sky,3,wall,7463
+gopro_0376,night,10,sky,4,fence,26493
+gopro_0376,night,10,sky,5,pole,171808
+gopro_0376,night,10,sky,6,traffic light,147971
+gopro_0376,night,10,sky,7,traffic sign,51147
+gopro_0376,night,10,sky,8,vegetation,23370531
+gopro_0376,night,10,sky,9,terrain,54716
+gopro_0376,night,10,sky,13,car,110691
+gopro_0376,night,10,sky,14,truck,2913
+gopro_0376,night,10,sky,15,bus,68614
+gopro_0376,night,10,sky,16,train,1158
+gopro_0376,night,10,sky,17,motorcycle,1
+gopro_0376,night,11,person,0,road,15590
+gopro_0376,night,11,person,1,sidewalk,20712
+gopro_0376,night,11,person,2,building,97426
+gopro_0376,night,11,person,3,wall,2657
+gopro_0376,night,11,person,4,fence,10921
+gopro_0376,night,11,person,5,pole,7931
+gopro_0376,night,11,person,6,traffic light,340
+gopro_0376,night,11,person,7,traffic sign,1375
+gopro_0376,night,11,person,8,vegetation,64472
+gopro_0376,night,11,person,9,terrain,14323
+gopro_0376,night,11,person,12,rider,11714
+gopro_0376,night,11,person,13,car,52941
+gopro_0376,night,11,person,15,bus,4919
+gopro_0376,night,11,person,17,motorcycle,712
+gopro_0376,night,11,person,18,bicycle,3623
+gopro_0376,night,12,rider,0,road,5035
+gopro_0376,night,12,rider,1,sidewalk,711
+gopro_0376,night,12,rider,2,building,6101
+gopro_0376,night,12,rider,4,fence,142
+gopro_0376,night,12,rider,5,pole,233
+gopro_0376,night,12,rider,6,traffic light,486
+gopro_0376,night,12,rider,7,traffic sign,202
+gopro_0376,night,12,rider,8,vegetation,20859
+gopro_0376,night,12,rider,9,terrain,215
+gopro_0376,night,12,rider,11,person,8295
+gopro_0376,night,12,rider,13,car,39899
+gopro_0376,night,12,rider,15,bus,1327
+gopro_0376,night,12,rider,17,motorcycle,6299
+gopro_0376,night,12,rider,18,bicycle,1911
+gopro_0376,night,13,car,0,road,707152
+gopro_0376,night,13,car,1,sidewalk,230467
+gopro_0376,night,13,car,2,building,460448
+gopro_0376,night,13,car,3,wall,10062
+gopro_0376,night,13,car,4,fence,25333
+gopro_0376,night,13,car,5,pole,11406
+gopro_0376,night,13,car,6,traffic light,2072
+gopro_0376,night,13,car,7,traffic sign,2940
+gopro_0376,night,13,car,8,vegetation,320743
+gopro_0376,night,13,car,9,terrain,45668
+gopro_0376,night,13,car,10,sky,405
+gopro_0376,night,13,car,11,person,7087
+gopro_0376,night,13,car,12,rider,2716
+gopro_0376,night,13,car,14,truck,12104
+gopro_0376,night,13,car,15,bus,110138
+gopro_0376,night,13,car,16,train,36628
+gopro_0376,night,13,car,17,motorcycle,11693
+gopro_0376,night,13,car,18,bicycle,4053
+gopro_0376,night,14,truck,0,road,116
+gopro_0376,night,14,truck,1,sidewalk,521
+gopro_0376,night,14,truck,2,building,57331
+gopro_0376,night,14,truck,4,fence,6086
+gopro_0376,night,14,truck,5,pole,108
+gopro_0376,night,14,truck,8,vegetation,12032
+gopro_0376,night,14,truck,11,person,324
+gopro_0376,night,14,truck,13,car,15585
+gopro_0376,night,15,bus,0,road,45727
+gopro_0376,night,15,bus,1,sidewalk,1400
+gopro_0376,night,15,bus,2,building,93889
+gopro_0376,night,15,bus,3,wall,170
+gopro_0376,night,15,bus,4,fence,12970
+gopro_0376,night,15,bus,5,pole,1965
+gopro_0376,night,15,bus,6,traffic light,826
+gopro_0376,night,15,bus,7,traffic sign,407
+gopro_0376,night,15,bus,8,vegetation,26695
+gopro_0376,night,15,bus,9,terrain,8351
+gopro_0376,night,15,bus,11,person,5718
+gopro_0376,night,15,bus,13,car,111062
+gopro_0376,night,15,bus,14,truck,4038
+gopro_0376,night,15,bus,18,bicycle,27
+gopro_0376,night,16,train,0,road,150415
+gopro_0376,night,16,train,1,sidewalk,14303
+gopro_0376,night,16,train,2,building,535890
+gopro_0376,night,16,train,3,wall,16897
+gopro_0376,night,16,train,4,fence,84498
+gopro_0376,night,16,train,5,pole,7518
+gopro_0376,night,16,train,6,traffic light,911
+gopro_0376,night,16,train,7,traffic sign,2879
+gopro_0376,night,16,train,8,vegetation,24622
+gopro_0376,night,16,train,9,terrain,18975
+gopro_0376,night,16,train,10,sky,792
+gopro_0376,night,16,train,11,person,3796
+gopro_0376,night,16,train,13,car,149581
+gopro_0376,night,16,train,15,bus,287913
+gopro_0376,night,17,motorcycle,0,road,14454
+gopro_0376,night,17,motorcycle,1,sidewalk,6287
+gopro_0376,night,17,motorcycle,2,building,5721
+gopro_0376,night,17,motorcycle,3,wall,86
+gopro_0376,night,17,motorcycle,4,fence,22
+gopro_0376,night,17,motorcycle,5,pole,36
+gopro_0376,night,17,motorcycle,6,traffic light,126
+gopro_0376,night,17,motorcycle,7,traffic sign,742
+gopro_0376,night,17,motorcycle,8,vegetation,1934
+gopro_0376,night,17,motorcycle,9,terrain,2404
+gopro_0376,night,17,motorcycle,11,person,8157
+gopro_0376,night,17,motorcycle,13,car,62425
+gopro_0376,night,17,motorcycle,15,bus,82
+gopro_0376,night,17,motorcycle,18,bicycle,2266
+gopro_0376,night,18,bicycle,0,road,61896
+gopro_0376,night,18,bicycle,1,sidewalk,17392
+gopro_0376,night,18,bicycle,2,building,14495
+gopro_0376,night,18,bicycle,3,wall,4356
+gopro_0376,night,18,bicycle,4,fence,8877
+gopro_0376,night,18,bicycle,5,pole,519
+gopro_0376,night,18,bicycle,7,traffic sign,136
+gopro_0376,night,18,bicycle,8,vegetation,16586
+gopro_0376,night,18,bicycle,9,terrain,8577
+gopro_0376,night,18,bicycle,10,sky,21
+gopro_0376,night,18,bicycle,11,person,1402
+gopro_0376,night,18,bicycle,12,rider,940
+gopro_0376,night,18,bicycle,13,car,22123
+gopro_0376,night,18,bicycle,15,bus,2
+gopro_0376,night,18,bicycle,17,motorcycle,312
+gopro_0397,night,0,road,1,sidewalk,663999
+gopro_0397,night,0,road,2,building,8404
+gopro_0397,night,0,road,3,wall,3429
+gopro_0397,night,0,road,4,fence,1735
+gopro_0397,night,0,road,5,pole,5637
+gopro_0397,night,0,road,6,traffic light,31
+gopro_0397,night,0,road,7,traffic sign,66
+gopro_0397,night,0,road,8,vegetation,9097
+gopro_0397,night,0,road,9,terrain,406603
+gopro_0397,night,0,road,11,person,3179
+gopro_0397,night,0,road,12,rider,2398
+gopro_0397,night,0,road,13,car,112826
+gopro_0397,night,0,road,15,bus,14287
+gopro_0397,night,0,road,16,train,2819
+gopro_0397,night,0,road,17,motorcycle,360
+gopro_0397,night,0,road,18,bicycle,7323
+gopro_0397,night,1,sidewalk,0,road,3892176
+gopro_0397,night,1,sidewalk,2,building,67537
+gopro_0397,night,1,sidewalk,3,wall,19981
+gopro_0397,night,1,sidewalk,4,fence,2077
+gopro_0397,night,1,sidewalk,5,pole,23469
+gopro_0397,night,1,sidewalk,6,traffic light,6
+gopro_0397,night,1,sidewalk,7,traffic sign,231
+gopro_0397,night,1,sidewalk,8,vegetation,91011
+gopro_0397,night,1,sidewalk,9,terrain,843740
+gopro_0397,night,1,sidewalk,10,sky,44
+gopro_0397,night,1,sidewalk,11,person,7873
+gopro_0397,night,1,sidewalk,12,rider,693
+gopro_0397,night,1,sidewalk,13,car,61530
+gopro_0397,night,1,sidewalk,14,truck,424
+gopro_0397,night,1,sidewalk,15,bus,6458
+gopro_0397,night,1,sidewalk,16,train,1540
+gopro_0397,night,1,sidewalk,17,motorcycle,147
+gopro_0397,night,1,sidewalk,18,bicycle,9915
+gopro_0397,night,2,building,0,road,589879
+gopro_0397,night,2,building,1,sidewalk,293340
+gopro_0397,night,2,building,3,wall,219713
+gopro_0397,night,2,building,4,fence,143283
+gopro_0397,night,2,building,5,pole,147642
+gopro_0397,night,2,building,6,traffic light,123390
+gopro_0397,night,2,building,7,traffic sign,183006
+gopro_0397,night,2,building,8,vegetation,6010307
+gopro_0397,night,2,building,9,terrain,138978
+gopro_0397,night,2,building,10,sky,14125
+gopro_0397,night,2,building,11,person,37558
+gopro_0397,night,2,building,12,rider,3434
+gopro_0397,night,2,building,13,car,559065
+gopro_0397,night,2,building,14,truck,92361
+gopro_0397,night,2,building,15,bus,299856
+gopro_0397,night,2,building,16,train,50952
+gopro_0397,night,2,building,17,motorcycle,3587
+gopro_0397,night,2,building,18,bicycle,7032
+gopro_0397,night,3,wall,0,road,753235
+gopro_0397,night,3,wall,1,sidewalk,447191
+gopro_0397,night,3,wall,2,building,411777
+gopro_0397,night,3,wall,4,fence,17897
+gopro_0397,night,3,wall,5,pole,12914
+gopro_0397,night,3,wall,6,traffic light,222
+gopro_0397,night,3,wall,7,traffic sign,261
+gopro_0397,night,3,wall,8,vegetation,235934
+gopro_0397,night,3,wall,9,terrain,263568
+gopro_0397,night,3,wall,11,person,2490
+gopro_0397,night,3,wall,12,rider,152
+gopro_0397,night,3,wall,13,car,38906
+gopro_0397,night,3,wall,15,bus,2981
+gopro_0397,night,3,wall,16,train,1103
+gopro_0397,night,3,wall,17,motorcycle,178
+gopro_0397,night,3,wall,18,bicycle,951
+gopro_0397,night,4,fence,0,road,331331
+gopro_0397,night,4,fence,1,sidewalk,290279
+gopro_0397,night,4,fence,2,building,199987
+gopro_0397,night,4,fence,3,wall,365050
+gopro_0397,night,4,fence,5,pole,33397
+gopro_0397,night,4,fence,6,traffic light,490
+gopro_0397,night,4,fence,7,traffic sign,6936
+gopro_0397,night,4,fence,8,vegetation,274044
+gopro_0397,night,4,fence,9,terrain,361807
+gopro_0397,night,4,fence,10,sky,341
+gopro_0397,night,4,fence,11,person,16104
+gopro_0397,night,4,fence,12,rider,432
+gopro_0397,night,4,fence,13,car,126483
+gopro_0397,night,4,fence,15,bus,2671
+gopro_0397,night,4,fence,16,train,624
+gopro_0397,night,4,fence,17,motorcycle,270
+gopro_0397,night,4,fence,18,bicycle,12263
+gopro_0397,night,5,pole,0,road,100930
+gopro_0397,night,5,pole,1,sidewalk,52148
+gopro_0397,night,5,pole,2,building,560884
+gopro_0397,night,5,pole,3,wall,15560
+gopro_0397,night,5,pole,4,fence,4265
+gopro_0397,night,5,pole,6,traffic light,35109
+gopro_0397,night,5,pole,7,traffic sign,28056
+gopro_0397,night,5,pole,8,vegetation,614788
+gopro_0397,night,5,pole,9,terrain,36224
+gopro_0397,night,5,pole,10,sky,2003
+gopro_0397,night,5,pole,11,person,7713
+gopro_0397,night,5,pole,12,rider,4093
+gopro_0397,night,5,pole,13,car,55593
+gopro_0397,night,5,pole,14,truck,3314
+gopro_0397,night,5,pole,15,bus,26677
+gopro_0397,night,5,pole,16,train,5335
+gopro_0397,night,5,pole,17,motorcycle,124
+gopro_0397,night,5,pole,18,bicycle,1235
+gopro_0397,night,6,traffic light,0,road,243
+gopro_0397,night,6,traffic light,1,sidewalk,39
+gopro_0397,night,6,traffic light,2,building,131562
+gopro_0397,night,6,traffic light,4,fence,519
+gopro_0397,night,6,traffic light,5,pole,21264
+gopro_0397,night,6,traffic light,7,traffic sign,63988
+gopro_0397,night,6,traffic light,8,vegetation,84980
+gopro_0397,night,6,traffic light,9,terrain,1
+gopro_0397,night,6,traffic light,10,sky,1468
+gopro_0397,night,6,traffic light,11,person,4814
+gopro_0397,night,6,traffic light,12,rider,397
+gopro_0397,night,6,traffic light,13,car,12813
+gopro_0397,night,6,traffic light,14,truck,2019
+gopro_0397,night,6,traffic light,15,bus,19175
+gopro_0397,night,6,traffic light,17,motorcycle,57
+gopro_0397,night,7,traffic sign,0,road,20471
+gopro_0397,night,7,traffic sign,1,sidewalk,5603
+gopro_0397,night,7,traffic sign,2,building,203937
+gopro_0397,night,7,traffic sign,3,wall,1163
+gopro_0397,night,7,traffic sign,4,fence,700
+gopro_0397,night,7,traffic sign,5,pole,13233
+gopro_0397,night,7,traffic sign,6,traffic light,10813
+gopro_0397,night,7,traffic sign,8,vegetation,159526
+gopro_0397,night,7,traffic sign,9,terrain,1084
+gopro_0397,night,7,traffic sign,10,sky,2412
+gopro_0397,night,7,traffic sign,11,person,899
+gopro_0397,night,7,traffic sign,12,rider,1067
+gopro_0397,night,7,traffic sign,13,car,11443
+gopro_0397,night,7,traffic sign,14,truck,3458
+gopro_0397,night,7,traffic sign,15,bus,23128
+gopro_0397,night,7,traffic sign,16,train,332
+gopro_0397,night,7,traffic sign,17,motorcycle,262
+gopro_0397,night,8,vegetation,0,road,263295
+gopro_0397,night,8,vegetation,1,sidewalk,220281
+gopro_0397,night,8,vegetation,2,building,2854757
+gopro_0397,night,8,vegetation,3,wall,59219
+gopro_0397,night,8,vegetation,4,fence,18916
+gopro_0397,night,8,vegetation,5,pole,117377
+gopro_0397,night,8,vegetation,6,traffic light,56474
+gopro_0397,night,8,vegetation,7,traffic sign,24143
+gopro_0397,night,8,vegetation,9,terrain,2537640
+gopro_0397,night,8,vegetation,10,sky,15879
+gopro_0397,night,8,vegetation,11,person,10938
+gopro_0397,night,8,vegetation,12,rider,7703
+gopro_0397,night,8,vegetation,13,car,101958
+gopro_0397,night,8,vegetation,14,truck,13884
+gopro_0397,night,8,vegetation,15,bus,95497
+gopro_0397,night,8,vegetation,16,train,925
+gopro_0397,night,8,vegetation,17,motorcycle,518
+gopro_0397,night,8,vegetation,18,bicycle,4162
+gopro_0397,night,9,terrain,0,road,13651
+gopro_0397,night,9,terrain,1,sidewalk,161205
+gopro_0397,night,9,terrain,2,building,1189
+gopro_0397,night,9,terrain,5,pole,253
+gopro_0397,night,9,terrain,8,vegetation,9185
+gopro_0397,night,9,terrain,13,car,5341
+gopro_0397,night,10,sky,0,road,2950265
+gopro_0397,night,10,sky,1,sidewalk,18119
+gopro_0397,night,10,sky,2,building,17861783
+gopro_0397,night,10,sky,3,wall,12302
+gopro_0397,night,10,sky,4,fence,4231
+gopro_0397,night,10,sky,5,pole,105400
+gopro_0397,night,10,sky,6,traffic light,79182
+gopro_0397,night,10,sky,7,traffic sign,28908
+gopro_0397,night,10,sky,8,vegetation,16976571
+gopro_0397,night,10,sky,9,terrain,73105
+gopro_0397,night,10,sky,11,person,6
+gopro_0397,night,10,sky,12,rider,527
+gopro_0397,night,10,sky,13,car,63579
+gopro_0397,night,10,sky,14,truck,5823
+gopro_0397,night,10,sky,15,bus,85550
+gopro_0397,night,10,sky,16,train,3388
+gopro_0397,night,10,sky,17,motorcycle,37
+gopro_0397,night,11,person,0,road,26123
+gopro_0397,night,11,person,1,sidewalk,11266
+gopro_0397,night,11,person,2,building,39974
+gopro_0397,night,11,person,3,wall,2877
+gopro_0397,night,11,person,4,fence,3276
+gopro_0397,night,11,person,5,pole,2538
+gopro_0397,night,11,person,6,traffic light,48
+gopro_0397,night,11,person,7,traffic sign,1375
+gopro_0397,night,11,person,8,vegetation,57623
+gopro_0397,night,11,person,9,terrain,3450
+gopro_0397,night,11,person,12,rider,1538
+gopro_0397,night,11,person,13,car,18050
+gopro_0397,night,11,person,14,truck,359
+gopro_0397,night,11,person,15,bus,258
+gopro_0397,night,11,person,16,train,1524
+gopro_0397,night,11,person,17,motorcycle,1113
+gopro_0397,night,11,person,18,bicycle,3231
+gopro_0397,night,12,rider,0,road,8728
+gopro_0397,night,12,rider,1,sidewalk,994
+gopro_0397,night,12,rider,2,building,4593
+gopro_0397,night,12,rider,3,wall,97
+gopro_0397,night,12,rider,4,fence,260
+gopro_0397,night,12,rider,5,pole,624
+gopro_0397,night,12,rider,6,traffic light,15
+gopro_0397,night,12,rider,7,traffic sign,158
+gopro_0397,night,12,rider,8,vegetation,16252
+gopro_0397,night,12,rider,9,terrain,85
+gopro_0397,night,12,rider,11,person,26313
+gopro_0397,night,12,rider,13,car,14426
+gopro_0397,night,12,rider,14,truck,13
+gopro_0397,night,12,rider,15,bus,21818
+gopro_0397,night,12,rider,17,motorcycle,2070
+gopro_0397,night,12,rider,18,bicycle,4576
+gopro_0397,night,13,car,0,road,1084827
+gopro_0397,night,13,car,1,sidewalk,89347
+gopro_0397,night,13,car,2,building,217842
+gopro_0397,night,13,car,3,wall,13609
+gopro_0397,night,13,car,4,fence,8794
+gopro_0397,night,13,car,5,pole,9560
+gopro_0397,night,13,car,6,traffic light,1209
+gopro_0397,night,13,car,7,traffic sign,1463
+gopro_0397,night,13,car,8,vegetation,234012
+gopro_0397,night,13,car,9,terrain,17757
+gopro_0397,night,13,car,10,sky,423
+gopro_0397,night,13,car,11,person,3645
+gopro_0397,night,13,car,12,rider,2463
+gopro_0397,night,13,car,14,truck,12866
+gopro_0397,night,13,car,15,bus,97970
+gopro_0397,night,13,car,16,train,1475
+gopro_0397,night,13,car,17,motorcycle,68273
+gopro_0397,night,13,car,18,bicycle,15649
+gopro_0397,night,14,truck,0,road,158
+gopro_0397,night,14,truck,8,vegetation,97
+gopro_0397,night,14,truck,9,terrain,33
+gopro_0397,night,14,truck,13,car,5055
+gopro_0397,night,14,truck,15,bus,158
+gopro_0397,night,15,bus,0,road,38743
+gopro_0397,night,15,bus,1,sidewalk,18659
+gopro_0397,night,15,bus,2,building,122859
+gopro_0397,night,15,bus,3,wall,392
+gopro_0397,night,15,bus,4,fence,244
+gopro_0397,night,15,bus,5,pole,1442
+gopro_0397,night,15,bus,6,traffic light,2368
+gopro_0397,night,15,bus,7,traffic sign,14680
+gopro_0397,night,15,bus,8,vegetation,4329
+gopro_0397,night,15,bus,9,terrain,3
+gopro_0397,night,15,bus,13,car,57335
+gopro_0397,night,15,bus,14,truck,40
+gopro_0397,night,15,bus,16,train,15337
+gopro_0397,night,16,train,0,road,280906
+gopro_0397,night,16,train,1,sidewalk,5558
+gopro_0397,night,16,train,2,building,721714
+gopro_0397,night,16,train,3,wall,5076
+gopro_0397,night,16,train,4,fence,4098
+gopro_0397,night,16,train,5,pole,2268
+gopro_0397,night,16,train,6,traffic light,571
+gopro_0397,night,16,train,7,traffic sign,2778
+gopro_0397,night,16,train,8,vegetation,12968
+gopro_0397,night,16,train,9,terrain,953
+gopro_0397,night,16,train,11,person,2288
+gopro_0397,night,16,train,12,rider,738
+gopro_0397,night,16,train,13,car,26886
+gopro_0397,night,16,train,14,truck,136
+gopro_0397,night,16,train,15,bus,88216
+gopro_0397,night,16,train,18,bicycle,65
+gopro_0397,night,17,motorcycle,0,road,20609
+gopro_0397,night,17,motorcycle,1,sidewalk,443
+gopro_0397,night,17,motorcycle,2,building,4248
+gopro_0397,night,17,motorcycle,3,wall,130
+gopro_0397,night,17,motorcycle,4,fence,1
+gopro_0397,night,17,motorcycle,5,pole,483
+gopro_0397,night,17,motorcycle,7,traffic sign,61
+gopro_0397,night,17,motorcycle,8,vegetation,2217
+gopro_0397,night,17,motorcycle,9,terrain,3275
+gopro_0397,night,17,motorcycle,11,person,2367
+gopro_0397,night,17,motorcycle,12,rider,1404
+gopro_0397,night,17,motorcycle,13,car,33939
+gopro_0397,night,17,motorcycle,15,bus,2705
+gopro_0397,night,17,motorcycle,18,bicycle,9279
+gopro_0397,night,18,bicycle,0,road,111419
+gopro_0397,night,18,bicycle,1,sidewalk,17431
+gopro_0397,night,18,bicycle,2,building,26126
+gopro_0397,night,18,bicycle,3,wall,12130
+gopro_0397,night,18,bicycle,4,fence,872
+gopro_0397,night,18,bicycle,5,pole,3444
+gopro_0397,night,18,bicycle,7,traffic sign,29
+gopro_0397,night,18,bicycle,8,vegetation,19315
+gopro_0397,night,18,bicycle,9,terrain,20874
+gopro_0397,night,18,bicycle,11,person,8823
+gopro_0397,night,18,bicycle,12,rider,7411
+gopro_0397,night,18,bicycle,13,car,11383
+gopro_0397,night,18,bicycle,15,bus,26
+gopro_0397,night,18,bicycle,17,motorcycle,218
+gopro_0475,fog,0,road,1,sidewalk,109340
+gopro_0475,fog,0,road,2,building,325
+gopro_0475,fog,0,road,3,wall,2790
+gopro_0475,fog,0,road,4,fence,24
+gopro_0475,fog,0,road,5,pole,338
+gopro_0475,fog,0,road,7,traffic sign,39
+gopro_0475,fog,0,road,8,vegetation,619
+gopro_0475,fog,0,road,9,terrain,17139
+gopro_0475,fog,0,road,11,person,42
+gopro_0475,fog,0,road,13,car,46682
+gopro_0475,fog,0,road,14,truck,11
+gopro_0475,fog,0,road,15,bus,1015
+gopro_0475,fog,0,road,18,bicycle,403
+gopro_0475,fog,1,sidewalk,0,road,829653
+gopro_0475,fog,1,sidewalk,2,building,21190
+gopro_0475,fog,1,sidewalk,3,wall,28221
+gopro_0475,fog,1,sidewalk,4,fence,770
+gopro_0475,fog,1,sidewalk,5,pole,3324
+gopro_0475,fog,1,sidewalk,7,traffic sign,53
+gopro_0475,fog,1,sidewalk,8,vegetation,4817
+gopro_0475,fog,1,sidewalk,9,terrain,33448
+gopro_0475,fog,1,sidewalk,11,person,1522
+gopro_0475,fog,1,sidewalk,13,car,10442
+gopro_0475,fog,1,sidewalk,15,bus,194
+gopro_0475,fog,1,sidewalk,17,motorcycle,125
+gopro_0475,fog,1,sidewalk,18,bicycle,1337
+gopro_0475,fog,2,building,0,road,2898
+gopro_0475,fog,2,building,1,sidewalk,61090
+gopro_0475,fog,2,building,3,wall,43930
+gopro_0475,fog,2,building,4,fence,4215
+gopro_0475,fog,2,building,5,pole,23704
+gopro_0475,fog,2,building,6,traffic light,3425
+gopro_0475,fog,2,building,7,traffic sign,9823
+gopro_0475,fog,2,building,8,vegetation,190506
+gopro_0475,fog,2,building,9,terrain,9068
+gopro_0475,fog,2,building,10,sky,61960
+gopro_0475,fog,2,building,11,person,4872
+gopro_0475,fog,2,building,12,rider,87
+gopro_0475,fog,2,building,13,car,140943
+gopro_0475,fog,2,building,14,truck,14847
+gopro_0475,fog,2,building,15,bus,3330
+gopro_0475,fog,2,building,16,train,10177
+gopro_0475,fog,2,building,17,motorcycle,1078
+gopro_0475,fog,2,building,18,bicycle,195
+gopro_0475,fog,3,wall,0,road,67180
+gopro_0475,fog,3,wall,1,sidewalk,278681
+gopro_0475,fog,3,wall,2,building,110041
+gopro_0475,fog,3,wall,4,fence,24523
+gopro_0475,fog,3,wall,5,pole,5276
+gopro_0475,fog,3,wall,6,traffic light,59
+gopro_0475,fog,3,wall,7,traffic sign,450
+gopro_0475,fog,3,wall,8,vegetation,110436
+gopro_0475,fog,3,wall,9,terrain,129933
+gopro_0475,fog,3,wall,10,sky,264
+gopro_0475,fog,3,wall,11,person,1777
+gopro_0475,fog,3,wall,13,car,6024
+gopro_0475,fog,3,wall,14,truck,69
+gopro_0475,fog,3,wall,15,bus,18
+gopro_0475,fog,3,wall,16,train,215
+gopro_0475,fog,3,wall,18,bicycle,2948
+gopro_0475,fog,4,fence,0,road,56381
+gopro_0475,fog,4,fence,1,sidewalk,26532
+gopro_0475,fog,4,fence,2,building,486692
+gopro_0475,fog,4,fence,3,wall,10075
+gopro_0475,fog,4,fence,5,pole,15966
+gopro_0475,fog,4,fence,6,traffic light,9
+gopro_0475,fog,4,fence,7,traffic sign,2370
+gopro_0475,fog,4,fence,8,vegetation,231335
+gopro_0475,fog,4,fence,9,terrain,10628
+gopro_0475,fog,4,fence,10,sky,4747
+gopro_0475,fog,4,fence,11,person,1321
+gopro_0475,fog,4,fence,12,rider,15
+gopro_0475,fog,4,fence,13,car,25997
+gopro_0475,fog,4,fence,14,truck,100
+gopro_0475,fog,4,fence,15,bus,3875
+gopro_0475,fog,4,fence,16,train,2159
+gopro_0475,fog,4,fence,17,motorcycle,739
+gopro_0475,fog,4,fence,18,bicycle,147
+gopro_0475,fog,5,pole,0,road,37019
+gopro_0475,fog,5,pole,1,sidewalk,23633
+gopro_0475,fog,5,pole,2,building,224445
+gopro_0475,fog,5,pole,3,wall,620
+gopro_0475,fog,5,pole,4,fence,5531
+gopro_0475,fog,5,pole,6,traffic light,1850
+gopro_0475,fog,5,pole,7,traffic sign,25200
+gopro_0475,fog,5,pole,8,vegetation,91392
+gopro_0475,fog,5,pole,9,terrain,10449
+gopro_0475,fog,5,pole,10,sky,42693
+gopro_0475,fog,5,pole,11,person,218
+gopro_0475,fog,5,pole,13,car,13387
+gopro_0475,fog,5,pole,14,truck,113
+gopro_0475,fog,5,pole,15,bus,521
+gopro_0475,fog,5,pole,16,train,177
+gopro_0475,fog,5,pole,18,bicycle,4652
+gopro_0475,fog,6,traffic light,0,road,1034
+gopro_0475,fog,6,traffic light,2,building,36432
+gopro_0475,fog,6,traffic light,4,fence,413
+gopro_0475,fog,6,traffic light,5,pole,3172
+gopro_0475,fog,6,traffic light,7,traffic sign,40613
+gopro_0475,fog,6,traffic light,8,vegetation,12910
+gopro_0475,fog,6,traffic light,10,sky,4806
+gopro_0475,fog,6,traffic light,13,car,3956
+gopro_0475,fog,6,traffic light,14,truck,1384
+gopro_0475,fog,6,traffic light,15,bus,748
+gopro_0475,fog,6,traffic light,16,train,1657
+gopro_0475,fog,7,traffic sign,0,road,433
+gopro_0475,fog,7,traffic sign,1,sidewalk,112
+gopro_0475,fog,7,traffic sign,2,building,66155
+gopro_0475,fog,7,traffic sign,3,wall,6
+gopro_0475,fog,7,traffic sign,4,fence,104
+gopro_0475,fog,7,traffic sign,5,pole,4674
+gopro_0475,fog,7,traffic sign,6,traffic light,7524
+gopro_0475,fog,7,traffic sign,8,vegetation,21506
+gopro_0475,fog,7,traffic sign,10,sky,13112
+gopro_0475,fog,7,traffic sign,11,person,170
+gopro_0475,fog,7,traffic sign,12,rider,11
+gopro_0475,fog,7,traffic sign,13,car,2382
+gopro_0475,fog,7,traffic sign,14,truck,956
+gopro_0475,fog,7,traffic sign,15,bus,101
+gopro_0475,fog,7,traffic sign,16,train,551
+gopro_0475,fog,7,traffic sign,18,bicycle,245
+gopro_0475,fog,8,vegetation,0,road,79555
+gopro_0475,fog,8,vegetation,1,sidewalk,124983
+gopro_0475,fog,8,vegetation,2,building,1316911
+gopro_0475,fog,8,vegetation,3,wall,4447
+gopro_0475,fog,8,vegetation,4,fence,2327
+gopro_0475,fog,8,vegetation,5,pole,18215
+gopro_0475,fog,8,vegetation,6,traffic light,1475
+gopro_0475,fog,8,vegetation,7,traffic sign,5067
+gopro_0475,fog,8,vegetation,9,terrain,266356
+gopro_0475,fog,8,vegetation,10,sky,287410
+gopro_0475,fog,8,vegetation,11,person,797
+gopro_0475,fog,8,vegetation,12,rider,11
+gopro_0475,fog,8,vegetation,13,car,19264
+gopro_0475,fog,8,vegetation,14,truck,27
+gopro_0475,fog,8,vegetation,15,bus,617
+gopro_0475,fog,8,vegetation,16,train,903
+gopro_0475,fog,8,vegetation,18,bicycle,92
+gopro_0475,fog,9,terrain,0,road,54389
+gopro_0475,fog,9,terrain,1,sidewalk,84774
+gopro_0475,fog,9,terrain,2,building,4854
+gopro_0475,fog,9,terrain,3,wall,937
+gopro_0475,fog,9,terrain,4,fence,1374
+gopro_0475,fog,9,terrain,5,pole,1381
+gopro_0475,fog,9,terrain,8,vegetation,124175
+gopro_0475,fog,9,terrain,10,sky,61
+gopro_0475,fog,9,terrain,13,car,1817
+gopro_0475,fog,9,terrain,17,motorcycle,28
+gopro_0475,fog,9,terrain,18,bicycle,138
+gopro_0475,fog,10,sky,0,road,14800
+gopro_0475,fog,10,sky,2,building,1076309
+gopro_0475,fog,10,sky,4,fence,1917
+gopro_0475,fog,10,sky,5,pole,31430
+gopro_0475,fog,10,sky,6,traffic light,4001
+gopro_0475,fog,10,sky,7,traffic sign,8552
+gopro_0475,fog,10,sky,8,vegetation,78405
+gopro_0475,fog,10,sky,13,car,7807
+gopro_0475,fog,11,person,0,road,3526
+gopro_0475,fog,11,person,1,sidewalk,2253
+gopro_0475,fog,11,person,2,building,8494
+gopro_0475,fog,11,person,3,wall,384
+gopro_0475,fog,11,person,4,fence,125
+gopro_0475,fog,11,person,5,pole,4968
+gopro_0475,fog,11,person,6,traffic light,409
+gopro_0475,fog,11,person,7,traffic sign,7
+gopro_0475,fog,11,person,8,vegetation,4481
+gopro_0475,fog,11,person,9,terrain,109
+gopro_0475,fog,11,person,12,rider,17
+gopro_0475,fog,11,person,13,car,5165
+gopro_0475,fog,11,person,14,truck,9
+gopro_0475,fog,11,person,18,bicycle,41
+gopro_0475,fog,12,rider,2,building,163
+gopro_0475,fog,12,rider,4,fence,7
+gopro_0475,fog,12,rider,8,vegetation,204
+gopro_0475,fog,12,rider,10,sky,9
+gopro_0475,fog,12,rider,11,person,3917
+gopro_0475,fog,12,rider,13,car,1941
+gopro_0475,fog,13,car,0,road,70048
+gopro_0475,fog,13,car,1,sidewalk,7212
+gopro_0475,fog,13,car,2,building,36984
+gopro_0475,fog,13,car,3,wall,1880
+gopro_0475,fog,13,car,4,fence,635
+gopro_0475,fog,13,car,5,pole,694
+gopro_0475,fog,13,car,6,traffic light,72
+gopro_0475,fog,13,car,7,traffic sign,727
+gopro_0475,fog,13,car,8,vegetation,16621
+gopro_0475,fog,13,car,9,terrain,3882
+gopro_0475,fog,13,car,10,sky,222
+gopro_0475,fog,13,car,11,person,47
+gopro_0475,fog,13,car,14,truck,17150
+gopro_0475,fog,13,car,15,bus,50356
+gopro_0475,fog,13,car,16,train,4
+gopro_0475,fog,13,car,18,bicycle,1199
+gopro_0475,fog,14,truck,0,road,755
+gopro_0475,fog,14,truck,2,building,29845
+gopro_0475,fog,14,truck,8,vegetation,1774
+gopro_0475,fog,14,truck,9,terrain,2629
+gopro_0475,fog,14,truck,13,car,50286
+gopro_0475,fog,14,truck,15,bus,10140
+gopro_0475,fog,16,train,0,road,750
+gopro_0475,fog,16,train,2,building,7229
+gopro_0475,fog,16,train,6,traffic light,14
+gopro_0475,fog,16,train,13,car,2032
+gopro_0475,fog,16,train,15,bus,10884
+gopro_0475,fog,17,motorcycle,2,building,1852
+gopro_0475,fog,17,motorcycle,9,terrain,136
+gopro_0475,fog,17,motorcycle,11,person,66
+gopro_0475,fog,17,motorcycle,12,rider,2
+gopro_0475,fog,17,motorcycle,13,car,8653
+gopro_0475,fog,17,motorcycle,18,bicycle,655
+gopro_0475,fog,18,bicycle,1,sidewalk,2
+gopro_0475,fog,18,bicycle,2,building,223
+gopro_0475,fog,18,bicycle,3,wall,6
+gopro_0475,fog,18,bicycle,4,fence,6
+gopro_0475,fog,18,bicycle,8,vegetation,1
+gopro_0475,fog,18,bicycle,9,terrain,1
+gopro_0475,fog,18,bicycle,11,person,598
+gopro_0475,fog,18,bicycle,12,rider,18
+gopro_0475,fog,18,bicycle,13,car,12
+gopro_0476,fog,0,road,1,sidewalk,146269
+gopro_0476,fog,0,road,2,building,828
+gopro_0476,fog,0,road,3,wall,7707
+gopro_0476,fog,0,road,4,fence,2608
+gopro_0476,fog,0,road,5,pole,3065
+gopro_0476,fog,0,road,7,traffic sign,1103
+gopro_0476,fog,0,road,8,vegetation,926
+gopro_0476,fog,0,road,9,terrain,60085
+gopro_0476,fog,0,road,11,person,1493
+gopro_0476,fog,0,road,12,rider,528
+gopro_0476,fog,0,road,13,car,42610
+gopro_0476,fog,0,road,14,truck,681
+gopro_0476,fog,0,road,15,bus,2009
+gopro_0476,fog,0,road,16,train,12588
+gopro_0476,fog,0,road,18,bicycle,1073
+gopro_0476,fog,1,sidewalk,0,road,703953
+gopro_0476,fog,1,sidewalk,2,building,22363
+gopro_0476,fog,1,sidewalk,3,wall,28166
+gopro_0476,fog,1,sidewalk,4,fence,1939
+gopro_0476,fog,1,sidewalk,5,pole,10491
+gopro_0476,fog,1,sidewalk,7,traffic sign,314
+gopro_0476,fog,1,sidewalk,8,vegetation,11342
+gopro_0476,fog,1,sidewalk,9,terrain,58375
+gopro_0476,fog,1,sidewalk,11,person,6498
+gopro_0476,fog,1,sidewalk,12,rider,990
+gopro_0476,fog,1,sidewalk,13,car,12183
+gopro_0476,fog,1,sidewalk,14,truck,661
+gopro_0476,fog,1,sidewalk,15,bus,166
+gopro_0476,fog,1,sidewalk,16,train,2107
+gopro_0476,fog,1,sidewalk,17,motorcycle,660
+gopro_0476,fog,1,sidewalk,18,bicycle,4339
+gopro_0476,fog,2,building,0,road,18222
+gopro_0476,fog,2,building,1,sidewalk,28446
+gopro_0476,fog,2,building,3,wall,9732
+gopro_0476,fog,2,building,4,fence,36026
+gopro_0476,fog,2,building,5,pole,15203
+gopro_0476,fog,2,building,6,traffic light,3741
+gopro_0476,fog,2,building,7,traffic sign,9535
+gopro_0476,fog,2,building,8,vegetation,196784
+gopro_0476,fog,2,building,9,terrain,5994
+gopro_0476,fog,2,building,10,sky,71785
+gopro_0476,fog,2,building,11,person,6622
+gopro_0476,fog,2,building,12,rider,1403
+gopro_0476,fog,2,building,13,car,21216
+gopro_0476,fog,2,building,14,truck,6703
+gopro_0476,fog,2,building,15,bus,2814
+gopro_0476,fog,2,building,16,train,99122
+gopro_0476,fog,2,building,17,motorcycle,3246
+gopro_0476,fog,2,building,18,bicycle,4441
+gopro_0476,fog,3,wall,0,road,10819
+gopro_0476,fog,3,wall,1,sidewalk,143490
+gopro_0476,fog,3,wall,2,building,171870
+gopro_0476,fog,3,wall,4,fence,13015
+gopro_0476,fog,3,wall,5,pole,6470
+gopro_0476,fog,3,wall,7,traffic sign,29
+gopro_0476,fog,3,wall,8,vegetation,63732
+gopro_0476,fog,3,wall,9,terrain,48172
+gopro_0476,fog,3,wall,10,sky,6
+gopro_0476,fog,3,wall,11,person,4851
+gopro_0476,fog,3,wall,12,rider,2262
+gopro_0476,fog,3,wall,13,car,11904
+gopro_0476,fog,3,wall,14,truck,1040
+gopro_0476,fog,3,wall,15,bus,69
+gopro_0476,fog,3,wall,16,train,75
+gopro_0476,fog,3,wall,17,motorcycle,267
+gopro_0476,fog,3,wall,18,bicycle,1909
+gopro_0476,fog,4,fence,0,road,248527
+gopro_0476,fog,4,fence,1,sidewalk,115033
+gopro_0476,fog,4,fence,2,building,967452
+gopro_0476,fog,4,fence,3,wall,352178
+gopro_0476,fog,4,fence,5,pole,53001
+gopro_0476,fog,4,fence,7,traffic sign,6230
+gopro_0476,fog,4,fence,8,vegetation,260266
+gopro_0476,fog,4,fence,9,terrain,18829
+gopro_0476,fog,4,fence,10,sky,50744
+gopro_0476,fog,4,fence,11,person,8636
+gopro_0476,fog,4,fence,13,car,6772
+gopro_0476,fog,4,fence,14,truck,481
+gopro_0476,fog,4,fence,15,bus,1477
+gopro_0476,fog,4,fence,16,train,10321
+gopro_0476,fog,4,fence,17,motorcycle,375
+gopro_0476,fog,4,fence,18,bicycle,319
+gopro_0476,fog,5,pole,0,road,16607
+gopro_0476,fog,5,pole,1,sidewalk,30710
+gopro_0476,fog,5,pole,2,building,457225
+gopro_0476,fog,5,pole,3,wall,13052
+gopro_0476,fog,5,pole,4,fence,4697
+gopro_0476,fog,5,pole,6,traffic light,4843
+gopro_0476,fog,5,pole,7,traffic sign,21571
+gopro_0476,fog,5,pole,8,vegetation,119261
+gopro_0476,fog,5,pole,9,terrain,21950
+gopro_0476,fog,5,pole,10,sky,122236
+gopro_0476,fog,5,pole,11,person,7368
+gopro_0476,fog,5,pole,12,rider,30
+gopro_0476,fog,5,pole,13,car,25050
+gopro_0476,fog,5,pole,14,truck,3744
+gopro_0476,fog,5,pole,15,bus,480
+gopro_0476,fog,5,pole,16,train,11246
+gopro_0476,fog,5,pole,17,motorcycle,203
+gopro_0476,fog,5,pole,18,bicycle,1239
+gopro_0476,fog,6,traffic light,0,road,109
+gopro_0476,fog,6,traffic light,2,building,25926
+gopro_0476,fog,6,traffic light,5,pole,4348
+gopro_0476,fog,6,traffic light,7,traffic sign,1034
+gopro_0476,fog,6,traffic light,8,vegetation,10444
+gopro_0476,fog,6,traffic light,10,sky,2542
+gopro_0476,fog,6,traffic light,13,car,433
+gopro_0476,fog,6,traffic light,14,truck,316
+gopro_0476,fog,6,traffic light,15,bus,81
+gopro_0476,fog,6,traffic light,16,train,3123
+gopro_0476,fog,7,traffic sign,0,road,19607
+gopro_0476,fog,7,traffic sign,1,sidewalk,1111
+gopro_0476,fog,7,traffic sign,2,building,63330
+gopro_0476,fog,7,traffic sign,3,wall,777
+gopro_0476,fog,7,traffic sign,4,fence,608
+gopro_0476,fog,7,traffic sign,5,pole,4787
+gopro_0476,fog,7,traffic sign,6,traffic light,1469
+gopro_0476,fog,7,traffic sign,8,vegetation,12259
+gopro_0476,fog,7,traffic sign,9,terrain,433
+gopro_0476,fog,7,traffic sign,10,sky,670
+gopro_0476,fog,7,traffic sign,11,person,2209
+gopro_0476,fog,7,traffic sign,12,rider,52
+gopro_0476,fog,7,traffic sign,13,car,6518
+gopro_0476,fog,7,traffic sign,14,truck,18
+gopro_0476,fog,7,traffic sign,15,bus,235
+gopro_0476,fog,7,traffic sign,16,train,3133
+gopro_0476,fog,7,traffic sign,18,bicycle,72
+gopro_0476,fog,8,vegetation,0,road,27133
+gopro_0476,fog,8,vegetation,1,sidewalk,48970
+gopro_0476,fog,8,vegetation,2,building,2615409
+gopro_0476,fog,8,vegetation,3,wall,71937
+gopro_0476,fog,8,vegetation,4,fence,21339
+gopro_0476,fog,8,vegetation,5,pole,54097
+gopro_0476,fog,8,vegetation,6,traffic light,7440
+gopro_0476,fog,8,vegetation,7,traffic sign,7502
+gopro_0476,fog,8,vegetation,9,terrain,853821
+gopro_0476,fog,8,vegetation,10,sky,532480
+gopro_0476,fog,8,vegetation,11,person,2267
+gopro_0476,fog,8,vegetation,12,rider,1323
+gopro_0476,fog,8,vegetation,13,car,17078
+gopro_0476,fog,8,vegetation,14,truck,1213
+gopro_0476,fog,8,vegetation,15,bus,1131
+gopro_0476,fog,8,vegetation,16,train,2522
+gopro_0476,fog,8,vegetation,17,motorcycle,1076
+gopro_0476,fog,8,vegetation,18,bicycle,847
+gopro_0476,fog,9,terrain,0,road,49371
+gopro_0476,fog,9,terrain,1,sidewalk,95700
+gopro_0476,fog,9,terrain,2,building,15096
+gopro_0476,fog,9,terrain,3,wall,20981
+gopro_0476,fog,9,terrain,4,fence,595
+gopro_0476,fog,9,terrain,5,pole,1770
+gopro_0476,fog,9,terrain,7,traffic sign,366
+gopro_0476,fog,9,terrain,8,vegetation,112748
+gopro_0476,fog,9,terrain,10,sky,1
+gopro_0476,fog,9,terrain,11,person,357
+gopro_0476,fog,9,terrain,12,rider,539
+gopro_0476,fog,9,terrain,13,car,4577
+gopro_0476,fog,9,terrain,14,truck,68
+gopro_0476,fog,9,terrain,15,bus,95
+gopro_0476,fog,9,terrain,16,train,416
+gopro_0476,fog,9,terrain,17,motorcycle,1
+gopro_0476,fog,9,terrain,18,bicycle,5
+gopro_0476,fog,10,sky,0,road,22165
+gopro_0476,fog,10,sky,2,building,1599396
+gopro_0476,fog,10,sky,3,wall,547
+gopro_0476,fog,10,sky,4,fence,50
+gopro_0476,fog,10,sky,5,pole,18299
+gopro_0476,fog,10,sky,6,traffic light,2282
+gopro_0476,fog,10,sky,7,traffic sign,7486
+gopro_0476,fog,10,sky,8,vegetation,170646
+gopro_0476,fog,10,sky,13,car,903
+gopro_0476,fog,10,sky,14,truck,2882
+gopro_0476,fog,10,sky,16,train,20654
+gopro_0476,fog,11,person,0,road,2458
+gopro_0476,fog,11,person,1,sidewalk,8161
+gopro_0476,fog,11,person,2,building,9995
+gopro_0476,fog,11,person,3,wall,699
+gopro_0476,fog,11,person,4,fence,47
+gopro_0476,fog,11,person,5,pole,1470
+gopro_0476,fog,11,person,7,traffic sign,430
+gopro_0476,fog,11,person,8,vegetation,10523
+gopro_0476,fog,11,person,9,terrain,753
+gopro_0476,fog,11,person,10,sky,6
+gopro_0476,fog,11,person,12,rider,9795
+gopro_0476,fog,11,person,13,car,13120
+gopro_0476,fog,11,person,16,train,2854
+gopro_0476,fog,11,person,17,motorcycle,10
+gopro_0476,fog,11,person,18,bicycle,2663
+gopro_0476,fog,12,rider,0,road,274
+gopro_0476,fog,12,rider,1,sidewalk,201
+gopro_0476,fog,12,rider,2,building,867
+gopro_0476,fog,12,rider,3,wall,150
+gopro_0476,fog,12,rider,5,pole,22
+gopro_0476,fog,12,rider,6,traffic light,139
+gopro_0476,fog,12,rider,7,traffic sign,59
+gopro_0476,fog,12,rider,8,vegetation,1431
+gopro_0476,fog,12,rider,9,terrain,87
+gopro_0476,fog,12,rider,10,sky,5
+gopro_0476,fog,12,rider,11,person,1066
+gopro_0476,fog,12,rider,13,car,1150
+gopro_0476,fog,12,rider,17,motorcycle,967
+gopro_0476,fog,12,rider,18,bicycle,8443
+gopro_0476,fog,13,car,0,road,24479
+gopro_0476,fog,13,car,1,sidewalk,1987
+gopro_0476,fog,13,car,2,building,38121
+gopro_0476,fog,13,car,3,wall,9448
+gopro_0476,fog,13,car,4,fence,2003
+gopro_0476,fog,13,car,5,pole,2948
+gopro_0476,fog,13,car,7,traffic sign,1194
+gopro_0476,fog,13,car,8,vegetation,21291
+gopro_0476,fog,13,car,9,terrain,8302
+gopro_0476,fog,13,car,10,sky,812
+gopro_0476,fog,13,car,11,person,3785
+gopro_0476,fog,13,car,12,rider,3544
+gopro_0476,fog,13,car,14,truck,8959
+gopro_0476,fog,13,car,15,bus,1380
+gopro_0476,fog,13,car,16,train,758
+gopro_0476,fog,13,car,17,motorcycle,1213
+gopro_0476,fog,13,car,18,bicycle,3767
+gopro_0476,fog,14,truck,0,road,14370
+gopro_0476,fog,14,truck,1,sidewalk,156
+gopro_0476,fog,14,truck,2,building,56883
+gopro_0476,fog,14,truck,3,wall,200
+gopro_0476,fog,14,truck,4,fence,172
+gopro_0476,fog,14,truck,5,pole,558
+gopro_0476,fog,14,truck,6,traffic light,937
+gopro_0476,fog,14,truck,7,traffic sign,24463
+gopro_0476,fog,14,truck,8,vegetation,10679
+gopro_0476,fog,14,truck,9,terrain,1754
+gopro_0476,fog,14,truck,10,sky,2358
+gopro_0476,fog,14,truck,11,person,304
+gopro_0476,fog,14,truck,13,car,86642
+gopro_0476,fog,14,truck,15,bus,17585
+gopro_0476,fog,14,truck,16,train,2771
+gopro_0476,fog,14,truck,18,bicycle,34
+gopro_0476,fog,15,bus,0,road,2061
+gopro_0476,fog,15,bus,1,sidewalk,672
+gopro_0476,fog,15,bus,2,building,71228
+gopro_0476,fog,15,bus,3,wall,329
+gopro_0476,fog,15,bus,4,fence,818
+gopro_0476,fog,15,bus,5,pole,1484
+gopro_0476,fog,15,bus,6,traffic light,46
+gopro_0476,fog,15,bus,7,traffic sign,1428
+gopro_0476,fog,15,bus,8,vegetation,368
+gopro_0476,fog,15,bus,10,sky,1862
+gopro_0476,fog,15,bus,12,rider,475
+gopro_0476,fog,15,bus,13,car,35398
+gopro_0476,fog,15,bus,16,train,77547
+gopro_0476,fog,16,train,0,road,30957
+gopro_0476,fog,16,train,1,sidewalk,4716
+gopro_0476,fog,16,train,2,building,81142
+gopro_0476,fog,16,train,4,fence,1395
+gopro_0476,fog,16,train,5,pole,1006
+gopro_0476,fog,16,train,6,traffic light,145
+gopro_0476,fog,16,train,7,traffic sign,680
+gopro_0476,fog,16,train,8,vegetation,10011
+gopro_0476,fog,16,train,9,terrain,219
+gopro_0476,fog,16,train,10,sky,2050
+gopro_0476,fog,16,train,11,person,4603
+gopro_0476,fog,16,train,13,car,11932
+gopro_0476,fog,16,train,14,truck,43
+gopro_0476,fog,16,train,15,bus,3303
+gopro_0476,fog,17,motorcycle,0,road,810
+gopro_0476,fog,17,motorcycle,1,sidewalk,136
+gopro_0476,fog,17,motorcycle,2,building,669
+gopro_0476,fog,17,motorcycle,3,wall,56
+gopro_0476,fog,17,motorcycle,5,pole,167
+gopro_0476,fog,17,motorcycle,8,vegetation,677
+gopro_0476,fog,17,motorcycle,9,terrain,260
+gopro_0476,fog,17,motorcycle,11,person,88
+gopro_0476,fog,17,motorcycle,12,rider,590
+gopro_0476,fog,17,motorcycle,13,car,1318
+gopro_0476,fog,17,motorcycle,18,bicycle,3098
+gopro_0476,fog,18,bicycle,0,road,8107
+gopro_0476,fog,18,bicycle,1,sidewalk,631
+gopro_0476,fog,18,bicycle,2,building,947
+gopro_0476,fog,18,bicycle,3,wall,1066
+gopro_0476,fog,18,bicycle,4,fence,50
+gopro_0476,fog,18,bicycle,5,pole,71
+gopro_0476,fog,18,bicycle,6,traffic light,60
+gopro_0476,fog,18,bicycle,7,traffic sign,128
+gopro_0476,fog,18,bicycle,8,vegetation,233
+gopro_0476,fog,18,bicycle,9,terrain,38
+gopro_0476,fog,18,bicycle,11,person,1708
+gopro_0476,fog,18,bicycle,12,rider,5695
+gopro_0476,fog,18,bicycle,13,car,2030
+gopro_0476,fog,18,bicycle,17,motorcycle,5818
+gopro_0477,fog,0,road,1,sidewalk,328675
+gopro_0477,fog,0,road,2,building,7634
+gopro_0477,fog,0,road,3,wall,39857
+gopro_0477,fog,0,road,4,fence,7069
+gopro_0477,fog,0,road,5,pole,3568
+gopro_0477,fog,0,road,6,traffic light,2
+gopro_0477,fog,0,road,7,traffic sign,312
+gopro_0477,fog,0,road,8,vegetation,2478
+gopro_0477,fog,0,road,9,terrain,248656
+gopro_0477,fog,0,road,11,person,31
+gopro_0477,fog,0,road,12,rider,5
+gopro_0477,fog,0,road,13,car,100271
+gopro_0477,fog,0,road,14,truck,8809
+gopro_0477,fog,0,road,15,bus,4608
+gopro_0477,fog,0,road,17,motorcycle,107
+gopro_0477,fog,0,road,18,bicycle,85
+gopro_0477,fog,1,sidewalk,0,road,1852928
+gopro_0477,fog,1,sidewalk,2,building,7962
+gopro_0477,fog,1,sidewalk,3,wall,15863
+gopro_0477,fog,1,sidewalk,4,fence,73
+gopro_0477,fog,1,sidewalk,5,pole,1435
+gopro_0477,fog,1,sidewalk,7,traffic sign,206
+gopro_0477,fog,1,sidewalk,8,vegetation,5108
+gopro_0477,fog,1,sidewalk,9,terrain,155519
+gopro_0477,fog,1,sidewalk,11,person,373
+gopro_0477,fog,1,sidewalk,12,rider,37
+gopro_0477,fog,1,sidewalk,13,car,5145
+gopro_0477,fog,1,sidewalk,15,bus,147
+gopro_0477,fog,1,sidewalk,17,motorcycle,3
+gopro_0477,fog,1,sidewalk,18,bicycle,376
+gopro_0477,fog,2,building,0,road,26439
+gopro_0477,fog,2,building,1,sidewalk,28640
+gopro_0477,fog,2,building,3,wall,30146
+gopro_0477,fog,2,building,4,fence,37132
+gopro_0477,fog,2,building,5,pole,16896
+gopro_0477,fog,2,building,6,traffic light,1257
+gopro_0477,fog,2,building,7,traffic sign,12875
+gopro_0477,fog,2,building,8,vegetation,165917
+gopro_0477,fog,2,building,9,terrain,16331
+gopro_0477,fog,2,building,10,sky,75686
+gopro_0477,fog,2,building,11,person,1273
+gopro_0477,fog,2,building,12,rider,113
+gopro_0477,fog,2,building,13,car,64348
+gopro_0477,fog,2,building,14,truck,6196
+gopro_0477,fog,2,building,15,bus,7520
+gopro_0477,fog,2,building,16,train,5719
+gopro_0477,fog,2,building,18,bicycle,164
+gopro_0477,fog,3,wall,0,road,363025
+gopro_0477,fog,3,wall,1,sidewalk,546196
+gopro_0477,fog,3,wall,2,building,1192153
+gopro_0477,fog,3,wall,4,fence,46479
+gopro_0477,fog,3,wall,5,pole,10160
+gopro_0477,fog,3,wall,7,traffic sign,135
+gopro_0477,fog,3,wall,8,vegetation,342283
+gopro_0477,fog,3,wall,9,terrain,213014
+gopro_0477,fog,3,wall,10,sky,178
+gopro_0477,fog,3,wall,11,person,464
+gopro_0477,fog,3,wall,13,car,4310
+gopro_0477,fog,3,wall,14,truck,4541
+gopro_0477,fog,3,wall,18,bicycle,272
+gopro_0477,fog,4,fence,0,road,271493
+gopro_0477,fog,4,fence,1,sidewalk,106577
+gopro_0477,fog,4,fence,2,building,4306491
+gopro_0477,fog,4,fence,3,wall,1447864
+gopro_0477,fog,4,fence,5,pole,61624
+gopro_0477,fog,4,fence,6,traffic light,7
+gopro_0477,fog,4,fence,7,traffic sign,751
+gopro_0477,fog,4,fence,8,vegetation,1762331
+gopro_0477,fog,4,fence,9,terrain,879160
+gopro_0477,fog,4,fence,10,sky,232594
+gopro_0477,fog,4,fence,11,person,514
+gopro_0477,fog,4,fence,13,car,32911
+gopro_0477,fog,4,fence,14,truck,9069
+gopro_0477,fog,4,fence,15,bus,7632
+gopro_0477,fog,4,fence,16,train,3940
+gopro_0477,fog,4,fence,17,motorcycle,179
+gopro_0477,fog,4,fence,18,bicycle,71
+gopro_0477,fog,5,pole,0,road,53856
+gopro_0477,fog,5,pole,1,sidewalk,5036
+gopro_0477,fog,5,pole,2,building,565636
+gopro_0477,fog,5,pole,3,wall,11087
+gopro_0477,fog,5,pole,4,fence,17678
+gopro_0477,fog,5,pole,6,traffic light,2143
+gopro_0477,fog,5,pole,7,traffic sign,31923
+gopro_0477,fog,5,pole,8,vegetation,245725
+gopro_0477,fog,5,pole,9,terrain,70513
+gopro_0477,fog,5,pole,10,sky,131446
+gopro_0477,fog,5,pole,11,person,682
+gopro_0477,fog,5,pole,13,car,34614
+gopro_0477,fog,5,pole,14,truck,13857
+gopro_0477,fog,5,pole,15,bus,1001
+gopro_0477,fog,5,pole,16,train,12
+gopro_0477,fog,5,pole,17,motorcycle,52
+gopro_0477,fog,5,pole,18,bicycle,944
+gopro_0477,fog,6,traffic light,0,road,2328
+gopro_0477,fog,6,traffic light,1,sidewalk,6
+gopro_0477,fog,6,traffic light,2,building,29654
+gopro_0477,fog,6,traffic light,3,wall,224
+gopro_0477,fog,6,traffic light,4,fence,320
+gopro_0477,fog,6,traffic light,5,pole,9396
+gopro_0477,fog,6,traffic light,7,traffic sign,116878
+gopro_0477,fog,6,traffic light,8,vegetation,8977
+gopro_0477,fog,6,traffic light,9,terrain,522
+gopro_0477,fog,6,traffic light,10,sky,2067
+gopro_0477,fog,6,traffic light,13,car,10483
+gopro_0477,fog,6,traffic light,14,truck,2591
+gopro_0477,fog,6,traffic light,15,bus,230
+gopro_0477,fog,6,traffic light,17,motorcycle,89
+gopro_0477,fog,7,traffic sign,0,road,1690
+gopro_0477,fog,7,traffic sign,1,sidewalk,65
+gopro_0477,fog,7,traffic sign,2,building,46330
+gopro_0477,fog,7,traffic sign,3,wall,565
+gopro_0477,fog,7,traffic sign,4,fence,3177
+gopro_0477,fog,7,traffic sign,5,pole,4691
+gopro_0477,fog,7,traffic sign,6,traffic light,1355
+gopro_0477,fog,7,traffic sign,8,vegetation,20308
+gopro_0477,fog,7,traffic sign,9,terrain,1761
+gopro_0477,fog,7,traffic sign,10,sky,7525
+gopro_0477,fog,7,traffic sign,11,person,860
+gopro_0477,fog,7,traffic sign,12,rider,127
+gopro_0477,fog,7,traffic sign,13,car,18409
+gopro_0477,fog,7,traffic sign,14,truck,25457
+gopro_0477,fog,7,traffic sign,15,bus,23
+gopro_0477,fog,7,traffic sign,16,train,4
+gopro_0477,fog,7,traffic sign,17,motorcycle,224
+gopro_0477,fog,7,traffic sign,18,bicycle,45
+gopro_0477,fog,8,vegetation,0,road,1945600
+gopro_0477,fog,8,vegetation,1,sidewalk,60453
+gopro_0477,fog,8,vegetation,2,building,4004297
+gopro_0477,fog,8,vegetation,3,wall,204925
+gopro_0477,fog,8,vegetation,4,fence,97831
+gopro_0477,fog,8,vegetation,5,pole,93452
+gopro_0477,fog,8,vegetation,6,traffic light,2605
+gopro_0477,fog,8,vegetation,7,traffic sign,23246
+gopro_0477,fog,8,vegetation,9,terrain,1608758
+gopro_0477,fog,8,vegetation,10,sky,1826856
+gopro_0477,fog,8,vegetation,11,person,1129
+gopro_0477,fog,8,vegetation,12,rider,52
+gopro_0477,fog,8,vegetation,13,car,43639
+gopro_0477,fog,8,vegetation,14,truck,20048
+gopro_0477,fog,8,vegetation,15,bus,2433
+gopro_0477,fog,8,vegetation,16,train,1942
+gopro_0477,fog,8,vegetation,17,motorcycle,495
+gopro_0477,fog,8,vegetation,18,bicycle,224
+gopro_0477,fog,9,terrain,0,road,307144
+gopro_0477,fog,9,terrain,1,sidewalk,153708
+gopro_0477,fog,9,terrain,2,building,44554
+gopro_0477,fog,9,terrain,3,wall,43529
+gopro_0477,fog,9,terrain,4,fence,14856
+gopro_0477,fog,9,terrain,5,pole,9402
+gopro_0477,fog,9,terrain,7,traffic sign,328
+gopro_0477,fog,9,terrain,8,vegetation,1044625
+gopro_0477,fog,9,terrain,10,sky,23639
+gopro_0477,fog,9,terrain,11,person,25
+gopro_0477,fog,9,terrain,12,rider,14
+gopro_0477,fog,9,terrain,13,car,6907
+gopro_0477,fog,9,terrain,14,truck,262
+gopro_0477,fog,9,terrain,15,bus,20
+gopro_0477,fog,9,terrain,18,bicycle,230
+gopro_0477,fog,10,sky,0,road,317762
+gopro_0477,fog,10,sky,2,building,26152021
+gopro_0477,fog,10,sky,3,wall,10115
+gopro_0477,fog,10,sky,4,fence,11560
+gopro_0477,fog,10,sky,5,pole,80833
+gopro_0477,fog,10,sky,6,traffic light,3122
+gopro_0477,fog,10,sky,7,traffic sign,24141
+gopro_0477,fog,10,sky,8,vegetation,720897
+gopro_0477,fog,10,sky,9,terrain,4996
+gopro_0477,fog,10,sky,11,person,27
+gopro_0477,fog,10,sky,13,car,11879
+gopro_0477,fog,10,sky,14,truck,14953
+gopro_0477,fog,10,sky,15,bus,29
+gopro_0477,fog,11,person,0,road,30
+gopro_0477,fog,11,person,1,sidewalk,84
+gopro_0477,fog,11,person,2,building,1946
+gopro_0477,fog,11,person,3,wall,65
+gopro_0477,fog,11,person,5,pole,179
+gopro_0477,fog,11,person,6,traffic light,28
+gopro_0477,fog,11,person,7,traffic sign,48
+gopro_0477,fog,11,person,8,vegetation,708
+gopro_0477,fog,11,person,12,rider,772
+gopro_0477,fog,11,person,13,car,1042
+gopro_0477,fog,11,person,14,truck,64
+gopro_0477,fog,11,person,15,bus,36
+gopro_0477,fog,11,person,17,motorcycle,697
+gopro_0477,fog,11,person,18,bicycle,76
+gopro_0477,fog,12,rider,1,sidewalk,8
+gopro_0477,fog,12,rider,2,building,97
+gopro_0477,fog,12,rider,5,pole,11
+gopro_0477,fog,12,rider,9,terrain,90
+gopro_0477,fog,12,rider,13,car,146
+gopro_0477,fog,12,rider,17,motorcycle,238
+gopro_0477,fog,12,rider,18,bicycle,226
+gopro_0477,fog,13,car,0,road,78282
+gopro_0477,fog,13,car,1,sidewalk,7603
+gopro_0477,fog,13,car,2,building,46684
+gopro_0477,fog,13,car,3,wall,4219
+gopro_0477,fog,13,car,4,fence,6836
+gopro_0477,fog,13,car,5,pole,1573
+gopro_0477,fog,13,car,6,traffic light,145
+gopro_0477,fog,13,car,7,traffic sign,341
+gopro_0477,fog,13,car,8,vegetation,23509
+gopro_0477,fog,13,car,9,terrain,19696
+gopro_0477,fog,13,car,10,sky,875
+gopro_0477,fog,13,car,11,person,21
+gopro_0477,fog,13,car,14,truck,5750
+gopro_0477,fog,13,car,15,bus,200
+gopro_0477,fog,13,car,16,train,1
+gopro_0477,fog,13,car,17,motorcycle,9
+gopro_0477,fog,13,car,18,bicycle,805
+gopro_0477,fog,14,truck,0,road,83890
+gopro_0477,fog,14,truck,1,sidewalk,38992
+gopro_0477,fog,14,truck,2,building,127666
+gopro_0477,fog,14,truck,3,wall,6869
+gopro_0477,fog,14,truck,4,fence,12902
+gopro_0477,fog,14,truck,5,pole,10664
+gopro_0477,fog,14,truck,6,traffic light,1519
+gopro_0477,fog,14,truck,7,traffic sign,32693
+gopro_0477,fog,14,truck,8,vegetation,63324
+gopro_0477,fog,14,truck,9,terrain,11721
+gopro_0477,fog,14,truck,10,sky,6750
+gopro_0477,fog,14,truck,11,person,1289
+gopro_0477,fog,14,truck,12,rider,6275
+gopro_0477,fog,14,truck,13,car,410008
+gopro_0477,fog,14,truck,15,bus,25572
+gopro_0477,fog,14,truck,17,motorcycle,6642
+gopro_0477,fog,14,truck,18,bicycle,1051
+gopro_0477,fog,15,bus,0,road,1484
+gopro_0477,fog,15,bus,2,building,1023
+gopro_0477,fog,15,bus,5,pole,873
+gopro_0477,fog,15,bus,8,vegetation,792
+gopro_0477,fog,15,bus,9,terrain,261
+gopro_0477,fog,15,bus,10,sky,77
+gopro_0477,fog,15,bus,13,car,4102
+gopro_0477,fog,17,motorcycle,0,road,416
+gopro_0477,fog,17,motorcycle,2,building,491
+gopro_0477,fog,17,motorcycle,5,pole,17
+gopro_0477,fog,17,motorcycle,9,terrain,1080
+gopro_0477,fog,17,motorcycle,11,person,51
+gopro_0477,fog,17,motorcycle,12,rider,834
+gopro_0477,fog,17,motorcycle,13,car,3810
+gopro_0477,fog,17,motorcycle,18,bicycle,89
+gopro_0477,fog,18,bicycle,0,road,50
+gopro_0477,fog,18,bicycle,1,sidewalk,23
+gopro_0477,fog,18,bicycle,2,building,3219
+gopro_0477,fog,18,bicycle,3,wall,835
+gopro_0477,fog,18,bicycle,8,vegetation,184
+gopro_0477,fog,18,bicycle,12,rider,77
+gopro_0478,fog,0,road,1,sidewalk,211859
+gopro_0478,fog,0,road,2,building,1174
+gopro_0478,fog,0,road,3,wall,11923
+gopro_0478,fog,0,road,4,fence,1385
+gopro_0478,fog,0,road,5,pole,1592
+gopro_0478,fog,0,road,7,traffic sign,241
+gopro_0478,fog,0,road,8,vegetation,1253
+gopro_0478,fog,0,road,9,terrain,191524
+gopro_0478,fog,0,road,10,sky,11
+gopro_0478,fog,0,road,11,person,157
+gopro_0478,fog,0,road,13,car,53043
+gopro_0478,fog,0,road,14,truck,496
+gopro_0478,fog,0,road,15,bus,9965
+gopro_0478,fog,0,road,18,bicycle,374
+gopro_0478,fog,1,sidewalk,0,road,937576
+gopro_0478,fog,1,sidewalk,2,building,3002
+gopro_0478,fog,1,sidewalk,3,wall,19665
+gopro_0478,fog,1,sidewalk,4,fence,1677
+gopro_0478,fog,1,sidewalk,5,pole,1363
+gopro_0478,fog,1,sidewalk,7,traffic sign,22
+gopro_0478,fog,1,sidewalk,8,vegetation,2240
+gopro_0478,fog,1,sidewalk,9,terrain,129622
+gopro_0478,fog,1,sidewalk,11,person,29
+gopro_0478,fog,1,sidewalk,13,car,1552
+gopro_0478,fog,1,sidewalk,15,bus,27
+gopro_0478,fog,1,sidewalk,18,bicycle,3
+gopro_0478,fog,2,building,0,road,3963
+gopro_0478,fog,2,building,1,sidewalk,6135
+gopro_0478,fog,2,building,3,wall,12821
+gopro_0478,fog,2,building,4,fence,60737
+gopro_0478,fog,2,building,5,pole,10582
+gopro_0478,fog,2,building,6,traffic light,545
+gopro_0478,fog,2,building,7,traffic sign,9698
+gopro_0478,fog,2,building,8,vegetation,92672
+gopro_0478,fog,2,building,9,terrain,13883
+gopro_0478,fog,2,building,10,sky,26252
+gopro_0478,fog,2,building,11,person,1188
+gopro_0478,fog,2,building,13,car,51266
+gopro_0478,fog,2,building,14,truck,4723
+gopro_0478,fog,2,building,15,bus,9219
+gopro_0478,fog,2,building,16,train,752
+gopro_0478,fog,2,building,18,bicycle,447
+gopro_0478,fog,3,wall,0,road,52920
+gopro_0478,fog,3,wall,1,sidewalk,92518
+gopro_0478,fog,3,wall,2,building,115466
+gopro_0478,fog,3,wall,4,fence,116696
+gopro_0478,fog,3,wall,5,pole,2817
+gopro_0478,fog,3,wall,7,traffic sign,317
+gopro_0478,fog,3,wall,8,vegetation,468119
+gopro_0478,fog,3,wall,9,terrain,207546
+gopro_0478,fog,3,wall,10,sky,237
+gopro_0478,fog,3,wall,11,person,18
+gopro_0478,fog,3,wall,13,car,7670
+gopro_0478,fog,3,wall,14,truck,1266
+gopro_0478,fog,3,wall,15,bus,709
+gopro_0478,fog,4,fence,0,road,22036
+gopro_0478,fog,4,fence,1,sidewalk,20004
+gopro_0478,fog,4,fence,2,building,826509
+gopro_0478,fog,4,fence,3,wall,215774
+gopro_0478,fog,4,fence,5,pole,28275
+gopro_0478,fog,4,fence,7,traffic sign,1666
+gopro_0478,fog,4,fence,8,vegetation,491569
+gopro_0478,fog,4,fence,9,terrain,456946
+gopro_0478,fog,4,fence,10,sky,113874
+gopro_0478,fog,4,fence,11,person,438
+gopro_0478,fog,4,fence,13,car,28218
+gopro_0478,fog,4,fence,15,bus,29
+gopro_0478,fog,4,fence,18,bicycle,14
+gopro_0478,fog,5,pole,0,road,20798
+gopro_0478,fog,5,pole,1,sidewalk,3129
+gopro_0478,fog,5,pole,2,building,253787
+gopro_0478,fog,5,pole,3,wall,4932
+gopro_0478,fog,5,pole,4,fence,10714
+gopro_0478,fog,5,pole,6,traffic light,8499
+gopro_0478,fog,5,pole,7,traffic sign,17764
+gopro_0478,fog,5,pole,8,vegetation,150449
+gopro_0478,fog,5,pole,9,terrain,50663
+gopro_0478,fog,5,pole,10,sky,108683
+gopro_0478,fog,5,pole,11,person,1115
+gopro_0478,fog,5,pole,12,rider,76
+gopro_0478,fog,5,pole,13,car,16322
+gopro_0478,fog,5,pole,14,truck,1517
+gopro_0478,fog,5,pole,15,bus,1600
+gopro_0478,fog,5,pole,16,train,5
+gopro_0478,fog,5,pole,18,bicycle,194
+gopro_0478,fog,6,traffic light,0,road,2480
+gopro_0478,fog,6,traffic light,1,sidewalk,1
+gopro_0478,fog,6,traffic light,2,building,34425
+gopro_0478,fog,6,traffic light,3,wall,366
+gopro_0478,fog,6,traffic light,4,fence,790
+gopro_0478,fog,6,traffic light,5,pole,6171
+gopro_0478,fog,6,traffic light,7,traffic sign,71484
+gopro_0478,fog,6,traffic light,8,vegetation,7493
+gopro_0478,fog,6,traffic light,9,terrain,298
+gopro_0478,fog,6,traffic light,10,sky,3976
+gopro_0478,fog,6,traffic light,11,person,29
+gopro_0478,fog,6,traffic light,13,car,2022
+gopro_0478,fog,6,traffic light,14,truck,683
+gopro_0478,fog,6,traffic light,15,bus,1134
+gopro_0478,fog,6,traffic light,16,train,22
+gopro_0478,fog,7,traffic sign,0,road,680
+gopro_0478,fog,7,traffic sign,1,sidewalk,110
+gopro_0478,fog,7,traffic sign,2,building,79294
+gopro_0478,fog,7,traffic sign,3,wall,178
+gopro_0478,fog,7,traffic sign,4,fence,1902
+gopro_0478,fog,7,traffic sign,5,pole,2806
+gopro_0478,fog,7,traffic sign,6,traffic light,681
+gopro_0478,fog,7,traffic sign,8,vegetation,18871
+gopro_0478,fog,7,traffic sign,9,terrain,1628
+gopro_0478,fog,7,traffic sign,10,sky,8392
+gopro_0478,fog,7,traffic sign,11,person,617
+gopro_0478,fog,7,traffic sign,13,car,4633
+gopro_0478,fog,7,traffic sign,14,truck,404
+gopro_0478,fog,7,traffic sign,15,bus,5770
+gopro_0478,fog,7,traffic sign,16,train,255
+gopro_0478,fog,8,vegetation,0,road,360786
+gopro_0478,fog,8,vegetation,1,sidewalk,32020
+gopro_0478,fog,8,vegetation,2,building,1355959
+gopro_0478,fog,8,vegetation,3,wall,168020
+gopro_0478,fog,8,vegetation,4,fence,29445
+gopro_0478,fog,8,vegetation,5,pole,76693
+gopro_0478,fog,8,vegetation,6,traffic light,2178
+gopro_0478,fog,8,vegetation,7,traffic sign,12512
+gopro_0478,fog,8,vegetation,9,terrain,1191899
+gopro_0478,fog,8,vegetation,10,sky,748553
+gopro_0478,fog,8,vegetation,11,person,1043
+gopro_0478,fog,8,vegetation,12,rider,388
+gopro_0478,fog,8,vegetation,13,car,25608
+gopro_0478,fog,8,vegetation,14,truck,1405
+gopro_0478,fog,8,vegetation,15,bus,8043
+gopro_0478,fog,8,vegetation,16,train,262
+gopro_0478,fog,8,vegetation,17,motorcycle,20
+gopro_0478,fog,8,vegetation,18,bicycle,557
+gopro_0478,fog,9,terrain,0,road,184292
+gopro_0478,fog,9,terrain,1,sidewalk,74308
+gopro_0478,fog,9,terrain,2,building,56406
+gopro_0478,fog,9,terrain,3,wall,7328
+gopro_0478,fog,9,terrain,4,fence,3546
+gopro_0478,fog,9,terrain,5,pole,7173
+gopro_0478,fog,9,terrain,6,traffic light,1
+gopro_0478,fog,9,terrain,7,traffic sign,356
+gopro_0478,fog,9,terrain,8,vegetation,615088
+gopro_0478,fog,9,terrain,10,sky,1096
+gopro_0478,fog,9,terrain,11,person,25
+gopro_0478,fog,9,terrain,13,car,8220
+gopro_0478,fog,9,terrain,14,truck,89
+gopro_0478,fog,9,terrain,15,bus,469
+gopro_0478,fog,9,terrain,18,bicycle,113
+gopro_0478,fog,10,sky,0,road,88657
+gopro_0478,fog,10,sky,2,building,8196073
+gopro_0478,fog,10,sky,3,wall,1247
+gopro_0478,fog,10,sky,4,fence,3322
+gopro_0478,fog,10,sky,5,pole,66642
+gopro_0478,fog,10,sky,6,traffic light,3525
+gopro_0478,fog,10,sky,7,traffic sign,12408
+gopro_0478,fog,10,sky,8,vegetation,464183
+gopro_0478,fog,10,sky,9,terrain,2019
+gopro_0478,fog,10,sky,13,car,1684
+gopro_0478,fog,10,sky,14,truck,5123
+gopro_0478,fog,10,sky,15,bus,728
+gopro_0478,fog,10,sky,16,train,135
+gopro_0478,fog,11,person,0,road,140
+gopro_0478,fog,11,person,1,sidewalk,178
+gopro_0478,fog,11,person,2,building,193
+gopro_0478,fog,11,person,3,wall,43
+gopro_0478,fog,11,person,5,pole,33
+gopro_0478,fog,11,person,7,traffic sign,1740
+gopro_0478,fog,11,person,8,vegetation,1006
+gopro_0478,fog,11,person,9,terrain,965
+gopro_0478,fog,11,person,12,rider,10
+gopro_0478,fog,11,person,13,car,3721
+gopro_0478,fog,11,person,14,truck,331
+gopro_0478,fog,11,person,16,train,184
+gopro_0478,fog,11,person,18,bicycle,79
+gopro_0478,fog,12,rider,2,building,34
+gopro_0478,fog,12,rider,8,vegetation,118
+gopro_0478,fog,12,rider,9,terrain,197
+gopro_0478,fog,12,rider,18,bicycle,3083
+gopro_0478,fog,13,car,0,road,29066
+gopro_0478,fog,13,car,1,sidewalk,2542
+gopro_0478,fog,13,car,2,building,25498
+gopro_0478,fog,13,car,3,wall,1621
+gopro_0478,fog,13,car,4,fence,2458
+gopro_0478,fog,13,car,5,pole,962
+gopro_0478,fog,13,car,7,traffic sign,832
+gopro_0478,fog,13,car,8,vegetation,12677
+gopro_0478,fog,13,car,9,terrain,8262
+gopro_0478,fog,13,car,10,sky,127
+gopro_0478,fog,13,car,11,person,441
+gopro_0478,fog,13,car,14,truck,3788
+gopro_0478,fog,13,car,15,bus,2642
+gopro_0478,fog,13,car,18,bicycle,33
+gopro_0478,fog,14,truck,0,road,13244
+gopro_0478,fog,14,truck,1,sidewalk,3037
+gopro_0478,fog,14,truck,2,building,43397
+gopro_0478,fog,14,truck,3,wall,1547
+gopro_0478,fog,14,truck,4,fence,3215
+gopro_0478,fog,14,truck,5,pole,1103
+gopro_0478,fog,14,truck,6,traffic light,124
+gopro_0478,fog,14,truck,7,traffic sign,4709
+gopro_0478,fog,14,truck,8,vegetation,10727
+gopro_0478,fog,14,truck,9,terrain,11644
+gopro_0478,fog,14,truck,10,sky,2780
+gopro_0478,fog,14,truck,11,person,266
+gopro_0478,fog,14,truck,12,rider,15
+gopro_0478,fog,14,truck,13,car,318573
+gopro_0478,fog,14,truck,15,bus,36936
+gopro_0478,fog,14,truck,16,train,2004
+gopro_0478,fog,14,truck,17,motorcycle,834
+gopro_0478,fog,14,truck,18,bicycle,834
+gopro_0478,fog,15,bus,0,road,2993
+gopro_0478,fog,15,bus,1,sidewalk,972
+gopro_0478,fog,15,bus,2,building,607
+gopro_0478,fog,15,bus,4,fence,225
+gopro_0478,fog,15,bus,5,pole,56
+gopro_0478,fog,15,bus,7,traffic sign,430
+gopro_0478,fog,15,bus,8,vegetation,2539
+gopro_0478,fog,15,bus,9,terrain,206
+gopro_0478,fog,15,bus,11,person,5
+gopro_0478,fog,15,bus,13,car,10875
+gopro_0478,fog,18,bicycle,8,vegetation,95
+gopro_0478,fog,18,bicycle,9,terrain,31
+gopro_0479,fog,0,road,1,sidewalk,74614
+gopro_0479,fog,0,road,2,building,1267
+gopro_0479,fog,0,road,3,wall,8351
+gopro_0479,fog,0,road,4,fence,2934
+gopro_0479,fog,0,road,5,pole,1233
+gopro_0479,fog,0,road,7,traffic sign,184
+gopro_0479,fog,0,road,8,vegetation,14
+gopro_0479,fog,0,road,9,terrain,22873
+gopro_0479,fog,0,road,11,person,10
+gopro_0479,fog,0,road,13,car,9555
+gopro_0479,fog,0,road,14,truck,2504
+gopro_0479,fog,0,road,15,bus,217
+gopro_0479,fog,0,road,17,motorcycle,4
+gopro_0479,fog,0,road,18,bicycle,275
+gopro_0479,fog,1,sidewalk,0,road,3026
+gopro_0479,fog,1,sidewalk,4,fence,218
+gopro_0479,fog,2,building,0,road,202
+gopro_0479,fog,2,building,1,sidewalk,2
+gopro_0479,fog,2,building,3,wall,207
+gopro_0479,fog,2,building,4,fence,18240
+gopro_0479,fog,2,building,5,pole,349
+gopro_0479,fog,2,building,6,traffic light,1
+gopro_0479,fog,2,building,7,traffic sign,97
+gopro_0479,fog,2,building,8,vegetation,5902
+gopro_0479,fog,2,building,9,terrain,1859
+gopro_0479,fog,2,building,10,sky,36984
+gopro_0479,fog,2,building,13,car,195
+gopro_0479,fog,2,building,14,truck,490
+gopro_0479,fog,2,building,16,train,8198
+gopro_0479,fog,3,wall,0,road,7187
+gopro_0479,fog,3,wall,1,sidewalk,23080
+gopro_0479,fog,3,wall,2,building,38495
+gopro_0479,fog,3,wall,4,fence,71821
+gopro_0479,fog,3,wall,5,pole,504
+gopro_0479,fog,3,wall,7,traffic sign,424
+gopro_0479,fog,3,wall,8,vegetation,5870
+gopro_0479,fog,3,wall,9,terrain,2681
+gopro_0479,fog,3,wall,10,sky,880
+gopro_0479,fog,3,wall,13,car,1138
+gopro_0479,fog,3,wall,14,truck,1726
+gopro_0479,fog,3,wall,15,bus,109
+gopro_0479,fog,4,fence,0,road,11879
+gopro_0479,fog,4,fence,1,sidewalk,1396
+gopro_0479,fog,4,fence,2,building,711553
+gopro_0479,fog,4,fence,3,wall,27539
+gopro_0479,fog,4,fence,5,pole,16283
+gopro_0479,fog,4,fence,6,traffic light,1
+gopro_0479,fog,4,fence,7,traffic sign,265
+gopro_0479,fog,4,fence,8,vegetation,281575
+gopro_0479,fog,4,fence,9,terrain,146418
+gopro_0479,fog,4,fence,10,sky,112658
+gopro_0479,fog,4,fence,13,car,12219
+gopro_0479,fog,4,fence,14,truck,11963
+gopro_0479,fog,4,fence,15,bus,215
+gopro_0479,fog,4,fence,16,train,6461
+gopro_0479,fog,4,fence,18,bicycle,430
+gopro_0479,fog,5,pole,0,road,789
+gopro_0479,fog,5,pole,1,sidewalk,440
+gopro_0479,fog,5,pole,2,building,13185
+gopro_0479,fog,5,pole,3,wall,1070
+gopro_0479,fog,5,pole,4,fence,3999
+gopro_0479,fog,5,pole,6,traffic light,331
+gopro_0479,fog,5,pole,7,traffic sign,748
+gopro_0479,fog,5,pole,8,vegetation,12171
+gopro_0479,fog,5,pole,9,terrain,5326
+gopro_0479,fog,5,pole,10,sky,31297
+gopro_0479,fog,5,pole,11,person,102
+gopro_0479,fog,5,pole,13,car,1197
+gopro_0479,fog,5,pole,14,truck,321
+gopro_0479,fog,5,pole,15,bus,79
+gopro_0479,fog,5,pole,18,bicycle,50
+gopro_0479,fog,7,traffic sign,0,road,1160
+gopro_0479,fog,7,traffic sign,1,sidewalk,14
+gopro_0479,fog,7,traffic sign,2,building,4179
+gopro_0479,fog,7,traffic sign,3,wall,5
+gopro_0479,fog,7,traffic sign,4,fence,1293
+gopro_0479,fog,7,traffic sign,5,pole,275
+gopro_0479,fog,7,traffic sign,6,traffic light,415
+gopro_0479,fog,7,traffic sign,8,vegetation,3270
+gopro_0479,fog,7,traffic sign,9,terrain,607
+gopro_0479,fog,7,traffic sign,10,sky,3468
+gopro_0479,fog,7,traffic sign,11,person,307
+gopro_0479,fog,7,traffic sign,13,car,5255
+gopro_0479,fog,7,traffic sign,14,truck,1876
+gopro_0479,fog,7,traffic sign,18,bicycle,1053
+gopro_0479,fog,8,vegetation,0,road,7881
+gopro_0479,fog,8,vegetation,1,sidewalk,2135
+gopro_0479,fog,8,vegetation,2,building,127629
+gopro_0479,fog,8,vegetation,3,wall,36251
+gopro_0479,fog,8,vegetation,4,fence,32405
+gopro_0479,fog,8,vegetation,5,pole,7047
+gopro_0479,fog,8,vegetation,6,traffic light,190
+gopro_0479,fog,8,vegetation,7,traffic sign,1489
+gopro_0479,fog,8,vegetation,9,terrain,154934
+gopro_0479,fog,8,vegetation,10,sky,247389
+gopro_0479,fog,8,vegetation,11,person,93
+gopro_0479,fog,8,vegetation,13,car,5393
+gopro_0479,fog,8,vegetation,14,truck,1841
+gopro_0479,fog,8,vegetation,15,bus,417
+gopro_0479,fog,8,vegetation,16,train,37
+gopro_0479,fog,8,vegetation,17,motorcycle,228
+gopro_0479,fog,8,vegetation,18,bicycle,407
+gopro_0479,fog,9,terrain,0,road,8892
+gopro_0479,fog,9,terrain,1,sidewalk,4269
+gopro_0479,fog,9,terrain,2,building,243
+gopro_0479,fog,9,terrain,3,wall,1044
+gopro_0479,fog,9,terrain,4,fence,209
+gopro_0479,fog,9,terrain,5,pole,250
+gopro_0479,fog,9,terrain,7,traffic sign,140
+gopro_0479,fog,9,terrain,8,vegetation,6942
+gopro_0479,fog,9,terrain,10,sky,79
+gopro_0479,fog,9,terrain,13,car,1110
+gopro_0479,fog,9,terrain,14,truck,46
+gopro_0479,fog,9,terrain,15,bus,2
+gopro_0479,fog,9,terrain,18,bicycle,228
+gopro_0479,fog,10,sky,0,road,37854
+gopro_0479,fog,10,sky,1,sidewalk,20
+gopro_0479,fog,10,sky,2,building,1677691
+gopro_0479,fog,10,sky,3,wall,751
+gopro_0479,fog,10,sky,4,fence,6779
+gopro_0479,fog,10,sky,5,pole,9544
+gopro_0479,fog,10,sky,6,traffic light,222
+gopro_0479,fog,10,sky,7,traffic sign,1151
+gopro_0479,fog,10,sky,8,vegetation,20143
+gopro_0479,fog,10,sky,9,terrain,3897
+gopro_0479,fog,10,sky,11,person,7
+gopro_0479,fog,10,sky,13,car,1107
+gopro_0479,fog,10,sky,14,truck,3753
+gopro_0479,fog,10,sky,15,bus,222
+gopro_0479,fog,13,car,0,road,8214
+gopro_0479,fog,13,car,1,sidewalk,262
+gopro_0479,fog,13,car,2,building,4243
+gopro_0479,fog,13,car,3,wall,2218
+gopro_0479,fog,13,car,4,fence,409
+gopro_0479,fog,13,car,5,pole,381
+gopro_0479,fog,13,car,7,traffic sign,77
+gopro_0479,fog,13,car,8,vegetation,1143
+gopro_0479,fog,13,car,9,terrain,1154
+gopro_0479,fog,13,car,10,sky,1073
+gopro_0479,fog,13,car,11,person,15
+gopro_0479,fog,13,car,14,truck,3
+gopro_0479,fog,14,truck,0,road,15463
+gopro_0479,fog,14,truck,1,sidewalk,4305
+gopro_0479,fog,14,truck,2,building,131433
+gopro_0479,fog,14,truck,3,wall,345
+gopro_0479,fog,14,truck,4,fence,299
+gopro_0479,fog,14,truck,5,pole,868
+gopro_0479,fog,14,truck,6,traffic light,249
+gopro_0479,fog,14,truck,7,traffic sign,6435
+gopro_0479,fog,14,truck,8,vegetation,11687
+gopro_0479,fog,14,truck,9,terrain,1181
+gopro_0479,fog,14,truck,10,sky,11937
+gopro_0479,fog,14,truck,11,person,616
+gopro_0479,fog,14,truck,12,rider,5
+gopro_0479,fog,14,truck,13,car,95172
+gopro_0479,fog,14,truck,15,bus,16409
+gopro_0479,fog,14,truck,16,train,182
+gopro_0479,fog,14,truck,17,motorcycle,189
+gopro_0480,fog,0,road,1,sidewalk,19838
+gopro_0480,fog,0,road,2,building,68
+gopro_0480,fog,0,road,3,wall,5
+gopro_0480,fog,0,road,5,pole,53
+gopro_0480,fog,0,road,7,traffic sign,72
+gopro_0480,fog,0,road,8,vegetation,60
+gopro_0480,fog,0,road,9,terrain,2469
+gopro_0480,fog,0,road,11,person,60
+gopro_0480,fog,0,road,13,car,5413
+gopro_0480,fog,0,road,14,truck,1006
+gopro_0480,fog,1,sidewalk,0,road,200937
+gopro_0480,fog,1,sidewalk,2,building,3881
+gopro_0480,fog,1,sidewalk,3,wall,4964
+gopro_0480,fog,1,sidewalk,4,fence,655
+gopro_0480,fog,1,sidewalk,5,pole,514
+gopro_0480,fog,1,sidewalk,7,traffic sign,16
+gopro_0480,fog,1,sidewalk,8,vegetation,657
+gopro_0480,fog,1,sidewalk,9,terrain,3880
+gopro_0480,fog,1,sidewalk,11,person,252
+gopro_0480,fog,1,sidewalk,13,car,189
+gopro_0480,fog,1,sidewalk,14,truck,10
+gopro_0480,fog,1,sidewalk,18,bicycle,9
+gopro_0480,fog,2,building,0,road,299
+gopro_0480,fog,2,building,1,sidewalk,4141
+gopro_0480,fog,2,building,3,wall,354
+gopro_0480,fog,2,building,4,fence,3310
+gopro_0480,fog,2,building,5,pole,2469
+gopro_0480,fog,2,building,7,traffic sign,1025
+gopro_0480,fog,2,building,8,vegetation,15300
+gopro_0480,fog,2,building,9,terrain,282
+gopro_0480,fog,2,building,10,sky,8570
+gopro_0480,fog,2,building,11,person,2137
+gopro_0480,fog,2,building,13,car,4353
+gopro_0480,fog,2,building,14,truck,2142
+gopro_0480,fog,2,building,18,bicycle,108
+gopro_0480,fog,3,wall,0,road,585
+gopro_0480,fog,3,wall,1,sidewalk,7738
+gopro_0480,fog,3,wall,2,building,1804
+gopro_0480,fog,3,wall,4,fence,2731
+gopro_0480,fog,3,wall,5,pole,365
+gopro_0480,fog,3,wall,8,vegetation,724
+gopro_0480,fog,3,wall,9,terrain,3868
+gopro_0480,fog,3,wall,11,person,336
+gopro_0480,fog,3,wall,13,car,19
+gopro_0480,fog,3,wall,17,motorcycle,91
+gopro_0480,fog,3,wall,18,bicycle,132
+gopro_0480,fog,4,fence,0,road,48
+gopro_0480,fog,4,fence,1,sidewalk,61
+gopro_0480,fog,4,fence,2,building,25653
+gopro_0480,fog,4,fence,3,wall,3805
+gopro_0480,fog,4,fence,5,pole,1436
+gopro_0480,fog,4,fence,7,traffic sign,280
+gopro_0480,fog,4,fence,8,vegetation,10403
+gopro_0480,fog,4,fence,9,terrain,5012
+gopro_0480,fog,4,fence,10,sky,1251
+gopro_0480,fog,4,fence,11,person,42
+gopro_0480,fog,4,fence,13,car,203
+gopro_0480,fog,4,fence,17,motorcycle,14
+gopro_0480,fog,5,pole,0,road,409
+gopro_0480,fog,5,pole,1,sidewalk,6493
+gopro_0480,fog,5,pole,2,building,110408
+gopro_0480,fog,5,pole,3,wall,2519
+gopro_0480,fog,5,pole,4,fence,532
+gopro_0480,fog,5,pole,6,traffic light,229
+gopro_0480,fog,5,pole,7,traffic sign,9492
+gopro_0480,fog,5,pole,8,vegetation,7167
+gopro_0480,fog,5,pole,9,terrain,1713
+gopro_0480,fog,5,pole,10,sky,18174
+gopro_0480,fog,5,pole,11,person,85
+gopro_0480,fog,5,pole,12,rider,68
+gopro_0480,fog,5,pole,13,car,222
+gopro_0480,fog,5,pole,18,bicycle,115
+gopro_0480,fog,6,traffic light,2,building,1020
+gopro_0480,fog,6,traffic light,5,pole,1202
+gopro_0480,fog,6,traffic light,7,traffic sign,259
+gopro_0480,fog,6,traffic light,8,vegetation,2356
+gopro_0480,fog,6,traffic light,10,sky,206
+gopro_0480,fog,6,traffic light,13,car,3
+gopro_0480,fog,7,traffic sign,0,road,481
+gopro_0480,fog,7,traffic sign,1,sidewalk,198
+gopro_0480,fog,7,traffic sign,2,building,27837
+gopro_0480,fog,7,traffic sign,4,fence,93
+gopro_0480,fog,7,traffic sign,5,pole,13
+gopro_0480,fog,7,traffic sign,6,traffic light,176
+gopro_0480,fog,7,traffic sign,8,vegetation,926
+gopro_0480,fog,7,traffic sign,9,terrain,92
+gopro_0480,fog,7,traffic sign,10,sky,26723
+gopro_0480,fog,7,traffic sign,11,person,680
+gopro_0480,fog,7,traffic sign,13,car,1192
+gopro_0480,fog,7,traffic sign,14,truck,14
+gopro_0480,fog,8,vegetation,0,road,19
+gopro_0480,fog,8,vegetation,1,sidewalk,8348
+gopro_0480,fog,8,vegetation,2,building,236165
+gopro_0480,fog,8,vegetation,3,wall,6348
+gopro_0480,fog,8,vegetation,4,fence,1609
+gopro_0480,fog,8,vegetation,5,pole,3413
+gopro_0480,fog,8,vegetation,6,traffic light,220
+gopro_0480,fog,8,vegetation,7,traffic sign,254
+gopro_0480,fog,8,vegetation,9,terrain,55711
+gopro_0480,fog,8,vegetation,10,sky,22008
+gopro_0480,fog,8,vegetation,11,person,110
+gopro_0480,fog,8,vegetation,13,car,1399
+gopro_0480,fog,9,terrain,0,road,5
+gopro_0480,fog,9,terrain,1,sidewalk,3117
+gopro_0480,fog,9,terrain,2,building,859
+gopro_0480,fog,9,terrain,3,wall,1283
+gopro_0480,fog,9,terrain,5,pole,152
+gopro_0480,fog,9,terrain,7,traffic sign,12
+gopro_0480,fog,9,terrain,8,vegetation,15535
+gopro_0480,fog,10,sky,2,building,19735
+gopro_0480,fog,10,sky,5,pole,4039
+gopro_0480,fog,10,sky,6,traffic light,843
+gopro_0480,fog,10,sky,7,traffic sign,3892
+gopro_0480,fog,10,sky,8,vegetation,8056
+gopro_0480,fog,10,sky,13,car,1151
+gopro_0480,fog,10,sky,14,truck,586
+gopro_0480,fog,11,person,0,road,20
+gopro_0480,fog,11,person,1,sidewalk,90
+gopro_0480,fog,11,person,2,building,1209
+gopro_0480,fog,11,person,4,fence,88
+gopro_0480,fog,11,person,5,pole,15
+gopro_0480,fog,11,person,8,vegetation,477
+gopro_0480,fog,11,person,12,rider,545
+gopro_0480,fog,13,car,0,road,191
+gopro_0480,fog,13,car,1,sidewalk,26
+gopro_0480,fog,13,car,2,building,2516
+gopro_0480,fog,13,car,4,fence,117
+gopro_0480,fog,13,car,5,pole,76
+gopro_0480,fog,13,car,6,traffic light,22
+gopro_0480,fog,13,car,7,traffic sign,17
+gopro_0480,fog,13,car,8,vegetation,378
+gopro_0480,fog,13,car,9,terrain,79
+gopro_0480,fog,13,car,10,sky,2
+gopro_0480,fog,13,car,14,truck,54
+gopro_0480,fog,14,truck,0,road,2288
+gopro_0480,fog,14,truck,1,sidewalk,516
+gopro_0480,fog,14,truck,2,building,25069
+gopro_0480,fog,14,truck,8,vegetation,217
+gopro_0480,fog,14,truck,10,sky,250
+gopro_0480,fog,14,truck,11,person,38
+gopro_0480,fog,14,truck,13,car,6370
+gopro_0480,fog,14,truck,17,motorcycle,4
+gopro_0480,fog,15,bus,0,road,28
+gopro_0480,fog,15,bus,2,building,1987
+gopro_0480,fog,15,bus,7,traffic sign,81
+gopro_0480,fog,15,bus,11,person,2
+gopro_0480,fog,15,bus,13,car,883
+gopro_0480,fog,17,motorcycle,7,traffic sign,5
+gopro_0480,fog,17,motorcycle,8,vegetation,22
+gopro_0480,fog,17,motorcycle,11,person,153
+gopro_0480,fog,17,motorcycle,13,car,102
+gopro_0480,fog,17,motorcycle,18,bicycle,23

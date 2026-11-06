@@ -1,0 +1,13 @@
+test_artificial_ties_are_removed_by_resolution (experiments.cse805_error_prediction_v1.interpretation_v1.test_metric_sensitivity.MetricSensitivityTests.test_artificial_ties_are_removed_by_resolution) ... ok
+test_auc_pair_decomposition_separates_cross_group_ordering (experiments.cse805_error_prediction_v1.interpretation_v1.test_metric_sensitivity.MetricSensitivityTests.test_auc_pair_decomposition_separates_cross_group_ordering) ... ok
+test_integer_weights_match_repeated_pixels_under_same_policy (experiments.cse805_error_prediction_v1.interpretation_v1.test_metric_sensitivity.MetricSensitivityTests.test_integer_weights_match_repeated_pixels_under_same_policy) ... ok
+test_true_tie_policy_changes_rc_not_grouped_roc_or_ap (experiments.cse805_error_prediction_v1.interpretation_v1.test_metric_sensitivity.MetricSensitivityTests.test_true_tie_policy_changes_rc_not_grouped_roc_or_ap) ... ok
+test_frozen_pipeline_feature_mapping_and_reconstruction (experiments.cse805_error_prediction_v1.interpretation_v1.test_coefficient_analysis.CoefficientTests.test_frozen_pipeline_feature_mapping_and_reconstruction) ... ok
+test_profile_preserves_weighted_prevalence_and_empty_classes (experiments.cse805_error_prediction_v1.interpretation_v1.test_coefficient_analysis.CoefficientTests.test_profile_preserves_weighted_prevalence_and_empty_classes) ... ok
+test_cumulative_confusions_match_direct_acceptance_including_ties (experiments.cse805_error_prediction_v1.interpretation_v1.test_pixel_diagnostics.PixelDiagnosticTests.test_cumulative_confusions_match_direct_acceptance_including_ties) ... ok
+test_empty_and_invalid_inputs (experiments.cse805_error_prediction_v1.interpretation_v1.test_pixel_diagnostics.PixelDiagnosticTests.test_empty_and_invalid_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.025s
+
+OK

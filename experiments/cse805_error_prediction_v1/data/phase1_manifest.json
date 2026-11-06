@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "assignments.json": "db1fd9be735e78eab808e3dbc2d6a6d47eb421841583308f8a2a26bfe433a6bf",
+    "groups_supplemental_val.csv": "05012bc7ab35c17946b77c06db2d5a5956c563e204fcedd5f8f88d0a6bc84170",
+    "groups_train.csv": "848667b377eacf15149d4778bf95c14a52c6147e3f262d168e5b433303b11716",
+    "leakage_audit.json": "f29c89375ca96975bf529cffae651c6236b28abe3e8fa29f5d798c873527c0d5",
+    "metadata_supplemental_val.csv": "887a6f6c6fd55903f03d42852b0a600789c6faf75fa273f0e92dde4f9b8bad88",
+    "metadata_train.csv": "0c3fb4a315fcd7b6ed11b9b74e5537f03e5dd02107cdf8e601a4867651eb36f6"
+  },
+  "created_utc": "2026-11-04T16:29:59.858675+00:00",
+  "readme_evidence": {
+    "/home/george/Documents/ACDC/gt_trainval/README.md": "31c5abfb020bfcf37a6728fb5dc7dc031a288789e802db6a9d5ffb4e32ff1f9d",
+    "/home/george/Documents/ACDC/rgb_anon_trainvaltest/README.md": "31c5abfb020bfcf37a6728fb5dc7dc031a288789e802db6a9d5ffb4e32ff1f9d"
+  },
+  "source_code": {
+    "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/protocol.py": "9eabb0e76453b5c3b198b2071e595bb15b2b71298540191fef66ea9a4131d278"
+  },
+  "source_manifests": {
+    "/home/george/Desktop/COMP_895/project/results/research_extension/paired_calibration_v1/corrected_validation/cache_index_val.json": "8bea3fc7272885910ac31f7bf28b46a3428975c6d93e9716b3b8a3563fa6799f",
+    "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/cache_index.csv": "76d5bcc649099efc314d4f33d1b615e1550f9df40c63159b9049e4c74d043231",
+    "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/cache_metadata.json": "2f0d929eab67faf61fabb972e80573d963ab5029a4902241027778369c37cbf9",
+    "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/split_manifest.json": "cb92d73031d36aa6bbc673b8976094bb93576e44cd3fdcd3cef5ed6ab37b8ee6",
+    "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/calibration_fit.csv": "1446580cf7fc00b7b82bc1bc0da7089ea8be0d4e765eefdb4006e012143e8250",
+    "/home/george/Desktop/COMP_895/project/results/stage3_calibration/stage3b/splits/reliability_selection.csv": "15e7d5dedfab98e4a805b1954728f3ff830c6ad7c241034ed816ee00e7b6d4e2",
+    "/home/george/Desktop/COMP_895/project/results/stage4_reliability/stage4b/cache_index.csv": "9eaada8e85b20bcf1e570e52a9ae30d7a540b393fc28e4d6be0ccdf1707826c4"
+  }
+}

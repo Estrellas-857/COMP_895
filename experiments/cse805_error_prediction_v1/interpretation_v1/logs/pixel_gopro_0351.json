@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "group": "gopro_0351",
+  "condition": "night",
+  "num_images": 93,
+  "num_valid": 177772445,
+  "num_errors": 60323199,
+  "compared_operating_points": 24,
+  "elapsed_seconds": 62.68212755299464
+}

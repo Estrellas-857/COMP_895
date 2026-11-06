@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "extension_files": 5094,
+  "extension_bytes": 2476267356,
+  "comp895_files": 3635,
+  "comp895_bytes": 18094106038,
+  "extension_snapshot_sha256": "be63e582958fe4c621a8e2912925d87ba90c97a86ad9f564e573a469a2431069",
+  "comp895_snapshot_sha256": "d930d87f7c50a7c5e174d6a503d8da1d72d2c0fc2ad0c66c97c12830ee8c846d",
+  "exclusions": [
+    "new interpretation_v1 subtree",
+    "runtime dependencies",
+    "__pycache__"
+  ]
+}

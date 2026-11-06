@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-04T16:50:44.593640+00:00",
+  "issue": "A wholly ignored image chunk produces an empty feature matrix; sklearn rejected it during first outer-fold evaluation after 25/43 images.",
+  "fix": "predict_scores validates the method/model then returns an empty score vector for empty valid-pixel input. Histogram counts are unchanged.",
+  "scientific_changes": "None: features, groups, labels, models, C grid, thresholds and metrics unchanged.",
+  "validation": "Regression test covers empty blocks for all four methods and exact pixel/error/acceptance counts. Re-run all tests, smoke, extraction gate and every outer fit.",
+  "archived_attempt": "experiments/cse805_error_prediction_v1/logs/failed_empty_chunk_attempt",
+  "completed_outer_results": 0
+}

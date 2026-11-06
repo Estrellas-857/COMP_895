@@ -1,0 +1,142 @@
+{
+  "backbone_frozen": true,
+  "baseline_temperature": 1.0,
+  "dataset_root": "/home/george/Documents/ACDC",
+  "experiment": "CSE805 supervised segmentation error prediction v1",
+  "features": {
+    "alignment": "Own image and own semantic GT only, no normal-reference pixel correspondence",
+    "categorical": "predicted semantic class; 19 Cityscapes train IDs, 0 through 18",
+    "continuous": [
+      "msp",
+      "normalized_entropy",
+      "margin"
+    ],
+    "evaluation_size": [
+      1080,
+      1920
+    ],
+    "ground_truth_as_feature": false,
+    "input_size": [
+      512,
+      1024
+    ],
+    "invIds": "Perceptual ambiguity mask, not primary semantic-validity mask and never a predictor feature",
+    "label": "1[predicted_trainId != semantic_GT_trainId]",
+    "margin": "largest probability minus second largest probability",
+    "msp": "max_c p_c",
+    "native_logits": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        19,
+        128,
+        256
+      ]
+    },
+    "normalized_entropy": "-sum_c p_c*log(max(p_c,1e-12))/log(19)",
+    "prediction": "argmax of unscaled float32 interpolated logits; lowest class index for exact ties",
+    "probability": "raw float32 softmax(z), T=1; finite, positive-normalized probabilities verified",
+    "resize": "float32 bilinear native logits to label/image resolution, align_corners=False, before raw softmax",
+    "validity": "GT in 0..18; exclude 255; other GT IDs are a hard data error"
+  },
+  "frozen_utc": "2026-11-04T16:30:29.449596+00:00",
+  "group_ambiguity": "Filename chapter-family proxy, not verified independent camera/date/session/drive/route",
+  "group_independence_claimed": false,
+  "group_rule": "fullmatch (?:GOPR|GP[0-9]{2})([0-9]{4}); gopro_ + four-digit suffix; exact prefix must equal parent directory",
+  "inner": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "assignment": "Within outer train only: groups sorted by decreasing image count then group ID; greedily assign to fold with fewest same-weather images, then total images, then fold index",
+    "both_error_classes_required": "Require both labels in each training/development/evaluation population; fail and disclose unsupported metrics instead of fabricating scores",
+    "folds": 3,
+    "labels_used_for_assignment": false,
+    "missing_weather": "Some inner dev folds omit a weather because rain/night each have only three groups before outer holdout",
+    "outer_labels_used_for_selection": false,
+    "regularization": "L2",
+    "selection": "Arithmetic mean of three inner-dev AP values, each computed with N_valid_image/sample_count weights; ties within 1e-12 select smaller C"
+  },
+  "interpretation": {
+    "claim_limits": "No new segmentation backbone, no changed original segmentation mIoU, no superiority before measured evidence",
+    "class_ablation": "lr3_class minus lr3 for same held-out family and pixels",
+    "group_uncertainty": "Descriptive paired family deltas, wins/ties/losses, range and leave-one-family-out sensitivity of mean; 17 conservative proxies, not proven independent sessions",
+    "historical_exploration": "Existing data were used in earlier COMP895 experiments; not pristine confirmatory test data",
+    "pooled_caution": "Pooled cross-fitted scores combine different fold-specific models; diagnostic, not performance of one deployed model",
+    "primary_endpoint": "Mean paired outer-family difference in retrospective80 accepted error: each learned method minus raw MSP; negative is better; also compare raw entropy",
+    "reporting": "Every family, each weather, pooled out-of-fold histograms, unsuccessful methods, and selection/runtime costs",
+    "significance": "No pixel-IID significance tests or confidence intervals; no unsupported population-wide significance claim"
+  },
+  "method_definition": {
+    "class_balance": "No class-balanced sampling, no class weights; preserve pixel prevalence through inclusion weights",
+    "learned_score": "predict_proba for segmentation error label 1",
+    "lr3": "StandardScaler plus LogisticRegression on three continuous features",
+    "lr3_class": "StandardScaler continuous features plus predicted-class one-hot in sklearn preprocessing pipeline, then LogisticRegression",
+    "preprocessing": "Fit scaler/encoder inside each inner-training or final outer-training sklearn pipeline only",
+    "raw_entropy": "normalized predictive entropy; greater means more likely error",
+    "raw_msp": "1-msp; greater means more likely error"
+  },
+  "methods": [
+    "raw_msp",
+    "raw_entropy",
+    "lr3",
+    "lr3_class"
+  ],
+  "metrics": {
+    "ap": "Histogram grouped-threshold average precision approximation",
+    "aurc": "Histogram grouped-bin risk-coverage approximation; same rule for every method",
+    "auroc": "Histogram approximation, tied-bin positive/negative pairs receive half credit",
+    "bin_assignment": "min(floor(clipped_score*10000),9999); zero in first bin and one in last bin",
+    "outputs": [
+      "AUROC",
+      "AP",
+      "error_prevalence",
+      "risk_coverage_curve",
+      "AURC",
+      "retrospective80_actual_coverage",
+      "retrospective80_accepted_error",
+      "training_threshold_actual_coverage",
+      "training_threshold_accepted_error"
+    ],
+    "prevalence": "Exact error pixels / exact valid pixels",
+    "primary_pixels": "Identical complete semantic-valid pixels for all four methods",
+    "qa": "Compare histogram metrics against exact sklearn/sorted metrics on synthetic cases and retained shared per-image QA sample; disclose discrepancies",
+    "retrospective80": "Nearest attainable whole-bin cumulative coverage to 0.8, ties choose lower coverage; report actual coverage and error; diagnostic only, never deployment threshold",
+    "streaming": "10,000 fixed equal-width score histogram bins over [0,1] per method; exact population/error and threshold counts; scores regenerated from native logits in image chunks",
+    "training_threshold": "Exact held-out accepted and error counts using training-only threshold"
+  },
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-512-1024",
+  "model_revision": "7a91500a7086b805eeb868719ea5542a3e0bdeb3",
+  "outer": {
+    "assignments": "assignments.json",
+    "every_image_evaluated_once": true,
+    "folds": 17,
+    "method": "leave one conservative recording proxy group out"
+  },
+  "output_directory": "/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1",
+  "phase1_manifest_sha256": "2fe8dfa618d053b9fd4fcb7b8a1cd5bfc4f52547ddea09febe1f9234a2ac2e70",
+  "preservation": {
+    "legacy_files": "Read-only; no writes to original data, stage1-stage5, or results",
+    "new_artifacts": "All new code, metadata, features, models, logs, and reports inside this extension directory"
+  },
+  "primary_population": "All 1600 official adverse train images; 400 per weather",
+  "protocol_source_sha256": "9eabb0e76453b5c3b198b2071e595bb15b2b71298540191fef66ea9a4131d278",
+  "sampling": {
+    "evaluation": "Primary metrics use every valid full-resolution pixel; QA sample is not the primary estimate",
+    "method": "Uniform semantic-valid pixels without replacement; deterministic image-ID SHA256 and seed; no error/class stratification",
+    "optional_exact_metric_qa_samples_per_image": 8192,
+    "seed": 805,
+    "train_samples_per_image": 512,
+    "weight": "N_valid_image / sampled_count; normalize weights to mean 1 for fitting only"
+  },
+  "supplemental_validation": "406 official val images inventoried separately; excluded from all primary fits, tuning, and evaluation",
+  "threshold": {
+    "limitation": "Training-score quantile is optimistic in-sample and does not guarantee 80% unseen-group coverage; ties may overshoot",
+    "outer_labels_used": false,
+    "record": "threshold, achieved weighted training-sample coverage, exact outer accepted counts/errors/coverage",
+    "selection": "For each method and outer fold, weighted 80% quantile of final outer-training sample scores; accept score <= threshold",
+    "target_training_coverage": 0.8
+  },
+  "version": 1
+}

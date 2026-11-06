@@ -1,0 +1,457 @@
+{
+  "group": "gopro_0607",
+  "candidates": [
+    {
+      "config": "lr3",
+      "C": 0.01,
+      "innerfoldAP": [
+        0.4906792745751332,
+        0.5200185321374631,
+        0.5078581517745729
+      ],
+      "inner_records": [
+        {
+          "inner_fold": 0,
+          "ap": 0.4906792745751332,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 0.01,
+            "num_training_pixels": 480768,
+            "n_iter": 18,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.26021041000058176,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 1,
+          "ap": 0.5200185321374631,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 0.01,
+            "num_training_pixels": 514560,
+            "n_iter": 18,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.2854789869998058,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 2,
+          "ap": 0.5078581517745729,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 0.01,
+            "num_training_pixels": 517120,
+            "n_iter": 17,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.2700233890000163,
+          "status": "PASS"
+        }
+      ],
+      "meanAP": 0.5061853194957231,
+      "status": "PASS"
+    },
+    {
+      "config": "lr3",
+      "C": 0.1,
+      "innerfoldAP": [
+        0.4853619335759719,
+        0.5166518978446003,
+        0.5033522023777149
+      ],
+      "inner_records": [
+        {
+          "inner_fold": 0,
+          "ap": 0.4853619335759719,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 0.1,
+            "num_training_pixels": 480768,
+            "n_iter": 18,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.2936480839998694,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 1,
+          "ap": 0.5166518978446003,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 0.1,
+            "num_training_pixels": 514560,
+            "n_iter": 17,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.25270281299981434,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 2,
+          "ap": 0.5033522023777149,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 0.1,
+            "num_training_pixels": 517120,
+            "n_iter": 18,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.287482978999833,
+          "status": "PASS"
+        }
+      ],
+      "meanAP": 0.5017886779327624,
+      "status": "PASS"
+    },
+    {
+      "config": "lr3",
+      "C": 1.0,
+      "innerfoldAP": [
+        0.4846660393610632,
+        0.5162451272000748,
+        0.502800382003347
+      ],
+      "inner_records": [
+        {
+          "inner_fold": 0,
+          "ap": 0.4846660393610632,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 1.0,
+            "num_training_pixels": 480768,
+            "n_iter": 18,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.2567999559996679,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 1,
+          "ap": 0.5162451272000748,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 1.0,
+            "num_training_pixels": 514560,
+            "n_iter": 18,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.2586332860000766,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 2,
+          "ap": 0.502800382003347,
+          "diagnostics": {
+            "config": "lr3",
+            "C": 1.0,
+            "num_training_pixels": 517120,
+            "n_iter": 19,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 0.3409816209996279,
+          "status": "PASS"
+        }
+      ],
+      "meanAP": 0.5012371828548283,
+      "status": "PASS"
+    },
+    {
+      "config": "lr3_class",
+      "C": 0.01,
+      "innerfoldAP": [
+        0.5549498820568136,
+        0.5277976602625264,
+        0.5782299937469623
+      ],
+      "inner_records": [
+        {
+          "inner_fold": 0,
+          "ap": 0.5549498820568136,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 0.01,
+            "num_training_pixels": 480768,
+            "n_iter": 71,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 1.679499984999893,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 1,
+          "ap": 0.5277976602625264,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 0.01,
+            "num_training_pixels": 514560,
+            "n_iter": 64,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 1.6488997750002454,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 2,
+          "ap": 0.5782299937469623,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 0.01,
+            "num_training_pixels": 517120,
+            "n_iter": 66,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 1.6272049290000723,
+          "status": "PASS"
+        }
+      ],
+      "meanAP": 0.5536591786887675,
+      "status": "PASS"
+    },
+    {
+      "config": "lr3_class",
+      "C": 0.1,
+      "innerfoldAP": [
+        0.5523679558183406,
+        0.5255462422286941,
+        0.5767953936075646
+      ],
+      "inner_records": [
+        {
+          "inner_fold": 0,
+          "ap": 0.5523679558183406,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 0.1,
+            "num_training_pixels": 480768,
+            "n_iter": 100,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 2.2746790849996614,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 1,
+          "ap": 0.5255462422286941,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 0.1,
+            "num_training_pixels": 514560,
+            "n_iter": 90,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 2.2499411929993585,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 2,
+          "ap": 0.5767953936075646,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 0.1,
+            "num_training_pixels": 517120,
+            "n_iter": 93,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 2.188608006999857,
+          "status": "PASS"
+        }
+      ],
+      "meanAP": 0.5515698638848664,
+      "status": "PASS"
+    },
+    {
+      "config": "lr3_class",
+      "C": 1.0,
+      "innerfoldAP": [
+        0.5519513733871872,
+        0.525323573124937,
+        0.576571152383992
+      ],
+      "inner_records": [
+        {
+          "inner_fold": 0,
+          "ap": 0.5519513733871872,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 1.0,
+            "num_training_pixels": 480768,
+            "n_iter": 100,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 2.31565082599991,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 1,
+          "ap": 0.525323573124937,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 1.0,
+            "num_training_pixels": 514560,
+            "n_iter": 116,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 2.7690969409995887,
+          "status": "PASS"
+        },
+        {
+          "inner_fold": 2,
+          "ap": 0.576571152383992,
+          "diagnostics": {
+            "config": "lr3_class",
+            "C": 1.0,
+            "num_training_pixels": 517120,
+            "n_iter": 99,
+            "converged": true,
+            "sample_weight_normalization": "mean one within this fit",
+            "scaler": "unweighted mean and variance fitted only on this training partition",
+            "cpu_threads": 4
+          },
+          "seconds": 2.4463648520004426,
+          "status": "PASS"
+        }
+      ],
+      "meanAP": 0.5512820329653721,
+      "status": "PASS"
+    }
+  ],
+  "selected": {
+    "lr3": 0.01,
+    "lr3_class": 0.01
+  },
+  "thresholds": {
+    "raw_msp": {
+      "value": 0.1017676591873169,
+      "training_sample_coverage": 0.8000001558241238,
+      "requested_coverage": 0.8,
+      "source": "final outer-training weighted sample scores, no held-out outcomes"
+    },
+    "raw_entropy": {
+      "value": 0.12657839059829712,
+      "training_sample_coverage": 0.8000012199555834,
+      "requested_coverage": 0.8,
+      "source": "final outer-training weighted sample scores, no held-out outcomes"
+    },
+    "lr3": {
+      "value": 0.27902376651763916,
+      "training_sample_coverage": 0.8000005590173423,
+      "requested_coverage": 0.8,
+      "source": "final outer-training weighted sample scores, no held-out outcomes"
+    },
+    "lr3_class": {
+      "value": 0.2614888878361004,
+      "training_sample_coverage": 0.8000004806814874,
+      "requested_coverage": 0.8,
+      "source": "final outer-training weighted sample scores, no held-out outcomes"
+    }
+  },
+  "train_groups": [
+    "gopro_0122",
+    "gopro_0176",
+    "gopro_0351",
+    "gopro_0376",
+    "gopro_0397",
+    "gopro_0400",
+    "gopro_0402",
+    "gopro_0475",
+    "gopro_0476",
+    "gopro_0477",
+    "gopro_0478",
+    "gopro_0479",
+    "gopro_0480",
+    "gopro_0571",
+    "gopro_0604",
+    "gopro_0606"
+  ],
+  "source_hashes": {
+    "protocol.py": "9eabb0e76453b5c3b198b2071e595bb15b2b71298540191fef66ea9a4131d278",
+    "common.py": "c98c47571af020c75f5ed7c7b992593e1478b9987301dfc5b753f7f439bd3edc",
+    "features.py": "60ed3f8a37acbe4efbf3bce83ab4fef94525a12262e4fcb0fa1864b0d488ff43",
+    "evaluation.py": "4daa89edf7818b3e5f555259299863889a3b77860b279f4b16e029d5197808ae",
+    "run.py": "38044c64f9eed8a02832111429d13739f91d1985eec9cd3b30f18daddb14c37e",
+    "data/metric_amendment_001.json": "5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4"
+  },
+  "protocol_sha256": "86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599",
+  "model_hashes": {
+    "lr3": "594c69601a7744975673241493ffd111a6761efedf0f1d419756fb94af6af2c1",
+    "lr3_class": "7a5ba460ce734bc0cad46cbdd5e9fbd1a0360748667c5b6166c1dd80d926db9c"
+  },
+  "runtime": {
+    "total_seconds": 26.69774019400029
+  },
+  "diagnostics": {
+    "lr3": {
+      "config": "lr3",
+      "C": 0.01,
+      "num_training_pixels": 756224,
+      "n_iter": 20,
+      "converged": true,
+      "sample_weight_normalization": "mean one within this fit",
+      "scaler": "unweighted mean and variance fitted only on this training partition",
+      "cpu_threads": 4
+    },
+    "lr3_class": {
+      "config": "lr3_class",
+      "C": 0.01,
+      "num_training_pixels": 756224,
+      "n_iter": 68,
+      "converged": true,
+      "sample_weight_normalization": "mean one within this fit",
+      "scaler": "unweighted mean and variance fitted only on this training partition",
+      "cpu_threads": 4
+    }
+  }
+}

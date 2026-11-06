@@ -1,0 +1,289 @@
+scope,group,weather,method,policy,reference_policy,comparison,auroc_delta,average_precision_delta,aurc_delta
+heldout_family,gopro_0122,snow,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-7.2527962091673e-07,-7.96492970835394e-05,-5.896395990710734e-06
+heldout_family,gopro_0122,snow,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,6.994756329703478e-08,-5.526956409984685e-06,1.4015202706024743e-07
+heldout_family,gopro_0122,snow,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.498013599947171e-09,-4.220591379722194e-07,2.9645116729482002e-08
+heldout_family,gopro_0122,snow,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-3.264963428764589e-05
+heldout_family,gopro_0122,snow,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.7091869459215943e-06,-7.281509839118794e-05,0.00021147440759735486
+heldout_family,gopro_0122,snow,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.467318590548828e-07,-7.542597625476155e-06,2.301670336508216e-05
+heldout_family,gopro_0122,snow,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,7.64002072717318e-09,-7.2575562093391e-07,2.3668177309768557e-06
+heldout_family,gopro_0122,snow,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-4.2610018291533436e-10
+heldout_family,gopro_0122,snow,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,7.178488350478851e-05,-0.0006280796939284183,8.270264033626712e-05
+heldout_family,gopro_0122,snow,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.162186609364294e-05,-0.00013309639642566928,0.00041902097758424184
+heldout_family,gopro_0122,snow,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.265914533938762e-05,-2.9637568714713236e-05,0.00027377181651626337
+heldout_family,gopro_0122,snow,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.2941925026269405e-05
+heldout_family,gopro_0122,snow,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.000296144639267526,-0.0005537224269109298,0.0001542952958890481
+heldout_family,gopro_0122,snow,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00011004597605912547,-0.00021874052592935067,8.145724196350485e-05
+heldout_family,gopro_0122,snow,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.3377718208771334e-05,-7.510747450373279e-05,2.6230621997150316e-05
+heldout_family,gopro_0122,snow,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.4147806155773157e-07
+heldout_family,gopro_0176,snow,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.380918365968881e-07,-6.871359883620087e-05,-4.999357420028272e-05
+heldout_family,gopro_0176,snow,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.510530066641593e-08,-5.4935881682594e-06,-1.2769313063876186e-07
+heldout_family,gopro_0176,snow,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,8.541936047379295e-10,-3.3108213132182485e-07,3.1679327168465665e-08
+heldout_family,gopro_0176,snow,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.284801989616391e-05
+heldout_family,gopro_0176,snow,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,6.799339583585251e-07,-6.562005258675674e-05,1.1883092861070255e-05
+heldout_family,gopro_0176,snow,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.422160002741208e-08,-6.730182317560285e-06,3.016447063269867e-06
+heldout_family,gopro_0176,snow,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.6372839185006e-09,-6.542274154086591e-07,7.781011964608231e-08
+heldout_family,gopro_0176,snow,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.49462440824211e-10
+heldout_family,gopro_0176,snow,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,0.00018747551742015478,-0.0003146717042551983,-0.0011349395852836147
+heldout_family,gopro_0176,snow,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.284070222724477e-05,-4.957706726671507e-05,-0.00027281520174269464
+heldout_family,gopro_0176,snow,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.898541100002319e-09,-5.9394974767368325e-06,-2.5546165574388824e-06
+heldout_family,gopro_0176,snow,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.6263214562564632e-05
+heldout_family,gopro_0176,snow,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00010061119636073368,-0.00019368660350743694,0.00011258953729111065
+heldout_family,gopro_0176,snow,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.281241198169418e-06,-2.746131143038788e-05,2.5887271283414615e-05
+heldout_family,gopro_0176,snow,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.430456595286067e-06,-6.662153653913538e-06,8.242751664985781e-06
+heldout_family,gopro_0176,snow,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.1183449923068967e-07
+heldout_family,gopro_0351,night,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.1898021974649e-07,-5.435159642519505e-05,8.224642867718512e-05
+heldout_family,gopro_0351,night,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.8844375948567915e-08,-3.660126731697133e-06,3.568064550540928e-06
+heldout_family,gopro_0351,night,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,9.430735081750186e-10,-2.2157151724488955e-07,1.3170797513728516e-07
+heldout_family,gopro_0351,night,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.2309348414739638e-05
+heldout_family,gopro_0351,night,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.223889019134731e-07,-4.975537201190594e-05,0.00010612116189825938
+heldout_family,gopro_0351,night,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.479249405773487e-08,-4.949221465766485e-06,1.0537042080566161e-05
+heldout_family,gopro_0351,night,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.1015906298261768e-08,-4.784676362890039e-07,1.0508585173429896e-06
+heldout_family,gopro_0351,night,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.2768473773027154e-09
+heldout_family,gopro_0351,night,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0003137644552060337,-0.0005834460615841142,0.00173002897710256
+heldout_family,gopro_0351,night,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.513161336420882e-05,-0.00015089985907634773,0.0007037119642130107
+heldout_family,gopro_0351,night,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.1455200277565858e-05,-2.471205982124136e-05,0.00020913049551102292
+heldout_family,gopro_0351,night,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-9.120089277031562e-06
+heldout_family,gopro_0351,night,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0007284868873634887,-0.0009692773416200007,-0.003949064256074941
+heldout_family,gopro_0351,night,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00013145547785486933,-0.00022085587629572245,-0.0027302954936745394
+heldout_family,gopro_0351,night,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.19246331973389e-06,-2.623667449019873e-05,-0.0008321748440651144
+heldout_family,gopro_0351,night,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.498252962697788e-05
+heldout_family,gopro_0376,night,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.5690124572097517e-07,-5.5255318597513536e-05,5.372018776862719e-05
+heldout_family,gopro_0376,night,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.1581721682272246e-08,-3.8016465503387664e-06,3.2427950214658496e-06
+heldout_family,gopro_0376,night,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.0462849475700864e-09,-1.8166749615744493e-07,1.0414118130352978e-07
+heldout_family,gopro_0376,night,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.1289311242251854e-05
+heldout_family,gopro_0376,night,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.0012185608653255e-07,-4.616589499895074e-05,5.872861767462767e-05
+heldout_family,gopro_0376,night,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.231880834648649e-08,-4.649959502445178e-06,6.083230437645137e-06
+heldout_family,gopro_0376,night,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.661563775456898e-09,-4.715682238032315e-07,6.082095948545252e-07
+heldout_family,gopro_0376,night,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.856738637839861e-09
+heldout_family,gopro_0376,night,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00033058111749728614,-0.0006489270991038021,0.0008753632376958392
+heldout_family,gopro_0376,night,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.332364201053984e-06,-9.654791547220043e-05,7.471883763829346e-05
+heldout_family,gopro_0376,night,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.8071310575740185e-06,-1.59728394338865e-05,3.126467919632725e-05
+heldout_family,gopro_0376,night,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-3.92518290573407e-06
+heldout_family,gopro_0376,night,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0001661718787129285,-0.00045398673304919424,-0.012909575580010685
+heldout_family,gopro_0376,night,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.6420686418605612e-05,-8.944547014633208e-05,-0.004909494066835163
+heldout_family,gopro_0376,night,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.1861658971999987e-07,-1.4992677873193472e-05,-0.0017512992239577252
+heldout_family,gopro_0376,night,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,2.279809164765223e-05
+heldout_family,gopro_0397,night,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.8551269751476696e-06,-3.958770375656062e-05,6.547956675453936e-05
+heldout_family,gopro_0397,night,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-7.2208719004152044e-09,-2.5558861274088684e-06,3.710604860540645e-06
+heldout_family,gopro_0397,night,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.249901598361248e-09,-1.414752243134032e-07,1.5457816987529682e-07
+heldout_family,gopro_0397,night,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.4981617962900318e-05
+heldout_family,gopro_0397,night,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.632724603352955e-07,-3.4240867859636204e-05,7.659708088444961e-05
+heldout_family,gopro_0397,night,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.1792453102899003e-07,-3.448967295205385e-06,8.029059053032972e-06
+heldout_family,gopro_0397,night,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.621262096269561e-10,-3.454201671360124e-07,7.585857822456354e-07
+heldout_family,gopro_0397,night,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.5470623110646073e-09
+heldout_family,gopro_0397,night,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0006619866758074133,-0.0007601383595584599,0.0018191145701039746
+heldout_family,gopro_0397,night,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.72311765810285e-05,-0.00013834788285171928,0.00039505097757702723
+heldout_family,gopro_0397,night,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.579729833171676e-06,-1.837058648623824e-05,0.00010454851467345261
+heldout_family,gopro_0397,night,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.585381772532649e-06
+heldout_family,gopro_0397,night,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00036120984641851983,-0.0005368052627915398,-0.009879733820740394
+heldout_family,gopro_0397,night,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.890905816106294e-05,-0.00011380556002615894,-0.004513757468648821
+heldout_family,gopro_0397,night,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.019484645459201e-05,-2.1936818807133385e-05,-0.0024202371670761502
+heldout_family,gopro_0397,night,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,5.3567555608285966e-05
+heldout_family,gopro_0400,rain,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.910934568476023e-07,-5.884361669850069e-05,1.3057520374989973e-05
+heldout_family,gopro_0400,rain,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.542697613045931e-08,-5.0438841150968194e-06,5.390814252770326e-07
+heldout_family,gopro_0400,rain,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.201188259969399e-09,-3.7635619659637243e-07,3.0860399603815925e-08
+heldout_family,gopro_0400,rain,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-6.579887626128461e-06
+heldout_family,gopro_0400,rain,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.6007601905984075e-07,-5.946262262851443e-05,1.6489815621821557e-05
+heldout_family,gopro_0400,rain,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.134637549528918e-08,-5.828605812274734e-06,1.6253879110729452e-06
+heldout_family,gopro_0400,rain,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.026278308648216e-09,-5.612389478160118e-07,1.7372430730772104e-07
+heldout_family,gopro_0400,rain,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-6.492032467164677e-10
+heldout_family,gopro_0400,rain,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.3820399938024863e-05,-0.00020246465167561567,0.00021533780196678065
+heldout_family,gopro_0400,rain,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-7.93430739098877e-06,-2.6483450874192904e-05,0.00011348548113568682
+heldout_family,gopro_0400,rain,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.3929784673516465e-06,-3.0216244434888573e-06,3.523486370622317e-05
+heldout_family,gopro_0400,rain,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.5516889624762886e-06
+heldout_family,gopro_0400,rain,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.469846949876736e-05,-0.00016307254500103063,3.084427360218814e-05
+heldout_family,gopro_0400,rain,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-9.074326187019643e-06,-2.1786706552784363e-05,1.0819604406991923e-06
+heldout_family,gopro_0400,rain,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.2464468674977525e-06,-2.9678999765581082e-06,-8.33103969807153e-07
+heldout_family,gopro_0400,rain,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,5.910185483029573e-08
+heldout_family,gopro_0402,rain,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.518732398377082e-07,-5.4542753885777895e-05,1.0807734633909091e-05
+heldout_family,gopro_0402,rain,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.3866457426736645e-08,-4.999877369293859e-06,4.884205182988793e-07
+heldout_family,gopro_0402,rain,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.17520923285042e-10,-4.031387062508607e-07,2.044805499749891e-08
+heldout_family,gopro_0402,rain,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.7472452662647556e-06
+heldout_family,gopro_0402,rain,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.7823943038463028e-08,-5.83097174134406e-05,7.826480603849092e-06
+heldout_family,gopro_0402,rain,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.9022550534764093e-08,-6.031701714037663e-06,7.959961129278686e-07
+heldout_family,gopro_0402,rain,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.3873085164847225e-09,-5.983728755265538e-07,7.799236143718469e-08
+heldout_family,gopro_0402,rain,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-4.591584178842423e-10
+heldout_family,gopro_0402,rain,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.274608518457402e-05,-0.00013283192877527883,0.00013101101040712687
+heldout_family,gopro_0402,rain,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.761542506142135e-06,-1.337070675427876e-05,3.574289141364262e-05
+heldout_family,gopro_0402,rain,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.859250000270436e-10,-1.3386294850925573e-06,3.7524173913533465e-06
+heldout_family,gopro_0402,rain,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.1075675603565427e-07
+heldout_family,gopro_0402,rain,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.3162599578175893e-05,-6.883698499754454e-05,-4.938662652532663e-05
+heldout_family,gopro_0402,rain,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.4432018675968337e-06,-8.069144244504667e-06,-1.3597181825152765e-05
+heldout_family,gopro_0402,rain,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.5846087115553047e-07,-9.405340677948182e-07,-5.2000418327251274e-06
+heldout_family,gopro_0402,rain,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.7703194260185184e-07
+heldout_family,gopro_0475,fog,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.9374417559745467e-07,-5.801270906435896e-05,1.1696552948629868e-05
+heldout_family,gopro_0475,fog,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-9.380023213712008e-08,-5.7179594746270546e-06,8.010112371517608e-07
+heldout_family,gopro_0475,fog,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,6.1722917887863105e-09,-4.374005750373833e-07,2.625095134149713e-08
+heldout_family,gopro_0475,fog,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.902759425604337e-07
+heldout_family,gopro_0475,fog,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.2808675942685994e-07,-6.155547734248978e-05,9.093581830824787e-06
+heldout_family,gopro_0475,fog,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.828646604781994e-08,-6.639771549854512e-06,8.743341033262686e-07
+heldout_family,gopro_0475,fog,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.4458617525470174e-08,-6.244470532879021e-07,8.588896469041707e-08
+heldout_family,gopro_0475,fog,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.057879011449717e-10
+heldout_family,gopro_0475,fog,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00010979909457087267,-0.0001272033900396874,0.00017466448522119975
+heldout_family,gopro_0475,fog,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.856821347789861e-06,-1.1286144688649191e-05,1.3007697621763084e-05
+heldout_family,gopro_0475,fog,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.735111819835879e-08,-1.077660936266156e-06,1.097458381347019e-06
+heldout_family,gopro_0475,fog,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.6051238437296842e-08
+heldout_family,gopro_0475,fog,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.7342570805565245e-05,-9.249573715564008e-05,-0.00012631851927754484
+heldout_family,gopro_0475,fog,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.616951664842105e-07,-7.930902508113125e-06,-5.2214254400335947e-05
+heldout_family,gopro_0475,fog,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.2486570666325747e-08,-7.419995394220003e-07,-2.3489312499066356e-05
+heldout_family,gopro_0475,fog,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.139954746581101e-06
+heldout_family,gopro_0476,fog,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.0095025939627078e-06,-6.025542652909888e-05,2.038540374278003e-05
+heldout_family,gopro_0476,fog,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,7.236279708777715e-08,-5.301572948590572e-06,9.209284040322119e-07
+heldout_family,gopro_0476,fog,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.0902520804262394e-09,-4.333166375714015e-07,2.674742770672478e-08
+heldout_family,gopro_0476,fog,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.0341683761877496e-05
+heldout_family,gopro_0476,fog,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.0105674748128735e-06,-6.373493666694818e-05,1.839067400568467e-05
+heldout_family,gopro_0476,fog,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.0395605187785151e-07,-6.435274133631541e-06,1.7857337695596776e-06
+heldout_family,gopro_0476,fog,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,5.439762196246534e-09,-5.878657026170409e-07,1.6588114305077228e-07
+heldout_family,gopro_0476,fog,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.308901235290264e-10
+heldout_family,gopro_0476,fog,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00023185323818075698,-0.00024785303668350966,0.0004680330036047099
+heldout_family,gopro_0476,fog,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.414262774203429e-05,-4.111354424413127e-05,0.00022178841010139783
+heldout_family,gopro_0476,fog,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.6934248969222594e-06,-3.3001470948201828e-06,2.368264312434254e-05
+heldout_family,gopro_0476,fog,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-3.62529627297159e-07
+heldout_family,gopro_0476,fog,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00017417707729505683,-0.0002569108529658637,-2.016698774256684e-05
+heldout_family,gopro_0476,fog,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.2476160672524337e-05,-3.5854237452115356e-05,-3.486923647781984e-05
+heldout_family,gopro_0476,fog,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.943381485382318e-07,-4.0054236807307575e-06,-1.4787663939520163e-05
+heldout_family,gopro_0476,fog,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.115864648709719e-06
+heldout_family,gopro_0477,fog,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.444511838506358e-07,-4.950718587742875e-05,3.215980587891604e-05
+heldout_family,gopro_0477,fog,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.6221773369018422e-08,-4.612781817514566e-06,2.1342205732619024e-06
+heldout_family,gopro_0477,fog,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,6.565605836783561e-10,-3.203819209929293e-07,7.362808956273836e-08
+heldout_family,gopro_0477,fog,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-4.977968106056885e-07
+heldout_family,gopro_0477,fog,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.038066348493018e-07,-5.949061763649288e-05,2.6025252413769406e-05
+heldout_family,gopro_0477,fog,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.957436990274175e-09,-5.875570778135497e-06,2.5819562565893017e-06
+heldout_family,gopro_0477,fog,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.0932144078878991e-09,-5.718717785430094e-07,2.6224819259929033e-07
+heldout_family,gopro_0477,fog,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.3694881895176536e-09
+heldout_family,gopro_0477,fog,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0001233822511683691,-0.00016724809977491928,0.00046199618286267563
+heldout_family,gopro_0477,fog,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.551721232954776e-06,-1.7433742192263235e-05,5.550099803205977e-05
+heldout_family,gopro_0477,fog,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.302748259910061e-07,-1.8460224919247814e-06,8.578369980083433e-06
+heldout_family,gopro_0477,fog,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.483745016740313e-07
+heldout_family,gopro_0477,fog,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.8802419765217024e-05,-0.00010914660960537059,-0.00013369886218339566
+heldout_family,gopro_0477,fog,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.041217349788241e-06,-1.745971984667971e-05,-9.659028107766865e-05
+heldout_family,gopro_0477,fog,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.718059096100788e-07,-2.0392035019467514e-06,-3.124691501223131e-05
+heldout_family,gopro_0477,fog,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.0997773690554768e-06
+heldout_family,gopro_0478,fog,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.945606082555457e-07,-5.481475813157166e-05,2.386561323806588e-05
+heldout_family,gopro_0478,fog,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.470525760691402e-08,-4.957826373885865e-06,9.27902436102801e-07
+heldout_family,gopro_0478,fog,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,8.464506873195887e-11,-3.4548167887615833e-07,4.248713055682307e-08
+heldout_family,gopro_0478,fog,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-8.162304211262877e-06
+heldout_family,gopro_0478,fog,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.1584788117691147e-07,-6.308802253707224e-05,2.3664849329495252e-05
+heldout_family,gopro_0478,fog,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.8378797978234616e-08,-6.562868101966934e-06,2.3871173735652562e-06
+heldout_family,gopro_0478,fog,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.415016437356087e-09,-6.726386110322835e-07,2.3406675021125922e-07
+heldout_family,gopro_0478,fog,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-7.882237258727276e-10
+heldout_family,gopro_0478,fog,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0003616792321964324,-0.00020983834035293025,0.0007777703272923292
+heldout_family,gopro_0478,fog,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.5087028745505187e-05,-3.121526880472958e-05,0.0001887507801968738
+heldout_family,gopro_0478,fog,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.8218849315606604e-06,-4.0333240771128764e-06,3.7420869816791325e-05
+heldout_family,gopro_0478,fog,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-6.5468799309229e-07
+heldout_family,gopro_0478,fog,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0001432389406688106,-0.00028155176439537133,-6.458347096167244e-05
+heldout_family,gopro_0478,fog,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.967434280294224e-05,-7.234786551957306e-05,-7.109215063012472e-05
+heldout_family,gopro_0478,fog,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.7072002226624647e-06,-8.58929848879253e-06,-1.8225807099900987e-05
+heldout_family,gopro_0478,fog,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,8.770096631693924e-07
+heldout_family,gopro_0479,fog,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.3665008197504278e-07,-5.991980437081157e-05,1.142546279252546e-05
+heldout_family,gopro_0479,fog,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,8.699064779627008e-08,-5.157059242810735e-06,8.736509829881944e-07
+heldout_family,gopro_0479,fog,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.0811578843881193e-09,-5.151752666132658e-07,2.5021259890400938e-08
+heldout_family,gopro_0479,fog,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-3.269264666240501e-07
+heldout_family,gopro_0479,fog,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.6158623450390763e-07,-6.78023743508338e-05,8.66349790947657e-06
+heldout_family,gopro_0479,fog,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.974075062946781e-08,-6.515501946802171e-06,8.641793558909761e-07
+heldout_family,gopro_0479,fog,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.130547653386941e-09,-3.126541778808445e-07,8.508800290393803e-08
+heldout_family,gopro_0479,fog,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-4.926046411057872e-10
+heldout_family,gopro_0479,fog,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.3781461750638222e-05,-9.303202117566522e-05,7.598601394400231e-05
+heldout_family,gopro_0479,fog,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-9.264907741002304e-07,-1.0084397740084405e-05,7.007966405632449e-06
+heldout_family,gopro_0479,fog,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,6.160235410668236e-08,-8.786707056396281e-07,6.426019947478046e-07
+heldout_family,gopro_0479,fog,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.584094034071115e-08
+heldout_family,gopro_0479,fog,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.121474952960668e-07,-4.289976364113546e-05,-0.00019774903210177143
+heldout_family,gopro_0479,fog,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.4411723703311452e-08,-3.358375468609509e-06,-0.00011986563503171149
+heldout_family,gopro_0479,fog,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.1219608686552363e-08,-2.623994461714574e-07,-2.8071640413946872e-05
+heldout_family,gopro_0479,fog,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,7.306515239779987e-07
+heldout_family,gopro_0480,fog,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.064261384653431e-05,-7.53608202801459e-05,1.3482686472266608e-05
+heldout_family,gopro_0480,fog,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.8499783322200045e-07,-5.439493824477282e-06,3.4242682137378133e-07
+heldout_family,gopro_0480,fog,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.4391400515734176e-08,-2.2938735233513086e-07,1.3768135076475119e-08
+heldout_family,gopro_0480,fog,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-7.714275547319321e-05
+heldout_family,gopro_0480,fog,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.9546951371962606e-06,-7.218148543669534e-05,4.3082611049009845e-05
+heldout_family,gopro_0480,fog,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.9384142846412544e-08,-8.598447831575928e-06,4.180200420669106e-06
+heldout_family,gopro_0480,fog,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.428951536743057e-08,-2.004643631148273e-06,4.13738454291962e-07
+heldout_family,gopro_0480,fog,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.711334615683846e-10
+heldout_family,gopro_0480,fog,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0006019578918983193,-0.0004555891056682859,0.000702830345998353
+heldout_family,gopro_0480,fog,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00029550690772628396,-0.00010421390901405037,0.0005567573084593845
+heldout_family,gopro_0480,fog,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.464701859647647e-05,-2.0880355312169474e-05,0.0001914134910133078
+heldout_family,gopro_0480,fog,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-6.16468472592821e-06
+heldout_family,gopro_0480,fog,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.0005510075742423126,-0.0005708506916681233,0.00010762475581230745
+heldout_family,gopro_0480,fog,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00017624363613699678,-0.0002022701144708816,4.339661243979269e-05
+heldout_family,gopro_0480,fog,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.8486161270844264e-05,-5.5587778503229934e-05,5.933009322998603e-06
+heldout_family,gopro_0480,fog,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,6.512548833062515e-07
+heldout_family,gopro_0571,rain,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.951918476545856e-06,-6.891014316068311e-05,3.0054482407282368e-05
+heldout_family,gopro_0571,rain,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.687666532663613e-07,-4.741992753465318e-06,5.748636913785465e-07
+heldout_family,gopro_0571,rain,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.5227186723219006e-09,-4.1995219746127077e-07,2.9585552410726912e-08
+heldout_family,gopro_0571,rain,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.420712633099259e-05
+heldout_family,gopro_0571,rain,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.38631568067116e-06,-6.094951267071602e-05,1.5527693695005507e-05
+heldout_family,gopro_0571,rain,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.0840642034911667e-07,-3.2690992433082044e-06,2.1959214662331528e-06
+heldout_family,gopro_0571,rain,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,9.236721221217437e-08,-7.791816212798786e-07,1.766476993292354e-07
+heldout_family,gopro_0571,rain,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-9.251072893845524e-10
+heldout_family,gopro_0571,rain,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,0.00013662448060247634,-0.0004210423861298884,0.0002840212107748166
+heldout_family,gopro_0571,rain,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.1415158086957042e-05,-6.157311862858839e-05,0.0002599873121012092
+heldout_family,gopro_0571,rain,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.6653766816163724e-06,-5.994574705181499e-06,2.1037626572607826e-05
+heldout_family,gopro_0571,rain,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-8.735764618419961e-07
+heldout_family,gopro_0571,rain,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,7.498896986368742e-06,-1.7785835099259906e-05,-7.871170913578349e-05
+heldout_family,gopro_0571,rain,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,7.011812175328203e-07,-1.8511423460765286e-07,-2.9130695515848515e-05
+heldout_family,gopro_0571,rain,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,8.316208954806115e-08,-2.501849486469254e-07,-9.279297200869008e-06
+heldout_family,gopro_0571,rain,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.503560299834228e-06
+heldout_family,gopro_0604,snow,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.028462656848532e-07,-5.449761819797949e-05,1.4503483534544781e-05
+heldout_family,gopro_0604,snow,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.818191329774123e-08,-5.529991066288709e-06,9.192601285110125e-07
+heldout_family,gopro_0604,snow,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.890576943417102e-09,-3.4180727004340383e-07,2.7946704488773788e-08
+heldout_family,gopro_0604,snow,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-6.881035027710147e-07
+heldout_family,gopro_0604,snow,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-8.42023286540261e-07,-6.064558337470771e-05,1.1140513559857596e-05
+heldout_family,gopro_0604,snow,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.3764316353359618e-09,-5.762746770832106e-06,1.0590129440289642e-06
+heldout_family,gopro_0604,snow,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.0615955609315506e-09,-7.729553494484342e-07,1.0806376094310566e-07
+heldout_family,gopro_0604,snow,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.040620455754041e-10
+heldout_family,gopro_0604,snow,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.529646397237851e-05,-0.0001111424279626183,0.00013331046427682292
+heldout_family,gopro_0604,snow,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.118322026649743e-06,-1.1080828800080766e-05,1.3944268123834008e-05
+heldout_family,gopro_0604,snow,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.4923865183399414e-08,-9.799375759733664e-07,1.2925785623507657e-06
+heldout_family,gopro_0604,snow,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.8046663522879323e-08
+heldout_family,gopro_0604,snow,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.0455543882459395e-05,-5.9729461341362367e-05,-4.743759066942396e-05
+heldout_family,gopro_0604,snow,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.979380992445101e-08,-5.612764883977661e-06,-1.972758665591892e-05
+heldout_family,gopro_0604,snow,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.3933218740168627e-08,-5.20916448809583e-07,-5.92060638071254e-06
+heldout_family,gopro_0604,snow,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,1.8514462018712208e-07
+heldout_family,gopro_0606,snow,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.610824466677599e-08,-5.575748580666229e-05,2.185156828428403e-05
+heldout_family,gopro_0606,snow,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.098039741937896e-09,-5.45293549675252e-06,1.043107216141398e-06
+heldout_family,gopro_0606,snow,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.6753501636278543e-09,-4.403844950928715e-07,3.925544610206e-08
+heldout_family,gopro_0606,snow,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-4.93342981610842e-06
+heldout_family,gopro_0606,snow,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.31253243010832e-08,-6.154683251891058e-05,2.2083906010678805e-05
+heldout_family,gopro_0606,snow,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,7.832270376706418e-08,-6.2953583842007e-06,2.0419625713849476e-06
+heldout_family,gopro_0606,snow,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.848997399633845e-09,-5.728438142726944e-07,2.3739152031285182e-07
+heldout_family,gopro_0606,snow,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-7.469955869143785e-10
+heldout_family,gopro_0606,snow,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.712934921242585e-05,-0.0001583960168242693,0.00032259663315675757
+heldout_family,gopro_0606,snow,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.5238576503318058e-05,-2.178265141788982e-05,0.0001312334028213194
+heldout_family,gopro_0606,snow,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.4190763392439862e-08,-2.128315481242371e-06,1.5185416348949266e-05
+heldout_family,gopro_0606,snow,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-5.861652416470908e-07
+heldout_family,gopro_0606,snow,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-6.234028141594017e-05,-0.00016155019263719428,1.239699009905615e-07
+heldout_family,gopro_0606,snow,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.140446613623336e-05,-2.443851499833727e-05,-8.41369120517868e-06
+heldout_family,gopro_0606,snow,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.1561334240824976e-07,-2.337326227119796e-06,-2.2581574232426183e-06
+heldout_family,gopro_0606,snow,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,4.9385025662623816e-08
+heldout_family,gopro_0607,snow,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,3.9159273557132224e-07,-5.444643525720494e-05,1.734280698134638e-05
+heldout_family,gopro_0607,snow,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.287092548680647e-08,-5.136849728359927e-06,1.2311208629559034e-06
+heldout_family,gopro_0607,snow,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.1756210449576088e-09,-3.9270745622044245e-07,4.809038729736148e-08
+heldout_family,gopro_0607,snow,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.2739003915500655e-06
+heldout_family,gopro_0607,snow,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-9.104702070050763e-08,-6.117751816053785e-05,3.243940168522197e-05
+heldout_family,gopro_0607,snow,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-3.333848064279721e-08,-6.026369063438786e-06,3.3472106798076995e-06
+heldout_family,gopro_0607,snow,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,1.7520955797323268e-09,-5.874691876295302e-07,2.759529931922744e-07
+heldout_family,gopro_0607,snow,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-9.068861703265263e-10
+heldout_family,gopro_0607,snow,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.480182082484575e-05,-0.00015647125919293625,0.00029643394666892947
+heldout_family,gopro_0607,snow,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.706474606181899e-07,-2.06697628929442e-05,5.956690040272855e-05
+heldout_family,gopro_0607,snow,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,4.93787828292902e-07,-2.2252273179090842e-06,2.1410193122455012e-05
+heldout_family,gopro_0607,snow,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,9.49133294236848e-07
+heldout_family,gopro_0607,snow,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.5338829404076826e-05,-0.00011354484107117813,7.106391860800532e-07
+heldout_family,gopro_0607,snow,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-9.400586707952741e-07,-1.798432801985994e-05,-4.8384171539295195e-06
+heldout_family,gopro_0607,snow,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-9.354319300269864e-07,-2.980599471513745e-06,-9.872321589249333e-07
+heldout_family,gopro_0607,snow,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,4.349470375530906e-08
+pooled_crossfitted_night,all_night,night,raw_msp,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-5.837347208936805e-07,-5.1644378812887304e-05,6.48655885734789e-05
+pooled_crossfitted_night,all_night,night,raw_msp,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.8323271566700328e-08,-3.4423821961837575e-06,3.4517849123033573e-06
+pooled_crossfitted_night,all_night,night,raw_msp,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.541289566617479e-11,-1.6992860607523141e-07,1.2280170239020727e-07
+pooled_crossfitted_night,all_night,night,raw_msp,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-1.5609868514732117e-05
+pooled_crossfitted_night,all_night,night,raw_entropy,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-2.723277297000948e-07,-4.44216324108071e-05,7.745676613392372e-05
+pooled_crossfitted_night,all_night,night,raw_entropy,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-4.538417741617451e-08,-4.470989780180901e-06,7.939352471883487e-06
+pooled_crossfitted_night,all_night,night,raw_entropy,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,2.5420919813612386e-09,-4.4471209492691344e-07,7.81178806169569e-07
+pooled_crossfitted_night,all_night,night,raw_entropy,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,-2.088615724815668e-09
+pooled_crossfitted_night,all_night,night,lr3,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00014886148411752398,-0.0003187379830599246,0.00024887638596376993
+pooled_crossfitted_night,all_night,night,lr3,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.1111337291924706e-05,-5.5989401111955495e-05,-0.00012511601938480776
+pooled_crossfitted_night,all_night,night,lr3,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.5036642241339493e-06,-8.731820257734668e-06,-2.5890911807546768e-05
+pooled_crossfitted_night,all_night,night,lr3,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,8.462404224585107e-08
+pooled_crossfitted_night,all_night,night,lr3_class,arcsine_10000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-0.00010694865687099764,-0.00025372632438669385,-0.003912837111662876
+pooled_crossfitted_night,all_night,night,lr3_class,arcsine_100000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.42174121128269e-05,-4.9983418868304597e-05,-0.0015050098776154264
+pooled_crossfitted_night,all_night,night,lr3_class,arcsine_1000000_grouped,raw_grouped,score quantization only; both accept whole tied blocks,-1.1620129044542793e-06,-8.17704236455441e-06,-0.00042019648320856806
+pooled_crossfitted_night,all_night,night,lr3_class,raw_secondary,raw_grouped,true-score tie policy,0.0,0.0,5.348044558151077e-06

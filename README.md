@@ -1,4 +1,79 @@
-# COMP_895 — Semantic Segmentation Reliability in Adverse Conditions
+# CSE805 — Learning to Predict Semantic Segmentation Errors
+
+Branch: **`cse805-error-prediction`**. The **`main`** branch remains the
+COMP895 project. This branch adds the CSE805 supervised error-prediction study
+on top of the existing segmentation and calibration code it uses.
+
+The segmentation backbone stays frozen. Two logistic-regression methods learn
+to predict pixel errors from MSP, entropy, and probability margin, with or
+without predicted-class features. The completed study uses 1,600 ACDC adverse
+training images and 17 filename-derived outer groups. The 406 official validation
+images are inventoried separately and excluded from the primary experiment.
+
+## CSE805 files
+
+| Content | Location |
+| --- | --- |
+| Training, evaluation, protocol, and tests | [`experiments/cse805_error_prediction_v1/`](experiments/cse805_error_prediction_v1/) |
+| 34 trained pipelines and model selection records | [`data/models/`](experiments/cse805_error_prediction_v1/data/models/) |
+| Group assignments and frozen protocol | [`data/`](experiments/cse805_error_prediction_v1/data/) |
+| Primary results, tables, and plots | [`results/report/`](experiments/cse805_error_prediction_v1/results/report/) |
+| Coefficients, metric sensitivity, and class diagnostics | [`interpretation_v1/`](experiments/cse805_error_prediction_v1/interpretation_v1/) |
+| Final 15-slide deck, outline, source map, and QA record | [`presentations/cse805_final_2026/output/`](presentations/cse805_final_2026/output/) |
+
+Start with the [experiment report](experiments/cse805_error_prediction_v1/results/report/report.txt),
+[interpretation report](experiments/cse805_error_prediction_v1/interpretation_v1/interpretation_report.txt),
+or [final presentation](presentations/cse805_final_2026/output/CSE805_Final_Presentation.pptx).
+The 34 `.joblib` files are two models for each held-out group, not a single model
+refitted on all images. Their preprocessing pipelines and hashes are preserved.
+
+## CSE805 environment and checks
+
+Use the shared Python environment described below, then install the additional
+recorded dependencies in the extension's isolated runtime directory:
+
+```bash
+source .venv/bin/activate
+python -m pip install --no-deps \
+  --target experiments/cse805_error_prediction_v1/runtime/packages \
+  -r requirements-cse805.txt
+export PYTHONPATH="$PWD/experiments/cse805_error_prediction_v1/runtime/packages:$PWD"
+export PYTHONDONTWRITEBYTECODE=1
+export OPENBLAS_NUM_THREADS=4
+export OMP_NUM_THREADS=4
+
+python -B -m unittest \
+  experiments.cse805_error_prediction_v1.test_protocol \
+  experiments.cse805_error_prediction_v1.test_features \
+  experiments.cse805_error_prediction_v1.test_evaluation \
+  experiments.cse805_error_prediction_v1.test_run \
+  experiments.cse805_error_prediction_v1.test_report \
+  experiments.cse805_error_prediction_v1.interpretation_v1.test_metric_sensitivity \
+  experiments.cse805_error_prediction_v1.interpretation_v1.test_coefficient_analysis \
+  experiments.cse805_error_prediction_v1.interpretation_v1.test_pixel_diagnostics
+```
+
+These checks use synthetic inputs and the committed fold models; they require
+neither dataset access nor segmentation inference. The base dependencies and
+`requirements-cse805.txt` match the recorded environment; a fresh installation
+on another machine has not been verified.
+
+The branch includes fitted models, per-image/group metrics, compact aggregate
+histograms, protocols, audit records, and selected scientific plots. Raw ACDC
+images, native-logit caches, sampled feature arrays and their per-image sidecars,
+large curve arrays, installed packages, and presentation build files remain local.
+The feature manifest retains the sample and extraction provenance.
+
+The original [experiment instructions](experiments/cse805_error_prediction_v1/README.txt)
+and frozen manifests retain their original bytes and absolute machine paths.
+Complete retraining, dataset-dependent interpretation, or whole-workspace
+preservation verification requires the excluded caches/data and the original
+path layout. Archived PASS records describe those completed runs; the Git
+checkout is a curated publication, not the entire original workspace.
+
+---
+
+# COMP895 foundation — Semantic Segmentation Reliability in Adverse Conditions
 
 This project evaluates a pretrained SegFormer-B0 model on the ACDC dataset,
 studies pixel-level uncertainty and temperature calibration, and implements a

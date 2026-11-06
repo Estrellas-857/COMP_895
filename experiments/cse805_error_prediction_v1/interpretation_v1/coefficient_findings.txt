@@ -1,0 +1,122 @@
+Post-hoc interpretation of frozen coefficients and predicted-class behavior
+
+Scope and verification
+All 34 stored pipelines were inspected without fitting or altering a model. Their
+continuous input order is MSP, normalized entropy, and margin. LR+class appends
+the 19 predicted-class one-hot coordinates in Cityscapes trainId order 0..18;
+class 0 is road. Every classifier's positive outcome is segmentation error.
+The intercept + continuous contribution + class contribution reconstructed the
+stored decision function on every held-out QA pixel, maximum discrepancy
+2.887e-15. Raw-coordinate algebra had maximum discrepancy 3.821e-6, attributable
+to float32 StandardScaler/linear arithmetic versus float64 raw-coordinate algebra.
+
+The tables use existing uniform valid-pixel samples with inverse inclusion
+weights: 512/image for outer training summaries, 8192/image for held-out QA.
+Class shares, error rates, mean scores and within-class metrics here are sampled
+estimates, not new full-population primary results. All 19 classes are retained.
+Small-class flags mean <100 sampled pixels, <20 errors, or <20 correct pixels;
+they are descriptive flags, not statistical eligibility or significance tests.
+High-confidence subsets MSP>=0.9 and MSP>=0.99 are exploratory diagnostics.
+
+What a coefficient means
+The class offsets are conditional log-odds contrasts at fixed continuous
+features. They are not class error rates, causal effects, or standalone feature
+importance. Centering subtracts the unweighted mean across all 19 category
+coefficients and adds it to the intercept. A road-reference contrast subtracts
+the road coefficient. Neither operation changes the fitted model.
+MSP, entropy and margin are correlated and constrained by the same softmax
+vector; the positive conditional MSP coefficient cannot be read as a claim
+that increasing confidence generally increases error.
+
+LR3 and LR+class also have different fitted continuous slopes and intercepts.
+For the Night gopro_0376 outer fold, raw-unit slopes [MSP, entropy, margin] are
+[19.2174, 16.3291, -8.1182] for LR3 and [20.4610, 16.1439, -8.9238] for LR+class.
+For Fog gopro_0477 they are [20.3111, 16.1907, -8.6783] and
+[19.9604, 15.3651, -8.7297]. It would therefore be incorrect to attribute the
+entire difference between methods solely to class offsets. No counterfactual
+model or counterfactual performance estimate has been constructed.
+
+Night: observed class-reliability shift and cross-class ordering
+In held-out gopro_0376, predicted vegetation occupies 16.74% of valid pixels.
+Its estimated error rate is 14.17% in the corresponding outer training sample
+but 58.46% in held-out QA. Mean LR3 score is 23.68%; mean LR+class score falls
+to 20.61%. Its centered class offset is -0.2105, while road's is +0.4409:
+the conditional vegetation-versus-road contrast is approximately -0.6514.
+
+The high-confidence subset makes the transfer mismatch clearer. Predicted
+vegetation with MSP>=0.99 occupies 5.924% of all valid held-out pixels; estimated
+training error is 3.663%, held-out error 37.489%, and mean LR+class score 4.978%
+(LR3 6.271%). Predicted road with MSP>=0.99 occupies 35.161% of all valid pixels;
+its held-out error is only 3.741%, yet mean LR+class score is 8.555%. These are
+subset means, not a statement that every vegetation pixel ranks below every
+road pixel. They nevertheless provide direct descriptive evidence that the
+learned class-conditioned score can assign lower average risk to a substantially
+more error-prone held-out subset.
+
+The vegetation shift also occurs in the other Night groups: estimated training
+versus held-out error is 17.03% versus 40.75% for gopro_0351 and 16.01% versus
+53.00% for gopro_0397. LR+class lowers mean vegetation score relative to LR3
+in all three groups. Predicted buildings also become more error-prone than their
+training averages, but their positive class offsets raise mean learned scores.
+These observations are compatible with changing class reliability and feature
+distributions under Night conditions; they do not establish a causal mechanism.
+
+Within-class ranking changes are small for the dominant Night classes. In
+gopro_0376, QA AUROC LR3 -> LR+class is road 0.9184 -> 0.9183, vegetation
+0.7127 -> 0.7128, building 0.6998 -> 0.7001. In contrast, the existing full-pixel
+overall group AUROC falls from 0.83179 to 0.76602. A class offset is constant
+within a predicted class, so its direct ranking action is across classes; the
+small observed within-class changes and large overall loss support cross-class
+ordering as an important part of the failure. Refitted slopes and composition
+also matter, and these diagnostics do not uniquely identify their contributions.
+
+Sky is only about 0.62% of predicted valid pixels in Night gopro_0376; it should
+not be assumed to explain the main failure merely because its offset is large.
+Rare high-confidence sky subsets are flagged as small in the exported tables.
+
+Fog: large low-error classes and selective cross-class reordering
+In gopro_0477, gopro_0478 and gopro_0479, predicted sky occupies 36.50%, 38.70%
+and 60.94% of valid pixels. Its held-out error is 1.99%, 1.53% and 1.30%, close
+to corresponding training estimates 1.55%, 1.64% and 1.64%. Mean LR3 sky scores
+17.53%, 15.90% and 15.57% become LR+class scores 2.81%, 2.43% and 2.50%, with
+centered sky offsets around -2.20. Here a large low-error predicted category
+retains approximately its training reliability, unlike Night vegetation.
+
+Predicted buildings in the same Fog groups have held-out errors 74.52%, 62.17%
+and 94.13%. Mean LR3 scores 28.73%, 28.46% and 38.56% rise to LR+class scores
+35.74%, 37.69% and 49.39%. The learned scores still understate those empirical
+error rates; improved ordering does not imply accurate probability calibration.
+The simultaneous downweighting of a large reliable sky population and upweighting
+of unreliable building predictions is consistent with the improved overall Fog
+ranking and selective prediction observed in these groups.
+
+Again, within-class ranking does not supply the main improvement. For gopro_0477,
+QA sky AUROC is 0.8020 -> 0.8012 and building 0.8749 -> 0.8751 for LR3 -> LR+class,
+while existing full-pixel overall AUROC rises 0.82104 -> 0.90703. The class-aware
+model changes relative score levels across predicted classes rather than learning
+new within-class spatial or visual features.
+
+Fog benefits are not universal across every metric/group. Existing gopro_0475
+full-pixel AUROC and AURC are slightly worse for LR+class than MSP despite better
+risk at requested 80% coverage. Gopro_0480 does not improve risk80 over MSP.
+This evidence supports a condition- and operating-point-dependent tradeoff,
+not an unconditional claim that class features are superior.
+
+Limits
+The diagnostics are post-hoc and descriptive. Training/held-out class-rate shifts
+can combine weather, scene composition and continuous-feature distribution
+changes. Predicted classes are not true semantic classes. Sample pixels are
+correlated; no pixel-IID tests or causal claims are made. There are only three
+Night recording proxies, whose physical-session independence remains unproven.
+No model, calibration, threshold, feature, or primary evaluation was changed.
+
+Evidence tables
+tables/coefficients_continuous.csv
+tables/coefficients_class_offsets.csv
+tables/coefficients_intercepts.csv
+tables/coefficients_slopes_comparison.csv
+tables/class_profile_train_heldout.csv
+tables/class_profile_high_confidence.csv
+tables/within_class_metrics.csv
+logs/coefficient_analysis.json
+Existing primary comparison: ../results/report/group_metrics.csv

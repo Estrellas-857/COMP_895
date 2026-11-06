@@ -1,0 +1,299 @@
+CSE 805 — Scientific interpretation of the completed Option B experiment
+Learning to Predict Semantic Segmentation Errors Under Adverse Driving Conditions
+Post-hoc descriptive analysis; no additional training
+
+Central finding
+
+Class-aware Logistic Regression improves the prespecified retrospective operating
+point, but exhibits condition-dependent ranking tradeoffs. Across 17 held-out
+recording proxies, mean accepted error near 80% coverage falls from 8.3934% with
+MSP and 8.3514% with entropy to 7.6653% with LR + predicted class. Its mean AURC
+is nevertheless worse. Night exposes a substantial low-coverage failure that
+exists inside all three groups, not merely after pooling fold-specific scores.
+
+The additional evidence supports a specific interpretation: class features alter
+the ordering between predicted semantic categories. This helps when class
+reliability transfers, notably for large, reliable predicted-sky populations in
+Fog. It hurts when a category receives a favorable learned score despite becoming
+unreliable, notably high-confidence predicted vegetation in Night. These are
+observational explanations, not proof of a unique causal mechanism.
+
+Evidence and unchanged protocol
+
+The frozen experiment uses 1,600 labeled adverse training images, 400 per weather,
+in 17 conservative filename-derived groups: Fog 6, Night 3, Rain 3, Snow 5. Each
+outer fold leaves one group out; three grouped inner folds select C from
+{0.01, 0.1, 1.0} by mean weighted AP. All selected C=0.01. Inner pipelines fit
+preprocessing and model parameters on inner-training groups only. Final pipelines
+and training-derived thresholds use outer-training groups only.
+The original 406-image validation set remains separate. Filename groups are
+recording proxies, not verified independent recording sessions.
+
+The backbone is frozen SegFormer-B0. Inputs are MSP, normalized predictive entropy,
+top-two margin, and optionally predicted-class one-hot encoding. The binary target
+is disagreement with valid ground truth. Ground truth supplies supervision and
+evaluation only. LR3 omits class; LR+class includes all 19 categories. The raw
+baselines are error scores 1-MSP and normalized entropy. Normalizing entropy by a
+constant does not change its ranking. No segmentation predictions are improved.
+
+Training uses 512 uniformly sampled valid pixels/image, seed 805, with inverse
+inclusion weights. Primary evaluation uses identical full valid pixels for every
+method: 3,059,663,748 pixels, error prevalence 17.1147%. The primary summary gives
+each held-out group equal weight; it is not the same as pooling all pixels. Primary
+curves use the frozen 100,000-bin arcsine-square-root score transform, whole-bin
+acceptance, and right-step AURC. That policy and the primary endpoint are unchanged.
+
+This pass reuses all 34 fitted pipelines and saved samples. Coefficient and metric
+sensitivity analyses use the same 8,192 valid-pixel QA samples/image (seed 806),
+with inverse inclusion weights. Training class profiles use the original training
+samples. Those estimates are explicitly distinct from full-population results.
+Night/Fog class and confusion counts use all 800 images and cached native logits;
+no new segmentation forward passes are needed. All outputs are isolated here.
+
+Frozen group-macro results (17 equally weighted groups)
+
+Method               AUROC       AP         AURC       Accepted error near 80%
+MSP                  0.852107    0.484882    0.048172       8.3934%
+Entropy              0.852905    0.485873    0.047997       8.3514%
+LR3                  0.851410    0.471651    0.048363       8.3764%
+LR + class           0.862207    0.531818    0.051292       7.6653%
+
+Higher AUROC/AP and lower AURC/accepted error are better. Class-aware risk80 improves
+over MSP in 14/17 groups and entropy in 15/17. Its mean change is -0.7281 percentage
+points versus MSP, -0.6861 versus entropy, and -0.7111 versus LR3. LR3 alone offers
+little operating-point gain over MSP and is slightly worse than entropy on average.
+The class-aware AURC increase versus MSP is +0.003120, not an improvement.
+
+Night: three separate failures
+
+The following are frozen full-pixel results. Each cell is MSP -> LR+class.
+
+Held-out group  Images  AUROC             AP                AURC              Risk80
+gopro_0351        93    .80354 -> .78081   .62582 -> .62195   .14203 -> .16817   26.063 -> 25.748%
+gopro_0376       203    .83285 -> .76602   .61575 -> .57546   .10481 -> .17256   21.285 -> 21.271%
+gopro_0397       104    .81568 -> .79148   .65368 -> .64705   .15114 -> .18817   29.526 -> 29.118%
+
+Night prevalence differs by group: 33.93%, 29.78%, and 37.14%, respectively. Compare
+AP between methods on the same group; an AP difference between weather populations
+also reflects prevalence and composition. LR+class loses AUROC, AP, and AURC in
+every Night group while retaining a small improvement near 80% coverage. Its Night
+macro risk80 change is -0.2457 pp versus MSP, but its AURC change is +0.043643.
+
+These results are compatible because the operating point and ranking summaries ask
+different questions. At 80%, the accepted set includes many moderately scored
+pixels. At low coverage, errors assigned very low scores are accepted first and
+can dominate risk. AURC integrates risk over all coverage levels, so a small gain
+near 80% cannot offset a large early-curve loss. AUROC and AP also assess ordering
+beyond that one cutoff. The three curves in figures/night_group_risk_coverage.png
+show the crossing directly.
+
+Whole-bin policies can give different actual coverages, especially near score
+clusters. A consistent diagnostic therefore uses unbinned scores on identical
+weighted QA samples and the same label-independent secondary tie key for all four
+methods. At almost exactly 10% coverage (within 0.00004 pp), accepted error is:
+
+Group           MSP       LR+class
+gopro_0351      1.492%     12.513%
+gopro_0376      0.668%     26.454%
+gopro_0397      0.417%     19.446%
+
+At 20% the same comparison is 2.735% vs 9.655%, 0.828% vs 17.882%, and 0.751% vs
+14.325%. These sampled post-hoc diagnostics do not replace the original endpoint;
+they establish that low-coverage failure persists under a common coverage policy.
+
+Full-pixel class counts locate the failure. At each frozen class-aware cutoff
+nearest 10%, actual coverage is 10.00023%, 9.99991%, and 10.00037%. Predicted
+vegetation dominates acceptance and the errors within it:
+
+Group       Vegetation share of    Vegetation share of    Top error: true sky
+            accepted pixels       all accepted errors    -> predicted vegetation
+0351              73.49%                 83.98%                  51.68%
+0376              63.76%                 93.57%                  75.41%
+0397              74.88%                 96.30%                  73.42%
+
+The last column is also a share of ALL accepted errors. True building -> predicted
+vegetation contributes a further 26.13%, 15.95%, and 19.41%. These categories are
+predicted labels: the result does not mean true vegetation itself is the main
+semantic source of error. No predicted-road pixel is accepted by LR+class at the
+1%, 5%, or 10% requested cutoffs in any Night group. At the next requested 20%
+cutoff, road enters heavily and risk is lower in all three groups. By approximately
+50%, road supplies 61%–70% of accepted pixels, but risk need not keep falling:
+0351 rises again after the initial decline. MSP's own near-10% sets are 98.5%–99.9%
+predicted road. Its actual whole-bin coverage differs (10.046%, 9.619%, 9.306%),
+which is why the common-coverage QA comparison above is also necessary.
+
+At 80%, accepting additional vegetation errors is offset by rejecting other
+classes' errors. The contribution of predicted-building errors to total accepted
+risk decreases by 1.271, 1.132, and 1.567 pp in the three groups; predicted-terrain
+contributions fall by 0.257, 0.338, and 0.484 pp. Vegetation contributions increase
+by 0.975, 1.379, and 1.681 pp. Other classes complete the small net risk80 gain.
+Each contribution divides a class's accepted errors by ALL accepted pixels;
+these changes sum exactly to the total risk change, with each method's actual
+denominator retained. This accounting explains how early failure can coexist
+with a small improvement at the prespecified operating point.
+
+Within-group versus pooled cross-fold ordering
+
+The original primary comparisons are paired within each held-out group. Their
+Night losses cannot be caused solely by scores from different models being pooled.
+A QA pair decomposition makes the distinction explicit: 37.05% of pooled Night
+positive-negative pair weight is within the same group and 62.95% crosses groups.
+Within-group pair-weighted AUROC is 0.82463 for MSP versus 0.77244 for LR+class;
+cross-group AUROC is 0.82017 versus 0.76814. Pooled AUROC is 0.82183 versus 0.76973.
+These are pair-weighted QA diagnostics, not the equal-group primary averages.
+Cross-group comparisons combine differing class/prevalence composition and
+fold-specific score scales; they do not isolate a calibration defect. Pooled
+curves describe cross-fitted predictions, not one deployable classifier.
+
+What the class feature contributes
+
+All 34 stored pipelines have verified continuous input order, scaler parameters,
+and class encoding. Intercept + standardized continuous contribution + class
+contribution reproduces every stored QA decision logit (maximum discrepancy
+2.9e-15). At fixed continuous features, class coefficients are conditional log-odds
+contrasts. They are not class error rates or causal feature importance. With the
+full one-hot encoding and intercept, report centered or road-reference contrasts,
+not isolated absolute category weights. MSP, entropy, and margin are correlated;
+the positive conditional MSP coefficient does not mean higher confidence generally
+causes more error. Adding class also refits continuous slopes and the intercept.
+
+Night gopro_0376 is a clear reliability-transfer mismatch. Predicted vegetation
+has estimated error 14.17% in the corresponding training population versus 58.46%
+held out. Yet LR+class lowers its mean score from LR3's 23.68% to 20.61%. The
+vegetation-versus-road class contrast is -0.6514 log-odds. For MSP>=0.99 vegetation,
+training error is 3.66%, held-out error 37.49%, and mean class-aware score only
+4.98%. This subset represents 5.92% of valid held-out pixels. High-confidence road
+has held-out error 3.74% but a higher mean class-aware score, 8.56%. These are subset
+means, not a claim about every pixel pair. The vegetation training-to-held-out error
+increase also appears in the other two groups (17.03 -> 40.75%; 16.01 -> 53.00%).
+
+The distinction between within-group and within-class ranking is important.
+Within predicted road, vegetation, and building in gopro_0376, QA AUROC barely
+changes from LR3 to LR+class (.9184 -> .9183, .7127 -> .7128, .6998 -> .7001).
+Overall full-group AUROC falls .83179 -> .76602. A category offset is constant
+within that predicted class; its direct effect is to reorder different classes.
+The evidence therefore implicates cross-class ordering, while allowing refitted
+slopes, feature distributions, and scene composition to contribute. Sky is only
+about 0.62% of predicted valid pixels in this Night group and cannot be presumed
+the dominant cause simply because its learned offset is large.
+
+Why Fog benefits most
+
+The mean class-aware risk80 change versus MSP is -1.4243 pp in Fog, compared with
+-0.2457 Night, -0.2651 Rain, and -0.4599 Snow. Fog also improves mean AUROC, AP,
+and AURC. In Fog groups 0477/0478/0479, predicted sky occupies about 36.50/38.70/
+60.94% of valid pixels. Its estimated held-out error is 1.99/1.53/1.30%, close to
+the corresponding training estimates 1.55/1.64/1.64%. LR3's mean sky scores
+17.53/15.90/15.57% become 2.81/2.43/2.50% with class, with centered sky offsets
+near -2.20. Here a large reliable category retains approximately its training
+reliability and is moved toward acceptance.
+
+Predicted buildings in those groups are much less reliable: estimated held-out
+errors 74.52/62.17/94.13%. Their mean scores rise from LR3's 28.73/28.46/38.56%
+to 35.74/37.69/49.39%. The scores still understate observed error; better ranking
+does not establish calibrated probabilities. Within-class AUROC barely changes
+in Fog0477 (sky .8020 -> .8012; building .8749 -> .8751), while overall full-group
+AUROC rises .82104 -> .90703. This supports beneficial cross-class reordering.
+Full-pixel counts at each Fog group's own near-80% cutoff confirm the tradeoff:
+across the six groups, LR+class accepts 11.17 million fewer predicted-building
+errors and 2.46 million fewer predicted-terrain errors than MSP, but 3.24 million
+more predicted-sky errors. The largest removed confusion is true sky -> predicted
+building (7.20 million errors). Accepting more sky is beneficial overall here,
+but does not make all accepted sky predictions correct. These are sums over six
+group-specific cutoffs, not a pooled single-threshold comparison or a macro metric.
+Fog is not uniformly better: 0475 has slightly worse AUROC/AURC than MSP despite
+better risk80, and 0480 has worse risk80. All classes and groups remain in the
+exported tables, including sparse categories and unfavorable results.
+
+Metric interpretation and sensitivity
+
+Retrospective risk80 means choosing a threshold from the held-out score population
+to approach 80% coverage and then measuring accepted error. It does not promise
+80% coverage on future images or an error bound. The cutoff is not chosen by
+minimizing held-out error labels, but its coverage is determined retrospectively.
+The frozen whole-bin implementation may miss exact 80%; the maximum LR+class/MSP
+coverage difference across groups is 0.002619 pp. The separately reported
+training-derived class-aware thresholds attain only 65.65%–91.55% held-out coverage.
+They are train-only thresholds, with possible optimism from using fitting data,
+and provide no deployment guarantee either.
+
+To separate binning from tie handling, the new diagnostic uses identical weighted
+QA samples and common conventions: exact-score ties grouped; 10k/100k/1m transformed
+bins grouped; and unbinned scores with the same stored label-independent secondary
+tie keys. All grouped policies use the same right-step integration. AUROC/AP always
+group true-score ties. The secondary-key variant affects selective ordering only.
+
+Night macro AURC on those QA samples:
+Policy                         MSP        LR3        LR+class
+Unbinned, true ties grouped     .133134    .133231    .181003
+10,000 bins, whole bins         .133202    .134705    .172090
+100,000 bins, whole bins        .133138    .133622    .176951
+1,000,000 bins, whole bins      .133134    .133345    .179335
+Unbinned, secondary tie order   .133118    .133224    .181033
+
+Thus Night's adverse direction is stable. The frozen 100,000-bin definition understates the
+unbinned class-aware AURC by about .00405 on the QA sample; exact-score tie ordering
+changes it by only about .00003. LR3's much smaller AURC differences are more
+sensitive to metric policy. Across all 17 groups, class-aware AURC is worse than
+MSP under every tested policy; Fog remains better. This is numerical sensitivity
+analysis, not a revised primary metric or a search for a favorable result.
+
+Despite 100k bins, the largest Night class-aware bin contains 11.34%, 9.85%, or
+10.87% of weighted QA mass. These bins are >99.97% predicted road and occur at
+scores approximately .0744, .0847, and .0814, not at zero. Quantization merges
+dense internal score clusters; this is different from genuine equal-score ties.
+MSP itself has exact zero-error-score tie mass around 4.21%, 4.23%, and 6.59%, so
+very low coverage is also unattainable under a whole-tie policy. The new curves
+and tables always distinguish requested and actual coverage.
+
+Contribution, cost, and limits
+
+The student contribution is a trained error detector, feature/encoding pipeline,
+grouped tuning and evaluation protocol, and measured class-feature ablation with
+failure analysis. It is not a new segmentation network or a claim of publication-
+level algorithmic novelty. It directly uses CSE805 preprocessing, feature
+engineering, Logistic Regression, regularization, grouped validation, and metrics.
+MSP and entropy use confidence summaries without an explicit predicted-category
+offset; entropy is unchanged by permuting class probabilities. The experiment
+tests whether learning category-conditioned reliability adds useful information.
+
+The added computation buys a modest operating-point improvement with a serious
+Night tradeoff. Recorded nested fitting/tuning takes 448.5 s. Full-population score
+calls take 41.3 s for MSP, 44.7 s entropy, 188.8 s LR3, and 428.6 s LR+class, with
+the recorded boundaries including validation and prediction but excluding histogram
+updates. These are experimental pipeline measurements, not deployment latency.
+For a course project, the class-aware method provides a clear, interpretable ML
+contribution. The evidence does not support it as a universal replacement for MSP.
+
+Only three Night proxies exist; pixels are strongly correlated. No pixel-IID
+significance or population confidence claims are made. Group summaries and the
+original leave-one-group-out mean ranges are descriptive sensitivity, not CIs.
+Training/held-out class differences can mix weather, scene, feature distribution,
+and residual recording dependence. Previous exploration makes this an empirical
+study, not an untouched confirmatory trial. QA estimates, sparse classes, numerical
+ties, and post-hoc choices further limit mechanistic certainty.
+
+Future work should first verify session metadata and collect independent Night
+groups, then test whether class-conditioned reliability transfers. A separate
+development/calibration group could assess transferable coverage thresholds. Any
+new class-by-confidence interactions, weather-aware features, or models would need
+a newly specified protocol and independent evaluation. None is trained in this
+pass. The most defensible final claim remains: class-aware learning improves a
+prespecified retrospective operating point, with condition-dependent ranking
+tradeoffs and a documented Night failure.
+
+Evidence map
+
+Frozen primary: ../results/report/report.txt, group_metrics.csv, paired_deltas.csv,
+delta_summary.csv, runtime.csv; ../data/protocol.json and execution manifests.
+New full-pixel counts: tables/pixel_group_operating_points.csv,
+pixel_class_acceptance.csv, pixel_confusions.csv, pixel_class_population.csv,
+class_risk80_contributions.csv, class_risk80_macro_contributions.csv.
+Class diagnostics: tables/class_profile_train_heldout.csv,
+class_profile_high_confidence.csv, coefficients_*.csv, within_class_metrics.csv.
+Metric audit: tables/metrics_policy_summary.csv, metrics_policy_coverage.csv,
+metrics_macro_summary.csv, metrics_night_auc_pair_decomposition.csv,
+metrics_night_largest_bins.csv and metrics_night_largest_bins_classes.csv.
+Presentation narrative and minimal visuals: presentation_plan.txt.
+Reproduction and preservation: analysis_plan.txt, scripts in this directory,
+logs/* manifests and tests; all interpretation artifacts stay in this directory.

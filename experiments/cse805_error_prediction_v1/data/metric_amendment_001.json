@@ -1,0 +1,22 @@
+{
+  "amendment": "001",
+  "base_protocol_sha256": "86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599",
+  "reason": "Numerical QA on the eight-image smoke test found score saturation near histogram endpoints made uniform 10000-bin ranking approximations too coarse. This amendment precedes all formal outer-fold fitting and evaluation.",
+  "evidence": {
+    "night_smoke_image": "night/GOPR0351_frame_000159_rgb_anon",
+    "same_sample_raw_msp_auroc_quantized_minus_exact": -0.0117235,
+    "same_sample_raw_msp_ap_quantized_minus_exact": -0.0084422,
+    "same_sample_raw_msp_aurc_grouped_minus_random_tie": 0.02153
+  },
+  "replacement_metrics": {
+    "histogram_bins": 100000,
+    "score_transform": "u = (2/pi) * arcsin(sqrt(clip(float64(score),0,1)))",
+    "bin_assignment": "min(floor(u*100000),99999)",
+    "upper_score_edge": "sin((pi/2)*(bin_index+1)/100000)^2",
+    "scope": "Same fixed monotone transformation for raw MSP, raw entropy, LR3 and LR3+class, primary full-population metrics and same-sample quantization QA",
+    "unchanged": "All features, raw scores, group assignments, training samples, regularization grid, preprocessing, fitting objectives, retrospective targets, and exact training-derived threshold comparisons",
+    "interpretation": "Ranking metrics remain grouped-bin approximations. Exact thresholds and prevalence remain full-population counts. Whole-bin RC and random secondary-key RC differ for true equal-score ties as well as quantization; report both and do not label every AURC discrepancy a quantization error."
+  },
+  "gate": "Preserve original protocol and smoke outputs; rerun synthetic and end-to-end smoke checks with revised metrics before formal nested training. Feature extraction may continue because its numerical definitions do not change.",
+  "optimization_scope": "Numerical correctness only. No model, feature, group or hyperparameter is selected using smoke evaluation performance."
+}

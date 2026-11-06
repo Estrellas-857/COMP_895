@@ -1,0 +1,42 @@
+CSE 805 FINAL PRESENTATION — QA REPORT
+
+Deliverable: CSE805_Final_Presentation.pptx
+Status: PASS, with application-specific limits stated below.
+SHA-256: 05c1451a9064a82c5c689c539f6fa5b197d0db824286091176287007cb2c2a0a
+
+COMPLETENESS AND INSTRUCTOR COVERAGE
+
+15 slides: 14 main slides and one references slide, 16:9 widescreen. All slide content is English. All 15 slides contain the complete Chinese narration in embedded speaker notes. Planned narration totals 825 seconds (13 minutes 45 seconds); this is a rehearsal target, not measured speech duration.
+
+Problem and significance: slides 2, 4–5.
+At least three prior works, their limitations, and the research landscape: slides 3–4 and 15.
+Student contribution and its importance: slides 5, 7 and 9–12.
+Problem formulation and assumptions: slide 6.
+Solution and CSE 805 concepts: slides 7–8.
+Visualized results and interpretation: slides 2 and 9–12.
+Limitations and future directions: slide 13.
+Bounded conclusion: slide 14.
+
+ACADEMIC AND NUMERICAL CHECKS
+
+Recomputed equal-group means directly from all 68 group/method rows in results/report/group_metrics.csv. All 16 displayed metric values match their source at the displayed precision. LR + Class accepted error is 7.665% versus MSP 8.393%, a 0.728 percentage-point reduction. The higher class-aware AURC (0.05129 versus 0.04817) remains visible and explicitly discussed.
+
+The source map records the selectors and units behind quantitative claims, source figures, notes, methodology and literature. An independent review found no mismatch between the final deck, source map and outline. The presentation distinguishes group-macro full-pixel results from weighted-sample post-hoc diagnostics. All three Night failures, within-group ranking problems, and the descriptive status of the class-reliability explanation are retained.
+
+Claims preserve the filename-group caveat, correlated pixels, the separate 406-image validation population, training-only preprocessing, and retrospective coverage versus transferred training thresholds. No new significance test, universal superiority, calibrated-probability guarantee, causal claim, segmentation architecture or improved mIoU is asserted. The primary amended binning policy is unchanged.
+
+Five peer-reviewed works have verified primary conference sources. ACDC uses its publisher DOI. The other four DOI links are explicitly labeled arXiv records, rather than unverified conference DOIs. The research landscape is representative, not a claim to a 2026 performance leaderboard.
+
+FILE, EDITABILITY AND VISUAL CHECKS
+
+The final PPTX passes package integrity, slide-size, layout and font-policy checks and successfully reimports as 15 slides. Tables on slides 3, 9 and 13 are native editable PowerPoint tables. Text and the slide 7 pipeline are editable native objects. The three required scientific figures remain raster source figures; byte hashes confirm they are embedded unchanged. The motivation example uses documented native image crops.
+
+All 15 final slides were rendered. Fourteen match the individually reviewed draft renders pixel-for-pixel; the remaining slide was separately inspected and has only a minor image-fit difference. No visible clipping or overlap remains. One automated spacing warning on slide 3's two-line takeaway was visually reviewed and accepted. LibreOffice also converted the final PPTX successfully to 15 PDF pages; its pipeline, result table and Night plot pages were visually checked.
+
+PRESERVATION AND LIMITS
+
+No training, segmentation forward passes or experimental changes were performed for this presentation. SHA-256 verification found zero mismatches across 3,635 frozen COMP 895 files, 5,094 frozen CSE 805 files and 65 interpretation artifacts recorded in the existing preservation manifests.
+
+Desktop Microsoft PowerPoint editing and projector display were not tested. Noto Sans font substitution on another computer could alter wrapping; check the deck on the presentation computer and rehearse the notes before presenting. The source figures are intentionally preserved images, so their internal plotted elements are not individually editable.
+
+Detailed machine-readable validation receipts and rendering artifacts are retained in the sibling build directory. They are not additional presentation deliverables.

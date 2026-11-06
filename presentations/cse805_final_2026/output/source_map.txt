@@ -1,0 +1,293 @@
+CSE 805 FINAL PRESENTATION — CLAIM AND FIGURE SOURCE MAP
+
+Prepared from the completed experiment and checked against the final 15-slide presentation.
+
+Scope: slide text, visible figure data and quantitative speaker-note claims. No new training, inference, thresholds, tests of significance, or experimental results are introduced.
+
+Units: a proportion × 100 is percent; a difference in proportions × 100 is percentage points (pp). Primary averages give each of the 17 recording proxies equal weight. Pooled pixel prevalence is a different estimand.
+
+Population: full-pixel primary evaluation versus weighted QA diagnostics is stated for every relevant entry. The primary metric remains retrospective nearest-whole-bin risk80 with the prespecified amended 100,000-bin policy.
+
+01. Learning to Predict Semantic Segmentation Errors Under Adverse Driving Conditions
+Student: Haotian Wang; course and semester CSE 805, Fall 2026 come from the user task.
+Name evidence: /home/george/Desktop/COMP_895/project/reports/final_report_v2/main.tex line 25; /home/george/Desktop/COMP_895/project/presentations/final_presentation_v1/speaker_notes_zh.md line 9.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/report.txt
+Selector / transformation: Title and completed supervised error-prediction experiment. No quantitative performance claim on this slide.
+
+02. Confident segmentation can still be wrong
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/cases/maximum_delta.png
+Selector / transformation: Use existing top-row panels only. Original image dimensions 3060 × 1445 pixels; no scientific-value alteration.
+Native PowerPoint cropping uses these pixel bounds (left, top, right, bottom), right/bottom exclusive: RGB [141,259,924,700]; GT-derived error map [1139,259,1921,700]; raw 1−MSP [2136,259,2919,700]. Display sizes are 783×441, 782×441 and 783×441 pixels before slide scaling.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/cases/case_selection.json
+Selector / transformation: cases entry role=maximum_delta, image_id=fog/GOPR0477_frame_000790_rgb_anon. Selected post hoc as the largest per-image LR+class minus MSP retrospective80 risk difference among 1600 images; it is an adverse illustration, not a representative performance sample.
+Original RGB: /home/george/Documents/ACDC/rgb_anon_trainvaltest/rgb_anon/fog/train/GOPR0477/GOPR0477_frame_000790_rgb_anon.png
+RGB SHA-256: 66cc51283a3727ae0137ff5512450a37b6a9cdce9a76fa012de78f83643940f0
+Original GT: /home/george/Documents/ACDC/gt_trainval/gt/fog/train/GOPR0477/GOPR0477_frame_000790_gt_labelTrainIds.png
+GT SHA-256: 657bdd521823346a7d3aada2cec515642f06f163f1acaa15979d7bc82e8866ae
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/visualize.py
+Selector / transformation: _render_case: error map red=wrong, dark green=correct; ignored GT gray. Raw error-score map uses fixed viridis [0,1], low=high confidence. No numeric case performance claim is made on the slide.
+No new model inference or separate prediction-map export was created. The source scene belongs to the primary ACDC adverse training population.
+
+03. Existing research and its scope
+Three displayed comparison rows are ACDC, MSP and ConfidNet. SegFormer is named in narration as the established backbone. Limitations are scoped to this project question; no comparative superiority is inferred.
+ACDC2021: ACDC: The Adverse Conditions Dataset with Correspondences for Semantic Driving Scene Understanding; Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
+Primary source: https://openaccess.thecvf.com/content/ICCV2021/html/Sakaridis_ACDC_The_Adverse_Conditions_Dataset_With_Correspondences_for_Semantic_Driving_ICCV_2021_paper.html
+DOI: https://doi.org/10.1109/ICCV48922.2021.01059 (IEEE conference publication DOI).
+SegFormer2021: SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers; Advances in Neural Information Processing Systems 34 (NeurIPS), 2021.
+Primary source: https://proceedings.neurips.cc/paper/2021/hash/64f1f27bf1b4ec22924fd0acb550c235-Abstract.html
+DOI: https://doi.org/10.48550/arXiv.2105.15203 (arXiv record DOI; not a conference publisher DOI).
+MSP2017: A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks; International Conference on Learning Representations (ICLR), 2017.
+Primary source: https://openreview.net/references/pdf?id=HJ2Pfowdg
+DOI: https://doi.org/10.48550/arXiv.1610.02136 (arXiv record DOI; not a conference publisher DOI).
+ConfidNet2019: Addressing Failure Prediction by Learning Model Confidence; Advances in Neural Information Processing Systems 32 (NeurIPS), 2019.
+Primary source: https://papers.neurips.cc/paper_files/paper/2019/hash/757f843a169cc678064d9530d12a1881-Abstract.html
+DOI: https://doi.org/10.48550/arXiv.1910.04851 (arXiv record DOI; not a conference publisher DOI).
+
+04. Research landscape and the focused gap
+2024 is the peer-reviewed ICLR publication year for ValUES. This is a focused research landscape, explicitly not a 2026 leaderboard claim. Ensembles, test-time augmentation, and task-specific validation are literature context; none was trained or compared in this project.
+MSP2017: A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks; International Conference on Learning Representations (ICLR), 2017.
+Primary source: https://openreview.net/references/pdf?id=HJ2Pfowdg
+DOI: https://doi.org/10.48550/arXiv.1610.02136 (arXiv record DOI; not a conference publisher DOI).
+ConfidNet2019: Addressing Failure Prediction by Learning Model Confidence; Advances in Neural Information Processing Systems 32 (NeurIPS), 2019.
+Primary source: https://papers.neurips.cc/paper_files/paper/2019/hash/757f843a169cc678064d9530d12a1881-Abstract.html
+DOI: https://doi.org/10.48550/arXiv.1910.04851 (arXiv record DOI; not a conference publisher DOI).
+ValUES2024: ValUES: A Framework for Systematic Validation of Uncertainty Estimation in Semantic Segmentation; International Conference on Learning Representations (ICLR), 2024.
+Primary source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/1548d98b62d3a4382a31ba77d89186cd-Abstract-Conference.html
+DOI: https://doi.org/10.48550/arXiv.2401.08501 (arXiv record DOI; not a conference publisher DOI).
+
+05. Research question and student contributions
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/README.txt
+Selector / transformation: Student-developed error prediction extension and separation from frozen COMP 895 artifacts.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/protocol.json
+Selector / transformation: method_definition, features, outer, inner, interpretation: three contribution categories are framework, feature ablation, and grouped evaluation; they are organizational categories, not three novel algorithms.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/report.txt
+Selector / transformation: Completed fitting, matched held-out evaluation, negative results. No new numerical outcome asserted here.
+
+06. Binary error prediction
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/protocol.json
+Selector / transformation: features.label=1[predicted_trainId != semantic_GT_trainId]; validity GT IDs 0..18, exclude255. Inputs MSP, entropy/log19, top-two probability margin and predicted-class one-hot. Backbone stays fixed.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/features.py
+Selector / transformation: Canonical predictions from interpolated raw logits; target derives from disagreement on semantic-valid pixels. Ground truth does not enter predictor features.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/evaluation.py
+Selector / transformation: fit_pipeline: 3 numeric feature columns plus optional 19 fixed one-hot categories. Binary error label 1 versus correct0; these are definitions, not measured rates.
+Assumption that feature–error relationships transfer is explicitly a requirement, not an empirically guaranteed property.
+
+07. Proposed machine learning pipeline
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/features.py
+Selector / transformation: Frozen SegFormer probability and feature extraction.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/evaluation.py
+Selector / transformation: fit_pipeline: StandardScaler on continuous columns; OneHotEncoder with categories 0..18; L2 LogisticRegression. Score=probability output for label 1, interpreted as an error score without calibration guarantee.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/protocol.json
+Selector / transformation: preprocessing fitted only on relevant inner-training or outer-training groups; GT only constructs labels. Selective acceptance ranks low scores first.
+Diagram is native editable PowerPoint shapes, not empirical chart data. Coverage=accepted valid pixels/all valid pixels; risk=errors among accepted pixels/accepted valid pixels. No modified segmentation predictions or mIoU claim.
+
+08. Grouped evaluation and CSE 805 concepts
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/metadata_train.csv
+Selector / transformation: 1600 rows; condition counts Fog 400, Night 400, Rain 400, Snow 400. Unique recording_group counts Fog 6, Night 3, Rain 3, Snow 5, total 17.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/assignments.json
+Selector / transformation: 17 outer folds leave one recording proxy out; each corresponding inner assignment remains within the other 16 groups. No image/pixel-level random split.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/protocol.json
+Selector / transformation: outer.folds=17; inner.folds=3; inner.C_grid=[0.01,0.1,1.0]; mean three weighted inner AP values selects C. Train sample 512/image, uniform valid pixels without replacement; seed 805; weights=N_valid_image/sample_count, normalized to mean 1 for classifier fitting. supplemental_validation=406 excluded.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/model_selection.csv
+Selector / transformation: 102 candidate rows PASS; selected_C=.01 for both configurations in all 17 folds (34 outer refits). AP selection includes inverse-inclusion weights.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/group_metrics.csv
+Selector / transformation: scope=group,method=raw_msp: sum num_valid_pixels=3,059,663,748 (~3.06 billion); sum num_error_pixels=523,653,212. Every method evaluated on identical pixels. These are counts, not independent sample size.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/evaluation.py
+Selector / transformation: fit_pipeline: unweighted StandardScaler fitted only on the current training partition; only LogisticRegression receives normalized sample weights. L2 penalty; lbfgs solver; max_iter=1000; tol=1e-5.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/metric_amendment_001.json
+Selector / transformation: Supersedes original protocol metrics before formal fitting with 100,000 fixed arcsine-square-root bins; no post-result metric change.
+Filename groups are conservative chapter-family proxies, not verified independent physical sessions.
+
+09. Better risk80, worse average AURC
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/group_metrics.csv
+Selector / transformation: Filter scope=group. Arithmetic mean by method of auroc,average_precision,aurc,retrospective80_risk over 17 rows per method. Full valid-pixel metrics within each group. Display rounds AUROC/AP to 4 decimals, AURC to 5 decimals, risk percent to 3 decimals.
+raw_msp: AUROC 0.852106993; AP 0.484882167; AURC 0.048172293; risk80 8.393356214%.
+raw_entropy: AUROC 0.852904829; AP 0.485872847; AURC 0.047996705; risk80 8.351407831%.
+lr3: AUROC 0.851409893; AP 0.471650568; AURC 0.048363048; risk80 8.376357566%.
+lr3_class: AUROC 0.862207422; AP 0.531818326; AURC 0.051292069; risk80 7.665263188%.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/delta_summary.csv
+Selector / transformation: scope=all,method=lr3_class,baseline=raw_msp: mean_risk_delta×100=−0.728093026 pp; mean_aurc_delta=+0.003119776. Display −0.728 pp and +0.00312.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/metric_amendment_001.json
+Selector / transformation: Identical monotone arcsine transform and 100,000 bins for all methods. Whole-bin risk–coverage and right-step AURC. AUROC/AP are grouped-bin approximations.
+Risk80 is retrospective nearest attainable whole-bin 80% coverage, not exactly matched coverage or deployment guarantee. Largest paired class/MSP coverage difference is 0.002619 pp. Primary endpoint has not been switched after observing AURC. AUROC/AP higher and AURC/risk lower are favorable. AURC is an integrated risk summary, not the error at a single cutoff.
+
+10. Improvements are common, not universal
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/paired_group_risk80_deltas.png
+Selector / transformation: Reused unchanged in full: no crop, recoloring, omitted group, axis change, or new data. Negative horizontal values favor learned method over MSP.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/paired_deltas.csv
+Selector / transformation: baseline=raw_msp; method in(lr3,lr3_class). Plot x=risk_delta×100 pp. Y labels group/weather/image count from the group metadata.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/delta_summary.csv
+Selector / transformation: method=lr3_class,baseline=raw_msp: all improved_groups=14,worsened_groups=3,num_groups=17. Mean risk changes: fog−1.424295169 pp,snow−0.459915400 pp,rain−0.265061931 pp,night−0.245682544 pp. Display −1.424,−.460,−.265,−.246 pp.
+gopro_0122 (snow): class−MSP -0.373704 pp.
+gopro_0176 (snow): class−MSP +0.007394 pp.
+gopro_0351 (night): class−MSP -0.314696 pp.
+gopro_0376 (night): class−MSP -0.014412 pp.
+gopro_0397 (night): class−MSP -0.407939 pp.
+gopro_0400 (rain): class−MSP -0.120381 pp.
+gopro_0402 (rain): class−MSP +0.177485 pp.
+gopro_0475 (fog): class−MSP -0.570604 pp.
+gopro_0476 (fog): class−MSP -0.701911 pp.
+gopro_0477 (fog): class−MSP -3.261777 pp.
+gopro_0478 (fog): class−MSP -1.725049 pp.
+gopro_0479 (fog): class−MSP -2.296638 pp.
+gopro_0480 (fog): class−MSP +0.010209 pp.
+gopro_0571 (rain): class−MSP -0.852290 pp.
+gopro_0604 (snow): class−MSP -0.307582 pp.
+gopro_0606 (snow): class−MSP -0.474479 pp.
+gopro_0607 (snow): class−MSP -1.151206 pp.
+The figure also shows LR3 values from the same selector; all 34 bars retained. No significance or population-confidence-interval claim is made.
+
+11. Night fails at low coverage
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/figures/night_group_risk_coverage.png
+Selector / transformation: Reused unchanged in full. Three held-out groups plus explicitly labeled pooled cross-fitted diagnostic. Axes show actual coverage and accepted-error fraction. Full-pixel curves, frozen 100k-bin policy; dots mark actual near 80% cutoffs.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/figures_and_tables.py
+Selector / transformation: Figure construction restores frozen group accumulators; fourth panel combines out-of-fold histograms, not one deployable model.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/group_metrics.csv
+Selector / transformation: scope=group; weather=night; methods raw_msp and lr3_class. In every Night group, class AUROC/AP lower,AURC higher,risk80 lower. Counts: gopro_0351=93 images, gopro_0376=203, gopro_0397=104; total 400.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/metrics_policy_coverage.csv
+Selector / transformation: weather=night; policy=raw_secondary; requested_coverage=.1; methods raw_msp,lr3_class. Same 8,192/image weighted QA samples and label-independent tie keys. These note-only values are sampled diagnostics, not the full-pixel primary curve.
+QA 10% gopro_0351, raw_msp: accepted error 1.491626%, actual coverage 10.000006%.
+QA 10% gopro_0351, lr3_class: accepted error 12.512777%, actual coverage 10.000038%.
+QA 10% gopro_0376, raw_msp: accepted error 0.667637%, actual coverage 10.000018%.
+QA 10% gopro_0376, lr3_class: accepted error 26.453656%, actual coverage 10.000024%.
+QA 10% gopro_0397, raw_msp: accepted error 0.417233%, actual coverage 9.999982%.
+QA 10% gopro_0397, lr3_class: accepted error 19.446246%, actual coverage 10.000037%.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/night_low_coverage_class_composition.csv
+Selector / transformation: method=lr3_class; predicted_class_name=vegetation; requested_coverage=.1. Full-pixel accepted_error_share×100, denominator ALL accepted errors; display 84%–96%.
+gopro_0351: vegetation share of accepted errors 83.982644%; actual coverage 10.000234%.
+gopro_0376: vegetation share of accepted errors 93.567659%; actual coverage 9.999913%.
+gopro_0397: vegetation share of accepted errors 96.304114%; actual coverage 10.000373%.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/pixel_confusions.csv
+Selector / transformation: condition=night; method=lr3_class; requested_coverage=.1; predicted_class_name=vegetation; gt_class_name in(sky,building). These true categories dominate accepted errors, not necessarily true vegetation.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/metrics_macro_summary.csv
+Selector / transformation: weather=night; compare mean_aurc by method under raw_grouped,arcsine_10000_grouped,arcsine_100000_grouped,arcsine_1000000_grouped,raw_secondary. Class-aware AURC worse under every policy. Notes refer to descriptive sensitivity; original primary unchanged.
+Within-group degradation rules out cross-fold pooling as the sole cause. It does not prove a unique causal explanation.
+
+12. Class reliability can transfer or fail
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/figures/class_reliability_shift.png
+Selector / transformation: Reused unchanged in full. Night gopro_0376 subset MSP>=.99;Fog gopro_0477 all confidence levels. Two selected post-hoc examples; original axes,categories,legend and sampling footnote retained.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/coefficient_figure_values.csv
+Selector / transformation: All 16 rows; fraction×100 supplies every visible bar/number. Training profiles use 512/image; held-out QA uses 8,192/image, with inverse-inclusion weights. Neither plot is full-pixel primary nor independent probability-calibration validation.
+Night/gopro_0376/vegetation/train_error_rate: 3.663278027%; held-out subset share 5.924286396%.
+Night/gopro_0376/road/train_error_rate: 6.129865424%; held-out subset share 35.160622072%.
+Night/gopro_0376/vegetation/heldout_error_rate: 37.489139515%; held-out subset share 5.924286396%.
+Night/gopro_0376/road/heldout_error_rate: 3.741410487%; held-out subset share 35.160622072%.
+Night/gopro_0376/vegetation/heldout_mean_lr3_score: 6.270862499%; held-out subset share 5.924286396%.
+Night/gopro_0376/road/heldout_mean_lr3_score: 5.860141094%; held-out subset share 35.160622072%.
+Night/gopro_0376/vegetation/heldout_mean_lr3_class_score: 4.978245580%; held-out subset share 5.924286396%.
+Night/gopro_0376/road/heldout_mean_lr3_class_score: 8.554670054%; held-out subset share 35.160622072%.
+Fog/gopro_0477/sky/train_error_rate: 1.549649784%; held-out subset share 36.496147132%.
+Fog/gopro_0477/building/train_error_rate: 23.304961147%; held-out subset share 15.590783007%.
+Fog/gopro_0477/sky/heldout_error_rate: 1.994198841%; held-out subset share 36.496147132%.
+Fog/gopro_0477/building/heldout_error_rate: 74.522310389%; held-out subset share 15.590783007%.
+Fog/gopro_0477/sky/heldout_mean_lr3_score: 17.529318560%; held-out subset share 36.496147132%.
+Fog/gopro_0477/building/heldout_mean_lr3_score: 28.729179503%; held-out subset share 15.590783007%.
+Fog/gopro_0477/sky/heldout_mean_lr3_class_score: 2.807197601%; held-out subset share 36.496147132%.
+Fog/gopro_0477/building/heldout_mean_lr3_class_score: 35.737389458%; held-out subset share 15.590783007%.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/coefficients_class_offsets.csv
+Selector / transformation: group in (gopro_0376, gopro_0477); category-specific conditional log-odds contrasts support cross-class reordering. Not class error rates or causal importance.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/within_class_metrics.csv
+Selector / transformation: gopro_0376:road/vegetation/building;gopro_0477:sky/building; compare lr3 versus lr3_class AUROC. Small changes within predicted classes accompany larger overall group changes.
+Scores are mean predict_proba outputs, not guaranteed calibrated error probabilities. Adding class also refits numeric slopes/intercept; observed associations do not isolate causality.
+
+13. Limitations and next steps
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/protocol.json
+Selector / transformation: group_ambiguity/group_independence_claimed; only 3 Night proxies; fixed backbone,no improved mIoU; prior data exploration and correlated pixels limit claims.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/group_metrics.csv
+Selector / transformation: scope=group; method=lr3_class; min/max training_threshold_actual_coverage×100 =65.648420960% to 91.553417391%. Display 65.65%–91.55%. Thresholds selected from outer training only, not held-out labels; still no prospective guarantee.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/runtime.csv
+Selector / transformation: phase=full_pixel_evaluation; measure=score_seconds.raw_msp or score_seconds.lr3_class; sum 17 groups. MSP 41.314881319 s → 41.3 s, LR + Class 428.571424378 s → 428.6 s. Includes score-call validation/prediction, excludes histogram updates; not deployment latency.
+The paired future-work column is a recommendation, not a completed experiment. No new training set, model, session verification, threshold-transfer experiment, or runtime optimization is claimed.
+
+14. A trained solution with a bounded benefit
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/delta_summary.csv
+Selector / transformation: Class versus MSP: mean_risk_delta<0, 14/17 wins; class versus entropy: mean_risk_delta<0, 15/17 wins. LR3 versus MSP: mean −0.016999 pp; versus entropy: +0.024950 pp. Supports little operating-point benefit from LR3 alone.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/report.txt
+Selector / transformation: 34 completed LR pipelines, grouped validation, full-population evaluation; pretrained backbone unchanged.
+Source: /home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/interpretation_report.txt
+Selector / transformation: Night failure and class-conditioned reliability interpretation. Claim bounded to the prespecified retrospective operating point, with ranking tradeoffs.
+Conclusion repeats verified results. It is not a claim of universal superiority, novel segmentation architecture, improved mIoU, calibrated probabilities, or guaranteed future coverage.
+
+15. References
+All five bibliography records match /home/george/Desktop/COMP_895/project/presentations/cse805_final_2026/build/literature_verified.json. Verification date 2026-11-05.
+ACDC2021: Christos Sakaridis, Dengxin Dai, Luc Van Gool. ACDC: The Adverse Conditions Dataset with Correspondences for Semantic Driving Scene Understanding. Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
+Official source: https://openaccess.thecvf.com/content/ICCV2021/html/Sakaridis_ACDC_The_Adverse_Conditions_Dataset_With_Correspondences_for_Semantic_Driving_ICCV_2021_paper.html
+Linked DOI: https://doi.org/10.1109/ICCV48922.2021.01059
+DOI type: IEEE conference publication DOI
+SegFormer2021: Enze Xie, Wenhai Wang, Zhiding Yu, Anima Anandkumar, Jose M. Alvarez, Ping Luo. SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers. Advances in Neural Information Processing Systems 34 (NeurIPS), 2021.
+Official source: https://proceedings.neurips.cc/paper/2021/hash/64f1f27bf1b4ec22924fd0acb550c235-Abstract.html
+Linked DOI: https://doi.org/10.48550/arXiv.2105.15203
+DOI type: arXiv preprint-record DOI, explicitly labeled; no conference publisher DOI verified.
+MSP2017: Dan Hendrycks, Kevin Gimpel. A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks. International Conference on Learning Representations (ICLR), 2017.
+Official source: https://openreview.net/references/pdf?id=HJ2Pfowdg
+Linked DOI: https://doi.org/10.48550/arXiv.1610.02136
+DOI type: arXiv preprint-record DOI, explicitly labeled; no conference publisher DOI verified.
+ConfidNet2019: Charles Corbière, Nicolas Thome, Avner Bar-Hen, Matthieu Cord, Patrick Pérez. Addressing Failure Prediction by Learning Model Confidence. Advances in Neural Information Processing Systems 32 (NeurIPS), 2019.
+Official source: https://papers.neurips.cc/paper_files/paper/2019/hash/757f843a169cc678064d9530d12a1881-Abstract.html
+Linked DOI: https://doi.org/10.48550/arXiv.1910.04851
+DOI type: arXiv preprint-record DOI, explicitly labeled; no conference publisher DOI verified.
+ValUES2024: Kim-Celine Kahl, Carsten T. Lüth, Maximilian Zenk, Klaus Maier-Hein, Paul F. Jaeger. ValUES: A Framework for Systematic Validation of Uncertainty Estimation in Semantic Segmentation. International Conference on Learning Representations (ICLR), 2024.
+Official source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/1548d98b62d3a4382a31ba77d89186cd-Abstract-Conference.html
+Linked DOI: https://doi.org/10.48550/arXiv.2401.08501
+DOI type: arXiv preprint-record DOI, explicitly labeled; no conference publisher DOI verified.
+
+SOURCE INTEGRITY APPENDIX
+SHA-256 hashes below identify local experimental source files read for this map. Source tables and figures were not modified.
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/README.txt
+  d47b9472aa5e34e0075940fcc286b7cc421b19f6645a855af7f8aa06f4823343
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/assignments.json
+  db1fd9be735e78eab808e3dbc2d6a6d47eb421841583308f8a2a26bfe433a6bf
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/metadata_train.csv
+  0c3fb4a315fcd7b6ed11b9b74e5537f03e5dd02107cdf8e601a4867651eb36f6
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/metric_amendment_001.json
+  5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/data/protocol.json
+  86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/evaluation.py
+  4daa89edf7818b3e5f555259299863889a3b77860b279f4b16e029d5197808ae
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/features.py
+  60ed3f8a37acbe4efbf3bce83ab4fef94525a12262e4fcb0fa1864b0d488ff43
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/figures/class_reliability_shift.png
+  c2f69fce5489eb71a79ad022157de222138c72d6c16c2645ae3510739f683ed1
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/figures/night_group_risk_coverage.png
+  1a4c9386cce476808e8697a710f779b2b53d5cd39931465a59cbf2c21c638f91
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/figures_and_tables.py
+  6cc867ec0d04621157880ff19c6c54ca0708ac7051562d68759fe69305f61783
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/interpretation_report.txt
+  e3407c7afc848618501145ff95de2c38485dd7c50b7cadceef36d411884fe465
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/coefficient_figure_values.csv
+  69d9937babf367b2cba9e2f24d6a6a93ed6791c47198c05df4cb6ffbefc82b7f
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/coefficients_class_offsets.csv
+  38fca18fccd049a6426f741b59dffa19a05f8879b372d2d02867524147bc28ed
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/metrics_macro_summary.csv
+  9451b4740c8ffda00f8bb95090710be238682921586808b9eeffc3b2437b0281
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/metrics_policy_coverage.csv
+  c502fcf36372491cfd84d178cc204fd615ffc5a52c552f0475952cf40db89d34
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/night_low_coverage_class_composition.csv
+  e34baa7f57ea7cf755791cb057bf64a52f636086eaa4010ec5057f9672dd09a5
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/pixel_confusions.csv
+  aed2e12c5c49f68acc4124f2031c1fb05273498246dc4ceb4a91f6ce38edab47
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/interpretation_v1/tables/within_class_metrics.csv
+  e27fe27398dedb0094c783e7376763005a70de90703f0646dd657a09d67f92f5
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/cases/case_selection.json
+  f2700b35630b6e8a46e9de33dd37eaad2a7326a575d3c64a4b4b91e8f5819b9d
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/cases/maximum_delta.png
+  3377ca989420345aeb0602bcbe2bc863e74d1a768ca5881be586edc09d245dac
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/delta_summary.csv
+  dce278fab09231a1c3d46e77ebec0a1b143be692f17bd6f425e28419db2b176d
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/group_metrics.csv
+  429922836a9a19f7da4865f9bc69a8b77d4daca58a727ea9c3d431cbc71b0cff
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/model_selection.csv
+  f1365f6a3b62f8cae72a810be298f85c198af2b490e587faf4c5bcc8e198a66f
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/paired_deltas.csv
+  54bfaa08e1540f01c0df74e44550c9a4c01369e1908808a03844c4c0f10da98d
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/paired_group_risk80_deltas.png
+  c7643ed9721c84f3299b427d17e3e190f6d79805428e274cb56beb484412eee6
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/report.txt
+  733461ceb144d253da6219b158b0be44bc2b56523731e03d2791b17122064245
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/results/report/runtime.csv
+  dad94fd636670e481cd728e591fc901085dac1f1c289973968c98797f9aeb960
+/home/george/Desktop/COMP_895/project/experiments/cse805_error_prediction_v1/visualize.py
+  517c3bc2696cc1f4100c0733187205fd4c9e9069df156fe623c736b91de49afe
+Build records: /home/george/Desktop/COMP_895/project/presentations/cse805_final_2026/build/slide_metadata.json; /home/george/Desktop/COMP_895/project/presentations/cse805_final_2026/build/notes_zh.json; /home/george/Desktop/COMP_895/project/presentations/cse805_final_2026/build/experiment_evidence.json; /home/george/Desktop/COMP_895/project/presentations/cse805_final_2026/build/literature_verified.json.
+A separate preservation QA checks the frozen experiment. This source map establishes provenance rather than adding statistical validation.

@@ -1,0 +1,15 @@
+recording_group,num_images,conditions,num_conditions,sequence_ids,fog_images,night_images,rain_images,snow_images
+gopro_0122,33,snow,1,GOPR0122,0,0,0,33
+gopro_0176,10,snow,1,GP030176,0,0,0,10
+gopro_0351,56,night,1,GOPR0351,0,56,0,0
+gopro_0356,50,night,1,GOPR0356,0,50,0,0
+gopro_0400,18,rain,1,GOPR0400;GP010400;GP030400,0,0,18,0
+gopro_0402,67,rain,1,GOPR0402;GP020402;GP030402,0,0,67,0
+gopro_0475,22,fog,1,GP020475,22,0,0,0
+gopro_0476,78,fog,1,GOPR0476;GP010476,78,0,0,0
+gopro_0571,2,rain,1,GOPR0571,0,0,2,0
+gopro_0572,13,rain,1,GOPR0572,0,0,13,0
+gopro_0604,23,snow,1,GOPR0604,0,0,0,23
+gopro_0605,3,snow,1,GOPR0605,0,0,0,3
+gopro_0606,14,snow,1,GOPR0606,0,0,0,14
+gopro_0607,17,snow,1,GOPR0607;GP010607;GP020607,0,0,0,17

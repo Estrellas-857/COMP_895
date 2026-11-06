@@ -1,0 +1,102 @@
+CSE 805: Learning to Predict Semantic Segmentation Errors
+
+Complete nested group evaluation: 1,600 adverse training images, 17 conservative recording proxies.
+The original 406-image validation set is excluded. The segmentation backbone remains frozen.
+Each outer fold holds out one group; three grouped inner folds select C from 0.01, 0.1 and 1.0 by mean weighted AP (ties choose smaller C).
+Training samples 512 valid pixels per image uniformly without replacement, uses inverse inclusion-probability weights, and fits preprocessing only on each training partition.
+The shared 8,192-pixel-per-image QA sample checks numerical approximation; primary evaluation uses all valid pixels.
+Evaluated 3,059,663,748 valid pixels, 523,653,212 segmentation errors; exact prevalence 17.11473074%.
+
+Extraction QA:
+1,600 images; 802 native caches reused and 798 missing frozen forward passes computed.
+Canonical extraction: 3,059,663,748 valid pixels, 523,653,212 errors, 258,096,252 ignored pixels. These valid/error counts exactly match all four primary evaluations.
+Maximum probability-sum error: 8.344650269e-07.
+Historical predictions compared for 798 images: 135 images differ in a total of 154 pixels. This comparison covers all image pixels, including semantic-ignored pixels.
+All four methods use the same new canonical raw-logit argmax predictions. No exact parity with historical Stage 4 predictions or metrics is claimed; the original files remain unchanged.
+
+Primary endpoint: equally weighted mean held-out-family accepted-error difference at retrospective nearest-bin 80% coverage.
+Negative differences favor the first method at the reported operating points. Both target 80%, but whole-bin/true-score ties can cause departures; these are not exactly matched-coverage comparisons. Actual values and discrepancies are in every table.
+Secondary group-macro paired deltas are also reported: higher AUROC/AP is better; lower AURC is better. An improved risk80 alongside degraded ranking metrics is a tradeoff, not overall superiority.
+lr3 minus raw_msp: mean -0.016999 percentage points; improved/tied/worsened families 12/0/5; leave-one-family-out mean range [-0.019633, -0.008406] pp; maximum paired coverage difference 0.000591 pp.
+mean paired AUROC delta -0.000697 (n=17); mean paired AP delta -0.013232 (n=17); mean paired AURC delta +0.000191 (n=17); opposite metric directions: a tradeoff, not overall superiority.
+lr3 minus raw_entropy: mean +0.024950 percentage points; improved/tied/worsened families 3/0/14; leave-one-family-out mean range [+0.016415, +0.027439] pp; maximum paired coverage difference 0.000524 pp.
+mean paired AUROC delta -0.001495 (n=17); mean paired AP delta -0.014222 (n=17); mean paired AURC delta +0.000366 (n=17).
+lr3_class minus raw_msp: mean -0.728093 percentage points; improved/tied/worsened families 14/0/3; leave-one-family-out mean range [-0.784692, -0.569738] pp; maximum paired coverage difference 0.002619 pp.
+mean paired AUROC delta +0.010100 (n=17); mean paired AP delta +0.046936 (n=17); mean paired AURC delta +0.003120 (n=17); opposite metric directions: a tradeoff, not overall superiority.
+lr3_class minus raw_entropy: mean -0.686145 percentage points; improved/tied/worsened families 15/0/2; leave-one-family-out mean range [-0.741027, -0.544916] pp; maximum paired coverage difference 0.002538 pp.
+mean paired AUROC delta +0.009303 (n=17); mean paired AP delta +0.045945 (n=17); mean paired AURC delta +0.003295 (n=17); opposite metric directions: a tradeoff, not overall superiority.
+lr3_class minus lr3: mean -0.711094 percentage points; improved/tied/worsened families 15/0/2; leave-one-family-out mean range [-0.767217, -0.561332] pp; maximum paired coverage difference 0.002320 pp.
+mean paired AUROC delta +0.010798 (n=17); mean paired AP delta +0.060168 (n=17); mean paired AURC delta +0.002929 (n=17); opposite metric directions: a tradeoff, not overall superiority.
+
+Weather-specific equally weighted family means (same endpoint; limited groups):
+fog: lr3 minus raw_msp = -0.040423 pp across 6 groups.
+mean paired AUROC delta -0.000177 (n=6); mean paired AP delta -0.010971 (n=6); mean paired AURC delta +0.000048 (n=6); opposite metric directions: a tradeoff, not overall superiority.
+fog: lr3 minus raw_entropy = +0.044981 pp across 6 groups.
+fog: lr3_class minus raw_msp = -1.424295 pp across 6 groups.
+mean paired AUROC delta +0.044347 (n=6); mean paired AP delta +0.122627 (n=6); mean paired AURC delta -0.007636 (n=6).
+fog: lr3_class minus raw_entropy = -1.338892 pp across 6 groups.
+fog: lr3_class minus lr3 = -1.383872 pp across 6 groups.
+night: lr3 minus raw_msp = +0.009803 pp across 3 groups.
+mean paired AUROC delta -0.000762 (n=3); mean paired AP delta -0.007232 (n=3); mean paired AURC delta +0.000491 (n=3).
+night: lr3 minus raw_entropy = +0.035527 pp across 3 groups.
+night: lr3_class minus raw_msp = -0.245683 pp across 3 groups.
+mean paired AUROC delta -0.037919 (n=3); mean paired AP delta -0.016932 (n=3); mean paired AURC delta +0.043643 (n=3); opposite metric directions: a tradeoff, not overall superiority.
+night: lr3_class minus raw_entropy = -0.219959 pp across 3 groups.
+night: lr3_class minus lr3 = -0.255486 pp across 3 groups.
+rain: lr3 minus raw_msp = -0.022170 pp across 3 groups.
+mean paired AUROC delta -0.000654 (n=3); mean paired AP delta -0.019291 (n=3); mean paired AURC delta +0.000192 (n=3); opposite metric directions: a tradeoff, not overall superiority.
+rain: lr3 minus raw_entropy = +0.015896 pp across 3 groups.
+rain: lr3_class minus raw_msp = -0.265062 pp across 3 groups.
+mean paired AUROC delta -0.008438 (n=3); mean paired AP delta +0.003416 (n=3); mean paired AURC delta -0.000258 (n=3); opposite metric directions: a tradeoff, not overall superiority.
+rain: lr3_class minus raw_entropy = -0.226996 pp across 3 groups.
+rain: lr3_class minus lr3 = -0.242891 pp across 3 groups.
+snow: lr3 minus raw_msp = -0.001868 pp across 5 groups.
+mean paired AUROC delta -0.001308 (n=5); mean paired AP delta -0.015908 (n=5); mean paired AURC delta +0.000181 (n=5); opposite metric directions: a tradeoff, not overall superiority.
+snow: lr3 minus raw_entropy = -0.000001 pp across 5 groups.
+snow: lr3_class minus raw_msp = -0.459915 pp across 5 groups.
+mean paired AUROC delta +0.008939 (n=5); mean paired AP delta +0.020540 (n=5); mean paired AURC delta -0.006260 (n=5).
+snow: lr3_class minus raw_entropy = -0.458049 pp across 5 groups.
+snow: lr3_class minus lr3 = -0.458048 pp across 5 groups.
+
+Largest adverse changes against raw MSP (all family results remain in paired_deltas.csv):
+gopro_0402 (rain), lr3_class: +0.177485 pp.
+gopro_0351 (night), lr3: +0.025153 pp.
+gopro_0376 (night), lr3: +0.024372 pp.
+gopro_0176 (snow), lr3: +0.019613 pp.
+gopro_0480 (fog), lr3_class: +0.010209 pp.
+gopro_0176 (snow), lr3_class: +0.007394 pp.
+gopro_0480 (fog), lr3: +0.004713 pp.
+gopro_0122 (snow), lr3: +0.002000 pp.
+
+All model-search candidate statuses retained: {'PASS': 102}.
+Selected regularization C for lr3: {'0.01': 17}.
+Selected regularization C for lr3_class: {'0.01': 17}.
+
+Numerical/tie-policy QA: maximum absolute binned-minus-exact difference on identical weighted QA samples:
+AUROC/AP differences measure score quantization with true-score ties grouped in both estimators.
+AURC/risk/coverage differences combine quantization with different treatment of true-score ties: the exact sample estimator uses label-independent secondary keys, while the histogram accepts whole bins. These differences are not pure binning errors, and refining bins cannot remove exact-score ties.
+auroc: 0.0002955069
+average_precision: 0.0002208559
+aurc: 0.0049322922
+retrospective80_risk: 0.0000062811
+retrospective80_actual_coverage: 0.0000212279
+
+Cost and interpretation:
+Original summed per-image feature extraction records: 257.474 s; new frozen-forward/cache subset: 73.253 s. The latest manifest-refresh elapsed time is not used as extraction cost.
+These extraction timings include I/O, hash checks, preprocessing, sampling and cache writes; the forward subset also includes cache handling. They are not pure neural-network latency.
+All nested model searches/refits/threshold selection: 448.506 s. All full-pixel evaluation: 1128.905 s, including 127.572 s feature regeneration.
+Full-pixel score calls (exclude histogram updates; include input validation and model prediction): raw_msp=41.315 s; raw_entropy=44.654 s; lr3=188.827 s; lr3_class=428.571 s.
+Per-fold timings retain their recorded boundaries in runtime.csv. Timings overlap by inclusion and must not all be added. This experiment does not establish production throughput.
+Runtime totals describe the completed formal experiment, not total project wall-clock time. They exclude smoke runs, package installation, the protocol audit, and the first failed empty-chunk attempt (approximately one outer-fold training plus partial evaluation), retained under logs/failed_empty_chunk_attempt.
+At least one learned method has a lower mean primary error rate than MSP. This does not establish overall superiority: costs must be judged with group-macro AUROC/AP/AURC, family consistency, entropy comparisons and negative cases above.
+
+Methodological limits:
+Full-population metric definition: full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC.
+A documented smoke-test metric amendment refined score binning before full training; the original frozen protocol is preserved unchanged.
+Retrospective80 accepts a complete transformed-score bin, including all exactly tied scores. Actual method coverages can differ; its threshold is not deployable.
+Training-derived thresholds use final outer-training sample scores and may be optimistic. Their held-out coverage is measured exactly and is not guaranteed to be 80%.
+Pooled/weather histograms mix different fold-specific classifiers: cross-fitted diagnostics, not a single deployed classifier. Primary inference uses paired family summaries.
+Filename-derived recording groups are not proven independent sessions; route/camera/date dependence can remain. Night and rain have only three groups each.
+No pixel-IID significance tests or population confidence intervals are reported. Leave-one-family-out ranges are descriptive sensitivity, not confidence intervals.
+Standardization and fitting use corresponding training groups only. No ground-truth feature is used. Existing data were previously explored; this is not an untouched confirmatory test.
+This is a supervised error predictor, not a new segmentation network. Original segmentation labels and mIoU are not improved by scoring or rejection.

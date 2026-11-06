@@ -1,0 +1,108 @@
+CSE 805 FINAL PROJECT — SLIDE-BY-SLIDE OUTLINE
+
+Learning to Predict Semantic Segmentation Errors Under Adverse Driving Conditions
+
+Haotian Wang | Fall 2026 | English slides with embedded Chinese speaker notes
+
+15 slides: 14 main slides plus references. Suggested narration totals 825 seconds (13.8 minutes). Timing is a rehearsal target, not measured speech duration.
+
+01. Learning to Predict Semantic Segmentation Errors Under Adverse Driving Conditions
+Purpose / main message: A supervised class-aware error predictor for frozen segmentation outputs.
+Instructor coverage: Project title and student name.
+Chinese speaker-note target: 30 seconds.
+
+02. Confident segmentation can still be wrong
+Purpose / main message: Predict which existing pixel labels are likely to be errors.
+Instructor coverage: What problem?; Why important?; Visualize output.
+Chinese speaker-note target: 50 seconds.
+
+03. Existing research and its scope
+Purpose / main message: Prior work establishes adverse-weather benchmarks, confidence baselines, and learned failure prediction.
+Instructor coverage: At least three existing studies; Limitations of literature.
+Chinese speaker-note target: 65 seconds.
+
+04. Research landscape and the focused gap
+Purpose / main message: A small output-based model tests whether class information helps under adverse-weather shift.
+Instructor coverage: Current state of the art; Research gap.
+Chinese speaker-note target: 45 seconds.
+
+05. Research question and student contributions
+Purpose / main message: Train a supervised reliability solution and test both gains and failures.
+Instructor coverage: Contributions; Why contributions matter.
+Chinese speaker-note target: 45 seconds.
+
+06. Binary error prediction
+Purpose / main message: Predict whether a frozen pixel prediction is wrong, using only available output features.
+Instructor coverage: Main problem; Assumptions; ML problem type.
+Chinese speaker-note target: 60 seconds.
+
+07. Proposed machine learning pipeline
+Purpose / main message: A frozen segmentation network supplies features to a newly trained Logistic Regression classifier.
+Instructor coverage: How solve?; Student-trained component; Ground truth use.
+Chinese speaker-note target: 60 seconds.
+
+08. Grouped evaluation and CSE 805 concepts
+Purpose / main message: The experimental unit is the held-out recording proxy, not an independent pixel.
+Instructor coverage: Training/evaluation methodology; CSE 805 concepts.
+Chinese speaker-note target: 80 seconds.
+
+09. Better risk80, worse average AURC
+Purpose / main message: Class information improves the prespecified operating point while worsening integrated selective risk.
+Instructor coverage: Quantitative results; What results mean.
+Chinese speaker-note target: 80 seconds.
+
+10. Improvements are common, not universal
+Purpose / main message: The largest mean risk80 benefit is in Fog, with adverse groups retained.
+Instructor coverage: Per-group and weather results.
+Chinese speaker-note target: 45 seconds.
+
+11. Night fails at low coverage
+Purpose / main message: All three Night groups lose AUROC, AP and AURC despite slightly better risk80.
+Instructor coverage: Negative findings; Visualize output; Metric interpretation.
+Chinese speaker-note target: 75 seconds.
+
+12. Class reliability can transfer or fail
+Purpose / main message: The model changes relative scores across predicted classes.
+Instructor coverage: Interpretation; Feature ablation; Why Fog and Night differ.
+Chinese speaker-note target: 75 seconds.
+
+13. Limitations and next steps
+Purpose / main message: Transfer and deployment claims require additional independent evidence.
+Instructor coverage: Limitations; Future work; Coverage and compute boundaries.
+Chinese speaker-note target: 70 seconds.
+
+14. A trained solution with a bounded benefit
+Purpose / main message: Class-aware learning improves a prespecified operating point with condition-dependent ranking tradeoffs.
+Instructor coverage: Conclusions; Student contribution.
+Chinese speaker-note target: 35 seconds.
+
+15. References
+Purpose / main message: Primary conference records and verified DOI links.
+Instructor coverage: Verified literature and bibliography.
+Chinese speaker-note target: 10 seconds.
+
+INSTRUCTOR REQUIREMENT COVERAGE
+
+Problem, motivation, significance: slides 2, 4, 5. Explain why output reliability matters and why scoring frozen predictions is useful; no demonstrated safety-outcome claim.
+
+At least three existing works and their limitations: slide 3 (ACDC, MSP, ConfidNet); research landscape and gap: slide 4; complete verified references: slide 15. Literature limitations are scoped to this specific question.
+
+Student contributions and importance: slide 5, with the trained component visible on slide 7 and measured value on slides 9–12.
+
+Formal problem and assumptions: slide 6. Binary error prediction, available labels, frozen backbone, consistent class indexing, transfer of feature reliability, and no ground-truth predictor input.
+
+How the problem is solved and course topics: slides 7–8. Feature engineering, training-only standardization, Logistic Regression, regularization, grouped validation and evaluation.
+
+Output visualization and meaning: slides 2, 9–12. A real example, four-method table, all-group deltas, Night curves and class interpretation.
+
+Project limitations and how to relax them: slide 13. Independent Night data, verified sessions, transfer and threshold validation, and runtime profiling.
+
+Bounded conclusion: slide 14. Gain at the reported operating point with condition-dependent ranking tradeoffs.
+
+DELIVERY NOTES
+
+Titles follow the build metadata. Slide numbering is the authoritative mapping to embedded speaker notes.
+
+No new training or results. All three required result figures are reused unchanged; only the motivation image is cropped at its original panel bounds.
+
+Before presenting, rehearse the Chinese narration and distinguish full-pixel primary results from weighted-sample post-hoc diagnostics.

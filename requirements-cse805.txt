@@ -1,0 +1,8 @@
+# Additional isolated dependencies recorded in the CSE805 evaluation environment.
+# Install the shared requirements.txt first; use --target and --no-deps as in README.
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+cloudpickle==3.1.2
+narwhals==2.28.0

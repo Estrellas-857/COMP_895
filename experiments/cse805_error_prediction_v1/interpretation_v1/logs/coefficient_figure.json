@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "script_sha256": "3ea0fb256bdd619fca76fc106cf6c065a63ac1cfdded4b46dd6af04fb4b56a1e",
+  "source_hashes": {
+    "class_profile_high_confidence.csv": "2108f046c319608f564d55c5c6727b4abe10e6f06a865c1b97d47df98edd0331",
+    "class_profile_train_heldout.csv": "398556c8efe30ca9a015e3cbc241ac6cb17ce56572e86e97b323a818a899c4e4"
+  },
+  "output_hashes": {
+    "figures/class_reliability_shift.png": "c2f69fce5489eb71a79ad022157de222138c72d6c16c2645ae3510739f683ed1",
+    "tables/coefficient_figure_values.csv": "69d9937babf367b2cba9e2f24d6a6a93ed6791c47198c05df4cb6ffbefc82b7f"
+  },
+  "note": "Reads existing weighted sample summaries only; no model, feature, threshold, or sample changes"
+}

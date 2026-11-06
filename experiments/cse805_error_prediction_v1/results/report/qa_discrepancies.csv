@@ -1,0 +1,341 @@
+group,method,metric,exact,quantized,difference,comparison
+gopro_0122,raw_msp,auroc,0.8029737582519626,0.8029738281995259,6.994756329703478e-08,Score quantization; both estimators group true score ties
+gopro_0122,raw_msp,average_precision,0.41840688279852734,0.41840135584211746,-5.526956409873662e-06,Score quantization; both estimators group true score ties
+gopro_0122,raw_msp,aurc,0.05065842548031398,0.05069121526662869,3.278978631470614e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,raw_msp,retrospective80_risk,0.06416732613467266,0.06416709776920672,-2.2836546594018348e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,raw_msp,retrospective80_actual_coverage,0.7999994375317332,0.8000022846644639,2.847132730687818e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,raw_entropy,auroc,0.8026311763271061,0.802631423058965,2.467318588328382e-07,Score quantization; both estimators group true score ties
+gopro_0122,raw_entropy,average_precision,0.4153198860953674,0.41531234349774193,-7.542597625476155e-06,Score quantization; both estimators group true score ties
+gopro_0122,raw_entropy,aurc,0.050372832859090506,0.05039584998855578,2.3017129465272013e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,raw_entropy,retrospective80_risk,0.06413930869869548,0.06413908478212323,-2.2391657225617756e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,raw_entropy,retrospective80_actual_coverage,0.8000011570771133,0.8000039499688032,2.792891689917809e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,lr3,auroc,0.8020300502261224,0.8019784283600289,-5.162186609353192e-05,Score quantization; both estimators group true score ties
+gopro_0122,lr3,average_precision,0.4040719435734786,0.403938847177053,-0.00013309639642561377,Score quantization; both estimators group true score ties
+gopro_0122,lr3,aurc,0.05050971877653453,0.050951681679145044,0.00044196290261051124,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,lr3,retrospective80_risk,0.06415663144085944,0.06415640291962814,-2.2852123129912805e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,lr3,retrospective80_actual_coverage,0.7999986565324789,0.8000015060793628,2.8495468838984905e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,lr3_class,auroc,0.811742798519972,0.8116327525439127,-0.00011004597605934752,Score quantization; both estimators group true score ties
+gopro_0122,lr3_class,average_precision,0.439675811392094,0.43945707086616465,-0.00021874052592935067,Score quantization; both estimators group true score ties
+gopro_0122,lr3_class,aurc,0.04024293598172461,0.04032425174562656,8.131576390194711e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,lr3_class,retrospective80_risk,0.06052671819025853,0.06052671819025853,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0122,lr3_class,retrospective80_actual_coverage,0.7999987017208284,0.7999987017208284,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,raw_msp,auroc,0.8142605619600976,0.8142605970653983,3.510530077743823e-08,Score quantization; both estimators group true score ties
+gopro_0176,raw_msp,average_precision,0.4405125681385555,0.4405070745503873,-5.493588168203889e-06,Score quantization; both estimators group true score ties
+gopro_0176,raw_msp,aurc,0.04928250942977058,0.04929522975653611,1.2720326765525147e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,raw_msp,retrospective80_risk,0.05949649829455644,0.05949554771436064,-9.505801957937488e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,raw_msp,retrospective80_actual_coverage,0.8000004243044889,0.7999987094043703,-1.7149001185767787e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,raw_entropy,auroc,0.813014763647102,0.813014679425502,-8.422160002741208e-08,Score quantization; both estimators group true score ties
+gopro_0176,raw_entropy,average_precision,0.4374793119790423,0.43747258179672477,-6.730182317504774e-06,Score quantization; both estimators group true score ties
+gopro_0176,raw_entropy,aurc,0.049633505342750524,0.049636522339276234,3.0169965257106912e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,raw_entropy,retrospective80_risk,0.05988949399899457,0.05988949399899457,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,raw_entropy,retrospective80_actual_coverage,0.799999951629951,0.799999951629951,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,lr3,auroc,0.8125095120251461,0.8125323527273736,2.2840702227466814e-05,Score quantization; both estimators group true score ties
+gopro_0176,lr3,average_precision,0.4251288359990035,0.4250792589317367,-4.957706726677058e-05,Score quantization; both estimators group true score ties
+gopro_0176,lr3,aurc,0.049617420233254494,0.04936086824607436,-0.00025655198718013694,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,lr3,retrospective80_risk,0.059681467850241955,0.059681592546427,1.2469618504429292e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,lr3,retrospective80_actual_coverage,0.8000000689895932,0.7999983975034216,-1.671486171583858e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,lr3_class,auroc,0.8122635729461121,0.8122572917049139,-6.281241198169418e-06,Score quantization; both estimators group true score ties
+gopro_0176,lr3_class,average_precision,0.4321480847737998,0.4321206234623693,-2.7461311430498903e-05,Score quantization; both estimators group true score ties
+gopro_0176,lr3_class,aurc,0.03952796526177024,0.03955396436755289,2.5999105782645304e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,lr3_class,retrospective80_risk,0.05945548814242075,0.05945673395800566,1.245815584909049e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0176,lr3_class,retrospective80_actual_coverage,0.8000000887437902,0.8000056419700325,5.553226242294151e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,raw_msp,auroc,0.8036106833223041,0.8036106644779278,-1.8844376281634823e-08,Score quantization; both estimators group true score ties
+gopro_0351,raw_msp,average_precision,0.6267483402342626,0.6267446801075307,-3.6601267319191777e-06,Score quantization; both estimators group true score ties
+gopro_0351,raw_msp,aurc,0.14233981064242474,0.14236568805539002,2.5877412965280566e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,raw_msp,retrospective80_risk,0.2610786163312556,0.26107776017245604,-8.561587995781217e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,raw_msp,retrospective80_actual_coverage,0.799999455842518,0.7999969363251831,-2.519517334875765e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,raw_entropy,auroc,0.8038138464801634,0.8038138712726575,2.479249405773487e-08,Score quantization; both estimators group true score ties
+gopro_0351,raw_entropy,average_precision,0.628179250121683,0.6281743009002172,-4.949221465766485e-06,Score quantization; both estimators group true score ties
+gopro_0351,raw_entropy,aurc,0.14218019700799253,0.14219073632692047,1.0539318927943464e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,raw_entropy,retrospective80_risk,0.2608723944683958,0.26086889998505064,-3.4944833451344692e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,raw_entropy,retrospective80_actual_coverage,0.800000512022195,0.7999967297588518,-3.782263343188319e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,lr3,auroc,0.8030502874575859,0.8029651558442219,-8.513161336398678e-05,Score quantization; both estimators group true score ties
+gopro_0351,lr3,average_precision,0.62255838583839,0.6224074859793136,-0.00015089985907634773,Score quantization; both estimators group true score ties
+gopro_0351,lr3,aurc,0.14236352784216358,0.14307635989565362,0.0007128320534900423,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,lr3,retrospective80_risk,0.2614496456252363,0.2614529050166697,3.259391433363401e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,lr3,retrospective80_actual_coverage,0.8000001650340185,0.800005420916471,5.255882452481764e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,lr3_class,auroc,0.7809028167949964,0.7807713613171416,-0.0001314554778547583,Score quantization; both estimators group true score ties
+gopro_0351,lr3_class,average_precision,0.6224644052505452,0.6222435493742495,-0.00022085587629572245,Score quantization; both estimators group true score ties
+gopro_0351,lr3_class,aurc,0.17121960351218504,0.16847432548888355,-0.0027452780233014895,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,lr3_class,retrospective80_risk,0.2581833172883935,0.2581841308527385,8.135643450035701e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0351,lr3_class,retrospective80_actual_coverage,0.7999999220022838,0.8000025399683115,2.617966027740337e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,raw_msp,auroc,0.8323678142570314,0.8323677826753098,-3.1581721682272246e-08,Score quantization; both estimators group true score ties
+gopro_0376,raw_msp,average_precision,0.6148268136381501,0.6148230119915996,-3.8016465504497887e-06,Score quantization; both estimators group true score ties
+gopro_0376,raw_msp,aurc,0.1049660279371332,0.10498056004339693,1.4532106263731581e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,raw_msp,retrospective80_risk,0.21303250895238848,0.21303250895238848,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,raw_msp,retrospective80_actual_coverage,0.800000021418967,0.800000021418967,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,raw_entropy,auroc,0.8320671199893224,0.8320670776705139,-4.2318808457508794e-08,Score quantization; both estimators group true score ties
+gopro_0376,raw_entropy,average_precision,0.611892259873655,0.6118876099141526,-4.649959502445178e-06,Score quantization; both estimators group true score ties
+gopro_0376,raw_entropy,aurc,0.10509433392280432,0.1051004190099806,6.085087176282977e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,raw_entropy,retrospective80_risk,0.21297447359593547,0.21297567091465439,1.1973187189207035e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,raw_entropy,retrospective80_actual_coverage,0.8000001239538755,0.8000036882783005,3.5643244249428108e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,lr3,auroc,0.8313352896327215,0.8313309572685201,-4.332364201387051e-06,Score quantization; both estimators group true score ties
+gopro_0376,lr3,average_precision,0.6055887425410768,0.6054921946256046,-9.654791547220043e-05,Score quantization; both estimators group true score ties
+gopro_0376,lr3,aurc,0.10528966618101662,0.10536831020156066,7.86440205440414e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,lr3,retrospective80_risk,0.2132161797558092,0.21321600411050456,-1.756453046342088e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,lr3,retrospective80_actual_coverage,0.7999998017559576,0.8000004607881417,6.590321840471702e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,lr3_class,auroc,0.7650360296175278,0.7650196089311091,-1.6420686418716635e-05,Score quantization; both estimators group true score ties
+gopro_0376,lr3_class,average_precision,0.5753153808069355,0.5752259353367891,-8.944547014633208e-05,Score quantization; both estimators group true score ties
+gopro_0376,lr3_class,aurc,0.1783736745222051,0.17344138236372228,-0.004932292158482815,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,lr3_class,retrospective80_risk,0.21270288498851475,0.21270155354747822,-1.3314410365339313e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0376,lr3_class,retrospective80_actual_coverage,0.7999998089448261,0.7999969429280464,-2.866016779790037e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,raw_msp,auroc,0.8151592680803672,0.8151592608594952,-7.220872011437507e-09,Score quantization; both estimators group true score ties
+gopro_0397,raw_msp,average_precision,0.6534764220303417,0.6534738661442143,-2.5558861274088684e-06,Score quantization; both estimators group true score ties
+gopro_0397,raw_msp,aurc,0.15204864363992518,0.15206733586274862,1.8692222823440963e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,raw_msp,retrospective80_risk,0.2964424006547637,0.2964413188595749,-1.081795188762058e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,raw_msp,retrospective80_actual_coverage,0.8000004282434123,0.7999991981589326,-1.2300844797197286e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,raw_entropy,auroc,0.8156792898478016,0.8156791719232704,-1.1792453114001233e-07,Score quantization; both estimators group true score ties
+gopro_0397,raw_entropy,average_precision,0.6519203295945505,0.6519168806272553,-3.448967295205385e-06,Score quantization; both estimators group true score ties
+gopro_0397,raw_entropy,aurc,0.1517277524142585,0.15173578402037385,8.031606115344037e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,raw_entropy,retrospective80_risk,0.2959430200391178,0.2959417210024433,-1.299036674506926e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,raw_entropy,retrospective80_actual_coverage,0.7999995095138762,0.7999948670685701,-4.642445306068943e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,lr3,auroc,0.8147598999385048,0.8146926687619237,-6.723117658113953e-05,Score quantization; both estimators group true score ties
+gopro_0397,lr3,average_precision,0.6462528826254806,0.646114534742629,-0.00013834788285160826,Score quantization; both estimators group true score ties
+gopro_0397,lr3,aurc,0.15201969618815142,0.15242033254750098,0.0004006363593495599,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,lr3,retrospective80_risk,0.2960720640618482,0.2960753490385091,3.2849766608555875e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,lr3,retrospective80_actual_coverage,0.7999998539674017,0.800005268770575,5.4148031732870194e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,lr3_class,auroc,0.7913049165982494,0.7912660075400886,-3.890905816084089e-05,Score quantization; both estimators group true score ties
+gopro_0397,lr3_class,average_precision,0.6475912671829273,0.6474774616229012,-0.00011380556002604791,Score quantization; both estimators group true score ties
+gopro_0397,lr3_class,aurc,0.19350592963873325,0.18893860461447615,-0.004567325024257107,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,lr3_class,retrospective80_risk,0.29207010110748216,0.29207105590602195,9.547985397873049e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0397,lr3_class,retrospective80_actual_coverage,0.7999998382375099,0.8000044379461729,4.599708663066693e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,raw_msp,auroc,0.8785256582422181,0.8785256228152417,-3.5426976352503914e-08,Score quantization; both estimators group true score ties
+gopro_0400,raw_msp,average_precision,0.49010659809112356,0.4901015542070085,-5.043884115041308e-06,Score quantization; both estimators group true score ties
+gopro_0400,raw_msp,aurc,0.02555797242884566,0.025565091397897064,7.118969051405494e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,raw_msp,retrospective80_risk,0.039917188459076464,0.03991831509142358,1.126632347116241e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,raw_msp,retrospective80_actual_coverage,0.8000000516654875,0.8000025823196679,2.5306541804326343e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,raw_entropy,auroc,0.8790076377327882,0.8790076690791636,3.134637538426688e-08,Score quantization; both estimators group true score ties
+gopro_0400,raw_entropy,average_precision,0.48944010727866766,0.4894342786728555,-5.828605812163712e-06,Score quantization; both estimators group true score ties
+gopro_0400,raw_entropy,aurc,0.02549918140214117,0.025500807439255493,1.6260371143231311e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,raw_entropy,retrospective80_risk,0.03964166985266845,0.03964157957998922,-9.027267922762094e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,raw_entropy,retrospective80_actual_coverage,0.800000002366164,0.8000018241438116,1.8217776476259218e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,lr3,auroc,0.8774136273584506,0.8774056930510596,-7.93430739098877e-06,Score quantization; both estimators group true score ties
+gopro_0400,lr3,average_precision,0.4698915843593182,0.4698651009084441,-2.6483450874137393e-05,Score quantization; both estimators group true score ties
+gopro_0400,lr3,aurc,0.02566715649046573,0.02578219366056389,0.00011503717009815964,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,lr3,retrospective80_risk,0.039745975261162074,0.03974604070512836,6.54439662878259e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,lr3,retrospective80_actual_coverage,0.7999998598723819,0.7999985426301377,-1.3172422441698473e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,lr3_class,auroc,0.87635284800585,0.8763437736796629,-9.074326187130666e-06,Score quantization; both estimators group true score ties
+gopro_0400,lr3_class,average_precision,0.49367136296904046,0.4936495762624876,-2.1786706552839874e-05,Score quantization; both estimators group true score ties
+gopro_0400,lr3_class,aurc,0.02398632892814218,0.023987351786728048,1.0228585858688966e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,lr3_class,retrospective80_risk,0.03870629294318635,0.03870636494220212,7.199901577020773e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0400,lr3_class,retrospective80_actual_coverage,0.8000001735970332,0.7999986854897103,-1.4881073229222608e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,raw_msp,auroc,0.9117967393587078,0.9117967532251652,1.3866457426736645e-08,Score quantization; both estimators group true score ties
+gopro_0402,raw_msp,average_precision,0.4800875660815672,0.48008256620419804,-4.999877369182837e-06,Score quantization; both estimators group true score ties
+gopro_0402,raw_msp,aurc,0.01245481155800992,0.012458047223794483,3.235665784563635e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,raw_msp,retrospective80_risk,0.01893842855232791,0.01893839028360139,-3.826872652101798e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,raw_msp,retrospective80_actual_coverage,0.8000003605572015,0.8000019771146045,1.6165574030502228e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,raw_entropy,auroc,0.9121300648869154,0.9121300458643646,-1.9022550756808698e-08,Score quantization; both estimators group true score ties
+gopro_0402,raw_entropy,average_precision,0.47622479336239176,0.4762187616606777,-6.031701714037663e-06,Score quantization; both estimators group true score ties
+gopro_0402,raw_entropy,aurc,0.012427156094311487,0.012427952549582833,7.964552713457529e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,raw_entropy,retrospective80_risk,0.018799685250143992,0.01879974160165459,5.635151059668608e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,raw_entropy,retrospective80_actual_coverage,0.7999997663506018,0.7999973683817218,-2.3979688800190857e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,lr3,auroc,0.9106676916888223,0.910663930146316,-3.7615425063641794e-06,Score quantization; both estimators group true score ties
+gopro_0402,lr3,average_precision,0.45379518075130076,0.45378181004454654,-1.337070675422325e-05,Score quantization; both estimators group true score ties
+gopro_0402,lr3,aurc,0.012545904928434373,0.012581758576604051,3.585364816967827e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,lr3,retrospective80_risk,0.018853572186599273,0.018853572186599273,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,lr3,retrospective80_actual_coverage,0.8000000808387286,0.8000000808387286,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,lr3_class,auroc,0.8842808610659112,0.8842784178640436,-2.4432018675968337e-06,Score quantization; both estimators group true score ties
+gopro_0402,lr3_class,average_precision,0.45410654546240287,0.45409847631815853,-8.069144244338133e-06,Score quantization; both estimators group true score ties
+gopro_0402,lr3_class,aurc,0.015923076898200564,0.01590930268443281,-1.3774213767754617e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,lr3_class,retrospective80_risk,0.020890282189033785,0.020890282189033785,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0402,lr3_class,retrospective80_actual_coverage,0.7999996926989936,0.7999996926989936,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,raw_msp,auroc,0.8955262287740421,0.8955261349738102,-9.380023191507547e-08,Score quantization; both estimators group true score ties
+gopro_0475,raw_msp,average_precision,0.45965867444838987,0.4596529564889153,-5.717959474571543e-06,Score quantization; both estimators group true score ties
+gopro_0475,raw_msp,aurc,0.015361778856482586,0.015363170143662296,1.3912871797104598e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,raw_msp,retrospective80_risk,0.027244916552110397,0.027245096720350116,1.8016823971969687e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,raw_msp,retrospective80_actual_coverage,0.7999994839653515,0.7999941936740274,-5.29029132412262e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,raw_entropy,auroc,0.8967361352849936,0.8967361835714597,4.828646604781994e-08,Score quantization; both estimators group true score ties
+gopro_0475,raw_entropy,average_precision,0.46076569695490704,0.46075905718335725,-6.639771549799001e-06,Score quantization; both estimators group true score ties
+gopro_0475,raw_entropy,aurc,0.015229365802199812,0.015230240642091039,8.748398912274136e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,raw_entropy,retrospective80_risk,0.02690177030144481,0.026901858453287342,8.815184253385677e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,raw_entropy,retrospective80_actual_coverage,0.8000012769462219,0.7999986555070111,-2.6214392108148132e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,lr3,auroc,0.8951755865677995,0.8951737297464518,-1.8568213476788387e-06,Score quantization; both estimators group true score ties
+gopro_0475,lr3,average_precision,0.44432218317455635,0.4443108970298677,-1.1286144688649191e-05,Score quantization; both estimators group true score ties
+gopro_0475,lr3,aurc,0.01538053376734192,0.015393567516202116,1.3033748860196911e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,lr3,retrospective80_risk,0.02704720319748249,0.02704720319748249,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,lr3,retrospective80_actual_coverage,0.7999989727823263,0.7999989727823263,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,lr3_class,auroc,0.8932665920058895,0.893266230310723,-3.616951664842105e-07,Score quantization; both estimators group true score ties
+gopro_0475,lr3_class,average_precision,0.4865260172031371,0.48651808630062887,-7.930902508224147e-06,Score quantization; both estimators group true score ties
+gopro_0475,lr3_class,aurc,0.01627789320600848,0.016224538996861562,-5.335420914691705e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,lr3_class,retrospective80_risk,0.021855373535409322,0.021855449755517467,7.622010814514746e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0475,lr3_class,retrospective80_actual_coverage,0.7999988054455913,0.7999960154780478,-2.7899675435483218e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,raw_msp,auroc,0.8825241259406998,0.8825241983034972,7.236279730982176e-08,Score quantization; both estimators group true score ties
+gopro_0476,raw_msp,average_precision,0.46784132974228604,0.46783602816933734,-5.301572948701594e-06,Score quantization; both estimators group true score ties
+gopro_0476,raw_msp,aurc,0.020365937376958666,0.020377199989124573,1.1262612165906238e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,raw_msp,retrospective80_risk,0.032135779648540204,0.032142060762533155,6.2811139929508375e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,raw_msp,retrospective80_actual_coverage,0.7999998517950158,0.8000090580847096,9.206289693808323e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,raw_entropy,auroc,0.8837547896663975,0.8837546857103457,-1.0395605187785151e-07,Score quantization; both estimators group true score ties
+gopro_0476,raw_entropy,average_precision,0.4715660155642228,0.4715595802900894,-6.4352741334094965e-06,Score quantization; both estimators group true score ties
+gopro_0476,raw_entropy,aurc,0.02021103117183437,0.020212817436494054,1.7862646596832066e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,raw_entropy,retrospective80_risk,0.03177718662130265,0.03177718662130265,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,raw_entropy,retrospective80_actual_coverage,0.7999993186194154,0.7999993186194154,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,lr3,auroc,0.882526647711649,0.882442505083907,-8.414262774203429e-05,Score quantization; both estimators group true score ties
+gopro_0476,lr3,average_precision,0.45886030965498154,0.4588191961107374,-4.111354424413127e-05,Score quantization; both estimators group true score ties
+gopro_0476,lr3,aurc,0.020339801217624555,0.02056195215735325,0.00022215093972869498,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,lr3,retrospective80_risk,0.03197286595737228,0.03197271332591104,-1.5263146124072646e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,lr3,retrospective80_actual_coverage,0.799999013050124,0.8000028320884742,3.819038350227899e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,lr3_class,auroc,0.9019974587161043,0.9019749825554317,-2.2476160672524337e-05,Score quantization; both estimators group true score ties
+gopro_0476,lr3_class,average_precision,0.5483236686122959,0.5482878143748439,-3.5854237452004334e-05,Score quantization; both estimators group true score ties
+gopro_0476,lr3_class,aurc,0.01762343061625164,0.01758744551512511,-3.5985101126529556e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,lr3_class,retrospective80_risk,0.025355276971522907,0.02535763022368781,2.3532521649036187e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0476,lr3_class,retrospective80_actual_coverage,0.8000006977472084,0.8000046505819821,3.952834773723879e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,raw_msp,auroc,0.8168877373861596,0.8168877211643862,-1.6221773369018422e-08,Score quantization; both estimators group true score ties
+gopro_0477,raw_msp,average_precision,0.469694769966313,0.4696901571844954,-4.6127818175700774e-06,Score quantization; both estimators group true score ties
+gopro_0477,raw_msp,aurc,0.05811280359930273,0.0581154356166866,2.632017383867591e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,raw_msp,retrospective80_risk,0.10661595650620624,0.10661763039040097,1.6738841947250283e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,raw_msp,retrospective80_actual_coverage,0.8000002124646568,0.8000017113835486,1.4989188917846619e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,raw_entropy,auroc,0.8236114962851122,0.8236114943276751,-1.9574371012964775e-09,Score quantization; both estimators group true score ties
+gopro_0477,raw_entropy,average_precision,0.4928690775855699,0.49286320201479167,-5.875570778246519e-06,Score quantization; both estimators group true score ties
+gopro_0477,raw_entropy,aurc,0.056797028631197496,0.056799611956942275,2.5833257447788194e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,raw_entropy,retrospective80_risk,0.10351351270544236,0.10351508410298386,1.5713975415054815e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,raw_entropy,retrospective80_actual_coverage,0.7999999789618384,0.8000022320961856,2.2531343472076415e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,lr3,auroc,0.8206239766621349,0.8206184249409019,-5.551721233065798e-06,Score quantization; both estimators group true score ties
+gopro_0477,lr3,average_precision,0.48392828452703784,0.4839108507848457,-1.7433742192152213e-05,Score quantization; both estimators group true score ties
+gopro_0477,lr3,aurc,0.057410233404014466,0.0574659827765482,5.57493725337338e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,lr3,retrospective80_risk,0.10505736065603496,0.1050581684831341,8.078270991307424e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,lr3,retrospective80_actual_coverage,0.7999998940652433,0.8000006161921693,7.221269260337948e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,lr3_class,auroc,0.9068535427417894,0.9068485015244397,-5.041217349677218e-06,Score quantization; both estimators group true score ties
+gopro_0477,lr3_class,average_precision,0.6485776705392385,0.6485602108193917,-1.7459719846790733e-05,Score quantization; both estimators group true score ties
+gopro_0477,lr3_class,aurc,0.037369277787622605,0.037271587729175874,-9.769005844673107e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,lr3_class,retrospective80_risk,0.07371350572605483,0.07371302830263221,-4.774234226151419e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0477,lr3_class,retrospective80_actual_coverage,0.7999997946087654,0.7999945287904987,-5.265818266653177e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,raw_msp,auroc,0.8484931757161428,0.8484932204214004,4.470525760691402e-08,Score quantization; both estimators group true score ties
+gopro_0478,raw_msp,average_precision,0.43699768772135456,0.4369927298949806,-4.957826373941376e-06,Score quantization; both estimators group true score ties
+gopro_0478,raw_msp,aurc,0.030937393562872843,0.03094648376952021,9.090206647365678e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,raw_msp,retrospective80_risk,0.05042847077186563,0.05042847077186563,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,raw_msp,retrospective80_actual_coverage,0.8000001714244386,0.8000001714244386,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,raw_entropy,auroc,0.8515364570064088,0.8515364286276109,-2.8378797867212313e-08,Score quantization; both estimators group true score ties
+gopro_0478,raw_entropy,average_precision,0.4475244668023446,0.4475179039342426,-6.562868101966934e-06,Score quantization; both estimators group true score ties
+gopro_0478,raw_entropy,aurc,0.030480225094707283,0.030482613000304574,2.387905597291129e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,raw_entropy,retrospective80_risk,0.04949811645919013,0.04949668369374138,-1.4327654487486519e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,raw_entropy,retrospective80_actual_coverage,0.8000004518772509,0.7999950076495213,-5.4442277296340436e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,lr3,auroc,0.8491400486175049,0.8490949615887596,-4.508702874528314e-05,Score quantization; both estimators group true score ties
+gopro_0478,lr3,average_precision,0.4303524917161494,0.4303212764473448,-3.121526880461856e-05,Score quantization; both estimators group true score ties
+gopro_0478,lr3,aurc,0.030795827504613165,0.03098523297280313,0.0001894054681899661,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,lr3,retrospective80_risk,0.04994940960003402,0.04994923908520729,-1.7051482673058338e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,lr3,retrospective80_actual_coverage,0.800000007624406,0.8000027386342308,2.7310098247301795e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,lr3_class,auroc,0.9141833061831104,0.9141436318403074,-3.967434280294224e-05,Score quantization; both estimators group true score ties
+gopro_0478,lr3_class,average_precision,0.610285127145842,0.6102127792803225,-7.234786551957306e-05,Score quantization; both estimators group true score ties
+gopro_0478,lr3_class,aurc,0.020285037361173167,0.02021306820087987,-7.196916029329758e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,lr3_class,retrospective80_risk,0.03319005381286304,0.03319011346999782,5.965713478078838e-08,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0478,lr3_class,retrospective80_actual_coverage,0.8000001354001213,0.7999986974503552,-1.437949766036617e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,raw_msp,auroc,0.8599212193167138,0.8599213063073614,8.699064757422548e-08,Score quantization; both estimators group true score ties
+gopro_0479,raw_msp,average_precision,0.4023196470834622,0.40231449002421926,-5.157059242921758e-06,Score quantization; both estimators group true score ties
+gopro_0479,raw_msp,aurc,0.01772634987248617,0.01772755044993578,1.2005774496122446e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,raw_msp,retrospective80_risk,0.031829106972802716,0.03182893224706804,-1.7472573467930408e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,raw_msp,retrospective80_actual_coverage,0.8000012222083401,0.8000056138354362,4.391627096089756e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,raw_entropy,auroc,0.8601204182991181,0.8601203685583675,-4.974075062946781e-08,Score quantization; both estimators group true score ties
+gopro_0479,raw_entropy,average_precision,0.4007094000654976,0.4007028845635509,-6.515501946691149e-06,Score quantization; both estimators group true score ties
+gopro_0479,raw_entropy,aurc,0.017672615758441375,0.017673480430401907,8.646719605320818e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,raw_entropy,retrospective80_risk,0.031245130796597395,0.031245450175795608,3.193791982131211e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,raw_entropy,retrospective80_actual_coverage,0.799998175273035,0.7999899979936438,-8.177279391174963e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,lr3,auroc,0.8558368263641869,0.8558358998734128,-9.264907741002304e-07,Score quantization; both estimators group true score ties
+gopro_0479,lr3,average_precision,0.36922161900722883,0.36921153460948875,-1.0084397740084405e-05,Score quantization; both estimators group true score ties
+gopro_0479,lr3,aurc,0.018049134735545855,0.01805615854289183,7.023807345976629e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,lr3,retrospective80_risk,0.031601620945227324,0.031601620945227324,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,lr3,retrospective80_actual_coverage,0.7999979341202236,0.7999979341202236,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,lr3_class,auroc,0.93721555187099,0.9372155374592662,-1.4411723814333754e-08,Score quantization; both estimators group true score ties
+gopro_0479,lr3_class,average_precision,0.6483313139636281,0.6483279555881596,-3.3583754684984868e-06,Score quantization; both estimators group true score ties
+gopro_0479,lr3_class,aurc,0.009513972869573555,0.009393376583017863,-0.00012059628655569123,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,lr3_class,retrospective80_risk,0.008748833946867457,0.008748601803247269,-2.3214362018797452e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0479,lr3_class,retrospective80_actual_coverage,0.7999983328803679,0.8000195607877885,2.122790742054015e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,raw_msp,auroc,0.8744761116770898,0.8744758266792566,-2.8499783322200045e-07,Score quantization; both estimators group true score ties
+gopro_0480,raw_msp,average_precision,0.43443610473752164,0.4344306652436971,-5.439493824532793e-06,Score quantization; both estimators group true score ties
+gopro_0480,raw_msp,aurc,0.01624988869168187,0.016327373873976436,7.7485182294567e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,raw_msp,retrospective80_risk,0.021663377237782958,0.021663377237782958,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,raw_msp,retrospective80_actual_coverage,0.8000040986486148,0.8000040986486148,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,raw_entropy,auroc,0.8740602024157708,0.8740601830316279,-1.9384142846412544e-08,Score quantization; both estimators group true score ties
+gopro_0480,raw_entropy,average_precision,0.4286783006142551,0.42866970216642347,-8.59844783163144e-06,Score quantization; both estimators group true score ties
+gopro_0480,raw_entropy,aurc,0.01620249969869264,0.01620668007024677,4.180371554130674e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,raw_entropy,retrospective80_risk,0.02168210935851075,0.02168210935851075,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,raw_entropy,retrospective80_actual_coverage,0.7999970570105405,0.7999970570105405,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,lr3,auroc,0.8734418029761192,0.873146296068393,-0.00029550690772617294,Score quantization; both estimators group true score ties
+gopro_0480,lr3,average_precision,0.40736817220661947,0.40726395829760553,-0.00010421390901393934,Score quantization; both estimators group true score ties
+gopro_0480,lr3,aurc,0.016221882814744064,0.016784804807929373,0.0005629219931853092,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,lr3,retrospective80_risk,0.0216627030722178,0.021663169033237496,4.6596101969595405e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,lr3,retrospective80_actual_coverage,0.8000043330836268,0.7999871254980592,-1.7207585567668993e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,lr3_class,auroc,0.8883407708515572,0.8881645272154204,-0.00017624363613677474,Score quantization; both estimators group true score ties
+gopro_0480,lr3_class,average_precision,0.4525119273733035,0.4523096572588326,-0.0002022701144708816,Score quantization; both estimators group true score ties
+gopro_0480,lr3_class,aurc,0.012458857496791058,0.012501602854347546,4.274535755648817e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,lr3_class,retrospective80_risk,0.021132096563977434,0.02113256197697051,4.6541299307534256e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0480,lr3_class,retrospective80_actual_coverage,0.8000017339907705,0.7999841151520378,-1.7618838732635922e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,raw_msp,auroc,0.8701243986797189,0.8701246674463722,2.687666532663613e-07,Score quantization; both estimators group true score ties
+gopro_0571,raw_msp,average_precision,0.4894999498800343,0.48949520788728096,-4.741992753354296e-06,Score quantization; both estimators group true score ties
+gopro_0571,raw_msp,aurc,0.03289082897565858,0.03291561096568095,2.4781990022371136e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,raw_msp,retrospective80_risk,0.056603747957887196,0.05660229610577908,-1.4518521081127722e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,raw_msp,retrospective80_actual_coverage,0.7999955910531763,0.8000161109854981,2.051993232177196e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,raw_entropy,auroc,0.8719623545163881,0.8719627629228087,4.084064205711613e-07,Score quantization; both estimators group true score ties
+gopro_0571,raw_entropy,average_precision,0.49168169096059133,0.4916784218613481,-3.2690992432526933e-06,Score quantization; both estimators group true score ties
+gopro_0571,raw_entropy,aurc,0.032654457668962814,0.032656654515536336,2.1968465735225373e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,raw_entropy,retrospective80_risk,0.05607369614734114,0.05607369614734114,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,raw_entropy,retrospective80_actual_coverage,0.8000020653337779,0.8000020653337779,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,lr3,auroc,0.870861134715583,0.8708397195574961,-2.1415158086957042e-05,Score quantization; both estimators group true score ties
+gopro_0571,lr3,average_precision,0.4789309849560239,0.4788694118373954,-6.157311862847736e-05,Score quantization; both estimators group true score ties
+gopro_0571,lr3,aurc,0.03282062373838723,0.03308148462695028,0.00026086088856304424,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,lr3,retrospective80_risk,0.056388531458046835,0.056388531458046835,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,lr3,retrospective80_actual_coverage,0.7999960514107565,0.7999960514107565,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,lr3_class,auroc,0.8745891367134454,0.8745898378946626,7.011812171997533e-07,Score quantization; both estimators group true score ties
+gopro_0571,lr3_class,average_precision,0.517679754102632,0.5176795689883975,-1.8511423449663056e-07,Score quantization; both estimators group true score ties
+gopro_0571,lr3_class,aurc,0.030338117379237202,0.030307483123421512,-3.063425581568968e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,lr3_class,retrospective80_risk,0.047887363118468966,0.047887363118468966,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0571,lr3_class,retrospective80_actual_coverage,0.8000052015223945,0.8000052015223945,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,raw_msp,auroc,0.8883217101557592,0.8883216719738458,-3.8181913408763535e-08,Score quantization; both estimators group true score ties
+gopro_0604,raw_msp,average_precision,0.46053038256151896,0.4605248525704526,-5.52999106634422e-06,Score quantization; both estimators group true score ties
+gopro_0604,raw_msp,aurc,0.01820190565951622,0.018203513023147502,1.6073636312820272e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,raw_msp,retrospective80_risk,0.03272162948057459,0.03272162948057459,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,raw_msp,retrospective80_actual_coverage,0.7999987889380331,0.7999987889380331,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,raw_entropy,auroc,0.8882465012005771,0.8882464998241456,-1.3764315243136593e-09,Score quantization; both estimators group true score ties
+gopro_0604,raw_entropy,average_precision,0.45680309890153115,0.45679733615476037,-5.7627467707765945e-06,Score quantization; both estimators group true score ties
+gopro_0604,raw_entropy,aurc,0.01820287257149138,0.01820393208849746,1.059517006078009e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,raw_entropy,retrospective80_risk,0.03254957217703575,0.03254957217703575,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,raw_entropy,retrospective80_actual_coverage,0.80000113332622,0.80000113332622,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,lr3,auroc,0.8869933604065902,0.8869922420845637,-1.1183220264276983e-06,Score quantization; both estimators group true score ties
+gopro_0604,lr3,average_precision,0.4414537710371978,0.4414426902083976,-1.1080828800191789e-05,Score quantization; both estimators group true score ties
+gopro_0604,lr3,aurc,0.01832541706317665,0.01833938937796401,1.3972314787356888e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,lr3,retrospective80_risk,0.03265958941598808,0.03265958941598808,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,lr3,retrospective80_actual_coverage,0.8000018189708391,0.8000018189708391,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,lr3_class,auroc,0.8815636568911315,0.8815636370973216,-1.979380992445101e-08,Score quantization; both estimators group true score ties
+gopro_0604,lr3_class,average_precision,0.47171960036148275,0.47171398759659877,-5.612764883977661e-06,Score quantization; both estimators group true score ties
+gopro_0604,lr3_class,aurc,0.019517046743236458,0.01949713401196035,-1.9912731276109513e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,lr3_class,retrospective80_risk,0.02958456766239239,0.02958456766239239,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0604,lr3_class,retrospective80_actual_coverage,0.800000159242489,0.800000159242489,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,raw_msp,auroc,0.8598827068323194,0.8598827047342794,-2.098039963982501e-09,Score quantization; both estimators group true score ties
+gopro_0606,raw_msp,average_precision,0.46996901107508005,0.46996355813958324,-5.452935496808031e-06,Score quantization; both estimators group true score ties
+gopro_0606,raw_msp,aurc,0.03054377688800258,0.03054975342503483,5.976537032249818e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,raw_msp,retrospective80_risk,0.05037700759484374,0.05037686880703962,-1.3878780411730185e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,raw_msp,retrospective80_actual_coverage,0.8000002168592036,0.8000024208523461,2.2039931424355785e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,raw_entropy,auroc,0.8605573090782069,0.8605573874009109,7.832270398910879e-08,Score quantization; both estimators group true score ties
+gopro_0606,raw_entropy,average_precision,0.47069875151871127,0.470692456160327,-6.295358384256211e-06,Score quantization; both estimators group true score ties
+gopro_0606,raw_entropy,aurc,0.030439158641597963,0.030441201351164935,2.042709566971862e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,raw_entropy,retrospective80_risk,0.05007537653709282,0.05007524113012694,-1.3540696587599488e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,raw_entropy,retrospective80_actual_coverage,0.7999994344973772,0.8000015977519852,2.1632546080008197e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,lr3,auroc,0.8591074438600032,0.8590922052834999,-1.5238576503207035e-05,Score quantization; both estimators group true score ties
+gopro_0606,lr3,average_precision,0.4541561458334402,0.4541343631820224,-2.178265141783431e-05,Score quantization; both estimators group true score ties
+gopro_0606,lr3,aurc,0.030611233619915825,0.03074305318797879,0.0001318195680629665,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,lr3,retrospective80_risk,0.05021227428370149,0.05021227428370149,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,lr3,retrospective80_actual_coverage,0.7999991146622735,0.7999991146622735,0.0,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,lr3_class,auroc,0.8748225785230195,0.8748111740568831,-1.1404466136344382e-05,Score quantization; both estimators group true score ties
+gopro_0606,lr3_class,average_precision,0.5047061979555996,0.5046817594406012,-2.443851499833727e-05,Score quantization; both estimators group true score ties
+gopro_0606,lr3_class,aurc,0.02660859097903778,0.026600127902806935,-8.463076230844774e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,lr3_class,retrospective80_risk,0.045549664543203826,0.045549538120556426,-1.2642264739931575e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0606,lr3_class,retrospective80_actual_coverage,0.8000008465694968,0.8000030669701663,2.2204006695503153e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,raw_msp,auroc,0.8312661931435205,0.831266216014446,2.287092548680647e-08,Score quantization; both estimators group true score ties
+gopro_0607,raw_msp,average_precision,0.4611436640080171,0.46113852715828885,-5.1368497282489045e-06,Score quantization; both estimators group true score ties
+gopro_0607,raw_msp,aurc,0.042526021136184325,0.04252952615743883,3.505021254505969e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,raw_msp,retrospective80_risk,0.0668242270493237,0.06682397530019217,-2.517491315273679e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,raw_msp,retrospective80_actual_coverage,0.7999998986248762,0.8000029125024373,3.0138775610755175e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,raw_entropy,auroc,0.8309730049045936,0.8309729715661132,-3.33384804207526e-08,Score quantization; both estimators group true score ties
+gopro_0607,raw_entropy,average_precision,0.45832803040161735,0.45832200403255385,-6.026369063494297e-06,Score quantization; both estimators group true score ties
+gopro_0607,raw_entropy,aurc,0.04252966278787477,0.042533010905440746,3.348117565978026e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,raw_entropy,retrospective80_risk,0.06672175202943008,0.06672216761099213,4.1558156205212526e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,raw_entropy,retrospective80_actual_coverage,0.8000004382248221,0.7999954553916251,-4.9828331970536155e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,lr3,auroc,0.8294882291012473,0.8294876584537865,-5.706474608402345e-07,Score quantization; both estimators group true score ties
+gopro_0607,lr3,average_precision,0.4423503465827272,0.44232967681983437,-2.0669762892833177e-05,Score quantization; both estimators group true score ties
+gopro_0607,lr3,aurc,0.04271618550538651,0.042774803272495,5.86177671084917e-05,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,lr3,retrospective80_risk,0.0667806660810831,0.06677954196099267,-1.1241200904288373e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,lr3,retrospective80_actual_coverage,0.7999997460396852,0.7999987823919434,-9.63647741714091e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,lr3_class,auroc,0.8620281853468821,0.8620272452882112,-9.400586709062964e-07,Score quantization; both estimators group true score ties
+gopro_0607,lr3_class,average_precision,0.4996901429019112,0.49967215857389136,-1.798432801985994e-05,Score quantization; both estimators group true score ties
+gopro_0607,lr3_class,aurc,0.03355758028877283,0.033552698376915144,-4.881911857684829e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,lr3_class,retrospective80_risk,0.05527802228250329,0.05527815970756483,1.374250615457373e-07,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins
+gopro_0607,lr3_class,retrospective80_actual_coverage,0.8000000970078771,0.7999981081561652,-1.9888517118760163e-06,Score quantization plus true-score tie-policy difference: secondary keys versus whole bins

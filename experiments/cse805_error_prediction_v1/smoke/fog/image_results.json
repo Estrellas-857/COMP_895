@@ -1,0 +1,255 @@
+[
+  {
+    "image_id": "fog/GOPR0475_frame_000041_rgb_anon",
+    "condition": "fog",
+    "recording_group": "gopro_0475",
+    "methods": {
+      "raw_msp": {
+        "num_pixels": 2010488,
+        "num_errors": 235393,
+        "error_prevalence": 0.1170825192689536,
+        "auroc": 0.8885056345013237,
+        "average_precision": 0.5122613506858406,
+        "aurc": 0.022534565372174045,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.49999701564993176,
+            "coverage_error": -2.9843500682358304e-06,
+            "risk": 0.009680294616797216,
+            "accepted_pixels": 1005238,
+            "accepted_errors": 9731
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6000085551368622,
+            "coverage_error": 8.555136862264945e-06,
+            "risk": 0.016444363389178568,
+            "accepted_pixels": 1206310,
+            "accepted_errors": 19837
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.7000011937400273,
+            "coverage_error": 1.19374002738315e-06,
+            "risk": 0.02583945360906786,
+            "accepted_pixels": 1407344,
+            "accepted_errors": 36365
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.800003282785075,
+            "coverage_error": 3.282785074998351e-06,
+            "risk": 0.040578290061471144,
+            "accepted_pixels": 1608397,
+            "accepted_errors": 65266
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000008953050205,
+            "coverage_error": 8.953050204540958e-07,
+            "risk": 0.06961818594803589,
+            "accepted_pixels": 1809441,
+            "accepted_errors": 125970
+          }
+        ],
+        "fixed_threshold": {
+          "num_evaluated": 2010488,
+          "threshold": 0.10257261991500854,
+          "distinct_thresholds": 1,
+          "accepted_pixels": 1566941,
+          "accepted_errors": 57878,
+          "coverage": 0.7793834133802341,
+          "risk": 0.03693693636199449,
+          "complete_population": true
+        },
+        "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+      },
+      "raw_entropy": {
+        "num_pixels": 2010488,
+        "num_errors": 235393,
+        "error_prevalence": 0.1170825192689536,
+        "auroc": 0.8919397564944055,
+        "average_precision": 0.5234226194831375,
+        "aurc": 0.022125209721770997,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.4999965182582537,
+            "coverage_error": -3.481741746302891e-06,
+            "risk": 0.009758892679039868,
+            "accepted_pixels": 1005237,
+            "accepted_errors": 9810
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.5999911464281309,
+            "coverage_error": -8.853571869082977e-06,
+            "risk": 0.016306397794864355,
+            "accepted_pixels": 1206275,
+            "accepted_errors": 19670
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.6999947276482128,
+            "coverage_error": -5.272351787155571e-06,
+            "risk": 0.02507654560298892,
+            "accepted_pixels": 1407331,
+            "accepted_errors": 35291
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.7999953245182264,
+            "coverage_error": -4.67548177363053e-06,
+            "risk": 0.03967716604461256,
+            "accepted_pixels": 1608381,
+            "accepted_errors": 63816
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000058692218009,
+            "coverage_error": 5.8692218009026575e-06,
+            "risk": 0.06750058443141041,
+            "accepted_pixels": 1809451,
+            "accepted_errors": 122139
+          }
+        ],
+        "fixed_threshold": {
+          "num_evaluated": 2010488,
+          "threshold": 0.12611916661262512,
+          "distinct_thresholds": 1,
+          "accepted_pixels": 1573954,
+          "accepted_errors": 57978,
+          "coverage": 0.7828716212183311,
+          "risk": 0.036835892281477094,
+          "complete_population": true
+        },
+        "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+      },
+      "lr3": {
+        "num_pixels": 2010488,
+        "num_errors": 235393,
+        "error_prevalence": 0.1170825192689536,
+        "auroc": 0.8919650179085256,
+        "average_precision": 0.522579782212654,
+        "aurc": 0.02212450678574533,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.4999925391248294,
+            "coverage_error": -7.4608751706173315e-06,
+            "risk": 0.009757975545870642,
+            "accepted_pixels": 1005229,
+            "accepted_errors": 9809
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6000125342702867,
+            "coverage_error": 1.2534270286690408e-05,
+            "risk": 0.016309961386632713,
+            "accepted_pixels": 1206318,
+            "accepted_errors": 19675
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.6999987067816371,
+            "coverage_error": -1.293218362841131e-06,
+            "risk": 0.025077824177401464,
+            "accepted_pixels": 1407339,
+            "accepted_errors": 35293
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.800002785393397,
+            "coverage_error": 2.7853933969312905e-06,
+            "risk": 0.039660009102236014,
+            "accepted_pixels": 1608396,
+            "accepted_errors": 63789
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000103457469032,
+            "coverage_error": 1.0345746903173136e-05,
+            "risk": 0.06745437865440518,
+            "accepted_pixels": 1809460,
+            "accepted_errors": 122056
+          }
+        ],
+        "fixed_threshold": {
+          "num_evaluated": 2010488,
+          "threshold": 0.28257301449775696,
+          "distinct_thresholds": 1,
+          "accepted_pixels": 1574249,
+          "accepted_errors": 58006,
+          "coverage": 0.783018351763353,
+          "risk": 0.03684677582771213,
+          "complete_population": true
+        },
+        "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+      },
+      "lr3_class": {
+        "num_pixels": 2010488,
+        "num_errors": 235393,
+        "error_prevalence": 0.1170825192689536,
+        "auroc": 0.8285822717912338,
+        "average_precision": 0.5131732460180499,
+        "aurc": 0.03487236783831855,
+        "checkpoints": [
+          {
+            "requested_coverage": 0.5,
+            "actual_coverage": 0.49997960694120036,
+            "coverage_error": -2.0393058799639263e-05,
+            "risk": 0.048382267064463594,
+            "accepted_pixels": 1005203,
+            "accepted_errors": 48634
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.5998170593408167,
+            "coverage_error": -0.00018294065918322833,
+            "risk": 0.047411737877562865,
+            "accepted_pixels": 1205925,
+            "accepted_errors": 57175
+          },
+          {
+            "requested_coverage": 0.7,
+            "actual_coverage": 0.6999663763225644,
+            "coverage_error": -3.362367743553474e-05,
+            "risk": 0.04384718256714755,
+            "accepted_pixels": 1407274,
+            "accepted_errors": 61705
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.7999928375598362,
+            "coverage_error": -7.162440163854811e-06,
+            "risk": 0.04698466030331216,
+            "accepted_pixels": 1608376,
+            "accepted_errors": 75569
+          },
+          {
+            "requested_coverage": 0.9,
+            "actual_coverage": 0.9000038796550888,
+            "coverage_error": 3.879655088745437e-06,
+            "risk": 0.06435004727963847,
+            "accepted_pixels": 1809447,
+            "accepted_errors": 116438
+          }
+        ],
+        "fixed_threshold": {
+          "num_evaluated": 2010488,
+          "threshold": 0.35519830495945043,
+          "distinct_thresholds": 1,
+          "accepted_pixels": 1624541,
+          "accepted_errors": 77930,
+          "coverage": 0.8080331740353586,
+          "risk": 0.047970472890496454,
+          "complete_population": true
+        },
+        "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+      }
+    },
+    "feature_seconds": 0.35012204900067445,
+    "total_seconds": 1.030517072999828
+  }
+]

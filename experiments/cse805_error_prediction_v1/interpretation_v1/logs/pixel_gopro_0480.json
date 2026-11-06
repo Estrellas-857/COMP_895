@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "group": "gopro_0480",
+  "condition": "fog",
+  "num_images": 7,
+  "num_valid": 14029741,
+  "num_errors": 1016025,
+  "compared_operating_points": 24,
+  "elapsed_seconds": 4.76802585698897
+}

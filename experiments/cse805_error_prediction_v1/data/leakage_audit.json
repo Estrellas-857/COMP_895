@@ -1,0 +1,71 @@
+{
+  "ambiguities": [
+    "ACDC README defines filename prefixes as image sequences, not independent recording sessions.",
+    "Merging GOPRnnnn and GPxxnnnn is a conservative chapter-family proxy inferred from filenames.",
+    "Same numeric suffix may recur on another camera/date; no camera/time/drive metadata resolves this locally.",
+    "Different numeric suffixes can still belong to one drive, route, location, or correlated weather period.",
+    "All groups currently contain one weather; weather and recording identity are partly confounded.",
+    "Rain and night each have only three primary groups; inner dev folds cannot always contain every weather.",
+    "Historical train/validation and calibration/selection are not disjoint under the conservative proxy.",
+    "Previously explored training/validation data do not constitute untouched confirmatory test data."
+  ],
+  "calibrated_msp_cache_note": "Existence and historical expected hash recorded; not reused as raw features",
+  "group_independence_proven": false,
+  "native_cache_hashes_shapes_finiteness_verified": true,
+  "overlaps": {
+    "legacy_fit_vs_selection": {
+      "recording_group": [
+        "gopro_0122",
+        "gopro_0176",
+        "gopro_0400",
+        "gopro_0402"
+      ],
+      "rgb_sha256": [],
+      "sequence_id": []
+    },
+    "train_vs_val": {
+      "recording_group": [
+        "gopro_0122",
+        "gopro_0176",
+        "gopro_0351",
+        "gopro_0400",
+        "gopro_0402",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0571",
+        "gopro_0604",
+        "gopro_0606",
+        "gopro_0607"
+      ],
+      "rgb_sha256": [],
+      "sequence_id": [
+        "GOPR0122",
+        "GOPR0351",
+        "GOPR0400",
+        "GOPR0402",
+        "GOPR0476",
+        "GOPR0604",
+        "GOPR0606",
+        "GOPR0607",
+        "GP010400",
+        "GP010476",
+        "GP010607",
+        "GP020402",
+        "GP020475",
+        "GP030176",
+        "GP030400"
+      ]
+    }
+  },
+  "prediction_cache_hashes_shapes_verified": true,
+  "recording_proxy_groups": 17,
+  "semantic_gt_values_note": "Full label-value checks occur during extraction; this audit checks headers and hashes",
+  "source_rgb_gt_hashes_verified": true,
+  "status": "PASS",
+  "supplemental_val_images": 406,
+  "supplemental_val_native_logits_present": 53,
+  "train_images": 1600,
+  "train_native_logits_missing": 798,
+  "train_native_logits_present": 802,
+  "within_group_exact_rgb_duplicates": []
+}

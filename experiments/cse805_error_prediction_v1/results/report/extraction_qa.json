@@ -1,0 +1,15 @@
+{
+  "num_images": 1600,
+  "reused_native_images": 802,
+  "new_forward_images": 798,
+  "num_valid_pixels": 3059663748,
+  "num_error_pixels": 523653212,
+  "num_ignored_pixels": 258096252,
+  "probability_normalization_max_error": 8.344650268554688e-07,
+  "historical_prediction_images_compared": 798,
+  "historical_prediction_images_differing": 135,
+  "historical_prediction_pixels_differing": 154,
+  "historical_comparison_population": "All image pixels, including semantic-ignored pixels",
+  "prediction_definition": "All four methods share argmax of unscaled float32 full-resolution logits",
+  "historical_parity": "No exact prediction or metric parity claim with historical Stage 4; original files remain unchanged"
+}

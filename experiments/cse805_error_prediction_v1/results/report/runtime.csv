@@ -1,0 +1,139 @@
+group,phase,measure,value
+gopro_0122,training_and_selection,total_seconds,29.6349016209997
+gopro_0122,full_pixel_evaluation,total_seconds,31.0462707530005
+gopro_0122,full_pixel_evaluation,feature_seconds,3.622390886996982
+gopro_0122,full_pixel_evaluation,score_seconds.raw_msp,1.078576507004982
+gopro_0122,full_pixel_evaluation,score_seconds.raw_entropy,1.1683670440033893
+gopro_0122,full_pixel_evaluation,score_seconds.lr3,4.985749378018227
+gopro_0122,full_pixel_evaluation,score_seconds.lr3_class,12.112841898010629
+gopro_0122,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0176,training_and_selection,total_seconds,26.519686610000463
+gopro_0176,full_pixel_evaluation,total_seconds,107.0105893380005
+gopro_0176,full_pixel_evaluation,feature_seconds,11.859662030996333
+gopro_0176,full_pixel_evaluation,score_seconds.raw_msp,3.9106525479983247
+gopro_0176,full_pixel_evaluation,score_seconds.raw_entropy,4.249517227010074
+gopro_0176,full_pixel_evaluation,score_seconds.lr3,17.68162308501087
+gopro_0176,full_pixel_evaluation,score_seconds.lr3_class,41.90681995300383
+gopro_0176,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0351,training_and_selection,total_seconds,24.681700328999796
+gopro_0351,full_pixel_evaluation,total_seconds,65.02682335699956
+gopro_0351,full_pixel_evaluation,feature_seconds,7.140930176989059
+gopro_0351,full_pixel_evaluation,score_seconds.raw_msp,2.3853645279896227
+gopro_0351,full_pixel_evaluation,score_seconds.raw_entropy,2.5698776150120466
+gopro_0351,full_pixel_evaluation,score_seconds.lr3,10.854956459987989
+gopro_0351,full_pixel_evaluation,score_seconds.lr3_class,24.80417965500692
+gopro_0351,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0376,training_and_selection,total_seconds,26.893573701000605
+gopro_0376,full_pixel_evaluation,total_seconds,142.07066601600036
+gopro_0376,full_pixel_evaluation,feature_seconds,16.197566875011944
+gopro_0376,full_pixel_evaluation,score_seconds.raw_msp,5.125786414000686
+gopro_0376,full_pixel_evaluation,score_seconds.raw_entropy,5.544906426996931
+gopro_0376,full_pixel_evaluation,score_seconds.lr3,23.730881929033785
+gopro_0376,full_pixel_evaluation,score_seconds.lr3_class,54.56906545203219
+gopro_0376,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0397,training_and_selection,total_seconds,25.10451620100048
+gopro_0397,full_pixel_evaluation,total_seconds,72.97793966200061
+gopro_0397,full_pixel_evaluation,feature_seconds,8.243035648995829
+gopro_0397,full_pixel_evaluation,score_seconds.raw_msp,2.6162078229808685
+gopro_0397,full_pixel_evaluation,score_seconds.raw_entropy,2.8217803760126117
+gopro_0397,full_pixel_evaluation,score_seconds.lr3,12.353233181990618
+gopro_0397,full_pixel_evaluation,score_seconds.lr3_class,27.573902491997615
+gopro_0397,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0400,training_and_selection,total_seconds,24.11171065200051
+gopro_0400,full_pixel_evaluation,total_seconds,169.45386322300055
+gopro_0400,full_pixel_evaluation,feature_seconds,20.16106969901466
+gopro_0400,full_pixel_evaluation,score_seconds.raw_msp,6.070326686988665
+gopro_0400,full_pixel_evaluation,score_seconds.raw_entropy,6.585053874985533
+gopro_0400,full_pixel_evaluation,score_seconds.lr3,28.538135785986924
+gopro_0400,full_pixel_evaluation,score_seconds.lr3_class,64.27401288699366
+gopro_0400,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0402,training_and_selection,total_seconds,24.41890603399952
+gopro_0402,full_pixel_evaluation,total_seconds,108.09364042099969
+gopro_0402,full_pixel_evaluation,feature_seconds,11.966214200022478
+gopro_0402,full_pixel_evaluation,score_seconds.raw_msp,4.098335712004882
+gopro_0402,full_pixel_evaluation,score_seconds.raw_entropy,4.4343918059885254
+gopro_0402,full_pixel_evaluation,score_seconds.lr3,18.341097278018424
+gopro_0402,full_pixel_evaluation,score_seconds.lr3_class,41.00573395399897
+gopro_0402,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0475,training_and_selection,total_seconds,26.437009481999667
+gopro_0475,full_pixel_evaluation,total_seconds,31.941674380999757
+gopro_0475,full_pixel_evaluation,feature_seconds,3.637766703996931
+gopro_0475,full_pixel_evaluation,score_seconds.raw_msp,1.1816776480063709
+gopro_0475,full_pixel_evaluation,score_seconds.raw_entropy,1.273491145006119
+gopro_0475,full_pixel_evaluation,score_seconds.lr3,5.321294840005066
+gopro_0475,full_pixel_evaluation,score_seconds.lr3_class,11.84195243299564
+gopro_0475,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0476,training_and_selection,total_seconds,26.610969641000338
+gopro_0476,full_pixel_evaluation,total_seconds,45.45080906700059
+gopro_0476,full_pixel_evaluation,feature_seconds,5.199281017003159
+gopro_0476,full_pixel_evaluation,score_seconds.raw_msp,1.6846521029929136
+gopro_0476,full_pixel_evaluation,score_seconds.raw_entropy,1.8131962399993427
+gopro_0476,full_pixel_evaluation,score_seconds.lr3,7.602640664001228
+gopro_0476,full_pixel_evaluation,score_seconds.lr3_class,16.84221059999163
+gopro_0476,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0477,training_and_selection,total_seconds,23.29339382100079
+gopro_0477,full_pixel_evaluation,total_seconds,113.01974651099954
+gopro_0477,full_pixel_evaluation,feature_seconds,12.859992638008407
+gopro_0477,full_pixel_evaluation,score_seconds.raw_msp,4.1909579460034365
+gopro_0477,full_pixel_evaluation,score_seconds.raw_entropy,4.513062576019365
+gopro_0477,full_pixel_evaluation,score_seconds.lr3,18.993368518984425
+gopro_0477,full_pixel_evaluation,score_seconds.lr3_class,42.39434425700074
+gopro_0477,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0478,training_and_selection,total_seconds,24.910581138000452
+gopro_0478,full_pixel_evaluation,total_seconds,63.29356886599999
+gopro_0478,full_pixel_evaluation,feature_seconds,7.217636989012135
+gopro_0478,full_pixel_evaluation,score_seconds.raw_msp,2.335774733002836
+gopro_0478,full_pixel_evaluation,score_seconds.raw_entropy,2.520053536998603
+gopro_0478,full_pixel_evaluation,score_seconds.lr3,10.622607581988632
+gopro_0478,full_pixel_evaluation,score_seconds.lr3_class,23.84017289998701
+gopro_0478,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0479,training_and_selection,total_seconds,26.31796776400006
+gopro_0479,full_pixel_evaluation,total_seconds,20.83631724099996
+gopro_0479,full_pixel_evaluation,feature_seconds,2.3088761849958246
+gopro_0479,full_pixel_evaluation,score_seconds.raw_msp,0.7483519369961869
+gopro_0479,full_pixel_evaluation,score_seconds.raw_entropy,0.8083637229910892
+gopro_0479,full_pixel_evaluation,score_seconds.lr3,3.446605374984756
+gopro_0479,full_pixel_evaluation,score_seconds.lr3_class,7.665942066000753
+gopro_0479,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0480,training_and_selection,total_seconds,31.061394368000038
+gopro_0480,full_pixel_evaluation,total_seconds,5.678204222999739
+gopro_0480,full_pixel_evaluation,feature_seconds,0.5480755009984932
+gopro_0480,full_pixel_evaluation,score_seconds.raw_msp,0.19353198299813812
+gopro_0480,full_pixel_evaluation,score_seconds.raw_entropy,0.2048080270024002
+gopro_0480,full_pixel_evaluation,score_seconds.lr3,0.8514243740009988
+gopro_0480,full_pixel_evaluation,score_seconds.lr3_class,1.9596234230020855
+gopro_0480,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0571,training_and_selection,total_seconds,28.04051140499996
+gopro_0571,full_pixel_evaluation,total_seconds,4.819959628999641
+gopro_0571,full_pixel_evaluation,feature_seconds,0.48581235100391496
+gopro_0571,full_pixel_evaluation,score_seconds.raw_msp,0.15592488599577337
+gopro_0571,full_pixel_evaluation,score_seconds.raw_entropy,0.168832439999278
+gopro_0571,full_pixel_evaluation,score_seconds.lr3,0.7070202739996603
+gopro_0571,full_pixel_evaluation,score_seconds.lr3_class,1.5908487039978354
+gopro_0571,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0604,training_and_selection,total_seconds,26.551911520999965
+gopro_0604,full_pixel_evaluation,total_seconds,22.164630351000596
+gopro_0604,full_pixel_evaluation,feature_seconds,2.3540674089990716
+gopro_0604,full_pixel_evaluation,score_seconds.raw_msp,0.816534896012854
+gopro_0604,full_pixel_evaluation,score_seconds.raw_entropy,0.880797669000458
+gopro_0604,full_pixel_evaluation,score_seconds.lr3,3.667141730004005
+gopro_0604,full_pixel_evaluation,score_seconds.lr3_class,8.299306759006868
+gopro_0604,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0606,training_and_selection,total_seconds,27.21991647699997
+gopro_0606,full_pixel_evaluation,total_seconds,40.43070399299995
+gopro_0606,full_pixel_evaluation,feature_seconds,4.551029396002377
+gopro_0606,full_pixel_evaluation,score_seconds.raw_msp,1.5003123360020254
+gopro_0606,full_pixel_evaluation,score_seconds.raw_entropy,1.623977026008106
+gopro_0606,full_pixel_evaluation,score_seconds.lr3,6.704548294987944
+gopro_0606,full_pixel_evaluation,score_seconds.lr3_class,15.315690540985997
+gopro_0606,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+gopro_0607,training_and_selection,total_seconds,26.69774019400029
+gopro_0607,full_pixel_evaluation,total_seconds,85.58979279599953
+gopro_0607,full_pixel_evaluation,feature_seconds,9.218664192990218
+gopro_0607,full_pixel_evaluation,score_seconds.raw_msp,3.221912631987834
+gopro_0607,full_pixel_evaluation,score_seconds.raw_entropy,3.473155959003634
+gopro_0607,full_pixel_evaluation,score_seconds.lr3,14.425164697000582
+gopro_0607,full_pixel_evaluation,score_seconds.lr3_class,32.57477640399884
+gopro_0607,full_pixel_evaluation,boundary,"cached native logits plus GT reading, full feature regeneration, scoring, metrics and serialization; excludes LR fitting/backbone forward"
+all,feature_extraction,summed_per_image_elapsed_seconds,257.4738556669745
+all,feature_extraction,new_native_forward_cache_elapsed_seconds_subset,73.2529107359951

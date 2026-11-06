@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "phases_completed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "num_images": 1600,
+  "outer_proxy_groups": 17,
+  "valid_pixels": 3059663748,
+  "error_pixels": 523653212,
+  "outer_models": 34,
+  "successful_inner_candidates": 102,
+  "unit_tests_passed": 29,
+  "protected_original_files_unchanged": 3635,
+  "artifact_hashes": {
+    "results/evaluation_complete.json": "e951ffa66f8ab81a55860ed1d253266ec75aa6495344709e2460c0bba59fc7a4",
+    "logs/preservation_after.json": "65cc4b217879b0795641a23930db725f4560959fdc652c64d33b045798ab03c5",
+    "logs/independent_audit.json": "75ce741b044973709feb6a8fa1fad1b9de1400247309bce2a03463261af893f5",
+    "logs/tests_final.log": "26b0230dfce19885cb9df3f63216404689e5e112525ba6d5915baee1e7ea367a",
+    "smoke/complete.json": "80924f0b875e9e9a7f4fe0ee276900d4753968b55b4ebf2c7d010b66c098a72e",
+    "data/features/complete.json": "c97e8a79e852421f688375505aba32d6e18593a9037e99b0ad34ec896f03708d",
+    "results/report/report_manifest.json": "e805c4ef9aa4838f4e202ba05d7b245e8b4aa686113c06902f789f0c7be33014",
+    "results/report/cases/case_selection.json": "f2700b35630b6e8a46e9de33dd37eaad2a7326a575d3c64a4b4b91e8f5819b9d"
+  },
+  "limits": "Filename proxies are not proven independent sessions; 406 official validation images excluded; full-population ranking metrics use documented histogram approximations; no segmentation fine-tuning or mIoU improvement claim."
+}

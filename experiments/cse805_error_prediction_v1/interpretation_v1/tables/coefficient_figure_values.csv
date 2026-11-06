@@ -1,0 +1,17 @@
+panel,group,predicted_class,msp_minimum,metric,label,fraction,percent,train_subset_share_of_valid,heldout_subset_share_of_valid,source_table
+Night,gopro_0376,vegetation,0.99,train_error_rate,Outer-training error rate,0.03663278026943998,3.663278026943998,0.10741903693521006,0.059242863962881705,class_profile_high_confidence.csv
+Night,gopro_0376,road,0.99,train_error_rate,Outer-training error rate,0.06129865423519599,6.129865423519599,0.1542144033813908,0.35160622072283615,class_profile_high_confidence.csv
+Night,gopro_0376,vegetation,0.99,heldout_error_rate,Held-out error rate,0.3748913951542019,37.48913951542019,0.10741903693521006,0.059242863962881705,class_profile_high_confidence.csv
+Night,gopro_0376,road,0.99,heldout_error_rate,Held-out error rate,0.03741410487080352,3.741410487080352,0.1542144033813908,0.35160622072283615,class_profile_high_confidence.csv
+Night,gopro_0376,vegetation,0.99,heldout_mean_lr3_score,Mean LR3 predicted risk,0.06270862498572345,6.270862498572345,0.10741903693521006,0.059242863962881705,class_profile_high_confidence.csv
+Night,gopro_0376,road,0.99,heldout_mean_lr3_score,Mean LR3 predicted risk,0.05860141093679118,5.860141093679118,0.1542144033813908,0.35160622072283615,class_profile_high_confidence.csv
+Night,gopro_0376,vegetation,0.99,heldout_mean_lr3_class_score,Mean LR+class predicted risk,0.04978245580466987,4.978245580466987,0.10741903693521006,0.059242863962881705,class_profile_high_confidence.csv
+Night,gopro_0376,road,0.99,heldout_mean_lr3_class_score,Mean LR+class predicted risk,0.08554670054133567,8.554670054133567,0.1542144033813908,0.35160622072283615,class_profile_high_confidence.csv
+Fog,gopro_0477,sky,,train_error_rate,Outer-training error rate,0.015496497836496693,1.5496497836496692,0.22967427439006216,0.3649614713247677,class_profile_train_heldout.csv
+Fog,gopro_0477,building,,train_error_rate,Outer-training error rate,0.23304961147436087,23.30496114743609,0.2293090713729724,0.1559078300688137,class_profile_train_heldout.csv
+Fog,gopro_0477,sky,,heldout_error_rate,Held-out error rate,0.0199419884120559,1.99419884120559,0.22967427439006216,0.3649614713247677,class_profile_train_heldout.csv
+Fog,gopro_0477,building,,heldout_error_rate,Held-out error rate,0.7452231038929268,74.52231038929268,0.2293090713729724,0.1559078300688137,class_profile_train_heldout.csv
+Fog,gopro_0477,sky,,heldout_mean_lr3_score,Mean LR3 predicted risk,0.17529318559607435,17.529318559607436,0.22967427439006216,0.3649614713247677,class_profile_train_heldout.csv
+Fog,gopro_0477,building,,heldout_mean_lr3_score,Mean LR3 predicted risk,0.28729179503208707,28.72917950320871,0.2293090713729724,0.1559078300688137,class_profile_train_heldout.csv
+Fog,gopro_0477,sky,,heldout_mean_lr3_class_score,Mean LR+class predicted risk,0.028071976010320812,2.8071976010320814,0.22967427439006216,0.3649614713247677,class_profile_train_heldout.csv
+Fog,gopro_0477,building,,heldout_mean_lr3_class_score,Mean LR+class predicted risk,0.3573738945798558,35.73738945798558,0.2293090713729724,0.1559078300688137,class_profile_train_heldout.csv

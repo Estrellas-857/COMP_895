@@ -1,0 +1,130 @@
+CSE 805 final presentation — minimal evidence plan
+
+Suggested title
+Learning to Predict Semantic Segmentation Errors Under Adverse Driving Conditions
+Add the student's name on the title slide and the instructor-required slide footer.
+
+One-sentence thesis
+Class-aware learning improves a prespecified retrospective operating point, but
+its ranking reliability depends on the condition: Fog improves most, while Night
+exposes a severe low-coverage failure.
+
+Seven-part research narrative
+
+1. Problem and significance
+   A frozen segmentation model can confidently assign the wrong semantic class.
+   The task is to score which existing pixel predictions are likely to be wrong,
+   so that accepting only a subset can reduce accepted error. This experiment
+   measures pixel reliability; it does not demonstrate safer driving outcomes.
+
+2. Baseline limitation
+   MSP and entropy summarize the softmax distribution without an explicit
+   predicted-category reliability term. Similar confidence can correspond to
+   different error rates across predicted classes and conditions. These methods
+   remain strong baselines: LR with confidence features alone brings little gain.
+
+3. Our solution
+   Train a regularized Logistic Regression error predictor using MSP, normalized
+   entropy, margin, and predicted-class one-hot encoding. The backbone stays
+   frozen, and ground truth defines training targets only. Compare MSP, entropy,
+   LR3, and LR+class; the ablation identifies the value and cost of adding class.
+
+4. Methodology
+   Use 1,600 labeled images and 17 conservative recording proxies. Hold out one
+   group at a time; tune within the remaining groups using grouped validation.
+   Fit preprocessing only on the relevant training groups. Sample training pixels
+   with documented weights, but evaluate all valid held-out pixels. Keep the
+   separate 406 validation images out. Filename groups are not proven sessions.
+
+5. Contribution and measured improvement
+   The contribution is a student-trained, interpretable reliability model plus a
+   reproducible grouped experiment and class-feature analysis. Mean accepted error
+   near 80% coverage is 7.665% for LR+class versus 8.393% MSP and 8.351% entropy.
+   Improvements occur in 14/17 and 15/17 groups, respectively. Fog benefits most.
+   This demonstrates preprocessing, feature engineering, Logistic Regression,
+   regularization, grouped validation, and performance evaluation from CSE805.
+
+6. Negative result and explanation
+   Mean AURC worsens despite the risk80 improvement. All three Night groups lose
+   AUROC/AP/AURC. At common near-exact 10% QA coverage, LR+class has 12.51%, 26.45%,
+   and 19.45% accepted error versus MSP's 1.49%, 0.67%, and 0.42%. Full-pixel counts
+   show vegetation predictions dominate these errors, especially true sky/building
+   misclassified as vegetation. Category offsets favor an unreliable held-out
+   subset. This is within-group failure, not solely pooled-score comparability.
+
+7. Limits and future work
+   Retrospective80 is not a deployable coverage/error guarantee. Class-aware
+   training-derived thresholds yield 65.65%–91.55% held-out coverage. Only three
+   Night proxies, correlated pixels, residual session dependence, sampled
+   diagnostics, and prior exploration limit generalization and causal claims.
+   Verify session metadata and obtain independent Night data before revising the
+   model; separately evaluate threshold transfer. No new model was trained in
+   this interpretation pass, and no improved segmentation mIoU is claimed.
+
+Minimal main-deck evidence: one table and three figures
+
+Table 1 — Four-method result table
+Source: tables/frozen_macro_results.csv.
+Show AUROC, AP, AURC, and accepted error near 80%, all as equal-group means.
+Include direction arrows. Highlight the class-aware risk80 improvement AND its
+AURC deterioration. Footer: 17 groups; full valid pixels; retrospective nearest
+whole-bin 80%; paired coverage differences <=0.00262 pp for class versus MSP.
+Do not mix pooled prevalence 17.1147% with these group-macro means as if all use
+the same weighting. If prevalence is shown, label it full-pixel pooled prevalence.
+
+Figure 1 — Per-group primary differences
+Reuse unchanged: ../results/report/paired_group_risk80_deltas.png.
+Takeaway: improvement is common, not universal; Fog shows the strongest mean gain.
+State -0.7281 pp versus MSP and -0.6861 pp versus entropy; do not use a relative
+percentage reduction without naming its denominator. Group-level ranges are
+descriptive sensitivity, not confidence intervals or pixel-IID significance.
+
+Figure 2 — Three Night curves, with pooled diagnostic clearly separated
+New: figures/night_group_risk_coverage.png.
+Takeaway: the low-coverage failure exists inside each held-out group, while the
+curves meet/cross later. Axes are actual coverage and accepted error. Steps show
+the frozen right-step integration convention, not attainable intermediate
+thresholds inside a tied bin. Dots mark each actual near-80% cutoff. The fourth
+panel is a cross-fitted pooled diagnostic and can move to backup if space is tight.
+Speaker note: the common tie-policy QA comparison confirms the failure at matched
+10% coverage; full-pixel composition is descriptive at each frozen cutoff.
+
+Figure 3 — Why class reliability can transfer or fail
+New: figures/class_reliability_shift.png.
+Source values: tables/coefficient_figure_values.csv.
+Two representative, explicitly post-hoc examples: Night0376 high-confidence
+vegetation/road; Fog0477 sky/building. Compare training and held-out error rates
+with mean LR3 and LR+class scores. Takeaway: category-conditioned score offsets
+can improve cross-class ordering or misorder a shifted category. Label weighted
+samples, condition, group, and subset. This is not a calibration-validation plot,
+causal attribution, or a claim that every group behaves like these examples.
+
+Suggested seven content slides (plus title)
+1. Problem, significance, and baseline limitation.
+2. Solution and grouped protocol; a simple arrow sequence is sufficient:
+   frozen segmentation -> confidence/class features -> trained error score ->
+   ranking/selective acceptance. Ground truth branches to training target only.
+3. Student contribution and four-method results (Table 1).
+4. Consistency and weather tradeoffs (Figure 1).
+5. Negative finding: Night (Figure 2).
+6. Class-feature interpretation (Figure 3).
+7. Limitations, future work, and the bounded claim.
+
+Backup only — retain, do not crowd the main slides
+* Three-row Night AUROC/AP/AURC/risk80 table in interpretation_report.txt.
+* Night common-coverage table: tables/metrics_policy_coverage.csv, policy
+  raw_secondary; show requested AND actual coverage, and QA sample designation.
+* Night AURC policy table in interpretation_report.txt: unbinned true ties,
+  10k/100k/1m bins, common secondary order. No primary metric replacement.
+* Full-pixel error composition: tables/night_low_coverage_class_composition.csv
+  and pixel_confusions.csv. At near10%, vegetation contributes 84%–96% of accepted
+  errors; sky->vegetation and building->vegetation are dominant confusions.
+* Coefficient contrasts, per-group threshold coverage, all-class tables, runtime,
+  and preservation audit for questions. No new decorative plots are necessary.
+
+Closing wording
+“Our contribution is a supervised error predictor and a controlled comparison,
+not a new segmentation backbone. Predicted-class information improves selective
+error at our prespecified retrospective operating point. The Night failures show
+that this benefit does not imply better ranking everywhere or reliable future
+coverage. Reporting both outcomes is part of the result.”
