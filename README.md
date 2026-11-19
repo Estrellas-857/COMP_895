@@ -19,6 +19,8 @@ images are inventoried separately and excluded from the primary experiment.
 | Group assignments and frozen protocol | [`data/`](experiments/cse805_error_prediction_v1/data/) |
 | Primary results, tables, and plots | [`results/report/`](experiments/cse805_error_prediction_v1/results/report/) |
 | Coefficients, metric sensitivity, and class diagnostics | [`interpretation_v1/`](experiments/cse805_error_prediction_v1/interpretation_v1/) |
+| Class × MSP logistic regression follow-up and 17 fold models | [Experiment notes](experiments/cse805_class_msp_interaction_v1/README.txt), [results](experiments/cse805_class_msp_interaction_v1/results/) |
+| Random forest follow-up and six-method comparison | [Experiment notes](experiments/cse805_random_forest_v1/README.txt), [results](experiments/cse805_random_forest_v1/results/) |
 | Final 15-slide deck, outline, source map, and QA record | [`presentations/cse805_final_2026/output/`](presentations/cse805_final_2026/output/) |
 
 Start with the [experiment report](experiments/cse805_error_prediction_v1/results/report/report.txt),

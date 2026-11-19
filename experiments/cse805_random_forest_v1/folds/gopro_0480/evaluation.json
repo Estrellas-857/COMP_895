@@ -1,0 +1,118 @@
+{
+  "group": "gopro_0480",
+  "weather": "fog",
+  "images": [
+    "fog/GOPR0480_frame_000029_rgb_anon",
+    "fog/GOPR0480_frame_000066_rgb_anon",
+    "fog/GOPR0480_frame_000072_rgb_anon",
+    "fog/GOPR0480_frame_000077_rgb_anon",
+    "fog/GOPR0480_frame_000123_rgb_anon",
+    "fog/GOPR0480_frame_000210_rgb_anon",
+    "fog/GOPR0480_frame_000215_rgb_anon"
+  ],
+  "metrics": {
+    "num_pixels": 14029741,
+    "num_errors": 1016025,
+    "error_prevalence": 0.0724193696804524,
+    "auroc": 0.9122843784445708,
+    "average_precision": 0.49993878093586674,
+    "aurc": 0.010247700606730846,
+    "checkpoints": [
+      {
+        "requested_coverage": 0.01,
+        "actual_coverage": 0.00335865074059457,
+        "coverage_error": -0.006641349259405431,
+        "risk": 2.1221960484709578e-05,
+        "accepted_pixels": 47121,
+        "accepted_errors": 1
+      },
+      {
+        "requested_coverage": 0.05,
+        "actual_coverage": 0.00335865074059457,
+        "coverage_error": -0.04664134925940543,
+        "risk": 2.1221960484709578e-05,
+        "accepted_pixels": 47121,
+        "accepted_errors": 1
+      },
+      {
+        "requested_coverage": 0.1,
+        "actual_coverage": 0.1437665884209837,
+        "coverage_error": 0.04376658842098369,
+        "risk": 1.487351562314081e-06,
+        "accepted_pixels": 2017008,
+        "accepted_errors": 3
+      },
+      {
+        "requested_coverage": 0.2,
+        "actual_coverage": 0.19988957743410943,
+        "coverage_error": -0.0001104225658905833,
+        "risk": 2.8526611227574965e-06,
+        "accepted_pixels": 2804399,
+        "accepted_errors": 8
+      },
+      {
+        "requested_coverage": 0.5,
+        "actual_coverage": 0.5322160972180455,
+        "coverage_error": 0.032216097218045525,
+        "risk": 0.005289108371477466,
+        "accepted_pixels": 7466854,
+        "accepted_errors": 39493
+      },
+      {
+        "requested_coverage": 0.6,
+        "actual_coverage": 0.6000085817692572,
+        "coverage_error": 8.581769257220984e-06,
+        "risk": 0.0063520102542597885,
+        "accepted_pixels": 8417965,
+        "accepted_errors": 53471
+      },
+      {
+        "requested_coverage": 0.7,
+        "actual_coverage": 0.699996457525481,
+        "coverage_error": -3.5424745189471807e-06,
+        "risk": 0.009178405479245057,
+        "accepted_pixels": 9820769,
+        "accepted_errors": 90139
+      },
+      {
+        "requested_coverage": 0.8,
+        "actual_coverage": 0.8000030078958692,
+        "coverage_error": 3.007895869155952e-06,
+        "risk": 0.017304334926520212,
+        "accepted_pixels": 11223835,
+        "accepted_errors": 194221
+      },
+      {
+        "requested_coverage": 0.9,
+        "actual_coverage": 0.8999990092475691,
+        "coverage_error": -9.907524308738758e-07,
+        "risk": 0.032618045193407996,
+        "accepted_pixels": 12626753,
+        "accepted_errors": 411860
+      }
+    ],
+    "fixed_threshold": {
+      "num_evaluated": 14029741,
+      "threshold": 0.3593642083253633,
+      "distinct_thresholds": 1,
+      "accepted_pixels": 12539360,
+      "accepted_errors": 392601,
+      "coverage": 0.8937698849893237,
+      "risk": 0.03130949266948233,
+      "complete_population": true
+    },
+    "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+  },
+  "qa_raw_secondary": [],
+  "qa_fullstream_vs_sklearn_exact": 57344,
+  "score_seconds": 0.17175570642575622,
+  "eval_seconds": 1.3510947928298265,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "model_sha256": "29a0ea2b584c1b78a6cf06e9bfa986276e242aa2efcc359445c36f5203804206",
+  "manifest_sha256": "473354aab48baf562b2c1d006f438f1a129932b00dd6dc5f01bc9fdadeed1c18",
+  "histogram_sha256": "4273adc2c212b6944a2858d3b3f0977f8bce18b187d24bcf2e7e677b01f5775c",
+  "scoring_source_sha256": {
+    "gpu_forest.py": "12499e7d7f854dce3fce7bbd4e9b28b6558da42801beca7cad40abb9aa075dad",
+    "evaluate.py": "06c9c23700d15e7ae3a575ade6c062f8e0099188daa99573c4ae154b2f8fc950"
+  }
+}

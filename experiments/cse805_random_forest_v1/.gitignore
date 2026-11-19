@@ -1,0 +1,4 @@
+runtime/
+__pycache__/
+!/folds/*/histograms.npz
+!/results/final_comparison.png

@@ -1,0 +1,191 @@
+{
+  "group": "gopro_0122",
+  "train_groups": [
+    "gopro_0176",
+    "gopro_0351",
+    "gopro_0376",
+    "gopro_0397",
+    "gopro_0400",
+    "gopro_0402",
+    "gopro_0475",
+    "gopro_0476",
+    "gopro_0477",
+    "gopro_0478",
+    "gopro_0479",
+    "gopro_0480",
+    "gopro_0571",
+    "gopro_0604",
+    "gopro_0606",
+    "gopro_0607"
+  ],
+  "inner_folds": [
+    {
+      "dev_groups": [
+        "gopro_0351",
+        "gopro_0400",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0480",
+        "gopro_0607"
+      ],
+      "dev_image_count": 572,
+      "dev_weather_image_counts": {
+        "fog": 116,
+        "night": 93,
+        "rain": 240,
+        "snow": 123
+      },
+      "fit_groups": [
+        "gopro_0176",
+        "gopro_0376",
+        "gopro_0397",
+        "gopro_0402",
+        "gopro_0477",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0571",
+        "gopro_0604",
+        "gopro_0606"
+      ],
+      "fit_image_count": 985,
+      "inner_fold": 0
+    },
+    {
+      "dev_groups": [
+        "gopro_0176",
+        "gopro_0376",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0571"
+      ],
+      "dev_image_count": 476,
+      "dev_weather_image_counts": {
+        "fog": 120,
+        "night": 203,
+        "rain": 6,
+        "snow": 147
+      },
+      "fit_groups": [
+        "gopro_0351",
+        "gopro_0397",
+        "gopro_0400",
+        "gopro_0402",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0477",
+        "gopro_0480",
+        "gopro_0604",
+        "gopro_0606",
+        "gopro_0607"
+      ],
+      "fit_image_count": 1081,
+      "inner_fold": 1
+    },
+    {
+      "dev_groups": [
+        "gopro_0397",
+        "gopro_0402",
+        "gopro_0477",
+        "gopro_0604",
+        "gopro_0606"
+      ],
+      "dev_image_count": 509,
+      "dev_weather_image_counts": {
+        "fog": 164,
+        "night": 104,
+        "rain": 154,
+        "snow": 87
+      },
+      "fit_groups": [
+        "gopro_0176",
+        "gopro_0351",
+        "gopro_0376",
+        "gopro_0400",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0480",
+        "gopro_0571",
+        "gopro_0607"
+      ],
+      "fit_image_count": 1048,
+      "inner_fold": 2
+    }
+  ],
+  "candidates": {
+    "0.01": [
+      {
+        "inner_fold": 0,
+        "status": "PASS",
+        "ap": 0.5255891621878361,
+        "n_iter": 68
+      },
+      {
+        "inner_fold": 1,
+        "status": "PASS",
+        "ap": 0.5553035842803737,
+        "n_iter": 78
+      },
+      {
+        "inner_fold": 2,
+        "status": "PASS",
+        "ap": 0.5852833095360896,
+        "n_iter": 81
+      }
+    ],
+    "0.1": [
+      {
+        "inner_fold": 0,
+        "status": "PASS",
+        "ap": 0.5224074421767897,
+        "n_iter": 136
+      },
+      {
+        "inner_fold": 1,
+        "status": "PASS",
+        "ap": 0.553009953279237,
+        "n_iter": 127
+      },
+      {
+        "inner_fold": 2,
+        "status": "PASS",
+        "ap": 0.5829757910396033,
+        "n_iter": 103
+      }
+    ],
+    "1.0": [
+      {
+        "inner_fold": 0,
+        "status": "PASS",
+        "ap": 0.521939645475969,
+        "n_iter": 162
+      },
+      {
+        "inner_fold": 1,
+        "status": "PASS",
+        "ap": 0.5527218290308101,
+        "n_iter": 144
+      },
+      {
+        "inner_fold": 2,
+        "status": "PASS",
+        "ap": 0.5826130162377225,
+        "n_iter": 88
+      }
+    ]
+  },
+  "mean_weighted_inner_AP": {
+    "0.01": 0.5553920186680998,
+    "0.1": 0.5527977288318766,
+    "1.0": 0.5524248302481672
+  },
+  "selected_C": 0.01,
+  "threshold": 0.2659769136012482,
+  "achieved_training_coverage": 0.8000001899863626,
+  "n_train": 797184,
+  "n_iter": 89,
+  "model_sha256": "3012206efa0074e1abb7d1e1f5fd42538bf4fc4e33d52e88780860ac34b3a211",
+  "manifest_sha256": "0662d611a7026e141fa1f2ff39db599e7e7c0800daf1f7ab6e703144df0cf067",
+  "seconds": 21.129670724039897
+}

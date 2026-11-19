@@ -1,0 +1,142 @@
+{
+  "group": "gopro_0604",
+  "weather": "snow",
+  "images": [
+    "snow/GOPR0604_frame_000496_rgb_anon",
+    "snow/GOPR0604_frame_000504_rgb_anon",
+    "snow/GOPR0604_frame_000515_rgb_anon",
+    "snow/GOPR0604_frame_000521_rgb_anon",
+    "snow/GOPR0604_frame_000527_rgb_anon",
+    "snow/GOPR0604_frame_000543_rgb_anon",
+    "snow/GOPR0604_frame_000558_rgb_anon",
+    "snow/GOPR0604_frame_000563_rgb_anon",
+    "snow/GOPR0604_frame_000568_rgb_anon",
+    "snow/GOPR0604_frame_000573_rgb_anon",
+    "snow/GOPR0604_frame_000578_rgb_anon",
+    "snow/GOPR0604_frame_000584_rgb_anon",
+    "snow/GOPR0604_frame_000593_rgb_anon",
+    "snow/GOPR0604_frame_000599_rgb_anon",
+    "snow/GOPR0604_frame_000609_rgb_anon",
+    "snow/GOPR0604_frame_000614_rgb_anon",
+    "snow/GOPR0604_frame_000619_rgb_anon",
+    "snow/GOPR0604_frame_000625_rgb_anon",
+    "snow/GOPR0604_frame_000632_rgb_anon",
+    "snow/GOPR0604_frame_000652_rgb_anon",
+    "snow/GOPR0604_frame_000672_rgb_anon",
+    "snow/GOPR0604_frame_000681_rgb_anon",
+    "snow/GOPR0604_frame_000693_rgb_anon",
+    "snow/GOPR0604_frame_000699_rgb_anon",
+    "snow/GOPR0604_frame_000704_rgb_anon",
+    "snow/GOPR0604_frame_000709_rgb_anon",
+    "snow/GOPR0604_frame_000714_rgb_anon",
+    "snow/GOPR0604_frame_000720_rgb_anon",
+    "snow/GOPR0604_frame_000740_rgb_anon",
+    "snow/GOPR0604_frame_000758_rgb_anon",
+    "snow/GOPR0604_frame_000768_rgb_anon"
+  ],
+  "metrics": {
+    "num_pixels": 60986675,
+    "num_errors": 6052397,
+    "error_prevalence": 0.09924130148102024,
+    "auroc": 0.9017381423855656,
+    "average_precision": 0.4894402035696363,
+    "aurc": 0.01613399767692838,
+    "checkpoints": [
+      {
+        "requested_coverage": 0.01,
+        "actual_coverage": 0.005157520064833835,
+        "coverage_error": -0.004842479935166165,
+        "risk": 0.0009982832072232466,
+        "accepted_pixels": 314540,
+        "accepted_errors": 314
+      },
+      {
+        "requested_coverage": 0.05,
+        "actual_coverage": 0.005157520064833835,
+        "coverage_error": -0.04484247993516617,
+        "risk": 0.0009982832072232466,
+        "accepted_pixels": 314540,
+        "accepted_errors": 314
+      },
+      {
+        "requested_coverage": 0.1,
+        "actual_coverage": 0.1000875355149301,
+        "coverage_error": 8.753551493009826e-05,
+        "risk": 6.553073506153172e-05,
+        "accepted_pixels": 6104006,
+        "accepted_errors": 400
+      },
+      {
+        "requested_coverage": 0.2,
+        "actual_coverage": 0.2000099038027569,
+        "coverage_error": 9.903802756894287e-06,
+        "risk": 0.00010050878267222028,
+        "accepted_pixels": 12197939,
+        "accepted_errors": 1226
+      },
+      {
+        "requested_coverage": 0.5,
+        "actual_coverage": 0.5000025169432503,
+        "coverage_error": 2.516943250263637e-06,
+        "risk": 0.0038937162032382584,
+        "accepted_pixels": 30493491,
+        "accepted_errors": 118733
+      },
+      {
+        "requested_coverage": 0.6,
+        "actual_coverage": 0.5999997048535602,
+        "coverage_error": -2.951464397327186e-07,
+        "risk": 0.00897013326988775,
+        "accepted_pixels": 36591987,
+        "accepted_errors": 328235
+      },
+      {
+        "requested_coverage": 0.7,
+        "actual_coverage": 0.7000107810435641,
+        "coverage_error": 1.0781043564112025e-05,
+        "risk": 0.017065666494812882,
+        "accepted_pixels": 42691330,
+        "accepted_errors": 728556
+      },
+      {
+        "requested_coverage": 0.8,
+        "actual_coverage": 0.7999994425011693,
+        "coverage_error": -5.574988307666118e-07,
+        "risk": 0.030799536275428883,
+        "accepted_pixels": 48789306,
+        "accepted_errors": 1502688
+      },
+      {
+        "requested_coverage": 0.9,
+        "actual_coverage": 0.8999932362274218,
+        "coverage_error": -6.7637725782443425e-06,
+        "risk": 0.054318175172368185,
+        "accepted_pixels": 54887595,
+        "accepted_errors": 2981394
+      }
+    ],
+    "fixed_threshold": {
+      "num_evaluated": 60986675,
+      "threshold": 0.36478488348909205,
+      "distinct_thresholds": 1,
+      "accepted_pixels": 50908966,
+      "accepted_errors": 1915309,
+      "coverage": 0.8347555593086523,
+      "risk": 0.03762223338026547,
+      "complete_population": true
+    },
+    "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+  },
+  "qa_raw_secondary": [],
+  "qa_fullstream_vs_sklearn_exact": 253952,
+  "score_seconds": 0.7469347300939262,
+  "eval_seconds": 5.306549474829808,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "model_sha256": "78543718a6d2bc3d35df94f00d7143c7d4d3f96ae1e3e6eabdd08926bfbecdcd",
+  "manifest_sha256": "473354aab48baf562b2c1d006f438f1a129932b00dd6dc5f01bc9fdadeed1c18",
+  "histogram_sha256": "c8f92daeed469e5516901e8ecc2f7b85a006effca7b0ac29f98d6558d8cb331d",
+  "scoring_source_sha256": {
+    "gpu_forest.py": "12499e7d7f854dce3fce7bbd4e9b28b6558da42801beca7cad40abb9aa075dad",
+    "evaluate.py": "06c9c23700d15e7ae3a575ade6c062f8e0099188daa99573c4ae154b2f8fc950"
+  }
+}

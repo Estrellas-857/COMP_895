@@ -1,0 +1,190 @@
+{
+  "group": "gopro_0397",
+  "train_groups": [
+    "gopro_0122",
+    "gopro_0176",
+    "gopro_0351",
+    "gopro_0376",
+    "gopro_0400",
+    "gopro_0402",
+    "gopro_0475",
+    "gopro_0476",
+    "gopro_0477",
+    "gopro_0478",
+    "gopro_0479",
+    "gopro_0480",
+    "gopro_0571",
+    "gopro_0604",
+    "gopro_0606",
+    "gopro_0607"
+  ],
+  "inner_folds": [
+    {
+      "dev_groups": [
+        "gopro_0400",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0480",
+        "gopro_0607"
+      ],
+      "dev_image_count": 479,
+      "dev_weather_image_counts": {
+        "fog": 116,
+        "rain": 240,
+        "snow": 123
+      },
+      "fit_groups": [
+        "gopro_0122",
+        "gopro_0176",
+        "gopro_0351",
+        "gopro_0376",
+        "gopro_0402",
+        "gopro_0477",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0571",
+        "gopro_0604",
+        "gopro_0606"
+      ],
+      "fit_image_count": 1017,
+      "inner_fold": 0
+    },
+    {
+      "dev_groups": [
+        "gopro_0176",
+        "gopro_0376",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0571"
+      ],
+      "dev_image_count": 476,
+      "dev_weather_image_counts": {
+        "fog": 120,
+        "night": 203,
+        "rain": 6,
+        "snow": 147
+      },
+      "fit_groups": [
+        "gopro_0122",
+        "gopro_0351",
+        "gopro_0400",
+        "gopro_0402",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0477",
+        "gopro_0480",
+        "gopro_0604",
+        "gopro_0606",
+        "gopro_0607"
+      ],
+      "fit_image_count": 1020,
+      "inner_fold": 1
+    },
+    {
+      "dev_groups": [
+        "gopro_0122",
+        "gopro_0351",
+        "gopro_0402",
+        "gopro_0477",
+        "gopro_0604",
+        "gopro_0606"
+      ],
+      "dev_image_count": 541,
+      "dev_weather_image_counts": {
+        "fog": 164,
+        "night": 93,
+        "rain": 154,
+        "snow": 130
+      },
+      "fit_groups": [
+        "gopro_0176",
+        "gopro_0376",
+        "gopro_0400",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0480",
+        "gopro_0571",
+        "gopro_0607"
+      ],
+      "fit_image_count": 955,
+      "inner_fold": 2
+    }
+  ],
+  "candidates": {
+    "0.01": [
+      {
+        "inner_fold": 0,
+        "status": "PASS",
+        "ap": 0.5021797801035832,
+        "n_iter": 77
+      },
+      {
+        "inner_fold": 1,
+        "status": "PASS",
+        "ap": 0.5488574146471961,
+        "n_iter": 70
+      },
+      {
+        "inner_fold": 2,
+        "status": "PASS",
+        "ap": 0.5760023589119362,
+        "n_iter": 71
+      }
+    ],
+    "0.1": [
+      {
+        "inner_fold": 0,
+        "status": "PASS",
+        "ap": 0.49832956870433576,
+        "n_iter": 97
+      },
+      {
+        "inner_fold": 1,
+        "status": "PASS",
+        "ap": 0.546999355501394,
+        "n_iter": 128
+      },
+      {
+        "inner_fold": 2,
+        "status": "PASS",
+        "ap": 0.5737561444938515,
+        "n_iter": 109
+      }
+    ],
+    "1.0": [
+      {
+        "inner_fold": 0,
+        "status": "PASS",
+        "ap": 0.49760861775621684,
+        "n_iter": 98
+      },
+      {
+        "inner_fold": 1,
+        "status": "PASS",
+        "ap": 0.5466949051387985,
+        "n_iter": 151
+      },
+      {
+        "inner_fold": 2,
+        "status": "PASS",
+        "ap": 0.5733796635237198,
+        "n_iter": 158
+      }
+    ]
+  },
+  "mean_weighted_inner_AP": {
+    "0.01": 0.5423465178875718,
+    "0.1": 0.5396950228998604,
+    "1.0": 0.539227728806245
+  },
+  "selected_C": 0.01,
+  "threshold": 0.2243678950136029,
+  "achieved_training_coverage": 0.8000007452583301,
+  "n_train": 765952,
+  "n_iter": 77,
+  "model_sha256": "6e970bc9e7ef34dc871e5e3fd6ebde0e39618146cf7e3c01a945813e5cc23291",
+  "manifest_sha256": "0662d611a7026e141fa1f2ff39db599e7e7c0800daf1f7ab6e703144df0cf067",
+  "seconds": 21.28117669885978
+}

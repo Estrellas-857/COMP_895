@@ -1,0 +1,137 @@
+{
+  "group": "gopro_0479",
+  "weather": "fog",
+  "num_images": 29,
+  "metrics": {
+    "num_pixels": 55592850,
+    "num_errors": 4517385,
+    "error_prevalence": 0.08125838124866777,
+    "auroc": 0.9403941541697546,
+    "average_precision": 0.6420777071895648,
+    "aurc": 0.00900677894490623,
+    "checkpoints": [
+      {
+        "requested_coverage": 0.01,
+        "actual_coverage": 0.00981399586457611,
+        "coverage_error": -0.00018600413542389088,
+        "risk": 0.0,
+        "accepted_pixels": 545588,
+        "accepted_errors": 0
+      },
+      {
+        "requested_coverage": 0.05,
+        "actual_coverage": 0.049034111401016496,
+        "coverage_error": -0.0009658885989835067,
+        "risk": 9.90481836397346e-06,
+        "accepted_pixels": 2725946,
+        "accepted_errors": 27
+      },
+      {
+        "requested_coverage": 0.1,
+        "actual_coverage": 0.09977410764154024,
+        "coverage_error": -0.00022589235845976718,
+        "risk": 3.786016510277142e-05,
+        "accepted_pixels": 5546727,
+        "accepted_errors": 210
+      },
+      {
+        "requested_coverage": 0.2,
+        "actual_coverage": 0.20018496982975328,
+        "coverage_error": 0.00018496982975327314,
+        "risk": 0.0001421530143313062,
+        "accepted_pixels": 11128853,
+        "accepted_errors": 1582
+      },
+      {
+        "requested_coverage": 0.5,
+        "actual_coverage": 0.5000015829373742,
+        "coverage_error": 1.5829373741782504e-06,
+        "risk": 0.0036684457507313957,
+        "accepted_pixels": 27796513,
+        "accepted_errors": 101970
+      },
+      {
+        "requested_coverage": 0.6,
+        "actual_coverage": 0.5845869208000669,
+        "coverage_error": -0.015413079199933066,
+        "risk": 0.008207089647133086,
+        "accepted_pixels": 32498853,
+        "accepted_errors": 266721
+      },
+      {
+        "requested_coverage": 0.7,
+        "actual_coverage": 0.7323048737382595,
+        "coverage_error": 0.03230487373825952,
+        "risk": 0.006562392419821564,
+        "accepted_pixels": 40710915,
+        "accepted_errors": 267161
+      },
+      {
+        "requested_coverage": 0.8,
+        "actual_coverage": 0.8000012771426541,
+        "coverage_error": 1.2771426540769681e-06,
+        "risk": 0.00737058535154341,
+        "accepted_pixels": 44474351,
+        "accepted_errors": 327802
+      },
+      {
+        "requested_coverage": 0.9,
+        "actual_coverage": 0.9000003417705694,
+        "coverage_error": 3.417705694008788e-07,
+        "risk": 0.030503611334338952,
+        "accepted_pixels": 50033584,
+        "accepted_errors": 1526205
+      }
+    ],
+    "fixed_threshold": {
+      "num_evaluated": 55592850,
+      "threshold": 0.26714755796931855,
+      "distinct_thresholds": 1,
+      "accepted_pixels": 50178721,
+      "accepted_errors": 1561321,
+      "coverage": 0.9026110551986452,
+      "risk": 0.031115201202517696,
+      "complete_population": true
+    },
+    "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+  },
+  "qa_raw_secondary": [],
+  "qa_features_and_scores_verified": 237568,
+  "evaluated_image_ids": [
+    "fog/GOPR0479_frame_000031_rgb_anon",
+    "fog/GOPR0479_frame_000033_rgb_anon",
+    "fog/GOPR0479_frame_000035_rgb_anon",
+    "fog/GOPR0479_frame_000047_rgb_anon",
+    "fog/GOPR0479_frame_000073_rgb_anon",
+    "fog/GOPR0479_frame_000077_rgb_anon",
+    "fog/GOPR0479_frame_000119_rgb_anon",
+    "fog/GOPR0479_frame_000125_rgb_anon",
+    "fog/GOPR0479_frame_000127_rgb_anon",
+    "fog/GOPR0479_frame_000131_rgb_anon",
+    "fog/GOPR0479_frame_000139_rgb_anon",
+    "fog/GOPR0479_frame_000143_rgb_anon",
+    "fog/GOPR0479_frame_000147_rgb_anon",
+    "fog/GOPR0479_frame_000151_rgb_anon",
+    "fog/GOPR0479_frame_000155_rgb_anon",
+    "fog/GOPR0479_frame_000159_rgb_anon",
+    "fog/GOPR0479_frame_000163_rgb_anon",
+    "fog/GOPR0479_frame_000165_rgb_anon",
+    "fog/GOPR0479_frame_000169_rgb_anon",
+    "fog/GOPR0479_frame_000173_rgb_anon",
+    "fog/GOPR0479_frame_000177_rgb_anon",
+    "fog/GOPR0479_frame_000181_rgb_anon",
+    "fog/GOPR0479_frame_000195_rgb_anon",
+    "fog/GOPR0479_frame_000199_rgb_anon",
+    "fog/GOPR0479_frame_000318_rgb_anon",
+    "fog/GOPR0479_frame_000326_rgb_anon",
+    "fog/GOPR0479_frame_000394_rgb_anon",
+    "fog/GOPR0479_frame_000406_rgb_anon",
+    "fog/GOPR0479_frame_000418_rgb_anon"
+  ],
+  "eval_seconds": 5.930358151905239,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "manifest_sha256": "0662d611a7026e141fa1f2ff39db599e7e7c0800daf1f7ab6e703144df0cf067",
+  "model_sha256": "a2958042fb0d103e480359393b5062010a3d8b682cb1bbb7fc4fe3375a611f2a",
+  "histogram_sha256": "f680c2f1d8f726e39f730a356081fea41896a41cb273da44667c702a0da07a02",
+  "evaluate_sha256": "3f84ce6ec8e06c5e91101f095a18a1b5cb73b19a25c54baee2833f0e610ca12d"
+}

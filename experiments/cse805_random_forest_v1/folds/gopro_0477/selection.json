@@ -1,0 +1,201 @@
+{
+  "group": "gopro_0477",
+  "train_groups": [
+    "gopro_0122",
+    "gopro_0176",
+    "gopro_0351",
+    "gopro_0376",
+    "gopro_0397",
+    "gopro_0400",
+    "gopro_0402",
+    "gopro_0475",
+    "gopro_0476",
+    "gopro_0478",
+    "gopro_0479",
+    "gopro_0480",
+    "gopro_0571",
+    "gopro_0604",
+    "gopro_0606",
+    "gopro_0607"
+  ],
+  "inner_folds": [
+    {
+      "dev_groups": [
+        "gopro_0122",
+        "gopro_0397",
+        "gopro_0400",
+        "gopro_0476",
+        "gopro_0480",
+        "gopro_0604",
+        "gopro_0606"
+      ],
+      "dev_image_count": 545,
+      "dev_weather_image_counts": {
+        "fog": 71,
+        "night": 104,
+        "rain": 240,
+        "snow": 130
+      },
+      "fit_groups": [
+        "gopro_0176",
+        "gopro_0351",
+        "gopro_0376",
+        "gopro_0402",
+        "gopro_0475",
+        "gopro_0478",
+        "gopro_0479",
+        "gopro_0571",
+        "gopro_0607"
+      ],
+      "fit_image_count": 891,
+      "inner_fold": 0
+    },
+    {
+      "dev_groups": [
+        "gopro_0376",
+        "gopro_0478",
+        "gopro_0571",
+        "gopro_0607"
+      ],
+      "dev_image_count": 423,
+      "dev_weather_image_counts": {
+        "fog": 91,
+        "night": 203,
+        "rain": 6,
+        "snow": 123
+      },
+      "fit_groups": [
+        "gopro_0122",
+        "gopro_0176",
+        "gopro_0351",
+        "gopro_0397",
+        "gopro_0400",
+        "gopro_0402",
+        "gopro_0475",
+        "gopro_0476",
+        "gopro_0479",
+        "gopro_0480",
+        "gopro_0604",
+        "gopro_0606"
+      ],
+      "fit_image_count": 1013,
+      "inner_fold": 1
+    },
+    {
+      "dev_groups": [
+        "gopro_0176",
+        "gopro_0351",
+        "gopro_0402",
+        "gopro_0475",
+        "gopro_0479"
+      ],
+      "dev_image_count": 468,
+      "dev_weather_image_counts": {
+        "fog": 74,
+        "night": 93,
+        "rain": 154,
+        "snow": 147
+      },
+      "fit_groups": [
+        "gopro_0122",
+        "gopro_0376",
+        "gopro_0397",
+        "gopro_0400",
+        "gopro_0476",
+        "gopro_0478",
+        "gopro_0480",
+        "gopro_0571",
+        "gopro_0604",
+        "gopro_0606",
+        "gopro_0607"
+      ],
+      "fit_image_count": 968,
+      "inner_fold": 2
+    }
+  ],
+  "n_train": 735232,
+  "candidates": [
+    {
+      "inner": 0,
+      "depth": 8,
+      "weighted_AP": 0.5561943519187622,
+      "seconds": 1.5118164177984
+    },
+    {
+      "inner": 0,
+      "depth": 14,
+      "weighted_AP": 0.5571703590148719,
+      "seconds": 1.948199385078624
+    },
+    {
+      "inner": 1,
+      "depth": 8,
+      "weighted_AP": 0.5834971729753502,
+      "seconds": 1.5836970028467476
+    },
+    {
+      "inner": 1,
+      "depth": 14,
+      "weighted_AP": 0.5890379483892767,
+      "seconds": 1.9122064029797912
+    },
+    {
+      "inner": 2,
+      "depth": 8,
+      "weighted_AP": 0.5478373081762311,
+      "seconds": 1.512691878946498
+    },
+    {
+      "inner": 2,
+      "depth": 14,
+      "weighted_AP": 0.5492844311154165,
+      "seconds": 1.8318772858474404
+    }
+  ],
+  "mean_inner_weighted_AP": {
+    "8": 0.5625096110234479,
+    "14": 0.5651642461731883
+  },
+  "selected_depth": 14,
+  "threshold": 0.3560303731522383,
+  "training_coverage": 0.8000001097042185,
+  "bootstrap_draws_per_tree": 367616,
+  "trees": 32,
+  "leaf_counts": [
+    553,
+    679,
+    702,
+    854,
+    1258,
+    934,
+    954,
+    872,
+    647,
+    915,
+    892,
+    919,
+    776,
+    820,
+    833,
+    753,
+    814,
+    774,
+    1143,
+    784,
+    747,
+    746,
+    965,
+    319,
+    1008,
+    768,
+    679,
+    1035,
+    635,
+    724,
+    900,
+    714
+  ],
+  "model_sha256": "7b2c5f0577020529ab9ac77ba54b8346c55ab8a1e73e8f6c9909cece8459001a",
+  "manifest_sha256": "473354aab48baf562b2c1d006f438f1a129932b00dd6dc5f01bc9fdadeed1c18",
+  "seconds": 14.605421686079353
+}

@@ -1,0 +1,52 @@
+{
+  "analysis_plan_sha256": "98d30a485598d34d526a416402ce28a271fb3a3c588b5a4687363738a2088fd6",
+  "model_sha256": "68c3fe5749f509adf41a77bb73721fc9ad5d2635b8fb33e6964feb5fa0af637b",
+  "train_sha256": "112ff310462ae6158bce9aa913d8f4c4b7166b30f4a7bf1ad1696c8b7750fa5e",
+  "inputs": {
+    "data/metadata_train.csv": "0c3fb4a315fcd7b6ed11b9b74e5537f03e5dd02107cdf8e601a4867651eb36f6",
+    "data/groups_train.csv": "848667b377eacf15149d4778bf95c14a52c6147e3f262d168e5b433303b11716",
+    "data/assignments.json": "db1fd9be735e78eab808e3dbc2d6a6d47eb421841583308f8a2a26bfe433a6bf",
+    "data/protocol.json": "86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599",
+    "data/metric_amendment_001.json": "5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4",
+    "data/features/manifest.json": "3ed097ec1e06a782ff925bfb8f2eb5f889cba46c246f5ac1f4b0269aef5e1b74",
+    "results/report/group_metrics.csv": "429922836a9a19f7da4865f9bc69a8b77d4daca58a727ea9c3d431cbc71b0cff",
+    "interpretation_v1/tables/pixel_class_acceptance.csv": "cd355a6a8183949f19868b00f77a79e3a58af9b0c3380382eee18aa3a00bf216",
+    "interpretation_v1/tables/metrics_policy_coverage.csv": "c502fcf36372491cfd84d178cc204fd615ffc5a52c552f0475952cf40db89d34",
+    "logs/completion.json": "6bb0979832baade292190d5b56e034ac9d2c13fe925276a4ddef49ea24e5108c"
+  },
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "cloudpickle": "3.1.2",
+    "narwhals": "2.28.0"
+  },
+  "outer_groups": [
+    "gopro_0122",
+    "gopro_0176",
+    "gopro_0351",
+    "gopro_0376",
+    "gopro_0397",
+    "gopro_0400",
+    "gopro_0402",
+    "gopro_0475",
+    "gopro_0476",
+    "gopro_0477",
+    "gopro_0478",
+    "gopro_0479",
+    "gopro_0480",
+    "gopro_0571",
+    "gopro_0604",
+    "gopro_0606",
+    "gopro_0607"
+  ],
+  "num_images": 1600,
+  "train_seed": 805,
+  "qa_seed": 806,
+  "native_cache_count": 1600,
+  "frozen_utc": "2026-11-18T22:06:04.876522+00:00"
+}

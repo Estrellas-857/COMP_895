@@ -1,0 +1,115 @@
+{
+  "group": "gopro_0480",
+  "weather": "fog",
+  "num_images": 7,
+  "metrics": {
+    "num_pixels": 14029741,
+    "num_errors": 1016025,
+    "error_prevalence": 0.0724193696804524,
+    "auroc": 0.8840756564763103,
+    "average_precision": 0.44462247769578833,
+    "aurc": 0.013038256342213308,
+    "checkpoints": [
+      {
+        "requested_coverage": 0.01,
+        "actual_coverage": 0.023719539797634182,
+        "coverage_error": 0.013719539797634182,
+        "risk": 0.0,
+        "accepted_pixels": 332779,
+        "accepted_errors": 0
+      },
+      {
+        "requested_coverage": 0.05,
+        "actual_coverage": 0.0707502725816535,
+        "coverage_error": 0.020750272581653503,
+        "risk": 0.0,
+        "accepted_pixels": 992608,
+        "accepted_errors": 0
+      },
+      {
+        "requested_coverage": 0.1,
+        "actual_coverage": 0.10241985222678024,
+        "coverage_error": 0.0024198522267802336,
+        "risk": 0.0,
+        "accepted_pixels": 1436924,
+        "accepted_errors": 0
+      },
+      {
+        "requested_coverage": 0.2,
+        "actual_coverage": 0.20011673772167285,
+        "coverage_error": 0.00011673772167283825,
+        "risk": 0.0,
+        "accepted_pixels": 2807586,
+        "accepted_errors": 0
+      },
+      {
+        "requested_coverage": 0.5,
+        "actual_coverage": 0.49795708987072534,
+        "coverage_error": -0.0020429101292746554,
+        "risk": 0.005151434776715097,
+        "accepted_pixels": 6986209,
+        "accepted_errors": 35989
+      },
+      {
+        "requested_coverage": 0.6,
+        "actual_coverage": 0.6000657460462029,
+        "coverage_error": 6.574604620290803e-05,
+        "risk": 0.01425980787922982,
+        "accepted_pixels": 8418767,
+        "accepted_errors": 120050
+      },
+      {
+        "requested_coverage": 0.7,
+        "actual_coverage": 0.6989174639788432,
+        "coverage_error": -0.0010825360211567103,
+        "risk": 0.019230073006010526,
+        "accepted_pixels": 9805631,
+        "accepted_errors": 188563
+      },
+      {
+        "requested_coverage": 0.8,
+        "actual_coverage": 0.7999976621093718,
+        "coverage_error": -2.3378906282012224e-06,
+        "risk": 0.019629518093758243,
+        "accepted_pixels": 11223760,
+        "accepted_errors": 220317
+      },
+      {
+        "requested_coverage": 0.9,
+        "actual_coverage": 0.9000009337307082,
+        "coverage_error": 9.337307081969115e-07,
+        "risk": 0.03496576324288536,
+        "accepted_pixels": 12626780,
+        "accepted_errors": 441505
+      }
+    ],
+    "fixed_threshold": {
+      "num_evaluated": 14029741,
+      "threshold": 0.26319329629214877,
+      "distinct_thresholds": 1,
+      "accepted_pixels": 12492255,
+      "accepted_errors": 412690,
+      "coverage": 0.890412374683182,
+      "risk": 0.03303566890045072,
+      "complete_population": true
+    },
+    "method": "full valid-pixel population; 100000 fixed bins in float64 u=2/pi*arcsin(sqrt(score)); tied-bin AUROC/AP; whole-bin RC; right-step AURC"
+  },
+  "qa_raw_secondary": [],
+  "qa_features_and_scores_verified": 57344,
+  "evaluated_image_ids": [
+    "fog/GOPR0480_frame_000029_rgb_anon",
+    "fog/GOPR0480_frame_000066_rgb_anon",
+    "fog/GOPR0480_frame_000072_rgb_anon",
+    "fog/GOPR0480_frame_000077_rgb_anon",
+    "fog/GOPR0480_frame_000123_rgb_anon",
+    "fog/GOPR0480_frame_000210_rgb_anon",
+    "fog/GOPR0480_frame_000215_rgb_anon"
+  ],
+  "eval_seconds": 1.4803581428714097,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "manifest_sha256": "0662d611a7026e141fa1f2ff39db599e7e7c0800daf1f7ab6e703144df0cf067",
+  "model_sha256": "7c9c8d9e031311a3a2014faa249847d4982112232a2e538ee5a4a8d8d577b4fb",
+  "histogram_sha256": "4598bb5a77dc7c69517551495cf31700344658a4d017044f4cc25d1de1ada5f4",
+  "evaluate_sha256": "3f84ce6ec8e06c5e91101f095a18a1b5cb73b19a25c54baee2833f0e610ca12d"
+}
