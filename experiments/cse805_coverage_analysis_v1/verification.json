@@ -1,0 +1,1252 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-11-19T18:26:06.673048+00:00",
+  "scope": "supplemental fixed-budget analysis",
+  "training_runs": 0,
+  "model_scoring_runs": 0,
+  "segmentation_forward_passes": 0,
+  "histograms_npz": 51,
+  "method_group_histogram_pairs": 102,
+  "full_valid_pixels": 3059663748,
+  "full_segmentation_errors": 523653212,
+  "heldout_images": 1600,
+  "excluded_original_validation_images": 406,
+  "images_per_weather": 400,
+  "group_counts": {
+    "fog": 6,
+    "night": 3,
+    "rain": 3,
+    "snow": 5
+  },
+  "methods": [
+    "raw_msp",
+    "raw_entropy",
+    "lr3",
+    "lr3_class",
+    "lr_class_msp_interaction",
+    "rf_class"
+  ],
+  "targets_pct": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90
+  ],
+  "population_checks": "Fold image IDs, per-image valid/error counts, model selection split and model digests match frozen archives.",
+  "data_source_paths_relative_to": "experiments/",
+  "fold_source_sha256": {
+    "gopro_0122": {
+      "cse805_error_prediction_v1/results/folds/gopro_0122/result.json": "c845b061dc1f3573d283b1621c2ee7ffb588469b1548fefbc22e97953fab4cbb",
+      "cse805_error_prediction_v1/results/folds/gopro_0122/image_results.json": "3de987c67c4f14b7d459a1f2be56e15e832e8ca3d142274a92d35428a1aef5da",
+      "cse805_error_prediction_v1/results/folds/gopro_0122/histograms.npz": "3a7a27a4aaf0f30ed62dcee2ac6756843b9bb98ade8a296c15d53394cb96af20",
+      "cse805_error_prediction_v1/data/models/gopro_0122/selection.json": "e62812669e5401edf7d174e0e26b4b0dd536fd7c0a5ea69fc6a77496e4acd906",
+      "cse805_error_prediction_v1/data/models/gopro_0122/lr3.joblib": "4cdd39e81eccc214f4429a1c3cea4a7906d73edc64aaaa3e41fc6d5d27d9c6fd",
+      "cse805_error_prediction_v1/data/models/gopro_0122/lr3_class.joblib": "36139299ec81539572461ec4b44b44064e0f22c52f4df95656b2bcd2362f2c52",
+      "cse805_class_msp_interaction_v1/folds/gopro_0122/evaluation.json": "0f85a08c93658b1226912b4d5a544fb059b05d4881ebf9993c286bcc2ce2336b",
+      "cse805_class_msp_interaction_v1/folds/gopro_0122/selection.json": "9cbedec02bdb58aa5f2f6d7221ca5e40274a3f21cbb5b6cba2d239667d87c6da",
+      "cse805_class_msp_interaction_v1/folds/gopro_0122/histograms.npz": "bc95e90f2deee757e0b6bc090830bcff48fc5bc0783723eab96615ca9a600dae",
+      "cse805_class_msp_interaction_v1/folds/gopro_0122/interaction.joblib": "3012206efa0074e1abb7d1e1f5fd42538bf4fc4e33d52e88780860ac34b3a211",
+      "cse805_random_forest_v1/folds/gopro_0122/evaluation.json": "bcce33990b07c65763b28b9d025384067657c3f8eb359485f18578227003a1ca",
+      "cse805_random_forest_v1/folds/gopro_0122/selection.json": "7070a9790032838f7eafaa3433485b26f0f90ba8b79ef56e6f77afa599a8faed",
+      "cse805_random_forest_v1/folds/gopro_0122/histograms.npz": "a229cd7b17779cbb7b3c199d05ae79b190a67145c989416c268a7d625b965dea",
+      "cse805_random_forest_v1/folds/gopro_0122/forest.joblib": "9f9a4c20e422db1ef1d2638d19fc55d5bd6717b4f1fd5b64546eac12a152c3b1"
+    },
+    "gopro_0176": {
+      "cse805_error_prediction_v1/results/folds/gopro_0176/result.json": "f069010daf7e7095be76fdc2664f37a75b594246dd35f840ffdc1907f13bc2c0",
+      "cse805_error_prediction_v1/results/folds/gopro_0176/image_results.json": "e65e9c76b41eb45c1e36eb868944c2c7edb41de31f3111dac050c7c7e24ee880",
+      "cse805_error_prediction_v1/results/folds/gopro_0176/histograms.npz": "5484f9be394e9b2859c4c6cd6c49af5e6f1633a83c0886eaa456c2a5628188f8",
+      "cse805_error_prediction_v1/data/models/gopro_0176/selection.json": "3836cc0c85cbe1e4931ba883a0faed275193c69ab9e75666fd75a9eefd66296e",
+      "cse805_error_prediction_v1/data/models/gopro_0176/lr3.joblib": "54ff65282a9a102f57b384c22ed758873829248ca207a299aa7188daffa3884d",
+      "cse805_error_prediction_v1/data/models/gopro_0176/lr3_class.joblib": "e397e836eda09e2fbb736c80149567da05e024a27e789d452008d2a7055b2147",
+      "cse805_class_msp_interaction_v1/folds/gopro_0176/evaluation.json": "f022ca4defded3d46967ec01fb1be1d7af3192eb95637f6de360848a2c7b2edb",
+      "cse805_class_msp_interaction_v1/folds/gopro_0176/selection.json": "3f743bc6378fe0ff09ec6185c43ad861ff54f1c378413f4f59363cad2c9db87a",
+      "cse805_class_msp_interaction_v1/folds/gopro_0176/histograms.npz": "0fe1aa021952b1d4386760f8e8640d4974e324852e68d32f20cbde13164c8a20",
+      "cse805_class_msp_interaction_v1/folds/gopro_0176/interaction.joblib": "59acd6059092d68aae2c89ac9a8b3d2a8bbfbdcfc3e347077ac495a92c6972c2",
+      "cse805_random_forest_v1/folds/gopro_0176/evaluation.json": "aa1808a3d256c5ae1bed2210f0ffbd26eee5fec16e807d5d9817eba4980586e6",
+      "cse805_random_forest_v1/folds/gopro_0176/selection.json": "d40acc40e2859639ed42ecc8226ab6f4030aa11d965d0e2b26b976f3a69a3146",
+      "cse805_random_forest_v1/folds/gopro_0176/histograms.npz": "1505fe27c6332798b7f4cc20cc98a225d6d58f7dda3fc47d9bb1a302ada1c883",
+      "cse805_random_forest_v1/folds/gopro_0176/forest.joblib": "5cbc0dee1befd9cb5d0f34b30556bc587946c12fdcff39a1b993520de0590ef0"
+    },
+    "gopro_0351": {
+      "cse805_error_prediction_v1/results/folds/gopro_0351/result.json": "c3a3036a5e88452446f28fda4bbe7df339fc91efad5794699abd93f3cf7af3c9",
+      "cse805_error_prediction_v1/results/folds/gopro_0351/image_results.json": "90781fa96e933970c0af3824daa2c0b7cdd3cfeb77b6fc7fac256e78d16b3272",
+      "cse805_error_prediction_v1/results/folds/gopro_0351/histograms.npz": "96c4ad19a2dda0b8886d8d40fbcfccdbc1c1e4a543778b9d6134b80c31c9ae0f",
+      "cse805_error_prediction_v1/data/models/gopro_0351/selection.json": "ca927b9b0191029bc077bb48f75ac1d5cc1acd037f563902261402db9ab6a2fd",
+      "cse805_error_prediction_v1/data/models/gopro_0351/lr3.joblib": "263051c076656ea00743e1e02f59d92398d275dd237fabab508a4c3fbcaf13a8",
+      "cse805_error_prediction_v1/data/models/gopro_0351/lr3_class.joblib": "7200e5eb65d9004c5b609b838a3772b6165cfadb8e7fb5f23076ac9fea4ba12c",
+      "cse805_class_msp_interaction_v1/folds/gopro_0351/evaluation.json": "f12c18ad2e7a85b3d9e90f6505fb565d85b06bb7ac1db879b89104280aaa471d",
+      "cse805_class_msp_interaction_v1/folds/gopro_0351/selection.json": "3ebbf574a7a0db4711ffab61f361039627d73102fe7361707ea70edb536a2403",
+      "cse805_class_msp_interaction_v1/folds/gopro_0351/histograms.npz": "13499700f6de1ec7f7b93c9b3422dd1cd0605d5468679963ffe59d80d1806017",
+      "cse805_class_msp_interaction_v1/folds/gopro_0351/interaction.joblib": "f6d1d9314241d0eca441930ba3e274be07a4dc0a1a38647067f2c61c88751fbb",
+      "cse805_random_forest_v1/folds/gopro_0351/evaluation.json": "f9ae498f61dced6009f71bd5a06b4e6aa48ef3942c5769315f3ca5a877169c38",
+      "cse805_random_forest_v1/folds/gopro_0351/selection.json": "28c09ae9eb7278e914f5ec43337479ddd74aa7eed2508cbebed3d0ac00131973",
+      "cse805_random_forest_v1/folds/gopro_0351/histograms.npz": "255d95b1785144f10f9433c64816c0593edd53e1d5a5e3c1211e782ee7e56caf",
+      "cse805_random_forest_v1/folds/gopro_0351/forest.joblib": "f784f8759340730a8ab3bc2c735466e42ef9bc207283c85ded8a16fb3406ef7e"
+    },
+    "gopro_0376": {
+      "cse805_error_prediction_v1/results/folds/gopro_0376/result.json": "993e2973110b2f541d9b4ae22b1c0c16b0972218d9a2035cdd44d75bb9510bd0",
+      "cse805_error_prediction_v1/results/folds/gopro_0376/image_results.json": "c826aaae188ff70c3a870a22b350c13ceaf97f3d2353cf15e935c4bed2160d34",
+      "cse805_error_prediction_v1/results/folds/gopro_0376/histograms.npz": "f64c3aa9d63790aebc06395537761d449c8481bf4210273d7b20b8f9dbbbd571",
+      "cse805_error_prediction_v1/data/models/gopro_0376/selection.json": "8ae1274fd1544a7ef18b3cb395f17f2b56e207aa93d62de4d2db4910ddb06c8f",
+      "cse805_error_prediction_v1/data/models/gopro_0376/lr3.joblib": "c5b1c9c6f97fbbaafabb031bfcef5caf0640c9efaec9ae66b96b8226b076ed15",
+      "cse805_error_prediction_v1/data/models/gopro_0376/lr3_class.joblib": "2ff2892a54cdbc86145cd4568ac488c766f25eeefd58237af6ccfd8d84aedfc9",
+      "cse805_class_msp_interaction_v1/folds/gopro_0376/evaluation.json": "6e8ed1d88943dffc606e27ef1fc97b1864fe26a5576a04cdc31b0a08118ead30",
+      "cse805_class_msp_interaction_v1/folds/gopro_0376/selection.json": "8a4c3289616fe13206ca1d6c0b4b52e0b3b1311bed91eb89a12f7fa54098859c",
+      "cse805_class_msp_interaction_v1/folds/gopro_0376/histograms.npz": "373b80202f10ef61576260a525f7892afabb11f1dd54f287814e708ba9623606",
+      "cse805_class_msp_interaction_v1/folds/gopro_0376/interaction.joblib": "17499547f6c8799b2cad5b0431bdfca18fb4b33faf39a74af390a303c84fbba1",
+      "cse805_random_forest_v1/folds/gopro_0376/evaluation.json": "690406cf40eaa7ca15ba779f198a9994748d70266dd228a4b26e4538593573f1",
+      "cse805_random_forest_v1/folds/gopro_0376/selection.json": "3bca36a70edece865beb033c1465e615249219355dba987ef4bc17189fe29e83",
+      "cse805_random_forest_v1/folds/gopro_0376/histograms.npz": "d1a5808eccfed9d1aeba963b6da899f352cd9a5f5657cc7eefeda713955296af",
+      "cse805_random_forest_v1/folds/gopro_0376/forest.joblib": "31181ffff2c0ead8be1abb968dee60e2453c9b78bd40aa1c1ad128fc86bebe8e"
+    },
+    "gopro_0397": {
+      "cse805_error_prediction_v1/results/folds/gopro_0397/result.json": "a9d33cfbb4ca489693eb06203e5f11aba1c7d0282c95967007f4cc509f0596d2",
+      "cse805_error_prediction_v1/results/folds/gopro_0397/image_results.json": "d393bb8f927e0e14b0e47544cf69541a62a111a715648269a19fb2989b092436",
+      "cse805_error_prediction_v1/results/folds/gopro_0397/histograms.npz": "4a797b5209e1fabc9c32c258cbc73b515a4356f1a11c8658b270f2b547600b11",
+      "cse805_error_prediction_v1/data/models/gopro_0397/selection.json": "ae368b721bfb1b859525b8808f1424f1eac4fb27f710a03963fa7f0496221f39",
+      "cse805_error_prediction_v1/data/models/gopro_0397/lr3.joblib": "f2dfebf28bbb9cbd049c9624625844fa7ddd1caa4d88d2e6d42f7cc67b8915cd",
+      "cse805_error_prediction_v1/data/models/gopro_0397/lr3_class.joblib": "49df4380d1d053d49795b0863a7b322e59c552a783d6d35a5598e85f072cab43",
+      "cse805_class_msp_interaction_v1/folds/gopro_0397/evaluation.json": "94f93794703905125d8f3a4b9f21136ee6d1181eb1da66c19110e0e9f7dee3fe",
+      "cse805_class_msp_interaction_v1/folds/gopro_0397/selection.json": "6cf923b79c4e0343fa16ca35e17669c3778890fa02b9825ac71bd2b89e441ee6",
+      "cse805_class_msp_interaction_v1/folds/gopro_0397/histograms.npz": "a26625bb5058f8d2a7ee111287bc49a6dbaaef7cc4366c5677e1afaf89f39bd5",
+      "cse805_class_msp_interaction_v1/folds/gopro_0397/interaction.joblib": "6e970bc9e7ef34dc871e5e3fd6ebde0e39618146cf7e3c01a945813e5cc23291",
+      "cse805_random_forest_v1/folds/gopro_0397/evaluation.json": "23efe5cd504bc27349f289aac69c82a90235dea51df70c15c3df544f8c9a10a6",
+      "cse805_random_forest_v1/folds/gopro_0397/selection.json": "62a9ce1ef9cfefcfb57663b8897ef59147343a22e2a04ee401403ce59ff7a5c9",
+      "cse805_random_forest_v1/folds/gopro_0397/histograms.npz": "70a4655fa4fc66a384b92a6c2052e61d56ce8285145f100e146b71684cefe208",
+      "cse805_random_forest_v1/folds/gopro_0397/forest.joblib": "3f481c912a85316d167ff934f05ff478278c0479eda50f6bc23e627a7fe358ab"
+    },
+    "gopro_0400": {
+      "cse805_error_prediction_v1/results/folds/gopro_0400/result.json": "2809ee134ee3439b03a527d6f7887b7b3743514612deb3ed852b4c4873f68ded",
+      "cse805_error_prediction_v1/results/folds/gopro_0400/image_results.json": "6abffb935212f2ff210d0042f20e53a3e533cf4b6ba644cac44786057fe7fe15",
+      "cse805_error_prediction_v1/results/folds/gopro_0400/histograms.npz": "d9bfdfbe67c845f1641573d292bcf626e44db96c2b3206a7eb1e042c50abf1a0",
+      "cse805_error_prediction_v1/data/models/gopro_0400/selection.json": "6bb57c72c2d8f61ac420a400e0cdb1dc987b03239a6e8c1ceeab034aa92726b7",
+      "cse805_error_prediction_v1/data/models/gopro_0400/lr3.joblib": "faa4cfb5e85d013f09a09d34293f665eda74cfd232b9fd63e8a8378c4d729e3f",
+      "cse805_error_prediction_v1/data/models/gopro_0400/lr3_class.joblib": "551505c69af05e16013a247f934b4bd37c26edb451c4d5d3ae19b88fa649eff3",
+      "cse805_class_msp_interaction_v1/folds/gopro_0400/evaluation.json": "18ba976f704062b3e923b537b8fc00783ebaf9e79c76c174d371337fc5d86996",
+      "cse805_class_msp_interaction_v1/folds/gopro_0400/selection.json": "6282c7c6e80c8ad0aa8440bfc0e1b182b31be93cf571945946e74a46f0dab170",
+      "cse805_class_msp_interaction_v1/folds/gopro_0400/histograms.npz": "9a838258ba6fe381d4173495093d1b33475ae2169aeb31ed419720bb51aa8ad9",
+      "cse805_class_msp_interaction_v1/folds/gopro_0400/interaction.joblib": "6fd8f3a34f97c0921fc11bb174345d649d44cea55516a53173ea4d9f544d6461",
+      "cse805_random_forest_v1/folds/gopro_0400/evaluation.json": "4a8589ebc398d1b15fbc8811629d90f26f69bbfbf8ed46d20f7846b864fe248f",
+      "cse805_random_forest_v1/folds/gopro_0400/selection.json": "09d5e9ac336b97427793d8d4ecfce6a0db37e98b5b45d8c47889f125141ea846",
+      "cse805_random_forest_v1/folds/gopro_0400/histograms.npz": "a2cbc7138eea68eb16715be31525f143dabfc937194ccfbaff2c9a467d02ddc8",
+      "cse805_random_forest_v1/folds/gopro_0400/forest.joblib": "7aa93d436d363fc64b4019038e887a1dceced85342c300d58897c0be4d37e7f5"
+    },
+    "gopro_0402": {
+      "cse805_error_prediction_v1/results/folds/gopro_0402/result.json": "645bb342a831b61ec204d026e841b885982c5a13cddc9f993b0625949b781ea0",
+      "cse805_error_prediction_v1/results/folds/gopro_0402/image_results.json": "47a3d08f59c6a0fbc89aab06f387c49654f9638485b6c4920d25123766a50a51",
+      "cse805_error_prediction_v1/results/folds/gopro_0402/histograms.npz": "15ff7cd683d8add066e762817804d03ab29197d6f52e1929dc28c18dad985a13",
+      "cse805_error_prediction_v1/data/models/gopro_0402/selection.json": "ddc40afedbdcd224a46048ceaca8c4e855bf57431b8f6b668e14066db94920cf",
+      "cse805_error_prediction_v1/data/models/gopro_0402/lr3.joblib": "563d82a5fc939492b599a018b2786abb3994be52b0c4349c728e0fe9349a2b49",
+      "cse805_error_prediction_v1/data/models/gopro_0402/lr3_class.joblib": "5afb48f7b4a28babed30b402b4ef03505a47de531b2855b7444127c35648415c",
+      "cse805_class_msp_interaction_v1/folds/gopro_0402/evaluation.json": "2d318d83db75c8c20b3f5d48addf86f51a3ec390c2f2178f7a247da8f543c673",
+      "cse805_class_msp_interaction_v1/folds/gopro_0402/selection.json": "76e80a0073630e48930cbcd1e1b13630e35fb7c463fd7d2be4ab43f4ed67fe63",
+      "cse805_class_msp_interaction_v1/folds/gopro_0402/histograms.npz": "de432f97b88e0a09c0a41037c0d9720300f2cad485b093c58054a3e74ecbfb19",
+      "cse805_class_msp_interaction_v1/folds/gopro_0402/interaction.joblib": "ea8ed9c80a11afdb04d62dd8a5042fce0da37dc541e4d87c4526d978dfc15629",
+      "cse805_random_forest_v1/folds/gopro_0402/evaluation.json": "310d785dc7ee90c601f575256cf07e49e8eec303a19d6983842c5bfbc46a7b4c",
+      "cse805_random_forest_v1/folds/gopro_0402/selection.json": "6c727550f8d226ab9f3252026f158dcc42320a38f32dfb165324848f7dd9631d",
+      "cse805_random_forest_v1/folds/gopro_0402/histograms.npz": "9d5e717f01eb6ff002cb7f7b3d7853272816616834dda823c3a4dbb04007936a",
+      "cse805_random_forest_v1/folds/gopro_0402/forest.joblib": "5c8d9cd9eda8c3eb8acb8ae16be0f6e62dec2174d5fdc624b56e2517a2768726"
+    },
+    "gopro_0475": {
+      "cse805_error_prediction_v1/results/folds/gopro_0475/result.json": "adcd525d7c5ad1bd4e551e37a421beab04770ef6e433149bc01df73fa82a5058",
+      "cse805_error_prediction_v1/results/folds/gopro_0475/image_results.json": "91f29119f4c264cf06fb9d2ea996a396282849dc3061eb882d1aacbbde48bb67",
+      "cse805_error_prediction_v1/results/folds/gopro_0475/histograms.npz": "bacbb97fe714d375fb4bf809512b56c7c875df5d93286be1cb5e43e05d84c893",
+      "cse805_error_prediction_v1/data/models/gopro_0475/selection.json": "2c20c4ef812bba20a43aca7736f230564e72f920ee6a99037d5bd74dc634ee9e",
+      "cse805_error_prediction_v1/data/models/gopro_0475/lr3.joblib": "9d930b99c2483752590d54f986fe7f63b0d9a62221fa7f687fcd8d8daa17400c",
+      "cse805_error_prediction_v1/data/models/gopro_0475/lr3_class.joblib": "283ff5c025fa164bbf6bdd5691b39d75b56d403c31e1656be998f0da833c2830",
+      "cse805_class_msp_interaction_v1/folds/gopro_0475/evaluation.json": "6a0d3845547597db3966afbb4faaf2b17153270d5842c3eb4249cc4c5da53b04",
+      "cse805_class_msp_interaction_v1/folds/gopro_0475/selection.json": "82aaa4e998f75996f67b440788d972c858013d3fb7da1f4f479654d9eb49a927",
+      "cse805_class_msp_interaction_v1/folds/gopro_0475/histograms.npz": "e305c5ea642828ac801876a68a05af20d09c4dca6efddb0040b48aca525731af",
+      "cse805_class_msp_interaction_v1/folds/gopro_0475/interaction.joblib": "14dd910afd9822fd0852f236d9fc3e0c76eaffbc4917b35912a60cd43bf85b1d",
+      "cse805_random_forest_v1/folds/gopro_0475/evaluation.json": "11944b2bcd57d3550d10ea7e59faa29f1090701ec5aeb92f42472c5b70bdd047",
+      "cse805_random_forest_v1/folds/gopro_0475/selection.json": "0d11e2f95ca7e681ec98f633bf13e6ed2e8f13fd47ee1c3bac45ac83ba83eedd",
+      "cse805_random_forest_v1/folds/gopro_0475/histograms.npz": "61119ec2ac11e5d156763b11c27b14c2243f17eacf7c3efa5075ead34d9af187",
+      "cse805_random_forest_v1/folds/gopro_0475/forest.joblib": "825bc3647edc44728f00903f9ff0ffa36c96781c89f9bfe486ee02c164b82799"
+    },
+    "gopro_0476": {
+      "cse805_error_prediction_v1/results/folds/gopro_0476/result.json": "f1b387ca4101b1a936b8c94d991a6fee1bc58d342bc2a7b983a42ccc314dd1ae",
+      "cse805_error_prediction_v1/results/folds/gopro_0476/image_results.json": "7cb4109dc7a28b99d740b49297a8f37f584f0795879c008769e6fd4247944960",
+      "cse805_error_prediction_v1/results/folds/gopro_0476/histograms.npz": "0d77108eace3a6d4b6dc149344a21d24e77fdd0584690ed7ba3db485263c80a0",
+      "cse805_error_prediction_v1/data/models/gopro_0476/selection.json": "e8af4a6e2c4e0a4c9f6b341390ea37d3888b444b96c6da6258390de1b2874dec",
+      "cse805_error_prediction_v1/data/models/gopro_0476/lr3.joblib": "beb31b8ef0432459c0d646186d7f7d98b22be0273c63e2d9d73bfc4e6e1d24fb",
+      "cse805_error_prediction_v1/data/models/gopro_0476/lr3_class.joblib": "4d40215e13c912f0894b9cea84b126d2333d2571f90e2437bc943cb72fe6a2f0",
+      "cse805_class_msp_interaction_v1/folds/gopro_0476/evaluation.json": "4b2ceeb6484db321ed65f900014bf1de6e8685fd5ddacdc962a095cee8c042f5",
+      "cse805_class_msp_interaction_v1/folds/gopro_0476/selection.json": "d0cfde73cc0a55abbeefa4e9ec2f8cd97a3ed42186b8961b2af86ef322f75e5b",
+      "cse805_class_msp_interaction_v1/folds/gopro_0476/histograms.npz": "e74e48f3ffa355034b906cebbf6d006d663eba7ebbc1badd9f069114aaec2a02",
+      "cse805_class_msp_interaction_v1/folds/gopro_0476/interaction.joblib": "af662c5e28bffa393967a3a886df5887c5c173da9c35d87ec677b09b7c08cdee",
+      "cse805_random_forest_v1/folds/gopro_0476/evaluation.json": "d780882b5f8354f227ecf73fa1f3784a86d3b8c6afb88f45400bd27f7aec8bc4",
+      "cse805_random_forest_v1/folds/gopro_0476/selection.json": "873efacc4ad7d23256269451a140bced588934ed5ff31e672f196932f2ba41db",
+      "cse805_random_forest_v1/folds/gopro_0476/histograms.npz": "d6da6cb6decbc88f68c4c3ff9cf368fce1af6fb1f59e840bf0a97e93faf76d9c",
+      "cse805_random_forest_v1/folds/gopro_0476/forest.joblib": "5fa377d69ff358f11b9a1272a14c9d70f8ea4f7fb60869db04a385d190ce6beb"
+    },
+    "gopro_0477": {
+      "cse805_error_prediction_v1/results/folds/gopro_0477/result.json": "dd14de0fa4d8be13db90232f08a30fff728e5851a215ac76e0ed5b7bb1030c72",
+      "cse805_error_prediction_v1/results/folds/gopro_0477/image_results.json": "5b578a2328765930e155151691833bc05070e0ce4ee8a34deb586d2338fc60ab",
+      "cse805_error_prediction_v1/results/folds/gopro_0477/histograms.npz": "17bc1ef46fb673f8fd6b282097a119a831e37da1954b0c8810e01895c6491e0b",
+      "cse805_error_prediction_v1/data/models/gopro_0477/selection.json": "a7a816aa3730f641bad8361006ac83d372ff33f3e49046ec94244cc8af28d794",
+      "cse805_error_prediction_v1/data/models/gopro_0477/lr3.joblib": "d245dd8292886ca54836adac4f3b519aff7f3a51f037cfd898994ed8dcf57a6c",
+      "cse805_error_prediction_v1/data/models/gopro_0477/lr3_class.joblib": "d3351b882f19ca68a03b43508b74ccd8e4c0c5cca7c51c320efdfb831787d0bc",
+      "cse805_class_msp_interaction_v1/folds/gopro_0477/evaluation.json": "ec10f6b4c81d4fd868786b9f1481a49bd0defd62d91a88b66de29a82d04fdc89",
+      "cse805_class_msp_interaction_v1/folds/gopro_0477/selection.json": "435ed3ff8336fc94f32e5acf658fd44fa4d37dc833e11f5e7b35eb8cc84f8f97",
+      "cse805_class_msp_interaction_v1/folds/gopro_0477/histograms.npz": "767a3fb60b3e2e4c361e777617c1342b333177c96863059be2f7517d9adb667f",
+      "cse805_class_msp_interaction_v1/folds/gopro_0477/interaction.joblib": "2fe1a0a8db76f4bdf443790e7f49286487d28c5f9198b1431f9c983a2afe1d27",
+      "cse805_random_forest_v1/folds/gopro_0477/evaluation.json": "0d6695513920763ab1c0940ebb46af9ad2ecf2983369631e68e22ad7dec2aa0d",
+      "cse805_random_forest_v1/folds/gopro_0477/selection.json": "bae3d0f60c7ca643892fca6dd726542a14c3a2cbc289b0f7afbcdb0d04fd1664",
+      "cse805_random_forest_v1/folds/gopro_0477/histograms.npz": "1cdb4c38d9ea9661d68caf95aa99be31f874af97a177682c99e0c1dd1809d34d",
+      "cse805_random_forest_v1/folds/gopro_0477/forest.joblib": "7b2c5f0577020529ab9ac77ba54b8346c55ab8a1e73e8f6c9909cece8459001a"
+    },
+    "gopro_0478": {
+      "cse805_error_prediction_v1/results/folds/gopro_0478/result.json": "3ad091a40a68d8428641b2a12e7a0b882d0d1dbd544dc1d53d26475323fba038",
+      "cse805_error_prediction_v1/results/folds/gopro_0478/image_results.json": "0e91b0ac4fc9518e7e6a002b6fab14e61c7f91ba86ad36e4dd8fb676026a456d",
+      "cse805_error_prediction_v1/results/folds/gopro_0478/histograms.npz": "6bb8e31aa07d21ff7799b663075ad43d3c069075c963fc995b372dc2a64331bb",
+      "cse805_error_prediction_v1/data/models/gopro_0478/selection.json": "df645d12a85e20e575a9069eecf1d66cd84b60dd7e452b55074f82fa9bbaf655",
+      "cse805_error_prediction_v1/data/models/gopro_0478/lr3.joblib": "42503c0cba1e526bc9d7a60a7ef267390f4d4e63b8e8a3ef34797f1633e04e8f",
+      "cse805_error_prediction_v1/data/models/gopro_0478/lr3_class.joblib": "701ddd8b4100b01126a3865267258e9fa762080273d04c2a8e74ebb85c9d4662",
+      "cse805_class_msp_interaction_v1/folds/gopro_0478/evaluation.json": "0e703ff99cae2dc6bdfe62324e32311d300c052bf705cc02106900d3ca8a199f",
+      "cse805_class_msp_interaction_v1/folds/gopro_0478/selection.json": "c20ee049f1b6545b3b3501bc409f507749c5a31c79d43d8472c490811cac9718",
+      "cse805_class_msp_interaction_v1/folds/gopro_0478/histograms.npz": "8cbe6c41a0bc6d2bc050d3ce0929204234c3f1a856a212753181488e13908d0a",
+      "cse805_class_msp_interaction_v1/folds/gopro_0478/interaction.joblib": "bf6145c600c8c2bd973e6f39929b8b3301dbcefa3cf04f3d545d49c75af0ad64",
+      "cse805_random_forest_v1/folds/gopro_0478/evaluation.json": "8ebcafcccaf5a75b1f1deabd6b312e76266e0e773a32567f5c011f0b1ed6c528",
+      "cse805_random_forest_v1/folds/gopro_0478/selection.json": "294d8a9d5537cb1649d78a2f130a7701ad14469343cb23b594be44fe080f35d3",
+      "cse805_random_forest_v1/folds/gopro_0478/histograms.npz": "dae517fd4d05bb9eee91e3935484eca6179ae056f021651e0864a01ee2c391f0",
+      "cse805_random_forest_v1/folds/gopro_0478/forest.joblib": "b6537b0f4f7f9dee0453cd44396391dd176fe842fe905bfb2a3eca97528b3759"
+    },
+    "gopro_0479": {
+      "cse805_error_prediction_v1/results/folds/gopro_0479/result.json": "413764771a53ccb9c3e92f4559ffedbe12421f642835906460bc796d5ab7165e",
+      "cse805_error_prediction_v1/results/folds/gopro_0479/image_results.json": "42918de46019d44a0dd0a9ddc1afaa08dbee472bdc520a3b4800f931e0c4eba3",
+      "cse805_error_prediction_v1/results/folds/gopro_0479/histograms.npz": "65f8a0e96d4527c887e3d366ff62e8a499548f289601d45411ddb5e26aa2da3f",
+      "cse805_error_prediction_v1/data/models/gopro_0479/selection.json": "878e297cb6c61dff661349ab721844e2f8ffd8d9670d8ef77cb7f201139c1240",
+      "cse805_error_prediction_v1/data/models/gopro_0479/lr3.joblib": "b594cbfc633cc6f46de04630d33f66a07c74d4385b9892f2a86401e02ee0436d",
+      "cse805_error_prediction_v1/data/models/gopro_0479/lr3_class.joblib": "5200cbc66949f2ba05da51ba84d5f78dd86a08c22a30f00635858ca58a315420",
+      "cse805_class_msp_interaction_v1/folds/gopro_0479/evaluation.json": "247fc8e7521c054d5f4a8bdcfab304c33d6eee4fc0a1ad7659b7182cabad38cc",
+      "cse805_class_msp_interaction_v1/folds/gopro_0479/selection.json": "af249f1f382a8244a4b4502f6e48a66167984150c9e849cdf7e9c620c7bd71bf",
+      "cse805_class_msp_interaction_v1/folds/gopro_0479/histograms.npz": "f680c2f1d8f726e39f730a356081fea41896a41cb273da44667c702a0da07a02",
+      "cse805_class_msp_interaction_v1/folds/gopro_0479/interaction.joblib": "a2958042fb0d103e480359393b5062010a3d8b682cb1bbb7fc4fe3375a611f2a",
+      "cse805_random_forest_v1/folds/gopro_0479/evaluation.json": "0d3af583b141669ea6475aba5655c6fef63ae8ab0037debb714099cac2c3fb10",
+      "cse805_random_forest_v1/folds/gopro_0479/selection.json": "92e5e11fca39916ef7aeacfed1f0cc3d3aea5b9949b6a157cfce56664338ba1e",
+      "cse805_random_forest_v1/folds/gopro_0479/histograms.npz": "236c1dd9250c4a4a7c7842123557d4b5d65b4372b8e68ddf4be4f4a44ef84741",
+      "cse805_random_forest_v1/folds/gopro_0479/forest.joblib": "4a8d65e675710b9cce83f081d7547811d2f7888c4f09632363ebde713046a03d"
+    },
+    "gopro_0480": {
+      "cse805_error_prediction_v1/results/folds/gopro_0480/result.json": "bdc1d3c3f626281ec972d3dcb05ac37dd8bbc3d4fd855f46fbc1136171ec2f87",
+      "cse805_error_prediction_v1/results/folds/gopro_0480/image_results.json": "7c45979119780fdcf5309d6215f2dd52c849846564590a2f5b20450f23e44ac1",
+      "cse805_error_prediction_v1/results/folds/gopro_0480/histograms.npz": "ba889ec53289e0eb6f2f2ed678c1df012c82cb84d54df5034e7959b2851a51da",
+      "cse805_error_prediction_v1/data/models/gopro_0480/selection.json": "ed512fad87f369c3916046bdc2dce5b846babc47b1296b482151d7b15b83ba69",
+      "cse805_error_prediction_v1/data/models/gopro_0480/lr3.joblib": "756be6f3f9b758134cd52fdde00479779dbfe3318726db837f5a3504553da651",
+      "cse805_error_prediction_v1/data/models/gopro_0480/lr3_class.joblib": "bff8b22399d2b3effe8e978460a337686164b6ba8eb3ea4ec41e07011a12885f",
+      "cse805_class_msp_interaction_v1/folds/gopro_0480/evaluation.json": "461370a6c17d63ff526964628b3c05b5d4cfce8569912302491a1dc4853a6694",
+      "cse805_class_msp_interaction_v1/folds/gopro_0480/selection.json": "a3d02e070690e04daf45d1c11c04f7e1655e0dfc2b2e389a406900048ef93906",
+      "cse805_class_msp_interaction_v1/folds/gopro_0480/histograms.npz": "4598bb5a77dc7c69517551495cf31700344658a4d017044f4cc25d1de1ada5f4",
+      "cse805_class_msp_interaction_v1/folds/gopro_0480/interaction.joblib": "7c9c8d9e031311a3a2014faa249847d4982112232a2e538ee5a4a8d8d577b4fb",
+      "cse805_random_forest_v1/folds/gopro_0480/evaluation.json": "b6fddebdffd643f9b6e9b617b1603a8a6f8766cebffe79d233ec98724c0e16e0",
+      "cse805_random_forest_v1/folds/gopro_0480/selection.json": "92740ceb36dad1eb15e3673faf8dba63ea0caeb355f4c25d6bfb184875cd6533",
+      "cse805_random_forest_v1/folds/gopro_0480/histograms.npz": "4273adc2c212b6944a2858d3b3f0977f8bce18b187d24bcf2e7e677b01f5775c",
+      "cse805_random_forest_v1/folds/gopro_0480/forest.joblib": "29a0ea2b584c1b78a6cf06e9bfa986276e242aa2efcc359445c36f5203804206"
+    },
+    "gopro_0571": {
+      "cse805_error_prediction_v1/results/folds/gopro_0571/result.json": "ad5aba6fe065d1a9b9289d76d1eda86ee07919f51344ce26a0c47aa6ac864293",
+      "cse805_error_prediction_v1/results/folds/gopro_0571/image_results.json": "8a0d3e863c4b65c6ebd627f9101021b40c5cc7a56f5352a95baf12d3c4a2b51a",
+      "cse805_error_prediction_v1/results/folds/gopro_0571/histograms.npz": "787b13d5d8c0fd4383a7378155117401fc692052187d23b74089c1074b877ab1",
+      "cse805_error_prediction_v1/data/models/gopro_0571/selection.json": "fd299167524342ae90b8fbc0063be59acf9b15784bc66511eb67fa2680c00b88",
+      "cse805_error_prediction_v1/data/models/gopro_0571/lr3.joblib": "319ace06b9b8a6a83d9de58ce05e9995de9a80fb1af7f16ac2cff04bc7be5863",
+      "cse805_error_prediction_v1/data/models/gopro_0571/lr3_class.joblib": "cbdd22c474d1d371aeca35ad2876215bd9bca00119dd2cd4352a5b60af0d03c6",
+      "cse805_class_msp_interaction_v1/folds/gopro_0571/evaluation.json": "e6727f538066264c059deb14157dc94983b5bb3fcf0fff0145a2b8d5b20e2753",
+      "cse805_class_msp_interaction_v1/folds/gopro_0571/selection.json": "768d5549300abe8da8a077705eba6453536f9f23f5d879d3583000fa3d4ade62",
+      "cse805_class_msp_interaction_v1/folds/gopro_0571/histograms.npz": "cb187d15368cdc6388e046e4668d297c46b9ea1489c23100759f321ab0ab1291",
+      "cse805_class_msp_interaction_v1/folds/gopro_0571/interaction.joblib": "9be1490c82f3feb68c55645dc5ae5e8f98ee670d59c0d52804afa48267b8ad78",
+      "cse805_random_forest_v1/folds/gopro_0571/evaluation.json": "bc773daa0ff208ba0ca43264fcd542d5861c095cb4a93add54bd1c88bb52401a",
+      "cse805_random_forest_v1/folds/gopro_0571/selection.json": "568e044854f66b3632f16436899cc9766cd5c8448d56ec4b30bfd5b4737a77af",
+      "cse805_random_forest_v1/folds/gopro_0571/histograms.npz": "bd8978d0194e6dc5f4b8b256f2dc48bf5762374cf688aa1119c9c9c723356c73",
+      "cse805_random_forest_v1/folds/gopro_0571/forest.joblib": "77c9b5ec96220b7fe384e81ec3b0d6b7bdec050066d5bd8f8124a27c84912ad1"
+    },
+    "gopro_0604": {
+      "cse805_error_prediction_v1/results/folds/gopro_0604/result.json": "4c172c98bbed74e3496cd8abcabff3a5d108523dc918b5a37c5453c4afac79a9",
+      "cse805_error_prediction_v1/results/folds/gopro_0604/image_results.json": "508e0164f1735401a738833823cbdf1e74bc8f765d05e616c3ea094ba10b0174",
+      "cse805_error_prediction_v1/results/folds/gopro_0604/histograms.npz": "22a13ae1cfaf2d8861cdedd5ecb2633eb1d3de00dc1d44e07cd0960b0c69f66f",
+      "cse805_error_prediction_v1/data/models/gopro_0604/selection.json": "a690b72714688ab6bfc6c411998223ef28a9b22ddaff27c0c9864226934a2b96",
+      "cse805_error_prediction_v1/data/models/gopro_0604/lr3.joblib": "57bca2bfc84c1769931c1c3ff0736df9b1adb777959e8a60787d0b4318b8b4a0",
+      "cse805_error_prediction_v1/data/models/gopro_0604/lr3_class.joblib": "be37adb55d0d152c9537838c0711273d84e16883db20f5cbc315004e2ca4b534",
+      "cse805_class_msp_interaction_v1/folds/gopro_0604/evaluation.json": "44a8080572946a90cd908d268cc27a128ce2dd9fb5b9bb226524181722788a9f",
+      "cse805_class_msp_interaction_v1/folds/gopro_0604/selection.json": "58a3d7778a90b4a5242fb72ae3c4c92e025c9a9220e4e406ab0a7fee974a0b5a",
+      "cse805_class_msp_interaction_v1/folds/gopro_0604/histograms.npz": "34accc9c2c08eb71cd4d83a7116a9745f6ae8c08ed318d6aee79f88fea2d000d",
+      "cse805_class_msp_interaction_v1/folds/gopro_0604/interaction.joblib": "f61408941c9c06ca220ff68b732ac7145068285c33934a67dbc02392381ef584",
+      "cse805_random_forest_v1/folds/gopro_0604/evaluation.json": "57dc0d274956c5be88b04e5571d1f22c03623a6277f8ab755733347ba657257d",
+      "cse805_random_forest_v1/folds/gopro_0604/selection.json": "b5a15a9eee0a3c0ec805b004747f1d9bff27f9c22f4206dc10eeaef19d65746a",
+      "cse805_random_forest_v1/folds/gopro_0604/histograms.npz": "c8f92daeed469e5516901e8ecc2f7b85a006effca7b0ac29f98d6558d8cb331d",
+      "cse805_random_forest_v1/folds/gopro_0604/forest.joblib": "78543718a6d2bc3d35df94f00d7143c7d4d3f96ae1e3e6eabdd08926bfbecdcd"
+    },
+    "gopro_0606": {
+      "cse805_error_prediction_v1/results/folds/gopro_0606/result.json": "e20627335ea56d250d6a51277c37b4117e90658df91c46d819e1e820da257cab",
+      "cse805_error_prediction_v1/results/folds/gopro_0606/image_results.json": "498a1288f495d4c07df5de186ce6df373fb11d11ce2e460d09e8ada431ccdbcc",
+      "cse805_error_prediction_v1/results/folds/gopro_0606/histograms.npz": "9b3e26e230d8d830d143f3e86d91c73d494eba52db98e8d0e53ff3e1c2b80a15",
+      "cse805_error_prediction_v1/data/models/gopro_0606/selection.json": "8c20b5dfce9a77f09b8186691b77d2d4e265b932e1d24b10ed939c43d98a83bf",
+      "cse805_error_prediction_v1/data/models/gopro_0606/lr3.joblib": "73f4f3e26c1c92c3054f9f759075b64dfe380643c2f42341a1fbb67b236fd1b0",
+      "cse805_error_prediction_v1/data/models/gopro_0606/lr3_class.joblib": "8136ae48972f52ac052d39b9b47ab4b271b2a69c12e0f9ea41309169d03ea9b7",
+      "cse805_class_msp_interaction_v1/folds/gopro_0606/evaluation.json": "36f1c134ea82af90fb97d503c522ec54c96428b10d45b96ffe9c8e66c6441597",
+      "cse805_class_msp_interaction_v1/folds/gopro_0606/selection.json": "e047b6267194da9efe077d1b746d378b98f955f9d184dd8cb512f90d8705d39a",
+      "cse805_class_msp_interaction_v1/folds/gopro_0606/histograms.npz": "28d2fc61717fff4eed0766d4a7016f018cb8420fb61b696912a6eb7e1dd55458",
+      "cse805_class_msp_interaction_v1/folds/gopro_0606/interaction.joblib": "d5c93d00ce2be90da1c2402607ebe8632e5a5511c9fc9662197b0aa6dd9c4c07",
+      "cse805_random_forest_v1/folds/gopro_0606/evaluation.json": "1e6a7ac848fe2214a36988e010d5e92f374af8c3471176c1b05f4b157c07b7b4",
+      "cse805_random_forest_v1/folds/gopro_0606/selection.json": "ee24672eca0f7a378cc6cbb7dad8161ae813bfb18ee2f85b52464bdc8719a92a",
+      "cse805_random_forest_v1/folds/gopro_0606/histograms.npz": "0ab1c3c5d700ee7cd56e74fad7c30b9df5d0ea921a5ee392ad113d5db1271ebe",
+      "cse805_random_forest_v1/folds/gopro_0606/forest.joblib": "f6c79616f427c382d4c82417b5cb7fe42cdb7b018726e0fd31c6a975614c7646"
+    },
+    "gopro_0607": {
+      "cse805_error_prediction_v1/results/folds/gopro_0607/result.json": "dd655170a30d3858a6acf2c59454f564fb249ac6054a2102178fc6cc5bebe8ec",
+      "cse805_error_prediction_v1/results/folds/gopro_0607/image_results.json": "91b78dde087095346402664fbe2fac83fa6919cf8a24cd546bfa33f81129d2c4",
+      "cse805_error_prediction_v1/results/folds/gopro_0607/histograms.npz": "75601e1b221ac5631d9a2dd120076e171fd671771ca05af5d28028f011243cb4",
+      "cse805_error_prediction_v1/data/models/gopro_0607/selection.json": "1ae132cd84650e0607b890c8aecf5192d74e061189dcc5af2094db7e932a2b8d",
+      "cse805_error_prediction_v1/data/models/gopro_0607/lr3.joblib": "594c69601a7744975673241493ffd111a6761efedf0f1d419756fb94af6af2c1",
+      "cse805_error_prediction_v1/data/models/gopro_0607/lr3_class.joblib": "7a5ba460ce734bc0cad46cbdd5e9fbd1a0360748667c5b6166c1dd80d926db9c",
+      "cse805_class_msp_interaction_v1/folds/gopro_0607/evaluation.json": "0ba6ea335434887f9048beacf261af399c8cb289794f2f9ef959f506bfd0bffd",
+      "cse805_class_msp_interaction_v1/folds/gopro_0607/selection.json": "d87d5157d7d1c7d3015437c49c28d6ab62e7638b4e5a8a67078b59eae3945b0f",
+      "cse805_class_msp_interaction_v1/folds/gopro_0607/histograms.npz": "dd8f6fae17a54ce32ddbdb8ac75bb5033b4a071f6309f99f231bb5a4d2362520",
+      "cse805_class_msp_interaction_v1/folds/gopro_0607/interaction.joblib": "019309359d4461d6af9338d36f40a3a7944e6b231e92331c42518161c8444b8e",
+      "cse805_random_forest_v1/folds/gopro_0607/evaluation.json": "26710cafd70bc0d631ebbb24f669358a6e60f616d701a884b8f1805ccbd28fff",
+      "cse805_random_forest_v1/folds/gopro_0607/selection.json": "6da705e7f5d560fa2aa274dfc10b61199aa98c04160b32d4c0c0b891dbe09d8d",
+      "cse805_random_forest_v1/folds/gopro_0607/histograms.npz": "1a2add75fdcd55c3e7657e79f9d9334dd18344c698205f7b399f5f53ad40bda0",
+      "cse805_random_forest_v1/folds/gopro_0607/forest.joblib": "8762a07678791712d2a6a968d8cfa4f36e2a10536d59673b4ead96a54d4b7f80"
+    }
+  },
+  "archive_files_verified": {
+    "COMP895_original_files": 3635,
+    "CSE805_primary_files": 5094,
+    "CSE805_interpretation_files": 65,
+    "cse805_class_msp_interaction_v1_archive_files": 81,
+    "cse805_random_forest_v1_archive_files": 87
+  },
+  "source_manifest_and_reference_sha256": {
+    "cse805_error_prediction_v1/interpretation_v1/logs/frozen_extension_before.json": "be63e582958fe4c621a8e2912925d87ba90c97a86ad9f564e573a469a2431069",
+    "cse805_error_prediction_v1/logs/preservation_before.json": "d930d87f7c50a7c5e174d6a503d8da1d72d2c0fc2ad0c66c97c12830ee8c846d",
+    "cse805_error_prediction_v1/interpretation_v1/logs/completion.json": "fd8acc00cbab0fac0fe0dc2027a3f626f64aeb6e7454e9972d2bd4cff23c6ad9",
+    "cse805_error_prediction_v1/results/evaluation_complete.json": "e951ffa66f8ab81a55860ed1d253266ec75aa6495344709e2460c0bba59fc7a4",
+    "cse805_class_msp_interaction_v1/results/verification.json": "660d93c47eaa9f217657a084b3fd33841763be1a2aa00f48e3e3ac3c05d743b1",
+    "cse805_random_forest_v1/results/verification.json": "364f218c69f78ae332411f0f4205dbe8496d91c4c42bbc905e66a19c894ea214",
+    "cse805_class_msp_interaction_v1/run_manifest.json": "0662d611a7026e141fa1f2ff39db599e7e7c0800daf1f7ab6e703144df0cf067",
+    "cse805_random_forest_v1/run_manifest.json": "473354aab48baf562b2c1d006f438f1a129932b00dd6dc5f01bc9fdadeed1c18",
+    "cse805_random_forest_v1/results/risk_coverage.csv": "e185277cfd94264ba9027dcd9978960d74c49bdbba1b9006a6cf3c9ec2d8a9fd",
+    "cse805_random_forest_v1/results/group_metrics.csv": "8d8857ca19c72851b28e37c57d8623328f5b93cf91f4d5da7f91a776476d140b",
+    "cse805_random_forest_v1/results/final_comparison.csv": "395bc7e84084bffdfba04f3e4967aaf6af29624d21cbf9c85b8e73836857a539",
+    "cse805_random_forest_v1/results/night_low_coverage.csv": "04e35b88089eda188c4c918138757d6e70d0411fecbbbe90794bdb48a73efbcc",
+    "cse805_random_forest_v1/results/night_qa10_classes.csv": "e56e7662b6e3a590d96cdb6cfb96cf5ff0b4d58303d6a7384f7f0e74fe80a2ef",
+    "cse805_random_forest_v1/results/qa_aurc_sensitivity.csv": "3f5a1d9a573c97e2f4bcdc8ed0a40d23f16b5e787c9526f0bbc8e16cad182a5c",
+    "cse805_error_prediction_v1/data/metadata_train.csv": "0c3fb4a315fcd7b6ed11b9b74e5537f03e5dd02107cdf8e601a4867651eb36f6",
+    "cse805_error_prediction_v1/data/groups_train.csv": "848667b377eacf15149d4778bf95c14a52c6147e3f262d168e5b433303b11716",
+    "cse805_error_prediction_v1/data/assignments.json": "db1fd9be735e78eab808e3dbc2d6a6d47eb421841583308f8a2a26bfe433a6bf",
+    "cse805_error_prediction_v1/data/protocol.json": "86073b2f0493365114dcc73b1585afe9dbfd09adf670dbf1069dbcf2bb2b3599",
+    "cse805_error_prediction_v1/data/metric_amendment_001.json": "5031be9e4ec9811a5c6c5ff10ccf16e9c2dead35009248c5529aae49343f6af4",
+    "cse805_error_prediction_v1/data/features/manifest.json": "3ed097ec1e06a782ff925bfb8f2eb5f889cba46c246f5ac1f4b0269aef5e1b74",
+    "cse805_error_prediction_v1/results/report/group_metrics.csv": "429922836a9a19f7da4865f9bc69a8b77d4daca58a727ea9c3d431cbc71b0cff",
+    "cse805_error_prediction_v1/interpretation_v1/tables/pixel_class_acceptance.csv": "cd355a6a8183949f19868b00f77a79e3a58af9b0c3380382eee18aa3a00bf216",
+    "cse805_error_prediction_v1/interpretation_v1/tables/metrics_policy_coverage.csv": "c502fcf36372491cfd84d178cc204fd615ffc5a52c552f0475952cf40db89d34",
+    "cse805_error_prediction_v1/logs/completion.json": "6bb0979832baade292190d5b56e034ac9d2c13fe925276a4ddef49ea24e5108c"
+  },
+  "policy": {
+    "score": "ascending predicted error; 100000 equally spaced arcsine-square-root score bins",
+    "budget": "Original float64 floor((p/100)*N+0.5), clamped to [1,N]. Budget identical across all six methods within each group.",
+    "rounding_tie_cases_vs_integer_half_up": [
+      [
+        "gopro_0351",
+        70,
+        124440711,
+        124440712
+      ],
+      [
+        "gopro_0376",
+        70,
+        263341501,
+        263341502
+      ],
+      [
+        "gopro_0478",
+        70,
+        121633130,
+        121633131
+      ]
+    ],
+    "expected_errors": "errors_below_bin + boundary_pixels_accepted * boundary_errors / boundary_pixels",
+    "within_boundary_bin": "Uniform selection without replacement, independent of labels. Report expectation, not observed tie order.",
+    "aggregation": "Arithmetic mean of within-group accepted error rates. Overall weights each of 17 groups equally.",
+    "paired_units": "RF minus reference in percentage points. Win below -tolerance, loss above +tolerance.",
+    "tie_tolerance_pp": 1e-10
+  },
+  "verified_csv_rows": {
+    "overall": 9,
+    "weather": 36,
+    "group": 918,
+    "paired": 225
+  },
+  "independent_exact_rational_boundary_count_checks": 918,
+  "archived_full_percent_grid_matches": 10200,
+  "max_absolute_rate_discrepancy_to_archived_grid": 0.0,
+  "max_matched_coverage_rounding_error_pp": 3.5638576645347086e-06,
+  "historical_whole_bin80_counts_matches": 102,
+  "existing_night10_20_matched_counts_matches": 36,
+  "max_group_method_historical80_vs_matched_abs_risk_difference_pp": 0.00029416279818672564,
+  "max_group_method_historical80_vs_matched_abs_coverage_difference_pp": 0.002325838664496427,
+  "historical80_and_supplemental80": {
+    "overall": {
+      "raw_msp": {
+        "historical_risk": 0.08393356214274617,
+        "matched_risk": 0.08393365645347753,
+        "matched_minus_historical_pp": 9.431073136334511e-06
+      },
+      "raw_entropy": {
+        "historical_risk": 0.08351407830600666,
+        "matched_risk": 0.08351410874565413,
+        "matched_minus_historical_pp": 3.043964746929362e-06
+      },
+      "lr3": {
+        "historical_risk": 0.08376357565563868,
+        "matched_risk": 0.08376361016736845,
+        "matched_minus_historical_pp": 3.451172977952943e-06
+      },
+      "lr3_class": {
+        "historical_risk": 0.0766526318841291,
+        "matched_risk": 0.07665286592328108,
+        "matched_minus_historical_pp": 2.3403915197506286e-05
+      },
+      "lr_class_msp_interaction": {
+        "historical_risk": 0.0766598544343876,
+        "matched_risk": 0.07666001001097864,
+        "matched_minus_historical_pp": 1.5557659104048494e-05
+      },
+      "rf_class": {
+        "historical_risk": 0.07522753722092199,
+        "matched_risk": 0.07522778241040891,
+        "matched_minus_historical_pp": 2.4518948692209275e-05
+      }
+    },
+    "fog": {
+      "raw_msp": {
+        "historical_risk": 0.04465952222690949,
+        "matched_risk": 0.04465947482231998,
+        "matched_minus_historical_pp": -4.740458951074666e-06
+      },
+      "raw_entropy": {
+        "historical_risk": 0.04380548936051633,
+        "matched_risk": 0.04380535440503757,
+        "matched_minus_historical_pp": -1.3495547875747027e-05
+      },
+      "lr3": {
+        "historical_risk": 0.04425529463950581,
+        "matched_risk": 0.04425515635863377,
+        "matched_minus_historical_pp": -1.3828087203765493e-05
+      },
+      "lr3_class": {
+        "historical_risk": 0.030416570537684796,
+        "matched_risk": 0.03041669746796155,
+        "matched_minus_historical_pp": 1.2693027675453328e-05
+      },
+      "lr_class_msp_interaction": {
+        "historical_risk": 0.030426197351155506,
+        "matched_risk": 0.03042633203827313,
+        "matched_minus_historical_pp": 1.3468711762554264e-05
+      },
+      "rf_class": {
+        "historical_risk": 0.027374970152528856,
+        "matched_risk": 0.027374670698039404,
+        "matched_minus_historical_pp": -2.9945448945176145e-05
+      }
+    },
+    "night": {
+      "raw_msp": {
+        "historical_risk": 0.2562447539699847,
+        "matched_risk": 0.25624525966417133,
+        "matched_minus_historical_pp": 5.0569418663659604e-05
+      },
+      "raw_entropy": {
+        "historical_risk": 0.25598752035010003,
+        "matched_risk": 0.2559875224522839,
+        "matched_minus_historical_pp": 2.1021838714219143e-07
+      },
+      "lr3": {
+        "historical_risk": 0.25634278761941937,
+        "matched_risk": 0.2563426986044897,
+        "matched_minus_historical_pp": -8.90149296495224e-06
+      },
+      "lr3_class": {
+        "historical_risk": 0.2537879285348805,
+        "matched_risk": 0.2537886885696756,
+        "matched_minus_historical_pp": 7.600347950997843e-05
+      },
+      "lr_class_msp_interaction": {
+        "historical_risk": 0.25398096202937015,
+        "matched_risk": 0.2539812769064764,
+        "matched_minus_historical_pp": 3.1487710627775556e-05
+      },
+      "rf_class": {
+        "historical_risk": 0.2546081784087435,
+        "matched_risk": 0.25460974616336307,
+        "matched_minus_historical_pp": 0.00015677546195691505
+      }
+    },
+    "rain": {
+      "raw_msp": {
+        "historical_risk": 0.03838519762899472,
+        "matched_risk": 0.038385211027476926,
+        "matched_minus_historical_pp": 1.3398482205662088e-06
+      },
+      "raw_entropy": {
+        "historical_risk": 0.03800453504679866,
+        "matched_risk": 0.038004314787353256,
+        "matched_minus_historical_pp": -2.2025944540482456e-05
+      },
+      "lr3": {
+        "historical_risk": 0.03816349289285609,
+        "matched_risk": 0.03816357836718372,
+        "matched_minus_historical_pp": 8.547432762961993e-06
+      },
+      "lr3_class": {
+        "historical_risk": 0.035734578315711356,
+        "matched_risk": 0.035734762691512476,
+        "matched_minus_historical_pp": 1.84375801119685e-05
+      },
+      "lr_class_msp_interaction": {
+        "historical_risk": 0.03555044432023293,
+        "matched_risk": 0.03555071769731513,
+        "matched_minus_historical_pp": 2.733770822008208e-05
+      },
+      "rf_class": {
+        "historical_risk": 0.03589001995498172,
+        "matched_risk": 0.03589007929280552,
+        "matched_minus_historical_pp": 5.933782380035391e-06
+      }
+    },
+    "snow": {
+      "raw_msp": {
+        "historical_risk": 0.05500471365365792,
+        "matched_risk": 0.05500477974005064,
+        "matched_minus_historical_pp": 6.608639271932226e-06
+      },
+      "raw_entropy": {
+        "historical_risk": 0.0549860457696638,
+        "matched_risk": 0.054986442105396625,
+        "matched_minus_historical_pp": 3.9633573282321644e-05
+      },
+      "lr3": {
+        "historical_risk": 0.054986035354399256,
+        "matched_risk": 0.054986320755688156,
+        "matched_minus_historical_pp": 2.8540128890058858e-05
+      },
+      "lr3_class": {
+        "historical_risk": 0.05040555965046206,
+        "matched_risk": 0.050405636420888925,
+        "matched_minus_historical_pp": 7.677042686282665e-06
+      },
+      "lr_class_msp_interaction": {
+        "historical_risk": 0.05041322444576933,
+        "matched_risk": 0.050413238829124636,
+        "matched_minus_historical_pp": 1.4383355305402912e-06
+      },
+      "rf_class": {
+        "historical_risk": 0.04862474334986498,
+        "matched_risk": 0.04862496008404188,
+        "matched_minus_historical_pp": 2.167341768971598e-05
+      }
+    }
+  },
+  "fine_grid": "Direct histogram queries from 10.0 to 90.0% every 0.1 percentage point. Range endpoints are measured grid values; no between-point sign claim.",
+  "fine_grid_RF_better_runs_pct": {
+    "overall": {
+      "raw_msp": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          10.0,
+          90.0
+        ]
+      ]
+    },
+    "fog": {
+      "raw_msp": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          10.0,
+          10.2
+        ],
+        [
+          10.8,
+          16.4
+        ],
+        [
+          17.0,
+          17.0
+        ],
+        [
+          17.2,
+          17.4
+        ],
+        [
+          28.9,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          10.0,
+          10.2
+        ],
+        [
+          10.8,
+          16.4
+        ],
+        [
+          17.0,
+          17.4
+        ],
+        [
+          28.9,
+          90.0
+        ]
+      ]
+    },
+    "night": {
+      "raw_msp": [
+        [
+          50.8,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          51.1,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          50.8,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          10.0,
+          67.8
+        ],
+        [
+          84.1,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          10.0,
+          74.3
+        ],
+        [
+          83.5,
+          90.0
+        ]
+      ]
+    },
+    "rain": {
+      "raw_msp": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          23.2,
+          27.7
+        ],
+        [
+          28.4,
+          78.6
+        ],
+        [
+          86.1,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          23.2,
+          79.6
+        ],
+        [
+          86.1,
+          90.0
+        ]
+      ]
+    },
+    "snow": {
+      "raw_msp": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          25.6,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          25.6,
+          90.0
+        ]
+      ]
+    },
+    "gopro_0351": {
+      "raw_msp": [
+        [
+          19.5,
+          26.6
+        ],
+        [
+          30.7,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          19.3,
+          26.9
+        ],
+        [
+          29.6,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          19.5,
+          26.8
+        ],
+        [
+          30.1,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          10.0,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          10.0,
+          90.0
+        ]
+      ]
+    },
+    "gopro_0376": {
+      "raw_msp": [],
+      "raw_entropy": [],
+      "lr3": [],
+      "lr3_class": [
+        [
+          10.0,
+          58.9
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          10.0,
+          58.7
+        ],
+        [
+          89.5,
+          90.0
+        ]
+      ]
+    },
+    "gopro_0397": {
+      "raw_msp": [
+        [
+          42.3,
+          90.0
+        ]
+      ],
+      "raw_entropy": [
+        [
+          42.8,
+          90.0
+        ]
+      ],
+      "lr3": [
+        [
+          42.6,
+          90.0
+        ]
+      ],
+      "lr3_class": [
+        [
+          10.0,
+          49.1
+        ],
+        [
+          64.2,
+          74.4
+        ],
+        [
+          85.4,
+          90.0
+        ]
+      ],
+      "lr_class_msp_interaction": [
+        [
+          10.0,
+          48.4
+        ],
+        [
+          59.3,
+          76.1
+        ],
+        [
+          81.1,
+          90.0
+        ]
+      ]
+    }
+  },
+  "sensitivity_full_population_10000_vs_100000_bins": {
+    "overall": {
+      "raw_msp": {
+        "max_abs_contrast_change_pp": 0.0004262326396469174,
+        "changed_direction_at_pct": []
+      },
+      "raw_entropy": {
+        "max_abs_contrast_change_pp": 0.00045592852536935347,
+        "changed_direction_at_pct": []
+      },
+      "lr3": {
+        "max_abs_contrast_change_pp": 0.10835555730435831,
+        "changed_direction_at_pct": []
+      },
+      "lr3_class": {
+        "max_abs_contrast_change_pp": 0.04071276946761371,
+        "changed_direction_at_pct": []
+      },
+      "lr_class_msp_interaction": {
+        "max_abs_contrast_change_pp": 0.0539240541591286,
+        "changed_direction_at_pct": []
+      }
+    },
+    "fog": {
+      "raw_msp": {
+        "max_abs_contrast_change_pp": 0.0005462958659579742,
+        "changed_direction_at_pct": []
+      },
+      "raw_entropy": {
+        "max_abs_contrast_change_pp": 0.00012644753564344802,
+        "changed_direction_at_pct": []
+      },
+      "lr3": {
+        "max_abs_contrast_change_pp": 0.15724371051333888,
+        "changed_direction_at_pct": []
+      },
+      "lr3_class": {
+        "max_abs_contrast_change_pp": 0.008695177205379157,
+        "changed_direction_at_pct": []
+      },
+      "lr_class_msp_interaction": {
+        "max_abs_contrast_change_pp": 0.034075320229705414,
+        "changed_direction_at_pct": []
+      }
+    },
+    "night": {
+      "raw_msp": {
+        "max_abs_contrast_change_pp": 0.0016907396002283637,
+        "changed_direction_at_pct": []
+      },
+      "raw_entropy": {
+        "max_abs_contrast_change_pp": 0.0011702146977505823,
+        "changed_direction_at_pct": []
+      },
+      "lr3": {
+        "max_abs_contrast_change_pp": 0.40553326461989814,
+        "changed_direction_at_pct": []
+      },
+      "lr3_class": {
+        "max_abs_contrast_change_pp": 0.2309854172955923,
+        "changed_direction_at_pct": []
+      },
+      "lr_class_msp_interaction": {
+        "max_abs_contrast_change_pp": 0.305816441143115,
+        "changed_direction_at_pct": []
+      }
+    },
+    "rain": {
+      "raw_msp": {
+        "max_abs_contrast_change_pp": 0.00125658820511243,
+        "changed_direction_at_pct": []
+      },
+      "raw_entropy": {
+        "max_abs_contrast_change_pp": 0.001396751480313152,
+        "changed_direction_at_pct": []
+      },
+      "lr3": {
+        "max_abs_contrast_change_pp": 0.0689965146748075,
+        "changed_direction_at_pct": []
+      },
+      "lr3_class": {
+        "max_abs_contrast_change_pp": 0.0012262027649452834,
+        "changed_direction_at_pct": []
+      },
+      "lr_class_msp_interaction": {
+        "max_abs_contrast_change_pp": 0.013605426229939876,
+        "changed_direction_at_pct": []
+      }
+    },
+    "snow": {
+      "raw_msp": {
+        "max_abs_contrast_change_pp": 0.0004270865378623867,
+        "changed_direction_at_pct": []
+      },
+      "raw_entropy": {
+        "max_abs_contrast_change_pp": 0.00040476343907647205,
+        "changed_direction_at_pct": []
+      },
+      "lr3": {
+        "max_abs_contrast_change_pp": 0.02220560774824243,
+        "changed_direction_at_pct": []
+      },
+      "lr3_class": {
+        "max_abs_contrast_change_pp": 0.010680851503035771,
+        "changed_direction_at_pct": []
+      },
+      "lr_class_msp_interaction": {
+        "max_abs_contrast_change_pp": 0.00443145436529635,
+        "changed_direction_at_pct": []
+      }
+    }
+  },
+  "sensitivity_Night_QA": "Archived raw scores, weighted QA sample with independent tie keys. Secondary evidence only.",
+  "sensitivity_Night_QA_available_pct": [
+    10,
+    20,
+    50,
+    60,
+    70,
+    80,
+    90
+  ],
+  "sensitivity_Night_QA_comparisons": [
+    {
+      "target_coverage_pct": 10,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": 1.4944562656592355,
+      "raw_QA_secondary_order_difference_pp": 1.5209830446089614
+    },
+    {
+      "target_coverage_pct": 20,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": 0.5400992498568823,
+      "raw_QA_secondary_order_difference_pp": 0.5442933119699447
+    },
+    {
+      "target_coverage_pct": 50,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": 0.04546591939325978,
+      "raw_QA_secondary_order_difference_pp": 0.059735906719125376
+    },
+    {
+      "target_coverage_pct": 60,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": -0.2514546833664482,
+      "raw_QA_secondary_order_difference_pp": -0.25142419371639163
+    },
+    {
+      "target_coverage_pct": 70,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": -0.33937662809879937,
+      "raw_QA_secondary_order_difference_pp": -0.3263834628255709
+    },
+    {
+      "target_coverage_pct": 80,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": -0.1635513500808298,
+      "raw_QA_secondary_order_difference_pp": -0.16662436286194646
+    },
+    {
+      "target_coverage_pct": 90,
+      "reference": "raw_msp",
+      "full_histogram_difference_pp": -0.08049632945427339,
+      "raw_QA_secondary_order_difference_pp": -0.08634617564635312
+    },
+    {
+      "target_coverage_pct": 10,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": 1.4697311935070398,
+      "raw_QA_secondary_order_difference_pp": 1.495481592387833
+    },
+    {
+      "target_coverage_pct": 20,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": 0.5252989591388858,
+      "raw_QA_secondary_order_difference_pp": 0.5331747654092832
+    },
+    {
+      "target_coverage_pct": 50,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": 0.06658928732760498,
+      "raw_QA_secondary_order_difference_pp": 0.08308049723538637
+    },
+    {
+      "target_coverage_pct": 60,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": -0.22777229786082642,
+      "raw_QA_secondary_order_difference_pp": -0.23144893022013224
+    },
+    {
+      "target_coverage_pct": 70,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": -0.32402062136696513,
+      "raw_QA_secondary_order_difference_pp": -0.3081035834021241
+    },
+    {
+      "target_coverage_pct": 80,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": -0.13777762889208658,
+      "raw_QA_secondary_order_difference_pp": -0.1411697683633223
+    },
+    {
+      "target_coverage_pct": 90,
+      "reference": "raw_entropy",
+      "full_histogram_difference_pp": -0.12428572292712363,
+      "raw_QA_secondary_order_difference_pp": -0.12678017111460624
+    },
+    {
+      "target_coverage_pct": 10,
+      "reference": "lr3",
+      "full_histogram_difference_pp": 1.420512197368361,
+      "raw_QA_secondary_order_difference_pp": 1.4977149880352512
+    },
+    {
+      "target_coverage_pct": 20,
+      "reference": "lr3",
+      "full_histogram_difference_pp": 0.5292841101827965,
+      "raw_QA_secondary_order_difference_pp": 0.5367182051368167
+    },
+    {
+      "target_coverage_pct": 50,
+      "reference": "lr3",
+      "full_histogram_difference_pp": 0.046556519319490564,
+      "raw_QA_secondary_order_difference_pp": 0.06248399663264054
+    },
+    {
+      "target_coverage_pct": 60,
+      "reference": "lr3",
+      "full_histogram_difference_pp": -0.24780262311177212,
+      "raw_QA_secondary_order_difference_pp": -0.25397927546503873
+    },
+    {
+      "target_coverage_pct": 70,
+      "reference": "lr3",
+      "full_histogram_difference_pp": -0.34195493220327183,
+      "raw_QA_secondary_order_difference_pp": -0.32948291343074254
+    },
+    {
+      "target_coverage_pct": 80,
+      "reference": "lr3",
+      "full_histogram_difference_pp": -0.1732952441126682,
+      "raw_QA_secondary_order_difference_pp": -0.17276981301147798
+    },
+    {
+      "target_coverage_pct": 90,
+      "reference": "lr3",
+      "full_histogram_difference_pp": -0.21956834925729862,
+      "raw_QA_secondary_order_difference_pp": -0.2163787750603959
+    },
+    {
+      "target_coverage_pct": 10,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": -17.172399921949406,
+      "raw_QA_secondary_order_difference_pp": -17.091078271302898
+    },
+    {
+      "target_coverage_pct": 20,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": -11.989847440355181,
+      "raw_QA_secondary_order_difference_pp": -11.971958598014373
+    },
+    {
+      "target_coverage_pct": 50,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": -1.8147379880159644,
+      "raw_QA_secondary_order_difference_pp": -1.8080118645333316
+    },
+    {
+      "target_coverage_pct": 60,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": -0.09314012969069418,
+      "raw_QA_secondary_order_difference_pp": -0.10385557884085479
+    },
+    {
+      "target_coverage_pct": 70,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": 0.023024194813759762,
+      "raw_QA_secondary_order_difference_pp": 0.026429626919013034
+    },
+    {
+      "target_coverage_pct": 80,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": 0.0821057593687428,
+      "raw_QA_secondary_order_difference_pp": 0.0866163889386327
+    },
+    {
+      "target_coverage_pct": 90,
+      "reference": "lr3_class",
+      "full_histogram_difference_pp": -0.058785328885158084,
+      "raw_QA_secondary_order_difference_pp": -0.055106219705181037
+    },
+    {
+      "target_coverage_pct": 10,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": -16.55224807881085,
+      "raw_QA_secondary_order_difference_pp": -16.508433121336214
+    },
+    {
+      "target_coverage_pct": 20,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": -8.261950944224116,
+      "raw_QA_secondary_order_difference_pp": -8.291559296851057
+    },
+    {
+      "target_coverage_pct": 50,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": -1.5404702166181214,
+      "raw_QA_secondary_order_difference_pp": -1.54225364476
+    },
+    {
+      "target_coverage_pct": 60,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": -0.25966779759821756,
+      "raw_QA_secondary_order_difference_pp": -0.27542079163890104
+    },
+    {
+      "target_coverage_pct": 70,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": -0.09398205975434022,
+      "raw_QA_secondary_order_difference_pp": -0.09041952065089454
+    },
+    {
+      "target_coverage_pct": 80,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": 0.06284692568865972,
+      "raw_QA_secondary_order_difference_pp": 0.0742503835257267
+    },
+    {
+      "target_coverage_pct": 90,
+      "reference": "lr_class_msp_interaction",
+      "full_histogram_difference_pp": -0.04557556776636126,
+      "raw_QA_secondary_order_difference_pp": -0.03529685987886758
+    }
+  ],
+  "plot_grid": "One pixel per group at first target; additional small positive budgets, then every 0.1 percentage point to 100%. No risk at zero.",
+  "png_dimensions": {
+    "overall_risk_coverage": [
+      2704,
+      1560
+    ],
+    "weather_risk_coverage": [
+      2912,
+      2054
+    ],
+    "rf_vs_msp": [
+      2808,
+      1547
+    ],
+    "night_group_coverage": [
+      3198,
+      1755
+    ]
+  },
+  "versions": {
+    "numpy": "2.5.2",
+    "matplotlib": "3.11.1"
+  },
+  "source_sha256": {
+    "verify.py": "3fb59820bc6cc00a621358fa9d70c57ce9dbb432d33749db013804ff42e43dcd",
+    "figures.py": "bd387c6d0643a058e1f187fb8dae1f477707278744d7305fc8761bc35b4eb489",
+    "analysis.py": "fd6d85af105f0bd325b93e28aeade393f8c4cfbaf903c7eeb70b17a3f58a2be3",
+    "report_zh.py": "f119e83ed9a9bea1417a777eab2893d1e5ee560397078e4b2bd61489208a03be"
+  },
+  "output_sha256": {
+    "coverage_overall.csv": "6657414ff96de46b24fd926deba3e9b4246714351cd5336b4e9e3ef6eeba8240",
+    "coverage_by_weather.csv": "a34df422d55df11299756cc435f335aa0c2743ecc44aacc19090ca36189b97e9",
+    "coverage_by_group.csv": "1ba1b15a3806f75cef750c2ca08c210b91945f0353440a237e424914e47d31aa",
+    "rf_paired_differences.csv": "80e93d6dac0874928336b9afca0e5a4e690cef5ff73785c8be09bc2abd053671",
+    "coverage_analysis_report_zh.txt": "040195d778c3c2fdfeae284efd49e487b9f55d7fc8a2f00ddc87bc04bf48442c",
+    "figures/overall_risk_coverage.png": "cbb1335156122ad8c2c2a549a0e0f3294572f6f11ae91e7169f3366835c1fdfb",
+    "figures/weather_risk_coverage.png": "a15da2caf396367b98eafb42cd28b71ef5b21fd84c13bc6a6d8c0865ed73b0d4",
+    "figures/rf_vs_msp.png": "16b6f15c59409d4438c12aa7bb0737293ac2e9ac1047c2eea9a8c165d25ac42e",
+    "figures/night_group_coverage.png": "0d80c019218dc04bb4beb5de0b0e3916c5c2a1bed33fe22e96f91e6949b818f3"
+  }
+}

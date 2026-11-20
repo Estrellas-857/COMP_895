@@ -21,6 +21,7 @@ images are inventoried separately and excluded from the primary experiment.
 | Coefficients, metric sensitivity, and class diagnostics | [`interpretation_v1/`](experiments/cse805_error_prediction_v1/interpretation_v1/) |
 | Class × MSP logistic regression follow-up and 17 fold models | [Experiment notes](experiments/cse805_class_msp_interaction_v1/README.txt), [results](experiments/cse805_class_msp_interaction_v1/results/) |
 | Random forest follow-up and six-method comparison | [Experiment notes](experiments/cse805_random_forest_v1/README.txt), [results](experiments/cse805_random_forest_v1/results/) |
+| Fixed-coverage comparison of six methods across groups and weather | [Chinese summary](experiments/cse805_coverage_analysis_v1/coverage_analysis_report_zh.txt), [tables and figures](experiments/cse805_coverage_analysis_v1/) |
 | Final 15-slide deck, outline, source map, and QA record | [`presentations/cse805_final_2026/output/`](presentations/cse805_final_2026/output/) |
 
 Start with the [experiment report](experiments/cse805_error_prediction_v1/results/report/report.txt),
