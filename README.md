@@ -4,11 +4,77 @@ Branch: **`cse805-error-prediction`**. The **`main`** branch remains the
 COMP895 project. This branch adds the CSE805 supervised error-prediction study
 on top of the existing segmentation and calibration code it uses.
 
-The segmentation backbone stays frozen. Two logistic-regression methods learn
-to predict pixel errors from MSP, entropy, and probability margin, with or
-without predicted-class features. The completed study uses 1,600 ACDC adverse
-training images and 17 filename-derived outer groups. The 406 official validation
-images are inventoried separately and excluded from the primary experiment.
+All methods score the same pixel predictions from a frozen SegFormer-B0. The
+study uses 1,600 labeled images from the ACDC training split, 400 each for Fog,
+Night, Rain, and Snow. Each evaluation fold holds out one of 17 groups defined
+by filenames. Model fitting and tuning use the remaining groups. The 406
+official validation images are inventoried separately.
+
+## How the experiments fit together
+
+In COMP895, fitting a temperature specifically for Night improved probability
+calibration with little change in the error rate at matched coverage. CSE805
+tests whether learning an error score directly can better rank those pixels.
+[Paired calibration findings](results/research_extension/paired_calibration_v1/scientific_assessment.txt)
+
+1. **Logistic regression tests what predicted class adds.** LR3 combines maximum
+   softmax probability (MSP), normalized entropy, and the gap between the two
+   largest probabilities. Its results are close to MSP alone. Adding predicted
+   class lowers accepted error by 0.728 percentage points at about 80% coverage
+   versus MSP, with improvement in 14 of 17 groups. Overall AURC rises, and
+   Night shows why a class feature can fail to transfer. Many pixels predicted
+   as vegetation receive low error scores even when that predicted class is
+   much less reliable in the held-out Night groups.
+   [Original experiment results](experiments/cse805_error_prediction_v1/results/report/report.txt) · [Class diagnostics](experiments/cse805_error_prediction_v1/interpretation_v1/coefficient_findings.txt)
+
+2. **Class × MSP tests whether each class needs a different confidence slope.**
+   LR + Class adds a class offset and shares the MSP slope across classes.
+   The interaction keeps the offset and lets the slope vary by predicted class.
+   The overall 80% result barely changes and the Fog gain is preserved. At a
+   fixed 20% Night budget, all three groups improve over LR + Class and mean
+   error falls from 13.943% to 10.215%. At 10%, only one of the three improves.
+   [Interaction experiment](experiments/cse805_class_msp_interaction_v1/README.txt) · [Results](experiments/cse805_class_msp_interaction_v1/results/report_zh.txt)
+
+3. **Random forest tests how much a more flexible model can recover.** The
+   forest uses the same inputs as LR + Class and learns nonlinear relationships
+   between confidence and class. It has the highest overall AUROC (0.8876) and
+   average precision (0.5665) of the six methods and the lowest AURC (0.04092).
+   At about 80% coverage it improves on LR + Class by 0.143 percentage points,
+   mainly in Fog and Snow. At 10% Night coverage, RF improves substantially on
+   both class-based LR models, while MSP still has the lowest accepted error.
+   [Random forest experiment](experiments/cse805_random_forest_v1/README.txt) · [Results](experiments/cse805_random_forest_v1/results/final_report_zh.txt)
+
+4. **The coverage summary checks where that advantage holds.** It reuses the
+   saved score histograms to give all six methods the same pixel budget within
+   each group. When a budget cuts through a score bin, the summary uses the
+   expected error count under uniform selection from that bin. RF has the
+   lowest overall mean error at all nine budgets from 10% to 90% in steps of 10.
+   In Night, MSP beats RF at the five reported budgets from 10% through 50%,
+   and RF beats MSP at the four from 60% through 90%. The Night group
+   `gopro_0376` still favors MSP at every point on the tested 10% to 90% grid.
+   [Coverage summary](experiments/cse805_coverage_analysis_v1/coverage_analysis_report_zh.txt) · [Night group comparison](experiments/cse805_coverage_analysis_v1/figures/night_group_coverage.png)
+
+Coverage is the fraction of valid pixels retained. Accepted error is the
+fraction of those predictions that are wrong. The original 80% endpoint uses
+the score bin cutoff whose cumulative coverage is closest to 80%. The Night
+10% column uses a fixed pixel budget. Overall values average 17 groups equally
+and Night values average three. AURC is the area under the risk–coverage curve.
+Lower is better in each column.
+[Main results CSV](experiments/cse805_random_forest_v1/results/final_comparison.csv) · [Fixed-coverage CSV](experiments/cse805_coverage_analysis_v1/coverage_by_weather.csv)
+
+| Method | Overall accepted error at ≈80% ↓ | Overall AURC ↓ | Night accepted error at 10% ↓ |
+| --- | ---: | ---: | ---: |
+| MSP | 8.393% | 0.04817 | **0.837%** |
+| Entropy | 8.351% | 0.04800 | 0.862% |
+| LR3 | 8.376% | 0.04836 | 0.911% |
+| LR + Class | 7.665% | 0.05129 | 19.504% |
+| LR + Class × MSP | 7.666% | 0.04975 | 18.884% |
+| RF + Class | **7.523%** | **0.04092** | 2.332% |
+
+The fixed budgets compare rankings retrospectively. When thresholds chosen on
+the training groups were applied to the held-out Night groups, RF retained
+67.73% of valid pixels on average.
+[Threshold transfer results](experiments/cse805_random_forest_v1/results/final_report_zh.txt)
 
 ## CSE805 files
 
@@ -27,8 +93,8 @@ images are inventoried separately and excluded from the primary experiment.
 Start with the [experiment report](experiments/cse805_error_prediction_v1/results/report/report.txt),
 [interpretation report](experiments/cse805_error_prediction_v1/interpretation_v1/interpretation_report.txt),
 or [final presentation](presentations/cse805_final_2026/output/CSE805_Final_Presentation.pptx).
-The 34 `.joblib` files are two models for each held-out group, not a single model
-refitted on all images. Their preprocessing pipelines and hashes are preserved.
+The original study saves two fitted models per held-out group (34 in total).
+The interaction and random forest experiments each add one model per group.
 
 ## CSE805 environment and checks
 
